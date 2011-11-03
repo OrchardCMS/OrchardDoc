@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -43,6 +43,13 @@
                     <input class="txtsearchbox" type="text" name="q"/><big><a href="#" id="search">»</a></big><br/>
                 </div>
                 <div id="SidebarFooterDiv">
+                    @{
+                        var file = Path.GetFileNameWithoutExtension(Request.PhysicalPath);
+                        var editurl = (file == "Index") ?
+                            "https://github.com/OrchardCMS/OrchardDoc/edit/master/Index.markdown" :
+                            "https://github.com/OrchardCMS/OrchardDoc/edit/master/Documentation/" + file + ".markdown";
+                    }
+                    <a href="@editurl">Edit this page</a>
                 </div>
             </div>
             <div id="MainDiv">
@@ -51,7 +58,7 @@
                 <div id="PageInternalHeaderDiv">
                 </div>
                 <a id="PageTop"></a>
-            	<div id="PageHeaderDiv">
+                <div id="PageHeaderDiv">
             		<h1 class="pagetitle">@Page.Title</h1>
     			</div>
             	<div id="PageContentDiv">
