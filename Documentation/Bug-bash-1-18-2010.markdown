@@ -1,0 +1,96 @@
+
+
+* Archive data is not displayed in all themes (e.g. classic theme, green theme)
+* Need a “Preview” button for editing pages and posts
+* (loudej) Need to bring back the “Delete this draft” operation on the page/post editing page (perhaps as a small link to deemphasize it, ala WordPress)
+* Theme Preview button to be implemented
+* (heskew) Implement Javascript Datetime Picker for post/page scheduling UI
+* (suhacan-FIXED) Need ability to delete a user in Manage Users
+* (suhacan-FIXED) Bug: /Tags/{tagName} just redirects to /Tags (even when there are content items that tag is attached to)
+* (suhacan-FIXED)Bug: Tags aren't added to a content item when the content item is first created (edit works fine) Repro: Add a blog post with a tag of "test" and save (and notice there is no tag of "test" on that blog post).
+* (heskew-FIXED) Pre-fill comment form with authenticated user name and email <- authenticated user needs a different form (body only, other fields as hidden - include user name) since there's no reason for them to change the user info
+* (heskew-FIXED) Tags and comments should work for CMS pages (aspect UI should appear on the Edit page admin screen, like for posts)
+
+
+**Pri-2 Issues:**
+
+* Implement MORE tag support (excerpts) for posts (used on front-end list of posts for a blog)
+* Validation on comment form (name, email required)
+* Bug: create comment missing name or email -> create view not found.
+* Bug: After creating a folder in media, you should get back to the folder where it was created, not to the media root.
+* Bug: Uploading a zip full of media did not work but in a weird way (Ask Bertrand for the zip file)
+* Bug: Media image captions do not seem to be persisted. Apply a caption to an image, save, navigate away and back to the image editing page: caption is gone.
+* Front-end: Get rid of this on blogs list front end (see image screenshot in email)
+* Front-end: Clean up on Blog and post details in front-end -- put Edit button and stats above and move blog/post text up (see image screenshot in email)
+
+
+**Needs design (admin UI consistency issues):** _Jonathan and Michael are working on an admin UI proposal to share this week..._
+
+
+* Bulk operations on Manage Blog page (e.g. delete post) (put same drop downs that we have for pages on top of blog list)
+* Bulk operations on Manage Blogs page, like CMS pages… (put same drop downs that we have for pages on top of blog post list)
+* Ability to filter posts by published/draft/schedule on Manage Blogs , like CMS pages
+* How to Unpublish a post on the Manage Blog page? Like CMS pages…
+* Blog Details Page needs UI cleanup (placement, icons need text), also need ability to View blog from here:
+* Media list is inconsistent: all other contents have separate edit links. For media, you click on the image name.
+* All screens that have bulk actions have a header item in the drop down. Media has delete only (which also redirects to the root)
+* Bug: Multiple error messages for the same thing (repro: media management, create a folder with an empty name: 2 errors message: 1 top message, 1 field validation)
+
+
+**Pri-3 Issues:**
+
+
+* Finalize this text: Possible text about setting up and managing a blog goes here.
+* New Post: helper text for “Tags” (comma-separated)
+* Finalize this text: "X" Allow new comments, Enable to show the comment form. Disabling still allows the existing comments to be shown but does not allow the conversation to continue.
+* “Your Site” in Admin header should render Site Name setting instead (should be separate from “preview site” link?)
+* Rename “Manage Folders” to “Manage Media”
+
+
+**Do Later:**
+
+
+* What UI do we want for change ownership? Do we want to display owner textbox on every content item?
+* If only one blog, “Manage Blog” goes to blog details page. Else goes to list of blogs (as it is today). May also need a way to get to a specific blog from the admin panel menu. 
+Stylesheet applied to TinyMCE content should be style of applied theme.
+* Revisit whether we should validate duplicate slugs at publish-time (log a bug for this)
+* Uploading an image file should attempt to extract title or subject from embedded meta-data and make those the values for the image name and caption.
+* The embed field could have script on focus that selects the whole value (makes it a lot easier to copy).
+* The embed field could have a copy button.
+
+
+**Untriaged:** 
+* None
+* XMLRPC/LiveWriter support seems to be broken. I found Louis' previous instructions, which said to type “http://localhost:<port>/xmlrpc.  However, I tried that and it didn't work.  Any ideas?
+
+
+**No repro:**
+
+
+* Tags mysteriously disappeared from my post after I deleted a tag from the tag admin. Can't reproduce it anymore though. (no clear repro for now...)
+
+
+**DONE:** 
+* (erikpo-FIXED)When in an archive page, the archive navigation with the collapsible years should be there too. Here's what I was doing: I clicked on the January 2010 archive link from my blog, then I clicked the “2010” link. That didn't give me a way to get back to January. Two ways this can be fixed is by showing “subarchives” links under where you are (2010 would have a link for January) or you have the full archive menu there at all times (that's probably simpler).
+* (rpaquay-FIXED) Attempting to access an incorrectly cased page results in a null ref exception: create a page with the slug "About" (uppercase A) then try to access "/about" (lowercase a).
+* (erikpo-FIXED) Finish blog archive and remove fake archive data
+* (rpaquay-FIXED) Bug: Exception: When creating a new post (no theme applied) - System.InvalidOperationException: The view 'NotFound' or its master was not found.
+* (rpaquay-FIXED) Bug: Draft posts affect the number of posts listed for a blog (on front-end and back-end)
+* (suhacan-FIXED) Bug: When saving a draft post, should redirect to/Edit admin URL for that post
+* (suhacan-FIXED) Bug: When publishing a post from the “edit post” page, should redirect to the list of posts
+* (suhacan-FIXED) Bug: Post Publishing Now button on Blog Details page throws 404 error
+* (heskew-FIXED) Blog slug generation: "!!!Brad's Blog!!!" -Brad-s-Blog- (remove beginning/trailing slashes)
+* (heskew-FIXED) Blog slug generation: "todo: (heskew) need path to here"
+* (heskew-FIXED; still need to be selective on when to show the manage bits) When I'm on a post's front-end page, logged in as an admin/author/owner with the default blue theme, I don't have a direct link to edit the post.
+* (rpaquay-FIXED) Page front-end has weird URLs: http://localhost:30320/Pages/Page/Item?slug=About (it used to work) (heskew: ISlugConstraint functionality hasn't been hooked up since cms pages migration)
+* (rpaquay-FIXED) Why do published posts still say “Draft” on the blog front-end page? (bug <- related to create as published problems?)
+
+
+
+* (rpaquay-FIXED) Implement "true" versioning for blog posts (we currently only keep the latest version of posts in the DB)
+* (heskew-FIXED) We need to use IDs instead of slugs for admin URLs where slugs aren't guaranteed to be unique
+* (rpaquay-FIXED) Implement “?? comments” on: Manage Blog (for blog), Blog Details Page (for posts in a list) - both admin and front-end (for now we are going to append aspect UI in some deterministic order at some placeholder in a template, similar to what we do for aspects on a content item editor today). Will tackle the bigger problem of UI composition and placement within a template later (not sure if before Mix?). "xx Comments" in admin for blog post summary should be a link to comments page filtered on the blog post. FIX COMMENTS ON BLOG POST TO BE CONSISTENT! (Punt on blog for now)
+
+
+
+* (rpaquay-FIXED) FIX COMMENTS on blogs (same as posts, but aggregated for blogs)

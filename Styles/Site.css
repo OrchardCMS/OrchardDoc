@@ -1,0 +1,1086 @@
+/*Yahoo browser reset
+----------------------------------------------------------*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,
+blockquote,th,td {margin:0; padding:0; }
+table { border-collapse:collapse; border-spacing:0; }
+fieldset,img { border:0; }
+address,caption,cite,code,dfn,em,strong,th,var { font-style:normal; font-weight:normal; }
+ol,ul { list-style:none; }
+caption,th { text-align:left; }
+h1,h2,h3,h4,h5,h6 { font-size:100%; font-weight:normal; }
+/*q:before,q:after { content:”; }*/
+abbr,acronym { border:0; }
+
+/*Defaults
+----------------------------------------------------------*/
+html {height: 100%;}
+
+body {
+	font: normal 100% Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background:url(Images/background_pageTop.gif) top left repeat-x #f6faea;
+	height: 100%;
+	text-align:left;
+	color:#3e483c;
+}
+
+
+/* ---------- Headings and defaults ---------- */
+h1,h2,h3,h4,h5,h6,legend {padding:4px 0; font-family:"Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif; font-weight:normal; font-style: normal;color:#27320a;}
+
+h1 {font-size: 190%;}
+h2 {font-size: 150%;}
+h3 {font-size: 140%;}
+h4 {font-size: 125%;}
+h5 {font-size: 115%;}
+h6 {font-size: 105%;}
+
+p {line-height:20px; padding:2px 8px;}
+
+ul {list-style:disc outside; line-height:22px; padding:0 0 0 24px;}
+ol {list-style:decimal outside; line-height:22px; padding:0 0 0 24px;}
+
+strong {font-weight: bold;}
+em {font-style:italic;}
+
+#SidebarContentDiv ul {list-style:none; padding:0 0 0 12px;}
+
+.resulterror, .resulterror * {
+	color: #FF0000;
+}
+
+.resultok, .resultok * {
+	color: #009900;
+}
+
+input, label {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	padding: 2px;
+	margin: 0px;
+}
+
+select {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	margin: 0px;
+}
+
+input.tab {
+	background-color: #DDDDDD;
+	border: solid 3px #DDDDDD;
+	color: #000000;
+	font-size: 75%;
+	width: auto;
+	overflow: visible;
+	padding: 0px;
+}
+
+input.tabselected {
+	background-color: #214C9A;
+	border: solid 3px #214C9A;
+	color: #FFFFFF;
+	font-size: 75%;
+	width: auto;
+	overflow: visible;
+	font-weight: bold;
+	padding: 0px;
+}
+
+input.compact {
+	font-size: 75%;
+	padding: 0px;
+}
+
+#TabDiv {
+	border-bottom: solid 6px #214C9A;
+	margin-bottom: 10px;
+}
+
+/* Contains the date picks in the Edit.aspx page */
+#DatePickDiv {font-size: 75%; border: solid 1px #999999; background-color: #FFFFFF; padding: 2px;}
+
+a.datepicklink {display: block;}
+
+/* Small text */
+p.small, small {font-size: 75%;}
+
+/* Big text */
+p.big, big {font-size: 105%;}
+
+/* Description/legend for images */
+p.imagedescription {font: 75% italic; margin:4px 0 0 0;}
+
+/* ----------------------- links  ----------------------------- */
+a, a:visited {color:#006699; text-decoration:none;}
+a:hover {text-decoration: underline;}
+a:active {color:#006699;}
+
+a.headeranchor {visibility: hidden;}
+
+
+/* Link to an external URL */
+a.externallink {
+	background-image: url(Images/ExternalLink.gif);
+	background-position: right;
+	background-repeat: no-repeat;
+	padding-right: 14px;
+}
+
+/* Link to an internal file */
+a.internallink {
+}
+
+/* Link to a Wiki page */
+a.pagelink {
+}
+
+/* Link to unknown/inexistent pages */
+a.unknownlink, a.unknownlink:link, a.unknownlink:active {
+	color: #990000;
+	text-decoration: none;
+}
+a.unknownlink:hover {
+	color: #D9671E;
+	text-decoration: underline;
+}
+
+/* Email Link */
+a.emaillink {
+}
+
+h1.pagetitle, h1.pagetitlesystem {border-bottom:1px dashed #e4e7dc; margin-bottom:8px; padding-bottom:2px;}
+
+h1.pagetitlesystem {margin-bottom: 10px;}
+
+/* Class for applying a separator under H elements (useful to avoid usage of HR) */
+h1, h2, h3 {
+	border-bottom:1px dashed #e4e7dc;
+	padding-bottom: 2px;
+	margin-bottom: 8px;
+    margin-top: 19px;
+}
+
+a.editsectionlink {
+	float: right;
+	font-size: 75%;
+	margin: 4px 0px 0px 0px;
+}
+
+
+
+code, pre {
+	font-family: Courier New, Lucida Console, Monospace;
+	font-size:95%;
+	color: #000000;
+	padding: 0px;
+	margin: 0px;
+}
+
+pre {
+	border: dashed 1px #999999;
+	background-color: #FFFFF0;
+	margin: 10px 0;
+	padding: 8px;
+	overflow:auto;
+}
+
+table, div {
+	padding: 0px;
+	margin: 0px;
+}
+
+#PageContentDiv table {
+    border: 1px solid #CCC;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+#PageContentDiv table thead td {
+    background-color: #DDD;
+}
+
+#PageContentDiv table td {
+    border: 1px solid #CCC;
+    padding: 3px;
+    margin: 0;
+}
+
+img {
+	border: none;
+}
+
+/* Class for general purpose images (contained in Wiki pages) */
+img.image {
+	border: solid 1px #CCCCCC;
+}
+
+/* Class of the formatting Buttons in Edit.aspx */
+img.format {
+	border: solid 1px;
+	padding: 2px;
+}
+
+/* Div used for clearing floats */
+div.clear {
+	clear: both;
+}
+
+/* Div containing images alighed to the left */
+div.imageleft {
+	border: solid 1px #CCCCCC;
+	background-color: #F9F9F9;
+	padding: 4px;
+	margin-left: 0px;
+	margin-right: 8px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	float: left;
+}
+
+/* Div containing images alighed to the right */
+div.imageright {
+	border: solid 1px #CCCCCC;
+	background-color: #F9F9F9;
+	padding: 4px;
+	margin-left: 8px;
+	margin-right: 0px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	float: right;
+}
+
+/* Table containing images not aligned */
+table.imageauto {
+	border: solid 1px #CCCCCC;
+	background-color: #F9F9F9;
+	padding: 4px;
+	margin: 4px 4px 4px 0px;
+}
+
+/* Div acting like a box */
+div.box {
+	border: solid 1px #CCCCCC;
+	background-color: #F9F9F9;
+	display: table-cell;
+	padding: 4px;
+	margin: 4px 4px 0px 4px;
+}
+
+/* Contains the Header */
+#HeaderDiv {
+	margin:0 auto;
+	padding: 0px;
+	height:134px;
+	background:url(images/background_header.jpg) no-repeat top center;
+}
+
+#branding {
+	width:960px;
+	display:block;
+	height:90px;
+	margin:0em auto;
+}
+
+#branding h1 {
+	border-bottom: none;
+	padding-bottom: 0;
+	margin-bottom: 0;
+    margin-top: 0;
+}
+
+#branding h1 a {
+	background:url(images/orchardLogo.jpg) no-repeat scroll 0 0;
+	float:left;
+	display:block;
+	width:216px;
+	height:90px;
+	position:relative;
+	top:-4px;
+	margin-bottom:-4px;
+	z-index:0;
+}
+
+#navMain{
+	width:960px;
+	display:block;
+	height:44px;
+	margin:0em auto;
+	clear:both;
+}
+
+/* Top navigation pane
+----------------------------------------------------------*/
+
+#navMain ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+	float:left;
+}
+
+#navMain ul li {
+	float:left;
+	margin:0 8px;
+}
+
+#navMain ul li a, #navMain ul li a:visited, #navMain ul li a:active {
+	display:block;
+	padding:10px 12px 12px 12px;
+	color: #e2e4dd;
+	font-size:104%;
+	text-decoration: none;
+}
+
+
+#navMain ul li a:hover {
+	color:#ffea9b;
+}
+
+#navMain ul li.On {
+	background:url(images/tabOn.gif) no-repeat bottom center;
+	line-height: 22px;
+}
+
+
+
+/* Contains the SidebarDiv and the MainDiv */
+#ContainerDiv {
+	width:960px;
+	margin:0px auto;
+	background:url(Images/background_content.jpg) top center no-repeat #fff;
+	position: relative;
+	min-height: 100%;
+	height: 100%;
+	voice-family: "\"}\"";
+	voice-family: inherit;
+	height: auto;
+	overflow:auto;
+}
+
+html>body #ContainerDiv {height: auto;}
+
+/* Contains the Sidebar */
+#SidebarDiv {
+	float:right;
+	padding:34px 10px 10px 10px;
+	width:225px;
+	background:url(Images/background_module.gif) no-repeat bottom right;
+}
+
+/* Contains the contents of a Page */
+#MainDiv {
+	padding:12px 10px 10px 22px;
+	width:680px;
+}
+
+#MainFooterDiv {clear:both;}
+
+/* Contains the Page Header (title, last modify, etc.) */
+#PageHeaderDiv {}
+
+#PageInternalHeaderDiv {
+	margin-bottom: 10px;
+}
+
+#PageInternalFooterDiv {
+	margin-top: 10px;
+}
+
+/* Contains the link to the page editing form (Edit.aspx) and history */
+#EditHistoryLinkDiv {
+	float: right;
+	font-size: 75%;
+	padding: 24px 0 8px 0;
+}
+#EditLink, #HistoryLink, #ViewCodeLink, #DiscussLink, #BackLink, #PostReplyLink {
+	margin-left: 4px;
+	padding: 2px;
+	border: solid 1px #999999;
+	text-decoration: none;
+}
+#EditLink:hover, #HistoryLink:hover, #ViewCodeLink:hover, #DiscussLink:hover, #BackLink:hover, #PostReplyLink:hover {
+	border: solid 1px #214C9A;
+	text-decoration: none;
+	background-color: #FFFFEE;
+}
+
+/* Class of the P containing the Edit Link */
+p.editlink {font-size: 75%;}
+
+/* Shown when a page is Locked */
+#PageLockedDiv {
+	float: left;
+	width: 12px;
+	height: 12px;
+	margin-right: 4px;
+	background-image: url(Images/Lock.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	text-indent: -3000px;
+	position: relative;
+}
+
+/* Shown when a page is Public */
+#PagePublicDiv {
+	float: left;
+	width: 12px;
+	height: 12px;
+	margin-right: 4px;
+	background-image: url(Images/Public.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	text-indent: -3000px;
+	position: relative;
+}
+
+#PageInfoDiv {font-size: 75%;}
+
+#BreadcrumbsDiv {font-size: 75%; border-top:1px dashed #e4e7dc; margin: 6px 0 0 0; padding: 8px 0 4px 0; overflow: hidden;}
+
+/* Contains the link to the Page RSS */
+#RssLinkDiv {
+	float: right;
+	position: relative;
+}
+
+/* The link to the Page RSS */
+#RssLink {
+	background-image: url(Images/RSS.png);
+	background-repeat: no-repeat;
+	text-indent: -2500px;
+	display: block;
+	height: 13px;
+	width: 24px;
+}
+
+#PrintLinkDiv {
+	float: right;
+	position: relative;
+}
+
+#PrintLink {
+	background-image: url(Images/Print.png);
+	background-repeat: no-repeat;
+	text-indent: -2500px;
+	display: block;
+	margin-left: 4px;
+	height: 16px;
+	width: 16px;
+}
+
+/* Contains the Page Content */
+#PageContentDiv {
+	margin: 10px 0px 0px 0px;
+	line-height:24px
+}
+
+/* Contains the Footer */
+#FooterDiv {
+        margin:0 auto;
+        padding:0px;
+        background:url(Images/background_footer.jpg) no-repeat scroll center top;
+        height:120px;
+        width:960px;
+        vertical-align:bottom;
+        text-align:center;
+}
+
+#FooterDiv p {
+	padding:80px 0 0 0;
+}
+
+#EditProviderListDiv {
+	float: right;
+}
+
+/* Contains the page preview in the Edit.aspx page */
+#PreviewDiv {
+}
+
+/* Contains the special tags in the Edit.aspx page */
+#SpecialTagsDiv {
+	font-size: 75%;
+	border: solid 1px #999999;
+	background-color: #FFFFFF;
+	padding: 0px;
+}
+
+a.specialtaglink {
+	display: block;
+}
+
+#PageListDiv {
+	font-size: 75%;
+	border: solid 1px #999999;
+	background-color: #FFFFFF;
+	padding: 0px;
+}
+
+#FileListDiv {
+	font-size: 75%;
+	border: solid 1px #999999;
+	background-color: #FFFFFF;
+	padding: 4px;
+}
+
+a.pagelistlink {
+	display: block;
+}
+
+#SnippetListDiv {
+	font-size: 75%;
+	border: solid 1px #999999;
+	background-color: #FFFFFF;
+	padding: 0px;
+}
+
+a.snippetlistlink {
+	display: block;
+}
+
+/* Contains the anchors in the Edit.aspx page */
+#AnchorsDiv {
+	font-size: 75%;
+	border: solid 1px #999999;
+	background-color: #FFFFFF;
+	padding: 0px;
+}
+
+a.anchorlink {
+	display: block;
+}
+
+/* Contains the anchors in the Edit.aspx page */
+#ImagesDiv {
+	font-size: 75%;
+	border: solid 1px #999999;
+	background-color: #FFFFFF;
+	padding: 0px;
+}
+
+a.imagelink {
+	display: block;
+}
+
+#SpecialTagsDiv *, #AnchorsDiv *, #ImagesDiv *, #PageListDiv *, #SnippetListDiv * {
+	padding: 2px;
+}
+
+#SpecialTagsDiv a:hover, #AnchorsDiv a:hover, #ImagesDiv a:hover, #PageListDiv a:hover, #SnippetListDiv a:hover {
+	color: #FFFFFF;
+	background-color: #214C9A;
+	text-decoration: none;
+}
+
+/* Contains the Special characters in the Edit.aspx page */
+#SpecialCharsDiv, #CategoriesListDiv {
+	margin-top: 8px;
+	border: solid 1px #888888;
+	padding: 4px;
+	overflow: auto;
+	width: 180px;
+	height: 120px;
+}
+
+#FormatUl {
+	margin: 0px;
+	padding: 0px;
+}
+
+#FormatUl li {
+	display: inline;
+	list-style-image: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+/* Formatting Button in Edit.aspx */
+a.formatlink {
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
+	border: solid 1px #214C9A;
+	text-indent: -2000px;
+	margin-right: 2px;
+	float: left;
+}
+
+/* Formatting Button in Edit.aspx */
+a.formatlink:hover {
+	text-decoration: none;
+	border: solid 1px #D9671E;
+}
+
+#BoldLink {
+	background-image: url(Images/Bold.png);
+}
+#ItalicLink {
+	background-image: url(Images/Italic.png);
+}
+#UnderlineLink {
+	background-image: url(Images/Underline.png);
+}
+#StrikeLink {
+	background-image: url(Images/Strike.png);
+}
+#H1Link {
+	background-image: url(Images/H1.png);
+}
+#H2Link {
+	background-image: url(Images/H2.png);
+}
+#H3Link {
+	background-image: url(Images/H3.png);
+}
+#H4Link {
+	background-image: url(Images/H4.png);
+}
+#SubLink {
+	background-image: url(Images/Sub.png);
+}
+#SupLink {
+	background-image: url(Images/Sup.png);
+}
+#PageListLink {
+	background-image: url(Images/PageLink.png);
+}
+#FileLink {
+	background-image: url(Images/File.png);
+}
+#LinkLink {
+	background-image: url(Images/Link.png);
+}
+#ImageLink {
+	background-image: url(Images/Image.png);
+}
+#AnchorLink {
+	background-image: url(Images/Anchor.png);
+}
+#CodeLink {
+	background-image: url(Images/Code.png);
+}
+#PreLink {
+	background-image: url(Images/Pre.png);
+}
+#BoxLink {
+	background-image: url(Images/Box.png);
+}
+#BrLink {
+	background-image: url(Images/BR.png);
+}
+#SnippetListLink {
+	background-image: url(Images/Snippet.png);
+}
+#SpecialTagsLink {
+	background-image: url(Images/SpecialTags.png);
+}
+#NoWikiLink {
+	background-image: url(Images/NoWiki.png);
+}
+#CommentLink {
+	background-image: url(Images/Comment.png);
+}
+#EscapeLink {
+	background-image: url(Images/Escape.png);
+}
+
+#PageListTable {
+	width: 90%;
+	margin: 0px 10px 0px 10px;
+}
+
+#PageListHeader {
+	background-color: #DDDDDD;
+}
+
+.pagelistcelleven {
+	border-bottom: solid 1px #CCCCCC;
+}
+.pagelistcellodd {
+	border-bottom: solid 1px #CCCCCC;
+	background-color: #F4F4F4;
+}
+
+#PageTreeP {
+	margin: 0px 0px 0px 10px;
+	padding: 0px 0px 0px 6px;
+	border-left: 4px solid #CCCCCC;
+}
+
+#FileListTable {
+	width: 98%;
+	margin: 0px;
+}
+
+#FileListHeader {
+	background-color: #DDDDDD;
+}
+
+.filelistcelleven {
+	border-bottom: solid 1px #CCCCCC;
+}
+.filelistcellodd {
+	border-bottom: solid 1px #CCCCCC;
+	background-color: #F4F4F4;
+}
+
+#RevisionListTable {
+	width: 98%;
+	margin: 0px;
+}
+
+#RevisionListHeader {
+	background-color: #DDDDDD;
+}
+
+.revisionlistcelleven {
+	border-bottom: solid 1px #CCCCCC;
+}
+.revisionlistcellodd {
+	border-bottom: solid 1px #CCCCCC;
+	background-color: #F4F4F4;
+}
+
+#PreviewDivExternal {
+}
+
+#PreviewDiv {
+	padding: 10px;
+	border: solid 4px #CCCCCC;
+}
+
+blockquote {
+	border-left: solid 8px #DDDDDD;
+	margin-left: 16px;
+	padding: 0px 0px 2px 6px;
+    margin: 10px 0 10px 0;
+}
+
+div.messagecontainer {
+	margin: 0px 0px 0px 16px;
+}
+
+div.rootmessagecontainer {
+	border-top: solid 4px #214C9A;
+}
+
+div.messageheader {
+	font-size: 10px;
+	background-color: #F0F0F0;
+	padding: 2px;
+}
+
+span.messagesubject {
+	font-weight: bold;
+	font-size: 12px;
+}
+
+div.messagebody {
+	border-bottom: solid 1px #F0F0F0;
+	border-left: solid 1px #F0F0F0;
+	border-right: solid 1px #F0F0F0;
+	margin: 0px 0px 6px 0px;
+	padding: 4px;
+}
+
+div.reply {
+	float: right;
+	margin: 6px 10px 0px 0px;
+	font-size: 75%;
+	font-weight: bold;
+}
+
+a.reply {
+	background-image: url(Images/MessageReply.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding: 0px 0px 0px 12px;
+}
+
+a.edit {
+	background-image: url(Images/MessageEdit.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding: 0px 0px 0px 13px;
+	margin-left: 16px;
+}
+
+a.delete {
+	background-image: url(Images/MessageDelete.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding: 0px 0px 0px 10px;
+	margin-left: 16px;
+}
+
+div.warning {
+	padding: 6px;
+	background-color: #FEF693;
+	border: solid 1px #FFCF10;
+	display: table-cell;
+}
+
+/*.search {padding:12px 0 0 12px; border-top:1px dashed #E4E7DC;}*/
+
+.search {padding:12px 0 0 12px;}
+
+#TxtSearchBox {
+	font-size: 75%;
+	width: 160px;
+	background: url(Images/Search.png) no-repeat right center #b2b89d;
+	background-color:#fff; /*Remove when search gets moved up to top branding area*/
+	margin:4px 0;
+	padding:3px;
+	border:1px solid #50553f;
+	color:#555;
+}
+
+#TxtSearchPage {
+	font-size: 75%;
+	width: 170px;
+	background-image: url(Images/Search.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-color: #FFFFFF;
+	border: solid 1px #CCCCCC;
+	margin: 1px;
+}
+
+#ConcurrentEditingDiv {
+	padding: 6px;
+	background-color: #FEF693;
+	border: solid 1px #FFCF10;
+}
+
+span.signature {
+	font-style: italic;
+}
+
+#TocContainer {
+	border: solid 1px #CCCCCC;
+	display: table-cell;
+	padding: 4px;
+	background-color: #F9F9F9;
+}
+
+#AttachmentsDiv {
+	margin-top: 6px;
+	padding: 4px;
+	border: solid 1px #559955;
+	background-color: #D6EED2;
+}
+
+a.attachment {
+	padding-left: 14px;
+	background-image: url(Images/Attachment.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+#RedirectionInfoDiv {
+	font-size: 75%;
+	padding-left: 10px;
+	padding-top: 4px;
+	color: #999999;
+}
+
+#RedirectionDiv {
+	margin-bottom: 16px;
+	padding-left: 24px;
+	margin-left: 10px;
+	font-size: 14px;
+	background-image: url(Images/Redirect.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+/* JsFileTree control begin */
+
+div.subtreediv {
+	margin: 0px 0px 0px 10px;
+}
+
+a.subdirlink {
+	background-image: url(../../Images/Dir.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding: 0px 0px 0px 18px;
+}
+
+a.filelink {
+	background-image: url(../../Images/File.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding: 0px 0px 0px 18px;
+}
+
+/* JsFileTree control end */
+
+/* JsImageBrowser control begin */
+
+#ImageBrowserDiv {
+	background-color: #FFFFFF;
+	border: solid 1px #999999;
+	width: 616px;
+}
+
+#MainContainerDiv {
+	overflow: auto;
+	height: 286px;
+}
+
+div.container {
+	float: left;
+	width: 96px;
+	height: 126px;
+	background-color: #FFFFFF;
+	margin: 4px;
+}
+
+#UpLevelLink, #UpLevelLink:hover {
+	display: block;
+	width: 96px;
+	height: 96px;
+	vertical-align: bottom;
+	text-align: center;
+	text-decoration: none;
+}
+
+a.dirlink, a.dirlink:hover {
+	display: block;
+	width: 96px;
+	height: 96px;
+	vertical-align: bottom;
+	text-align: center;
+	text-decoration: none;
+}
+
+a.itemlink, a.itemlink:hover {
+	display: block;
+	width: 96px;
+	height: 116px;
+	vertical-align: bottom;
+	text-align: center;
+	text-decoration: none;
+}
+
+span.itemtext {
+	color: #000000;
+	background-color: #FFFFFF;
+	padding: 0px;
+	width: 96px;
+	height: 96px;
+	vertical-align: bottom;
+	font-size: 10px;
+}
+
+#ImagePreviewDiv {
+	float: right;
+	width: 256px;
+	height: 268px;
+	border: solid 1px #CCCCCC;
+	margin: 4px;
+	padding: 4px;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #FFFFFF;
+}
+
+#PreviewImg {
+	height: 248px;
+	vertical-align: middle;
+}
+
+img.thumb {
+	border: solid 1px #CCCCCC;
+}
+
+#ImageDescriptionSpan {
+	font-size: 75%;
+	font-style: italic;
+}
+
+/* JsImageBrowser control end */
+
+/* Search page begin */
+
+#SearchCatExtDiv {
+	float: right;
+	margin-left: 15px;
+	background-color: #FFFFFF;
+}
+
+#SearchCatDiv {
+	border: solid 1px #999999;
+	padding: 2px;
+	max-height: 180px;
+	min-width: 200px;
+	overflow: auto;
+}
+
+#SearchControlsDiv {
+}
+
+#SearchInstructionsDiv, #SearchInstructionsDiv ul li {
+	font-size: 75%;
+}
+
+#SearchResultsDiv {
+	float: none;
+	min-height: 80px;
+}
+
+/* Search page end */
+
+#siteInfo {
+    bottom: 0;
+    width:100%;
+    display: block;
+}
+
+#siteInfoContent {
+      margin:0 auto;
+      background:url(images/background_footer.jpg) no-repeat center top;
+      height:120px;
+      width:960px;
+      vertical-align:bottom;
+      text-align:center;
+}
+
+
+#siteInfoContent ul{
+	padding:80px 0 0 0;
+	list-style:none;
+}
+
+#siteInfoContent ul li {
+	display:inline;
+	margin:0px;
+        padding: 0 8px;
+}
+
+/* Extensions
+----------------------------------------------------------*/
+
+.floatLeft {float: left;} /*Use this class to float anything to the left*/
+
+.floatRight {float: right;}  /*Use this class to float anything to the right*/
+
+.alignRight {text-align: right;}
+
+.Inline {display: inline;}
+
+.center {margin:0 auto;}  /*Center*/
+
+.clearLayout {clear:both;}  /*Use this class clear layout*/
+
+.disabled {color:#CCC;}
+
+.topSpacer {margin-top: 30px;}
+
+.bottomSpacer {margin-bottom: 20px;}
+
+.displayText {display:none;}

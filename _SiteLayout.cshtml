@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@(String.IsNullOrWhiteSpace(Page.Title) || Page.Title == "Index" ? "" : Page.Title + " - ")Orchard Documentation</title>
+        <link href="@Href("~/Styles/Site.css")" rel="stylesheet" />
+        <link href="http://orchardproject.net/themes/orchardproject.net/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>(function(d){d.className="dyn "+d.className.substring(7,d.length);})(document.documentElement);</script> 
+        <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-20757794-1']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        </script>
+    </head>
+    <body>
+        <div id="HeaderDiv">
+            <div id="branding">
+                <h1><a href="http://orchardproject.net/"><span class="displayText">@Page.Title</span></a></h1>
+            </div>
+            <div id="navMain">
+                <ul>
+                    <li><a href="http://orchardproject.net/">Home</a></li>
+                    <li><a href="http://orchardproject.net/download">Download</a></li>
+                    <li class="On"><a href="http://docs.orchardproject.net/">Documentation</a></li>
+                    <li><a href="http://orchardproject.net/gallery">Gallery</a></li>
+                    <li><a href="http://orchardproject.net/localize">Translate</a></li>
+                    <li><a href="http://orchardproject.net/contribution">Contribute</a></li>
+                    <li><a href="http://orchardproject.net/discussions">Discussions and Help</a></li>
+                    <li><a href="http://orchardproject.net/about">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="ContainerDiv">
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                </div>
+                <div id="SidebarContentDiv">
+                    <input class="txtsearchbox" type="text" name="q"/><big><a href="#" id="search">»</a></big><br/>
+                </div>
+                <div id="SidebarFooterDiv">
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                </div>
+                <div id="PageInternalHeaderDiv">
+                </div>
+                <a id="PageTop"></a>
+            	<div id="PageHeaderDiv">
+            		<h1 class="pagetitle">@Page.Title</h1>
+    			</div>
+            	<div id="PageContentDiv">
+                    @RenderBody()
+                </div>
+            </div>
+            <div id="MainFooterDiv">
+                <div id="siteInfo">
+                    <div id="siteInfoContent">
+                        <ul>
+                        <li><a href="http://orchardproject.net">Home</a></li>
+                        <li><a href="mailto:ofeedbk@microsoft.com">Contact Us</a></li>
+                        <li><a href="http://orchardproject.net/about">About Us</a></li>
+                        <li><a href="http://orchardproject.net/TermsOfUse">Terms Of Use</a></li>
+                        <li><a href="http://orchardproject.net/PrivacyStatement">Privacy Statement</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
