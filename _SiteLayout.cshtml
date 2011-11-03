@@ -44,10 +44,9 @@
                 </div>
                 <div id="SidebarFooterDiv">
                     @{
-                        var file = Path.GetFileNameWithoutExtension(Request.PhysicalPath);
-                        var editurl = (file == "Index") ?
-                            "https://github.com/OrchardCMS/OrchardDoc/edit/master/Index.markdown" :
-                            "https://github.com/OrchardCMS/OrchardDoc/edit/master/Documentation/" + file + ".markdown";
+                        var editurl = (Request.PhysicalApplicationPath.Trim('\\') == Request.PhysicalPath.Trim('\\')) ?
+                            "https://github.com/OrchardCMS/OrchardDoc/blob/master/Index.markdown" :
+                            "https://github.com/OrchardCMS/OrchardDoc/blob/master/Documentation/" + Path.GetFileNameWithoutExtension(Request.PhysicalPath) + ".markdown";
                     }
                     <a href="@editurl">Edit this page</a>
                 </div>
