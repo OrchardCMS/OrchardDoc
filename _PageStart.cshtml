@@ -1,4 +1,15 @@
 ﻿@{
-    Page.Title = Path.GetFileNameWithoutExtension(Request.PhysicalPath).Replace('-', ' ');
+    var path = Request.PhysicalPath.Trim('\\');
+    if (path == Request.PhysicalApplicationPath.Trim('\\')) {
+        Page.DocumentTitle = "Orchard Documentation";
+        Page.Title = Page.DocumentTitle;
+        Page.EditUrl = "https://github.com/OrchardCMS/OrchardDoc/blob/master/Index.markdown";
+    }
+    else {
+        var docName = Path.GetFileNameWithoutExtension(path);
+        Page.DocumentTitle = docName.Replace('-', ' ');
+        Page.Title = Page.DocumentTitle + " - Orchard Documentation";
+        Page.EditUrl = "https://github.com/OrchardCMS/OrchardDoc/blob/master/Documentation/" + docName + ".markdown";
+    }
     Layout = "_SiteLayout.cshtml";
 }

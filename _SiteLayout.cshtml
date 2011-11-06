@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>@(String.IsNullOrWhiteSpace(Page.Title) || Page.Title == "Index" ? "" : Page.Title + " - ")Orchard Documentation</title>
+        <title>@Page.Title</title>
         <link href="@Href("~/Styles/Site.css")" rel="stylesheet" />
         <link href="http://orchardproject.net/themes/orchardproject.net/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <script>(function(d){d.className="dyn "+d.className.substring(7,d.length);})(document.documentElement);</script> 
@@ -20,7 +20,7 @@
     <body>
         <header id="HeaderDiv">
             <div id="branding">
-                <h1><a href="http://orchardproject.net/"><span class="displayText">@Page.Title</span></a></h1>
+                <h1><a href="http://orchardproject.net/"><span class="displayText">Orchard Documentation</span></a></h1>
             </div>
             <nav id="navMain">
                 <ul>
@@ -42,14 +42,9 @@
                 <div id="SidebarContentDiv">
                     <input class="txtsearchbox" type="text" name="q"/><big><a href="#" id="search">&raquo;</a></big><br/>
                 </div>
-                <nav id="TocContainer"><ol></ol></nav>
+                <nav class="TocContainer"><ol></ol></nav>
                 <div id="SidebarFooterDiv">
-                    @{
-                        var editurl = (Request.PhysicalApplicationPath.Trim('\\') == Request.PhysicalPath.Trim('\\')) ?
-                            "https://github.com/OrchardCMS/OrchardDoc/blob/master/Index.markdown" :
-                            "https://github.com/OrchardCMS/OrchardDoc/blob/master/Documentation/" + Path.GetFileNameWithoutExtension(Request.PhysicalPath) + ".markdown";
-                    }
-                    <a href="@editurl">Edit this page</a>
+                    <a href="@Page.EditUrl">Edit this page</a>
                 </div>
             </div>
             <article id="MainDiv">
@@ -59,7 +54,7 @@
                 </div>
                 <a id="PageTop"></a>
             	<div id="PageHeaderDiv">
-            		<h1 class="pagetitle">@Page.Title</h1>
+            		<h1 class="pagetitle">@Page.DocumentTitle</h1>
     			</div>
             	<div id="PageContentDiv">
                     @RenderBody()

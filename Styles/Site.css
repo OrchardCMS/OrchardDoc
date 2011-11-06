@@ -864,52 +864,53 @@ span.signature {
 	font-style: italic;
 }
 
-#TocContainer {
+.TocContainer {
 	border: solid 1px #CCCCCC;
 	padding: 4px;
 	background-color: #F9F9F9;
     overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     margin-top: 20px;
     margin-bottom: 20px;
-    text-wrap: none;
 }
 
-#TocContainer:hover {
-    overflow: visible;
-}
-
-#TocContainer ol {
+.TocContainer ol {
     list-style-type: none;
     padding:0;
 }
 
-#TocContainer h1, #TocContainer h2, #TocContainer h3, #TocContainer h4, #TocContainer h5, #TocContainer h6 {
+.TocContainer h1, .TocContainer h2, .TocContainer h3, .TocContainer h4, .TocContainer h5, .TocContainer h6 {
     font-size: 0.8em;
     border:none;
     padding:0;
     margin:0;
 }
 
-#TocContainer h1 {
+.TocContainer a:hover {
+    text-decoration: none;
 }
 
-#TocContainer h2 {
+.TocContainer h1 {
+}
+
+.TocContainer h2 {
     margin-left: 8px;
 }
 
-#TocContainer h3 {
+.TocContainer h3 {
     margin-left: 16px;
 }
 
-#TocContainer h4 {
+.TocContainer h4 {
     margin-left: 24px;
 }
 
-#TocContainer h5 {
+.TocContainer h5 {
     margin-left: 32px;
 }
 
-#TocContainer h6 {
+.TocContainer h6 {
     margin-left: 40px;
 }
 

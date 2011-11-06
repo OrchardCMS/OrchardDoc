@@ -1,5 +1,10 @@
 jQuery(function($) {
-    var toc = $("#TocContainer ol");
+    var toc = $(".TocContainer ol")
+        .on("mouseenter", function() {
+            if (tocOverlay.width() > parent.width()) {
+                tocOverlay.show();
+            }
+        });
     $("#MainDiv :header")
         .each(function() {
             var h = $(this),
@@ -16,4 +21,14 @@ jQuery(function($) {
                 )
             );
         });
+    var parent = toc.parent(),
+        tocOverlay = parent
+          .clone()
+          .insertBefore(parent)
+          .css({
+            overflow: "visible",
+            position: "absolute",
+            right: "10px",
+        }).hide()
+          .on("mouseleave", function() {tocOverlay.hide();});
 });
