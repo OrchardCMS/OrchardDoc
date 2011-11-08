@@ -1,0 +1,36 @@
+﻿@using System.Configuration
+@using System.Xml.Linq
+@{
+    const int pageSize = 10;
+    XNamespace web = "http://schemas.microsoft.com/LiveSearch/2008/04/XML/web";
+    var appid = ConfigurationManager.AppSettings["bingAppId"];
+    var pageNumber = int.Parse(Request.QueryString["p"] ?? "0");
+    var q = Request.QueryString["q"] ?? "";
+    Page.Title = "Orchard Documentation - Search - " + q;
+    var requestString = "http://api.bing.net/xml.aspx?"
+            + "AppId=" + appid
+            + "&Query=" + Html.Encode(q) + "%20site:docs.orchardproject.net"
+            + "&Sources=Web"
+            + "&Version=2.0"
+            + "&Market=en-us"
+            + "&Adult=Moderate"
+            + "&Options=EnableHighlighting"
+            + "&Web.Count=" + pageSize
+            + "&Web.Offset=" + (pageNumber * pageSize)
+            + "&Web.Options=DisableHostCollapsing+DisableQueryAlterations";
+    var request = (HttpWebRequest)WebRequest.Create(requestString);
+    var response = request.GetResponse().GetResponseStream();
+    var results = XElement.Load(response);
+}
+<ul id="SearchResultsDiv">
+@foreach(var result in results.Element(web + "Web").Element(web + "Results").Elements(web + "WebResult")) {
+    <li>
+        <article>
+            <header>
+                <h2><a href="@result.Element(web + "Url").Value">@result.Element(web + "Title").Value</a></h2>
+            </header>
+            <p>@result.Element(web + "Description").Value</p>
+        </article>
+    </li>
+}
+</ul>

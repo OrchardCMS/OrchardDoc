@@ -1081,6 +1081,14 @@ img.thumb {
 	min-height: 80px;
 }
 
+#SearchResultsDiv header {
+    font-size: 0.8em;
+}
+
+#SearchResultsDiv li {
+    list-style: none;
+}
+
 /* Search page end */
 
 #siteInfo {
