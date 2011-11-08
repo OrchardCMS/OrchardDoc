@@ -8,29 +8,35 @@
     var q = Request.QueryString["q"] ?? "";
     Page.Title = "Orchard Documentation - Search - " + q;
     var requestString = "http://api.bing.net/xml.aspx?"
-            + "AppId=" + appid
-            + "&Query=" + Html.Encode(q) + "%20site:docs.orchardproject.net"
-            + "&Sources=Web"
-            + "&Version=2.0"
-            + "&Market=en-us"
-            + "&Adult=Moderate"
-            + "&Options=EnableHighlighting"
-            + "&Web.Count=" + pageSize
-            + "&Web.Offset=" + (pageNumber * pageSize)
-            + "&Web.Options=DisableHostCollapsing+DisableQueryAlterations";
-    var request = (HttpWebRequest)WebRequest.Create(requestString);
+                        + "AppId=" + appid
+                        + "&Query=" + Html.Encode(q) + "%20site:docs.orchardproject.net"
+                        + "&Sources=Web"
+                        + "&Version=2.0"
+                        + "&Market=en-us"
+                        + "&Adult=Moderate"
+                        + "&Options=EnableHighlighting"
+                        + "&Web.Count=" + pageSize
+                        + "&Web.Offset=" + (pageNumber*pageSize)
+                        + "&Web.Options=DisableHostCollapsing+DisableQueryAlterations";
+    var request = (HttpWebRequest) WebRequest.Create(requestString);
     var response = request.GetResponse().GetResponseStream();
-    var results = XElement.Load(response);
+    var webElement = XElement.Load(response).Element(web + "Web");
+
+    if (webElement != null) {
+        var resultSet = webElement.Element(web + "Results");
+        if (resultSet != null) {
+        <ul id="SearchResultsDiv">
+            @foreach (var result in resultSet.Elements(web + "WebResult")) {
+            <li>
+                <article>
+                    <header>
+                        <h2><a href="@result.Element(web + "Url").Value">@result.Element(web + "Title").Value</a></h2>
+                    </header>
+                    <p>@result.Element(web + "Description").Value</p>
+                </article>
+            </li>
+            }
+        </ul>
+        }
+    }
 }
-<ul id="SearchResultsDiv">
-@foreach(var result in results.Element(web + "Web").Element(web + "Results").Elements(web + "WebResult")) {
-    <li>
-        <article>
-            <header>
-                <h2><a href="@result.Element(web + "Url").Value">@result.Element(web + "Title").Value</a></h2>
-            </header>
-            <p>@result.Element(web + "Description").Value</p>
-        </article>
-    </li>
-}
-</ul>
