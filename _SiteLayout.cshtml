@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var isDoc = Request.FilePath.IndexOf("/Documentation/") != -1;
+}
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -37,17 +40,19 @@
         </header>
         <div id="ContainerDiv">
             <div id="SidebarDiv">
-                <div id="SidebarHeaderDiv">
-                </div>
                 <div id="SidebarContentDiv">
-                    <form action="Search.cshtml" method="GET">
-                        <input class="txtsearchbox" type="text" name="q" value="@Request.QueryString["q"]"/><big><a href="#" id="search">&raquo;</a></big><br/>
+                    <h2>Search</h2>
+                    <form action="@Href("Search.cshtml")" method="GET">
+                        <input class="txtsearchbox" type="text" name="q" value="@Request.QueryString["q"]"/><button type="submit" class="searchButton" title="Search">&raquo;</button>
                     </form>
                 </div>
+                @if (isDoc) {
+                <h2>Table of Contents</h2>
                 <nav class="TocContainer"><ol></ol></nav>
                 <div id="SidebarFooterDiv">
                     <a href="@Page.EditUrl">Edit this page</a>
                 </div>
+                }
             </div>
             <article id="MainDiv">
                 <div id="MainHeaderDiv">

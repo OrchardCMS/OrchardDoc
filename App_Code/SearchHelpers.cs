@@ -26,7 +26,7 @@ namespace App_Code {
                         var name = Path.GetFileNameWithoutExtension(f);
                         var text = File.ReadAllText(f);
                         doc.Add(new Field("Id", name, Field.Store.YES, Field.Index.NOT_ANALYZED));
-                        doc.Add(new Field("Url", documentPath + '/' + name, Field.Store.YES, Field.Index.NOT_ANALYZED));
+                        doc.Add(new Field("Url", "Documentation/" + name, Field.Store.YES, Field.Index.NOT_ANALYZED));
                         doc.Add(new Field("Title", name.Replace('-', ' '), Field.Store.YES, Field.Index.ANALYZED));
                         doc.Add(new Field("Text", text, Field.Store.YES, Field.Index.ANALYZED));
                         doc.Add(new Field("Summary", MarkdownExtensions.ExtractSummary(text), Field.Store.YES, Field.Index.NOT_ANALYZED));
@@ -35,7 +35,7 @@ namespace App_Code {
             }
         }
 
-        public static IEnumerable<Document> Query(HttpContext ctx, string query, int page = 0) {
+        public static SearchResults Query(HttpContext ctx, string query, int page = 1) {
             var indexPath = ctx.Server.MapPath("~/App_Data/Index");
             var indexSearcher = new DirectoryIndexSearcher(new DirectoryInfo(indexPath));
             using (var searchService = new SearchService(indexSearcher)) {
@@ -46,7 +46,17 @@ namespace App_Code {
                 Query multiQuery = parser.Parse(query);
 
                 var result = searchService.SearchIndex(multiQuery);
-                return result.Results.Skip(PageSize * page).Take(PageSize);
+                return new SearchResults {
+                    Documents = result.Results
+                    .Skip(PageSize*(page - 1))
+                    .Take(PageSize)
+                    .Select(d => new SearchResult {
+                        Url = d.Get("Url"),
+                        Title = d.Get("Title"),
+                        Summary = d.Get("Summary")
+                    }),
+                    TotalCount = result.Results.Count()
+                };
             }
         }
     }

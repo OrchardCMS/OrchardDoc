@@ -1,23 +1,35 @@
 ﻿@using App_Code
 @{
-    Page.Title = "Orchard Documentation - Search - " + Request.QueryString["q"];
-    var resultSet = SearchHelpers.Query(HttpContext.Current, Request.QueryString["q"], int.Parse(Request.QueryString["p"] ?? "0"));
-    if (resultSet.Count() == 0) {
+    var q = Request.QueryString["q"];
+    var page = int.Parse(Request.QueryString["p"] ?? "1");
+    Page.Title = "Orchard Documentation - Search - " + q;
+    var resultSet = SearchHelpers.Query(HttpContext.Current, q, page);
+    var documents = resultSet.Documents;
+    if (resultSet.TotalCount == 0) {
         @:No results found.
     }
     else {
+        <div class="searchResultCount">@resultSet.TotalCount @(resultSet.TotalCount > 1 ? "documents" : "document") found.</div>
         <ul id="SearchResultsDiv">
-            @foreach (var doc in resultSet) {
+            @foreach (var doc in documents) {
             <li>
                 <article>
                     <header>
-                        <h2><a href="@doc.Get("Url")">@doc.Get("Title")</a></h2>
+                        <h2><a href="@Href(doc.Url)">@doc.Title</a></h2>
                     </header>
-                    <p>@Html.Raw(doc.Get("Summary"))</p>
-                    <div><a href="@doc.Get("Url")">Read more...</a></div>
+                    <p>@Html.Raw(doc.Summary)</p>
+                    <div><a href="@Href(doc.Url)">Read more...</a></div>
                 </article>
             </li>
             }
         </ul>
-        }
+        if (resultSet.TotalCount > SearchHelpers.PageSize) {
+            int pages = (resultSet.TotalCount / SearchHelpers.PageSize) + 1;
+            <ul class="searchPagination">
+            @for (var p = 1; p <= pages; p++) {
+                <li>@if (p == page) {<text>@p</text>} else {<a href="?q=@(q)&p=@p">@p</a>}</li>
+            }
+            </ul>
+         }
+    }
 }
