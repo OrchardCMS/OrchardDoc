@@ -41,7 +41,7 @@
                 </div>
                 <div id="SidebarContentDiv">
                     <form action="Search.cshtml" method="GET">
-                        <input class="txtsearchbox" type="text" name="q"/><big><a href="#" id="search">&raquo;</a></big><br/>
+                        <input class="txtsearchbox" type="text" name="q" value="@Request.QueryString["q"]"/><big><a href="#" id="search">&raquo;</a></big><br/>
                     </form>
                 </div>
                 <nav class="TocContainer"><ol></ol></nav>

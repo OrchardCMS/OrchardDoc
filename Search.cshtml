@@ -1,42 +1,23 @@
-﻿@using System.Configuration
-@using System.Xml.Linq
+﻿@using App_Code
 @{
-    const int pageSize = 10;
-    XNamespace web = "http://schemas.microsoft.com/LiveSearch/2008/04/XML/web";
-    var appid = ConfigurationManager.AppSettings["bingAppId"];
-    var pageNumber = int.Parse(Request.QueryString["p"] ?? "0");
-    var q = Request.QueryString["q"] ?? "";
-    Page.Title = "Orchard Documentation - Search - " + q;
-    var requestString = "http://api.bing.net/xml.aspx?"
-                        + "AppId=" + appid
-                        + "&Query=" + Html.Encode(q) + "%20site:docs.orchardproject.net"
-                        + "&Sources=Web"
-                        + "&Version=2.0"
-                        + "&Market=en-us"
-                        + "&Adult=Moderate"
-                        + "&Options=EnableHighlighting"
-                        + "&Web.Count=" + pageSize
-                        + "&Web.Offset=" + (pageNumber*pageSize)
-                        + "&Web.Options=DisableHostCollapsing+DisableQueryAlterations";
-    var request = (HttpWebRequest) WebRequest.Create(requestString);
-    var response = request.GetResponse().GetResponseStream();
-    var webElement = XElement.Load(response).Element(web + "Web");
-
-    if (webElement != null) {
-        var resultSet = webElement.Element(web + "Results");
-        if (resultSet != null) {
+    Page.Title = "Orchard Documentation - Search - " + Request.QueryString["q"];
+    var resultSet = SearchHelpers.Query(HttpContext.Current, Request.QueryString["q"], int.Parse(Request.QueryString["p"] ?? "0"));
+    if (resultSet.Count() == 0) {
+        @:No results found.
+    }
+    else {
         <ul id="SearchResultsDiv">
-            @foreach (var result in resultSet.Elements(web + "WebResult")) {
+            @foreach (var doc in resultSet) {
             <li>
                 <article>
                     <header>
-                        <h2><a href="@result.Element(web + "Url").Value">@result.Element(web + "Title").Value</a></h2>
+                        <h2><a href="@doc.Get("Url")">@doc.Get("Title")</a></h2>
                     </header>
-                    <p>@result.Element(web + "Description").Value</p>
+                    <p>@Html.Raw(doc.Get("Summary"))</p>
+                    <div><a href="@doc.Get("Url")">Read more...</a></div>
                 </article>
             </li>
             }
         </ul>
         }
-    }
 }
