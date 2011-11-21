@@ -50,21 +50,34 @@ namespace App_Code {
             , RegexOptions.Multiline);
         }
 
+        private static readonly Regex RemoveImagesExpression = new Regex("<img [^>]*>");
+
+        public static string RemoveImages(string html) {
+            return RemoveImagesExpression.Replace(html, "");
+        }
+
         public static string ExtractSummary(string content) {
             // Taking the first two paragraphs
             var reader = new StringReader(content);
             var result = new StringBuilder();
             var line = "";
             var paragraphs = 2;
+            var isEmpty = true;
             while(line != null && paragraphs > 0) {
                 line = reader.ReadLine();
                 if (string.IsNullOrWhiteSpace(line)) {
-                    paragraphs--;
+                    if (!isEmpty) {
+                        paragraphs--;
+                        isEmpty = true;
+                    }
+                    else {
+                        isEmpty = false;
+                    }
                 }
                 result.AppendLine(line);
             }
             var markdown = new Markdown();
-            return markdown.Transform(result.ToString());
+            return RemoveImages(markdown.Transform(result.ToString()));
         }
     }
 }
