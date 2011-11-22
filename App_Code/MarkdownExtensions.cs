@@ -23,7 +23,7 @@ namespace App_Code {
             return Regex.Replace(content,
                 @"[\r\n]+((.*?)\s+\|\s+)+(.*?)\s*" +
                 @"[\r\n]+((-+?)\s+\|\s+)+(-+?)\s*" +
-                @"[\r\n]+(((.*?)\s+\|\s+)+(.*?)\s*\r\n)+",
+                @"[\r\n]+(((.*?)\s+\|\s+)+(.*?)\s*[\r\n]+)+",
             match => {
                 var writer = new StringWriter();
                 writer.WriteLine("<table><thead><tr>");
