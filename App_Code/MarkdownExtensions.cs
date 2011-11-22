@@ -20,15 +20,16 @@ namespace App_Code {
         // Content Cell  | Content Cell
         // Content Cell  | Content Cell
         public static string ProcessTables(string content, MarkdownWebPage page) {
-            return Regex.Replace(content, 
-                @"\r\n(\s*(.*?)\s+\|)+\s+(.*?)\s*" +
-                @"\r\n(\s*(-+?)\s+\|)+\s+(-+?)\s*" +
-                @"\r\n((\s*(.*?)\s+\|)+\s+(.*?)\s*\r\n)+",
+            return Regex.Replace(content,
+                @"\r\n((.*?)\s+\|\s+)+(.*?)\s*" +
+                @"\r\n((-+?)\s+\|\s+)+(-+?)\s*" +
+                @"\r\n(((.*?)\s+\|\s+)+(.*?)\s*\r\n)+",
             match => {
                 var writer = new StringWriter();
                 writer.WriteLine("<table><thead><tr>");
                 foreach (Capture header in match.Groups[1].Captures) {
-                    writer.WriteLine("    <td>" + header.Value.Substring(0, header.Length - 1).Trim() + "</td>");
+                    var headerVal = header.Value.Trim();
+                    writer.WriteLine("    <td>" + headerVal.Substring(0, headerVal.Length - 1) + "</td>");
                 }
                 writer.WriteLine("    <td>" + match.Groups[3].Value.Trim() + "</td>");
                 writer.WriteLine("</tr></thead><tbody>");
@@ -61,7 +62,7 @@ namespace App_Code {
             var reader = new StringReader(content);
             var result = new StringBuilder();
             var line = "";
-            var paragraphs = 2;
+            var paragraphs = 1;
             var isEmpty = true;
             while(line != null && paragraphs > 0) {
                 line = reader.ReadLine();
