@@ -15,14 +15,14 @@ The slug rules are described here: [Slugs](slugs).
 ## Orphaned contents
 When the user switches the page to a layout that has less zones than the previous ones, he is potentially creating orphaned contents. We don't throw that contents away or try to merge them. We also don't try to reassign if the zone names are different, even if the number of zones is the same.
 
-Instead, we display the following message in the top alert zone: “You have switched to a template that does not have the same content zones as the previous one, resulting in some of your contents not showing up on your site. You can either delete that content or copy it into another zone.”
+Instead, we display the following message in the top alert zone: "You have switched to a template that does not have the same content zones as the previous one, resulting in some of your contents not showing up on your site. You can either delete that content or copy it into another zone."
 
-In the admin screen for the page, we show the orphaned contents with an alert “This content is assigned to a zone that does not exist in the current template. Please delete it or copy it to another zone.”
+In the admin screen for the page, we show the orphaned contents with an alert "This content is assigned to a zone that does not exist in the current template. Please delete it or copy it to another zone."
 
-When the page is saved, we delete empty orphaned contents. By empty, we mean empty of contents, not necessarily empty string: &lt;p&gt;&lt;/p&gt; is empty contents. Warning, &lt;img src=”foo.gif”/&gt; is not.
+When the page is saved, we delete empty orphaned contents. By empty, we mean empty of contents, not necessarily empty string: &lt;p&gt;&lt;/p&gt; is empty contents. Warning, &lt;img src="foo.gif"/&gt; is not.
 
 ## Preview
-When the user clicks the “Preview” button, we need to create a draft. We've considered making that draft “temporary” and not a full draft. We also talked about the potential concurrency issues associated with this. Those concurrency issues actually also exist when saving a draft, the difference here is that the operation is implicit.
+When the user clicks the "Preview" button, we need to create a draft. We've considered making that draft "temporary" and not a full draft. We also talked about the potential concurrency issues associated with this. Those concurrency issues actually also exist when saving a draft, the difference here is that the operation is implicit.
 
 For the moment, we'll ignore the concurrent editing scenarios and let the latest draft, implicit or explicit, win. There is still always only one draft at any given time.
 Clicking preview is exactly equivalent to saving as a draft and then navigating to the url for the draft in a new window. The draft is not automatically deleted.
