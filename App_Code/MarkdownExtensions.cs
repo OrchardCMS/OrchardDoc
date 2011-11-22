@@ -15,10 +15,10 @@ namespace App_Code {
             return Regex.Replace(content, @"^//(.*?)$", match => String.Empty, RegexOptions.Multiline);
         }
     
-        // First Header  | Second Header
-        // ------------- | -------------
-        // Content Cell  | Content Cell
-        // Content Cell  | Content Cell
+        // First Header  | Second Header | Third Header
+        // ------------- | ------------- | ------------
+        // Content Cell  | Content Cell  | Content Cell
+        // Content Cell  | Content Cell  | Content Cell
         public static string ProcessTables(string content, MarkdownWebPage page) {
             return Regex.Replace(content,
                 @"\r\n((.*?)\s+\|\s+)+(.*?)\s*" +
