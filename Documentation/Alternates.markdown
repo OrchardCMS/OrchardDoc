@@ -19,10 +19,10 @@ All templates for alternates must reside in the _Views_ folder. The _Views_ fold
 
 Shape type     | Template Folder
 -------------- | ----------------
-Content item   | _Views\Items_
-Parts          | _Views\Parts_
-Fields         | _Views\Fields_
-EditorTemplate | _Views\EditorTemplates\\[template type folder\]_ (For example, an **EditorTemplate** for a part is located at _Views\EditorTemplates\Parts_.)
+Content item   | _Views\\Items_
+Parts          | _Views\\Parts_
+Fields         | _Views\\Fields_
+EditorTemplate | _Views\\EditorTemplates\\[template type folder\]_ (For example, an **EditorTemplate** for a part is located at _Views\EditorTemplates\Parts_.)
 All other      | _Views_
 
 For example, to create an alternate template for the **Tags** part, you can add a template to the _MyTheme\Views\Parts_ folder. However, because the underscore can be converted to either a dot (.) or backslash (\), you can also create a template in the _Views_ folder and add _Parts._ to the beginning of the name. A template at either _Views\Parts\Tags.ShowTags-BlogPost.cshtml_ or _Views\Parts.Tags.ShowTags-BlogPost.cshtml_ will map to a shape named `Parts_Tags_ShowTags__BlogPost`.
