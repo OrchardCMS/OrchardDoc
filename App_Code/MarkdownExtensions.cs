@@ -21,9 +21,9 @@ namespace App_Code {
         // Content Cell  | Content Cell  | Content Cell
         public static string ProcessTables(string content, MarkdownWebPage page) {
             return Regex.Replace(content,
-                @"\r\n((.*?)\s+\|\s+)+(.*?)\s*" +
-                @"\r\n((-+?)\s+\|\s+)+(-+?)\s*" +
-                @"\r\n(((.*?)\s+\|\s+)+(.*?)\s*\r\n)+",
+                @"[\r\n]+((.*?)\s+\|\s+)+(.*?)\s*" +
+                @"[\r\n]+((-+?)\s+\|\s+)+(-+?)\s*" +
+                @"[\r\n]+(((.*?)\s+\|\s+)+(.*?)\s*\r\n)+",
             match => {
                 var writer = new StringWriter();
                 writer.WriteLine("<table><thead><tr>");
