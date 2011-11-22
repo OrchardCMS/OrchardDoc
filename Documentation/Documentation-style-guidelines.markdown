@@ -127,11 +127,11 @@ When referring to UI elements, follow the capitalization style used in the UI el
 Tables should be built to fit into the standard width of pages on this site.
 The markup to create a table is a common extension for Markdown:
 
-    Header A  | Header B | Header C
-    --------  | -------- | --------
-    Cell A.1  | Cell B.1 | Cell C.1
-    Cell A.2  | Cell B.2 | Cell C.2
-    Cell A.3  | Cell B.3 | Cell C.3
+    Header A | Header B | Header C
+    -------- | -------- | --------
+    Cell A.1 | Cell B.1 | Cell C.1
+    Cell A.2 | Cell B.2 | Cell C.2
+    Cell A.3 | Cell B.3 | Cell C.3
 
 This markup will create the following table:
 
