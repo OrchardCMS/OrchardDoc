@@ -1,57 +1,12 @@
-﻿@using MarkdownWebPages
-@using System.Text.RegularExpressions
-
-@functions {
-    string ProcessIncludes(string content, MarkdownWebPage page) {
-        return Regex.Replace(content, @"^@include\((?<include>~/.*?)\)", match => MarkdownWebPage.RenderFile(match.Groups["include"].Value, page), RegexOptions.Multiline);
-    }
-
-    string ProcessComments(string content, MarkdownWebPage page) {
-        return Regex.Replace(content, @"^//(.*?)$", match => String.Empty, RegexOptions.Multiline);
-    }
-    
-    // First Header  | Second Header
-    // ------------- | -------------
-    // Content Cell  | Content Cell
-    // Content Cell  | Content Cell
-    string ProcessTables(string content, MarkdownWebPage page) {
-        return Regex.Replace(content, 
-            @"\r\n(\s*(.*?)\s+\|)+\s+(.*?)\s*" +
-            @"\r\n(\s*(-+?)\s+\|)+\s+(-+?)\s*" +
-            @"\r\n((\s*(.*?)\s+\|)+\s+(.*?)\s*\r\n)+",
-        match => {
-            var writer = new StringWriter();
-            writer.WriteLine("<table><thead><tr>");
-            foreach (Capture header in match.Groups[1].Captures) {
-                writer.WriteLine("    <td>" + header.Value.Substring(0, header.Length - 1).Trim() + "</td>");
-            }
-            writer.WriteLine("    <td>" + match.Groups[3].Value.Trim() + "</td>");
-            writer.WriteLine("</tr></thead><tbody>");
-            var rows = match.Groups[7].Captures;
-            var cells = match.Groups[9].Captures;
-            var colCount = cells.Count/rows.Count;
-            var i = 0;
-            foreach (Capture row in rows) {
-                writer.WriteLine("    <tr>");
-                for (var j = 0; j < colCount; j++ ) {
-                    writer.WriteLine("        <td>" + cells[colCount * i + j] + "</td>");
-                }
-                writer.WriteLine("        <td>" + match.Groups[10].Captures[i++] + "</td>");
-                writer.WriteLine("    </tr>");
-            }
-            writer.WriteLine("</tbody></table>");
-            return writer.ToString();
-        }
-        , RegexOptions.Multiline);
-    }
-}
-
+﻿@using App_Code
+@using MarkdownWebPages
 @{
     MarkdownWebPage.TransformUrls = true;
     MarkdownWebPage.AlterBehaviors(b => b.Clear());
-    MarkdownWebPage.AlterBehaviors(b => b.Add(ProcessIncludes));
-    MarkdownWebPage.AlterBehaviors(b => b.Add(ProcessComments));
-    MarkdownWebPage.AlterBehaviors(b => b.Add(ProcessTables));
+    MarkdownWebPage.AlterBehaviors(b => b.Add(MarkdownExtensions.ProcessIncludes));
+    MarkdownWebPage.AlterBehaviors(b => b.Add(MarkdownExtensions.ProcessComments));
+    MarkdownWebPage.AlterBehaviors(b => b.Add(MarkdownExtensions.ProcessTables));
+    
+    // Index the whole documentation on app start
+    SearchHelpers.BuildIndex(HttpContext.Current);
 }
-
-

@@ -1,42 +1,35 @@
-﻿@using System.Configuration
-@using System.Xml.Linq
+﻿@using App_Code
 @{
-    const int pageSize = 10;
-    XNamespace web = "http://schemas.microsoft.com/LiveSearch/2008/04/XML/web";
-    var appid = ConfigurationManager.AppSettings["bingAppId"];
-    var pageNumber = int.Parse(Request.QueryString["p"] ?? "0");
-    var q = Request.QueryString["q"] ?? "";
+    var q = Request.QueryString["q"];
+    var page = int.Parse(Request.QueryString["p"] ?? "1");
     Page.Title = "Orchard Documentation - Search - " + q;
-    var requestString = "http://api.bing.net/xml.aspx?"
-                        + "AppId=" + appid
-                        + "&Query=" + Html.Encode(q) + "%20site:docs.orchardproject.net"
-                        + "&Sources=Web"
-                        + "&Version=2.0"
-                        + "&Market=en-us"
-                        + "&Adult=Moderate"
-                        + "&Options=EnableHighlighting"
-                        + "&Web.Count=" + pageSize
-                        + "&Web.Offset=" + (pageNumber*pageSize)
-                        + "&Web.Options=DisableHostCollapsing+DisableQueryAlterations";
-    var request = (HttpWebRequest) WebRequest.Create(requestString);
-    var response = request.GetResponse().GetResponseStream();
-    var webElement = XElement.Load(response).Element(web + "Web");
-
-    if (webElement != null) {
-        var resultSet = webElement.Element(web + "Results");
-        if (resultSet != null) {
+    var resultSet = SearchHelpers.Query(HttpContext.Current, q, page);
+    var documents = resultSet.Documents;
+    if (resultSet.TotalCount == 0) {
+        @:No results found.
+    }
+    else {
+        <div class="searchResultCount">@resultSet.TotalCount @(resultSet.TotalCount > 1 ? "documents" : "document") found.</div>
         <ul id="SearchResultsDiv">
-            @foreach (var result in resultSet.Elements(web + "WebResult")) {
+            @foreach (var doc in documents) {
             <li>
                 <article>
                     <header>
-                        <h2><a href="@result.Element(web + "Url").Value">@result.Element(web + "Title").Value</a></h2>
+                        <h2><a href="@Href(doc.Url)">@doc.Title</a></h2>
                     </header>
-                    <p>@result.Element(web + "Description").Value</p>
+                    <blockquote>@Html.Raw(doc.Summary)</blockquote>
+                    <div><a href="@Href(doc.Url)">Read more...</a></div>
                 </article>
             </li>
             }
         </ul>
-        }
+        if (resultSet.TotalCount > SearchHelpers.PageSize) {
+            int pages = (resultSet.TotalCount / SearchHelpers.PageSize) + 1;
+            <ul class="searchPagination">
+            @for (var p = 1; p <= pages; p++) {
+                <li>@if (p == page) {<text>@p</text>} else {<a href="?q=@(q)&p=@p">@p</a>}</li>
+            }
+            </ul>
+         }
     }
 }

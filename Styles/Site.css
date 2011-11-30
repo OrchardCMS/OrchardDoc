@@ -369,6 +369,14 @@ html>body #ContainerDiv {height: auto;}
 	background:url(Images/background_module.gif) no-repeat bottom right;
 }
 
+#SidebarDiv h2 {
+    margin-top: 6px;
+}
+
+#SidebarDiv div {
+    margin-bottom: 19px;
+}
+
 /* Contains the contents of a Page */
 #MainDiv {
 	padding:12px 10px 10px 22px;
@@ -1087,6 +1095,23 @@ img.thumb {
 
 #SearchResultsDiv li {
     list-style: none;
+}
+
+.searchPagination {
+    margin-top: 20px;
+}
+
+.searchPagination li {
+    list-style: none;
+    display: inline;
+}
+
+.searchButton {
+    border: none;
+    background: transparent;
+    font-size: 1.4em;
+    color: #006699;
+    cursor: pointer;
 }
 
 /* Search page end */
