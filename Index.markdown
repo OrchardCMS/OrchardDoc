@@ -1,5 +1,5 @@
 
-> **Note:** If you would like to contribute to this documentation set, please see [Suggestions for New Topics](Suggestions-for-New-Topics) for a list of proposed topics.
+> **Note:** If you would like to contribute to this documentation set, please see [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics) for a list of proposed topics.
 
 ## About the Project
 

@@ -5,13 +5,11 @@ We have a discussion open on the 2.0 roadmap here: [Orchard 2.0 roadmap](http://
 
 ### Current Priorities
 
-* Planning for 2.0
-* Tokens
-* Autoroute
-* Projector
-* Setup improvements
+* [Autoroute](http://orchard.codeplex.com/discussions/274916)
+* [Projector](http://orchard.codeplex.com/discussions/274915)
+* [Core Field Types](http://orchard.codeplex.com/discussions/274918)
+* [Performance](http://orchard.codeplex.com/discussions/274921)
 * Gallery improvements
-* Commerce
 
 ### Currently Implemented (Partially or in Full)
 
@@ -64,6 +62,9 @@ We have a discussion open on the 2.0 roadmap here: [Orchard 2.0 roadmap](http://
 * Setup recipes
 * Module Recipes
 * Import/Export
+* Tokens
+* Rules
+* Forms API
 
 ### Areas of Focus for Future Iterations (Backlog, Not in Priority Order)
 
