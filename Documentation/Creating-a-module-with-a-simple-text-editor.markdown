@@ -22,14 +22,15 @@ After you accept the license terms, Orchard is installed.
 
 Open a command window and change the current directory to point to the root of the site. Then run `bin\orchard.exe`.
 
-![Figure 6. The Orchard command line](../Attachments/Creating-a-module-with-a-simple-text-editor/s_07_OrchardCLI.png)
+[![Figure 6. The Orchard command line](../Attachments/Creating-a-module-with-a-simple-text-editor/s_07_OrchardCLI.png)](../Attachments/Creating-a-module-with-a-simple-text-editor/07_OrchardCLI.png)
 
 Type `help commands` to get the list of available commands. For now, only the `help` and `setup` commands are available. However, as Orchard is developed and modules are activated, new commands will become available. (The Orchard command-line executable actually discovers the commands from the modules inside of the application.)
 
 To set up the site, enter the following command: 
 
     
-    setup /SiteName:Orchard /AdminUsername:admin /AdminPassword:123456 /DatabaseProvider:SqlCe
+    setup /SiteName:Orchard /AdminUsername:admin /AdminPassword:123456
+          /DatabaseProvider:SqlCe
 
 
 This is equivalent to setting up the site from the web interface.

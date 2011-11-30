@@ -14,13 +14,13 @@ Though Selenium does a great job for us to generate C# test code, however, many 
 If you see common steps/verifications in more 2 test cases, you'd better to think moving the steps to a helper class (classes derived from class HelperBase).
 
 # Create a simple test by using the test framework
-Let's say you are going to create a test which verifies a link named “Admin” is presented, for Administrators. Below is the tests based on the test framework:
+Let's say you are going to create a test which verifies a link named "Admin" is presented, for Administrators. Below is the tests based on the test framework:
 
     
     [TestMethod]
     public void CanNotAccessAdminPanelTestHelper()
     {
-        TestLibrary.UserHelper.LogOn(“Administrator”, “0123456”);
+        TestLibrary.UserHelper.LogOn("Administrator", "0123456");
         Assert.IsFalse(selenium.IsElementPresent("link=Admin"));
     }
 
@@ -73,11 +73,11 @@ If you need throw an exception from your test code, indicates test code error. P
         if (owner != null)
             throw new CaseErrorException("Set owner is not implemented yet!");
     
-        …
+        ...
     }
 
 
-If a null reference is passed to parameter “title”, this is a bug in test code. In order to distinguish test bugs from product bugs, we'd better throw an instance of CaseErrorException, with the original exception as its inner exception. This is useful in controller test, because the test code calls controllers directly, we need a way to distinguish test bugs from product bugs, while investigate test failures.
+If a null reference is passed to parameter "title", this is a bug in test code. In order to distinguish test bugs from product bugs, we'd better throw an instance of CaseErrorException, with the original exception as its inner exception. This is useful in controller test, because the test code calls controllers directly, we need a way to distinguish test bugs from product bugs, while investigate test failures.
 
 ## Class TestLibrary.Consts
 Please put all constants to this class, for e.g. the default administrator name/password in the test database.
@@ -92,7 +92,7 @@ Please check the following article to understand how data driven tests is done i
 <http://www.julmar.com/blog/mark/PermaLink,guid,e47f09cc-e893-46a6-aa13-7202d4e50986.aspx>
 
 ## Running tests against different browsers
-In order to run all tests on different browsers, and reuse the same test logics. The test code saves browsers settings in the excel file. Test team developed a script, which adds browser settings, such as “*opera”, “*iexplore” and e.t.c to the excel files. So in test case automation phase, just put test data in the excel files is fine. The script is run before any tests, which adds browser settings to all excel files and copy the files to %TestOutputDir%.
+In order to run all tests on different browsers, and reuse the same test logics. The test code saves browsers settings in the excel file. Test team developed a script, which adds browser settings, such as "*opera", "*iexplore" and e.t.c to the excel files. So in test case automation phase, just put test data in the excel files is fine. The script is run before any tests, which adds browser settings to all excel files and copy the files to %TestOutputDir%.
 
 There is another way to launch different browser, selenium remote control sever has a switch called -forcedBrowserMode, this switch overrides settings (hard code brower string) in ocde. This is also quite convenient while debugging test failures.
 

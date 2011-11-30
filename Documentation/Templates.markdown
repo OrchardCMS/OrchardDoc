@@ -12,17 +12,17 @@ Currently, we have only content zones, so a template can look like this:
               href="<%= ResolveUrl("~/Content/StyleSheet.css") %>" />
       </head>
       <body>
-        <div class=”header”>
-          <%= Html.Include(“header”) %>
+        <div class="header">
+          <%= Html.Include("header") %>
         </div>   
-        <div class=”centerContentZone”>
-          <%= Html.IncludeZone(“Content”) %>
+        <div class="centerContentZone">
+          <%= Html.IncludeZone("Content") %>
         </div>   
-        <div class=”rightSidebar”>
-          <%= Html.IncludeZone(“Right sidebar") %>
+        <div class="rightSidebar">
+          <%= Html.IncludeZone("Right sidebar") %>
         </div>
-        <div class=”footer”>
-          <%= Html.Include(“footer”) %>
+        <div class="footer">
+          <%= Html.Include("footer") %>
         </div>
         <%= Html.IncludeAdmin() %>
       </body>

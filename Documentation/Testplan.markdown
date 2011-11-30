@@ -25,7 +25,7 @@ a)	Save predefined data in an Excel file, and utilize data driven test features 
 b)	Randomly generating test data by a data generating tool, and combine with the power of pair-wise generation. We are able to generate as many valid data as possible on the fly. 
 We'll use the approach a) to perform data generating operation, because we are not able to share tools to public community yet. 
 4.	Controller test
-Actions in all controllers have unit tests. Parameters of action methods are generated based on approach described in “Data driven tests”. 
+Actions in all controllers have unit tests. Parameters of action methods are generated based on approach described in "Data driven tests". 
 
 5.	Manual test.
 Manual tests are designed to perform usability testing, to see whether the operation work flow make sense to users. These manual tests documents are maintained in VSTT, in this way we are able to combine manual & automation test result in a single test pass.
@@ -33,7 +33,7 @@ Manual tests are designed to perform usability testing, to see whether the opera
 6.	Stress test & Performance test
 
 # Communication Plan
-Bugs are tracked in “Issue Tracker” of http://orchard.codeplex.com. Everyday testers get latest code from codeplex by subversion, and perform the tests. Since bugs are tracked in codeplex, we are able to export bug status to Excel, view the bug trends, and make the sign-off decision.
+Bugs are tracked in "Issue Tracker" of http://orchard.codeplex.com. Everyday testers get latest code from codeplex by subversion, and perform the tests. Since bugs are tracked in codeplex, we are able to export bug status to Excel, view the bug trends, and make the sign-off decision.
 
 In the beginning few iterations, testers are not familiar with product features. Testing are started 1 iteration behind development, that is, testers perform testing on features finished, while developers work on features in next iteration.  Latest finished features are fed to testers in iteration post-mortems.  In the later iterations, while testers get familiar with product features, testers should be able to work in the same iteration as developers.  Ideally, testing works just 1 or 2 days behind development.
 
