@@ -5,7 +5,12 @@ Before you begin this tutorial, you need a [Microsoft SQL Azure](http://www.micr
 
 
 # Building and Deploying to Azure
-To begin, install [Windows Azure Tools for Microsoft Visual Studio 1.4 (March 2011)](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7a1089b6-4050-4307-86c4-9dadaa5ed018), which includes the Windows Azure SDK. Download and install VSCloudService.exe which contains both the SDK and the Cloud Services. If you do not already have a local instance of Microsoft SQL Server, install [Microsoft SQL Server 2008 R2 RTM - Express with Management Tools](http://www.microsoft.com/downloads/en/details.aspx?familyId=967225EB-207B-4950-91DF-EEB5F35A80EE&amp;hash=CDEb%2fJRDkSXIcb5rEbkx2M7RlSbrPNqmx7hbB%2bWHG5DbEBxcq9rXHwK4JS2uDdtvAYo2C8xBh%2fnA7yzNC8xD8w%3d%3d). A local SQL Server instance is required in order to work with the Azure Storage Emulator. Management tools are recommended for administering your SQL Azure instance later.
+To begin, install [Windows Azure SDK and Tools for Microsoft Visual Studio 1.5 (September 2011)](http://www.microsoft.com/download/en/details.aspx?id=27577), 
+which includes the Windows Azure SDK. Download and install VSCloudService.exe which contains both the SDK 
+and the Cloud Services. If you do not already have a local instance of Microsoft SQL Server, install
+[Microsoft SQL Server 2008 R2 RTM - Express with Management Tools](http://www.microsoft.com/downloads/en/details.aspx?familyId=967225EB-207B-4950-91DF-EEB5F35A80EE&amp;hash=CDEb%2fJRDkSXIcb5rEbkx2M7RlSbrPNqmx7hbB%2bWHG5DbEBxcq9rXHwK4JS2uDdtvAYo2C8xBh%2fnA7yzNC8xD8w%3d%3d). 
+A local SQL Server instance is required in order to work with the Azure Storage Emulator. Management tools are 
+recommended for administering your SQL Azure instance later.
 
 You can build a deployable package for Azure from [the Visual Studio 2010 command line](http://msdn.microsoft.com/en-us/library/ms229859.aspx). You will need a [source tree enlistment](Setting-up-a-source-enlistment) of Orchard to do this. Run `ClickToBuildAzurePackage.cmd` from the command line in order to build the package. (Depending on your environment, you might need to run the script as an administrator.) ClickToBuildAzurePackage is not in the current 1.2 Azure package but can be obtained from [the Source Code tab on CodePlex](http://orchard.codeplex.com/SourceControl/list/changesets).
 
