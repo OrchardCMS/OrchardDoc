@@ -1,4 +1,3 @@
-
 Fields can be used in Orchard to [build new content types](Creating-custom-content-types). Orchard currently comes with only one type of field, text fields, but it is possible to build your own field types that can then be used to build new content types.
 
 This topic will teach you how to add such a new field type. You can find the source code for this tutorial here: [http://orcharddatetimefield.codeplex.com/](http://orcharddatetimefield.codeplex.com/).
@@ -404,6 +403,10 @@ Add the following **DateTimeFieldEditorEvents.cs** file to the **Settings** fold
             public override IEnumerable<TemplateViewModel> PartFieldEditorUpdate(
               ContentPartFieldDefinitionBuilder builder, IUpdateModel updateModel) {
                 var model = new DateTimeFieldSettings();
+                if (builder.FieldType != "DateTimeField") {
+                  yield break;
+                }
+                
                 if (updateModel.TryUpdateModel(
                   model, "DateTimeFieldSettings", null, null)) {
                     builder.WithSetting("DateTimeFieldSettings.Display",
