@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+<title>Context Buttons</title>
+
+
+<style type="text/css">
+
+body {
+	font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+	font-style:normal;
+	text-align:left;
+	color:#333;
+	height:100%;
+}
+
+#main h1 {
+	font-size:26px;
+	font-weight:normal;
+	border-bottom:1px solid #BDBCBC;
+}
+
+#inContext {
+	background-color: #484848;
+	border: 1px #616161 solid;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	padding:2px;
+	width: 200px;
+	z-index:1000;
+}
+
+.button, .button:visited {
+	background:none repeat scroll 0 0 #F5F5F5;
+	border:1px solid #616161;
+	color:#2D2F25;
+	cursor:pointer;
+	padding:8px 4px;
+	margin:0;
+	display:inline;
+	text-align:center;
+	width:80px;
+}
+
+.button:hover, .button:active, .button:focus {
+    background:#ffac40;
+    border-color:#bb8b2d;
+    color:#fff;
+    text-decoration:none;
+}
+
+.first, .last {
+	width:60px;
+}
+
+.first {
+	-webkit-border-top-left-radius: 6px;    /* for Safari */
+    -webkit-border-bottom-left-radius: 6px;
+	-moz-border-radius-topleft: 6px;       /* for Firefox */
+	-moz-border-radius-bottomleft: 6px;
+}
+
+.last {
+	-webkit-border-top-right-radius: 6px;    /* for Safari */
+    -webkit-border-bottom-right-radius: 6px;
+	-moz-border-radius-topright: 6px;       /* for Firefox */
+	-moz-border-radius-bottomright: 6px;
+}
+
+</style>
+
+<script type="text/javascript">
+document.onmousemove = alertCoord;
+
+function alertCoord(e) {
+	var posx = 0;
+	var posy = 0;
+	if (!e) var e = window.event;
+	if (e.pageX || e.pageY) 	{
+		posx = e.pageX;
+		posy = e.pageY;
+	}
+	else if (e.clientX || e.clientY) 	{
+		posx = e.clientX + document.body.scrollLeft
+			+ document.documentElement.scrollLeft;
+		posy = e.clientY + document.body.scrollTop
+			+ document.documentElement.scrollTop;
+	}
+	// posx and posy contain the mouse position relative to the document
+	// Check if a f2 key is down and display the menu
+	document.getElementById("mousePosition").innerHTML = ('Mouse coordinates are x position '+posx+' and y position ' +posy+'.');
+
+
+document.onkeydown = captureKey
+function captureKey(e) {
+	var code;
+	if (!e) var e = window.event;
+	if (e.keyCode) code = e.keyCode;
+	else if (e.which) code = e.which;
+	//var character = String.fromCharCode(code);
+	//alert('Character was ' + character);
+	if (code == 113 && document.getElementById("inContext").style.display == "none") {
+
+	//document.getElementById("inContext").innerHTML = ('Mouse coordinates are x position '+posx+' and y position ' +posy+'.');
+	//if (document.getElementById("inContext").style.visibility == "hidden"){
+	document.getElementById("inContext").style.top = posy-20+'px';
+	document.getElementById("inContext").style.left = posx-103+'px';
+	document.getElementById("inContext").style.display = "";
+	//}
+}
+else if (code == 113 && document.getElementById("inContext").style.display == "") {
+	document.getElementById("inContext").style.top = posy-20+'px';
+	document.getElementById("inContext").style.left = posx-103+'px';
+}
+	else {
+		alert("keycode: " + code);
+}
+}
+
+// end of key capture
+
+}
+
+</script>
+</head>
+
+
+<body>
+<div id="main">
+<h1>Edit Page</h1>
+<p>
+Press the <strong>F2</strong> key to show the toolbar (Other keys will show an alert).</p>
+<p>Text in the toolbar would be replaced by icons.<br />
+PN = Publish Now<br /> SD = Save Draft<br /> PL = Publish Later
+</p>
+<div id="mousePosition"></div>
+<div id="inContext" style="position:absolute; display:none;">
+<input class="button first" type="button" value="PN" /><input class="button primaryAction" type="button" value="SD" /><input class="button last" type="button" value="PL" />
+</div>
+
+</div>
+</body>
+</html>

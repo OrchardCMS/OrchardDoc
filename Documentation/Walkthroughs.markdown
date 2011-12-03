@@ -4,7 +4,7 @@
 
 * [Branding vectors](/walkthroughs/branding/OrchardLogo1.png)
 * [Branding PSD](/walkthroughs/branding/OrchardLogo2.png)
-* [Adobe Illustrator logo sources](http://www.orchardproject.net/docs/GetFile.aspx?File=OrchardLogos.zip&AsStreamAttachment=1&Provider=ScrewTurn.Wiki.FilesStorageProvider&IsPageAttachment=1&Page=walkthroughs&NoHit=1)
+* [Adobe Illustrator logo sources](/Attachments/walkthroughs/OrchardLogos.zip)
 
 #### Wireframes
 

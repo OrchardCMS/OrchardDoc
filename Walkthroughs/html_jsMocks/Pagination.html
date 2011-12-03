@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Pagination</title>
+
+<style type="text/css">
+
+/*Yahoo browser reset
+----------------------------------------------------------*/
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,
+blockquote,th,td {margin:0; padding:0; }
+table { border-collapse:collapse; border-spacing:0; }
+fieldset,img { border:0; }
+address,caption,cite,code,dfn,em,strong,th,var { font-style:normal; font-weight:normal; }
+ol,ul { list-style:none; }
+caption,th { text-align:left; }
+h1,h2,h3,h4,h5,h6 { font-size:100%; font-weight:normal; }
+abbr,acronym { border:0; }
+q:before,q:after {content:'';}
+abbr,acronym { border:0;}
+
+body  {
+	background:#fcfcfc;
+	color:#333333;
+	font-family:Segoe UI,Trebuchet,Arial,Sans-Serif;
+	font-size:62.5%;
+	padding:2em;
+}
+
+input {
+	font-family:Segoe UI,Trebuchet,Arial,Sans-Serif;
+	font-size:1.4em;	
+}
+
+/* Headings and defaults
+----------------------------------------------------------*/
+h1, h2, h3, h4, h5, legend {
+    padding:.4em 0;
+    font-style: normal;
+    font-weight:normal;
+}
+h1 { font-size:2.6em; } /* 26px */
+h2 { font-size:2.1em; } /* 21px */
+h2 span { font-size:.57em; } /* 12px */
+h3 { font-size:1.8em; } /* 18px */
+h4 { font-size:1.6em; } /* 16px */
+h5 { font-size:1.4em; } /* 14px */
+
+a:link, a:visited {
+	color:#1E5D7d;
+	text-decoration:none;
+}
+
+/* Forms
+----------------------------------------------------------*/
+
+fieldset {
+	margin: 0 0 2em 0;
+	padding:1em;
+	border:1px solid #ccc;
+}
+
+legend {
+	font-size: 1.6em;
+	border:none;
+}
+
+
+/* Buttons
+----------------------------------------------------------*/
+
+button, .button, .pagination  li {
+	background:#F5F5F5;
+	background: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), to(#cbcbcb));
+	background:-moz-linear-gradient(top , #F5F5F5, #cbcbcb);
+	border:1px solid #999999;
+	color:#2D2F25;
+	cursor:pointer;
+	padding:0 0.8em 0.1em 0.8em;
+	text-align:center;
+	text-shadow: 0 1px 1px rgba(0,0,0,.2);
+	box-shadow: 0 4px 4px rgba(231,231,231,.2) inset;
+	-webkit-box-shadow: 0 4px 4px rgba(231,231,231,.2) inset;
+	-moz-box-shadow: 0 4px 4px rgba(231,231,231,.2) inset;
+}
+
+button.button {
+	font-family:Segoe UI,Trebuchet,Arial,Sans-Serif;
+	font-size:1.4em;
+}
+
+a.button {
+	font-size:1.4em;
+	color:#2D2F25;
+	padding:0.1em 1em;
+}
+
+.primaryAction, .primaryAction:link, .primaryAction:visited {
+	background:#4687AD;
+	background: -webkit-gradient(linear, left top, left bottom, from(#4687AD), to(#366581));
+	background:-moz-linear-gradient(top , #4687AD, #366581);
+	border:1px solid #405f71;
+	color:#fff;
+}
+
+button:hover, .button:hover,
+button:active, .button:active,
+button:focus, .button:focus,
+.pagination li:hover {
+    border-color:#bb8b2d;
+    color:#fff;
+    text-decoration:none; 
+    background: #ffac40;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffac40), to(#f06015));
+	background: -moz-linear-gradient(top,  #ffac40,  #f9760d);
+}
+
+
+.button:active {
+	position: relative;
+	top: 1px;
+}
+
+.disabled, .disabled:link, .disabled:visited, button.disabled:hover, input[type="button"].disabled:hover, input[type="submit"].disabled:hover {
+	background:#eee;
+	border:1px solid #ababab;
+	color:#ababab;
+	cursor:default;
+	text-shadow: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+
+
+/* Pagination
+----------------------------------------------------------*/
+
+.pagination {
+	list-style:none;
+	font-size:1.4em;
+}
+
+ul.pagination li {
+	float:left;
+	margin: 0 0.4em;
+	padding:0.2em 0.6em;
+	text-align:center;
+	}
+
+ul li.currentPage {
+	color:#e3680e;
+	background:#FBEFDB;
+	border:1px #e3680e solid;
+	border-color:#f5ab4b;
+}
+
+/*Prev and Next Buttons
+----------------------------------------------------------*/
+
+.pagination li.first, .pagination li.last {
+	border:none;
+	background:transparent;
+	width:auto;
+	height:auto;
+	text-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+
+}
+
+.pagination li a{
+	font-size:1em;
+}
+
+.pagination li.first a.disabled, .pagination li.last a.disabled {
+	color:#ababab;
+	background:none;
+	border:none;
+	cursor:default;
+	}
+
+
+</style>
+
+
+</head>
+
+<body>
+
+<h3>Buttons</h3>
+
+<form>
+<fieldset>
+<legend>Input type button</legend>
+<input class="button" type="button" value="Default" />
+<input class="button primaryAction" type="button" value="Primary" />
+<input class="button disabled" type="button" value="Disabled" />
+</fieldset>
+
+<fieldset>
+<legend>Input type submit</legend>
+<input class="button" type="submit" value="Default" />
+<input class="button primaryAction" type="submit" value="Primary" />
+<input class="button disabled" type="submit" value="Disabled" />
+</fieldset>
+
+<fieldset>
+<legend>Button</legend>
+<button class="button">Default</button>
+<button class="button primaryAction">Primary</button>
+<button class="button disabled">Disabled</button>
+</fieldset>
+
+<fieldset>
+<legend>Link buttons</legend>
+<a class="button" href="">Default</a>
+<a class="button primaryAction" href="">Primary</a>
+<a class="button disabled" href="">Disabled</a>
+</fieldset>
+</form>
+
+<h3>Pagination</h3>
+<ul class="pagination">
+<li class="first"><a href="" class="disabled">Prev</a></li>
+<li class="currentPage">1</li>
+<li>2</li>
+<li>3</li>
+<li>4</li>
+<li>5</li>
+<li class="last"><a href="">Next</a></li>
+</ul>
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Collection MaxLevel="8" TileSize="256" Format="png" NextItemId="4" ServerFormat="Default" xmlns="http://schemas.microsoft.com/deepzoom/2009">
+  <Items>
+    <I Id="0" N="0" Source="dzc_output_images/1_contextmenu.xml">
+      <Size Width="1082" Height="776" />
+      <Viewport Width="2.01836545479652" X="-0.39212514548359734" Y="-0" />
+    </I>
+    <I Id="1" N="1" Source="dzc_output_images/button_concept.xml">
+      <Size Width="404" Height="715" />
+      <Viewport Width="6.331497524752475" X="-0" Y="-0" />
+    </I>
+    <I Id="2" N="2" Source="dzc_output_images/mayaui.xml">
+      <Size Width="640" Height="480" />
+      <Viewport Width="3.5775174825174823" X="-2.5775174825174823" Y="-0" />
+    </I>
+    <I Id="3" N="3" Source="dzc_output_images/mayaui2.xml">
+      <Size Width="680" Height="374" />
+      <Viewport Width="3.5775174825174823" X="-2.5775174825174823" Y="-0.87140480591497238" />
+    </I>
+  </Items>
+</Collection>

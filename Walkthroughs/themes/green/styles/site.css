@@ -1,0 +1,311 @@
+﻿
+/* Site CSS
+----------------------------------------------------------*/
+
+
+/*Defaults
+----------------------------------------------------------*/
+
+html {height: 100%; background-color: #eaf0e8;}
+
+body {
+	font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+	font-style:normal;
+	background:url(../Content/Images/bodyBackground.png) top center no-repeat #eaf0e8;
+	text-align:left;
+	color:#3a4138;
+	height:100%;
+}
+
+/* ---------- Headings and defaults ---------- */
+
+h1,h2,h3,h4,h5,h6,legend {font-weight:normal; font-style: normal; margin:12px 0; color:#37440a;}
+
+h1 {font-size: 197%;} /*26px*/
+h2 {font-size: 182%;} /*24px*/
+h3 {font-size: 167%;} /*22px*/
+h4 {font-size: 153.9%;} /*20px*/
+h5 {font-size: 138.5%;} /*18px*/
+h6 {font-size: 123.1%;} /*16px*/
+
+
+/* Paragraphs and lists */
+
+p {line-height:20px; padding:12px 8px 8px 8px;}
+.small {font-size: 96%;}
+
+strong {font-weight:700;}
+
+ul.square li {list-style:square; list-style-position:inside; line-height:24px; margin:0 0 0 12px;}
+ol.decimal li {list-style:decimal; list-style-position:inside; line-height:24px; margin:0 0 0 12px;}
+
+
+/* Links */
+
+a, a:visited {color:#006699; text-decoration:none;}
+a:hover {text-decoration: underline;}
+a:active {color:#006699; text-decoration:none;}
+
+#topNav a, #topNav a:visited{color: #1c3c21; text-decoration: none;}
+#topNav a:hover {text-decoration: underline;}
+#topNav a:focus {text-decoration: underline;}
+
+#innerft a, #innerft a:visited {color:#525e50; text-decoration: none;}
+#innerft a:hover {text-decoration: underline;}
+#innerft a:active {color:#525e50; text-decoration: none;}
+
+/* Forms
+----------------------------------------------------------*/
+
+input[type="text"], #commenttext, #password {
+    border:1px solid #DDDEDF;
+    display: block;
+    -moz-border-radius:6px;
+	-webkit-border-radius:6px;
+}
+
+fieldset {
+    margin: 20px 20px 20px 10px;
+    border:1px solid #eef2ed;
+    -moz-border-radius:6px;
+	-webkit-border-radius:6px;
+    }
+    
+    legend{
+	font-size:123.1%;
+	margin:-10px 0 0 10px;
+	padding:0 6px;
+}
+
+label {
+    display: block;
+    margin:8px 0 2px 16px;
+    font-size:105%;
+    }
+
+input[type="text"], #commenttext, #password {
+    border-color:#cacec6;
+    padding:2px;
+    margin:2px 0 4px 16px;
+    width:90%;
+    }
+
+input[type="checkbox"] {
+    margin:2px 0 4px 10px;
+}
+
+input[type="submit"], input[type="button"] {
+    padding:2px 14px;
+    display: block;
+    margin:2px 0 20px 10px;
+    font-weight:600;
+    }
+  
+.forcheckbox {
+    margin:0 0 0 4px;
+    display:inline;
+}
+
+/* Tables
+----------------------------------------------------------*/
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	border-spacing: 0px;
+}
+
+tbody 
+{
+	border-spacing: 0px;
+	vertical-align: middle;
+}
+
+thead, th {
+    font-size:104%;
+	font-weight:600;
+	text-align:left;
+	background:#dbe2db;
+	overflow:hidden;
+}
+
+
+th, td {
+	padding: 10px 12px;
+	border-spacing: 0px;
+	display:table-cell;
+	vertical-align: middle;
+	border-bottom:1px dotted #DDDEDF;
+}
+
+caption {
+	text-indent: 0px;
+	font-size:80%;
+	margin:8px 0;
+	caption-side: bottom;
+}
+
+col {
+	border-spacing: 0px;
+	display: table-column;
+	}
+	
+colgroup 
+{
+	border-spacing: 0px;
+	display: table-column-group;
+}
+
+.divider {border-bottom:1px solid #4E6886;}
+
+
+/* Layout
+----------------------------------------------------------*/
+
+#doc4 {
+    width:73.846em; /* 960/13=73.846 -set custom doc width */
+    *width:72.001em; /* 960/13.333=72.001 -set custom doc width for ie */
+    }
+    
+#bd {
+    min-height:500px;
+    background:#fff;
+    -webkit-border-top-left-radius: 6px;    /* for Safari */
+    -webkit-border-top-right-radius: 6px;
+	-moz-border-radius-topleft: 6px;       /* for Firefox */
+	-moz-border-radius-topright: 6px;
+    }
+    
+#hd  h1 {
+	margin: 0px;	
+}
+
+#hd  h1 a {
+	background:url(../Content/Images/logo.png) no-repeat top left;
+	display: block;
+	float:left;
+	width:270px;
+	height:80px;
+	top:0px;
+	margin: 0px;
+	position:relative;
+	z-index:0;
+}
+
+#branding {
+    height:80px;
+}
+
+#logIn {
+	margin:33px 2px 0 0;
+	font-size:104%;
+	float:right;
+}
+
+#maincolumn {
+	margin:22px 0 0 20px;
+	padding:0 16px 0 0;
+	}
+
+#subcolumn1 {
+    margin:10px;
+    padding:4px 0 12px 0;
+    }
+    
+#subcolumn1 h4 {
+    margin:6px 0 0 6px;
+    }
+    
+#subcolumn1 p {
+    padding:6px;
+    }
+    
+#subcolumn1 ul {
+     border:1px solid #eef2ed;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+	padding:8px;
+    }
+
+
+/* contentItems is the generic class for all content items - e.g. blogs uses this for the unordered lists to display posts */
+    
+.contentItems li {
+    margin:12px 0 12px 0;
+}
+
+#ft {
+	background:#CED5CE;
+	-webkit-border-bottom-left-radius: 6px;    /* for Safari */
+    -webkit-border-bottom-right-radius: 6px;
+	-moz-border-radius-bottomleft: 6px;       /* for Firefox */
+	-moz-border-radius-bottomright: 6px;
+}
+
+#innerft {
+	padding:20px 8px 8px 8px;
+	padding:10px 20px 20px 20px;
+}
+
+
+/* Top navigation pane
+----------------------------------------------------------*/
+
+#menucontainer {
+	margin:0;
+	padding:0 0 0 20px;
+	list-style:none;
+	float:left;
+	font-size:104%;
+}
+
+#menucontainer ul li {
+	float:left;
+	margin:0 2px;
+	background:url(../Content/Images/tabRightOff.gif) no-repeat top right;
+}
+
+#menucontainer ul li a {
+	display:block;
+	padding: 8px 18px;
+	background:url(../Content/Images/tabLeftOff.gif) no-repeat top left;
+	text-decoration:none;
+	float:left;
+	font-size:115%;
+	color:#35550b;
+}
+
+#menucontainer ul li.tabon {
+	background:url(../Content/Images/tabRightOn.gif) no-repeat top right;
+}
+
+#menucontainer ul li.tabon a {
+	background:url(../Content/Images/tabLeftOn.gif) no-repeat top left;
+	font-weight:600;
+}
+
+
+/* Common */
+
+.floatLeft {float: left;} /*Use this class to float anything to the left*/
+
+.floatRight {float: right;}  /*Use this class to float anything to the right*/
+
+.floatNone {float: none;}
+
+.centered {margin:0 auto;}  /*Center*/
+
+.textRight {text-align:right;}
+
+.textCentered {text-align:center;}
+
+.textJustified {text-align:justify;}
+
+.displayText {display:none;}
+
+.clearLayout {clear:both;}  /*Use this class clear layout*/
+
+.disabled {color:#CCC;}
+
+.alert {color:#FF0000;}
+
