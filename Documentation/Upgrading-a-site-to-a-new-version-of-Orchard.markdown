@@ -1,4 +1,3 @@
-
 A new version of a CMS is an important event in the life of a site, and transitioning to it should ideally be simple. Unfortunately, Orchard does not currently have an automated upgrade mechanism. This topic will show how to upgrade to a new version as painlessly as possible today while focusing on making your data safe.
 
 
@@ -10,7 +9,7 @@ If you made modifications to permissions on the files and folders inside your si
 
 # Upgrading a Running Instance of Orchard to a New Version
 
-The instructions in this section only apply for a standalone Orchard web site. If you are working with the full source code of Orchard, please refer to [#enlistment](#enlistment).
+The instructions in this section only apply for a standalone Orchard web site. If you are working with the full source code of Orchard, please refer to [#enlistment](#IfYouHaveaSourceCodeEnlistment).
 
 It is highly recommended that you work on a local copy of your site throughout the update process.
 
