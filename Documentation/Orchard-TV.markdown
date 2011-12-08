@@ -46,7 +46,7 @@
 
 ## Live demo of Projector by Sébastien Ros
 
-<iframe width="560" height="410" src="http://www.youtube.com/embed/SP912eWoOoo" frameborder="0" allowfullscreen></iframe>
+<iframe width="500" height="369" src="http://www.youtube.com/embed/SP912eWoOoo" frameborder="0" allowfullscreen></iframe>
 
 # Development
 
