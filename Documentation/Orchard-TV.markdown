@@ -1,4 +1,3 @@
-
 # Conferences
 
 ## CodeStock 11
@@ -7,7 +6,7 @@
 
 ## TechEd 11
 
-[Orchard 1.1: Build,Customize,Extend,Ship](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DEV355) by Sébastien Ros
+[Orchard 1.1: Build,Customize,Extend,Ship](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DEV355) by Sï¿½bastien Ros
 
 ## TechDays 11
 
@@ -42,6 +41,12 @@
 ## Getting Started With Taxonomies
 
 <iframe height="314" src="http://www.youtube.com/embed/B3jhgTeiEtw?hd=1" frameborder="0" width="500" allowfullscreen="allowfullscreen"></iframe>
+
+# Projector
+
+## Live demo of Projector by SÃ©bastien Ros
+
+<iframe width="560" height="410" src="http://www.youtube.com/embed/SP912eWoOoo" frameborder="0" allowfullscreen></iframe>
 
 # Development
 
