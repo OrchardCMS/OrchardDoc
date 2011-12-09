@@ -9,7 +9,7 @@ If you made modifications to permissions on the files and folders inside your si
 
 # Upgrading a Running Instance of Orchard to a New Version
 
-The instructions in this section only apply for a standalone Orchard web site. If you are working with the full source code of Orchard, please refer to [#enlistment](#IfYouHaveaSourceCodeEnlistment).
+The instructions in this section only apply for a standalone Orchard web site. If you are working with the full source code of Orchard, please refer to [#enlistment](Upgrading-a-site-to-a-new-version-of-Orchard#IfYouHaveaSourceCodeEnlistment).
 
 It is highly recommended that you work on a local copy of your site throughout the update process.
 
