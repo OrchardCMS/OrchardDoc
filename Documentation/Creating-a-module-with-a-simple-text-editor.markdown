@@ -1,4 +1,3 @@
-
 In this tutorial, you will learn how to develop a simple commerce module using only a text editor.
 
 If you do not have the [Web Platform Installer](http://www.microsoft.com/web/downloads/platform.aspx) on your computer, download it before beginning this tutorial.
@@ -40,9 +39,13 @@ Leave the command window open. (In fact, don't close it until you have finished 
 
 # Generating Code for the Module
 
-Now you are ready to start developing the commerce module. Orchard provides a code generation feature that sets up the structure of an empty module to help you get started. By default, code generation is disabled. So you must first enable the feature.
+Now you are ready to start developing the commerce module.
+Orchard provides a code generation feature that sets up the structure of an empty module to help you get started.
+By default, code generation is disabled. So you must first install and enable the feature.
+The easiest way to do this is to go to Modules in the admin UI and then click the "Gallery" tab.
+Do a search for "code generation" and then install the module.
 
-To enable code generation, enter the following command in the command window:
+To enable code generation, if you didn't do so right after install, you may enter the following command in the command window:
 
     
     feature enable Orchard.CodeGeneration
