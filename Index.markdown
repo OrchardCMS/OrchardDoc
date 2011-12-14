@@ -1,12 +1,27 @@
 
-> **Note:** If you would like to contribute to this documentation set, please see [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics) for a list of proposed topics.
+> **Note:** This documentation site, like all of Orchard, is a community effort.
+If you would like to contribute, please see
+[Documentation Style Guidelines](Documentation/Documentation-style-guidelines)
+and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
+
+## Getting Started
+* [Installing Orchard](Documentation/Installing-Orchard)
+* [Manually Installing Orchard Using a .zip File](Documentation/Manually-installing-Orchard-zip-file)
+* [Working with Orchard in WebMatrix](Documentation/Working-with-Orchard-in-WebMatrix)
+* [Building Your First Orchard Site](Documentation/Getting-Started)
+* [Getting Around the Dashboard](Documentation/Getting-around-the-dashboard)
+* [Adding Pages to Your Site](Documentation/Adding-pages-to-your-site)
+* [Navigation and Menus](Documentation/Navigation-and-menus)
+* [Adding a Blog to Your Site](Documentation/Adding-a-blog-to-your-site)
+* [Adding and Managing Media Content](Documentation/Adding-and-managing-media-content)
+* [Managing Widgets](Documentation/Managing-widgets)
+* [Organizing Content Using Tags](Documentation/Organizing-content-with-tags)
+* [Creating Lists of Content Items](Documentation/Creating-lists)
 
 ## About the Project
-
-* **What is Orchard?**
-    * [Basic Orchard Concept Definitions](Documentation/Basic-Orchard-Concepts)
-    * [What's Happening Now?](Documentation/feature-roadmap)
-    * [Frequently Asked Questions](Documentation/frequently-asked-questions)
+* [Orchard Concept Definitions](Documentation/Basic-Orchard-Concepts)
+* [What's Happening Now?](Documentation/feature-roadmap)
+* [Frequently Asked Questions](Documentation/frequently-asked-questions)
 
 ## Tutorial Videos
 
@@ -14,27 +29,12 @@
 
 ## Documentation
 
-* **Getting Started**
-    * [Installing Orchard](Documentation/Installing-Orchard)
-    * [Manually Installing Orchard Using a .zip File](Documentation/Manually-installing-Orchard-zip-file)
-    * [Working with Orchard in WebMatrix](Documentation/Working-with-Orchard-in-WebMatrix)
-    * [Building Your First Orchard Site](Documentation/Getting-Started)
-
-
 * **Authoring Websites**
-    * [Getting Around the Dashboard](Documentation/Getting-around-the-dashboard)
-    * [Adding Pages to Your Site](Documentation/Adding-pages-to-your-site)
-    * [Adding a Blog to Your Site](Documentation/Adding-a-blog-to-your-site)
-    * [Managing Widgets](Documentation/Managing-widgets)
     * [Blogging with LiveWriter](Documentation/Blogging-with-LiveWriter)
-    * [Adding and Managing Media Content](Documentation/Adding-and-managing-media-content)
-    * [Saving, Scheduling, and Publishing Drafts](Documentation/Saving-scheduling-and-publishing-drafts)
-    * [Navigation and Menus](Documentation/Navigation-and-menus)
-    * [Organizing Content Using Tags](Documentation/Organizing-content-with-tags)
     * [Creating Global-Ready Applications](Documentation/Creating-global-ready-applications)
     * [Search and Indexing](Documentation/Search-and-indexing)
+    * [Saving, Scheduling, and Publishing Drafts](Documentation/Saving-scheduling-and-publishing-drafts)
     * [Creating Custom Content Types](Documentation/Creating-custom-content-types)
-    * [Creating Lists of Content Items](Documentation/Creating-lists)
 
 
 * **Customizing Websites**

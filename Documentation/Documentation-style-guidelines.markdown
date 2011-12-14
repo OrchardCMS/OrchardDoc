@@ -152,3 +152,10 @@ The Orchard documentation is managed as Markdown files in [a Git repository host
 In the right sidebar of each topic, you will find a link to the document on Github.
 
 ![The Edit Button](../Attachments/Documentation-style-guidelines/TheEditButton.PNG)
+
+## Contributing Larger Changes And Topics
+
+We recommend the use of [TortoiseGit](http://code.google.com/p/tortoisegit/downloads/list)
+to clone the documentation locally. This will give you a local copy of the documentation site,
+that you can run from WebMatrix or Visual Studio.
+
