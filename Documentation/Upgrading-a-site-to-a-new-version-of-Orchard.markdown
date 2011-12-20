@@ -83,3 +83,11 @@ If you are working with a source code enlistment, the update process is going to
 # Future Perspectives
 
 Orchard 1.1 introduces a new feature, **Import/Export**, that could be used in principle to do clean data migrations from one version to the other starting with 1.1. Beyond this, at the moment there are currently no other features in the works for upgrading sites.
+
+# Applying a framework patch
+
+Occasionally, we may release small updates in the form of a patch to one or several dlls.
+These patch files are regular zip files that contain updated dll files.
+
+To install such a patch, first extract the zip, then make a copy of the version of those files that are already
+in the bin folder of your site. Then, replace the existing copy with the one from the patch file.
