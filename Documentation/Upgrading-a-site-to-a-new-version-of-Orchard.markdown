@@ -9,7 +9,7 @@ If you made modifications to permissions on the files and folders inside your si
 
 # Upgrading a Running Instance of Orchard to a New Version
 
-The instructions in this section only apply for a standalone Orchard web site. If you are working with the full source code of Orchard, please refer to [#enlistment](#IfYouHaveaSourceCodeEnlistment).
+The instructions in this section only apply for a standalone Orchard web site. If you are working with the full source code of Orchard, please refer to [#enlistment](Upgrading-a-site-to-a-new-version-of-Orchard#IfYouHaveaSourceCodeEnlistment).
 
 It is highly recommended that you work on a local copy of your site throughout the update process.
 
@@ -83,3 +83,11 @@ If you are working with a source code enlistment, the update process is going to
 # Future Perspectives
 
 Orchard 1.1 introduces a new feature, **Import/Export**, that could be used in principle to do clean data migrations from one version to the other starting with 1.1. Beyond this, at the moment there are currently no other features in the works for upgrading sites.
+
+# Applying a framework patch
+
+Occasionally, we may release small updates in the form of a patch to one or several dlls.
+These patch files are regular zip files that contain updated dll files.
+
+To install such a patch, first extract the zip, then make a copy of the version of those files that are already
+in the bin folder of your site. Then, replace the existing copy with the one from the patch file.
