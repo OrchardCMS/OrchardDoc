@@ -36,6 +36,12 @@ namespace App_Code {
         }
 
         public static SearchResults Query(HttpContext ctx, string query, int page = 1) {
+            if (string.IsNullOrWhiteSpace(query)) {
+                return new SearchResults {
+                    Documents = new SearchResult[0],
+                    TotalCount = 0
+                };
+            }
             var indexPath = ctx.Server.MapPath("~/App_Data/Index");
             var indexSearcher = new DirectoryIndexSearcher(new DirectoryInfo(indexPath));
             using (var searchService = new SearchService(indexSearcher)) {
