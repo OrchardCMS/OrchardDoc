@@ -6,7 +6,7 @@
 
 ## TechEd 11
 
-[Orchard 1.1: Build,Customize,Extend,Ship](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DEV355) by S�bastien Ros
+[Orchard 1.1: Build,Customize,Extend,Ship](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DEV355) by S&eacute;bastien Ros
 
 ## TechDays 11
 
@@ -64,3 +64,8 @@
 
 Pluralsight has an introductory training course available here:
 <http://www.pluralsight-training.net/microsoft/courses/tableofcontents?courseName=orchard-fundamentals>
+
+# Hands-on Labs
+
+Kris van der Mast made his hands-on lab material available to anyone for free:
+<http://www.krisvandermast.com/downloads.html>
