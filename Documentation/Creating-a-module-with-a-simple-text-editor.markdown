@@ -356,4 +356,4 @@ To add a new **Product** content type, click **Content** on the dashboard, selec
 
 You now have a product editor that features your `Sku` and `Price` fields.
 
-The code for this module can be downloaded from the following page: [Orchard.Module.SimpleCommerce.0.5.0.nupkg](../Attachments/Creating-a-module-with-a-simple-text-editor/Orchard.Module.SimpleCommerce.0.5.0.nupkg)
+The code for this module can be downloaded from the following page: [Orchard.Module.SimpleCommerce.0.5.0.zip](../Attachments/Creating-a-module-with-a-simple-text-editor/Orchard.Module.SimpleCommerce.0.5.0.zip)

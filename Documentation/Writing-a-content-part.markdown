@@ -261,4 +261,4 @@ On the front-end of your site, you can see the effect of the Map part rendering 
 
 # Getting the Code
 
-The Map part described in this topic is available from here: [Orchard.Module.Maps.1.0.0.nupkg](http://orchardproject.net/docs/GetFile.aspx?File=Orchard.Module.Maps.1.0.0.nupkg&AsStreamAttachment=1&Provider=ScrewTurn.Wiki.FilesStorageProvider&IsPageAttachment=1&Page=Writing-a-content-part&NoHit=1), ready to install and use, with full source code.
+The Map part described in this topic is available from here: [Orchard.Module.Maps.1.0.0.zip](/Attachments/Writing-a-content-part/Orchard.Module.Maps.1.0.0.zip), ready to install and use, with full source code.
