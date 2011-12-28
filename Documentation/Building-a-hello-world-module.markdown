@@ -1,5 +1,4 @@
-
-This article is describes how to build a very small module for Orchard that will just display a "hello world" page.
+This article describes how to build a very small module for Orchard that will just display a "hello world" page.
 
 Another simple example of a module can be found here: [Quick Start - Get module blueprint](http://orchardjumpstart.codeplex.com/)
 
