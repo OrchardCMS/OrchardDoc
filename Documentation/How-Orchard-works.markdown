@@ -122,12 +122,12 @@ This gives another way of choosing between part and field: if you think people w
 A content type, as we've seen, is built from content parts. Content parts, code-wise, are typically associated with:
 
 - a Record, which is a POCO representation of the part's data
-- a model class that is the actual part and that derives from ContentPart&lt;T&gt; where T is the record type
+- a model class that is the actual part and that derives from `ContentPart<T>` where T is the record type
 - a repository. The repository does not need to be implemented by the module author as Orchard will be able to just use a generic one.
 - handlers. Handlers implement IContentHandler and are a set of event handlers such as OnCreated or OnSaved. Basically, they hook onto the content item's lifecycle to perform a number of tasks. They can also participate in the actual composition of the content items from their constructors. There is a Filters collection on the base ContentHandler that enable the handler to add common behavior to the content type.  
 For example, Orchard provides a StorageFilter that makes it very easy to declare how persistence of a content part should be handled: just do `Filters.Add(StorageFilter.For(myPartRepository));` and Orchard will take care of persisting to the database the data from myPartRepository.  
-Another example of a filter is the ActivatingFilter that is in charge of doing the actual welding of parts onto a type: calling `Filters.Add(new ActivatingFilter&lt;BodyAspect&gt;(BlogPostDriver.ContentType.Name));` adds the body content part to blog posts.
-- drivers. Drivers are friendlier, more specialized handlers (and as a consequence less flexible) and are associated with a specific content part type (they derive from ContentItemDriver&lt;T&gt; where T is a content part type). Handlers on the other hand do not have to be specific to a content part type. Drivers can be seen as controllers for a specific part. They typically build shapes to be rendered by the theme engine.
+Another example of a filter is the ActivatingFilter that is in charge of doing the actual welding of parts onto a type: calling `Filters.Add(new ActivatingFilter<BodyAspect>(BlogPostDriver.ContentType.Name));` adds the body content part to blog posts.
+- drivers. Drivers are friendlier, more specialized handlers (and as a consequence less flexible) and are associated with a specific content part type (they derive from `ContentItemDriver<T> where T is a content part type). Handlers on the other hand do not have to be specific to a content part type. Drivers can be seen as controllers for a specific part. They typically build shapes to be rendered by the theme engine.
 
 ## Content Manager
 All contents are accessed in Orchard through the ContentManager object, which is how it becomes possible to use contents of a type you don't know in advance.
@@ -216,7 +216,7 @@ Modules can surface messages to the admin UI by getting a dependency on INotifie
 
 ## Localization
 
-Localization of the application and its modules is done by wrapping string resources in a call to the T method: &lt;%: T("This string can be localized") %&gt;. See [Using the localization helpers](Using-the-localization-helpers) for more details and guidelines. Orchard's resource manager can load localized resource strings from PO files located in specific places in the application.
+Localization of the application and its modules is done by wrapping string resources in a call to the T method: `<%: T("This string can be localized") %>`. See [Using the localization helpers](Using-the-localization-helpers) for more details and guidelines. Orchard's resource manager can load localized resource strings from PO files located in specific places in the application.
 
 Content item localization is done through a different mechanism: localized versions of a content item are physically separate content items that are linked together by a special part.
 
