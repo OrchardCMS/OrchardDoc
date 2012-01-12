@@ -1,4 +1,3 @@
-
 Building a Web CMS (Content Management System) is unlike building a regular web application: it is more like building an application container. When designing such a system, it is necessary to build extensibility as a first-class feature. This can be a challenge as the very open type of architecture that's necessary to allow for great extensibility may compromise the usability of the application: everything in the system needs to be composable with unknown future modules, including at the user interface level. Orchestrating all those little parts that don't know about each other into a coherent whole is what Orchard is all about.
 
 This document explains the architectural choices we made in Orchard and how they are solving that particular problem of getting both flexibility and a good user experience.
@@ -29,10 +28,11 @@ This document explains the architectural choices we made in Orchard and how they
 # Orchard Foundations
 
 The Orchard CMS is built on existing frameworks and libraries. Here are a few of the most fundamental ones:
-* [ASP.NET MVC](http://www.asp.net/mvc): ASP.NET MVC is a modern Web development framework that encourages separation of concerns.
-* [NHibernate](http://nhforge.org/): NHibernate is an object-relational mapping tool. It handles the persistence of the Orchard content items to the database and considerably simplifies the data model by removing altogether the concern of persistence from module development. You can see examples of that by looking at the source code of any core content type, for example Pages.
-* [Autofac](http://code.google.com/p/autofac/): Autofac is an [IoC container](http://en.wikipedia.org/wiki/Inversion_of_control). Orchard makes heavy use of dependency injection. Creating an injectable Orchard dependency is as simple as writing a class that implements IDependency or a more specialized interface that itself derives from IDependency (a marker interface), and consuming the dependency is as simple as taking a constructor parameter of the right type. The scope and lifetime of the injected dependency will be managed by the Orchard framework. You can see examples of that by looking at the source code for IAuthorizationService, RolesBasedAuthorizationService and XmlRpcHandler.
-* [Castle Dynamic Proxy](http://www.castleproject.org/dynamicproxy/index.html): we use Castle for dynamic proxy generation.
+
+- [ASP.NET MVC](http://www.asp.net/mvc): ASP.NET MVC is a modern Web development framework that encourages separation of concerns.
+- [NHibernate](http://nhforge.org/): NHibernate is an object-relational mapping tool. It handles the persistence of the Orchard content items to the database and considerably simplifies the data model by removing altogether the concern of persistence from module development. You can see examples of that by looking at the source code of any core content type, for example Pages.
+- [Autofac](http://code.google.com/p/autofac/): Autofac is an [IoC container](http://en.wikipedia.org/wiki/Inversion_of_control). Orchard makes heavy use of dependency injection. Creating an injectable Orchard dependency is as simple as writing a class that implements IDependency or a more specialized interface that itself derives from IDependency (a marker interface), and consuming the dependency is as simple as taking a constructor parameter of the right type. The scope and lifetime of the injected dependency will be managed by the Orchard framework. You can see examples of that by looking at the source code for IAuthorizationService, RolesBasedAuthorizationService and XmlRpcHandler.
+- [Castle Dynamic Proxy](http://www.castleproject.org/dynamicproxy/index.html): we use Castle for dynamic proxy generation.
 
 The Orchard application and framework are built on top of these foundational frameworks as additional layers of abstraction. They are in many ways implementation details and no knowledge of NHibernate, Castle, or Autofac should be required to work with Orchard.
 
@@ -59,9 +59,10 @@ The list of ShellSettings (that are per tenant) and the ShellBluePrint are then 
 The standard way of creating injectable dependencies in Orchard is to create an interface that derives from IDependency or one of its derived interfaces and then to implement that interface. On the consuming side, you can take a parameter of the interface type in your constructor. The application framework will discover all dependencies and will take care of instantiating and injecting instances as needed.
 
 There are three different possible scopes for dependencies, and choosing one is done by deriving from the right interface:
-* Request: a dependency instance is created for each new HTTP request and is destroyed once the request has been processed. Use this by deriving your interface from IDependency. The object should be reasonably cheap to create.
-* Object: a new instance is created every single time an object takes a dependency on the interface. Instances are never shared. Use this by deriving from ITransientDependency. The objects must be extremely cheap to create.
-* Shell: only one instance is created per shell/tenant. Use this by deriving from ISingletonDependency. Only use this for objects that must maintain a common state for the lifetime of the shell.
+
+- Request: a dependency instance is created for each new HTTP request and is destroyed once the request has been processed. Use this by deriving your interface from IDependency. The object should be reasonably cheap to create.
+- Object: a new instance is created every single time an object takes a dependency on the interface. Instances are never shared. Use this by deriving from ITransientDependency. The objects must be extremely cheap to create.
+- Shell: only one instance is created per shell/tenant. Use this by deriving from ISingletonDependency. Only use this for objects that must maintain a common state for the lifetime of the shell.
 
 ### Replacing Existing Dependencies
 
@@ -119,13 +120,14 @@ This gives another way of choosing between part and field: if you think people w
 ### Anatomy of a Content Type
 
 A content type, as we've seen, is built from content parts. Content parts, code-wise, are typically associated with:
-* a Record, which is a POCO representation of the part's data
-* a model class that is the actual part and that derives from ContentPart&lt;T&gt; where T is the record type
-* a repository. The repository does not need to be implemented by the module author as Orchard will be able to just use a generic one.
-* handlers. Handlers implement IContentHandler and are a set of event handlers such as OnCreated or OnSaved. Basically, they hook onto the content item's lifecycle to perform a number of tasks. They can also participate in the actual composition of the content items from their constructors. There is a Filters collection on the base ContentHandler that enable the handler to add common behavior to the content type.  
+
+- a Record, which is a POCO representation of the part's data
+- a model class that is the actual part and that derives from ContentPart&lt;T&gt; where T is the record type
+- a repository. The repository does not need to be implemented by the module author as Orchard will be able to just use a generic one.
+- handlers. Handlers implement IContentHandler and are a set of event handlers such as OnCreated or OnSaved. Basically, they hook onto the content item's lifecycle to perform a number of tasks. They can also participate in the actual composition of the content items from their constructors. There is a Filters collection on the base ContentHandler that enable the handler to add common behavior to the content type.  
 For example, Orchard provides a StorageFilter that makes it very easy to declare how persistence of a content part should be handled: just do `Filters.Add(StorageFilter.For(myPartRepository));` and Orchard will take care of persisting to the database the data from myPartRepository.  
 Another example of a filter is the ActivatingFilter that is in charge of doing the actual welding of parts onto a type: calling `Filters.Add(new ActivatingFilter&lt;BodyAspect&gt;(BlogPostDriver.ContentType.Name));` adds the body content part to blog posts.
-* drivers. Drivers are friendlier, more specialized handlers (and as a consequence less flexible) and are associated with a specific content part type (they derive from ContentItemDriver&lt;T&gt; where T is a content part type). Handlers on the other hand do not have to be specific to a content part type. Drivers can be seen as controllers for a specific part. They typically build shapes to be rendered by the theme engine.
+- drivers. Drivers are friendlier, more specialized handlers (and as a consequence less flexible) and are associated with a specific content part type (they derive from ContentItemDriver&lt;T&gt; where T is a content part type). Handlers on the other hand do not have to be specific to a content part type. Drivers can be seen as controllers for a specific part. They typically build shapes to be rendered by the theme engine.
 
 ## Content Manager
 All contents are accessed in Orchard through the ContentManager object, which is how it becomes possible to use contents of a type you don't know in advance.
@@ -160,6 +162,7 @@ Widgets are added to pages through widget layers. Layers are sets of widgets. Th
 The rules attached to each of the layers are expressed with IronRuby expressions. Those expressions can use any of the IRuleProvider implementations in the application. Orchard ships with two out of the box implementations: url and authenticated.
 
 ## Site Settings
+
 A site in Orchard is a content item, which makes it possible for modules to weld additional parts. This is how modules can contribute site settings.
 
 Site settings are per tenant.
@@ -193,6 +196,7 @@ The main advantage of using the Orchard API for caching is that it works per ten
 The file system in Orchard is abstracted so that storage can be directed to the physical file system or to an alternate storage such as Azure blob storage, depending on the environment. The Media module is an example of a module that uses that abstracted file system.
 
 ## Users and Roles
+
 Users in Orchard are content items (albeit not routable ones) which makes it easy for a profile module for example to extend them with additional fields.
 Roles are a content part that gets welded onto users.
 
@@ -248,9 +252,10 @@ Themes can have a parent, which enables child themes to be specializations or ad
 Themes can contain code in much the same way modules do: they can have their own csproj file and benefit from dynamic compilation. This enables themes to define shape methods, but also to expose admin UI for any settings they may have.
 
 The selection of the current theme is done by classes implementing IThemeSelector, which return a theme name and a priority for any request. This allows many selectors to contribute to the choice of the theme. Orchard comes with four implementations of IThemeSelector:
-* SiteThemeSelector selects the theme that is currently configured for the tenant or site with a low priority.
-* AdminThemeSelector takes over and returns the admin theme with a high priority whenever the current URL is an admin URL.
-* PreviewThemeSelector overrides the site's current theme with the theme being previewed if the current user is the one that initiated the theme preview.
-* SafeModeThemeSelector is the only selector available when the application is in "safe mode", which happens typically during setup. It has a very low priority.
+
+- SiteThemeSelector selects the theme that is currently configured for the tenant or site with a low priority.
+- AdminThemeSelector takes over and returns the admin theme with a high priority whenever the current URL is an admin URL.
+- PreviewThemeSelector overrides the site's current theme with the theme being previewed if the current user is the one that initiated the theme preview.
+- SafeModeThemeSelector is the only selector available when the application is in "safe mode", which happens typically during setup. It has a very low priority.
 
 An example of a theme selector might be one that promotes a mobile theme when the user agent is recognized to belong to a mobile device.
