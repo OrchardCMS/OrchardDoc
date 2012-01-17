@@ -1,4 +1,3 @@
-
 Orchard supports two kinds of localization: 
 
 * Localization of text strings in the Orchard application and in installed modules.
@@ -111,7 +110,7 @@ The reference strings can be stored in different locations, depending on how the
 
 It is also possible to work on translations online. In order to do so, you must first obtain a login from us that has the rights on the language that you want to work on. This is a one-time step that is unfortunately necessary and that can be done by sending e-mail to <orchardfeedback@outercurve.org>.
 
-Once you have your login, please use it at [http://orchardproject.net/Account/LogOn?ReturnUrl=%2flocalize](http://orchardproject.net/Account/LogOn?ReturnUrl=%2flocalize). You may now navigate to a new or existing translation and start working.
+Once you have your login, please use it at [http://orchardproject.net/Users/Account/LogOn?ReturnUrl=%2flocalize](http://orchardproject.net/Users/Account/LogOn?ReturnUrl=%2flocalize). You may now navigate to a new or existing translation and start working.
 
 On the left of the page, you'll notice a list of the translation sections (core, modules, themes). Click the right item.
 
