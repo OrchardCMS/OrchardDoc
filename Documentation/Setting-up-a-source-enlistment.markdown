@@ -1,4 +1,3 @@
-
 # Enlisting
 
 ## Enlisting in the Source Code Using Mercurial and TortoiseHg
@@ -46,7 +45,7 @@ Build the application from the command-line following the instructions found her
 
 ## Everyday TortoiseHg Use
 
-The part of TortoiseHg you're going to use the most is the Repository Explorer (right-click on a directory from the Windows Explorer to find it). For example, to view the recent changes from CodePlex, just click "refresh". The repository explorer gives you a view of all the branching and merging that has been going on on the server. You can examine each change, read its description and view diffs. You can also right-click a change and update your local repository to it by clicking "update".
+The part of TortoiseHg you're going to use the most is the Repository Explorer (right-click on a directory from the Windows Explorer to find it, it's called "Hg Workbench"). For example, to view the recent changes from CodePlex, just click "refresh". The repository explorer gives you a view of all the branching and merging that has been going on on the server. You can examine each change, read its description and view diffs. You can also right-click a change and update your local repository to it by clicking "update".
 
 ![](../Upload/source-enlistment/HgExplorer_675.PNG)
 
