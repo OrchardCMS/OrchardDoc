@@ -1,4 +1,3 @@
-
 In a CMS such as Orchard, content is built as a composition of arbitrary parts. For example, a blog post is an assemblage of a route and title (`Routable` part), a body (`Body` part), tags (`Tags` part), comments (`Comment` part), and a few additional technical parts (`Common` and `PublishLater`). To get a template to render an object like this, you could access each of these parts explicitly and render them; that's a scenario that would work in Orchard. But that would not handle well the unpredictable changes in the definition of the content types that are the essence of a CMS. For example, what if the administrator of the site downloaded a star rating module and added the rating part to posts? If the layout for the whole item were explicitly defined, you would have to explicitly modify the template. 
 
 In Orchard, this isn't necessary, and adding a new part and displaying it can be done without touching the templates. This is possible because the Orchard design separates layout into rendering (performed by templates or shape methods) and placement (done through the _placement.info_ file). This way, parts can not only specify their default rendering, which can be overridden by themes, they can also specify where they prefer to be rendered relative to other parts (which can also be overridden by themes).
@@ -66,6 +65,29 @@ A new feature in Orchard 1.1 is the ability to specify shape alternates and wrap
 A theme author can then provide a _Parts/Tags.ShowTags.BlogPost.cshtml_ file that customizes the display of tags for blog posts.
 
 Similarly, you can provide a wrapper as part of the placement (`Header:after;Wrapper=Wrapper_GreenDiv`) or rename the shape (`Header:after;Shape=IPreferToCallThoseStickersForSomeReason`).
+
+Using a wrapper enables wrapping content with a cshtml markup. Here is a 3 step example showing how to add a div around the Html Widget to enable css styling of the widget.
+
+In placement.info : 
+
+    <Match ContentType="Widget">
+        <Place Parts_Common_Body="Content:5;Wrapper=Wrapper_HtmlContent" />
+    </Match>
+
+If you just put the wrapper without specifying 'Content:5' the body part will not show up. Content:5 specifies which zone to render the part in.
+
+After modifying your placement.info the Shape Tracing module Shape tab will show your wrapper location at the bottom. It will be: ~/Themes/{yourTheme}/Views/Wrapper.HtmlContent.cshtml. Create this file and put the following text in it:
+
+    <div class="htmlWrapperContent">
+        @Model.Html
+    </div>
+
+This will enable you to target the wrapper from site.css like this:
+
+    .htmlWrapperContent {
+        background-color: #94CCE7;
+    }
+
 
 ## "Match" Element
 
