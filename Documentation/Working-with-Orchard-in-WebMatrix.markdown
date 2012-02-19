@@ -1,4 +1,3 @@
-
 When installing Orchard using the Web Platform Installer v3, you have the option to install to [WebMatrix](http://www.microsoft.com/web/webmatrix/) instead of IIS. WebMatrix, Microsoft's new one-stop web development tool, lets you create, edit, and publish websites with unprecedented ease. WebMatrix includes a built-in web server (IIS Express), along with a simple editor for editing and customizing applications like Orchard. 
 
 
@@ -50,6 +49,39 @@ You can use WebMatrix to edit the files in your Orchard installation. WebMatrix 
 ![](../Upload/screenshots_675/webmatrix_files_675.png)
 
 Although WebMatrix does not provide a build system for compiling code files, Orchard itself provides dynamic compilation for code files when they are edited. For more information, see [Orchard Dynamic Compilation](Orchard-module-loader-and-dynamic-compilation).
+
+By default placement.info files use the default text editor instead of the xml editor. [Simon](http://sybak.com/) has [instructions](http://sybak.com/blog/2011/02/changing-the-file-types-that-open-with-webmatrix/) on changing WebMatrix file editors. Here are instruction to have placement.info files use the WebMatrix XML editor.
+
+The WebMatrix filetypes.xml file needs to be edited in two places. Here are the default locations 
+
+    32-bit machines: C:\Program Files\Microsoft WebMatrix\config\filetypes.xml
+    64-bit machines: C:\Program Files (x86)\Microsoft WebMatrix\config\filetypes.xml
+
+First .info needs to be added to the OpenAs XML element.
+
+Mine looks like this after the change:
+
+    <FileType extension=".info;.config;.csproj;.vbproj;.resx;.settings;.sitemap;.user;.wsdl;.browser;.xaml;.xml;.xoml;.xsd;.xsl;.xslt;.mxml;.dbml;.wstemplate">
+        <OpenAs>XML</OpenAs>
+        <TabColor>Yellow</TabColor>
+        <Icon>XMLFileIcon</Icon>
+        <EmitUtf8BomByDefault>True</EmitUtf8BomByDefault>
+        <Description>An XML File</Description>
+    </FileType>
+
+Second .info needs to be removed from the OpenAs Text element:
+Mine looks like this after the change:
+
+    <FileType extension=".ashx;.export;.po;.blogtemplate;.yml;.yaml;.manifest;.pl;.json;.csv">
+        <OpenAs>Text</OpenAs>
+        <TabColor>Gray</TabColor>
+        <Icon>DefaultFileIcon</Icon>
+        <EmitUtf8BomByDefault>False</EmitUtf8BomByDefault>
+        <Description>Unknown file type</Description>
+    </FileType>
+    
+After restarting WebMatrix .info files will have XML syntax highlighting.
+
 
 ## Working with the Database
 
