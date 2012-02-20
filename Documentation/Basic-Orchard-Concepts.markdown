@@ -114,7 +114,7 @@ A theme is a packaged look and feel for an Orchard site. It can consist of any c
 
 A layout is a file in a theme that defines the general organization of the pages of the site that use it. A layout typically defines a set of zones where contents or widgets can be inserted.
 
-![The layout for the theme machine, with its various collapsible zones](http://orchardproject.net/docs/GetFile.aspx?Page=Anatomy-of-a-theme&File=TheThemeMachineZoneScreenshot.PNG)
+![The layout for the theme machine, with its various collapsible zones](../Attachments/Anatomy-of-a-theme/TheThemeMachineZoneScreenshot.PNG)
 
 ## Template
 
