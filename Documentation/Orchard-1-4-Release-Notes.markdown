@@ -48,7 +48,7 @@ This includes commercial derivative work.
 Compatibility with ASP.NET WebPages and ASP.NET MVC
 ---------------------------------------------------
 
-The 1.3.10 release of Orchard is only compatible with ASP.NET MVC 3 and 4.
+The 1.4.0 release of Orchard is only compatible with ASP.NET MVC 3 and 4.
 If you have installed WebMatrix Betas or RCs, you need to uninstall them from the
 machine where you run Orchard.
 
