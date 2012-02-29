@@ -1,6 +1,3 @@
-Orchard 1.4 Release Notes
-=========================
-
 Build: 1.4.xx
 
 Published: 2/29/2012
@@ -140,7 +137,7 @@ This software would not exist without the community. In particular, for this rel
 we should all be grateful to the following people who contributed patches and features:
 
 * JLedel
-* TheMonarch (Giscard Biamby <giscardo@yahoo.com>)
+* TheMonarch (Giscard Biamby)
 * Kevin Kuebler
 * sberry3057
 * miguelerm
@@ -152,6 +149,6 @@ we should all be grateful to the following people who contributed patches and fe
 * Steve@raptor
 * randompete (Pete Hurst)
 * agriffard (Antoine Griffard)
-* planetClaire (Claire Botman <marshy@zeta.com.au>)
-* Sébastien Ros
+* planetClaire (Claire Botman)
+* Sebastien Ros
 * Bertrand Le Roy
