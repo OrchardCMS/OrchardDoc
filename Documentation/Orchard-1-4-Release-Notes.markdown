@@ -38,7 +38,7 @@ Branches are described here: <http://docs.orchardproject.net/Documentation/Devel
 Who should use this software?
 -----------------------------
 
-This software is in version 1.4.xx. The code is in a stable state and constitutes
+This software is in version 1.4.0. The code is in a stable state and constitutes
 a solid foundation for building applications, themes and modules.
 Suggestions are welcome in the discussion forums.
 
@@ -58,7 +58,7 @@ need to install them first as Orchard will then use its own copy.
 What's new?
 -----------
 
-Orchard 1.4.xx fixes bugs, improves performance and introduces the following features:
+Orchard 1.4.0 fixes bugs, improves performance and introduces the following features:
 
 * *Autoroute:* Set-up token-based patterns for your URLs.
   David Hayden has a good post describing the feature: 
