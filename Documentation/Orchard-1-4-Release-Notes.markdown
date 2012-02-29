@@ -152,3 +152,4 @@ we should all be grateful to the following people who contributed patches and fe
 * planetClaire (Claire Botman)
 * Sebastien Ros
 * Bertrand Le Roy
+* Nicholas Mayne
