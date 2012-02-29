@@ -1,4 +1,4 @@
-Build: 1.4.xx
+Build: 1.4.0
 
 Published: 2/29/2012
 
@@ -7,7 +7,7 @@ How to Install Orchard
 
 To install Orchard using Web PI, follow these instructions: <http://docs.orchardproject.net/Documentation/Installing-Orchard>. Web PI will detect your hardware environment and install the application.
 
-Alternatively, to install the release manually, download the Orchard.Web.1.4.xx.zip file.
+Alternatively, to install the release manually, download the Orchard.Web.1.4.0.zip file.
 
 <http://docs.orchardproject.net/Documentation/Manually-installing-Orchard-zip-file>
 
@@ -22,10 +22,10 @@ or you may experience frequent disconnections.
 What file to download?
 ----------------------
 
-If you just want to use Orchard and don't care about the source code, Orchard.Web.1.3.xx.zip
+If you just want to use Orchard and don't care about the source code, Orchard.Web.1.4.0.zip
 is what you want to use, preferably through the WebPI instructions.
 
-If you want to take a look at the source code, OrchardSource.1.3.xx.zip is fine.
+If you want to take a look at the source code, OrchardSource.1.4.0.zip is fine.
 
 If you want to setup a development environment for patch or module development,
 you should clone the repository by following the instructions here:
