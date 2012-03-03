@@ -1,15 +1,10 @@
-
 In the near term, we'll be focused on servicing the V1 release and planning for the next version.  The feature roadmap is subject to change as the project evolves, and we welcome your input.
 
 We have a discussion open on the 2.0 roadmap here: [Orchard 2.0 roadmap](http://orchard.codeplex.com/discussions/266268).
 
 ### Current Priorities
 
-* [Autoroute](http://orchard.codeplex.com/discussions/274916)
-* [Projector](http://orchard.codeplex.com/discussions/274915)
-* [Core Field Types](http://orchard.codeplex.com/discussions/274918)
-* [Performance](http://orchard.codeplex.com/discussions/274921)
-* Gallery improvements
+Priorities for Orchard 1.5 will be defined in the next few days. Stay tuned.
 
 ### Currently Implemented (Partially or in Full)
 
@@ -65,6 +60,10 @@ We have a discussion open on the 2.0 roadmap here: [Orchard 2.0 roadmap](http://
 * Tokens
 * Rules
 * Forms API
+* [Autoroute](http://orchard.codeplex.com/discussions/274916)
+* [Projector](http://orchard.codeplex.com/discussions/274915)
+* [Core Field Types](http://orchard.codeplex.com/discussions/274918)
+* [Performance](http://orchard.codeplex.com/discussions/274921)
 
 ### Areas of Focus for Future Iterations (Backlog, Not in Priority Order)
 
