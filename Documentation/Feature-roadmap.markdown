@@ -1,10 +1,17 @@
-In the near term, we'll be focused on servicing the V1 release and planning for the next version.  The feature roadmap is subject to change as the project evolves, and we welcome your input.
-
-We have a discussion open on the 2.0 roadmap here: [Orchard 2.0 roadmap](http://orchard.codeplex.com/discussions/266268).
+In the near term, we'll be focused on servicing the V1 release and planning for the next version.
+The feature roadmap is subject to change as the project evolves, and we welcome your input.
 
 ### Current Priorities
 
-Priorities for Orchard 1.5 will be defined in the next few days. Stay tuned.
+Priorities for Orchard 1.5:
+
+* [Security](http://orchard.codeplex.com/discussions/348642)
+* [Install & Update](http://orchard.codeplex.com/discussions/348647)
+* [Placement](http://orchard.codeplex.com/discussions/348649)
+* [Projector](http://orchard.codeplex.com/discussions/348653)
+* [Spam Protection](http://orchard.codeplex.com/discussions/348654)
+* [Navigation:](http://orchard.codeplex.com/discussions/348655)
+* [Misc](http://orchard.codeplex.com/discussions/348669)
 
 ### Currently Implemented (Partially or in Full)
 
