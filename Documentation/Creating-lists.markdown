@@ -1,4 +1,3 @@
-
 In Orchard, you can create custom content items and assign them as navigation menu entries. If you have more than a few custom content items, you'll probably want to organize them in lists. This topic walks you through this process. In the walkthrough, you'll create a custom content type and display its items in lists. (For information about how to create a custom content type, see [Creating Custom Content Types](Creating-custom-content-types).) 
 
 
@@ -50,7 +49,11 @@ On the dashboard, expand the **New** menu. You see the **Book Review** content t
 
 # Creating a List of Books
 
-To create the **Book Review** list, in the **New** menu of the dashboard, click **List**. Name the new list "Book Reviews" and in the **Contains** field, select "Book Review" from the drop-down list. Select the **Show on main menu** option, and enter "Book Reviews" in the **Menu Text** field. When you're finished, save the new list.
+To create the **Book Review** list, in the **New** menu of the dashboard, click **List**. 
+
+>**Note:** The **List** module (that enables the New List link) may not be installed or active if you created your site using WebMatrix.  
+
+Name the new list "Book Reviews" and in the **Contains** field, select "Book Review" from the drop-down list. Select the **Show on main menu** option, and enter "Book Reviews" in the **Menu Text** field. When you're finished, save the new list.
 
 ![](../Upload/screenshots_675/create_bookreview_list_675.png)
 
