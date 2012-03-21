@@ -48,6 +48,7 @@ It is possible to upgrade a site in-place, if you can't or don't want to work wi
 * Download the new version to your local machine.
 * Add App_offline.htm to the root of the site during the upgrade. This effectively tells the web server to return this page for all requests. You should put a message such as "The site is currently being updated. Thank you for your patience. Please try again later." in the file.
 * Delete what's in bin. This ensures that old versions of binaries that won't get replaced will not continue to be picked up by the application.
+* Delete the App_Data\Dependencies folder. Orchard will rebuild this folder on startup. This ensures that old versions of module assemblies will not be picked up by the application.
 * Extract the new version's zip file and copy what's in its Orchard folder over the server's Orchard web directory (answer yes to all prompts to overwrite).
 * Remove the app_offline file.
 * The site should be running now. Log-in and go into admin.
