@@ -1,3 +1,33 @@
+# Introduction Training Videos
+
+## Commercial
+
+Pluralsight has an introductory training course available here:
+<http://www.pluralsight-training.net/microsoft/courses/tableofcontents?courseName=orchard-fundamentals>
+
+The first part of the Pluralsight video course is free, and subsequent episodes require a subscription.
+
+## Free
+
+Brent Arias has a great 4-part series:
+
+<iframe width="500" height="369" src="http://www.youtube.com/embed/vFC0pmmxdzM" frameborder="0" allowfullscreen></iframe>
+
+<iframe width="500" height="369" src="http://www.youtube.com/embed/IvGXCUpvbr4" frameborder="0" allowfullscreen></iframe>
+
+<iframe width="500" height="369" src="http://www.youtube.com/embed/3ZyY_W6KUQc" frameborder="0" allowfullscreen></iframe>
+
+<iframe width="500" height="369" src="http://www.youtube.com/embed/IOQ3Llu9Rcc" frameborder="0" allowfullscreen></iframe>
+
+Introduction to Orchard 1.4 by Bertrand Le Roy:
+
+<iframe width="500" height="284" src="http://www.youtube.com/embed/uDqY14mDG_Y" frameborder="0" allowfullscreen></iframe>
+
+## Hands-on Labs
+
+Kris van der Mast made his hands-on lab material available to anyone for free:
+<http://www.krisvandermast.com/downloads.html>
+
 # Conferences
 
 ## CodeStock 11
@@ -59,13 +89,3 @@
 ## Building a Multilanguage Website Struture
 
 <iframe width="560" height="315" src="http://www.youtube.com/embed/t6Tt8vjlOVw?hd=1" frameborder="0" allowfullscreen></iframe>
-
-# Commercial Training Videos
-
-Pluralsight has an introductory training course available here:
-<http://www.pluralsight-training.net/microsoft/courses/tableofcontents?courseName=orchard-fundamentals>
-
-# Hands-on Labs
-
-Kris van der Mast made his hands-on lab material available to anyone for free:
-<http://www.krisvandermast.com/downloads.html>
