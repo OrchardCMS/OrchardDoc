@@ -1,4 +1,3 @@
-
 While Orchard provides a simple way to write blog posts using the built-in features of the admin panel, many people prefer to author posts using a client application, such as [Windows Live Writer](http://explore.live.com/windows-live-writer).  These clients use an XML-RPC interface to publish posts remotely, and offer additional capabilities like saving offline drafts (for example, to write your blog posts on an airplane and sync-up your site later).
 
 To enable Remote Blog Publishing, click **Features** in the Orchard admin panel.
@@ -21,7 +20,7 @@ Choose **Other blog service** from the available options and click **Next**.
 
 Type the URL to your Orchard blog, along with the admin user name and password that you defined when you set-up Orchard for the first time.
 
-> Note: it is possible to publish using other XML-RPC aware client applications such as Microsoft Word, but you might have to provide the URL of the xmlrpc endpoint rather than the blog URL. For example, http://myimaginaryorchardsite.com/xmlrpc.
+> Note: it is possible to publish using other XML-RPC aware client applications, but you might have to provide the URL of the xmlrpc endpoint rather than the blog URL. For example, http://myimaginaryorchardsite.com/xmlrpc.
 
 ![](../Upload/screenshots_675/livewriter4.png)
 
