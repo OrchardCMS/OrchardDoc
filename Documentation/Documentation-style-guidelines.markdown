@@ -10,7 +10,7 @@ The title will be added by the site dynamically, from the file name.
 
 Topics should begin with a brief summary explaining what audience it targets and their key takeaways.
 This summary will be displayed in search results, so it should make sense by itself.
-It should consiste of one paragraph of text, without a leading title.
+It should consist of one paragraph of text, without a leading title.
 
 If the topic is not complete enough to fulfill its goals, the top of the document should specify `> Draft topic` on the first line.
 
