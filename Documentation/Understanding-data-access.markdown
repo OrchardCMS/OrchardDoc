@@ -1,4 +1,4 @@
-> This topic has been updated for the Orchard 1.0 release.
+> This topic has been updated for the Orchard 1.4 release.
 
 Data access in an Orchard project is different than data access in a traditional web application, because the data model is built through code rather than through a database management system. You define your data properties in code and the Orchard framework builds the database components to persist the data. If you need to change the data structure, you write code that specifies the changes, and those changes are then propagated by that code to the database system. This code-centric model includes layers of abstraction that permit you to reuse components in different content types and to add or change behaviors without breaking other layers.
 
@@ -120,15 +120,7 @@ You can update the database table by adding a method with the naming convention 
 
 The update method returns 2, because after the column is added, the version number is 2. If you have to add another update method, that method would be called `UpdateFrom2()`.
 
-After you add the update method, you will notice a warning at the top of the dashboard:
-
-![](../Upload/screenshots/data_FeatureNeedsUpdate.png)
-
-You can update the module from the **Manage Features** page:
-
-![](../Upload/screenshots/data_UpdateFeature.png)
-
-After you click **Update**, the database table will contain the new column. You will have to revise the record and part classes to use the new field.
+After you add the update method and run the project the module will be silently & automatically upgraded.
 
 ## Content Handlers
 A content handler is similar to a filter in ASP.NET MVC. In the handler, you define actions for specific events. In a simple content handler, you just define the repository of record objects for the content part, as shown in the following example:
