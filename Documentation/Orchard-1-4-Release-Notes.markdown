@@ -71,8 +71,9 @@ Orchard 1.4.1 fixes bugs, improves performance and introduces the following feat
   html, markdown and textarea to the default text box.
 
 The full list of fixed bugs for this release can be found here:
-[Bugs fixed in 1.4](http://orchard.codeplex.com/workitem/list/advanced?keyword=&status=Fixed|Closed&type=All&priority=All&release=Orchard%201.4&assignedTo=All&component=All&sortField=LastUpdatedDate&sortDirection=Descending&page=0).
-[Bugs fixed in 1.4.1](http://orchard.codeplex.com/workitem/list/advanced?keyword=&status=Fixed|Closed&type=All&priority=All&release=Orchard%201.4.1&assignedTo=All&component=All&sortField=LastUpdatedDate&sortDirection=Descending&page=0).
+
+* [Bugs fixed in 1.4](http://orchard.codeplex.com/workitem/list/advanced?keyword=&status=Fixed|Closed&type=All&priority=All&release=Orchard%201.4&assignedTo=All&component=All&sortField=LastUpdatedDate&sortDirection=Descending&page=0).
+* [Bugs fixed in 1.4.1](http://orchard.codeplex.com/workitem/list/advanced?keyword=&status=Fixed|Closed&type=All&priority=All&release=Orchard%201.4.1&assignedTo=All&component=All&sortField=LastUpdatedDate&sortDirection=Descending&page=0).
 
 Breaking Changes
 ----------------
@@ -156,3 +157,12 @@ we should all be grateful to the following people who contributed patches and fe
 * Sebastien Ros
 * Bertrand Le Roy
 * Nicholas Mayne
+
+For 1.4.1:
+
+* piedone
+* filetek
+* pszmyd
+* rdobson
+* Nicholas Mayne
+* Laere
