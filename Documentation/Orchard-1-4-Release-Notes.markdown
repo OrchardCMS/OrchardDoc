@@ -1,15 +1,17 @@
-Build: 1.4.1
+Build: 1.4.2
 
 Published: 2/29/2012
 
 Updated 5/4/2012 for version 1.4.1
+
+Updated 5/21/2012 for version 1.4.2
 
 How to Install Orchard
 ----------------------
 
 To install Orchard using Web PI, follow these instructions: <http://docs.orchardproject.net/Documentation/Installing-Orchard>. Web PI will detect your hardware environment and install the application.
 
-Alternatively, to install the release manually, download the Orchard.Web.1.4.1.zip file.
+Alternatively, to install the release manually, download the Orchard.Web.1.4.2.zip file.
 
 <http://docs.orchardproject.net/Documentation/Manually-installing-Orchard-zip-file>
 
@@ -24,10 +26,10 @@ or you may experience frequent disconnections.
 What file to download?
 ----------------------
 
-If you just want to use Orchard and don't care about the source code, Orchard.Web.1.4.1.zip
+If you just want to use Orchard and don't care about the source code, Orchard.Web.1.4.2.zip
 is what you want to use, preferably through the WebPI instructions.
 
-If you want to take a look at the source code, OrchardSource.1.4.1.zip is fine.
+If you want to take a look at the source code, OrchardSource.1.4.2.zip is fine.
 
 If you want to setup a development environment for patch or module development,
 you should clone the repository by following the instructions here:
@@ -40,7 +42,7 @@ Branches are described here: <http://docs.orchardproject.net/Documentation/Devel
 Who should use this software?
 -----------------------------
 
-This software is in version 1.4.1. The code is in a stable state and constitutes
+This software is in version 1.4.2. The code is in a stable state and constitutes
 a solid foundation for building applications, themes and modules.
 Suggestions are welcome in the discussion forums.
 
@@ -50,7 +52,7 @@ This includes commercial derivative work.
 Compatibility with ASP.NET WebPages and ASP.NET MVC
 ---------------------------------------------------
 
-The 1.4.1 release of Orchard is only compatible with ASP.NET MVC 3.
+The 1.4.2 release of Orchard is only compatible with ASP.NET MVC 3.
 If you have installed WebMatrix Betas or RCs, you need to uninstall them from the
 machine where you run Orchard.
 
@@ -60,7 +62,7 @@ need to install them first as Orchard will then use its own copy.
 What's new?
 -----------
 
-Orchard 1.4.1 fixes bugs, improves performance and introduces the following features:
+Orchard 1.4.2 fixes bugs, improves performance and introduces the following features:
 
 * *Autoroute:* Set-up token-based patterns for your URLs.
   David Hayden has a good post describing the feature: 
@@ -74,6 +76,7 @@ The full list of fixed bugs for this release can be found here:
 
 * [Bugs fixed in 1.4](http://orchard.codeplex.com/workitem/list/advanced?keyword=&status=Fixed|Closed&type=All&priority=All&release=Orchard%201.4&assignedTo=All&component=All&sortField=LastUpdatedDate&sortDirection=Descending&page=0).
 * [Bugs fixed in 1.4.1](http://orchard.codeplex.com/workitem/list/advanced?keyword=&status=Fixed|Closed&type=All&priority=All&release=Orchard%201.4.1&assignedTo=All&component=All&sortField=LastUpdatedDate&sortDirection=Descending&page=0).
+* [Bugs fixed in 1.4.2](http://orchard.codeplex.com/workitem/list/advanced?keyword=&status=Fixed|Closed&type=All&priority=All&release=Orchard%201.4.2&assignedTo=All&component=All&sortField=LastUpdatedDate&sortDirection=Descending&page=0)
 
 Breaking Changes
 ----------------
@@ -166,3 +169,8 @@ For 1.4.1:
 * rdobson
 * Nicholas Mayne
 * Laere
+
+For 1.4.2:
+
+* jao28
+* Claire Botman
