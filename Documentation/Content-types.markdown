@@ -173,7 +173,7 @@ The code above will get the items 10 to 15 in the list of items that have "foo" 
 
 To access the different parts of a content item, you can call the As method on any of the parts:
 
-    var body = mypage.As<BodyAspect>().Body
+    var body = mypage.As<BodyPart>().Text
 
 ## Revisions
 
