@@ -61,6 +61,13 @@ A record is the simple code representation of a content part, as an almost Plain
 "Almost" because it usually derives from ContentPartRecord, which gives them an Id and a reference
 to the content item the part is participating in.
 
+## Content Driver
+
+A content driver is similar to an MVC controller, except that it works at the level of the content part.
+It is responsible for preparing the views of the part, on the front-end, but also as an editor in
+the content item editor. It also handles post modifications in those editors in order to persist changes.
+Finally, it handles the importing and exporting of the part. In many ways, the driver is the brain of your part.
+
 ## Content Handler
 
 A content handler is the object that manages content items and parts.
@@ -72,6 +79,17 @@ depending on the parameters communicated by the application.
 For example, a content handler often manages the persistence of a part into a repository.
 
 Most handlers are implemented as a simple assemblage of pre-defined filters.
+
+## Shapes and Templates
+
+Drivers create dynamic objects that represent the data to be rendered to the browser. Those objects are
+called shapes and correspond to a view model in MVC, except that they represent a single part instead
+of the whole model for the complete view.
+
+When the time comes to render those shapes and transform them into HTML, Orchard looks in the file system
+for templates and in special code constructs called shape methods for the most relevant way to handle
+that specific shape. Templates are typically what you will use. They are typically `.cshtml` files found in the Views
+folder of a theme or module.
 
 # Building a new content type
 
