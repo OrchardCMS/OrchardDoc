@@ -40,9 +40,10 @@ reusable aspect of a content item.
 
 All the parts that form a given content item share the same integer id.
 
-For example, the "HasComments" part has two properties, a list of comments and a flag that determines
+For example, the "Comments" part has four properties: lists of published and pending comments,
+a flag that determines whether comments are shown, and a flag that determines
 whether the comment thread is closed. That part can be added to a content type to make it commentable.
-In this system, the comment aspect doesn't need to know what it's commenting, and the commented item
+In this system, the comment aspect doesn't need to know what it's commenting on, and the commented item
 doesn't need to know that it has comments.
 
 This of course provides high reusability as the composed units are narrow and loosely-coupled aspects.
