@@ -57,8 +57,9 @@ that apply to more than one content type).
 A record is a concept that only needs to be known to content-type developers and that doesn't need
 to surface to the end user of the application.
 
-A record is the simple code representation of a content part, as an almost Plain CLR Object.
-"Almost" because it usually derives from ContentPartRecord, which gives them an Id and a reference
+A record is the simple code representation of the data for a content part, as an almost Plain CLR Object
+that is used for persistence of the part in and out of the database.
+"Almost Plain CLR" because it usually derives from ContentPartRecord, which gives them an Id and a reference
 to the content item the part is participating in.
 
 ## Content Driver
