@@ -192,6 +192,7 @@ For more information about creating and working with custom content types, refer
 
 > **Note** The localization feature is a work in progress, and not all parts of the Orchard application are yet localizable. For example, Orchard does not yet provide an automatic way to filter and display only content items in a given culture (one instance of this is the browser's default culture). We will address this in a future release. In the meantime you can provide your own implementation of `ICultureSelector` in a module. If you want to give us feedback on localization support in Orchard (for example, to help us understand the scenarios that are important for your site), please [join our mailing list](join-orchard-localization@lists.codeplex.org) and drop us a line!
 
+> Until the localization feature is not completely supported in Orchard, it me might be a good option to use [CulturePicker](http://gallery.orchardproject.net/List/Modules/Orchard.Module.Orchard.CulturePicker) module. It contains `CookieCultureSelector` implementation of `ICultureSelector`, and provides main menu items filtering. It also allows to filter content items using `CurrentCultureFilter` for Projections.
 
 
 ### Change History
