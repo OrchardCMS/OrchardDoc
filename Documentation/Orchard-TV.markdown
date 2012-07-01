@@ -56,6 +56,10 @@ Kris van der Mast made his hands-on lab material available to anyone for free:
 
 <iframe width="500" height="314" src="http://www.youtube.com/embed/rk1iJJJ9Itg?hd=1" frameborder="0" allowfullscreen></iframe>
 
+## Ryan Keeter's Creating an Orchard Theme
+
+[Part 0 of the series, with links to the other episodes](http://ryankeeter.com/Creating-an-orchard-theme-pt-0)
+
 # Deployment
 
 ## Deploying an Orchard site using WebMatrix
