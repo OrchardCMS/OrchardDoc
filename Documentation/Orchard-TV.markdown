@@ -60,6 +60,10 @@ Kris van der Mast made his hands-on lab material available to anyone for free:
 
 [Part 0 of the series, with links to the other episodes](http://ryankeeter.com/Creating-an-orchard-theme-pt-0)
 
+## Using Ad-Hoc Shapes
+
+[Using Ad-Hoc Shapes](http://ryankeeter.com/using-ad-hoc-shapes-in-orchard-cms)
+
 # Deployment
 
 ## Deploying an Orchard site using WebMatrix
