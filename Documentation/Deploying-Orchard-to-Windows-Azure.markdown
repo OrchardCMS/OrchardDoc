@@ -129,3 +129,7 @@ Open the Azure solution in Visual Studio 2010 and add the files for this theme i
 When this is done, launch the build script as described earlier. The resulting package will contain your additional themes. 
 
 After you've deployed the new package to Azure, you can go to the themes screen and enable the themes in order to start using them. 
+
+## See Also
+
+[Step-by-step deploying Orchard to Windows Azure](http://ooiks.com/blog/how-to-2/step-by-step-deploying-orchard-to-windows-azure)
