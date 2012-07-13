@@ -21,8 +21,10 @@ When working with a content part that persists data, add a constructor for the h
         }
     }
 
+## Built-in filter types
 
-The `StorageFilter` class takes care of persisting the data from `repository` object to the database.
+* `StorageFilter` class - Takes care of persisting the data from `repository` object to the database. It's usage is shown in the example above.
+* `ActivatingFilter`class - Attaches a part to a content type from code. As opposed to attaching parts via migrations, parts attached using this filter will neither be displayed in the Dashboard, nor users will be able to remove them from items. It's a legitimate way of attaching parts that should *always* exist on a given item.
 
 You can add other types of filters to the content handler. For example, you can add an `ActivatingFilter` to the `Filters` collection to define how the part is added to a type.
 
