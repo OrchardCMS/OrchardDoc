@@ -1,4 +1,3 @@
-
 > **Note:** This documentation site, like all of Orchard, is a community effort.
 If you would like to contribute, please see
 [Documentation Style Guidelines](Documentation/Documentation-style-guidelines)
@@ -20,6 +19,7 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
 
 ## About the Project
 * [Orchard Concept Definitions](Documentation/Basic-Orchard-Concepts)
+* [A guide to all the built-in modules and features of Orchard](Documentation/Builtin-features)
 * [What's Happening Now?](Documentation/feature-roadmap)
 * [Frequently Asked Questions](Documentation/frequently-asked-questions)
 
