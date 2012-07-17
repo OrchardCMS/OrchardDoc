@@ -123,7 +123,15 @@ Contributors
 This software would not exist without the community. In particular, for this release,
 we should all be grateful to the following people who contributed patches and features:
 
-* piedone
-* Sebastien Ros
-* Bertrand Le Roy
+
+* Benedek Farkas (nightwolf226)
+* Bertrand Le Roy (bertrandleroy)
+* filetek
+* Geert Doornbos (geertdoornbos)
+* JLedel
+* John Murdoch (jrmurdoch)
 * Nicholas Mayne
+* Sean Farrow (SeanFarrow)
+* Thomas Bolon (styx31)
+* Sebastien Ros (sebastienros)
+* Zoltán Lehóczky (piedone)
