@@ -103,7 +103,7 @@ to Modules and enable the feature.
 The feature, once enabled, adds a new entry to the admin menu: "Migrate to 1.5", that can
 migrate the Route data of your content items as well as field data from older field modules.
 
-See Orchard 1.4 release notes for more details.
+See [Orchard 1.4 release notes](/Documentation/Orchard-1-4-Release-Notes) for more details.
 
 How to Reset Your Site Data
 ---------------------------
