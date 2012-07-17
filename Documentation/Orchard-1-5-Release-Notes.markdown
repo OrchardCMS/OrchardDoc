@@ -63,6 +63,8 @@ What's new?
 Orchard 1.5.1 fixes bugs and introduces the following features:
 
 * *Admin Search:* Enables search from the content screen of the admin dashboard.
+* *Admin-based Placement:* the editor placement of parts and fields can now be overridden from
+the content type editor.
 * *AntiSpam:* The AntiSpam module provides various spam-fighting features and infrastructure pieces.
 It makes it possible to prevent spam on arbitrary contents (previous versions of Orchard only had
 anti-spam services on comments). With this module, you can add ReCaptcha, external spam-filtering using
