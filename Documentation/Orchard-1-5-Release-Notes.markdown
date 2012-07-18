@@ -80,6 +80,7 @@ by anonymous users. This is useful, for example, to create contact forms.
 * *Navigation:* The navigation module now supports hierarchical menus and breadcrumbs. The navigation
 system is also now pluggable. Existing applications should replace the Menu part with the new Navigation
 part.
+* *Layout placement*: `Placement.info` files can now use the '/' character to specify Layout zone targets likes this: "/AsideSecond:10"
 
 The full list of fixed bugs for this release can be found here:
 
