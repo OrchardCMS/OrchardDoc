@@ -138,11 +138,11 @@ we should all be grateful to the following people who contributed patches and fe
 
 * Benedek Farkas (nightwolf226)
 * Bertrand Le Roy (bertrandleroy)
-* filetek
+* Martin Skinner (filetek)
 * Geert Doornbos (geertdoornbos)
-* JLedel
+* Jonas Ledel (JLedel)
 * John Murdoch (jrmurdoch)
-* Nicholas Mayne
+* Nicholas Mayne (Jetski5822)
 * Sean Farrow (SeanFarrow)
 * Thomas Bolon (styx31)
 * Sebastien Ros (sebastienros)
