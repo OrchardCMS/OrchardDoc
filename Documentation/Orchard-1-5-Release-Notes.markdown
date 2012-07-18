@@ -1,4 +1,4 @@
-Build: 1.5.1
+Build: 1.5
 
 Published: 7/18/2012
 
@@ -9,7 +9,7 @@ To install Orchard using Web PI, follow these instructions:
 <http://docs.orchardproject.net/Documentation/Installing-Orchard>.
 Web PI will detect your hardware environment and install the application.
 
-Alternatively, to install the release manually, download the Orchard.Web.1.5.1.zip file.
+Alternatively, to install the release manually, download the Orchard.Web.1.5.zip file.
 
 <http://docs.orchardproject.net/Documentation/Manually-installing-Orchard-zip-file>
 
@@ -24,10 +24,10 @@ or you may experience frequent disconnections.
 What file to download?
 ----------------------
 
-If you just want to use Orchard and don't care about the source code, Orchard.Web.1.5.1.zip
+If you just want to use Orchard and don't care about the source code, Orchard.Web.1.5.zip
 is what you want to use, preferably through the WebPI instructions.
 
-If you want to take a look at the source code, OrchardSource.1.5.1.zip is fine.
+If you want to take a look at the source code, OrchardSource.1.5.zip is fine.
 
 If you want to setup a development environment for patch or module development,
 you should clone the repository by following the instructions here:
@@ -40,7 +40,7 @@ Branches are described here: <http://docs.orchardproject.net/Documentation/Devel
 Who should use this software?
 -----------------------------
 
-This software is in version 1.5.1. The code is in a stable state and constitutes
+This software is in version 1.5. The code is in a stable state and constitutes
 a solid foundation for building applications, themes and modules.
 Suggestions are welcome in the discussion forums.
 
@@ -50,7 +50,7 @@ This includes commercial derivative work.
 Compatibility with ASP.NET WebPages and ASP.NET MVC
 ---------------------------------------------------
 
-The 1.5.1 release of Orchard is only compatible with ASP.NET MVC 3.
+The 1.5 release of Orchard is only compatible with ASP.NET MVC 3.
 If you have installed WebMatrix Betas or RCs, you need to uninstall them from the
 machine where you run Orchard.
 
@@ -60,7 +60,7 @@ need to install them first as Orchard will then use its own copy.
 What's new?
 -----------
 
-Orchard 1.5.1 fixes bugs and introduces the following features:
+Orchard 1.5 fixes bugs and introduces the following features:
 
 * *Admin Search:* Enables search from the content screen of the admin dashboard.
 * *Admin-based Placement:* the editor placement of parts and fields can now be overridden from
@@ -84,7 +84,7 @@ part.
 
 The full list of fixed bugs for this release can be found here:
 
-* [Bugs fixed in 1.5](http://orchard.codeplex.com/workitem/list/advanced?keyword=&status=Fixed%7cClosed&type=All&priority=All&release=Orchard%2b1.5%2bRC2%7cOrchard%2b1.5.1&assignedTo=All&component=All&sortField=LastUpdatedDate&sortDirection=Descending&page=0).
+* [Bugs fixed in 1.5](http://orchard.codeplex.com/workitem/list/advanced?keyword=&status=Fixed%7cClosed&type=All&priority=All&release=Orchard%2b1.5%2bRC2%7cOrchard%2b1.5&assignedTo=All&component=All&sortField=LastUpdatedDate&sortDirection=Descending&page=0).
 
 How to upgrade from a previous version
 --------------------------------------
