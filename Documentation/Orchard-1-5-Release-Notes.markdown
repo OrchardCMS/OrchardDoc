@@ -104,7 +104,7 @@ Because of this change you will need to add a widget to render the main menu.
 - Uncheck the "Show title" checkbox
 - In Menu select "Main Menu"
 - Click the Save button
-- 
+
 Orchard 1.4 introduced breaking changes in the way content URLs are managed. Because of that,
 and if you're migrating from version 1.3 or earlier, the UpgradeTo15 module can be used to migrate
 data. If you upgrade a site to 1.5 from 1.3 or earlier and can't
