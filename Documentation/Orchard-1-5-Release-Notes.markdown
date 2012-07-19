@@ -94,6 +94,11 @@ You can find migration instructions here: <http://docs.orchardproject.net/Docume
 No matter what migration path you take, please take the precaution of making a backup of your
 site and database first.
 
+### Navigation module
+
+You will need to enable the Content Picker feature before you can edit the navigation.
+
+- In Dashboard -> Modules, search for Content Picker and enable it
 
 In Orchard 1.5 the navigation is no more injected automatically in the Navigation zone. 
 Because of this change you will need to add a widget to render the main menu.
@@ -104,6 +109,8 @@ Because of this change you will need to add a widget to render the main menu.
 - Uncheck the "Show title" checkbox
 - In Menu select "Main Menu"
 - Click the Save button
+
+### Upgrading from Orchard 1.3 and earlier
 
 Orchard 1.4 introduced breaking changes in the way content URLs are managed. Because of that,
 and if you're migrating from version 1.3 or earlier, the UpgradeTo15 module can be used to migrate
