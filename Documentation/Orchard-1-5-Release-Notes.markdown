@@ -127,7 +127,7 @@ The contents of this directory are protected from download by visitors to your s
 you can delete the contents of this directory.  This action is irreversible so backup first!
 
 
-For other known issues, please refer to [url:http://orchard.codeplex.com/workitem/list/basic].
+For other known issues, please refer to <http://orchard.codeplex.com/workitem/list/basic>.
 
 Contributors
 ------------
