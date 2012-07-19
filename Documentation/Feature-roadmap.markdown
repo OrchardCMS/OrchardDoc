@@ -3,15 +3,12 @@ The feature roadmap is subject to change as the project evolves, and we welcome 
 
 ### Current Priorities
 
-Priorities for Orchard 1.5:
+Priorities for Orchard 1.6:
 
-* [Security](http://orchard.codeplex.com/discussions/348642)
-* [Install & Update](http://orchard.codeplex.com/discussions/348647)
-* [Placement](http://orchard.codeplex.com/discussions/348649)
-* [Projector](http://orchard.codeplex.com/discussions/348653)
-* [Spam Protection](http://orchard.codeplex.com/discussions/348654)
-* [Navigation:](http://orchard.codeplex.com/discussions/348655)
-* [Misc](http://orchard.codeplex.com/discussions/348669)
+* NHibernate 3 and 2nd level caching
+* ASP.NET MVC 4 / WebAPI
+* MySQL provider
+* Performance improvements
 
 ### Currently Implemented (Partially or in Full)
 
@@ -70,7 +67,8 @@ Priorities for Orchard 1.5:
 * [Autoroute](http://orchard.codeplex.com/discussions/274916)
 * [Projector](http://orchard.codeplex.com/discussions/274915)
 * [Core Field Types](http://orchard.codeplex.com/discussions/274918)
-* [Performance](http://orchard.codeplex.com/discussions/274921)
+* [Admin placement](http://orchard.codeplex.com/discussions/348649)
+* [Spam Protection](http://orchard.codeplex.com/discussions/348654)
 
 ### Areas of Focus for Future Iterations (Backlog, Not in Priority Order)
 
