@@ -1,6 +1,7 @@
-Build: 1.5
+Build: 1.5.1
 
 Published: 7/18/2012
+Updated for version 1.5.1: 7/20/2012
 
 How to Install Orchard
 ----------------------
@@ -9,7 +10,7 @@ To install Orchard using Web PI, follow these instructions:
 <http://docs.orchardproject.net/Documentation/Installing-Orchard>.
 Web PI will detect your hardware environment and install the application.
 
-Alternatively, to install the release manually, download the Orchard.Web.1.5.zip file.
+Alternatively, to install the release manually, download the Orchard.Web.1.5.1.zip file.
 
 <http://docs.orchardproject.net/Documentation/Manually-installing-Orchard-zip-file>
 
@@ -24,10 +25,10 @@ or you may experience frequent disconnections.
 What file to download?
 ----------------------
 
-If you just want to use Orchard and don't care about the source code, Orchard.Web.1.5.zip
+If you just want to use Orchard and don't care about the source code, Orchard.Web.1.5.1.zip
 is what you want to use, preferably through the WebPI instructions.
 
-If you want to take a look at the source code, OrchardSource.1.5.zip is fine.
+If you want to take a look at the source code, OrchardSource.1.5.1.zip is fine.
 
 If you want to setup a development environment for patch or module development,
 you should clone the repository by following the instructions here:
@@ -40,7 +41,7 @@ Branches are described here: <http://docs.orchardproject.net/Documentation/Devel
 Who should use this software?
 -----------------------------
 
-This software is in version 1.5. The code is in a stable state and constitutes
+This software is in version 1.5.1. The code is in a stable state and constitutes
 a solid foundation for building applications, themes and modules.
 Suggestions are welcome in the discussion forums.
 
@@ -50,7 +51,7 @@ This includes commercial derivative work.
 Compatibility with ASP.NET WebPages and ASP.NET MVC
 ---------------------------------------------------
 
-The 1.5 release of Orchard is only compatible with ASP.NET MVC 3.
+The 1.5.1 release of Orchard is only compatible with ASP.NET MVC 3.
 If you have installed WebMatrix Betas or RCs, you need to uninstall them from the
 machine where you run Orchard.
 
@@ -60,7 +61,7 @@ need to install them first as Orchard will then use its own copy.
 What's new?
 -----------
 
-Orchard 1.5 fixes bugs and introduces the following features:
+Orchard 1.5.1 fixes bugs and introduces the following features:
 
 * *Admin Search:* Enables search from the content screen of the admin dashboard.
 * *Admin-based Placement:* the editor placement of parts and fields can now be overridden from
@@ -84,7 +85,8 @@ part.
 
 The full list of fixed bugs for this release can be found here:
 
-* [Bugs fixed in 1.5](http://orchard.codeplex.com/workitem/list/advanced?keyword=&status=Fixed%7cClosed&type=All&priority=All&release=Orchard%2b1.5%2bRC2%7cOrchard%2b1.5&assignedTo=All&component=All&sortField=LastUpdatedDate&sortDirection=Descending&page=0).
+* [Bugs fixed in 1.5](http://orchard.codeplex.com/workitem/list/advanced?keyword=&status=Fixed%7cClosed&type=All&priority=All&release=Orchard%2b1.5&assignedTo=All&component=All&sortField=LastUpdatedDate&sortDirection=Descending&page=0).
+* [Bugs fixed in 1.5.1](http://orchard.codeplex.com/workitem/list/advanced?keyword=&status=Fixed%7cClosed&type=All&priority=All&release=Orchard%2b1.5.1&assignedTo=All&component=All&sortField=LastUpdatedDate&sortDirection=Descending&page=0).
 
 How to upgrade from a previous version
 --------------------------------------
@@ -100,7 +102,7 @@ You will need to enable the Content Picker feature before you can edit the navig
 
 - In Dashboard -> Modules, search for Content Picker and enable it
 
-In Orchard 1.5 the navigation is no more injected automatically in the Navigation zone. 
+In Orchard 1.5.1 the navigation is no more injected automatically in the Navigation zone. 
 Because of this change you will need to add a widget to render the main menu.
 
 - In Dashboard -> Navigation, search for the Navigation zone and click Add
@@ -114,7 +116,7 @@ Because of this change you will need to add a widget to render the main menu.
 
 Orchard 1.4 introduced breaking changes in the way content URLs are managed. Because of that,
 and if you're migrating from version 1.3 or earlier, the UpgradeTo15 module can be used to migrate
-data. If you upgrade a site to 1.5 from 1.3 or earlier and can't
+data. If you upgrade a site to 1.5.1 from 1.3 or earlier and can't
 see your contents, you probably need to run this module. In order to do that, go to the admin
 section of the site (by appending /admin to the URL where the home page should be), then go
 to Modules and enable the feature.
