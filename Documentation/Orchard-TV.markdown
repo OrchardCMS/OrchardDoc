@@ -9,7 +9,11 @@ The first part of the Pluralsight video course is free, and subsequent episodes 
 
 ## Free
 
-Brent Arias has a great 4-part series:
+### Introduction to Orchard 1.5 by Sébastien Ros
+
+<iframe style="height:281px;width:500px" src="http://channel9.msdn.com/Shows/Web+Camps+TV/Sebastien-Ros-Introduces-Orchard-15/player?w=500&h=281" frameBorder="0" scrolling="no" ></iframe>
+
+### Brent Arias has a great 4-part series:
 
 <iframe width="500" height="369" src="http://www.youtube.com/embed/vFC0pmmxdzM" frameborder="0" allowfullscreen></iframe>
 
@@ -19,7 +23,7 @@ Brent Arias has a great 4-part series:
 
 <iframe width="500" height="369" src="http://www.youtube.com/embed/IOQ3Llu9Rcc" frameborder="0" allowfullscreen></iframe>
 
-Introduction to Orchard 1.4 by Bertrand Le Roy:
+## Introduction to Orchard 1.4 by Bertrand Le Roy:
 
 <iframe width="500" height="284" src="http://www.youtube.com/embed/uDqY14mDG_Y" frameborder="0" allowfullscreen></iframe>
 
