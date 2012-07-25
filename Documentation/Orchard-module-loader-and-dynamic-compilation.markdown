@@ -126,18 +126,18 @@ is that it creates a lot of `FileSystenWatcher` instances to detect changes on t
 To disable the module, rename the file `\Config\Sample.HostComponents.config` to `\Config\HostComponents.config`, 
 then check the content is:
 
-```xml
-<?xml version="1.0" encoding="utf-8" ?>
-<HostComponents>
-  <Components>
-    <Component Type="Orchard.Environment.Extensions.Loaders.DynamicExtensionLoader">
-      <Properties>
-        <Property Name="Disabled" Value="true"/>
-      </Properties>
-    </Component>
-  </Components>
-</HostComponents>
-```
+
+    <?xml version="1.0" encoding="utf-8" ?>
+    <HostComponents>
+      <Components>
+        <Component Type="Orchard.Environment.Extensions.Loaders.DynamicExtensionLoader">
+          <Properties>
+            <Property Name="Disabled" Value="true"/>
+          </Properties>
+        </Component>
+      </Components>
+    </HostComponents>
+
 
 Deploy this file and restart the App Pool.
 
