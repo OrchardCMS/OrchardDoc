@@ -1,4 +1,3 @@
-
 # Introduction
 
 As a composable CMS, Orchard has the ability to load an arbitrary set of modules (also known as "extensions") at run-time. One of the goals of the 0.5 release was to make the process of installing and updating modules as easy as possible. 
@@ -118,6 +117,31 @@ Note that the "Core Module" loader is never ambiguous, because there is only one
           Baz.csproj
           module.txt
 
+## Disabling the "Dynamic Module" loader
+
+The dynamic module loader should be useless when deploying a website in production, as a production enviroment it
+should not be able to install and load module dynamically. But another important reason why it should be disabled
+is that it creates a lot of `FileSystenWatcher` instances to detect changes on the modules.
+
+To disable the module, rename the file `\Config\Sample.HostComponents.config` to `\Config\HostComponents.config`, 
+then check the content is:
+
+    <?xml version="1.0" encoding="utf-8" ?>
+    <HostComponents>
+      <Components>
+        <Component Type="Orchard.Environment.Extensions.Loaders.DynamicExtensionLoader">
+          <Properties>
+            <Property Name="Disabled" Value="true"/>
+          </Properties>
+        </Component>
+      </Components>
+    </HostComponents>
+
+Deploy this file and restart the App Pool.
+
+NB: You will have to ensure that the binaries for every modules are available in the `/bin` folder of each module, 
+such that the Precompiled Module loader can use them directly. When using Visual Studio this should be the case. 
+Otherwise use the command line tool to build the website, which will have the same effect.
 
 #  References Resolution 
 
