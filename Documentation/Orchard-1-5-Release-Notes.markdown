@@ -49,16 +49,6 @@ Suggestions are welcome in the discussion forums.
 You are allowed to use this software in any way that is compatible with the new BSD license.
 This includes commercial derivative work.
 
-Compatibility with ASP.NET WebPages and ASP.NET MVC
----------------------------------------------------
-
-The 1.5.1 release of Orchard is only compatible with ASP.NET MVC 3.
-If you have installed WebMatrix Betas or RCs, you need to uninstall them from the
-machine where you run Orchard.
-
-Note: if you don't have ASP.NET MVC or WebMatrix installed, you are fine and you don't
-need to install them first as Orchard will then use its own copy.
-
 What's new?
 -----------
 
