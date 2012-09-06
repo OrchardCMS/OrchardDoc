@@ -9,6 +9,8 @@ Adding an Orchard admin module starts with a class implementing the INavigationP
 
 In here the MenuName property should always return the value "admin", signalling to Orchard that this is an admin menu instead of a normal menu.
 
+#Adding a single item
+
     using Orchard.UI.Navigation;
  
     namespace Orchard.Webshop 
