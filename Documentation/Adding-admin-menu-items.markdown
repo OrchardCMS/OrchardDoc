@@ -21,7 +21,6 @@ In here the MenuName property should always return the value "admin", signalling
             get { return "admin"; }
         }
  
-     
         public void GetNavigation(NavigationBuilder builder) {
             builder
                 
@@ -40,3 +39,28 @@ In here the MenuName property should always return the value "admin", signalling
     }
 
 This will result in a single item being added to the admin menu.
+
+#Adding submenu items
+
+public void GetNavigation(NavigationBuilder builder) {
+            builder
+                
+                // Image set
+                .AddImageSet("webshop")
+ 
+                // "Webshop"
+                .Add(item => item
+ 
+                    .Caption(T("Webshop"))
+                    .Position("2")
+                    .LinkToFirstChild(true)
+                        .Add(localItem => localItem
+                            .Caption(T("Details"))
+                            .Action("Index", "CustomerAdmin", new { area = "Orchard.Webshop" })
+                        )
+                         .Add(localItem => localItem
+                            .Caption(T("Vertalingen"))
+                            .Action("Edit", "CustomerAdmin", new { area = "Orchard.Webshop"  })
+                        )
+                );
+        }
