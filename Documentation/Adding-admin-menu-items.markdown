@@ -41,6 +41,7 @@ In here the MenuName property should always return the value "admin", signalling
 This will result in a single item being added to the admin menu.
 
 #Adding submenu items
+By adding more .Add statements nested in the parent menu, we can generate a second menu level
 
         public void GetNavigation(NavigationBuilder builder) {
             builder
@@ -67,3 +68,5 @@ This will result in a single item being added to the admin menu.
 
 #Adding multiple tabs to a page
 
+For this we can use the .LocalNav()
+Be careful, if the Current displayed url is not part of the LocalNav pages, no tabs are displayed
