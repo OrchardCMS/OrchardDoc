@@ -20,7 +20,13 @@ In here the MenuName property should always return the value "admin", signalling
         public string MenuName {
             get { return "admin"; }
         }
- 
+        
+        public AdminMenu() {
+            T = NullLocalizer.Instance;
+        }
+   
+        private Localizer T { get; set; }
+
         public void GetNavigation(NavigationBuilder builder) {
             builder
                 
