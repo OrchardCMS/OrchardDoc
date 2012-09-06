@@ -42,7 +42,7 @@ This will result in a single item being added to the admin menu.
 
 #Adding submenu items
 
-public void GetNavigation(NavigationBuilder builder) {
+        public void GetNavigation(NavigationBuilder builder) {
             builder
                 
                 // Image set
@@ -55,12 +55,15 @@ public void GetNavigation(NavigationBuilder builder) {
                     .Position("2")
                     .LinkToFirstChild(true)
                         .Add(localItem => localItem
-                            .Caption(T("Details"))
+                            .Caption(T("Customers"))
                             .Action("Index", "CustomerAdmin", new { area = "Orchard.Webshop" })
                         )
                          .Add(localItem => localItem
-                            .Caption(T("Vertalingen"))
-                            .Action("Edit", "CustomerAdmin", new { area = "Orchard.Webshop"  })
+                            .Caption(T("Orders"))
+                            .Action("Index", "OrdersAdmin", new { area = "Orchard.Webshop"  })
                         )
                 );
         }
+
+#Adding multiple tabs to a page
+
