@@ -41,7 +41,7 @@ In here the MenuName property should always return the value "admin", signalling
 This will result in a single item being added to the admin menu.
 
 #Adding submenu items
-By adding more .Add statements nested in the parent menu, we can generate a second menu level
+By adding more .Add statements nested in the parent menu, we can generate a second menu level. With the .LinkToFirstChild we don't need an action anymore in the parent item, we'll use the first one from the first child.
 
         public void GetNavigation(NavigationBuilder builder) {
             builder
