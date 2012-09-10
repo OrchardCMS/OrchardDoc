@@ -1,4 +1,4 @@
-> This topic is a place holder and does not exist yet.
+An Admin menu is a menu which only appears in the admin website. There are 2 levels of admin menu's available on the side menu and the second level is by default collapsed. Adding a third level is possible, but this will only be displayed as a tabbed navigation on top of the pages.
 
 Adding an Orchard admin module starts with a class implementing the INavigationProvider:
     
@@ -9,7 +9,7 @@ Adding an Orchard admin module starts with a class implementing the INavigationP
 
 In here the MenuName property should always return the value "admin", signalling to Orchard that this is an admin menu instead of a normal menu.
 
-#Adding a single item
+#Adding a single level
 
     using Orchard.UI.Navigation;
  
@@ -44,9 +44,9 @@ In here the MenuName property should always return the value "admin", signalling
     }
     }
 
-This will result in a single item being added to the admin menu.
+This will result in a single item being added to the admin menu. The AddImageSet lets you create an image (in a set of related css files) to display in the navigation menu. Position is the order in which the menu's are displayed.
 
-#Adding submenu items
+#Adding 2nd level menu items
 By adding more .Add statements nested in the parent menu, we can generate a second menu level. With the .LinkToFirstChild we don't need an action anymore in the parent item, we'll use the first one from the first child.
 
         public void GetNavigation(NavigationBuilder builder) {
@@ -72,7 +72,16 @@ By adding more .Add statements nested in the parent menu, we can generate a seco
                 );
         }
 
-#Adding multiple tabs to a page
+#Adding multiple tabs to a page (3rd level)
 
-For this we can use the .LocalNav()
-Be careful, if the Current displayed url is not part of the LocalNav pages, no tabs are displayed
+For this we can use the .LocalNav() method.
+
+    public void GetNavigation(NavigationBuilder builder) {
+      builder.AddImageSet("webshop")
+        .Add(T("Customers"), "7", menu => menu.Action(...})
+          .Add(T("Details"), "0", item => item.Action(...}).LocalNav())
+          .Add(T("History"), "1", item => item.Action(...).LocalNav())
+          .Add(T("Contact"), "2", item => item.Action(...).LocalNav()));
+    }
+
+>Be careful, if the Current displayed url is not part of the LocalNav pages, no tabs are displayed. You first have to navigate to one of the pages for the LocalNav to display.
