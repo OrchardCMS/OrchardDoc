@@ -1,7 +1,7 @@
 A Content Type is the blueprint for all content.
-Content Types are created by combining multiple *Parts* and *Fields*
+Content Types are created by combining multiple *Parts*
 
-Creating a Content Type from code can be done from your migrations.cs. We'll use the *AlterTypeDefintion* to create or change a content type definition. 
+Creating a Content Type from code can be done from your migrations.cs. We'll use the *AlterTypeDefintion* to create or change a content type definition. The *WithPart* allows us to add multiple parts.
 
 # Creating a Content Type
 
