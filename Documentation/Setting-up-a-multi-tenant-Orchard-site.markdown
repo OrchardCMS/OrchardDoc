@@ -1,4 +1,3 @@
-
 When running Orchard, you most often will run a single site in a single application domain (app domain),
 which in ASP.NET terms is an isolation boundary between applications.
 However, Orchard provides an additional isolation boundary between sites,
@@ -12,7 +11,7 @@ Multi-tenancy is particularly nice in a [Windows Azure environment](Deploying-Or
 because one deployment to Azure can easily support multiple websites.
 
 > **Note:** If you want to set up a multi-tenant test site on your local machine, first read
-[Testing Multi-Tenancy on a Local Machine](#localhost) later in this article.
+[Testing Multi-Tenancy on a Local Machine](/Documentation/Setting-up-a-multi-tenant-Orchard-site#localhost) later in this article.
 
 # Enabling Multi-Tenancy
 
