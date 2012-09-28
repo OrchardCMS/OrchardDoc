@@ -1,8 +1,7 @@
-
 This walkthrough provides a glimpse of the features that Orchard has to offer, provided as a step-by-step guide. If this is your first time using Orchard, this document is for you!
 
 This topic assumes that you have already installed Orchard and set up your website. If you haven't, follow the instructions in [Installing Orchard](Installing-Orchard).
-
+Since Orchard 1.5 the contextual **Edit** links are available if you enable the features named **Content Control Wrapper** and **Widget Control Wrapper**.
 
 ### Customizing the Orchard Home Page
 
