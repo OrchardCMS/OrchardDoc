@@ -1,4 +1,3 @@
-
 Orchard provides the ability to manage users and roles for your site, with users assigned to one or more roles, and different permissions associated to each role.
 
 To manage the users in your site, click the **Users** link in admin panel.
@@ -32,4 +31,12 @@ By default, Orchard includes a number of roles with default permissions:
 To edit the permission for a given role, click **Edit** next to the role name.
 
 ![](../Upload/screenshots_675/edit_role_admin.png)
+
+To permit a limited number of self-management options expand the **Settings** tab:
+
+* Users can create new accounts on the site
+* Display a link to enable users to reset their password 
+* Users must verify their email address 
+* Users must be approved before they can log in 
+
 
