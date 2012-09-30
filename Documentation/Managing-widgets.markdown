@@ -1,4 +1,3 @@
-
 In Orchard, a widget is a fragment of UI (such as HTML) and code (such as a content part) that can be easily mapped to any location or zone in the active theme, such as a sidebar or footer zone.  Examples of widgets include navigation menus, image galleries, ads, videos, and tag clouds.
 
 This article explains the basics of widgets and shows you how to manage them.
@@ -29,7 +28,7 @@ Widget                | Description
 **Recent Blog Posts** | Displays a list of recent posts for the specified blog.
 
 ## List of Layers
-Orchard comes with a number of layers already defined. You can define additional layers as needed, as discussed later in [Adding a Layer](#AddingALayer). In the **Widgets** screen, you can edit the existing layers by selecting a layer in the **Current Layer** drop-down list, or you can add new layers by clicking **Add a new layer**. 
+Orchard comes with a number of layers already defined. You can define additional layers as needed, as discussed later in [Adding a Layer](Managing-widgets#AddingaLayer). In the **Widgets** screen, you can edit the existing layers by selecting a layer in the **Current Layer** drop-down list, or you can add new layers by clicking **Add a new layer**. 
 
 The following table lists the default layers, shows the rule that defines the layer, and describes the effect of the layer.
 
