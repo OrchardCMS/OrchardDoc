@@ -34,3 +34,10 @@ The following image shows a role with only **Edit own blog posts** granted. No p
 
 <!--## Defining and Customizing Permissions
 For information about how to customize permissions, see [Adding custom permissions](Adding-custom-permissions). For advanced concepts, see [Permissions](Permissions).-->
+
+## Orchard.ContentPermissions
+
+> This applies to the Orchard.ContentPermissions Module, available since Orchard 1.5.1
+
+When enabling the ContentPermissions module, you can define item-level permissions for the front end.
+This allows you to protect your Projections or own Content Types.
