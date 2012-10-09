@@ -1,4 +1,3 @@
-
 In Orchard, a widget is a fragment of UI (such as HTML) and code (such as a content part) that can be easily mapped to any location or zone in the active theme, such as a sidebar or footer zone.  Examples of widgets include navigation menus, image galleries, ads, videos, and tag clouds.
 
 This article explains the basics of widgets and shows you how to manage them.
@@ -72,6 +71,12 @@ For example, the following expression defines a rule that displays a widget on t
 
     
     (not authenticated and url("~/about")) or authenticated
+
+
+To allow multiple URL values, you can use the () syntax:
+
+    
+    url("~/foo") or url("~/bar")
 
 
 # Assigning a Widget to a Zone
