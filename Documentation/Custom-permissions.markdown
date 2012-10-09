@@ -63,5 +63,5 @@ The definition is a 3 step process, define the permission, return a list of Perm
 From our controller (or any other location) we can call the *Services.Authorizer.Authorize* to check if the current user has the correct Permission. In this example, even the "anonymous" role has the permission to add comments(check the code above).
 
     if (!Services.Authorizer.Authorize(Permissions.AddComment, T("Couldn't add comment")))
-        return this.RedirectLocal(returnUrl, "~/");
+        return new HttpUnauthorizedResult();
             
