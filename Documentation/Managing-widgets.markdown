@@ -28,7 +28,7 @@ Widget                | Description
 **Recent Blog Posts** | Displays a list of recent posts for the specified blog.
 
 ## List of Layers
-Orchard comes with a number of layers already defined. You can define additional layers as needed, as discussed later in [Adding a Layer](#AddingALayer). In the **Widgets** screen, you can edit the existing layers by selecting a layer in the **Current Layer** drop-down list, or you can add new layers by clicking **Add a new layer**. 
+Orchard comes with a number of layers already defined. You can define additional layers as needed, as discussed later in [Adding a Layer](Managing-widgets#AddingaLayer). In the **Widgets** screen, you can edit the existing layers by selecting a layer in the **Current Layer** drop-down list, or you can add new layers by clicking **Add a new layer**. 
 
 The following table lists the default layers, shows the rule that defines the layer, and describes the effect of the layer.
 
