@@ -73,7 +73,7 @@ For example, the following expression defines a rule that displays a widget on t
     (not authenticated and url("~/about")) or authenticated
 
 
-To allow multiple URL values, you can use the () syntax:
+To allow multiple URL values, you can use the following syntax:
 
     
     url("~/foo") or url("~/bar")
