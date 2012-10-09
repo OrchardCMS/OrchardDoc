@@ -192,7 +192,20 @@ For more information about creating and working with custom content types, refer
 
 > **Note** The localization feature is a work in progress, and not all parts of the Orchard application are yet localizable. For example, Orchard does not yet provide an automatic way to filter and display only content items in a given culture (one instance of this is the browser's default culture). We will address this in a future release. In the meantime you can provide your own implementation of `ICultureSelector` in a module. If you want to give us feedback on localization support in Orchard (for example, to help us understand the scenarios that are important for your site), please [join our mailing list](join-orchard-localization@lists.codeplex.org) and drop us a line!
 
+# Translating an Html Widget
 
+> **Note** these steps apply to a clean installation using the default theme 'The Theme Machine'
+
+In the admin panel, navigate to **Modules** and verify that you have the **Localization** module installed and enabled. The next step is to navigate to **Content** in the admin panel. Select the **Content Types** tab page on top and click **Edit** to adjust the **Html Widget**. Our goal is to translate a Html Widget. Click **Add Parts** in the Parts section. Here we select the **Localization** part and click **Save** to add this part. At the bottom of the page click **Save** again to save your Content Item adjustments.
+
+Now we need to navigate to the **Settings** menu item in the admin panel. Under the section **Default Site Culture** you can add the cultures that you want to support. In our case we have nl-BE and en-US. Click **Save** to apply your culture settings.
+
+Navigate to the **Widgets** menu item.
+On the **Default** layer find for example the **FooterQuadThrid** section and click **Add** to add a Widget.
+Now you need to **Choose A Widget**, select the **Html Widget**, because this is the one that we adjust.
+Now fill in the needed information (Title and Content) and click **Save**. 
+Your Html Widget is now added to the FooterQuadThird section.
+Now we are ready to translate the item. Select you newly added widget to edit it. On top of the **Edit Widget** page you will find the following text: **+ New translation**. Click this to add the translation for another culture.
 
 ### Change History
 * Updates for Orchard 1.1
