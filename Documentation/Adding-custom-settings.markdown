@@ -9,13 +9,12 @@ Basically, there are two scopes you can define your settings in:
 
 ## Defining site scope settings
 
-You define those settings in a separate content part.
-Imagine such scenario (_real one - I used it in_ [Content Sharing](http://orchardsharing.codeplex.com/) _module_):
+This document traces the process of defining and implementing and individual site setting for a live orchard module that can be added to your site to enable the webservice known as 'AddThis': [Content Sharing](http://orchardsharing.codeplex.com/):
 
-**"I want to hold my AddThis service login to be reused in share bars across the site"**
+The specific goal being **"to store my AddThis service login cedentials so that all share bars across the site will be able to access my account"**
 
-First, you have to create a content part (you can read about content parts
-[here](http://www.szmyd.com.pl/blog/jumpstart-into-orchard-module-development)):
+The first thing to understand is that our site setting is really just another form of the basic Orchard building blocks - the ContentPart/ContentPartRecord. While most ContentParts render visual elements to the site's visitor, they can also deliver non-visible chunks of data that can provide dynamic functionality to your pages. A great introduction to the construction of content types can be found 
+[found here](http://www.szmyd.com.pl/blog/jumpstart-into-orchard-module-development)):
     
     public class ShareBarSettingsPart : ContentPart<ShareBarSettingsPartRecord> {
         public string AddThisAccount {
@@ -24,7 +23,7 @@ First, you have to create a content part (you can read about content parts
             }
         }
 
-and a corresponding record for storage
+When you create a Content Type you will almost always find yourself also creating a ContentTypeRecord which can be thought of as creating a new field in the database for storing the ContentType values.
     
     public class ShareBarSettingsPartRecord : ContentPartRecord {
         public virtual string AddThisAccount { get; set; }
@@ -37,10 +36,9 @@ After creating the content part and record classes, you need to create appropria
 database mappings, called in Orchard - **Data Migration**.
 You shouldn't do it by hand: there is a command-line,
 `codegen datamigration <feature_name>`, which will create the appropriate file for you.
-You can see how to use it [here](Writing-a-content-part).
+You can see how to use it [here](https://github.com/OrchardCMS/OrchardDoc/blob/master/Documentation/Using-the-command-line-interface.markdown).
 
-The next step is to create a corresponding driver, which will be responsible for displaying
-the edit form and saving the posted data.
+The next step is to create a corresponding driver, which will be responsible for displaying the editor that the end-user invokes when setting the posted values.
 If you have already written some content parts, than this part of code should look familiar:
 
     [UsedImplicitly]
@@ -86,9 +84,9 @@ If you have already written some content parts, than this part of code should lo
 I omitted some code for checking permissions to edit the settings for better readability,
 but you are free to take a look at the full source code hosted on Codeplex.
 
-So we have our content part, record and a driver and we need just two more things:
-a handler in which we define the behavior of our part, and the view (shape)
-where we create the HTML markup for our form. The handler looks like:
+To review, so far we have our Content Part (plus it's attendant Content Part Record) and this just added driver. Two more structures are required before we can implement our new site-wide property setting:
+a Handler (controller) where we define the behavior of our Content Part, and the Shape (view)
+that will render the HTML markup for our form's editor. The Handler looks like:
     
     [UsedImplicitly]
     public class ShareBarSettingsPartHandler : ContentHandler {
@@ -101,16 +99,15 @@ where we create the HTML markup for our form. The handler looks like:
     }
 
 
-And in almost all cases it will be exactly like that. There are two things we've done here:
+In most cases its just that simple:
 
-1. Adding an activating filter, which will tell Orchard to which of the existing content types
-our **ShareBarSettingsPart** should be attached to. Site is also a content type,
-so we attach the part to it. **Basically, this is the point that differentiates the ordinary
+1. Add an activating filter. Tells Orchard which of the existing Content Types
+our **ShareBarSettingsPart** should be attached to. Because **Site** is also a Content Type,
+we can attach our part to it. **Basically, this is the point that differentiates the ordinary
 content parts from site settings.**
-2. Adding the storage filter to register our settings repository,
-which will be storing records in the database.
+2. Add the storage filter to register our settings repository - required because we want to be storing records in the database.
 
-So we've got one thing left - the .cshtml shape file with HTML markup - and we're done.
+So if the above handler can be thought of as a 'controller' the obvious next step is creating the 'view'. Orchard's term is 'shape' and is nothing more than a .cshtml file that combines HTML markup with razor's ability to render database elements.
 First, you have to create a .cshtml file under `/Views/EditorTemplates/Parts/`.
 This file, as the [naming convention](Accessing-and-rendering-shapes)
 forces us, should be named `Share.Settings.cshtml`.
