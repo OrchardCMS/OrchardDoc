@@ -9,7 +9,7 @@ Basically, there are two scopes you can define your settings in:
 
 ## Defining site scope settings
 
-This document traces the process of defining and implementing and individual site setting for a live orchard module that can be added to your site to enable the webservice known as 'AddThis': [Content Sharing](http://orchardsharing.codeplex.com/):
+This document traces the process of defining and implementing and individual site setting for a live orchard module that can be added to your site to enable the webservice known as 'AddThis' [Content Sharing](http://orchardsharing.codeplex.com/)
 
 The specific goal being **"to store my AddThis service login cedentials so that all share bars across the site will be able to access my account"**
 
@@ -110,8 +110,8 @@ content parts from site settings.**
 So if the above handler can be thought of as a 'controller' the obvious next step is creating the 'view'. Orchard's term is 'shape' and is nothing more than a .cshtml file that combines HTML markup with razor's ability to render database elements.
 First, you have to create a .cshtml file under `/Views/EditorTemplates/Parts/`.
 This file, as the [naming convention](Accessing-and-rendering-shapes)
-forces us, should be named `Share.Settings.cshtml`.
-This name corresponds to the `Parts_Share_Settings` shape which we used inside the driver above.
+informs us, should be named `Share.Settings.cshtml`.
+This name corresponds to the `Parts_Share_Settings` shape used inside the driver above.
 
 ![](http://www.szmyd.com.pl/Media/BlogPs/Windows-Live-Writer/804b787519c9_1126C/image_thumb.png)
 
@@ -128,16 +128,16 @@ the `Share.Settings.cshtml` file will look like this:
         </div>
     </fieldset>
 
-In order to make this visible we've got to tell Orchard where in the `Site -> Settings`
-pane our form should be displayed.
-To achieve this, create a `Placement.info` file in your module root with:
+Next, we need to tell Orchard where in the `Site -> Settings` pane our form should be displayed. 
+To do this we create a `Placement.info` file in our module root:
     
     <Placement>
         <Place Parts_Share_Settings="Content:0"/>
     </Placement>
 
-which will tell Orchard to display our form field at the beginning.
-We're now done with creating our settings, but how to use them?
+which tells Orchard to display our form field at the beginning.
+
+Now that we've configured our settings we will look at what it takes to actaully _use_ them.
 
 ## Using site scope settings
 
@@ -176,17 +176,16 @@ from [Content Sharing](http://orchardsharing.codeplex.com/) module:
         }
     }
 
-We're now going to create setting and defaults wired with specific content type (like Page, User, Blog etc.).
+We're now going to create settings and defaults wired with specific content type (like Page, User, Blog etc.).
 
-## Defining settings for content type
+## Defining settings for Content Types
 
 This looks much different comparing to the previous one, but also requires less coding.
 There are just two classes and one shape involved and that's all.
-As previously, we'll use the simplified examples taken from the
+As before, we'll use the simplified examples taken from the
 [Orchard Sharing](http://orchardsharing.codeplex.com/) project.
 
-The goal which we want to achieve today can be described as:
-
+The goal:
 > "I want all of my Blog Posts to have ShareBar with the same look."
 
 Imagine that you're writing posts via LiveWriter (like me).
@@ -247,13 +246,12 @@ for rendering the edit form and saving the posted data:
 
 This class overrides the `ContentDefinitionEditorEventsBase` which defines two overridable methods:
 `TypePartEditor` and `TypePartEditorUpdate`.
-The first one gets called when the edit form is being rendered and the second one
-when the edit form data gets posted.
+The first one gets called when the edit form is being rendered (GET) and the second one
+when the edit form data gets posted (POST).
 Unlike the generic content part drivers, this class is not bound to the specific content type
-(as the content types are just a text names for a collection of parts),
+(as the content types are just a list of names for a collection of parts),
 so each of the methods we just defined will be called for every content type and for every part.
-This is why the `yield break` statement at the beginning of each is needed:
-to filter only the ones containing the part we need, `ShareBarPart`.
+This is why the `yield break` statement is used - to filter only the ones containing the part we need, `ShareBarPart`.
 
 By convention, as shown in the TypePartEditorUpdate method, settings should be named as
 `<prefix>.<propertyName>` when passing to `builder.WithSetting(...)`,
@@ -293,7 +291,7 @@ Inside, it's just like any other Razor view file:
     </fieldset>
 
 
-This part of code renders the dropdown list so user can choose one of the predefined Modes.
+This renders the dropdown list so user can choose one of the predefined Modes.
 `Model.AvailableModes` contains the available ones: we populated the property with appropriate
 data in `TypePartEditor` method above.
 
