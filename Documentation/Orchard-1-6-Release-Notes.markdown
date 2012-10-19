@@ -2,47 +2,26 @@ Build: 1.6RC
 
 Published: 10/18/2012
 
-How to Install Orchard
-----------------------
+How to Install Orchard 1.6 RC
+-----------------------------
 
-To install Orchard using Web PI, follow these instructions:
-<http://docs.orchardproject.net/Documentation/Installing-Orchard>.
-Web PI will detect your hardware environment and install the application.
+This release candidate is only provided for testing purposes.
+It is only being provided in source code form.
+Simply extract the contents of the archive, then compile src\Orchard.sln from Visual Studio.
+To run the application, hit CTRL+F5 from Visual Studio.
 
-Alternatively, to install the release manually, download the Orchard.Web.1.6RC.zip file.
-
-<http://docs.orchardproject.net/Documentation/Manually-installing-Orchard-zip-file>
-
-The zip contents are pre-built and ready-to-run. Simply extract the contents of the Orchard
-folder from the zip contents to an IIS virtual directory (or site root) and then point your
-browser to the site. You can also just extract to a local folder and open the Orchard
-folder in Visual Studio or WebMatrix as a web site.
 Please make sure you have a machine key
 <http://docs.orchardproject.net/Documentation/Setting-up-a-machine-key>
 or you may experience frequent disconnections.
 
-What file to download?
-----------------------
-
-If you just want to use Orchard and don't care about the source code, Orchard.Web.1.6RC.zip
-is what you want to use, preferably through the WebPI instructions.
-
-If you want to take a look at the source code, OrchardSource.1.6RC.zip is fine.
-
-If you want to setup a development environment for patch or module development,
-you should clone the repository by following the instructions here:
-<http://docs.orchardproject.net/Documentation/Setting-up-a-source-enlistment>
-
-Do not attempt to build the WebPI version in VS. Use the full source if you want to use VS.
-
-Branches are described here: <http://docs.orchardproject.net/Documentation/Developer-FAQ#Whatarethedefaultanddevbranches?WhichoneshouldIbeusing?>
-
 Who should use this software?
 -----------------------------
 
-This software is in version 1.6RC. The code is in a stable state and constitutes
-a solid foundation for building applications, themes and modules.
-Suggestions are welcome in the discussion forums.
+This software is in version 1.6RC. The code is in pre-release state and only provided for
+testing purposes. The final 1.6 version will be available soon, but in the meantime we recommend
+only the deployment of 1.5.1 to production.
+
+The RC is a great way to test and prepare your existing sites for the 1.6 migration.
 
 You are allowed to use this software in any way that is compatible with the new BSD license.
 This includes commercial derivative work.
@@ -72,10 +51,9 @@ system is also now pluggable. Existing applications should replace the Menu part
 part.
 * *Layout placement*: `Placement.info` files can now use the '/' character to specify Layout zone targets likes this: "/AsideSecond:10"
 
-The full list of fixed bugs for this release can be found here:
+The full list of more than 200 fixed bugs for this release can be found here:
 
-* [Bugs fixed in 1.5](http://orchard.codeplex.com/workitem/list/advanced?keyword=&status=Fixed%7cClosed&type=All&priority=All&release=Orchard%2b1.5&assignedTo=All&component=All&sortField=LastUpdatedDate&sortDirection=Descending&page=0).
-* [Bugs fixed in 1.6RC](http://orchard.codeplex.com/workitem/list/advanced?keyword=&status=Fixed%7cClosed&type=All&priority=All&release=Orchard%2b1.6RC&assignedTo=All&component=All&sortField=LastUpdatedDate&sortDirection=Descending&page=0).
+* [Bugs fixed in 1.6RC](http://orchard.codeplex.com/workitem/list/advanced?keyword=&status=Fixed|Closed&type=All&priority=All&release=Orchard%201.6&assignedTo=All&component=All&sortField=LastUpdatedDate&sortDirection=Descending&page=0).
 
 How to upgrade from a previous version
 --------------------------------------
@@ -84,22 +62,6 @@ You can find migration instructions here: <http://docs.orchardproject.net/Docume
 
 No matter what migration path you take, please take the precaution of making a backup of your
 site and database first.
-
-### Navigation module
-
-You will need to enable the Content Picker feature before you can edit the navigation.
-
-- In Dashboard -> Modules, search for Content Picker and enable it
-
-In Orchard 1.6RC the navigation is no more injected automatically in the Navigation zone. 
-Because of this change you will need to add a widget to render the main menu.
-
-- In Dashboard -> Navigation, search for the Navigation zone and click Add
-- Select Menu Widget
-- In Title type "Main Menu"
-- Uncheck the "Show title" checkbox
-- In Menu select "Main Menu"
-- Click the Save button
 
 ### Upgrading from Orchard 1.3 and earlier
 
