@@ -100,7 +100,7 @@ we should all be grateful to the following people who contributed patches and fe
 * Jeff Bullock (j3ffb)
 * Martin Skinner (filetek)
 * Matt Melling (kobowi)
-* ??? (mjy78)
+* Michael Yates (mjy78)
 * Nathan Swenson (nswenson)
 * Nicholas Mayne (Jetski5822)
 * Pedro Costa (pnmcosta)
