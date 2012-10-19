@@ -1,4 +1,4 @@
-Build: 1.6RC
+Build: 1.6 RC
 
 Published: 10/18/2012
 
@@ -6,7 +6,13 @@ How to Install Orchard 1.6 RC
 -----------------------------
 
 This release candidate is only provided for testing purposes.
-It is only being provided in source code form.
+
+To install the release manually, download the Orchard.Web.1.6.rc.zip file and follow the instructions at this url
+<http://docs.orchardproject.net/Documentation/Manually-installing-Orchard-zip-file>
+You might then require the updated version of the gallery distributed modules, which are available as a standalone 
+download during the RC phase <http://orchard.codeplex.com/downloads/get/515753> . 
+
+It is also being provided in source code form.
 Simply extract the contents of the archive, then compile src\Orchard.sln from Visual Studio.
 To run the application, hit CTRL+F5 from Visual Studio.
 
@@ -31,25 +37,16 @@ What's new?
 
 Orchard 1.6RC fixes bugs and introduces the following features:
 
-* *Admin Search:* Enables search from the content screen of the admin dashboard.
-* *Admin-based Placement:* the editor placement of parts and fields can now be overridden from
-the content type editor.
-* *AntiSpam:* The AntiSpam module provides various spam-fighting features and infrastructure pieces.
-It makes it possible to prevent spam on arbitrary contents (previous versions of Orchard only had
-anti-spam services on comments). With this module, you can add ReCaptcha, external spam-filtering using
-the Akismet or TypePad external services or submission limits simply by adding a few parts to your types,
-including custom forms.
-* *Content Permissions:*  This module provides a part that can be added to any content type to restrict
-viewing permissions per content item instead of per content type.
-* *Content Picker:* This module provides an extensible content item picker that can be used to build
-relationships between content items.
-* *Custom Forms:* Custom forms are built as content types, typically using fields. Once you've built
-the content type for your custom form, you can enable its instances to be created from the front-end
-by anonymous users. This is useful, for example, to create contact forms.
-* *Navigation:* The navigation module now supports hierarchical menus and breadcrumbs. The navigation
-system is also now pluggable. Existing applications should replace the Menu part with the new Navigation
-part.
-* *Layout placement*: `Placement.info` files can now use the '/' character to specify Layout zone targets likes this: "/AsideSecond:10"
+* *ASP.NET MVC 4:*  We upgraded the MVC library to the latest available verion.
+* *Razor 2:* The brand new version of the Razor view engine which simplifies many parts of your views. 
+Details here <http://vibrantcode.com/blog/2012/4/10/whats-new-in-razor-v2.html/> 
+and here <http://vibrantcode.com/blog/2012/4/13/what-else-is-new-in-razor-v2.html/>.
+* *Web API:* The rest-enabled web framework which lets you create API from Orchard modules
+* *MySQL:* There is now a third option in the setup screen to use MySQL as the database.
+* *NHibernate 3.3:* We upgraded the NHibernate library to the latest available verion, allowing module developers 
+to leverage database caching.
+* *SysCache:* A default implementation of a database cache provider.
+* *Performance:* Some work as been done to improve performance in different places like Widgets/Layers and Blog archives.
 
 The full list of more than 200 fixed bugs for this release can be found here:
 
@@ -66,16 +63,14 @@ site and database first.
 ### Upgrading from Orchard 1.3 and earlier
 
 Orchard 1.4 introduced breaking changes in the way content URLs are managed. Because of that,
-and if you're migrating from version 1.3 or earlier, the UpgradeTo15 module can be used to migrate
+and if you're migrating from version 1.3 or earlier, the UpgradeTo16 module can be used to migrate
 data. If you upgrade a site to 1.6RC from 1.3 or earlier and can't
 see your contents, you probably need to run this module. In order to do that, go to the admin
 section of the site (by appending /admin to the URL where the home page should be), then go
 to Modules and enable the feature.
 
-The feature, once enabled, adds a new entry to the admin menu: "Migrate to 1.5", that can
-migrate the Route data of your content items as well as field data from older field modules.
-
-See [Orchard 1.4 release notes](/Documentation/Orchard-1-4-Release-Notes) for more details.
+The feature, once enabled, adds a new entry to the admin menu: "Upgrade to 1.6", that can
+migrate the Route data of your content items as well as field data from older field modules, and menu items.
 
 How to Reset Your Site Data
 ---------------------------
@@ -96,15 +91,24 @@ This software would not exist without the community. In particular, for this rel
 we should all be grateful to the following people who contributed patches and features:
 
 
-* Benedek Farkas (nightwolf226)
-* Bertrand Le Roy (bertrandleroy)
-* Martin Skinner (filetek)
-* Geert Doornbos (geertdoornbos)
-* Jonas Ledel (JLedel)
-* John Murdoch (jrmurdoch)
 * Nicholas Mayne (Jetski5822)
-* Piotr Szmyd (pszmyd)
-* Sebastien Ros (sebastienros)
-* Sean Farrow (SeanFarrow)
+* ??? (nswenson)
 * Thomas Bolon (styx31)
-* Zoltán Lehóczky (piedone)
+* Antoine Griffard (agriffard)
+* Bertrand Le Roy (bertrandleroy)
+* Rickard Pettersson (RickardP)
+* Sipke Schoorstra (sfmskywalker)
+* Martin Skinner (filetek)
+* Benedek Farkas (nightwolf226)
+* Sergey Ermakovich (yermakovich)
+* Tim Mylemans (AimOrchard)
+* ??? (mjy78)
+* Matt Melling (kobowi)
+* Jeff Bullock (j3ffb)
+* David Hayden (???)
+* David Cornish (???)
+* Zoltán Lehóczky (Piedone)
+* Piotr Szmyd (pszmyd)
+* ??? (TheMonarch)
+* Pedro Costa (pnmcosta)
+* Rebecca Pleshaw (Rebecca)
