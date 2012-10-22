@@ -47,6 +47,9 @@ and here <http://vibrantcode.com/blog/2012/4/13/what-else-is-new-in-razor-v2.htm
 to leverage database caching.
 * *SysCache:* A default implementation of a database cache provider.
 * *Performance:* Some work as been done to improve performance in different places like Widgets/Layers and Blog archives.
+* *Probing Extension Loader": There is a new extension loader which will be able to "compile once" modules if dynamic compilation is turned off
+* *Precompiled target*: There is a new "Precompiled" build target which generates a build without any source code
+* *Dynamic compilation if off*: By default dynamic comilation will be turned off when building the website using a build script
 
 The full list of more than 200 fixed bugs for this release can be found here:
 
@@ -71,6 +74,16 @@ to Modules and enable the feature.
 
 The feature, once enabled, adds a new entry to the admin menu: "Upgrade to 1.6", that can
 migrate the Route data of your content items as well as field data from older field modules, and menu items.
+
+#### Themes
+
+If you are using a custom theme, the new Razor parser might fail on the previous version of the LogOn.cshtml 
+template. If you have such a file in your theme then you will need to change lines 2 and 3 accordingly:
+
+    @{
+        var userCanRegister = WorkContext.CurrentSite.As<Orchard.Users.Models.RegistrationSettingsPart>().UsersCanRegister;
+        var enableLostPassword = WorkContext.CurrentSite.As<Orchard.Users.Models.RegistrationSettingsPart>().EnableLostPassword;
+    }
 
 How to Reset Your Site Data
 ---------------------------
