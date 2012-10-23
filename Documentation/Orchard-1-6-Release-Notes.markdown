@@ -47,7 +47,7 @@ and here <http://vibrantcode.com/blog/2012/4/13/what-else-is-new-in-razor-v2.htm
 to leverage database caching.
 * *SysCache:* A default implementation of a database cache provider.
 * *Performance:* Some work as been done to improve performance in different places like Widgets/Layers and Blog archives.
-* *Probing Extension Loader": There is a new extension loader which will be able to "compile once" modules if dynamic compilation is turned off
+* *Probing Extension Loader:* There is a new extension loader which will be able to "compile once" modules if dynamic compilation is turned off
 * *Precompiled target*: There is a new "Precompiled" build target which generates a build without any source code
 * *Dynamic compilation if off*: By default dynamic comilation will be turned off when building the website using a build script
 
