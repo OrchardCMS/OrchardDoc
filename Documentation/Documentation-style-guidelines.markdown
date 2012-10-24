@@ -155,7 +155,7 @@ In the right sidebar of each topic, you will find a link to the document on Gith
 
 ## Contributing Larger Changes And Topics
 
-We recommend the use of [TortoiseGit](http://code.google.com/p/tortoisegit/downloads/list)
+We recommend the use of [GitHub for Windows](http://windows.github.com/)
 to clone the documentation locally. This will give you a local copy of the documentation site,
 that you can run from WebMatrix or Visual Studio.
 
