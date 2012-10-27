@@ -47,10 +47,9 @@ and here <http://vibrantcode.com/blog/2012/4/13/what-else-is-new-in-razor-v2.htm
 to leverage database caching.
 * *SysCache:* A default implementation of a database cache provider.
 * *Performance:* Some work as been done to improve performance in different places like Widgets/Layers and Blog archives.
-* *Probing Extension Loader:* There is a new extension loader which will enable to "compile once" modules if dynamic compilation is turned off <http://docs.orchardproject.net/Documentation/Orchard-module-loader-and-dynamic-compilation>
 * *Precompiled target*: There is a new "Precompiled" build target which generates a build without any source code
-* *Dynamic compilation if off*: By default dynamic comilation will be turned off when building the website using a build script
-
+* *File monitoring is off by default: When building the website using a build script - usually for deployment - files won't be monitored by default.
+* *Session configuration*: Sessions behavior can be defined per module and per route, and are on by default
 The full list of more than 200 fixed bugs for this release can be found here:
 
 * [Bugs fixed in 1.6RC](http://orchard.codeplex.com/workitem/list/advanced?keyword=&status=Fixed|Closed&type=All&priority=All&release=Orchard%201.6&assignedTo=All&component=All&sortField=LastUpdatedDate&sortDirection=Descending&page=0).
