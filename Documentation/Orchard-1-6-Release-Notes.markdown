@@ -1,33 +1,48 @@
-Build: 1.6 RC
+Build: 1.6
 
-Published: 10/18/2012
+Published: 10/27/2012
 
-How to Install Orchard 1.6 RC
------------------------------
+How to Install Orchard
+----------------------
 
-This release candidate is only provided for testing purposes.
+To install Orchard using Web PI, follow these instructions:
+<http://docs.orchardproject.net/Documentation/Installing-Orchard>.
+Web PI will detect your hardware environment and install the application.
 
-To install the release manually, download the Orchard.Web.1.6.rc.zip file and follow the instructions at this url
+Alternatively, to install the release manually, download the Orchard.Web.1.6.zip file.
+
 <http://docs.orchardproject.net/Documentation/Manually-installing-Orchard-zip-file>
-You might then require the updated version of the gallery distributed modules, which are available as a standalone 
-download during the RC phase <http://orchard.codeplex.com/downloads/get/515753> . 
 
-It is also being provided in source code form.
-Simply extract the contents of the archive, then compile src\Orchard.sln from Visual Studio.
-To run the application, hit CTRL+F5 from Visual Studio.
-
+The zip contents are pre-built and ready-to-run. Simply extract the contents of the Orchard
+folder from the zip contents to an IIS virtual directory (or site root) and then point your
+browser to the site. You can also just extract to a local folder and open the Orchard
+folder in Visual Studio or WebMatrix as a web site.
 Please make sure you have a machine key
 <http://docs.orchardproject.net/Documentation/Setting-up-a-machine-key>
 or you may experience frequent disconnections.
 
+What file to download?
+----------------------
+
+If you just want to use Orchard and don't care about the source code, Orchard.Web.1.6.zip
+is what you want to use, preferably through the WebPI instructions.
+
+If you want to take a look at the source code, Orchard.Sources.1.6.zip is fine.
+
+If you want to setup a development environment for patch or module development,
+you should clone the repository by following the instructions here:
+<http://docs.orchardproject.net/Documentation/Setting-up-a-source-enlistment>
+
+Do not attempt to build the WebPI version in VS. Use the full source if you want to use VS.
+
+Branches are described here: <http://docs.orchardproject.net/Documentation/Developer-FAQ#Whatarethedefaultanddevbranches?WhichoneshouldIbeusing?>
+
 Who should use this software?
 -----------------------------
 
-This software is in version 1.6RC. The code is in pre-release state and only provided for
-testing purposes. The final 1.6 version will be available soon, but in the meantime we recommend
-only the deployment of 1.5.1 to production.
-
-The RC is a great way to test and prepare your existing sites for the 1.6 migration.
+This software is in version 1.6. The code is in a stable state and constitutes
+a solid foundation for building applications, themes and modules.
+Suggestions are welcome in the discussion forums.
 
 You are allowed to use this software in any way that is compatible with the new BSD license.
 This includes commercial derivative work.
@@ -35,7 +50,7 @@ This includes commercial derivative work.
 What's new?
 -----------
 
-Orchard 1.6RC fixes bugs and introduces the following features:
+Orchard 1.6 fixes bugs and introduces the following features:
 
 * *ASP.NET MVC 4:*  We upgraded the MVC library to the latest available verion.
 * *Razor 2:* The brand new version of the Razor view engine which simplifies many parts of your views. 
@@ -52,7 +67,7 @@ to leverage database caching.
 * *Session configuration*: Sessions behavior can be defined per module and per route, and are on by default
 The full list of more than 200 fixed bugs for this release can be found here:
 
-* [Bugs fixed in 1.6RC](http://orchard.codeplex.com/workitem/list/advanced?keyword=&status=Fixed|Closed&type=All&priority=All&release=Orchard%201.6&assignedTo=All&component=All&sortField=LastUpdatedDate&sortDirection=Descending&page=0).
+* [Bugs fixed in 1.6](http://orchard.codeplex.com/workitem/list/advanced?keyword=&status=Fixed|Closed&type=All&priority=All&release=Orchard%201.6&assignedTo=All&component=All&sortField=LastUpdatedDate&sortDirection=Descending&page=0).
 
 How to upgrade from a previous version
 --------------------------------------
@@ -103,25 +118,25 @@ This software would not exist without the community. In particular, for this rel
 we should all be grateful to the following people who contributed patches and features:
 
 
-* Antoine Griffard (agriffard)
-* Benedek Farkas (nightwolf226)
-* Bertrand Le Roy (bertrandleroy)
-* David Cornish (davidcornish)
-* David Hayden (davidhayden)
-* Giscard Biamby (TheMonarch)
-* Jeff Bullock (j3ffb)
-* Martin Skinner (filetek)
-* Matt Melling (kobowi)
-* Michael Yates (mjy78)
-* Nathan Swenson (nswenson)
-* Nicholas Mayne (Jetski5822)
-* Pedro Costa (pnmcosta)
-* Piotr Szmyd (pszmyd)
-* Rebecca Pleshaw (Rebecca)
-* Rickard Pettersson (RickardP)
-* Sebastien Ros (sebastienros)
-* Sergey Ermakovich (yermakovich)
-* Sipke Schoorstra (sfmskywalker)
-* Thomas Bolon (styx31)
-* Tim Mylemans (AimOrchard)
-* Zoltán Lehóczky (Piedone)
+* Antoine Griffard ([agriffard](http://www.codeplex.com/site/users/view/agriffard))
+* Benedek Farkas ([nightwolf226](http://www.codeplex.com/site/users/view/nightwolf226))
+* Bertrand Le Roy ([bertrandleroy](http://www.codeplex.com/site/users/view/bertrandleroy))
+* David Cornish ([davidcornish](http://www.codeplex.com/site/users/view/davidcornish))
+* David Hayden ([davidhayden](http://www.codeplex.com/site/users/view/davidhayden))
+* Giscard Biamby ([TheMonarch](http://www.codeplex.com/site/users/view/TheMonarch))
+* Jeff Bullock ([j3ffb](http://www.codeplex.com/site/users/view/j3ffb))
+* Martin Skinner ([filetek](http://www.codeplex.com/site/users/view/filetek))
+* Matt Melling ([kobowi](http://www.codeplex.com/site/users/view/kobowi))
+* Michael Yates ([mjy78](http://www.codeplex.com/site/users/view/mjy78))
+* Nathan Swenson ([nswenson](http://www.codeplex.com/site/users/view/nswenson))
+* Nicholas Mayne ([Jetski5822](http://www.codeplex.com/site/users/view/Jetski5822))
+* Pedro Costa ([pnmcosta](http://www.codeplex.com/site/users/view/pnmcosta))
+* Piotr Szmyd ([pszmyd](http://www.codeplex.com/site/users/view/pszmyd))
+* Rebecca Pleshaw ([Rebecca](http://www.codeplex.com/site/users/view/Rebecca))
+* Rickard Pettersson ([RickardP](http://www.codeplex.com/site/users/view/RickardP))
+* Sebastien Ros ([sebastienros](http://www.codeplex.com/site/users/view/sebastienros))
+* Sergey Ermakovich ([yermakovich](http://www.codeplex.com/site/users/view/yermakovich))
+* Sipke Schoorstra ([sfmskywalker](http://www.codeplex.com/site/users/view/sfmskywalker))
+* Thomas Bolon ([styx31](http://www.codeplex.com/site/users/view/styx31))
+* Tim Mylemans ([AimOrchard](http://www.codeplex.com/site/users/view/AimOrchard))
+* Zoltán Lehóczky ([Piedone](http://www.codeplex.com/site/users/view/Piedone))
