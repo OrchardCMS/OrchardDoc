@@ -27,7 +27,7 @@ What file to download?
 If you just want to use Orchard and don't care about the source code, Orchard.Web.1.6.zip
 is what you want to use, preferably through the WebPI instructions.
 
-If you want to take a look at the source code, Orchard.Sources.1.6.zip is fine.
+If you want to take a look at the source code, Orchard.Source.1.6.zip is fine.
 
 If you want to setup a development environment for patch or module development,
 you should clone the repository by following the instructions here:
