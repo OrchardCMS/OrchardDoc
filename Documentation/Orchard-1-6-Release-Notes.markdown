@@ -63,7 +63,7 @@ to leverage database caching.
 * *SysCache:* A default implementation of a database cache provider.
 * *Performance:* Some work as been done to improve performance in different places like Widgets/Layers and Blog archives.
 * *Precompiled target*: There is a new "Precompiled" build target which generates a build without any source code
-* *File monitoring is off by default: When building the website using a build script - usually for deployment - files won't be monitored by default.
+* *File monitoring is off by default*: When building the website using a build script - usually for deployment - files won't be monitored by default.
 * *Session configuration*: Sessions behavior can be defined per module and per route, and are on by default
 The full list of more than 200 fixed bugs for this release can be found here:
 
