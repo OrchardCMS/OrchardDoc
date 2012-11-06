@@ -3,12 +3,10 @@ The feature roadmap is subject to change as the project evolves, and we welcome 
 
 ### Current Priorities
 
-Priorities for Orchard 1.6:
+Priorities for Orchard 1.7:
 
-* NHibernate 3 and 2nd level caching
-* ASP.NET MVC 4 / WebAPI
-* MySQL provider
-* Performance improvements
+* Comment refactoring with spam protection
+* TBD... See 1.7 threads under <http://orchard.codeplex.com/discussions/topics/5042/announcements>
 
 ### Currently Implemented (Partially or in Full)
 
@@ -69,6 +67,9 @@ Priorities for Orchard 1.6:
 * [Core Field Types](http://orchard.codeplex.com/discussions/274918)
 * [Admin placement](http://orchard.codeplex.com/discussions/348649)
 * [Spam Protection](http://orchard.codeplex.com/discussions/348654)
+* NHibernate 3 and 2nd level caching
+* ASP.NET MVC 4 / WebAPI
+* MySQL provider
 
 ### Areas of Focus for Future Iterations (Backlog, Not in Priority Order)
 
