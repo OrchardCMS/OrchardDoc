@@ -52,13 +52,13 @@ What's new?
 
 Orchard 1.6 fixes bugs and introduces the following features:
 
-* *ASP.NET MVC 4:*  We upgraded the MVC library to the latest available verion.
+* *ASP.NET MVC 4:*  We upgraded the MVC library to the latest available version.
 * *Razor 2:* The brand new version of the Razor view engine which simplifies many parts of your views. 
 Details here <http://vibrantcode.com/blog/2012/4/10/whats-new-in-razor-v2.html/> 
 and here <http://vibrantcode.com/blog/2012/4/13/what-else-is-new-in-razor-v2.html/>.
 * *Web API:* The rest-enabled web framework which lets you create API from Orchard modules
 * *MySQL:* There is now a third option in the setup screen to use MySQL as the database.
-* *NHibernate 3.3:* We upgraded the NHibernate library to the latest available verion, allowing module developers 
+* *NHibernate 3.3:* We upgraded the NHibernate library to the latest available version, allowing module developers 
 to leverage database caching.
 * *SysCache:* A default implementation of a database cache provider.
 * *Performance:* Some work as been done to improve performance in different places like Widgets/Layers and Blog archives.
