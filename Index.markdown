@@ -9,7 +9,6 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
 * [Working with Orchard in WebMatrix](Documentation/Working-with-Orchard-in-WebMatrix)
 * [Getting Around the Dashboard](Documentation/Getting-around-the-dashboard)
 * [Building Your First Orchard Site](Documentation/Getting-Started)
-* [Adding Pages to Your Site](Documentation/Adding-pages-to-your-site)
 * [Navigation and Menus](Documentation/Navigation-and-menus)
 * [Adding a Blog to Your Site](Documentation/Adding-a-blog-to-your-site)
 * [Adding and Managing Media Content](Documentation/Adding-and-managing-media-content)

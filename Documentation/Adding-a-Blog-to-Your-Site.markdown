@@ -2,55 +2,67 @@
 Orchard provides a blogging engine that makes it easy to add a blog to your web site.
 This topic describes how to create a blog for your site and then add a new blog post.
 
-# Creating a New Blog
+### Add the Blog
 
-In the Admin Panel under **Blogs**, click **Create New Blog**.
-The **Create New Blog** settings are displayed, as shown in the following image.
+On the Orchard dashboard and click **Blog**. The **New Blog** screen.
+Add a title, description, and menu text for the blog and click **Save**.
 
-![](../Upload/screenshots_675/blog_create_675.png)
+![](../Upload/screenshots_675/new_blog_675.png)
 
-Using the **Create New Blog** settings, you can do the following:
+ A page for managing the blog is displayed.
 
-* Give your new blog a title. 
-* Add a permalink to the blog.
-* Set the blog as the home page for the web site.
-* Add a description that will appear at the top of the blog when published.
-* Add content tags for the blog as a whole.
-* Indicate whether to show the blog on the main menu.
-* Assign an owner for the blog.
+![](../Upload/screenshots_675/blog_new_blog_added_675.png)
 
-For more information about permalinks, content tags, or the **Show on main menu** checkbox,
-see [Adding Pages to Your Site](Adding-Pages-to-Your-Site).
+### Add a post to the Blog
 
-After selecting the settings for your blog, click **Add** to add the new blog to your site.
+Click **New Post** to create a new blog entry. The **New Blog Post** screen is displayed. Enter a title for your post and the post contents.
 
-# Creating a New Blog Post
+![](../Upload/screenshots_675/blog_new_post_2_1_675.png)
 
-As soon as the blog is added to your site, you can add blog posts.
-As the following image shows, click **New Post** to add a blog post.
+Enter tags (separated by commas) to your blog post in the **Tags** field. Notice that the check box next to **Allow new comments** is checked by default. Click **Save** to save it as a draft.
 
-![](../Upload/screenshots_675/blog_new_post_675.png)
+![](../Upload/screenshots_675/blog_new_post_2_2_675.png)
 
-The **Create New Blog Post** settings are displayed, as shown in the following image.
+In the dashboard, click **Manage Blog** to view the list of posts in the blog.  In the list of posts, the new post is saved as a draft, which means it is not yet visible to visitors of the site.  Click **Publish** to allow site visitors to see the post.
 
-![](../Upload/screenshots_675/blog_new_post_2_675.png)
+![](../Upload/screenshots_675/blog_manage_1_675.png)
 
-Using the **Create New Blog Post** settings, you can do the following:
+A screen shows that the post was published successfully.   
 
-* Give your new blog post a title.
-* Add a permalink for the blog post.
-* Set the blog post as the home page for the web site.
-* Add content using the rich-text editor.
-* Add content tags.
-* Allow comments from users to be posted to the blog post.
-* Assign an owner for the blog post.
-* Save and publish the blog post to the site.
+![](../Upload/screenshots_675/publish_draft_post_675.png)
 
-For more information about using the text editor or saving and publishing the blog post,
-see [Adding Pages to Your Site](Adding-Pages-to-Your-Site).
+Click **Your Site** to view the site's home page again.
 
-After you have created a new blog and published it to your site, your blog will look similar to the following image.
+A new tab, **Blog**, has been added to the menu. Click the **Blog** tab which will display the blog and the new the post.  To see more details about the new post, click the **more** link at the end of the post content.
 
-![](../Upload/screenshots_675/playground_blog_675.png)
+![](../Upload/screenshots_675/website_blog_1_675.png)
+
+### Add a comment to the post
+
+Because comments were enabled for the post, a new commented can be entered.  The comment may not appear immediately after it is submitted.  That is because Orchard has a setting which requires the site administrator to approve comments before they are published.
+
+![](../Upload/screenshots_675/blog_comment_1_675.png)
+
+Return to the Orchard dashboard and under **Settings**, click **Comments**. There are two options which effect how comments are handled. One to require administrator approval before a comment is published, and another option for enabling spam protection. For more details about these features, see the [Moderating Comments](Moderating-comments) topic.
+
+![](../Upload/screenshots_675/manage_settings_comments_1_675.png)
+
+### Using Tags in blogs
+
+Orchard provides the ability to browse content by the tags that are added to the content. Click one of the tags (for example, "Orchard") in the blog post to see a list of all content that has that tag.  For more information about managing tags, see [Organizing Content with Tags](Organizing-content-with-tags).
+
+![](../Upload/screenshots_675/tagged_contents_1_675.png)
+
+Notice the URL for browsing tagged content as well.  
+
+![](../Upload/screenshots/tags2.png)
+
+If the URL is shortened to just the _/Tags/_ portion, the list of tags used in your site is displayed.
+
+![](../Upload/screenshots_675/website_tag_list_675.png)
+
+### Change History
+* Updates for Orchard 1.6
+	* 11-25-12:  Broke into mutliple sections.
 
 
