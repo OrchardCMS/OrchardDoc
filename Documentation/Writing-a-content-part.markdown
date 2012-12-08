@@ -147,7 +147,7 @@ Now let's add the handler for the Map part.  A handler in Orchard is a class tha
     }
 
 
-We will also add a driver for our Map part.  A driver in Orchard is a class that can define associations of shapes to display for each context in which the Map part can render.  For example, when displaying a Map on the front-end, a "Display" method defines the name of the template to use for different displayTypes (for example, "details" or summary").  Similarly, an "Editor" method of the driver defines the template to use for displaying the editor of the Map part (for entering values of the latitude and longitude fields).  We are going to keep this part simple and just use "Map" as the name of the shape to use for both Display and Editor contexts (and all displayTypes).  Add the MapDriver class as follows.
+We will also add a driver for our Map part.  A driver in Orchard is a class that can define associations of shapes to display for each context in which the Map part can render.  For example, when displaying a Map on the front-end, a "Display" method defines the name of the template to use for different displayTypes (for example, "details" or summary").  Similarly, an "Editor" method of the driver defines the template to use for displaying the editor of the Map part (for entering values of the latitude and longitude fields).  We are going to keep this part simple and just use "Map" as the name of the shape to use for both Display and Editor contexts (and all displayTypes).  Add the Drivers\MapDriver class as follows.
 
     
     using Maps.Models;
