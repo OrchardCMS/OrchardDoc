@@ -1,4 +1,3 @@
-
 Orchard provides a command-line interface for performing many of the functions that are available from the admin panel (and some that aren't).  The command-line tool is named "orchard.exe" and is located in the bin directory underneath to root of your site.  To run the command-line tool, first open a command prompt on the root of the site (i.e. Orchard.Web). This can be done for example by SHIFT+right-clicking on the folder in Windows Explorer and choosing "Open command window here". From there, type "bin\orchard.exe".  Note that you need to run this tool from the root of your site.
 
 
@@ -132,6 +131,33 @@ The available commands depends on the features that are currently enabled for yo
     TinyMce, Enabled
     XmlRpc, Disabled
 
+
+#Batched or scripted Commands
+
+There are two specific "Non-interactive" modes; single command and response file. Each allow for useful batching of commands in a non-interactive context.
+Commands still need to have been enabled, and orchard.exe still needs to be launched from the correct location for each command type.
+
+##Single Command
+Single command is exactly as you would expect. A single command can be run and the orchard.exe tool will exit directly after completion.
+
+From the Orchard.Web/bin path
+    
+    orchard package create "Orchard.Blogs" "c:\\temp\\"
+
+##Response File
+
+A response file simply contains a series of lines, each one representing a command to be executed. This is an excellent way
+to run multiple commands without the large footprint of the orchard context initialisation.
+
+Example response file text (myfile.txt):
+
+    package create "Orchard.Blogs" "c:\\temp\\"
+    package create "Orchard.Users" "c:\\temp\\"
+    
+To execute this response file run the orchard.exe in the single command mode as above, but note the "@" prefix on the parameter, 
+indicating a response file
+
+    orchard @myfile.txt
 
 # Adding Commands
 
