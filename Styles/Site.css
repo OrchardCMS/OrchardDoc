@@ -8,7 +8,7 @@ address,caption,cite,code,dfn,em,strong,th,var { font-style:normal; font-weight:
 ol,ul { list-style:none; }
 caption,th { text-align:left; }
 h1,h2,h3,h4,h5,h6 { font-size:100%; font-weight:normal; }
-/*q:before,q:after { content:”; }*/
+/*q:before,q:after { content:ï¿½; }*/
 abbr,acronym { border:0; }
 
 /*Defaults
@@ -355,6 +355,7 @@ html>body #ContainerDiv {height: auto;}
 #MainDiv img {
     margin-top: 10px;
     margin-bottom: 10px;
+    max-width: 580px;
 }
 
 #MainFooterDiv {clear:both;}
