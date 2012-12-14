@@ -7,14 +7,14 @@ If you do not want to use the Microsoft Web Platform Installer to install Orchar
 
 # Downloading the .zip File
 
-Download the Orchard [.zip file](http://orchard.codeplex.com/releases/view/59918) from CodePlex. Select the **Orchard.Web.1.x.xx.zip** file for the latest build of Orchard, as shown in the following illustration:
+Download the Orchard [.zip file](http://orchard.codeplex.com/releases/view/90325) from CodePlex. Select the **Orchard.Web.1.x.xx.zip** file for the latest build of Orchard, as shown in the following illustration:
 
 ![](../Upload/screenshots/Install_downloadzip.png)
 
 The website is in the "Orchard" folder that's included in the .zip file.
 
 You can run your downloaded Orchard site using IIS, WebMatrix and IIS Express, or Visual Studio and the Visual Studio Development Server. The site has already been built and can be run without additional compilation.
-
+//Orchard 1.6 - Running the Site Using IIS section still needs to be verified 11/12/2012
 # Running the Site Using IIS
 
 To use IIS, extract the contents of the _Orchard_ folder from the .zip file to an IIS virtual directory (or site root), and then view the site using a browser. If you are using IIS 7, configure it to run in integrated mode, and configure the application pool to run the .NET Framework version 4.
@@ -30,7 +30,11 @@ If you want to completely reset an Orchard site configuration to its default set
 
 # Running the Site Using WebMatrix and IIS Express
 
-To use WebMatrix and IIS Express, extract the Orchard .zip file to a local folder. Launch WebMatrix, and in the **Quick Start** screen, click **Site from Folder**. Navigate to the folder where you extracted the .zip file, select the folder named **Orchard**, and then click **Select Folder** to open the site.
+To use WebMatrix and IIS Express, extract the Orchard .zip file to a local folder. Launch WebMatrix, and in the **Quick Start** screen, click **Open Site** and then **Folder as Site**.
+
+![](../Upload/screenshots_675/webmatrix_sitefromfolder_675.png)
+
+ Navigate to the folder where you extracted the .zip file, select the folder named **Orchard**, and then click **Select Folder** to open the site.
 
 ![](../Upload/screenshots_675/webmatrix_selectfolder_675.png)
 
@@ -40,7 +44,11 @@ To run the site, in the WebMatrix **Files** workspace, select the root **Orchard
 
 # Running the Site Using Visual Studio and the Visual Studio Development Server
 
-To run the site in Visual Studio, extract the full source code .zip file to a local folder. Launch Visual Studio and select **File** > **Open** > **Project/Solution**. Navigate to the folder where you extracted the .zip and open the folder named **src**. Select the **Orchard.sln** solution file.
+To run the site in Visual Studio, extract the full source code .zip file to a local folder.
+
+![](../Upload/screenshots_675/contents_of_source_zip_file_675.png)
+
+ Launch Visual Studio and select **File** > **Open** > **Project/Solution**. Navigate to the folder where you extracted the .zip and open the folder named **src**. Select the **Orchard.sln** solution file.
 
 ![](../Attachments/Manually-installing-Orchard-zip-file/OpenSolution.PNG)
 
@@ -52,7 +60,7 @@ When you first launch the Orchard site, you are presented with the Orchard setup
 
 ![](../Upload/screenshots/get_started_dialog_1.png)
 
-By default, Orchard includes a built-in database that you can use without installing a separate database server. However, if you are running SQL Server or SQL Server Express, you can configure Orchard to use either of those products instead by specifying a connection string. Optionally, you can enter a table prefix so that multiple Orchard installations can share the same database but keep their data separate.
+By default, Orchard includes a built-in database that you can use without installing a separate database server. However, if you are running SQL Server or SQL Server Express, you can configure Orchard to use either of those products instead by specifying a connection string. The database and user specified in the connection string must be created before you start the Orchard setup.  Optionally, you can enter a table prefix so that multiple Orchard installations can share the same database but keep their data separate.
 
 ![](../Upload/screenshots_85/setup_sqlserver.png)
 
@@ -75,8 +83,9 @@ You are now on the Orchard home page and can begin configuring your site.
   
 
 # Change History
-* Updates for Orchard 1.1
-    * 4-12-11:  Updated screens for 1.1 installation.
+* Updates for Orchard 1.6
+	* 11-07-12:  Updated screens for 1.6 installation.
+	* 4-12-11: Updated screens for 1.1 installation.
     * 3-14-11:  Added section on using WebMatrix and IIS Express.
     * 3-14-11:  Added information about recipes in the setup screen.
     * 3-15-11:  Fixed the IIS section to use the Orchard subfolder from the zip.
