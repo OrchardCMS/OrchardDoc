@@ -1,4 +1,6 @@
-Fields can be used in Orchard to [build new content types](Creating-custom-content-types). Orchard currently comes with only one type of field, text fields, but it is possible to build your own field types that can then be used to build new content types.
+Fields can be used in Orchard to [build new content types](Creating-custom-content-types).
+Orchard comes with a few built-in field types such as text, date or enumeration,
+but it is possible to build your own field types that can then be used to build new content types.
 
 This topic will teach you how to add such a new field type. You can find the source code for this tutorial here: [http://orcharddatetimefield.codeplex.com/](http://orcharddatetimefield.codeplex.com/).
 
