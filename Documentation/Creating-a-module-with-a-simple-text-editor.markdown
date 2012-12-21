@@ -188,6 +188,7 @@ Make sure the following line is present in the _.csproj_ file. (It should alread
 
     <Compile Include="Migrations.cs" />
 
+Update your module.txt manifest file with the new module version.
 
 Navigate to the **Features** screen in the dashboard. You see a warning that indicates that one of the features needs to be updated, and the **Simple Commerce** module is displayed in red. Click **Update** to ensure that the migrations are run and that the module is up to date.
 
