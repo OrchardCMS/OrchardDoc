@@ -75,6 +75,11 @@ For **Zone** shapes:
 
 * _Zone\_\_\[ZoneName\]_. (Example template: `Zone-SideBar`)
 
+For **Navigation** shapes (the new menu system since version 1.5):
+
+* _MenuItemLink\_\_\[MenuName\]_. (Example template: `MenuItemLink-main-menu`)
+* _MenuItemLink\_\_\[ContentType\]_. (Example template: `MenuItemLink-ContentMenuItem`, `MenuItemLink-HtmlMenuItem`, `MenuItemLink-Blog`)
+
 For menu and menu item shapes:
 
 * _Menu\_\_\[MenuName\]_. (Example template: `Menu-main`)
@@ -82,7 +87,7 @@ For menu and menu item shapes:
 
 For local menu and local menu item shapes:
 
-* _LocalMenu\_\_\[MenuName\]_. (Example template: `LocalMenu-main`)
+* _LocalMenu\_\_\[MenuName\]_. (Example templates: `LocalMenu-main`)
 * _LocalMenuItem\_\_\[MenuName\]_. (Example template: `LocalMenuItem-main`)
 
 For styles and resources:
