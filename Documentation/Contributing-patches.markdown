@@ -1,4 +1,3 @@
-
 Creating **a fork should be preferred** because it makes merging a lot easier.
 
 ## Working on a Patch
@@ -24,11 +23,11 @@ Once you've made your changes and are ready to submit them back to us, right-cli
 Next, you'll want to push your changes to your private fork on CodePlex through the Hg Repository Explorer.
 
 Before preparing to submit a contribution, be sure to: 
-1. Mark new files as added
-2. Mark missing files as deleted
-3. Use Hg update to ensure the local copy is current
-4. Verify sources build and unit tests pass
-5. Do any merge and re-base operations necessary to get your local change tree to what you actually want to submit (see [Mercurial documentation](http://mercurial.selenic.com/wiki/Mercurial) if in doubt about what this means). In particular, before you submit, your enlistment should be **merged into contributions tip**.
+1.  Mark new files as added
+2.  Mark missing files as deleted
+3.  Use Hg update to ensure the local copy is current
+4.  Verify sources build and unit tests pass
+5.  Do any merge and re-base operations necessary to get your local change tree to what you actually want to submit (see [Mercurial documentation](http://mercurial.selenic.com/wiki/Mercurial) if in doubt about what this means). In particular, before you submit, your enlistment should be **merged into contributions tip**.
 
 Once this is done, your changes are on CodePlex, but not yet in the project's official repository. To get it there, you'll need to ask us to pull the changes in. In order to do that, send us a pull request from the fork management screen under the source control tab on CodePlex:
 
@@ -45,10 +44,19 @@ An alternative to using a fork is to package your changes into a file and then t
 In order to prepare your patch, you'll need to get a local enlistment of the source code of the application and work off of that.
 
 Before preparing to submit a contribution, be sure to: 
+
 1. Mark new files as added
+
+
 2. Mark missing files as deleted
+
+
 3. Use Hg update to ensure the local copy is current
+
+
 4. Verify sources build and unit tests pass
+
+
 5. Do any merge and re-base operations necessary to get your local change tree to what you actually want to submit (see [Mercurial documentation](http://mercurial.selenic.com/wiki/Mercurial) if in doubt about what this means).
 
 Once this is done, go into the Repository Explorer for your local enlistment, right-click your latest revision and choose "Export Patch...":
