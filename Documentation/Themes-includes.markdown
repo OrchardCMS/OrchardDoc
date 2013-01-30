@@ -1,9 +1,8 @@
-
 This design proposal outlines enhancements to the Themes feature to support the following:
 
 1. The ability for the application to function independently of the Themes feature, by having default Views, Content, Scripts, Packages and Widgets folders
 2. The ability for an applied Theme to override the default files in the application for Views, Content, Scripts, Packages and Widgets
-3. The ability for an applied Theme to ìfall backî to default files when they are not overridden by the Theme
+3. The ability for an applied Theme to ‚Äúfall back‚Äù to default files when they are not overridden by the Theme
 4. An include-style helper method syntax for composition of View-related files (either in the applied Theme or in the default Views folder)
 
 
@@ -16,7 +15,7 @@ In the absence of the Themes feature (or an applied Theme), the application will
 
 Themes override the default files in the application by specifying files for Content, Views, Scripts and Widgets under the Theme folder.  For example, if the application contains a ~/Views/Login.aspx page, the Blue Theme may override the rendering for this page by specifying a custom ~/Themes/Blue/Views/Login.aspx page.
 
-The View Engine will look to the currently applied Theme to resolve files before ìfalling backî to the default Views folder.  Overrides allow a theme to only specify the files that require customization by the Theme, instead of requiring Themes to duplicate every file in the application.
+The View Engine will look to the currently applied Theme to resolve files before ‚Äùfalling back‚Äù to the default Views folder.  Overrides allow a theme to only specify the files that require customization by the Theme, instead of requiring Themes to duplicate every file in the application.
 
 The override feature can dramatically simplify some theme definitions - a simple Theme may only need to override the header and style sheet for the application, so it would only need to specify ~/Views/Header.aspx and ~/Styles/Site.css.
 
@@ -148,7 +147,7 @@ The system will search for the correct physical file to serve  in the following 
 
 **Example:**
 
-    Html.RegisterScript(ìmyscript.jsî)
+    Html.RegisterScript(ÔøΩmyscript.jsÔøΩ)
 
 ...registers a URL to the first physical file that exists in these locations (in order):
 
@@ -180,11 +179,11 @@ The system will search for the correct physical file to serve  in the following 
 4. ~/Content
 
 
-**Note:** It is not correct (and might result in an exception) to include stylesheets from widgets using this API, since these stylesheets belong in the <head> of the document. Refer to the section entitled ìWidget Scripts and Stylesheetsî below.
+**Note:** It is not correct (and might result in an exception) to include stylesheets from widgets using this API, since these stylesheets belong in the <head> of the document. Refer to the section entitled ‚ÄúWidget Scripts and Stylesheets‚Äù below.
 
 **Example:**
 
-    Html.RegisterStyleSheet(ìmystylesheet.cssî)
+    Html.RegisterStyleSheet("mystylesheet.css")
 
 ...registers a URL to the first physical file that exists in these locations (in order):
 
