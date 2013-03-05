@@ -8,7 +8,7 @@ This article describes how to write a widget by first creating a content part an
 For this example, you will use the `Map` part that is described in [Writing a content part](Writing-a-content-part). If you did not create the `Map` part, do so now. 
 
 # Turning a Part into a Widget
-To turn a content part into a widget, you must update the database with your widget's type definition. You do this by adding an `UpdateFrom&lt;version#&gt;` method to the part's _Migrations.cs_ file.
+To turn a content part into a widget, you must update the database with your widget's type definition. You do this by adding an `UpdateFrom{version}` method to the part's _Migrations.cs_ file.
 
 The following example shows the `Map` part's _Migrations.cs_ file with the `UpateFrom1` method added.
 
