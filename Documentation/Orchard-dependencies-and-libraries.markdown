@@ -1,4 +1,3 @@
-
 This section enumerates the dependencies used in the Orchard project, with a brief description of what Orchard makes use of. A copy of a dependencies is located in the "lib" directory of the source repository, along with their respective licenses.  You can also view the attributions for our library dependencies in the CREDITS.txt file at the root of the Orchard source tree.
 
 
@@ -8,7 +7,7 @@ This is the default spam protection service in Orchard.
 ## ANTLR v3
 This is a language recognition tool, which provides a framework for constructing recognizers, interpreters, compilers, and translators from grammatical descriptions containing actions in a variety of target languages.
 
-## ASP.NET MVC 3
+## ASP.NET MVC 4
 ASP.NET MVC is used as the web programming model.
 
 ## Autofac 2 & Autofac contrib
