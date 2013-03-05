@@ -188,6 +188,24 @@ because the earlier elements match the item.
 For more information about the _placement.info_ file, see
 [Understanding placement.info](Understanding-placement-info).
 
+## Alternates for MVC views
+Some modules in Orchard use regular MVC views to render the results of an action that was invoked on a custom controller. To customize the look of the pages produced by custom MVC controllers in Orchard, you need to add a version of the view file in your theme's `Views` folder.
+
+For example, if you want to customize the search results page of the Orchard Search module (Orchard.Search) you need to add a file in the following folder of your theme:
+
+    /Themes/{Your theme}/Views/Orchard.Search/Search/Index.cshtml
+
+This file will override the default view used by the Orchard.Search module. 
+The ViewEngine used by Orchard will look for the following pattern when resolving MVC views.
+
+- ~/Themes/{Active theme}/Views/{Area}/{Controller}/{View}.cshtml
+- ~/Themes/{Active theme}/Views/{Controller}/{View}.cshtml
+- ~/Themes/{Active theme}/{Partial}.cshtml
+- ~/Themes/{Active theme}/DisplayTemplates/{TemplateName}.cshtml
+- ~/Themes/{Active theme}/EditorTemplates/{TemplateName}.cshtml
+
+Please be aware, any other convention that is normally supported in MVC is not supported within a theme. Unless specified in the list above. 
+
 ## Adding Alternates Through Code
 
 In addition to methods described above for adding alternates, you can add alternates through code.
