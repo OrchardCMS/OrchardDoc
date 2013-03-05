@@ -13,7 +13,7 @@ The minimum requirements for running Orchard are the following:
 * ASP.NET 4
 * A web server such as IIS Express 7.5 or IIS 7.x.
 
-> **Important**:  If you previously installed any pre-release versions of WebMatrix, ASP.NET Web Pages, or ASP.NET MVC 3, you must uninstall those products before Orchard will run correctly on your computer. Also, if you plan to use Visual Studio 2010 with Orchard, it is suggested that prior to installing Orchard, you install the ASP.NET MVC 3 Tools Update from the Web Platform Installer.
+> **Important**:  If you previously installed any pre-release versions of WebMatrix, ASP.NET Web Pages, or ASP.NET MVC 4, you must uninstall those products before Orchard will run correctly on your computer. Also, if you plan to use Visual Studio 2010 with Orchard, prior to installing Orchard, install ASP.NET MVC 4 from the Web Platform Installer.
 
 To develop Orchard sites, many developers will want to use a database such as SQL Server, and a web page programming environment such as WebMatrix or Visual Studio 2010.  The following installation using the Web Platform Installer includes Orchard and IIS Express 7.5, and also includes optional applications for Orchard development, including WebMatrix and SQL Server Compact 4.0. 
 
@@ -21,7 +21,7 @@ To develop Orchard sites, many developers will want to use a database such as SQ
 
 To begin, download and install the [Web Platform Installer](http://www.microsoft.com/web/downloads/platform.aspx). When you're done, run it. 
 
-Find **Orchard CMS** and then click **Add** to include Orchard as an item to install.  The following image shows the Web Platform Installer with the ASP.NET MVC 3 Tools Update already installed and Orchard selected. 
+Find **Orchard CMS** and then click **Add** to include Orchard as an item to install.
 
 ![](../Upload/screenshots_675/webpi_install_675.png)
 
