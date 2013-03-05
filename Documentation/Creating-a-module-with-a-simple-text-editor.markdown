@@ -111,7 +111,7 @@ In _Modules/SimpleCommerce/Models_, create a _Product.cs_ file and add the follo
 
 This code has two properties, `Sku` and `Price`, that are virtual in order to enable the creation of a dynamic proxy that will handle persistence transparently.
 
-The code also defines a content part that derives from `ContentPart&lt;ProductPartRecord&gt;` and that exposes the SKU and price from the record as public properties. The properties have attributes that will surface in the UI as validation tests.
+The code also defines a content part that derives from `ContentPart<ProductPartRecord>` and that exposes the SKU and price from the record as public properties. The properties have attributes that will surface in the UI as validation tests.
 
 In order for the application to pick up the new file, you need to add it to the module's project file. Open the _SimpleCommerce.csproj_ file and look for "assemblyinfo.cs". After that line, add the following:
 
