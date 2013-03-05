@@ -11,7 +11,10 @@ This topic shows how to install Orchard using the Microsoft Web Platform Install
 # Requirements
 The minimum requirements for running Orchard are the following:
 * ASP.NET 4
-* A web server such as IIS Express 7.5 or IIS 7.x.
+* A web server such as IIS Express 8, 7.5 or IIS 7.x.
+
+When installing IIS, make sure you enable the ASP.NET IIS modules. Also make sure that you run Orchard
+in an integrated pipeline ASP.NET 4 application pool.
 
 > **Important**:  If you previously installed any pre-release versions of WebMatrix, ASP.NET Web Pages, or ASP.NET MVC 4, you must uninstall those products before Orchard will run correctly on your computer. Also, if you plan to use Visual Studio 2010 with Orchard, prior to installing Orchard, install ASP.NET MVC 4 from the Web Platform Installer.
 
