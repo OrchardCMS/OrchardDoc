@@ -7,7 +7,7 @@ core modules from non core modules. Core features cannot be disabled and are all
 at all times, but there are features that are implemented in core modules that can be
 enabled and disabled. Those features are simply not in the "Core" category.
 
-Each module details its features, and whether it's available from the WebPI package or
+Each module details its features and whether it's available from the WebPI package or
 only from the gallery or the source code releases.
 
 # Core modules
@@ -123,7 +123,7 @@ Any shape, core or otherwise, can be overridden by templates in a theme.
 * Pager and associated shapes and alternates: the shapes used to render pagination.
 * Partial: a shape that can be used to render a template as a partial view, using the specified model. Creating a dynamic shape is often a preferrable technique.
 * Resource, HeadScripts, FootScripts, Metas, HeadLinks, StyleSheetLinks, Style: shapes used to render resources such as script tags or stylesheets.
-* Zone: a special shape that is made to contain other shapes, typically but not limited to widgets.
+* Zone: a special shape that is made to contain other shapes, typically but not always limited to widgets.
 
 ### Templated shapes
 
@@ -252,7 +252,7 @@ anonymous users.
 This is useful, for example, to create contact forms: enable the feature, create a "Contact Form"
 content type, add name, e-mail and message text fields (select TextArea as the display option in the
 field's settings), click on "Forms" in the admin menu, click "Add a new  Custom Form", 
-select "Contact Us" as the content type for the form and publish. If you enables the Rules feature,
+select "Contact Us" as the content type for the form and publish. If you enable the Rules feature,
 you can then create a rule that sends an e-mail when an item of the "Contact Us" type is
 published. You should also grant the "Submit Contact Form" permission to the anonymous role
 from the Users/Roles admin screen under "Custom Forms" in order to allow anonymous users to post contact forms.
