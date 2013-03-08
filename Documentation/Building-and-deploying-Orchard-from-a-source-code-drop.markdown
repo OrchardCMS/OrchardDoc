@@ -15,7 +15,7 @@ and run **build "compile;package"**. This will build the application into a "bui
 4. Deploy the contents of the \build\Stage directory into a clean IIS web site's root directory.
 5. If you are running on a 64 bit system, go into the advanced setting of the application pool
 for the application and make sure 32 bit applications are enabled (create a new app pool if you have to).
-6. Create an App_Data folder under the IIS application's root and make sure the user that
+6. Create an App__Data folder under the IIS application's root and make sure the user that
 IIS is running under has write access to that directory. If you're not sure what that user is,
 go to IIS Authentication for the application. If anonymous access is enabled, the user is the local IIS_USRS.
 Make sure the directory is empty.
