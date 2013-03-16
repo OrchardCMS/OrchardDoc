@@ -121,7 +121,7 @@ Note that the "Core Module" loader is never ambiguous, because there is only one
 
 The dynamic module loader should be useless when deploying a website in production, as a production enviroment it
 should not be able to install and load module dynamically. But another important reason why it should be disabled
-is that it creates a lot of `FileSystenWatcher` instances to detect changes on the modules.
+is that it creates a lot of `FileSystemWatcher` instances to detect changes on the modules.
 
 To disable the module, rename the file `\Config\Sample.HostComponents.config` to `\Config\HostComponents.config`, 
 then check the content is:
@@ -130,7 +130,7 @@ then check the content is:
     <?xml version="1.0" encoding="utf-8" ?>
     <HostComponents>
       <Components>
-        <Component Type="Orchard.Environment.Extensions.Loaders.DynamicExtensionLoader">
+        <Component Type="Orchard.Environment.Extensions.ExtensionMonitoringCoordinator">
           <Properties>
             <Property Name="Disabled" Value="true"/>
           </Properties>
