@@ -1,6 +1,6 @@
 Here are the different levels of caching that Orchard can provide:
 
-# Application settings cache using the building ICacheManager. 
+# Application Settings Cache Using ICacheManager. 
 
 This is used to store application settings and can be invalidated based on an extensible set of parameters.
 By default you find expiration tokens based on time, file system and signals.
@@ -14,7 +14,7 @@ Another reason to use this module (and why it has been done) is that it is not d
 so entries won't be removed if your system memory consumption grows, as opposed to the ASP.NET cache.
 All the other cache providers are and must use memory pressure limits.
 
-# 2nd level NHibernate caching. 
+# 2nd Level NHibernate Caching. 
 
 This is used to prevent recurring sql queries to the database.
 
@@ -26,7 +26,7 @@ and usually the settings are best placed in the database, but it's the chicken a
 you can't bootstrap it from a module. The only solution is then to have the configuration for it inside
 the web.config, or maybe the settings.txt when it will be extensible.
 
-# Output caching using the Contrib.Cache suite.
+# Output Caching Using Contrib.Cache
 
 The goal of this module is to provide output caching like ASP.NET does, and to provide cache headers
 management (max-age, Cache-Control, ETag). It was recently extended to be able to define the storage mechanism
@@ -44,7 +44,7 @@ Not only does it improves responsiveness but also throughput, and finally it fre
 Using the Max Age setting you also enable IIS Kernel caching plus public proxy cache which makes your application
 even faster. You can get thousands of requests per seconds with a very small server.
 
-# Business data caching using the Orchard.Caching suite.
+# Business Data Caching Using Orchard.Caching
 
 Because of the limitations of the ICacheManager in terms of distributed caching, another set of modules was
 necessary to cache business data which has to be shared across servers.
