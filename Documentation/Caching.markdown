@@ -1,6 +1,6 @@
 Here are the different levels of caching that Orchard can provide:
 
-## Application Settings Cache Using ICacheManager. 
+## Application Settings Cache Using ICacheManager
 
 This is used to store application settings and can be invalidated based on an extensible set of parameters.
 By default you find expiration tokens based on time, file system and signals.
@@ -14,7 +14,7 @@ Another reason to use this module (and why it has been done) is that it is not d
 so entries won't be removed if your system memory consumption grows, as opposed to the ASP.NET cache.
 All the other cache providers are and must use memory pressure limits.
 
-## 2nd Level NHibernate Caching. 
+## 2nd Level NHibernate Caching
 
 This is used to prevent recurring sql queries to the database.
 
