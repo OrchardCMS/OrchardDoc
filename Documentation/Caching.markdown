@@ -35,9 +35,9 @@ This is why there are two distributed storage provider, one based on the Databas
 
 Here is the set of related modules:
 
-* [http://orchardcache.codeplex.com/]
-* [https://bitbucket.org/sebastienros/contrib.cache.database]
-* [https://bitbucket.org/sebastienros/contrib.cache.memcached]
+* <http://orchardcache.codeplex.com/>
+* <https://bitbucket.org/sebastienros/contrib.cache.database>
+* <https://bitbucket.org/sebastienros/contrib.cache.memcached>
 
 Not a single Orchard website should go into production without this module.
 Not only does it improves responsiveness but also throughput, and finally it frees your CPU from unneeded cycles.
@@ -53,8 +53,8 @@ This is the only requirement for storage providers in this module, which allows 
 
 This is implemented in:
 
-* [https://bitbucket.org/sebastienros/orchard.caching]
-* [https://bitbucket.org/sebastienros/orchard.caching.memcached]
+* <https://bitbucket.org/sebastienros/orchard.caching>
+* <https://bitbucket.org/sebastienros/orchard.caching.memcached>
 
 # Why Memcached ? 
 Implementing Memcached providers by default is done for a specific reason, which is that Azure Caching Services
