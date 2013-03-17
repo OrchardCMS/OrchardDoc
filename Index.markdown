@@ -82,6 +82,7 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
     * [Writing a Widget](Documentation/Writing-a-widget)
     * [Creating _1-N_ and _N-N_ Relations](Documentation/Creating-1-n-and-n-n-relations)
     * [Manifest Files for Modules and Themes](Documentation/manifest-files)
+    * [Caching](Documentation/Caching)
 
 
 * **Working with Data**
