@@ -1,4 +1,3 @@
-
 Themes enable Orchard users to customize the rendering of the site and tailor it to their needs and design goals. Themes can perform targeted overrides of style sheets, images, layouts, or of any content template provided by any Orchard module.
 
 
@@ -136,7 +135,7 @@ The rendering for widgets can also be overridden by creating a template in _\Vie
     
     <div style="border:1px red solid">
     @Display(Model.Content)
-    <div>
+    </div>
 
 
 ![Overriding widget rendering](../Attachments/Anatomy-of-a-theme/OverridingWidgetRendering.PNG)
