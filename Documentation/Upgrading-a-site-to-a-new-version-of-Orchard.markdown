@@ -81,9 +81,10 @@ You're done.
 
 If you are working with a source code enlistment, the update process is going to be extremely simple because you are already going through it every time you sync your source code directory with the repository. When the time comes to upgrade, just get the latest changes and sync to the latest in the default branch.
 
-# Future Perspectives
+# Import/Export
 
-Orchard 1.1 introduces a new feature, **Import/Export**, that could be used in principle to do clean data migrations from one version to the other starting with 1.1. Beyond this, at the moment there are currently no other features in the works for upgrading sites.
+The [Import/Export](http://gallery.orchardproject.net/List/Modules/Orchard.Module.Orchard.ImportExport) module 
+can be used to do clean data migrations from one version to another.
 
 # Applying a framework patch
 
