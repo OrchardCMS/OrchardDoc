@@ -187,7 +187,7 @@ We will also add a driver for our Map part.  A driver in Orchard is a class that
 
 We can now add the display and editor views in Visual Studio. First add "Parts" and "EditorTemplates/Parts" folders to the "Views" folder in the Maps project, and then add Map.cshtml files into the Views/EditorTemplates/Parts and the Views/Parts folders as follows.
 
-    
+Views/EditorTemplates/Parts/Map.cshtml :    
     @model Maps.Models.MapPart
     
     <fieldset>
@@ -211,8 +211,7 @@ We can now add the display and editor views in Visual Studio. First add "Parts" 
                 
     </fieldset>
 
-And:
-    
+Views/Parts/Map.cshtml :    
     <img alt="Location" border="1" src="http://maps.google.com/maps/api/staticmap? 
          &zoom=14
          &size=256x256
