@@ -6,17 +6,17 @@ Orchard is a Web CMS, which essentially aims at helping you build web sites from
 
 ## Content
 
-The 'C' in CMS means "content" so it would be fair to say that content is anything that the CMS manages. More precisely, content is everything in the site that has any information in it. For example, a blog post, a comment, a product and even the navigation menu or your company's logo are identifiable, individual pieces of content. If you were thinking at this moment that content is pretty much everything on the site you'd be right. If you were thinking that is pretty vague, you'd be right as well, but fortunately we will get a lot more specific and distinguish between different kinds of content in following sections.
+The 'C' in CMS means "content" so it would be fair to say that content is anything that the CMS manages. More precisely, content is everything in the site that has any information in it. For example, a blog post, a comment, a product and even the navigation menu or your company's logo are identifiable, individual pieces of content. If you were thinking at this moment that content is pretty much everything on the site you'd be right. If you were thinking that is pretty vague, you'd be right as well. We will get a lot more specific and distinguish between different kinds of content in following sections.
 
 ## Admin panel, Dashboard or back-end
 
 The admin panel (sometimes also called dashboard or back-end) is where you manage your site and its content. It is restricted to users who have the "Access admin panel" permission. This is the 'M' in CMS.
 
-![](../Attachments/Basic-Orchard-Concepts/Adminpanel.PNG)
+![](../Attachments/Basic-Orchard-Concepts/Dashboard.PNG)
 
 ## CMS
 
-And the 'S' in CMS is for "System", which is not as vague and meaningless as it seems. It's important that CMS manage content in a systematic way: it means that all content is managed homogeneously, which enables mutuality of resources.
+The 'S' in CMS is for "System", which is not as vague and meaningless as it seems. It's important that a CMS manages content in a systematic way: this means that all content is managed homogeneously, which enables mutuality of resources.
 
 For example, you can manage blog posts, pages and products using common tools, and all of those can get comments, ratings or tagging from common modules. This gives you a more consistent experience and facilitates the creation of new types of content.
 
