@@ -113,7 +113,7 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
 
 * **Additional Topics**
     * [Orchard Dynamic Compilation](Documentation/Orchard-module-loader-and-dynamic-compilation)
-    * [Configuring Email](Documentation/Suggestions-for-New-Topics)
+    * [Configuring Email](Documentation/Configuring-Email)
 
 
 * **Getting Involved**
