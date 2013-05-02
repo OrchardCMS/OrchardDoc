@@ -40,7 +40,7 @@ Here is the set of related modules:
 * <https://bitbucket.org/sebastienros/contrib.cache.memcached>
 
 Not a single Orchard website should go into production without this module.
-Not only does it improves responsiveness but also throughput, and finally it frees your CPU from unneeded cycles.
+Not only does it improve responsiveness but also throughput, and finally it frees your CPU from unneeded cycles.
 Using the Max Age setting you also enable IIS Kernel caching plus public proxy cache which makes your application
 even faster. You can get thousands of requests per seconds with a very small server.
 
