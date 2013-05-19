@@ -1,5 +1,7 @@
-Sometimes you may need to persist some global settings (eg. license code, service login, default width etc.)
-to be reused across your module. Orchard makes it really simple and I'll show you how to do it.
+Sometimes you may need to persist some global settings 
+(eg. license code, service login, default width etc.)
+to be reused across your module. Orchard makes it really 
+simple and I'll show you how to do it.
 
 Basically, there are two scopes you can define your settings in:
 

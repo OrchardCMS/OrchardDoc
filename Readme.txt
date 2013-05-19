@@ -1,4 +1,4 @@
-- You can create a _PageStart.cshtml and a _Layout.cshtml in each of the sub folders to customize them per book/chapter
+- You can create a _PageStart.cshtml and a _SiteLayout.cshtml in each of the sub folders to customize them per book/chapter
 - Index.markdown is the default document when no route is defined
 - urls like [text](~/url) are automatically resolved
 - #include(~/url.markdown) are automatically inserted
