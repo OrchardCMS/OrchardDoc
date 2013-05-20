@@ -14,7 +14,7 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
 * [Adding and Managing Media Content](Documentation/Adding-and-managing-media-content)
 * [Managing Widgets](Documentation/Managing-widgets)
 * [Organizing Content Using Tags](Documentation/Organizing-content-with-tags)
-* [Creating Lists of Content Items](Documentation/Creating-lists)
+* [Create Custom Forms](Documentation/Creating-custom-forms "Use Custom Form to create subscribe and contact us pages in Orchard")
 
 ## About the Project
 * [Orchard Concept Definitions](Documentation/Basic-Orchard-Concepts)
