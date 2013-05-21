@@ -151,6 +151,7 @@ This part is basically a one-liner:
     var shareSettings = _services.WorkContext.CurrentSite.As<ShareBarSettingsPart>();
 
 Where _services is the `IOrchardServices` object (eg. injected in the constructor).
+Please note that you have to include "using Orchard.ContentManagement;" on the class.
 Simple, isn't it? The full (simplified for readability) example from the ShareBarDriver
 from [Content Sharing](http://orchardsharing.codeplex.com/) module:
 
