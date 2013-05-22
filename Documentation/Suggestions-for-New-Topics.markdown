@@ -1,4 +1,3 @@
-
 * [Overview of Orchard](overview-of-orchard)
 * [Deploying Orchard from Staging/Development to Production Servers](deploying-to-production)
 * [Configuring Orchard in Shared Hosting Environments](configuring-shared-hosting)
@@ -18,6 +17,7 @@
 * [Filing Bugs](filing-bugs)
 * [Orchard Community Resources](community-resources)
 * [Getting Involved in Forums](getting-involved-in-forums)
+* [Where to put Startup Code for Module ](module-startup-code)
 
 
 
