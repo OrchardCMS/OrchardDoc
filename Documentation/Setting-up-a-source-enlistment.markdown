@@ -49,7 +49,8 @@ The part of TortoiseHg you're going to use the most is the Repository Explorer (
 
 ![](../Upload/source-enlistment/HgExplorer_675.PNG)
 
-You can also filter by branch, which is useful for example if you're only interested in the more stable "default" branch (everyday work is happening in special branches or in the common "dev" branch).
+You can also filter by branch, which is useful for example if you're only interested in the more stable
+"default" branch (everyday work is happening in special branches or in the common "1.x" branch).
 
 ## Viewing the Source Code Without Enlisting
 
@@ -65,9 +66,5 @@ This enables you to browse the source code directly on the web, which is useful 
 
 # Branches
 
-* **default** the sources for the last release (1.0, 1.1, 2.0, etc.)
-* **integration** the sources for the last iteration
-* **contributions** this is where contributors should be working. This branch should be in sync with the integration branch. See [Contributing patches](Contributing-patches) for more information on contributing patches.
-* **dev** contains the sources of the day-to-day work
+* **default** the sources for the latest release (1.0, 1.1, 2.0, etc.)
 * **1.x** working branch when we get close to a release
-* **integration-mono** working branch for Mono compatibility work
