@@ -2,7 +2,7 @@
 
 ## Background
 
-A non-persistent XSS vulnerability has been discovered in the Orchard.Comments module that is distributed with the core distribution of the CMS. The module could in some circumstances let an external website render custom scripts on an Orchard website. This vulnerability might ultimately be used to gather your credentials if you further authenticate on the targeted Orchard website.
+A non-persistent XSS vulnerability has been discovered by Tatsuya Sekiguchi of Hitachi Systems, Ltd. in the Orchard.Comments module that is distributed with the core distribution of the CMS. The module could in some circumstances let an external website render custom scripts on an Orchard website. This vulnerability might ultimately be used to gather your credentials if you further authenticate on the targeted Orchard website.
 
 All released versions of Orchard are vulnerable and need to be patched immediately.
 
