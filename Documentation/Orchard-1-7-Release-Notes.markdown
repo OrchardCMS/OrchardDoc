@@ -16,7 +16,7 @@ Alternatively, to install the release manually, download the Orchard.Web.1.7.zip
 The zip contents are pre-built and ready-to-run. Simply extract the contents of the Orchard
 folder from the zip contents to an IIS virtual directory (or site root) and then point your
 browser to the site. You can also just extract to a local folder and open the Orchard
-folder in Visual Studio or WebMatrix as a web site.
+folder in Visual Studio or WebMatrix as a web site (but not as a web application).
 Please make sure you have a machine key
 <http://docs.orchardproject.net/Documentation/Setting-up-a-machine-key>
 or you may experience frequent disconnections.
