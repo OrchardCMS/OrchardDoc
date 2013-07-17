@@ -153,10 +153,11 @@ This software would not exist without the community. In particular, for this rel
 we should all be grateful to the following people who contributed patches and features:
 
 
-- Antoine Griffard ([agriffard] (http://www.codeplex.com/site/users/view/agriffard))
 - Andrew Connell ([andrewconnell] (http://www.codeplex.com/site/users/view/andrewconnell))
+- Antoine Griffard ([agriffard] (http://www.codeplex.com/site/users/view/agriffard))
 - Bertrand Le Roy ([bertrandleroy] (http://www.codeplex.com/site/users/view/bertrandleroy))
 - Damien Clarke ([damoclarke] (http://www.codeplex.com/site/users/view/damoclarke))
+- Jacky Hsu ([twomeetings] (http://www.codeplex.com/site/users/view/twomeetings))
 - Jasper Dunker ([jasperd] (http://www.codeplex.com/site/users/view/jasperd))
 - Jeff Bullock ([j3ffb] (http://www.codeplex.com/site/users/view/j3ffb))
 - Jorge Gamba ([jorgegamba] (http://www.codeplex.com/site/users/view/jorgegamba))
@@ -173,5 +174,4 @@ we should all be grateful to the following people who contributed patches and fe
 - Sipke Schoorstra ([sfmskywalker] (http://www.codeplex.com/site/users/view/sfmskywalker))
 - Stanley Goldman ([StanleyGoldman] (http://www.codeplex.com/site/users/view/StanleyGoldman))
 - Travis James ([GQAdonis] (http://www.codeplex.com/site/users/view/GQAdonis))
-- ([twomeetings] (http://www.codeplex.com/site/users/view/twomeetings))
 - Zoltán Lehóczky ([Piedone] (http://www.codeplex.com/site/users/view/Piedone))
