@@ -26,14 +26,13 @@ What file to download?
 
 If you just want to use Orchard and don't care about the source code, Orchard.Web.1.7.zip
 is what you want to use, preferably through the WebPI instructions.
+Do not attempt to build the WebPI version in VS. Use the full source if you want to use VS.
 
 If you want to take a look at the source code, Orchard.Source.1.7.zip is fine.
 
 If you want to setup a development environment for patch or module development,
 you should clone the repository by following the instructions here:
 <http://docs.orchardproject.net/Documentation/Setting-up-a-source-enlistment>
-
-Do not attempt to build the WebPI version in VS. Use the full source if you want to use VS.
 
 Branches are described here: <http://docs.orchardproject.net/Documentation/Developer-FAQ#Whatarethedefaultanddevbranches?WhichoneshouldIbeusing?>
 
