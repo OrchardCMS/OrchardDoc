@@ -28,7 +28,8 @@ If you just want to use Orchard and don't care about the source code, Orchard.We
 is what you want to use, preferably through the WebPI instructions.
 Do not attempt to build the WebPI version in VS. Use the full source if you want to use VS.
 
-If you want to take a look at the source code, Orchard.Source.1.7.zip is fine.
+If you want to take a look at the source code or want to be able to build the application in Visual Studio,
+Orchard.Source.1.7.zip is fine.
 
 If you want to setup a development environment for patch or module development,
 you should clone the repository by following the instructions here:
@@ -51,24 +52,24 @@ What's new?
 
 Orchard 1.7 fixes bugs and introduces the following features:
 
-* *Clay*: This version doesn't use Clay anymore and improves memory and raw performances.
+* *Clay*: This version doesn't use Clay anymore and improves memory and raw performance.
 * Better performance for the event bus.
 * Better performance for the Import/Export module.
 * *Search*: Possibility to create multiple search indexes.
 * *Module recipes*: In the Modules page, a new Recipes tab lets you run custom recipes to automate tedious tasks.
-* *Tokens*: A new tokens syntax is added on top of the current one. The preffered syntax is now `#{token}`.
+* *Tokens*: A new tokens syntax is added on top of the current one. The preferred syntax is now `#{token}`.
 * *Shape Menu Items*: You can create menu items which will be rendered using shapes.
-* *Comments*: The whole comments module has been rewritten to profide a more Orchard friendly implementation, and also
-provides the ability to create threaded comments.
+* *Comments*: The whole comments module has been rewritten to provide a more Orchard friendly implementation, and also
+provides an option for threaded comments.
 * *Anti Spam*: The anti spam module has been updated to be reusable by any module, and also provides custom Content Parts 
 for reCaptcha, spam filters and submission limits.
 * *Media Library*: This new module lets you manage Media as content items and also import any media from external services.
 * *Image Editor*: Provides a web based image editor for cropping, resizing and applying filters to raw images.
-* *Workflows*: This new module lets you create content workflows and long running workflows.
-* *C# Scripting*: Provides tool to execute custom C# code for validating conttent items and in Workflows.
 * *Media Processing*: Can create custom image filters and resize image automatically.
-* *Orchard.Taxonomies*: This is the old Contrib.Taxonomies module integrated into Core.
-* *Orchard.OutputCache*: This is the old Contrib.Cache module integrated into Core.
+* *Workflows*: This new module lets you create content workflows and long running workflows.
+* *C# Scripting*: Provides an execution environment for custom C# code in content item validation and in Workflows.
+* *Orchard.Taxonomies*: This is the Contrib.Taxonomies module integrated into Core.
+* *Orchard.OutputCache*: This is the Contrib.Cache module integrated into Core.
 
 The full list of more than 280 fixed bugs for this release can be found here:
 
@@ -138,7 +139,9 @@ The App_Data directory contains database and settings documents produced during 
 The contents of this directory are protected from download by visitors to your site. 
 
 *To completely reset your site* (destroy all data, starting from the setup screen again), 
-you can delete the contents of this directory.  This action is irreversible so backup first!
+you can delete the contents of this directory. If your database is not SQL CE, you may also
+have de drop the database from the relevant tool.
+This action is irreversible so backup first!
 
 
 For other known issues, please refer to <http://orchard.codeplex.com/workitem/list/basic>.
