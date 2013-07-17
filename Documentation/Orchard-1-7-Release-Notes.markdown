@@ -132,20 +132,6 @@ all the current usage of Media Picker Fields to the new Media Library Picker Fie
 * In the Media Picker Field section click **Migrate**
 * Finally, update any template which was previously using the Media Picker Field directly
 
-How to Reset Your Site Data
----------------------------
-
-The App_Data directory contains database and settings documents produced during setup.  
-The contents of this directory are protected from download by visitors to your site. 
-
-*To completely reset your site* (destroy all data, starting from the setup screen again), 
-you can delete the contents of this directory. If your database is not SQL CE, you may also
-have de drop the database from the relevant tool.
-This action is irreversible so backup first!
-
-
-For other known issues, please refer to <http://orchard.codeplex.com/workitem/list/basic>.
-
 Contributors
 ------------
 
