@@ -154,6 +154,7 @@ we should all be grateful to the following people who contributed patches and fe
 - Michael Petrinolis ([Redbyron] (http://www.codeplex.com/site/users/view/Redbyron))
 - Mirza Dervišević ([Mirza] (http://www.codeplex.com/site/users/view/Mirza))
 - Nicholas Mayne ([Jetski5822] (http://www.codeplex.com/site/users/view/Jetski5822))
+- Piotr Szmyd ([pszmyd] (https://www.codeplex.com/site/users/view/pszmyd))
 - Rafael Medeiros ([rafaelmedeiros] (http://www.codeplex.com/site/users/view/rafaelmedeiros))
 - ([Rezet] (http://www.codeplex.com/site/users/view/Rezet))
 - Sebastien Ros ([sebastienros] (http://www.codeplex.com/site/users/view/sebastienros))
