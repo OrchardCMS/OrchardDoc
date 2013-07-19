@@ -141,6 +141,7 @@ we should all be grateful to the following people who contributed patches and fe
 
 - Andrew Connell ([andrewconnell] (http://www.codeplex.com/site/users/view/andrewconnell))
 - Antoine Griffard ([agriffard] (http://www.codeplex.com/site/users/view/agriffard))
+- Benedek Farkas ([nightwolf226] (https//www.codeplex.com/site/users/view/nightwolf226))
 - Bertrand Le Roy ([bertrandleroy] (http://www.codeplex.com/site/users/view/bertrandleroy))
 - Damien Clarke ([damoclarke] (http://www.codeplex.com/site/users/view/damoclarke))
 - Jacky Hsu ([twomeetings] (http://www.codeplex.com/site/users/view/twomeetings))
