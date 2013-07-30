@@ -73,7 +73,7 @@ for reCaptcha, spam filters and submission limits.
 
 The full list of more than 280 fixed bugs for this release can be found here:
 
-* [Bugs fixed in 1.7](https://orchard.codeplex.com/workitem/list/advanced?keyword=&status=Resolved|Closed&type=All&priority=All&release=Orchard%201.7%20RC&assignedTo=All&component=All&sortField=LastUpdatedDate&sortDirection=Descending&page=0&reasonClosed=All).
+* [Bugs fixed in 1.7](https://orchard.codeplex.com/workitem/list/advanced?keyword=&status=Resolved|Closed&type=All&priority=All&release=Orchard%201.7&assignedTo=All&component=All&sortField=LastUpdatedDate&sortDirection=Descending&page=0&reasonClosed=All).
 
 How to upgrade from a previous version
 --------------------------------------
