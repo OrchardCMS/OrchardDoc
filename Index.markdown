@@ -65,6 +65,7 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
     * [Upgrading a Site to a New Version of Orchard](Documentation/Upgrading-a-site-to-a-new-version-of-Orchard)
     * [Optimizing Server Performance of Orchard Applications](Documentation/Optimizing-Performance-of-Orchard-with-Shared-Hosting)
     * [Deploying Orchard to Windows Azure](Documentation/Deploying-Orchard-to-Windows-Azure)
+	* [Deploying Orchard to Windows Azure Web Site](Documentation/Deploying-Orchard-to-Windows-Azure-Web-Site)
     * [Running Orchard on Mono](Documentation/Running-Orchard-on-Mono)
     * [Setting Up a Multi-Tenant Orchard Site](Documentation/Setting-up-a-multi-tenant-orchard-site)
     * [Setting up a Machine Key](Documentation/Setting-up-a-machine-key)
