@@ -2,6 +2,8 @@
 
 # Overview
 
+This workflow is a work in progress. If you see anything that doesn't look quite right, please let us know.
+
 In this walkthough we are going to deploy Orchard to Azure as follows:
 
 1. Do a clean source drop of the Orchard code for development.
@@ -227,7 +229,7 @@ Here is what we have accomplished since the last checkpoint:
 
 - create a directory called _publishpacks at the same level as _databackups
 - copy the testing IIS root directory into _publishpacks
-- use ftp to publish the contents of _publishpacks/tsokh to a Windows Azure Web Site.
+- use ftp to publish the contents of _publishpacks/tsokh to a new Windows Azure Web Site.
 
 Celebrate!
 -----
