@@ -10,15 +10,20 @@ In this walkthough we are going to deploy Orchard to Azure as follows:
 2. Create a local SQL Server database for development.
 3. Connect the database to the codebase.
 4. Keep both the database and the codebase in Git version control throughout.
-5. Install and enable the Bootstrap theme.
-6. Install and enable the DesignerTools module. 
+5. Install, enable, and build the Bootstrap Theme.
+6. Install, enable (debug, and test) the DesignerTools module. 
 7. Deploy our development database to a production Windows Azure SQL Database. 
 8. Deploy our development code to a product Windows Azure Web Site. 
 9. Set ourselves up to update the production database and codebase from development.
 0. Solve and document bugs as they arise.
 
-# Requirements for this Walkthrough
+# Ideas for Workflow / Documentation Improvement
 
+- Publish from Web Matrix not FTP.
+- Publish with Git Continuous Deployment not FTP (current problem is inability to update locked assemblies.)
+- Add the usuage of SQL Sync to update the Azure SQL Database.
+
+# Requirements for this Walkthrough
 
 - Visual Studio
 - Web Matrix 
@@ -30,8 +35,7 @@ In this walkthough we are going to deploy Orchard to Azure as follows:
 
 # Let's do this...
 
-
-## Do a clean source drop of the Orchard code for development.
+## 1 Do a clean source drop of the Orchard code for development.
 
 - Create a directory for your Orchard CMS. (We'll call the directory __tsokh__.)
 - Initialize a Git repository inside __tsokh__ and make your first commit.
@@ -47,21 +51,21 @@ In this walkthough we are going to deploy Orchard to Azure as follows:
 - Make your second commit to Git with a useful message, eg 
 - "Do a clean Orchard source code drop of hash 585c378b737737bdb37721b2a8059b866c3e03d8."
 
-## Create a local SQL Server database for development.
+## 2 Create a local SQL Server database for development.
 
 - Open SQL Server Management Studio.
 - Create a new database on your local server.
 - (We'll call the new database __tsokh_db__.)
 
-## Connect the database to the codebase
+## 3 Connect the database to the codebase.
 
-#### Open and run Orchard.Web in Visual Studio
+##### Open and run Orchard.Web in Visual Studio
 
 - Go to orchard > src > Orchard.Web > Orchard.Web.csproj > Right click > Open With > Visual Studio
 - Run without debugging (Ctrl + Shift + F5.)
 - At this point, we are at the Orchard Get Started page, and Orchard has created the App_Data folder, which you can see from the status of your source control.
 
-#### Configure the Get Started
+##### Configure the Get Started
 
 - Name your site, provide a username and password.
 - Store your data in an existing SQL Server...
@@ -70,7 +74,7 @@ In this walkthough we are going to deploy Orchard to Azure as follows:
 - After it completes you will see the default Orchard homepage.
 - Note: We do the initial set-up to a local DB instance, because we want to be able to install modules and themes locally, which Azure Web Sites makes non-trivial.
 
-## Keep both the database and the codebase in Git version control throughout.
+## 4 Keep both the database and the codebase in Git version control throughout.
 
 - The codebase is already in Git. Now is a good time to add the database to Git also.
 - Open SSMS,  export the database as a data-tier application, and save it in your tsokh Git repo.
@@ -89,7 +93,7 @@ At this point we have done the following:
 - Commit and push all changes. 
 - This is good because we can now recreate our current code and DB configuration from Git whenever we want. It's worth adding and pushing a git tag to your current commit.
 
-## Install, Enable, and build the Bootstrap Theme
+## 5 Install, enable, and build the Bootstrap Theme.
 
 ##### Install and Enable the Bootstrap Theme
 
@@ -109,7 +113,7 @@ At this point we have done the following:
 
 ![](../Attachments/Deploying-Orchard-to-Windows-Azure-Web-Site-and-SQL-Database/Capture4.PNG)
 
-## Install, enable (debug, and test) the DesignerTools module. 
+## 6 Install, enable (debug, and test) the DesignerTools module. 
 
 ##### Install and enable
 
@@ -144,7 +148,7 @@ Here is what we have accomplished since the last checkpoint:
 - Install Designer Tools.
 - Now lets deploy what we've done.
 
-## Deploy our development database to a production Windows Azure SQL Database. 
+## 7 Deploy our development database to a production Windows Azure SQL Database. 
 
 - We've new data in the db, so backup the database again, just as we did above.
 - Once that's done, right click the tsokh_db > Tasks > __Deploy database to SQL Azure__.
@@ -155,7 +159,7 @@ Here is what we have accomplished since the last checkpoint:
 
 ![](../Attachments/Deploying-Orchard-to-Windows-Azure-Web-Site-and-SQL-Database/Capture3.PNG)
 
-## Deploy our development code to a product Windows Azure Web Site. 
+## 8 Deploy our development code to a product Windows Azure Web Site. 
 
 ##### build Precompiled
 
@@ -166,7 +170,7 @@ Here is what we have accomplished since the last checkpoint:
 - This will take about two minutes.
 - The result is a tsokh/orchard/build/Precompiled directory that we will publish.
 
-##### Debug if necessary
+##### Debug the build, if necessary
 
 - When we ran build Precompiled the following warning occurred.
 
@@ -212,7 +216,7 @@ Here is what we have accomplished since the last checkpoint:
 
 - We now have a tickety-boo precompiled Orchard package to our specifications.
 
-##### Run in IIS (or WebMatrix) to test.
+##### Run the precompiled package in IIS (or WebMatrix) to test.
 
 - Open IIS > Sites > Add Website
 - Site Name: tsokh
@@ -225,11 +229,16 @@ Here is what we have accomplished since the last checkpoint:
 - Browse to the website from IIS.
 - You should see the homepage of your Orchard website.
 
-##### Actually launch the codebase to Windows Azure.
+##### Actually launch the codebase to Windows Azure Web Site.
 
 - create a directory called _publishpacks at the same level as _databackups
 - copy the testing IIS root directory into _publishpacks
 - use ftp to publish the contents of _publishpacks/tsokh to a new Windows Azure Web Site.
+
+## 9 Set ourselves up to update the production database and codebase from development.
+
+- This will involve using SQL Sync from Windows Azure.
+- This will also involve maybe using GitHub Continunous Deployment with Windows Azure.
 
 Celebrate!
 -----
