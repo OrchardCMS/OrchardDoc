@@ -125,13 +125,8 @@ At this point we have done the following:
 
 ![](../Attachments/Deploying-Orchard-to-Windows-Azure-Web-Site-and-SQL-Database/Capture5.PNG)
 
-- If you receive a message that ClaySharp is missing, 
-use [NuGet](https://docs.nuget.org/docs/start-here/Using-the-Package-Manager-Console) to install it into the Orchard.DesignerTools project.
-- Visual Studio > Tools > Package Manager Console
-- Run Install-Package ClaySharp -ProjectName Orchard.DesignerTools
-- Build Orchard.DesignerTools.
-- Refresh Orchard in the browser. 
-- The scary pink message should be gone. Hooray!
+- If you receive a message that ClaySharp is missing, do not install ClaySharp.
+- Instead, remove the reference.
 
 ##### Test
 
