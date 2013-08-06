@@ -3,7 +3,7 @@ If you would like to contribute, please see
 [Documentation Style Guidelines](Documentation/Documentation-style-guidelines)
 and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
 
-## Getting Started
+## Getting Started ##
 * [Installing Orchard](Documentation/Installing-Orchard)
 * [Manually Installing Orchard Using a .zip File](Documentation/Manually-installing-Orchard-zip-file)
 * [Working with Orchard in WebMatrix](Documentation/Working-with-Orchard-in-WebMatrix)
@@ -14,19 +14,19 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
 * [Adding and Managing Media Content](Documentation/Adding-and-managing-media-content)
 * [Managing Widgets](Documentation/Managing-widgets)
 * [Organizing Content Using Tags](Documentation/Organizing-content-with-tags)
-* [Creating Lists of Content Items](Documentation/Creating-lists)
+* [Create Custom Forms](Documentation/Creating-Custom-Forms "Use Custom Form to create subscribe and contact us pages in Orchard")
 
-## About the Project
+## About the Project ##
 * [Orchard Concept Definitions](Documentation/Basic-Orchard-Concepts)
 * [A guide to all the built-in modules and features of Orchard](Documentation/Builtin-features)
 * [What's Happening Now?](Documentation/feature-roadmap)
 * [Frequently Asked Questions](Documentation/frequently-asked-questions)
 
-## Tutorial Videos
+## Tutorial Videos ##
 
 * [Tutorial videos about Orchard](Documentation/Orchard-TV)
 
-## Documentation
+## Documentation ##
 
 * **Authoring Websites**
     * [Blogging with LiveWriter](Documentation/Blogging-with-LiveWriter)
@@ -113,6 +113,7 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
 
 * **Additional Topics**
     * [Orchard Dynamic Compilation](Documentation/Orchard-module-loader-and-dynamic-compilation)
+    * [Configuring Email](Documentation/Configuring-Email)
 
 
 * **Getting Involved**
@@ -120,9 +121,9 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
     * [Documentation Style Guidelines](Documentation/Documentation-style-guidelines)
     * [Contributing Patches](Documentation/Contributing-patches)
 
-## User Experiences
+## User Experiences ##
 * [Walkthroughs and UI Mockups](Documentation/walkthroughs)
 
-## Archived Specs
+## Archived Specs ##
 
 [Click here to view archived specs](Documentation/archived-specs).

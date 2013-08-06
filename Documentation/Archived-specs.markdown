@@ -19,3 +19,4 @@
 * [Users, roles and permissions](users)
 * [Widgets](widgets)
 * [XML-RPC and Live Writer](xml-rpc)
+* [Creating Lists of Content Items](Creating-lists)

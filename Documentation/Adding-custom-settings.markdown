@@ -1,5 +1,7 @@
-Sometimes you may need to persist some global settings (eg. license code, service login, default width etc.)
-to be reused across your module. Orchard makes it really simple and I'll show you how to do it.
+Sometimes you may need to persist some global settings 
+(eg. license code, service login, default width etc.)
+to be reused across your module. Orchard makes it really 
+simple and I'll show you how to do it.
 
 Basically, there are two scopes you can define your settings in:
 
@@ -149,6 +151,7 @@ This part is basically a one-liner:
     var shareSettings = _services.WorkContext.CurrentSite.As<ShareBarSettingsPart>();
 
 Where _services is the `IOrchardServices` object (eg. injected in the constructor).
+Please note that you have to include "using Orchard.ContentManagement;" on the class.
 Simple, isn't it? The full (simplified for readability) example from the ShareBarDriver
 from [Content Sharing](http://orchardsharing.codeplex.com/) module:
 
