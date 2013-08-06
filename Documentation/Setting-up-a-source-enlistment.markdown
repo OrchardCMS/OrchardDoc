@@ -11,7 +11,7 @@ When using a distributed source control system such as Git, it's important to un
 For more information about Git, please read [Git Basics](http://git-scm.com/book/ch1-3.html), [Basic Branching and Merging](http://git-scm.com/book/en/Git-Branching-Basic-Branching-and-Merging) or [Git Extensions user manual](https://git-extensions-documentation.readthedocs.org/en/latest/).
 
 ### Step 1: Install Git Extensions
-Download and install [Git Extensions](https://github.com/gitextensions/gitextensions) (Git Extensions is one of many Git clients, but you should be able to access the repository using any Git client).
+Download and install [Git Extensions](https://github.com/gitextensions/gitextensions#git-extensions) (Git Extensions is one of many Git clients, but you should be able to access the repository using any Git client).
 
 ### Step 2: Enlist in the Source Code Using Git Extensions
 
@@ -19,7 +19,7 @@ In Windows Explorer, navigate to the local directory where you want your copy of
 
 ![](../Upload/screenshots/git_context_menu.png)
 
-As the URL of the source, type "https://git01.codeplex.com/orchard":
+As the URL of the source, type [https://git01.codeplex.com/orchard](https://git01.codeplex.com/orchard):
 
 ![](../Upload/screenshots/git_clone.png)
 
