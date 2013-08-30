@@ -1,4 +1,4 @@
-Orchard supports several methods of deploying to the Windows Azure environment. Here are some of these methods:
+> Draft topic Orchard supports several methods of deploying to the Windows Azure environment. Here are some of these methods:
 
 1. Deploy the Orchard binary to an Azure Website using the Azure Website Gallery.
 2. Deploy the Orchard binary to an Azure Website using FTP.
@@ -7,9 +7,15 @@ Orchard supports several methods of deploying to the Windows Azure environment. 
 
 # Deploy the Orchard binary to an Azure Website using the Azure Website Gallery.
 
+Coming soon.
+
 # Deploy the Orchard binary to an Azure Website using FTP.
 
+Coming soon.
+
 # Build and deploy the Orchard source code to an Azure Website.
+
+Coming soon.
 
 # Build and deploy the Orchard source code to an Azure Cloud Service.
 
