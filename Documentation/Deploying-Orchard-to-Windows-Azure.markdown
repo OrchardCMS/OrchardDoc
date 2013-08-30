@@ -80,24 +80,6 @@ and change the Orchard configuration (harder).
 1. When it gets to the "tests" stage of the build, hit any key to continue, otherwise it will just wait forever.
 1. If the build succeededs, OrchardRocksDir will have two new subfolders: artifacts and buildazure
 
-### Success with warnings ~ ignore? Hmm.
-
-	Build succeeded.
-
-	  C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v11.0\Windows Azure Tools\2.0\Microsoft.Win
-	dowsAzure.targets(119,3): warning MSB4011: "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft
-	.Common.targets" cannot be imported again. It was already imported at "C:\Program Files (x86)\MSBui
-	ld\Microsoft\VisualStudio\v10.0\Windows Azure Tools\2.0\Microsoft.WindowsAzure.targets (117,3)". Th
-	is is most likely a build authoring error. This subsequent import will be ignored. [C:\Users\Shaun\
-	Desktop\OrchardRocks\AzurePackage.proj]
-
-### Error due to inappropriate Windows Azure SDK version
-
-	C:\Users\Shaun\Desktop\OrchardRocks\src\Orchard.Azure\Orchard.Azure.CloudService\Orchard.Azure.Cl
-	oudService.ccproj(59,3): error MSB4019: The imported project "C:\Program Files (x86)\MSBuild\Micros
-	oft\VisualStudio\v11.0\Windows Azure Tools\2.0\Microsoft.WindowsAzure.targets" was not found. Confi
-	rm that the path in the <Import> declaration is correct, and that the file exists on disk.
-
 ### Configure the Azure Cloud Service
 
 TODO Explain the differene between the artifacts and the buildAzure directories.
@@ -127,3 +109,38 @@ TODO Determine whether we need to open an Azure Storage account or not. Why do w
 1. Browse for the Configuration: "..\OrchardRocks\buildazure\Stage\ServiceConfiguration.cscfg"
 1. Deploy!
 1. Once deployment is complete, browse to orchardrocks.cloudapp.net
+
+### Gotchas
+
+__ClickToBuildAzurePackage: Success but with warnings ~ ignore? Hmm.__
+
+> Build succeeded.
+
+> C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v11.0\Windows Azure Tools\2.0\Microsoft.Win
+> dowsAzure.targets(119,3): warning MSB4011: "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft
+> .Common.targets" cannot be imported again. It was already imported at "C:\Program Files (x86)\MSBui
+> ld\Microsoft\VisualStudio\v10.0\Windows Azure Tools\2.0\Microsoft.WindowsAzure.targets (117,3)". Th
+> is is most likely a build authoring error. This subsequent import will be ignored. [C:\Users\Shaun\
+> Desktop\OrchardRocks\AzurePackage.proj]
+
+__ClickToBuildAzurePackage: Error due to inappropriate Windows Azure SDK version__
+
+1. This happens when the wrong version of the SDK is installed. So:
+1. Install the appropriate Windows Azure SDK.
+1. In this particular case, Orchard wants version 2.0
+
+> C:\Users\Shaun\Desktop\OrchardRocks\src\Orchard.Azure\Orchard.Azure.CloudService\Orchard.Azure.Cl
+> oudService.ccproj(59,3): error MSB4019: The imported project "C:\Program Files (x86)\MSBuild\Micros
+> oft\VisualStudio\v11.0\Windows Azure Tools\2.0\Microsoft.WindowsAzure.targets" was not found. Confi
+> rm that the path in the <Import> declaration is correct, and that the file exists on disk.
+	
+__After Deployment: Error due to inconsistent installation of Windows Azure SDK version__
+
+1. This happens when there are two versions of the Windows Azure SDK installed side by side. So, 
+2. Uninstall the version of the SDK that you do not want. 
+3. Intall the version of the SDK that you do want. 
+4. In this particular case, we ran ClickToBuildAzurePackage targetting 2.0 but also referenced 2.1 somewhere.
+
+> Could not load file or assembly 'Microsoft.WindowsAzure.ServiceRuntime, Version=2.1.0.0, 
+> Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. 
+> The system cannot find the file specified.
