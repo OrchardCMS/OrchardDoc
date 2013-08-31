@@ -22,12 +22,10 @@ Coming soon.
 [Orchard Source Code Repo]: https://orchard.codeplex.com/SourceControl/list/changesets
 [Web Platform Installer]: http://www.microsoft.com/web/downloads/platform.aspx
 
-
-
 [StorageAccountKeys]: ../Attachments/Deploying-Orchard-to-Windows-Azure/StorageAccountKeys.PNG
 [NewCloudServiceDeployment]: ../Attachments/Deploying-Orchard-to-Windows-Azure/NewCloudServiceDeployment.PNG
 [UploadAPackage]: ../Attachments/Deploying-Orchard-to-Windows-Azure/UploadAPackage.PNG
-[AzureSDKVersions]: ../Attachments/Deploying-Orchard-to-Windows-Azure/AzureSDKVersions.PNG
+[ProgramsAndFeatures]: ../Attachments/Deploying-Orchard-to-Windows-Azure/ProgramsAndFeatures.PNG
 
 
 
@@ -71,7 +69,7 @@ What follows is one method of deploying a source code drop of Orchard 1.7 to a n
 
 * Start > Control Panel > Programs and Features > Search > Azure
 
-![][AzureSDKVersions]
+![][ProgramsAndFeatures]
 
 * We need the search results to look just like that image.
 * If they do not, then here is one procedure you can follow. 
