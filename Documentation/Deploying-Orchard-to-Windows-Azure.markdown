@@ -1,9 +1,9 @@
 > Draft topic Orchard supports several methods of deploying to the Windows Azure environment. Here are some of these methods:
 
-1. Deploy the Orchard binary to an Azure Website using the Azure Website Gallery.
-2. Deploy the Orchard binary to an Azure Website using FTP.
-3. Build and deploy the Orchard source code to an Azure Website.
-4. Build and deploy the Orchard source code to an Azure Cloud Service.
+* Deploy the Orchard binary to an Azure Website using the Azure Website Gallery.
+* Deploy the Orchard binary to an Azure Website using FTP.
+* Build and deploy the Orchard source code to an Azure Website.
+* Build and deploy the Orchard source code to an Azure Cloud Service.
 
 # Deploy the Orchard binary to an Azure Website using the Azure Website Gallery.
 
@@ -19,116 +19,199 @@ Coming soon.
 
 # Build and deploy the Orchard source code to an Azure Cloud Service.
 
+[Orchard Source Code Repo]: https://orchard.codeplex.com/SourceControl/list/changesets
+[Web Platform Installer]: http://www.microsoft.com/web/downloads/platform.aspx
+[AzureSDKVersion]: ../Attachments/Deploying-Orchard-to-Windows-Azure/AzureSDKVersion.PNG
+[StorageAccountKeys]: ../Attachments/Deploying-Orchard-to-Windows-Azure/StorageAccountKeys.PNG
+[NewCloudServiceDeployment]: ../Attachments/Deploying-Orchard-to-Windows-Azure/NewCloudServiceDeployment.PNG
+[UploadAPackage]: ../Attachments/Deploying-Orchard-to-Windows-Azure/UploadAPackage.PNG
+
+> Last tested on 30 August 2013 from Windows 8 with Visual Studio 2012 and Azure SDK 2.0
+
+What follows is one method of deploying a source code drop of Orchard 1.7 to a new Azure Cloud Service.
+
 ## Overview
 
-1. download the Orchard source, 
-1. install the appropriate Windows Azure SDK,
-1. build it into an Azure cloud service package (.cspkg),
-1. create a cloud service configuration file (.cscfg),
-1. deploy it to an Azure cloud service.
+* Download the Orchard source
+* Install the appropriate Windows Azure SDK version
+* Update the csproj references to the correct SDK version
+* Build an Azure cloud service package (.cspkg)
+* Create an Azure Storage account
+* Update the cloud service configuration file (.cscfg)
+* Create an Azure cloud service
+* Deploy to the Azure cloud service
 
 ## Prerequisites
 
-1. Microsoft SQL Azure account
-2. Visual Studio software
-
-## Remarks
-
-If you don't want or need to build the package yourself from the source code, 
-go to the [CodePlex site](http://orchard.codeplex.com/releases/view/97035), 
-and download the Orchard.Azure.1.7.zip binary deployment package. 
-This allows you to jump directory to step 5. 
+* Microsoft SQL Azure account
+* Visual Studio
 
 ## See Also
 
-1. [Setting up a source enlistment](http://docs.orchardproject.net/Documentation/Setting-up-a-source-enlistment)
-1. [How to Create and Deploy a Cloud Service](http://www.windowsazure.com/en-us/manage/services/cloud-services/how-to-create-and-deploy-a-cloud-service/): a general version of the same steps we outline.
-1. [Windows Azure Service Configuration Schema (.cscfg File)](http://msdn.microsoft.com/en-us/library/windowsazure/ee758710.aspx)
-1. [Role Schema](http://msdn.microsoft.com/en-us/library/windowsazure/jj156212.aspx)
+* [Setting up a source enlistment](http://docs.orchardproject.net/Documentation/Setting-up-a-source-enlistment)
+* [How to Create and Deploy a Cloud Service](http://www.windowsazure.com/en-us/manage/services/cloud-services/how-to-create-and-deploy-a-cloud-service/): a general version of the same steps we outline.
+* [Windows Azure Service Configuration Schema (.cscfg File)](http://msdn.microsoft.com/en-us/library/windowsazure/ee758710.aspx)
+* [AsmSpy: A little tool to help fix assembly version conflicts](http://mikehadlow.blogspot.ca/2011/02/asmspy-little-tool-to-help-fix-assembly.html)
 
-## Download the Orchard source.
-1. Go to https://orchard.codeplex.com/SourceControl/list/changesets
-1. Choose the master branch
-1. Click on the latest change set. 
-1. Click download.
-1. Unzip that file into a directory on your local hard drive.
-1. We will call that directory __OrchardRocksDir__
+## Download the Orchard source
 
-## Install the appropriate Windows Azure SDK 2.0
+* Go to the [Orchard Source Code Repo][]
+* Choose the master branch
+* Click on the latest change set
+* Click download
+* Save the file to your hard drive
+* Unzip it into __C:/OrchardRocks__ (or wherever)
 
-1. Control Panel > Programs and Features > Search > Azure
-1. If there are no listings in the search results, then you're good to go. 
-1. If there are listings in the search results, uninstall them all to start with a clean slate.
-1. Now, install the Windows Azure SDK for .NET (VS version#) - 2.0. 
-1. Open the [Web Platform Installer](http://www.microsoft.com/web/downloads/platform.aspx)
-1. Search for Azure SDK.
-1. Choose Add, click Install, and Accept the terms.
-1. You should now have only the Azure SDK version 2.0 installed.
+## Install the appropriate Windows Azure SDK version
+
+* Start > Control Panel > Programs and Features > Search > Azure
+
+![][AzureSDKVersion]
+
+* We need the search results to look just like that image.
+* If they do not, then here is one procedure you can follow. 
+* Uninstall all the programs that are listed in those search results.
+* Then, close the control panel
+* Open the [Web Platform Installer][]
+* Search for "Azure SDK"
+* Select "Windows Azure SDK for .NET (VS 20XX) - 2.0"
+* Choose Add, click Install, and Accept the terms.
+* Reboot your computer just to be thorough.
+* Now you have _only_ the Azure SDK 2.0 installed.
 
 __Aside: Why is this necessary?__
 
-Either Orchard or Azure will complain if there is more than one SDK version installed or if the incorrect SDK is installed. 
-Follow the steps just above to find out what version(s) you have installed.
-Follow the steps just below to find out what is the appropriate SDK version.
+The Orchard.Azure.CloudService.ccproj has a CloudExtensionsDir element that targets Windows Azure Tools 2.0. 
+As a result, the build process will fail unless we have the right version of the SDK installed.
 
-1. Use a text editor to open C:\OrchardRocks\src\Orchard.Azure\Orchard.Azure.CloudService\Orchard.Azure.CloudService.ccproj
-1. Find the CloudExtensionsDir element. 
-1. Take note of the version of Windows Azure Tools that it specifies. 
-1. As of Orchard 1.7 it is Windows Azure Tools 2.0 (see config sample).  
-
-__Orchard.Azure.CloudService.ccproj Config Sample__
+---
 
     <CloudExtensionsDir Condition=" '$(CloudExtensionsDir)' == '' ">
 	     $(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Windows Azure Tools\2.0\	
 	</CloudExtensionsDir>
 
-## Build the Azure cloud service package.
+## BugFix: Update the csproj references to the correct SDK version
 
-1. SHIFT + Right Click on the OrchardRocksDir. 
-1. Choose Copy as path. 
-1. Open an elevated Visual Studio Developer Command Prompt.
-1. Change directory to the OrhcardRocksDir e.g. >cd "C:\OrchardRocks"
-1. Run >ClickToBuildAzurePackage
-1. Wait approx 30 seconds, during which several command windows will open during the testing phase.
-1. If the build stalls during the "tests" stage of the build, hit any key to continue, otherwise it will just wait forever.
-1. If the build succeededs, OrchardRocksDir will have two new subfolders: artifacts and buildazure.
-1. You might receive a "Build succeed" message with warnings. It's your call whether heed these warnings or not.
+* Open "C:\OrchardRocks\src\Orchard.Azure\Orchard.Azure.sln" in Visual Studio
+* Unload the Orchard.Azure project (Right Click > Unload Project)
+* Edit the Orchard.Azure project (Right Click > Edit...)
+* Delete the following references:
 
-## Configure the Azure Cloud Service
+---
 
-TODO Explain the differene between the artifacts and the buildAzure directories.  
-TODO Determine whether we need to open an Azure Storage account or not. What does it do? 
+    <Reference Include="Microsoft.WindowsAzure.Diagnostics, Version=1.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SDKs\Windows Azure\.NET SDK\2012-10\ref\Microsoft.WindowsAzure.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.ServiceRuntime, Version=1.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.StorageClient, Version=1.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
 
-1. Create a Windows Azure Storage Account. 
-1. Open the storage account in the Azure management portal. 
-1. Choose Manage Access Keys (in the footer)
-1. Copy your Storage Account Name and Primary Access Key.
-1. Use a text editor to open C:\OrchardRocks\buildazure\Stage\ServiceConfiguration.cscfg 
-1. Edit and then save the value attribute for DataConnectionString as follows: 
+* Save. 
+* Reload the Orchard.Azure project (Right Click > Reload Project > Yes)
+* Expand Orchard.Azure. 
+* Right Click on References > Add Reference > Assemblies > Search > "Azure"
+* Select the assemblied that you just removed but choose version 2.0 where possible.
+* Repeat with the Orchard.Azure.Web project but remove the following references:
 
-__DataConnectionString__
+---
+
+    <Reference Include="Microsoft.WindowsAzure.Configuration, Version=1.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SDKs\Windows Azure\.NET SDK\2012-10\ref\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Diagnostics, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files\Microsoft SDKs\Windows Azure\.NET SDK\2012-10\ref\Microsoft.WindowsAzure.Diagnostics.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.ServiceRuntime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.StorageClient, Version=1.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference
+
+
+* When done, those references should be Version=2.0.0.0 where possible.
+* Close Visual Studio and save the solution and projects.
+
+## Build an Azure cloud service package (.cspkg)
+
+* Open C:/OrchardRocks and double click on ClickToBuildAzurePackage.cmd
+* Wait approx one minute; the build will run; several command windows will open during testing.
+* Sometimes the build stalls after tests. Continue by hitting any key.
+* If the build succeededs, C:/OrchardRocks will have two new subfolders: artifacts and buildazure.
+> TODO What is the difference between artifacts and buildazure?
+
+## Create an Azure Storage account
+
+* Login to the Windows Azure management portal. 
+* Click New > Data Services > Storage > Quick Create
+* Name your service orchardrocks (or whatever) and Create Storage Account
+* Once Azure has created the account, open it in the Azure management portal. 
+* Choose Manage Access Keys (in the footer)
+* Copy your __Storage Account Name__ and __Primary Access Key__
+
+![][StorageAccountKeys]
+
+> TODO Determine whether we really need to open an Azure Storage account or not. What does it do? Is it optional?
+
+## Update the cloud service configuration file (.cscfg),
+
+* Use a text editor to open C:\OrchardRocks\buildazure\Stage\ServiceConfiguration.cscfg 
+* Update the DataConnectionString with the following <Setting /> element.
+* Be sure to use your own Storage Account Name and Primary Access Key
+* Leave the Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString for now.
+
+---
 
     <Setting 
 	    name="DataConnectionString" 
 	    value="DefaultEndpointsProtocol=https;AccountName=storage-account-name;AccountKey=primary-access-key" />
 
-## Create a new SQL Azure database for Orchard
+## Optional: Create a new SQL Azure database for Orchard
 
-1. We called ours orchardRocks.
+* This isn't strictly necessary. 
+* For the sake of simplicity in this tutorial, use the built-in SQL Server CE for now.
 
-## Deploy to Azure
+## Create a Azure Cloud Service
 
-1. Open your cloud service in the Windows Azure Management Portal. 
-1. In the quickstart area, choose "New production deployment."
-1. Name the deployement anything (e.g. OrchardRocks_v1)
-1. Browse for the Package: "C:\OrchardRocks\buildazure\Stage\Orchard.Azure.Web.cspkg"
-1. Browse for the Configuration: "C:\OrchardRocks\buildazure\Stage\ServiceConfiguration.cscfg"
-1. Deploy!
-1. Once deployment is complete, browse to orchardrocks.cloudapp.net
+* Login to the Windows Azure management portal. 
+* Click New > Computer > Cloud Service > Quick Create
+* Name your service orchardrocks (or whatever) and then click Create Cloud Service
+
+## Deploy to the Azure cloud service
+
+* Login to the Windows Azure management portal
+* Open your cloud service
+* In the quickstart area, choose "New production deployment."
+
+![][NewCloudServiceDeployment]
+
+* Name the deployement anything (e.g. OrchardRocks_v1)
+* Browse for the Package: "C:\OrchardRocks\buildazure\Stage\Orchard.Azure.Web.cspkg"
+* Browse for the Configuration: "C:\OrchardRocks\buildazure\Stage\ServiceConfiguration.cscfg"
+* Choose "Deploy even if one or more roles contain a single instance."
+* Choose "Start deployment."
+* Deploy!
+
+![][UploadAPackage]
+
+* Deployment should take about 10 to 15 minutes. Have some water :-)
+* Go the the cloud service's Dashbaord to view the deployment progress. 
+* Once complete, browse to orchardrocks.cloudapp.net (or whereever)
 
 ## Some Warnings and Errors that Might Occur
 
-__ClickToBuildAzurePackage: Success but with warnings__
+__ClickToBuildAzurePackage: ...cannot be imported again__
+
+Fix: Unknown.
 
 > Build succeeded.
 
@@ -139,7 +222,9 @@ __ClickToBuildAzurePackage: Success but with warnings__
 > is is most likely a build authoring error. This subsequent import will be ignored. 
 > [C:\OrchardRocks\AzurePackage.proj]
 
-__ClickToBuildAzurePackage: Success but with warnings #2__
+__ClickToBuildAzurePackage:  Found conflicts between different versions of the same dependent assembly.__
+
+Fix: Run AsmSpy.exe, then update conflicting dependency references to consistent versions.
 
 > Build succeeded.
 
@@ -159,55 +244,26 @@ __ClickToBuildAzurePackage: Success but with warnings #2__
 > Found conflicts between different versions of the same dependent assembly. 
 > [C:\OrchardRocks\src\Orchard.Azure.Tests\Orchard.Azure.Tests.csproj]
 
-__ClickToBuildAzurePackage: Error due to inappropriate Windows Azure SDK version__
+__ClickToBuildAzurePackage: ...was not found__
 
-1. This happens when the wrong version of the SDK is installed. So:
-1. Install the appropriate Windows Azure SDK.
-1. In this particular case, Orchard wants version 2.0
+Fix: Ensure that Windows Azure SDK 2.0 is the only version of the SDK installed.
 
 > C:\OrchardRocks\src\Orchard.Azure\Orchard.Azure.CloudService\Orchard.Azure.Cl
 > oudService.ccproj(59,3): error MSB4019: The imported project "C:\Program Files (x86)\MSBuild\Micros
 > oft\VisualStudio\v11.0\Windows Azure Tools\2.0\Microsoft.WindowsAzure.targets" was not found. Confi
 > rm that the path in the <Import> declaration is correct, and that the file exists on disk.
 	
-__After Deployment: Error due to inconsistent installation of Windows Azure SDK version
+__After Deployment: Could not load file or assembly...__
 
-1. This happens when there are two versions of the Windows Azure SDK installed side by side. So, 
-2. Uninstall the version of the SDK that you do not want. 
-3. Intall the version of the SDK that you do want. 
-4. In this particular case, we ran ClickToBuildAzurePackage targetting 2.0 but also referenced 2.1 somewhere.
+Fix: Update the references to version 2.0
 
 > Could not load file or assembly 'Microsoft.WindowsAzure.ServiceRuntime, Version=2.1.0.0, 
 > Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. 
 > The system cannot find the file specified.
 
-__Possible Fixes__
+__After Deployment: Could not load file or assembly...__
 
-1. Open Orchard.Azure.sln in Visual Studio.
-1. Unload the Orchard.Azure.Web.csproj
-1. Edit the Orchard.Azure.Web.csproj
-1. Delete any references that resemble the following assemblies.
-1. Reload the Orchard.Azure.Web.csproj
-1. Replace the references that you just deleted. 
-1. References > Right Click > Add Reference
-1. Seach Assemblies for "Azure"
-1. Load the version 2.0 of the references that you just deleted (it will be 1.7 for Microsoft.WindowsAzure.StorageClient).
-1. Repeat the process for Orchard.Azure.csproj.
+Fix: Use remote desktop to connect to the Orchard.Azure.Web role.
 
-__References to Delete__
-
-    <Reference Include="Microsoft.WindowsAzure.Diagnostics, Version=1.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Microsoft SDKs\Windows Azure\.NET SDK\2012-10\ref\Microsoft.WindowsAzure.Diagnostics.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.WindowsAzure.ServiceRuntime, Version=1.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.WindowsAzure.StorageClient, Version=1.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="Microsoft.WindowsAzure.Configuration, Version=1.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Microsoft SDKs\Windows Azure\.NET SDK\2012-10\ref\Microsoft.WindowsAzure.Configuration.dll</HintPath>
-    </Reference>
+> Could not load file or assembly 'Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, 
+> PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The system cannot find the file specified.
