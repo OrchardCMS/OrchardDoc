@@ -211,6 +211,7 @@ As a result, the build process will fail unless we have the right version of the
 
 __ClickToBuildAzurePackage: ...cannot be imported again__
 
+Why: Unknown.
 Fix: Unknown.
 
 > Build succeeded.
@@ -222,8 +223,9 @@ Fix: Unknown.
 > is is most likely a build authoring error. This subsequent import will be ignored. 
 > [C:\OrchardRocks\AzurePackage.proj]
 
-__ClickToBuildAzurePackage:  Found conflicts between different versions of the same dependent assembly.__
+__ClickToBuildAzurePackage: Found conflicts between different versions of the same dependent assembly.__
 
+Why: Our project is targetting different versions of the same assemblies.
 Fix: Run AsmSpy.exe, then update conflicting dependency references to consistent versions.
 
 > Build succeeded.
@@ -246,6 +248,7 @@ Fix: Run AsmSpy.exe, then update conflicting dependency references to consistent
 
 __ClickToBuildAzurePackage: ...was not found__
 
+Why: We have an earlier or later version of the Windows Azure SDK installed.
 Fix: Ensure that Windows Azure SDK 2.0 is the only version of the SDK installed.
 
 > C:\OrchardRocks\src\Orchard.Azure\Orchard.Azure.CloudService\Orchard.Azure.Cl
@@ -255,6 +258,7 @@ Fix: Ensure that Windows Azure SDK 2.0 is the only version of the SDK installed.
 	
 __After Deployment: Could not load file or assembly...__
 
+Why: Our Microsoft.WindowsAzure.* references are an earlier version, which is resolving to 2.1.0.0
 Fix: Update the references to version 2.0
 
 > Could not load file or assembly 'Microsoft.WindowsAzure.ServiceRuntime, Version=2.1.0.0, 
@@ -263,7 +267,8 @@ Fix: Update the references to version 2.0
 
 __After Deployment: Could not load file or assembly...__
 
-Fix: Use remote desktop to connect to the Orchard.Azure.Web role.
+Why: We deleted the assembly accidentally.
+Fix: Add the missing assembly to the Orchard.Azure.Web project. 
 
 > Could not load file or assembly 'Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, 
 > PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The system cannot find the file specified.
