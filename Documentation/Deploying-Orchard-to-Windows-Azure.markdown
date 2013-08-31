@@ -24,10 +24,12 @@ Coming soon.
 
 
 
-[AzureSDKVersions]: ../Attachments/Deploying-Orchard-to-Windows-Azure/AzureSDKVersions.PNG
 [StorageAccountKeys]: ../Attachments/Deploying-Orchard-to-Windows-Azure/StorageAccountKeys.PNG
 [NewCloudServiceDeployment]: ../Attachments/Deploying-Orchard-to-Windows-Azure/NewCloudServiceDeployment.PNG
 [UploadAPackage]: ../Attachments/Deploying-Orchard-to-Windows-Azure/UploadAPackage.PNG
+[AzureSDKVersions]: ../Attachments/Deploying-Orchard-to-Windows-Azure/AzureSDKVersions.PNG
+
+
 
 > Last tested on 30 August 2013 from Windows 8 with Visual Studio 2012 and Azure SDK 2.0
 
