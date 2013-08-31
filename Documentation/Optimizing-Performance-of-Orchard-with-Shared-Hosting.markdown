@@ -1,13 +1,10 @@
-
 This topic discusses various techniques for tuning a server environment to run Orchard efficiently. The optimal configuration depends on the type of site you're running and on usage patterns, so site administrators should pick from this list what applies best to their particular scenario. As always, improving performance should involve measuring and analyzing performance data so that changes you propose are demonstrably beneficial.
 
 
 # Trust Level
 
-Orchard is configured out of the box to run in Medium trust. This was accomplished using techniques that sometimes affect performance. In particular, there are cases that result in exceptions being thrown under normal application operation.
-
-For those reasons, if you can run Orchard under Full trust, you are almost certain to get a performance boost out of it. You can switch to full trust by editing the _Orchard.Web/web.config_ file and making the following change:
-
+Orchard is configured out of the box to run in Full trust.
+Medium trust is no longer supported.
     
     <trust level="Full" originUrl="" />
 

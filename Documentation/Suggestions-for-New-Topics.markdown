@@ -1,6 +1,4 @@
-
 * [Overview of Orchard](overview-of-orchard)
-* [Configuring Messaging and Email Notifications](configuring-email)
 * [Deploying Orchard from Staging/Development to Production Servers](deploying-to-production)
 * [Configuring Orchard in Shared Hosting Environments](configuring-shared-hosting)
 * [Creating a Module in Visual Studio](module-from-vs)
@@ -19,6 +17,7 @@
 * [Filing Bugs](filing-bugs)
 * [Orchard Community Resources](community-resources)
 * [Getting Involved in Forums](getting-involved-in-forums)
+* [Where to put Startup Code for Module ](module-startup-code)
 
 
 

@@ -1,15 +1,23 @@
 
-
 ## What are the dependencies?
 Orchard uses a number of external libraries. They can all be found under \lib directory in your enlistment, as well as are enumerated in [Orchard dependencies and libraries](Orchard-dependencies-and-libraries).
 
 ## What framework versions does Orchard support?
 Orchard currently supports the 4.0 version of the .NET framework.
 
-## What are the default and dev branches? Which one should I be using?
-Those are the 2 branches corresponding to trunk (default) and development (dev). 
+## What are the default and 1.x branches? Which one should I be using?
 
-Feature work in Orchard is being done in 3 week iterations. All the active feature work is being done by the core team in the dev branch. At the end of the iteration, changes get pushed from dev to default. default is a stable branch and is normally always in a "green" state. This should be the branch you would ideally work on. dev is the most recent branch in terms of activity but it can at times be unstable due to ongoing work. Everything in dev in terms of the public surface is also more volatile: APIs can be changed at will and daily, making a potential external contributor working on the branch more difficult. For these reasons, it is advised to use default for your development purposes, and dev only if you're interested in checking out how brand new features are being developed. The delta between the 2 branches will be 3 weeks in the worst case.
+Those are the 2 branches corresponding to trunk (default) and development (1.x). 
+
+All the active feature work is being done by the core team in the 1.x branch.
+Whenever a new release is ready, changes get merged from 1.x to default.
+Default is a stable branch and is normally always in a "green" state.
+This should be the branch you would ideally work with.
+1.x is the most recent branch in terms of activity but it can at times be unstable due to ongoing work.
+Everything in 1.x in terms of the public surface is also more volatile: APIs can be changed at will and daily,
+making a potential external contributor working on the branch more difficult.
+For these reasons, it is advised to use default for your development purposes, and 1.x only if you're interested
+in checking out how brand new features are being developed.
 
 ## What types of extensions can I write?
 Orchard Modules and Themes are supported extensions today. Note that the module and themes API is a work-in-progress, and although it's possible to build these extensions today, you should expect changes that may break extensions built on the current codebase. Regular MVC 2 Areas are also supported as modules. 

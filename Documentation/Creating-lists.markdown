@@ -1,3 +1,5 @@
+> The List feature is deprecated and should not be used any more. Please consider using taxonomies instead.
+
 In Orchard, you can create custom content items and assign them as navigation menu entries. If you have more than a few custom content items, you'll probably want to organize them in lists. This topic walks you through this process. In the walkthrough, you'll create a custom content type and display its items in lists. (For information about how to create a custom content type, see [Creating Custom Content Types](Creating-custom-content-types).) 
 
 

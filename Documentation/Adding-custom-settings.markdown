@@ -1,5 +1,7 @@
-Sometimes you may need to persist some global settings (eg. license code, service login, default width etc.)
-to be reused across your module. Orchard makes it really simple and I'll show you how to do it.
+Sometimes you may need to persist some global settings 
+(eg. license code, service login, default width etc.)
+to be reused across your module. Orchard makes it really 
+simple and I'll show you how to do it.
 
 Basically, there are two scopes you can define your settings in:
 
@@ -9,13 +11,12 @@ Basically, there are two scopes you can define your settings in:
 
 ## Defining site scope settings
 
-You define those settings in a separate content part.
-Imagine such scenario (_real one - I used it in_ [Content Sharing](http://orchardsharing.codeplex.com/) _module_):
+This document traces the process of defining and implementing and individual site setting for a live orchard module that can be added to your site to enable the webservice known as 'AddThis' [Content Sharing](http://orchardsharing.codeplex.com/)
 
-**"I want to hold my AddThis service login to be reused in share bars across the site"**
+The specific goal being **"to store my AddThis service login cedentials so that all share bars across the site will be able to access my account"**
 
-First, you have to create a content part (you can read about content parts
-[here](http://www.szmyd.com.pl/blog/jumpstart-into-orchard-module-development)):
+The first thing to understand is that our site setting is really just another form of the basic Orchard building blocks - the ContentPart/ContentPartRecord. While most ContentParts render visual elements to the site's visitor, they can also deliver non-visible chunks of data that can provide dynamic functionality to your pages. A great introduction to the construction of content types can be found 
+[found here](http://www.szmyd.com.pl/blog/jumpstart-into-orchard-module-development)):
     
     public class ShareBarSettingsPart : ContentPart<ShareBarSettingsPartRecord> {
         public string AddThisAccount {
@@ -24,7 +25,7 @@ First, you have to create a content part (you can read about content parts
             }
         }
 
-and a corresponding record for storage
+When you create a Content Type you will almost always find yourself also creating a ContentTypeRecord which can be thought of as creating a new field in the database for storing the ContentType values.
     
     public class ShareBarSettingsPartRecord : ContentPartRecord {
         public virtual string AddThisAccount { get; set; }
@@ -37,10 +38,9 @@ After creating the content part and record classes, you need to create appropria
 database mappings, called in Orchard - **Data Migration**.
 You shouldn't do it by hand: there is a command-line,
 `codegen datamigration <feature_name>`, which will create the appropriate file for you.
-You can see how to use it [here](Writing-a-content-part).
+You can see how to use it [here](Using-the-Command-Line-Interface).
 
-The next step is to create a corresponding driver, which will be responsible for displaying
-the edit form and saving the posted data.
+The next step is to create a corresponding driver, which will be responsible for displaying the editor that the end-user invokes when setting the posted values.
 If you have already written some content parts, than this part of code should look familiar:
 
     [UsedImplicitly]
@@ -86,9 +86,9 @@ If you have already written some content parts, than this part of code should lo
 I omitted some code for checking permissions to edit the settings for better readability,
 but you are free to take a look at the full source code hosted on Codeplex.
 
-So we have our content part, record and a driver and we need just two more things:
-a handler in which we define the behavior of our part, and the view (shape)
-where we create the HTML markup for our form. The handler looks like:
+To review, so far we have our Content Part (plus it's attendant Content Part Record) and this just added driver. Two more structures are required before we can implement our new site-wide property setting:
+a Handler (controller) where we define the behavior of our Content Part, and the Shape (view)
+that will render the HTML markup for our form's editor. The Handler looks like:
     
     [UsedImplicitly]
     public class ShareBarSettingsPartHandler : ContentHandler {
@@ -101,20 +101,19 @@ where we create the HTML markup for our form. The handler looks like:
     }
 
 
-And in almost all cases it will be exactly like that. There are two things we've done here:
+In most cases its just that simple:
 
-1. Adding an activating filter, which will tell Orchard to which of the existing content types
-our **ShareBarSettingsPart** should be attached to. Site is also a content type,
-so we attach the part to it. **Basically, this is the point that differentiates the ordinary
+1. Add an activating filter. Tells Orchard which of the existing Content Types
+our **ShareBarSettingsPart** should be attached to. Because **Site** is also a Content Type,
+we can attach our part to it. **Basically, this is the point that differentiates the ordinary
 content parts from site settings.**
-2. Adding the storage filter to register our settings repository,
-which will be storing records in the database.
+2. Add the storage filter to register our settings repository - required because we want to be storing records in the database.
 
-So we've got one thing left - the .cshtml shape file with HTML markup - and we're done.
+So if the above handler can be thought of as a 'controller' the obvious next step is creating the 'view'. Orchard's term is 'shape' and is nothing more than a .cshtml file that combines HTML markup with razor's ability to render database elements.
 First, you have to create a .cshtml file under `/Views/EditorTemplates/Parts/`.
 This file, as the [naming convention](Accessing-and-rendering-shapes)
-forces us, should be named `Share.Settings.cshtml`.
-This name corresponds to the `Parts_Share_Settings` shape which we used inside the driver above.
+informs us, should be named `Share.Settings.cshtml`.
+This name corresponds to the `Parts_Share_Settings` shape used inside the driver above.
 
 ![](http://www.szmyd.com.pl/Media/BlogPs/Windows-Live-Writer/804b787519c9_1126C/image_thumb.png)
 
@@ -131,16 +130,16 @@ the `Share.Settings.cshtml` file will look like this:
         </div>
     </fieldset>
 
-In order to make this visible we've got to tell Orchard where in the `Site -> Settings`
-pane our form should be displayed.
-To achieve this, create a `Placement.info` file in your module root with:
+Next, we need to tell Orchard where in the `Site -> Settings` pane our form should be displayed. 
+To do this we create a `Placement.info` file in our module root:
     
     <Placement>
         <Place Parts_Share_Settings="Content:0"/>
     </Placement>
 
-which will tell Orchard to display our form field at the beginning.
-We're now done with creating our settings, but how to use them?
+which tells Orchard to display our form field at the beginning.
+
+Now that we've configured our settings we will look at what it takes to actaully _use_ them.
 
 ## Using site scope settings
 
@@ -149,6 +148,7 @@ This part is basically a one-liner:
     var shareSettings = _services.WorkContext.CurrentSite.As<ShareBarSettingsPart>();
 
 Where _services is the `IOrchardServices` object (eg. injected in the constructor).
+Please note that you have to include "using Orchard.ContentManagement;" on the class.
 Simple, isn't it? The full (simplified for readability) example from the ShareBarDriver
 from [Content Sharing](http://orchardsharing.codeplex.com/) module:
 
@@ -179,17 +179,16 @@ from [Content Sharing](http://orchardsharing.codeplex.com/) module:
         }
     }
 
-We're now going to create setting and defaults wired with specific content type (like Page, User, Blog etc.).
+We're now going to create settings and defaults wired with specific content type (like Page, User, Blog etc.).
 
-## Defining settings for content type
+## Defining settings for Content Types
 
 This looks much different comparing to the previous one, but also requires less coding.
 There are just two classes and one shape involved and that's all.
-As previously, we'll use the simplified examples taken from the
+As before, we'll use the simplified examples taken from the
 [Orchard Sharing](http://orchardsharing.codeplex.com/) project.
 
-The goal which we want to achieve today can be described as:
-
+The goal:
 > "I want all of my Blog Posts to have ShareBar with the same look."
 
 Imagine that you're writing posts via LiveWriter (like me).
@@ -250,13 +249,12 @@ for rendering the edit form and saving the posted data:
 
 This class overrides the `ContentDefinitionEditorEventsBase` which defines two overridable methods:
 `TypePartEditor` and `TypePartEditorUpdate`.
-The first one gets called when the edit form is being rendered and the second one
-when the edit form data gets posted.
+The first one gets called when the edit form is being rendered (GET) and the second one
+when the edit form data gets posted (POST).
 Unlike the generic content part drivers, this class is not bound to the specific content type
-(as the content types are just a text names for a collection of parts),
+(as the content types are just a list of names for a collection of parts),
 so each of the methods we just defined will be called for every content type and for every part.
-This is why the `yield break` statement at the beginning of each is needed:
-to filter only the ones containing the part we need, `ShareBarPart`.
+This is why the `yield break` statement is used - to filter only the ones containing the part we need, `ShareBarPart`.
 
 By convention, as shown in the TypePartEditorUpdate method, settings should be named as
 `<prefix>.<propertyName>` when passing to `builder.WithSetting(...)`,
@@ -296,7 +294,7 @@ Inside, it's just like any other Razor view file:
     </fieldset>
 
 
-This part of code renders the dropdown list so user can choose one of the predefined Modes.
+This renders the dropdown list so user can choose one of the predefined Modes.
 `Model.AvailableModes` contains the available ones: we populated the property with appropriate
 data in `TypePartEditor` method above.
 
