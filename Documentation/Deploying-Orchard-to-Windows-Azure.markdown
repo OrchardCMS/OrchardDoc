@@ -21,6 +21,9 @@ Coming soon.
 
 [Orchard Source Code Repo]: https://orchard.codeplex.com/SourceControl/list/changesets
 [Web Platform Installer]: http://www.microsoft.com/web/downloads/platform.aspx
+
+
+
 [AzureSDKVersions]: ../Attachments/Deploying-Orchard-to-Windows-Azure/AzureSDKVersions.PNG
 [StorageAccountKeys]: ../Attachments/Deploying-Orchard-to-Windows-Azure/StorageAccountKeys.PNG
 [NewCloudServiceDeployment]: ../Attachments/Deploying-Orchard-to-Windows-Azure/NewCloudServiceDeployment.PNG
