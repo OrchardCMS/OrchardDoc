@@ -1,16 +1,21 @@
-> Draft topic Orchard supports several methods of deploying to the Windows Azure environment. Here are some of these methods:
+> Draft topic Orchard supports several methods of deploying to the Windows Azure environment.
 
-# Deploy the Orchard binary to an Azure Website using the Azure Website Gallery.
+__Methods of deployment to Azure that this document outlines__
 
-Coming soon.
+* Deploy the Orchard binary to an Azure Website using the Azure Website Gallery (coming soon)
+* Deploy the Orchard binary to an Azure Website using FTP (draft)
+* Build and deploy the Orchard source code to an Azure Website (coming soon)
+* Build and deploy the Orchard source code to an Azure Cloud Service (done)
+
+# Deploy the Orchard binary to an Azure Website using the Azure Website Gallery
+
+> Coming soon.
 
 # Deploy the Orchard binary to an Azure Website using FTP.
 
+> Draft. Not tested yet.
+
 __Overview__
-
-This workflow is a work in progress. If you see anything that doesn't look quite right, please let us know.
-
-In this walkthough we are going to deploy Orchard to Azure as follows:
 
 1. Do a clean source drop of the Orchard code for development.
 2. Create a local SQL Server database for development.
@@ -241,7 +246,7 @@ __Set ourselves up to update the production database and codebase from developme
 
 # Build and deploy the Orchard source code to an Azure Website.
 
-Coming soon.
+> Coming soon.
 
 # Build and deploy the Orchard source code to an Azure Cloud Service.
 
