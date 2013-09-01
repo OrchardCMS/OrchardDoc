@@ -13,6 +13,10 @@ __Methods of deployment to Azure that this document outlines__
 
 # Deploy the Orchard binary to an Azure Website using FTP
 
+> Coming soon.
+
+# Build and deploy the Orchard source code to an Azure Website
+
 > Draft. Not tested yet.
 
 __Overview__
@@ -243,10 +247,6 @@ __Set ourselves up to update the production database and codebase from developme
 
 - This will involve using SQL Sync from Windows Azure.
 - This will also involve maybe using GitHub Continunous Deployment with Windows Azure.
-
-# Build and deploy the Orchard source code to an Azure Website
-
-> Coming soon.
 
 # Build and deploy the Orchard source code to an Azure Cloud Service
 
