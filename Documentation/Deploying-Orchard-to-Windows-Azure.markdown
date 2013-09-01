@@ -19,7 +19,7 @@ __Methods of deployment to Azure that this document outlines__
 
 [Orchard Source Code Repo]: http://orchard.codeplex.com/sourcecontrol/list/changesets
 
-> Draft. Not tested yet.
+> Last tested on 31 August 2013 from Windows 8 with Visual Studio 2012
 
 __Overview__
 
