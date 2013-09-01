@@ -19,7 +19,7 @@ __Methods of deployment to Azure that this document outlines__
 
 [Orchard Source Code Repo]: http://orchard.codeplex.com/sourcecontrol/list/changesets
 
-> Last tested on 31 August 2013 from Windows 8 with Visual Studio 2012
+> Last tested on 31 August 2013 from Windows 8 with Visual Studio 2012 and Orchard 1.7
 
 __Overview__
 
@@ -153,7 +153,7 @@ __Configure the database connection string__
 [UploadAPackage]: ../Attachments/Deploying-Orchard-to-Windows-Azure/UploadAPackage.PNG
 [ProgramsAndFeatures]: ../Attachments/Deploying-Orchard-to-Windows-Azure/ProgramsAndFeatures.PNG
 
-> Last tested on 30 August 2013 from Windows 8 with Visual Studio 2012 and Azure SDK 2.0
+> Last tested on 30 August 2013 from Windows 8 with Visual Studio 2012, Azure SDK 2.0 and Orchard 1.7
 
 What follows is one method of deploying a source code drop of Orchard 1.7 to a new Azure Cloud Service.
 
