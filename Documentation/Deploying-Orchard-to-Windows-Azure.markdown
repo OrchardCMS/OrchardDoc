@@ -1,168 +1,35 @@
-> Draft topic Orchard supports several methods of deploying to the Windows Azure environment. Here are some of these methods:
+Orchard can be deployed to both Windows Azure Cloud Services and Windows Azure Web Sites. Orchard also ships with a number of integration features that takes advantage of Windows Azure services such as blob storage and caching, and that can be configured before deployment if needed. This topic walks you through the process of deploying Orchard to Windows Azure.
 
-__Methods of deployment to Azure that this document outlines__
+> NOTE: The Windows Azure deployment process in Orchard has undergone a complete overhaul for version 1.7.1. For more information about what's changed see the [What's new for Windows Azure in Orchard 1.7.1](Whats-new-for-Windows-Azure-in-Orchard-1-7-1) topic.
 
-* Deploy the Orchard binary to an Azure Website using the Azure Website Gallery.
-* Deploy the Orchard binary to an Azure Website using FTP.
-* Build and deploy the Orchard source code to an Azure Website.
-* Build and deploy the Orchard source code to an Azure Cloud Service.
+# Prerequisites
 
-# Deploy the Orchard binary to an Azure Website using the Azure Website Gallery.
+Before you can deploy Orchard to Windows Azure you need the following:
 
-Coming soon.
-# Deploy the Orchard binary to an Azure Website using FTP.
-
-Coming soon.
+* Visual Studio 2012
 * Windows Azure SDK 2.1 for Visual Studio 2012
 * The Orchard source code
 * An active Windows Azure subscription
 
-# Build and deploy the Orchard source code to an Azure Website.
+# Deploying Orchard to a Windows Azure Cloud Service
 
-[Orchard Source Code Repo]: http://orchard.codeplex.com/sourcecontrol/list/changesets
+If you only plan to run a single role instance, deploying is extremely simple. Starting with version 1.7.1 of Orchard, deployment can be performed using the Windows Azure tooling in Visual Studio.
 
-> Last tested on 31 August 2013 from Windows 8 with Visual Studio 2012 and Orchard 1.7
-
-__Overview__
-
-1. Download the Orchard source to your local machine
-2. Create an SQL Server database on your local machine
-3. Get Started locally
-4. Create an SQL Server instance in Windows Azure
-5. Deploy the local database to the Windows Azure SQL Server
-6. Create a Website in Windows Azure
-7. Compile and deploy your local code to the Windows Azure Website
-8. Configure the database connection string
-
-__Requirements__
-
-- Visual Studio
-- SQL Server
-- SQL Server Management Studio
-- Windows Azure account
-- FTP Client (e.g. FileZilla)
-
-__Download the Orchard source to your local machine__
-
-- Go to the [Orchard Source Code Repo][]
-- Choose the master branch
-- Click on the latest change set
-- Click download
-- Save the file to your hard drive
-- Unzip it into C:/OrchardRocks (or wherever)
-
-__Create an SQL Server database on your local machine__
-
-- Open SQL Server Management Studio
-- Connect to your local SQL Server engine
-- Create a new database called orchardrocks_db (or whatever)
-
-__Get Started locally__
-
-- Open "C:\OrchardRocks\src\Orchard.sln" with Visual Studio
-- View the solution explorer (Ctrl + Alt + L)
-- Set Orchard.Web as the startup project (Right click > Set as startup project)
-- Run without debugging (Ctrl + F5)
-- Orchard's Get Started page will show
-- Name your site
-Coming soon.
-- Create a strong password
-- Use an existing SQL Server, SQL Express database
-- Add the orchardrocks_db connection string
-
-> data source=FONTY;initial catalog=orchardrocks\_db;integrated security=True;MultipleActiveResultSets=True;
-
-- Choose the Default recipe
-- Click Finish Setup
-- After it completes you will see the default Orchard homepage
-
-__Create an SQL Server instance in Windows Azure__
-
-- Login to the Windows Azure Management portal. 
-- Go to SQL DATABASES
-- Choose SERVERS
-- Click ADD
-- Choose a LOGIN NAME, LOGIN PASSWORD, and REGION. 
-- Do allow Windows Azure Services to Access the Server.
-- Open the server in the management portal once Azure finishes creating it
-- Choose CONFIGURE
-- Under allowed ip addresses, choose to add the CURRENT CLIENT IP ADDRESS TO THE ALLOWED IP ADDRESSES.
-- SAVE
-
-__Deploy the local database to the Windows Azure SQL Server__
-
-- Open SQL Server Management Studio
-- Connect to your local SQL Server engine
-- Right click orchardrocks_db 
-- Choose Deploy database to SQL Azure
-- Connect to your Windows Azure SQL Database Server
-- Accept the default settings. 
-- Click Next
-- Click Finish
-- The deployment might take two minutes
-- When the operation is complete, you can check for the database in the Azure Management portal 
-
-__Create a Website in Windows Azure__
-
-- Login to the Windows Azure Management portal
-- Choose New > Compute > Website > Quick Create
-- Add a URL and select a region
-- Click the giant green tickmark to create the site
-- After Azure creates it, open the website in the management portal
-- Go to DASHBOARD, and note its FTP host name, FTP USER, and FTP password
-- Do not use the FTPS host name unless you want to setup a certificate
-> TODO Explain how to setup and to find the Website's FTP password
-
-__Compile and deploy your local code to the Windows Azure Website__
-
-- Open a Visual Studio Developer Command Prompt
-- Change the directory to the Orchard root folder with cd "C:\OrchardRocks"
-- Run build Precompiled
-- Compilation will take about two minutes.
-- The result is a C:\OrchardRocks\build\Precompiled directory
-- Open FileZilla or another FTP client
-- Connect to the Azure Website using the its FTP host name, FTP USER, and FTP password
-- Upload the contents of C:\OrchardRocks\build\Precompiled\ to /site/wwwroot
-- The upload will contain about 1650 files and 45 MB
-
-> Tip: If you are receiving a bunch of failed FTP transfers, make sure that you are using FTP not FTPS
-
-- Once the upload is complete, __DO NOT NAVIGATE TO THE WEBSITE YET__, instead...
-- Copy the contents of C:\OrchardRocks\src\Orchard.Web\App_Data\ to /site/wwwroot/AppData
-- This upload will contain about 20 files and 5 MB
-
-> Tip: If you navigate to the website now, you will see "The resource cannot be found." error, 
-> because Orchard is trying to connect to your local database. You will need to configure the database
-> connection string AND restart the website (e.g. by doing a trivial modification to the root web.config file).
-
-__Configure the database connection string__
-
-- With your FTP client still open, open the /site/wwwroot/App_Data/Sites/Default/Settings.txt file
-- Change the DataConnectionString from the local database to the remote one, e.g.
-
-> Server=tcp:w6jnz09d9i.database.windows.net,1433;Database=orchardrocks\_db;User ID=bigfont@w6jnz09d9i;Password=abc123!@#;Trusted\_Connection=False;Encrypt=True;Connection Timeout=30;
-
-- Now you can navigate to the website at orchardrocks.azurewebsites.net (or whatever you named it)
-- If all went as planned, you should see the Orchard homepage *not* the Orchard start page
-
-# Build and deploy the Orchard source code to an Azure Cloud Service.
+Start by opening the `Orchard.Azure.sln` solution in Visual Studio.
 
 The only thing you have to configure before starting the deployment process is the storage account to use for shell settings. To do this, in *Solution Explorer*, navigate to `Orchard.Azure.CloudService` project, double click the `Orchard.Azure.Web` role and navigate to the *Settings* tab. Configure the connection string of the storage account you want to use:
 
 ![](../Attachments/Deploying-Orchard-to-Windows-Azure/settings-connection-string.png)
 
 Now to deploy the cloud service, right click the `Orchard.Azure.CloudService` project in *Solution Explorer* and select *Publish*, and follow the instructions in the publishing wizard to select subscription, cloud service, storage account and other publishing options. How to use the Windows Azure publishing tools in Visual Studio is beyond the scope of this topic, but they are pretty self-explanatory:
-> Last tested on 30 August 2013 from Windows 8 with Visual Studio 2012 and Azure SDK 2.0
+
+![](../Attachments/Deploying-Orchard-to-Windows-Azure/publish.png)
 
 Once deployment has successfully completed, browse to the newly deployed Orchard site and go through setup.
 
-## Overview
-## Prerequisites
-## See Also
 Congratulations! Orchard is now fully configured for a single role instance on Windows Azure.
 
-## Download the Orchard source
-## Install the appropriate Windows Azure SDK version
+## Using multiple role instances
 
 Let's take it up a notch. You may want to scale out your cloud service to run on more than one role instance, either because you want to support a higher workload, or because the site is mission critical and you need some fault tolerance (using only a single instance of any one role in a Windows Azure Cloud Service voids the Windows Azure SLA).
 
@@ -170,26 +37,24 @@ Using multiple instances (also known as a *web farm* or a *server farm*) with Or
 
 In the most basic default configuration of Orchard, multiple instances can cause problems: 
 
-__Aside: Why is this necessary?__
 1. Orchard uses a local file-based SQL Server CE database. Obviously this won't work as each instance will have its own separate database.
 2. Orchard media files are stored in the local file system. This won't work as the file systems or the different instances will soon start to diverge as users add/remove media.
 3. Orchard output caching and database caching (NHibernate second-level cache) use local memory for storage. This won't work as content might be updated on one instance and any cached copies invalidated there, while other instances continue unaware of this change.
 4. Session state is stored in local memory. This won't work because the cloud service load balancer has no session affinity so users will lose their state when moving between instances.
 
-## BugFix: Update the csproj references to the correct SDK version
 Luckily, Orchard has features to overcome each of these complications, but you must configure and enable them.
 
-## Build an Azure cloud service package (.cspkg)
+### Preparing for multiple instances
 
 **Problem #1** means we need to store the data in a shared database. To do this you need to create a Windows Azure SQL database that will be used to store Orchard data. You will configure Orchard to use this database later during setup.
 
-## Create an Azure Storage account
+Next, configure the number of instances you want to use in the cloud service project. In *Solution Explorer*, navigate to `Orchard.Azure.CloudService` project, double click the `Orchard.Azure.Web` role and navigate to the *Configuration* tab. Change the *Instance count* value from `1` to some higher number:
 
 ![](../Attachments/Deploying-Orchard-to-Windows-Azure/configure-instances.png)
 
 > NOTE: You can also leave the instance count at `1` and change it after deployment through the Windows Azure management portal.
 
-## Update the cloud service configuration file (.cscfg),
+**Problem #2** we will deal with by enable the *Windows Azure Media Storage* feature later. To prepare for this, configure the storage accounts to use for shell settings and media storage. To do this, navigate to the *Settings* tab. Change the following settings to the storage account connection strings you want to use. You can use the same storage account for both, or any combination of different storage accounts:
 
 ![](../Attachments/Deploying-Orchard-to-Windows-Azure/configure-connection-strings.png)
 
@@ -202,15 +67,15 @@ This section above describes only the most basic configuration steps and options
 * [Using Windows Azure Blob Storage](Using-Windows-Azure-Blob-Storage)
 * [Using Windows Azure Cache](Using-Windows-Azure-Cache)
 
-## Optional: Create a new SQL Azure database for Orchard
+### Deploying
 
 After these few steps of preparation, you are now ready to deploy the cloud service. Right click the `Orchard.Azure.CloudService` project in *Solution Explorer* and select *Publish*, and follow the instructions in the publishing wizard to select subscription, cloud service, storage account and other publishing options. How to use the Windows Azure publishing tools in Visual Studio is beyond the scope of this topic, but they are pretty self-explanatory.
 
-## Create a Azure Cloud Service
+Once deployment has successfully completed, browse to the deployed Orchard site and go through setup. Specify the connection string to the Windows Azure SQL Database you created earlier:
 
 ![](../Attachments/Deploying-Orchard-to-Windows-Azure/setup-sql-azure.png)
 
-## Deploy to the Azure cloud service
+Once setup has finished, navigate to the admin dashboard of the site and enable the following three features:
 
 * Windows Azure Media Storage
 * Windows Azure Output Cache
@@ -220,11 +85,11 @@ Congratulations! Orchard is now fully configured for multiple role instances on 
 
 > NOTE: If you set the instance count to more than `1` before deploying, you must now restart all role instances once to make sure they pick up the new configuration.
 
-## Some Warnings and Errors that Might Occur
+# Deploying Orchard to a Windows Azure Web Site
 
-__ClickToBuildAzurePackage: ...cannot be imported again__
+Deploying to a Windows Azure Web Site is also done using the Windows Azure tooling in Visual Studio. However, instead of using the `Orchard.Azure.sln` as described for Windows Azure Cloud Services above, for a Windows Azure Web Site we use the normal `Orchard.sln` solution and publish the normal `Orchard.Web` project.
 
-__ClickToBuildAzurePackage: Found conflicts between different versions of the same dependent assembly.__
+As with a cloud service, if you only plan to run a single instance, deploying is extremely simple.
 
 Start by opening the `Orchard.sln` solution in Visual Studio.
 
@@ -232,15 +97,13 @@ To deploy the web site, right click the `Orchard.Web` project in *Solution Explo
 
 Once deployment has successfully completed, browse to the newly deployed Orchard site and go through setup.
 
-__ClickToBuildAzurePackage: ...was not found__
 Congratulations! Orchard is now fully configured for a single instance Windows Azure Web Site.
 
 ## Using multiple instances
-__After Deployment: Could not load file or assembly...__
 
 As with cloud services, you need to do a little more configuration if you plan to scale out your web site to more than one instance.
 
-__After Deployment: Could not load file or assembly...__
+The steps for using Windows Azure SQL Database as the database are the same as for a cloud service (create a Windows Azure SQL database beforehand and specify its connection string during setup).
 
 The steps for enabling the *Windows Azure Media Storage*, *Windows Azure Output Cache* and *Windows Azure Database Cache* features for a Windows Azure Web Site are described the following topics:
 
