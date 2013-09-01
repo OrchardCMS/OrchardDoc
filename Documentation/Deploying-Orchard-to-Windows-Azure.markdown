@@ -23,16 +23,14 @@ __Methods of deployment to Azure that this document outlines__
 
 __Overview__
 
-1. Download the Orchard source
-2. Create a local SQL Server database
-3. Connect the database to the codebase.
-4. Keep both the database and the codebase in Git version control throughout.
-5. Install, enable, and build the Bootstrap Theme.
-6. Install, enable (debug, and test) the DesignerTools module. 
-7. Deploy our development database to a production Windows Azure SQL Database. 
-8. Deploy our development code to a product Windows Azure Web Site. 
-9. Set ourselves up to update the production database and codebase from development.
-0. Solve and document bugs as they arise.
+1. Download the Orchard source to your local machine
+2. Create an SQL Server database on your local machine
+3. Get Started locally
+4. Create an SQL Server instance in Windows Azure
+5. Deploy the local database to the Windows Azure SQL Server
+6. Create a Website in Windows Azure
+7. Compile and deploy your local code to the Windows Azure Website
+8. Configure the database connection string
 
 __Requirements__
 
@@ -40,8 +38,9 @@ __Requirements__
 - SQL Server
 - SQL Server Management Studio
 - Windows Azure account
+- FTP Client (e.g. FileZilla)
 
-__Download the Orchard source__
+__Download the Orchard source to your local machine__
 
 - Go to the [Orchard Source Code Repo][]
 - Choose the master branch
@@ -50,13 +49,13 @@ __Download the Orchard source__
 - Save the file to your hard drive
 - Unzip it into C:/OrchardRocks (or wherever)
 
-__Create a local SQL Server database__
+__Create an SQL Server database on your local machine__
 
 - Open SQL Server Management Studio
 - Connect to your local SQL Server engine
 - Create a new database called orchardrocks_db (or whatever)
 
-__Connect the local Orchard to the local database__
+__Get Started locally__
 
 - Open "C:\OrchardRocks\src\Orchard.sln" with Visual Studio
 - View the solution explorer (Ctrl + Alt + L)
@@ -69,15 +68,13 @@ __Connect the local Orchard to the local database__
 - Use an existing SQL Server, SQL Express database
 - Add the orchardrocks_db connection string
 
----
-
-    data source=FONTY;initial catalog=orchardrocks_db;integrated security=True;MultipleActiveResultSets=True;
+> data source=FONTY;initial catalog=orchardrocks\_db;integrated security=True;MultipleActiveResultSets=True;
 
 - Choose the Default recipe
 - Click Finish Setup
 - After it completes you will see the default Orchard homepage
 
-__Create an Sql Server in Windows Azure__
+__Create an SQL Server instance in Windows Azure__
 
 - Login to the Windows Azure Management portal. 
 - Go to SQL DATABASES
@@ -114,7 +111,7 @@ __Create a Website in Windows Azure__
 - Do not use the FTPS host name unless you want to setup a certificate
 > TODO Explain how to setup and to find the Website's FTP password
 
-__Deploy the local code to the Windows Azure Website__
+__Compile and deploy your local code to the Windows Azure Website__
 
 - Open a Visual Studio Developer Command Prompt
 - Change the directory to the Orchard root folder with cd "C:\OrchardRocks"
@@ -132,10 +129,11 @@ __Deploy the local code to the Windows Azure Website__
 - Copy the contents of C:\OrchardRocks\src\Orchard.Web\App_Data\ to /site/wwwroot/AppData
 - This upload will contain about 20 files and 5 MB
 
-> Tip: Once this is done, if you navigate to the website, you will see "The resource cannot be found." error, 
-> because Orchard is trying to connect to your local database. 
+> Tip: If you navigate to the website now, you will see "The resource cannot be found." error, 
+> because Orchard is trying to connect to your local database. You will need to configure the database
+> connection string AND restart the website (e.g. by doing a trivial modification to the root web.config file).
 
-__Configure the connection string__
+__Configure the database connection string__
 
 - With your FTP client still open, open the /site/wwwroot/App_Data/Sites/Default/Settings.txt file
 - Change the DataConnectionString from the local database to the remote one, e.g.
