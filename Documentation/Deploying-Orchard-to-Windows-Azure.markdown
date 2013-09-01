@@ -15,14 +15,16 @@ __Methods of deployment to Azure that this document outlines__
 
 > Coming soon.
 
-# Build and deploy the Orchard source code to an Azure Website
+# Build and deploy the Orchard source code to an Azure Website using FTP
+
+[Orchard Source Code Repo]: http://orchard.codeplex.com/sourcecontrol/list/changesets
 
 > Draft. Not tested yet.
 
 __Overview__
 
-1. Do a clean source drop of the Orchard code for development.
-2. Create a local SQL Server database for development.
+1. Download the Orchard source
+2. Create a local SQL Server database
 3. Connect the database to the codebase.
 4. Keep both the database and the codebase in Git version control throughout.
 5. Install, enable, and build the Bootstrap Theme.
@@ -32,221 +34,116 @@ __Overview__
 9. Set ourselves up to update the production database and codebase from development.
 0. Solve and document bugs as they arise.
 
-__Ideas for Workflow / Documentation Improvement__
-
-- Publish from Web Matrix not FTP.
-- Publish with Git Continuous Deployment not FTP (current problem is inability to update locked assemblies.)
-- Add the usuage of SQL Sync to update the Azure SQL Database.
-
-__Requirements for this Walkthrough__
+__Requirements__
 
 - Visual Studio
-- Web Matrix 
-- Internet Information Server
-- SQL Server with Management Studio
-- Your Own Windows Azure Account
-- Mercurial
-- Git
+- SQL Server
+- SQL Server Management Studio
+- Windows Azure account
 
-__Do a clean source drop of the Orchard code for development.__
+__Download the Orchard source__
 
-- Create a directory for your Orchard CMS. (We'll call the directory __tsokh__.)
-- Initialize a Git repository inside __tsokh__ and make your first commit.
+- Go to the [Orchard Source Code Repo][]
+- Choose the master branch
+- Click on the latest change set
+- Click download
+- Save the file to your hard drive
+- Unzip it into C:/OrchardRocks (or wherever)
 
-![](../Attachments/Deploying-Orchard-to-Windows-Azure-Web-Site-and-SQL-Database/Capture.PNG)
+__Create a local SQL Server database__
 
-- Then, do a source code drop from Orchard's Mercurial repository into __tsokh__.
-- https://hg01.codeplex.com/orchard
+- Open SQL Server Management Studio
+- Connect to your local SQL Server engine
+- Create a new database called orchardrocks_db (or whatever)
 
-![](../Attachments/Deploying-Orchard-to-Windows-Azure-Web-Site-and-SQL-Database/Capture1.PNG)
+__Connect the local Orchard to the local database__
 
-- Ensure we're on the default Mercurial Orchard branch.
-- Make your second commit to Git with a useful message, eg 
-- "Do a clean Orchard source code drop of hash 585c378b737737bdb37721b2a8059b866c3e03d8."
+- Open "C:\OrchardRocks\src\Orchard.sln" with Visual Studio
+- View the solution explorer (Ctrl + Alt + L)
+- Set Orchard.Web as the startup project (Right click > Set as startup project)
+- Run without debugging (Ctrl + F5)
+- Orchard's Get Started page will show
+- Name your site
+- Choose a username
+- Create a strong password
+- Use an existing SQL Server, SQL Express database
+- Add the orchardrocks_db connection string
 
-__Create a local SQL Server database for development.__
+---
 
-- Open SQL Server Management Studio.
-- Create a new database on your local server.
-- (We'll call the new database __tsokh_db__.)
+    data source=FONTY;initial catalog=orchardrocks_db;integrated security=True;MultipleActiveResultSets=True;
 
-__Connect the database to the codebase.__
+- Choose the Default recipe
+- Click Finish Setup
+- After it completes you will see the default Orchard homepage
 
-*Open and run Orchard.Web in Visual Studio*
+__Create an Sql Server in Windows Azure__
 
-- Go to orchard > src > Orchard.Web > Orchard.Web.csproj > Right click > Open With > Visual Studio
-- Run without debugging (Ctrl + Shift + F5.)
-- At this point, we are at the Orchard Get Started page, and Orchard has created the App_Data folder, which you can see from the status of your source control.
+- Login to the Windows Azure Management portal. 
+- Go to SQL DATABASES
+- Choose SERVERS
+- Click ADD
+- Choose a LOGIN NAME, LOGIN PASSWORD, and REGION. 
+- Do allow Windows Azure Services to Access the Server.
+- Open the server in the management portal once Azure finishes creating it
+- Choose CONFIGURE
+- Under allowed ip addresses, choose to add the CURRENT CLIENT IP ADDRESS TO THE ALLOWED IP ADDRESSES.
+- SAVE
 
-*Configure the Get Started*
+__Deploy the local database to the Windows Azure SQL Server__
 
-- Name your site, provide a username and password.
-- Store your data in an existing SQL Server...
-- data source=[SQLServerName];initial catalog=tsokh_db;integrated security=True;MultipleActiveResultSets=True;
-- Run the Default recipe. 
-- After it completes you will see the default Orchard homepage.
-- Note: We do the initial set-up to a local DB instance, because we want to be able to install modules and themes locally, which Azure Web Sites makes non-trivial.
+- Open SQL Server Management Studio
+- Connect to your local SQL Server engine
+- Right click orchardrocks_db 
+- Choose Deploy database to SQL Azure
+- Connect to your Windows Azure SQL Database Server
+- Accept the default settings. 
+- Click Next
+- Click Finish
+- The deployment might take two minutes
+- When the operation is complete, you can check for the database in the Azure Management portal 
 
-__Keep both the database and the codebase in Git version control throughout.__
+__Create a Website in Windows Azure__
 
-- The codebase is already in Git. Now is a good time to add the database to Git also.
-- Open SSMS,  export the database as a data-tier application, and save it in your tsokh Git repo.
-- tsokh_db > Right Click > Tasks > Export Data-Tier Applcation > Next > Save to local disk > browse > ...\tsokh\databackups\tsokh_db.bacpac
-- Commit and push after the export completes.
+- Login to the Windows Azure Management portal
+- Choose New > Compute > Website > Quick Create
+- Add a URL and select a region
+- Click the giant green tickmark to create the site
+- After Azure creates it, open the website in the management portal
+- Go to DASHBOARD, and note its FTP host name, FTP USER, and FTP password
+- Do not use the FTPS host name unless you want to setup a certificate
+> TODO Explain how to setup and to find the Website's FTP password
 
-![](../Attachments/Deploying-Orchard-to-Windows-Azure-Web-Site-and-SQL-Database/Capture2.PNG)
+__Deploy the local code to the Windows Azure Website__
 
-__Checkpoint__
-
-At this point we have done the following:
-
-- Create and name a clean, local Orchard CMS website.
-- Connect it to a clean local Orchard CMS database. 
-- Export the database as a bacpac into the databackups directory of our local repo.
-- Commit and push all changes. 
-- This is good because we can now recreate our current code and DB configuration from Git whenever we want. It's worth adding and pushing a git tag to your current commit.
-
-__Install, enable, and build the Bootstrap Theme.__
-
-*Install and Enable the Bootstrap Theme*
-
-- Go to the Orchard Dashboard.
-- Go to Themes > Gallery > Search > "Bootstrap" > Install
-- Wait
-- Go to Themes > Installed > Bootstrap > Set Current
-- Navigate to the Orchard homepage to test that the Bootstrap theme is enabled. 
-
-*Build the Bootstrap theme*
-
-- Return to Visual Studio and stop the running site. 
-- Right click on the Themes solution folder (not the Themes project).
-- Choose Add > Existing Project
-- Browse to the Bootstrap.csproj and add it.
-- Right click the newly added Bootstrap project in Visual Studio and build. It should work. Hooray!
-
-![](../Attachments/Deploying-Orchard-to-Windows-Azure-Web-Site-and-SQL-Database/Capture4.PNG)
-
-__Install, enable (debug, and test) the DesignerTools module. __
-
-*Install and enable*
-
-- Run Orchard.Web, login, and go to Dashboard > Modules > Gallery > Search.
-- Search for Designer Tools and install. 
-- Enable all three features (Shape Tracing, Url Alternates, Widget Alternates.)
-
-*Debug*
-
-![](../Attachments/Deploying-Orchard-to-Windows-Azure-Web-Site-and-SQL-Database/Capture5.PNG)
-
-- If you receive a message that ClaySharp is missing, do not install ClaySharp.
-- Instead, remove the reference.
-
-*Test*
-
-- Go to your Orchard homepage.
-- There will be a little maximize icon at the bottom right. 
-- Click it to view the Shape Tracer. 
-- Unfortunately, it isn't working right now. We have filed a bug.
-
-__Checkpoint__
-
-Here is what we have accomplished since the last checkpoint:
-
-- Install the Bootstrap theme.
-- Install Designer Tools.
-- Now lets deploy what we've done.
-
-__Deploy our development database to a production Windows Azure SQL Database.__
-
-- We've new data in the db, so backup the database again, just as we did above.
-- Once that's done, right click the tsokh_db > Tasks > __Deploy database to SQL Azure__.
-- (Note: this assumes setup of an SQL Database Server in Azure.)
-- Connect to your Windows Azure SQL Database Server. E.g. my6wvevkhg.database.windows.net
-- Use Next > Next > Next to deploy.
-- The deployment might take two minutes, after which you'll see your database in the Azure management portal.
-
-![](../Attachments/Deploying-Orchard-to-Windows-Azure-Web-Site-and-SQL-Database/Capture3.PNG)
-
-__Deploy our development code to a product Windows Azure Web Site.__
-
-*build Precompiled*
-
-- Open a Developer Command Prompt as in step 3 [here](http://docs.orchardproject.net/Documentation/Building-and-deploying-Orchard-from-a-source-code-drop)
-- Change the directory to the Orchard root folder. E.g. 
-- cd "C:\Users\Shaun\Documents\GitHub\tsokh\orchard"
+- Open a Visual Studio Developer Command Prompt
+- Change the directory to the Orchard root folder with cd "C:\OrchardRocks"
 - Run build Precompiled
-- This will take about two minutes.
-- The result is a tsokh/orchard/build/Precompiled directory that we will publish.
+- Compilation will take about two minutes.
+- The result is a C:\OrchardRocks\build\Precompiled directory
+- Open FileZilla or another FTP client
+- Connect to the Azure Website using the its FTP host name, FTP USER, and FTP password
+- Upload the contents of C:\OrchardRocks\build\Precompiled\ to /site/wwwroot
+- The upload will contain about 1650 files and 45 MB
 
-*Debug the build, if necessary*
+> Tip: If you are receiving a bunch of failed FTP transfers, make sure that you are using FTP not FTPS
 
-- When we ran build Precompiled the following warning occurred.
+- Once the upload is complete, __DO NOT NAVIGATE TO THE WEBSITE YET__, instead...
+- Copy the contents of C:\OrchardRocks\src\Orchard.Web\App_Data\ to /site/wwwroot/AppData
+- This upload will contain about 20 files and 5 MB
 
-..
+> Tip: Once this is done, if you navigate to the website, you will see "The resource cannot be found." error, 
+> because Orchard is trying to connect to your local database. 
 
-    "C:\Users\Shaun\Documents\GitHub\jungle\orchard\Orchard.proj" (Precompiled target) (1) ->
-    "C:\Users\Shaun\Documents\GitHub\jungle\orchard\src\Orchard.sln" (Build target) (2:2) ->
-    "C:\Users\Shaun\Documents\GitHub\jungle\orchard\src\Orchard.Web\Modules\SysCache\SysCache.csproj" (default target) (23:2) ->
- 	(ResolveAssemblyReferences target) -> C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets(1613,5): 
-	warning MSB3247: Found conflicts between different versions of the same dependent assembly. 
-	Please add the following binding redirects to the "runtime" node in your application configuration file: 
-	
-	<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-	    <dependentAssembly>
-			<assemblyIdentity name="NHibernate" culture="neutral" publicKeyToken="aa95f207798dfdb4" />
-			<bindingRedirect oldVersion="0.0.0.0-3.3.1.4000" newVersion="3.3.1.4000" />
-		</dependentAssembly>
-	</assemblyBinding> 
-	
-	[C:\Users\Shaun\Documents\GitHub\jungle\orchard\src\Orchard.Web\Modules\SysCache\SysCache.csproj]
+__Configure the connection string__
 
-..
+- With your FTP client still open, open the /site/wwwroot/App_Data/Sites/Default/Settings.txt file
+- Change the DataConnectionString from the local database to the remote one, e.g.
 
-- So, do what it says: 
-- Open Orchard in Visual Studio.
-- Go to Modules\SysCache\SysCache.csproj
-- Edit the web.config
-- Add the following block as a child of the <configuration> element.
-- Then save the SysCache project and run build Precompiled again. No more warnings!
+> Server=tcp:w6jnz09d9i.database.windows.net,1433;Database=orchardrocks\_db;User ID=bigfont@w6jnz09d9i;Password=abc123!@#;Trusted\_Connection=False;Encrypt=True;Connection Timeout=30;
 
-..
-
-	<runtime>
-		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-			<dependentAssembly>
-				<assemblyIdentity name="NHibernate" culture="neutral" publicKeyToken="aa95f207798dfdb4" />
-				<bindingRedirect oldVersion="0.0.0.0-3.3.1.4000" newVersion="3.3.1.4000" />
-			</dependentAssembly>
-		</assemblyBinding> 
-	</runtime>
-
-..
-
-- We now have a tickety-boo precompiled Orchard package to our specifications.
-
-*Run the precompiled package in IIS (or WebMatrix) to test*
-
-- Open IIS > Sites > Add Website
-- Site Name: tsokh
-- Application Pool: tsokh
-- Physical Path: inetpub/tsokh
-- Copy the contents of build/precomplied to this tsokh directory.
-- Give IIS APPPOOL\tsokh write (or modify?) permissions x3 (Root, App_Data dir, Media dir, tsokh_db).
-- (Note: If you were to browse to the website now, you would see the Get Started screen.)
-- Copy the contents of the Orchard.Web/App_Data folder to the App_Data folder.
-- Browse to the website from IIS.
-- You should see the homepage of your Orchard website.
-
-*Actually launch the codebase to Windows Azure Web Site*
-
-- create a directory called _publishpacks at the same level as _databackups
-- copy the testing IIS root directory into _publishpacks
-- use ftp to publish the contents of _publishpacks/tsokh to a new Windows Azure Web Site.
-
-__Set ourselves up to update the production database and codebase from development.__
-
-- This will involve using SQL Sync from Windows Azure.
-- This will also involve maybe using GitHub Continunous Deployment with Windows Azure.
+- Now you can navigate to the website at orchardrocks.azurewebsites.net (or whatever you named it)
+- If all went as planned, you should see the Orchard homepage *not* the Orchard start page
 
 # Build and deploy the Orchard source code to an Azure Cloud Service
 
@@ -257,8 +154,6 @@ __Set ourselves up to update the production database and codebase from developme
 [NewCloudServiceDeployment]: ../Attachments/Deploying-Orchard-to-Windows-Azure/NewCloudServiceDeployment.PNG
 [UploadAPackage]: ../Attachments/Deploying-Orchard-to-Windows-Azure/UploadAPackage.PNG
 [ProgramsAndFeatures]: ../Attachments/Deploying-Orchard-to-Windows-Azure/ProgramsAndFeatures.PNG
-
-
 
 > Last tested on 30 August 2013 from Windows 8 with Visual Studio 2012 and Azure SDK 2.0
 
@@ -275,7 +170,7 @@ __Overview__
 * Create an Azure cloud service
 * Deploy to the Azure cloud service
 
-__Prerequisites__
+__Requirements__
 
 * Microsoft SQL Azure account
 * Visual Studio
