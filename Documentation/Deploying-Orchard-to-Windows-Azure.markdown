@@ -1,277 +1,111 @@
-> Draft topic Orchard supports several methods of deploying to the Windows Azure environment. Here are some of these methods:
+Orchard can be deployed to both Windows Azure Cloud Services and Windows Azure Web Sites. Orchard also ships with a number of integration features that takes advantage of Windows Azure services such as blob storage and caching, and that can be configured before deployment if needed. This topic walks you through the process of deploying Orchard to Windows Azure.
 
-* Deploy the Orchard binary to an Azure Website using the Azure Website Gallery.
-* Deploy the Orchard binary to an Azure Website using FTP.
-* Build and deploy the Orchard source code to an Azure Website.
-* Build and deploy the Orchard source code to an Azure Cloud Service.
+> NOTE: The Windows Azure deployment process in Orchard has undergone a complete overhaul for version 1.7.1. For more information about what's changed see the [What's new for Windows Azure in Orchard 1.7.1](Whats-new-for-Windows-Azure-in-Orchard-1-7-1) topic.
 
-# Deploy the Orchard binary to an Azure Website using the Azure Website Gallery.
+# Prerequisites
 
-Coming soon.
+Before you can deploy Orchard to Windows Azure you need the following:
 
-# Deploy the Orchard binary to an Azure Website using FTP.
+* Visual Studio 2012
+* Windows Azure SDK 2.1 for Visual Studio 2012
+* The Orchard source code
+* An active Windows Azure subscription
 
-Coming soon.
+# Deploying Orchard to a Windows Azure Cloud Service
 
-# Build and deploy the Orchard source code to an Azure Website.
+If you only plan to run a single role instance, deploying is extremely simple. Starting with version 1.7.1 of Orchard, deployment can be performed using the Windows Azure tooling in Visual Studio.
 
-Coming soon.
+Start by opening the `Orchard.Azure.sln` solution in Visual Studio.
 
-# Build and deploy the Orchard source code to an Azure Cloud Service.
+The only thing you have to configure before starting the deployment process is the storage account to use for shell settings. To do this, in *Solution Explorer*, navigate to `Orchard.Azure.CloudService` project, double click the `Orchard.Azure.Web` role and navigate to the *Settings* tab. Configure the connection string of the storage account you want to use:
 
-[Orchard Source Code Repo]: https://orchard.codeplex.com/SourceControl/list/changesets
-[Web Platform Installer]: http://www.microsoft.com/web/downloads/platform.aspx
+![](../Attachments/Deploying-Orchard-to-Windows-Azure/settings-connection-string.png)
 
-[StorageAccountKeys]: ../Attachments/Deploying-Orchard-to-Windows-Azure/StorageAccountKeys.PNG
-[NewCloudServiceDeployment]: ../Attachments/Deploying-Orchard-to-Windows-Azure/NewCloudServiceDeployment.PNG
-[UploadAPackage]: ../Attachments/Deploying-Orchard-to-Windows-Azure/UploadAPackage.PNG
-[ProgramsAndFeatures]: ../Attachments/Deploying-Orchard-to-Windows-Azure/ProgramsAndFeatures.PNG
+Now to deploy the cloud service, right click the `Orchard.Azure.CloudService` project in *Solution Explorer* and select *Publish*, and follow the instructions in the publishing wizard to select subscription, cloud service, storage account and other publishing options. How to use the Windows Azure publishing tools in Visual Studio is beyond the scope of this topic, but they are pretty self-explanatory:
 
+![](../Attachments/Deploying-Orchard-to-Windows-Azure/publish.png)
 
+Once deployment has successfully completed, browse to the newly deployed Orchard site and go through setup.
 
-> Last tested on 30 August 2013 from Windows 8 with Visual Studio 2012 and Azure SDK 2.0
+Congratulations! Orchard is now fully configured for a single role instance on Windows Azure.
 
-What follows is one method of deploying a source code drop of Orchard 1.7 to a new Azure Cloud Service.
+## Using multiple role instances
 
-## Overview
+Let's take it up a notch. You may want to scale out your cloud service to run on more than one role instance, either because you want to support a higher workload, or because the site is mission critical and you need some fault tolerance (using only a single instance of any one role in a Windows Azure Cloud Service voids the Windows Azure SLA).
 
-* Download the Orchard source
-* Install the appropriate Windows Azure SDK version
-* Update the csproj references to the correct SDK version
-* Build an Azure cloud service package (.cspkg)
-* Create an Azure Storage account
-* Update the cloud service configuration file (.cscfg)
-* Create an Azure cloud service
-* Deploy to the Azure cloud service
+Using multiple instances (also known as a *web farm* or a *server farm*) with Orchard requires some extra consideration.
 
-## Prerequisites
+In the most basic default configuration of Orchard, multiple instances can cause problems: 
 
-* Microsoft SQL Azure account
-* Visual Studio
+1. Orchard uses a local file-based SQL Server CE database. Obviously this won't work as each instance will have its own separate database.
+2. Orchard media files are stored in the local file system. This won't work as the file systems or the different instances will soon start to diverge as users add/remove media.
+3. Orchard output caching and database caching (NHibernate second-level cache) use local memory for storage. This won't work as content might be updated on one instance and any cached copies invalidated there, while other instances continue unaware of this change.
+4. Session state is stored in local memory. This won't work because the cloud service load balancer has no session affinity so users will lose their state when moving between instances.
 
-## See Also
+Luckily, Orchard has features to overcome each of these complications, but you must configure and enable them.
 
-* [Setting up a source enlistment](http://docs.orchardproject.net/Documentation/Setting-up-a-source-enlistment)
-* [How to Create and Deploy a Cloud Service](http://www.windowsazure.com/en-us/manage/services/cloud-services/how-to-create-and-deploy-a-cloud-service/): a general version of the same steps we outline.
-* [Windows Azure Service Configuration Schema (.cscfg File)](http://msdn.microsoft.com/en-us/library/windowsazure/ee758710.aspx)
-* [AsmSpy: A little tool to help fix assembly version conflicts](http://mikehadlow.blogspot.ca/2011/02/asmspy-little-tool-to-help-fix-assembly.html)
+### Preparing for multiple instances
 
-## Download the Orchard source
+**Problem #1** means we need to store the data in a shared database. To do this you need to create a Windows Azure SQL database that will be used to store Orchard data. You will configure Orchard to use this database later during setup.
 
-* Go to the [Orchard Source Code Repo][]
-* Choose the master branch
-* Click on the latest change set
-* Click download
-* Save the file to your hard drive
-* Unzip it into __C:/OrchardRocks__ (or wherever)
+Next, configure the number of instances you want to use in the cloud service project. In *Solution Explorer*, navigate to `Orchard.Azure.CloudService` project, double click the `Orchard.Azure.Web` role and navigate to the *Configuration* tab. Change the *Instance count* value from `1` to some higher number:
 
-## Install the appropriate Windows Azure SDK version
+![](../Attachments/Deploying-Orchard-to-Windows-Azure/configure-instances.png)
 
-* Start > Control Panel > Programs and Features > Search > Azure
+> NOTE: You can also leave the instance count at `1` and change it after deployment through the Windows Azure management portal.
 
-![][ProgramsAndFeatures]
+**Problem #2** we will deal with by enable the *Windows Azure Media Storage* feature later. To prepare for this, configure the storage accounts to use for shell settings and media storage. To do this, navigate to the *Settings* tab. Change the following settings to the storage account connection strings you want to use. You can use the same storage account for both, or any combination of different storage accounts:
 
-* We need the search results to look just like that image.
-* If they do not, then here is one procedure you can follow. 
-* Uninstall all the programs that are listed in those search results.
-* Then, close the control panel
-* Open the [Web Platform Installer][]
-* Search for "Azure SDK"
-* Select "Windows Azure SDK for .NET (VS 20XX) - 2.0"
-* Choose Add, click Install, and Accept the terms.
-* Reboot your computer just to be thorough.
-* Now you have _only_ the Azure SDK 2.0 installed.
+![](../Attachments/Deploying-Orchard-to-Windows-Azure/configure-connection-strings.png)
 
-__Aside: Why is this necessary?__
+**Problem #3** we will address by enabling the *Windows Azure Output Cache* and *Windows Azure Database Cache* features. These don't need any preparation, as the cloud service project is already preconfigured for co-located role-based caching with the appropriate named caches configured.
 
-The Orchard.Azure.CloudService.ccproj has a CloudExtensionsDir element that targets Windows Azure Tools 2.0. 
-As a result, the build process will fail unless we have the right version of the SDK installed.
+**Problem #4** is already taken care of for us. The cloud service is preconfigured to use the ASP.NET session state provider for Windows Azure Cache. This takes effect immediately after we deploy.
 
----
+This section above describes only the most basic configuration steps and options. More detailed steps for enabling the *Windows Azure Media Storage*, *Windows Azure Output Cache* and *Windows Azure Database Cache* features for a Windows Azure Cloud Service, as well as more advanced configuration options, are described the following topics:
 
-    <CloudExtensionsDir Condition=" '$(CloudExtensionsDir)' == '' ">
-	     $(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Windows Azure Tools\2.0\	
-	</CloudExtensionsDir>
+* [Using Windows Azure Blob Storage](Using-Windows-Azure-Blob-Storage)
+* [Using Windows Azure Cache](Using-Windows-Azure-Cache)
 
-## BugFix: Update the csproj references to the correct SDK version
+### Deploying
 
-* Open "C:\OrchardRocks\src\Orchard.Azure\Orchard.Azure.sln" in Visual Studio
-* Unload the Orchard.Azure project (Right Click > Unload Project)
-* Edit the Orchard.Azure project (Right Click > Edit...)
-* Delete the following references:
-
----
-
-    <Reference Include="Microsoft.WindowsAzure.Diagnostics, Version=1.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Microsoft SDKs\Windows Azure\.NET SDK\2012-10\ref\Microsoft.WindowsAzure.Diagnostics.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.WindowsAzure.ServiceRuntime, Version=1.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.WindowsAzure.StorageClient, Version=1.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
+After these few steps of preparation, you are now ready to deploy the cloud service. Right click the `Orchard.Azure.CloudService` project in *Solution Explorer* and select *Publish*, and follow the instructions in the publishing wizard to select subscription, cloud service, storage account and other publishing options. How to use the Windows Azure publishing tools in Visual Studio is beyond the scope of this topic, but they are pretty self-explanatory.
 
-* Save. 
-* Reload the Orchard.Azure project (Right Click > Reload Project > Yes)
-* Expand Orchard.Azure. 
-* Right Click on References > Add Reference > Assemblies > Search > "Azure"
-* Select the assemblied that you just removed but choose version 2.0 where possible.
-* Repeat with the Orchard.Azure.Web project but remove the following references:
+Once deployment has successfully completed, browse to the deployed Orchard site and go through setup. Specify the connection string to the Windows Azure SQL Database you created earlier:
 
----
+![](../Attachments/Deploying-Orchard-to-Windows-Azure/setup-sql-azure.png)
 
-    <Reference Include="Microsoft.WindowsAzure.Configuration, Version=1.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Microsoft SDKs\Windows Azure\.NET SDK\2012-10\ref\Microsoft.WindowsAzure.Configuration.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.WindowsAzure.Diagnostics, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>C:\Program Files\Microsoft SDKs\Windows Azure\.NET SDK\2012-10\ref\Microsoft.WindowsAzure.Diagnostics.dll</HintPath>
-      <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.WindowsAzure.ServiceRuntime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Microsoft.WindowsAzure.StorageClient, Version=1.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference
+Once setup has finished, navigate to the admin dashboard of the site and enable the following three features:
 
+* Windows Azure Media Storage
+* Windows Azure Output Cache
+* Windows Azure Database Cache
 
-* When done, those references should be Version=2.0.0.0 where possible.
-* Close Visual Studio and save the solution and projects.
+Congratulations! Orchard is now fully configured for multiple role instances on Windows Azure. You can now scale out to as many role instances as you need and things will be handled.
 
-## Build an Azure cloud service package (.cspkg)
+> NOTE: If you set the instance count to more than `1` before deploying, you must now restart all role instances once to make sure they pick up the new configuration.
 
-* Open C:/OrchardRocks and double click on ClickToBuildAzurePackage.cmd
-* Wait approx one minute; the build will run; several command windows will open during testing.
-* Sometimes the build stalls after tests. Continue by hitting any key.
-* If the build succeededs, C:/OrchardRocks will have two new subfolders: artifacts and buildazure.
-> TODO What is the difference between artifacts and buildazure?
+# Deploying Orchard to a Windows Azure Web Site
 
-## Create an Azure Storage account
+Deploying to a Windows Azure Web Site is also done using the Windows Azure tooling in Visual Studio. However, instead of using the `Orchard.Azure.sln` as described for Windows Azure Cloud Services above, for a Windows Azure Web Site we use the normal `Orchard.sln` solution and publish the normal `Orchard.Web` project.
 
-* Login to the Windows Azure management portal. 
-* Click New > Data Services > Storage > Quick Create
-* Name your service orchardrocks (or whatever) and Create Storage Account
-* Once Azure has created the account, open it in the Azure management portal. 
-* Choose Manage Access Keys (in the footer)
-* Copy your __Storage Account Name__ and __Primary Access Key__
-
-![][StorageAccountKeys]
+As with a cloud service, if you only plan to run a single instance, deploying is extremely simple.
 
-> TODO Determine whether we really need to open an Azure Storage account or not. What does it do? Is it optional?
+Start by opening the `Orchard.sln` solution in Visual Studio.
 
-## Update the cloud service configuration file (.cscfg),
+To deploy the web site, right click the `Orchard.Web` project in *Solution Explorer* and select *Publish*, and follow the instructions in the publishing wizard. Click the *Import* button to import a web deploy publishing configuration from your Windows Azure subscriptions. How to use the Windows Azure publishing tools in Visual Studio is beyond the scope of this topic, but they are pretty self-explanatory.
 
-* Use a text editor to open C:\OrchardRocks\buildazure\Stage\ServiceConfiguration.cscfg 
-* Update the DataConnectionString with the following <Setting /> element.
-* Be sure to use your own Storage Account Name and Primary Access Key
-* Leave the Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString for now.
+Once deployment has successfully completed, browse to the newly deployed Orchard site and go through setup.
 
----
+Congratulations! Orchard is now fully configured for a single instance Windows Azure Web Site.
 
-    <Setting 
-	    name="DataConnectionString" 
-	    value="DefaultEndpointsProtocol=https;AccountName=storage-account-name;AccountKey=primary-access-key" />
+## Using multiple instances
 
-## Optional: Create a new SQL Azure database for Orchard
+As with cloud services, you need to do a little more configuration if you plan to scale out your web site to more than one instance.
 
-* This isn't strictly necessary. 
-* For the sake of simplicity in this tutorial, use the built-in SQL Server CE for now.
+The steps for using Windows Azure SQL Database as the database are the same as for a cloud service (create a Windows Azure SQL database beforehand and specify its connection string during setup).
 
-## Create a Azure Cloud Service
+The steps for enabling the *Windows Azure Media Storage*, *Windows Azure Output Cache* and *Windows Azure Database Cache* features for a Windows Azure Web Site are described the following topics:
 
-* Login to the Windows Azure management portal. 
-* Click New > Computer > Cloud Service > Quick Create
-* Name your service orchardrocks (or whatever) and then click Create Cloud Service
-
-## Deploy to the Azure cloud service
-
-* Login to the Windows Azure management portal
-* Open your cloud service
-* In the quickstart area, choose "New production deployment."
-
-![][NewCloudServiceDeployment]
-
-* Name the deployement anything (e.g. OrchardRocks_v1)
-* Browse for the Package: "C:\OrchardRocks\buildazure\Stage\Orchard.Azure.Web.cspkg"
-* Browse for the Configuration: "C:\OrchardRocks\buildazure\Stage\ServiceConfiguration.cscfg"
-* Choose "Deploy even if one or more roles contain a single instance."
-* Choose "Start deployment."
-* Deploy!
-
-![][UploadAPackage]
-
-* Deployment should take about 10 to 15 minutes. Have some water :-)
-* Go the the cloud service's Dashbaord to view the deployment progress. 
-* Once complete, browse to orchardrocks.cloudapp.net (or whereever)
-
-## Some Warnings and Errors that Might Occur
-
-__ClickToBuildAzurePackage: ...cannot be imported again__
-
-Why: Unknown.
-Fix: Unknown.
-
-> Build succeeded.
-
-> C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v11.0\Windows Azure Tools\2.0\Microsoft.Win
-> dowsAzure.targets(119,3): warning MSB4011: "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft
-> .Common.targets" cannot be imported again. It was already imported at "C:\Program Files (x86)\MSBui
-> ld\Microsoft\VisualStudio\v10.0\Windows Azure Tools\2.0\Microsoft.WindowsAzure.targets (117,3)". Th
-> is is most likely a build authoring error. This subsequent import will be ignored. 
-> [C:\OrchardRocks\AzurePackage.proj]
-
-__ClickToBuildAzurePackage: Found conflicts between different versions of the same dependent assembly.__
-
-Why: Our project is targetting different versions of the same assemblies.
-Fix: Run AsmSpy.exe, then update conflicting dependency references to consistent versions.
-
-> Build succeeded.
-
-> "C:\OrchardRocks\AzurePackage.proj" (Build target) (1) ->
-> "C:\OrchardRocks\src\Orchard.Azure\Orchard.Azure.sln" (Build target) (2:2) ->
-> "C:\OrchardRocks\src\Orchard.Azure\Orchard.Azure.CloudService\Orchard.Azure.CloudService.ccproj" (default target) (65:2) ->
-> "C:\OrchardRocks\src\Orchard.Azure\Orchard.Azure.Web\Orchard.Azure.Web.csproj" (default target) (64:3) ->
-> (ResolveAssemblyReferences target) ->
-> C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets(1605,5): warning MSB3247:
-> Found conflicts between different versions of the same dependent assembly. 
-> [C:\OrchardRocks\src\Orchard.Azure\Orchard.Azure.Web\Orchard.Azure.Web.csproj]
-
-> "C:\OrchardRocks\AzurePackage.proj" (Build target) (1) ->
-> "C:\OrchardRocks\src\Orchard.Azure.Tests\Orchard.Azure.Tests.sln" (Build target) (67) ->
-> "C:\OrchardRocks\src\Orchard.Azure.Tests\Orchard.Azure.Tests.csproj" (default target) (68) ->
->  C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets(1605,5): warning MSB3247:
-> Found conflicts between different versions of the same dependent assembly. 
-> [C:\OrchardRocks\src\Orchard.Azure.Tests\Orchard.Azure.Tests.csproj]
-
-__ClickToBuildAzurePackage: ...was not found__
-
-Why: We have an earlier or later version of the Windows Azure SDK installed.
-Fix: Ensure that Windows Azure SDK 2.0 is the only version of the SDK installed.
-
-> C:\OrchardRocks\src\Orchard.Azure\Orchard.Azure.CloudService\Orchard.Azure.Cl
-> oudService.ccproj(59,3): error MSB4019: The imported project "C:\Program Files (x86)\MSBuild\Micros
-> oft\VisualStudio\v11.0\Windows Azure Tools\2.0\Microsoft.WindowsAzure.targets" was not found. Confi
-> rm that the path in the <Import> declaration is correct, and that the file exists on disk.
-	
-__After Deployment: Could not load file or assembly...__
-
-Why: Our Microsoft.WindowsAzure.* references are an earlier version, which is resolving to 2.1.0.0
-Fix: Update the references to version 2.0
-
-> Could not load file or assembly 'Microsoft.WindowsAzure.ServiceRuntime, Version=2.1.0.0, 
-> Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. 
-> The system cannot find the file specified.
-
-__After Deployment: Could not load file or assembly...__
-
-Why: We deleted the assembly accidentally.
-Fix: Add the missing assembly to the Orchard.Azure.Web project. 
-
-> Could not load file or assembly 'Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, 
-> PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The system cannot find the file specified.
+* [Using Windows Azure Blob Storage](Using-Windows-Azure-Blob-Storage)
+* [Using Windows Azure Cache](Using-Windows-Azure-Cache)
