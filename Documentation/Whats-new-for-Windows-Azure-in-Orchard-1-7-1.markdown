@@ -11,7 +11,7 @@ Prior to version 1.7.1, packaging and deploying to Windows Azure had to be done 
 * Publish can now be done for either **Debug or Release build configurations**. Previous hard coded assumptions no longer apply. This can be very useful for things like collecting IntelliTrace logs from your cloud service deployment, or to simply get line numbers in exception stack traces.
 * **Continuous deployment** from TFS to Windows Azure should now "just work" although this has not yet been tested.
 
-Additionally, when building and publishing using Release build configuration, **configuration file transformations are now used** instead of custom MSBuild logic. Configuration transform files are visible and editable directly in Solution Explorer (visualized as child items of the `Web.config`, `Host.config` and `Log4net.config` files) and therefore much more discoverable and maintainable.
+Additionally, when building and publishing using `Release` build configuration, **configuration file transformations are now used** instead of custom MSBuild logic. Configuration transform files are visible and editable directly in Solution Explorer (visualized as child items of the `Web.config`, `Host.config` and `Log4net.config` files) and therefore much more discoverable and maintainable.
 
 See the topic [Deploying Orchard to Windows Azure](Deploying-Orchard-to-Windows-Azure) topic for more information.
 
@@ -37,9 +37,7 @@ A new module **Orchard.Azure** has been added. All Azure-specific functionality 
 
 These features are completely portable and can be used from any hosting environment, i.e. Windows Azure Cloud Services, Windows Azure Web Sites or some other hosting option.
 
-As you might guess from above, as part of this work two new **native providers for Windows Azure Cache** have been written and are shipped built-in with Orchard. No more need to add the *memcached shim* to your deployment, and no more need to install custom modules with third-party *memcached* providers in order to use Windows Azure Cache (which also means better performance as the *memcached* compatibility layer is not used). The new native providers have been designed and tested to work with both Windows Azure Role-based Cache and Windows Azure Shared Caching.
-
-> NOTE: In Windows Azure SDK 2.1 for unknown reasons Microsoft decided to include separate versions of the Windows Azure Cache client library, one that works with role-based cache and another (older) version that works with shared caching. This might be because shared caching is being decommissioned and Microsoft didn't want to invest in bringing it up to date to match the newer client library. Until this discrepancy is resolved you will need to change the references to target Windows Azure Shared Caching.
+As you might guess from above, as part of this work two new **native providers for Windows Azure Cache** have been written and are shipped built-in with Orchard. No more need to add the *memcached shim* to your deployment, and no more need to install custom modules with third-party *memcached* providers in order to use Windows Azure Cache (which also means better performance as the *memcached* compatibility layer is not used). The new native providers have been designed and tested to work with both Windows Azure Role-based Cache and the newly released Windows Azure Cache Service.
 
 See the following topics for more information:
 
