@@ -15,7 +15,11 @@ Before you can deploy Orchard to Windows Azure you need the following:
 
 If you only plan to run a single role instance, deploying is extremely simple. Starting with version 1.7.1 of Orchard, deployment can be performed using the Windows Azure tooling in Visual Studio.
 
-Start by opening the `Orchard.Azure.sln` solution in Visual Studio.
+By default, Orchard uses a local file-based SQL Server CE database. This database won't suffice when running in a Windows Azure Cloud Service, because the Windows Azure fabric controller may decide to reimage your role instance at any time, without warning. When that happens, anything that has been written to the local hard drive in your role instance VM since it was created is lost, which means any changes made to the site since it was first deployed will be lost.
+
+Obviously that's not acceptable, so we need to instead store the data in a shared database that will not be affected by role instance reimaging. To do this you need to create a Windows Azure SQL database that will be used to store Orchard data. You will configure Orchard to use this database later during setup.
+
+With that out of the way, let's start by opening the `Orchard.Azure.sln` solution in Visual Studio.
 
 The only thing you have to configure before starting the deployment process is the storage account to use for shell settings. To do this, in *Solution Explorer*, navigate to `Orchard.Azure.CloudService` project, double click the `Orchard.Azure.Web` role and navigate to the *Settings* tab. Configure the connection string of the storage account you want to use:
 
@@ -25,7 +29,9 @@ Now to deploy the cloud service, right click the `Orchard.Azure.CloudService` pr
 
 ![](../Attachments/Deploying-Orchard-to-Windows-Azure/publish.png)
 
-Once deployment has successfully completed, browse to the newly deployed Orchard site and go through setup.
+Once deployment has successfully completed, browse to the newly deployed Orchard site and go through setup. Specify the connection string to the Windows Azure SQL Database you created earlier:
+
+![](../Attachments/Deploying-Orchard-to-Windows-Azure/setup-sql-azure.png)
 
 Congratulations! Orchard is now fully configured for a single role instance on Windows Azure.
 
@@ -37,30 +43,27 @@ Using multiple instances (also known as a *web farm* or a *server farm*) with Or
 
 In the most basic default configuration of Orchard, multiple instances can cause problems: 
 
-1. Orchard uses a local file-based SQL Server CE database. Obviously this won't work as each instance will have its own separate database.
-2. Orchard media files are stored in the local file system. This won't work as the file systems or the different instances will soon start to diverge as users add/remove media.
-3. Orchard output caching and database caching (NHibernate second-level cache) use local memory for storage. This won't work as content might be updated on one instance and any cached copies invalidated there, while other instances continue unaware of this change.
-4. Session state is stored in local memory. This won't work because the cloud service load balancer has no session affinity so users will lose their state when moving between instances.
+1. Orchard media files are stored in the local file system. This won't work as the file systems or the different instances will soon start to diverge as users add/remove media.
+2. Orchard output caching and database caching (NHibernate second-level cache) use local memory for storage. This won't work as content might be updated on one instance and any cached copies invalidated there, while other instances continue unaware of this change.
+3. Session state is stored in local memory. This won't work because the cloud service load balancer has no session affinity so users will lose their state when moving between instances.
 
 Luckily, Orchard has features to overcome each of these complications, but you must configure and enable them.
 
 ### Preparing for multiple instances
 
-**Problem #1** means we need to store the data in a shared database. To do this you need to create a Windows Azure SQL database that will be used to store Orchard data. You will configure Orchard to use this database later during setup.
-
-Next, configure the number of instances you want to use in the cloud service project. In *Solution Explorer*, navigate to `Orchard.Azure.CloudService` project, double click the `Orchard.Azure.Web` role and navigate to the *Configuration* tab. Change the *Instance count* value from `1` to some higher number:
+First off, configure the number of instances you want to use in the cloud service project. In *Solution Explorer*, navigate to `Orchard.Azure.CloudService` project, double click the `Orchard.Azure.Web` role and navigate to the *Configuration* tab. Change the *Instance count* value from `1` to some higher number:
 
 ![](../Attachments/Deploying-Orchard-to-Windows-Azure/configure-instances.png)
 
 > NOTE: You can also leave the instance count at `1` and change it after deployment through the Windows Azure management portal.
 
-**Problem #2** we will deal with by enable the *Windows Azure Media Storage* feature later. To prepare for this, configure the storage accounts to use for shell settings and media storage. To do this, navigate to the *Settings* tab. Change the following settings to the storage account connection strings you want to use. You can use the same storage account for both, or any combination of different storage accounts:
+**Problem #1** in the list above we will deal with by enable the *Windows Azure Media Storage* feature later. To prepare for this, configure the storage accounts to use for shell settings and media storage. To do this, navigate to the *Settings* tab. Change the following settings to the storage account connection strings you want to use. You can use the same storage account for both, or any combination of different storage accounts:
 
 ![](../Attachments/Deploying-Orchard-to-Windows-Azure/configure-connection-strings.png)
 
-**Problem #3** we will address by enabling the *Windows Azure Output Cache* and *Windows Azure Database Cache* features. These don't need any preparation, as the cloud service project is already preconfigured for co-located role-based caching with the appropriate named caches configured.
+**Problem #2** will be addressed by enabling the *Windows Azure Output Cache* and *Windows Azure Database Cache* features. These don't need any preparation, as the cloud service project is already preconfigured for co-located role-based caching with the appropriate named caches configured.
 
-**Problem #4** is already taken care of for us. The cloud service is preconfigured to use the ASP.NET session state provider for Windows Azure Cache. This takes effect immediately after we deploy.
+**Problem #3** is already taken care of for us. The cloud service is preconfigured to use the ASP.NET session state provider for Windows Azure Cache. This takes effect immediately after we deploy.
 
 This section above describes only the most basic configuration steps and options. More detailed steps for enabling the *Windows Azure Media Storage*, *Windows Azure Output Cache* and *Windows Azure Database Cache* features for a Windows Azure Cloud Service, as well as more advanced configuration options, are described the following topics:
 
@@ -91,19 +94,19 @@ Deploying to a Windows Azure Web Site is also done using the Windows Azure tooli
 
 As with a cloud service, if you only plan to run a single instance, deploying is extremely simple.
 
+The steps for using Windows Azure SQL Database as the database are the same as for a cloud service (create a Windows Azure SQL database beforehand and specify its connection string during setup).
+
 Start by opening the `Orchard.sln` solution in Visual Studio.
 
 To deploy the web site, right click the `Orchard.Web` project in *Solution Explorer* and select *Publish*, and follow the instructions in the publishing wizard. Click the *Import* button to import a web deploy publishing configuration from your Windows Azure subscriptions. How to use the Windows Azure publishing tools in Visual Studio is beyond the scope of this topic, but they are pretty self-explanatory.
 
-Once deployment has successfully completed, browse to the newly deployed Orchard site and go through setup.
+Once deployment has successfully completed, browse to the newly deployed Orchard site and go through setup. Specify the connection string to the Windows Azure SQL Database you created earlier.
 
 Congratulations! Orchard is now fully configured for a single instance Windows Azure Web Site.
 
 ## Using multiple instances
 
 As with cloud services, you need to do a little more configuration if you plan to scale out your web site to more than one instance.
-
-The steps for using Windows Azure SQL Database as the database are the same as for a cloud service (create a Windows Azure SQL database beforehand and specify its connection string during setup).
 
 The steps for enabling the *Windows Azure Media Storage*, *Windows Azure Output Cache* and *Windows Azure Database Cache* features for a Windows Azure Web Site are described the following topics:
 
