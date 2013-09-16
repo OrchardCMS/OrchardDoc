@@ -142,21 +142,6 @@ Contributors
 This software would not exist without the community. In particular, for this release,
 we should all be grateful to the following people who contributed patches and features:
 
-
-- Andrew Connell ([andrewconnell](http://www.codeplex.com/site/users/view/andrewconnell))
-- Benedek Farkas ([nightwolf226](https://www.codeplex.com/site/users/view/nightwolf226))
-- Damien Clarke ([damoclarke](http://www.codeplex.com/site/users/view/damoclarke))
-- Jacky Hsu ([twomeetings](http://www.codeplex.com/site/users/view/twomeetings))
-- Jorge Gamba ([jorgegamba](http://www.codeplex.com/site/users/view/jorgegamba))
-- ([Jimasp](http://www.codeplex.com/site/users/view/Jimasp))
-- Kees Schouten ([Znowman](http://www.codeplex.com/site/users/view/Znowman))
-- Ken Wilkinson ([wilk](http://www.codeplex.com/site/users/view/wilk))
-- Matt Melling ([kobowi](http://www.codeplex.com/site/users/view/kobowi))
-- Mirza Dervišević ([Mirza](http://www.codeplex.com/site/users/view/Mirza))
-- Rafael Medeiros ([rafaelmedeiros](http://www.codeplex.com/site/users/view/rafaelmedeiros))
-- Sergey Romanchuk ([Rezet](http://www.codeplex.com/site/users/view/Rezet))
-- Stanley Goldman ([StanleyGoldman](http://www.codeplex.com/site/users/view/StanleyGoldman))
-- Travis James ([GQAdonis](http://www.codeplex.com/site/users/view/GQAdonis))
 - Antoine Griffard ([agriffard](http://www.codeplex.com/site/users/view/agriffard))
 - Bertrand Le Roy ([bertrandleroy](http://www.codeplex.com/site/users/view/bertrandleroy))
 - ([bsdr](https://www.codeplex.com/site/users/view/bsdr))
