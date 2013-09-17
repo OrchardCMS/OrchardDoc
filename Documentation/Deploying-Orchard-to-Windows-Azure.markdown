@@ -11,7 +11,7 @@ Before you can deploy Orchard to Windows Azure you need the following:
 * The Orchard source code
 * An active Windows Azure subscription
 
-# Deploying Orchard to a Windows Azure Cloud Service
+# Deploying Orchard to a Windows Azure Cloud Service 
 
 If you only plan to run a single role instance, deploying is extremely simple. Starting with version 1.7.1 of Orchard, deployment can be performed using the Windows Azure tooling in Visual Studio.
 
@@ -20,6 +20,8 @@ By default, Orchard uses a local file-based SQL Server CE database. This databas
 Obviously that's not acceptable, so we need to instead store the data in a shared database that will not be affected by role instance reimaging. To do this you need to create a Windows Azure SQL database that will be used to store Orchard data. You will configure Orchard to use this database later during setup.
 
 With that out of the way, let's start by opening the `Orchard.Azure.sln` solution in Visual Studio.
+
+> NOTE: If you have AppFabric installed on your local machine (or have AppFabric-related assemblies in the GAC for some other reason) you need to make sure all the following assembly references in the `Orchard.Azure.Web` project have *Copy Local* set to *True* before publishing: `Microsoft.ApplicationServer.\*`, `Microsoft.Data.\*`, `Microsoft.Web.\*`, `Microsoft.WindowsAzure.\*` and `Microsoft.WindowsFabric.\*`.
 
 The only thing you have to configure before starting the deployment process is the storage account to use for shell settings. To do this, in *Solution Explorer*, navigate to `Orchard.Azure.CloudService` project, double click the `Orchard.Azure.Web` role and navigate to the *Settings* tab. Configure the connection string of the storage account you want to use:
 
