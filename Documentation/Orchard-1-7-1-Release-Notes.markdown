@@ -53,24 +53,25 @@ What's new?
 Orchard 1.7.1 fixes bugs and introduces the following features:
 
 * *Azure*: (Daniel Stolt)
-  * New Orchard.Azure 
-    * Media Library Storage
-    * Output Cache using Windows Azure Cache Services
-    * Database Cache using Windows Azure Cache Services
+	* New Orchard.Azure 
+    	* Media Library Storage in Windows Azure Blob Storage
+    	* Output Cache using Windows Azure Cache Services
+    	* Database Cache using Windows Azure Cache Services
     * Upgrade to Windows Azure SDK 2.1
+    * For more information see [What's new for Windows Azure in Orchard 1.7.1](Whats-new-for-Windows-Azure-in-Orchard-1-7-1)
 * Visual Studio
-  * Deploy Cloud Service directly from Visual Studio
-  * Better MsDeploy and Publish support
-  * Use of Xml transform files (Web.Release.config) for web.config, log4net.config and HostComponents.config
+	* Deploy Cloud Service directly from Visual Studio
+	* Better MsDeploy and Publish support
+	* Use of XML transform files (Web.Release.config) for Web.config, log4net.config and HostComponents.config
 * New "check all" options in the admin (Richard Garside)
 * *Orchard.OutputCache*: Fixed several bugs related to custom content returning blank pages
 * *Orchard.Tokens*: New {Content.Body}, {Text.TrimEnd} and also Media Library Picker Field tokens
 * *Orchard.ImportExport*: 
-  * Permissions
-  * Media parts
+	* Permissions
+	* Media parts
 * *Orchard.Workflows*: 
-  * New Custom Forms event activity
-  * Decoupled specialized from the Workflows modules, and moved some activities to specific modules
+	* New Custom Forms event activity
+	* Decoupled specialized from the Workflows modules, and moved some activities to specific modules
 * *Orchard.MediaLibrary*: Fixed XmlRpcHandler allowing blogging clients to work with Media Library
 * *Orchard.Indexing*: Added the container id to the search index
 * *Orchard.Antispam*: New JavaScriptAntiSpamPart (Lombiq)
