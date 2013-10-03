@@ -3,7 +3,7 @@ A new version of a CMS is an important event in the life of a site, and transiti
 
 # A Word of Warning
 
-No matter which method you choose to use to upgrade your site, you are going to have to overwrite a lot of files in the process. This should emphasize the requirement to backup first, but it should also call your attention to any modifications you made to common files. For example, if you made any modifications to core modules and/or the framework (something you shouldn't do: custom modules and themes should be used instead), you will loose them, or you will need to re-apply your changes after the upgrade. Any modification you made to web.config or other common files will also need to be re-applied after the process.
+No matter which method you choose to use to upgrade your site, you are going to have to overwrite a lot of files in the process. This should emphasize the requirement to backup first, but it should also call your attention to any modifications you made to common files. For example, if you made any modifications to core modules and/or the framework (something you shouldn't do: custom modules and themes should be used instead), you will lose them, or you will need to re-apply your changes after the upgrade. Any modification you made to web.config or other common files will also need to be re-applied after the process.
 
 If you made modifications to permissions on the files and folders inside your site, they may also get reset in the upgrade and need to be re-applied.
 
