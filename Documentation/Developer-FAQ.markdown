@@ -1,22 +1,21 @@
-
 ## What are the dependencies?
 Orchard uses a number of external libraries. They can all be found under \lib directory in your enlistment, as well as are enumerated in [Orchard dependencies and libraries](Orchard-dependencies-and-libraries).
 
 ## What framework versions does Orchard support?
-Orchard currently supports the 4.0 version of the .NET framework.
+Up to version 1.7 Orchard supports .NET 4.0. As of version 1.8, Orchard is going to run on .NET 4.5 and IIS 7 (or newer).
 
-## What are the default and 1.x branches? Which one should I be using?
+## What are the master and 1.x branches? Which one should I be using?
 
-Those are the 2 branches corresponding to trunk (default) and development (1.x). 
+Those are the 2 branches corresponding to trunk (master) and development (1.x). 
 
 All the active feature work is being done by the core team in the 1.x branch.
-Whenever a new release is ready, changes get merged from 1.x to default.
-Default is a stable branch and is normally always in a "green" state.
+Whenever a new release is ready, changes get merged from 1.x to master.
+Master is a stable branch and is normally always in a "green" state.
 This should be the branch you would ideally work with.
 1.x is the most recent branch in terms of activity but it can at times be unstable due to ongoing work.
 Everything in 1.x in terms of the public surface is also more volatile: APIs can be changed at will and daily,
 making a potential external contributor working on the branch more difficult.
-For these reasons, it is advised to use default for your development purposes, and 1.x only if you're interested
+For these reasons, it is advised to use master for your development purposes, and 1.x only if you're interested
 in checking out how brand new features are being developed.
 
 ## What types of extensions can I write?
