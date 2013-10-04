@@ -3,10 +3,42 @@ The feature roadmap is subject to change as the project evolves, and we welcome 
 
 ### Current Priorities
 
-Priorities for Orchard 1.7:
+Priorities for Orchard 1.8:
 
-* Comment refactoring with spam protection
-* TBD... See 1.7 threads under <http://orchard.codeplex.com/discussions/topics/5042/announcements>
+This release is expected to be released for November 2013
+
+* Migration to Microsoft .NET 4.5 (on track)
+  * Upgrade project targets
+  * Remove unnecessary Medium Trust support code
+  * Define 4.5 framework in web.config files
+  * Erik ([erik_oppedijk](https://www.codeplex.com/site/users/view/erik_oppedijk)) owns this contribution
+* Upgrade ASP.NET Web Stack to newest versions (not started)
+  * ASP.NET MVC5
+  * WebAPI 2
+  * Razor 3
+  * Identity
+* Put back the List module with improved functionnalities
+  * The goal is to be able to use it to mimick the Blogs module (on track)
+  * Sipke ([sfmskywalker](http://www.codeplex.com/site/users/view/sfmskywalker)) owns this contribution
+* Performance improvements by unleashing the power of the document db architecture built in Orchard (started)
+  * Sebastien ([sebastienros](http://www.codeplex.com/site/users/view/sebastienros)) owns this contribution
+* Integrate OWIN middlewares suppport (started)
+* Improved
+  * Search support (on track)
+  * Custom media types support (on track)
+  * Media updates (started) 
+* Improved Wrofklow module (on track)
+  * Error/Exception branches support
+  * Loop activities
+  * Piotr ([pszmyd](https://www.codeplex.com/site/users/view/pszmyd)) owns this contribution
+
+Priorities for Orchard 1.7.2
+
+This release might not be necessary if 1.8 is progressing fast enough.
+
+* New SSL module integrated into Core
+  * Bertrand ([bertrandleroy](http://www.codeplex.com/site/users/view/bertrandleroy)) owns this contribution
+* Bug fixes
 
 ### Currently Implemented (Partially or in Full)
 
@@ -15,8 +47,8 @@ Priorities for Orchard 1.7:
 * Content zones within pages
 * Content - Different content types/metadata, viewers and editors for content 
 * Content editing and publication (drafts, scheduling, preview)
-* Extensibility - Initial content type and composability infrastructure (based on MVC2 areas)
-* Media management (basic support for uploading and rendering images in content)
+* Extensibility - Initial content type and composability infrastructure (based on MVC areas)
+* Media management (support for any media type, extensibility, thumbnails, online image editor)
 * Users, roles, membership and profile data (Users/Roles/Permissions, Mgmt)
 * XML-RPC (Live Writer, MetaWebBlog) support for blogs
 * Basic blog (create and manage blogs and posts, RSS/Atom, draft/publish, archives)
@@ -27,12 +59,12 @@ Priorities for Orchard 1.7:
 * Setup
 * Simple navigation
 * Multi-tenancy
-* Azure support
+* Azure support (Blob Storage, Cache, Database Cache)
 * Command-line tooling
 * Event model (a.k.a. plugins)
 * App Localization (of admin panel, modules, themes)
 * Content Localization (multi-lingual sites)
-* Search and Indexing
+* Search and Indexing (with search API)
 * Module extensibility API and packaging
 * Scaffolding of Modules (cmd-line)
 * Creation of arbitrary content types and items - fields, parts
@@ -70,10 +102,14 @@ Priorities for Orchard 1.7:
 * NHibernate 3 and 2nd level caching
 * ASP.NET MVC 4 / WebAPI
 * MySQL provider
+* Workflows
+* Output cache
+* Tokens
+* Custom forms
+* Content permissions
 
 ### Areas of Focus for Future Iterations (Backlog, Not in Priority Order)
 
-* Publishing - Workflow/permissions, draft approval, history (restore from)
 * Multiple templates for pages
 * SEO - Semantic URLs, metas/keywords, Web standards, sitemap
 * Navigation - Navigation management, front-end UI (menus, breadcrumbs)
@@ -83,4 +119,5 @@ Priorities for Orchard 1.7:
 * Performance - Caching, optimization, script combining/minification
 * Analytics - Reporting, site-use statistics
 * Mobile - Support for management, moderation, publishing from mobile device
+* Audit Trail
 * Other Domain-specific packages - Commerce, Wiki, Forums, Ads, etc
