@@ -3,7 +3,7 @@ The feature roadmap is subject to change as the project evolves, and we welcome 
 
 ### Current Priorities
 
-Priorities for Orchard 1.8:
+#### Priorities for Orchard 1.8:
 
 This release is expected to be released for November 2013
 
@@ -27,12 +27,12 @@ This release is expected to be released for November 2013
   * Search support (on track)
   * Custom media types support (on track)
   * Media updates (started) 
-* Improved Wrofklow module (on track)
+* Improved Workflow module (on track)
   * Error/Exception branches support
   * Loop activities
   * Piotr ([pszmyd](https://www.codeplex.com/site/users/view/pszmyd)) owns this contribution
 
-Priorities for Orchard 1.7.2
+#### Priorities for Orchard 1.7.2
 
 This release might not be necessary if 1.8 is progressing fast enough.
 
@@ -95,7 +95,7 @@ This release might not be necessary if 1.8 is progressing fast enough.
 * Rules
 * Forms API
 * [Autoroute](http://orchard.codeplex.com/discussions/274916)
-* [Projector](http://orchard.codeplex.com/discussions/274915)
+* [Projections](http://orchard.codeplex.com/discussions/274915)
 * [Core Field Types](http://orchard.codeplex.com/discussions/274918)
 * [Admin placement](http://orchard.codeplex.com/discussions/348649)
 * [Spam Protection](http://orchard.codeplex.com/discussions/348654)
