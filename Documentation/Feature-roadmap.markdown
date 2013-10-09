@@ -23,9 +23,9 @@ This release is expected to be released for November 2013
 * Performance improvements by unleashing the power of the document db architecture built in Orchard (started)
   * Sebastien ([sebastienros](http://www.codeplex.com/site/users/view/sebastienros)) owns this contribution
 * Integrate OWIN middlewares suppport (started)
-* Improved
-  * Search support (on track)
-  * Custom media types support (on track)
+* Improved Media Library
+  * Search support (done)
+  * Custom media types support (done)
   * Media updates (started) 
 * Improved Workflow module (on track)
   * Error/Exception branches support
@@ -38,6 +38,9 @@ This release might not be necessary if 1.8 is progressing fast enough.
 
 * New SSL module integrated into Core
   * Bertrand ([bertrandleroy](http://www.codeplex.com/site/users/view/bertrandleroy)) owns this contribution
+* Performance improvements
+  * Some indexes are added by default to the core tables
+  * New eager fetching filter in Orchard.Projections
 * Bug fixes
 
 ### Currently Implemented (Partially or in Full)
