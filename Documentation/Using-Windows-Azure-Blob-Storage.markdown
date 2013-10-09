@@ -55,6 +55,8 @@ To configure the connection string *before* deploying:
 3. Set the `Orchard.Azure.Media.StorageConnectionString` setting to be the connection string of the storage account in which you want to store media content.
 4. Deploy the cloud service.
 
+Example syntax for `[storageConnectionString]`: `DefaultEndpointsProtocol=http;AccountName=[blobAccount];AccountKey=[access key for Azure storage]`
+
 To configure the connection string *after* deploying:
 
 1. Deploy the cloud service.
@@ -63,9 +65,11 @@ To configure the connection string *after* deploying:
 3. Set it to be the connection string of the storage account in which you want to store media content.
 4. Click *Save*.
 
+> NOTE: For Azure storage accounts using a custom domain, add `BlobEndpoint=http://mycustomdomain.foo.com;` to the start of the connection string.
+
 You can now enable the feature *Windows Azure Media Storage* in the admin dashboard.
 
-> NOTE: For multi-tenancy scenarios the `Orchard.Azure.Media.StorageConnectionString` setting can optionally be prefixed with a tenant name. 
+> NOTE: For multi-tenancy scenarios the `Orchard.Azure.Media.StorageConnectionString` setting can optionally be prefixed with a tenant name. For example, `<add key="Default:Orchard.Azure.Media.StorageConnectionString" value=".."/>` and `<add key="Tenant1:Orchard.Azure.Media.StorageConnectionString" value=".."/>`.
 
 ### Enabling for Windows Azure Web Sites
 
@@ -85,7 +89,7 @@ Here's an example configuration:
 		<add key="Orchard.Azure.Media.StorageConnectionString" value="[storageConnectionString]"/>
 	</appSettings>
 
-The syntax of the `[storageConnectionString]` looks like this: `DefaultEndpointsProtocol=http;AccountName=[blobAccount];AccountKey=[primary/secondary access key for azure storage account]`
+Example syntax for `[storageConnectionString]`: `DefaultEndpointsProtocol=http;AccountName=[blobAccount];AccountKey=[access key for Azure storage]`
 
 To configure the connection string *after* deploying:
 
@@ -94,7 +98,7 @@ To configure the connection string *after* deploying:
 2. Under *App settings* add a setting named `Orchard.Azure.Media.StorageConnectionString` and set its value to be the connection string of the storage account in which you want to store media content.
 4. Click *Save*.
 
-> NOTE: If you are using a custom domain, add the following to the start of the connection string: `BlobEndpoint=http://mycustomdomain.foo.com;`. This will not update existing references, but it will apply to all new references.
+> NOTE: For Azure storage accounts using a custom domain, add `BlobEndpoint=http://mycustomdomain.foo.com;` to the start of the connection string.
 
 You can now enable the feature *Windows Azure Media Storage* in the admin dashboard.
 
