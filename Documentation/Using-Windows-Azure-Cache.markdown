@@ -169,7 +169,7 @@ Here's the default role configuration when deploying to a cloud service:
 
 For multi-tenancy scenarios each setting can optionally be prefixed with a tenant name followed by colon, such as `SomeTenant:Orchard.Azure.OutputCache.HostIdentifier`. Whenever the caching providers read configuration settings they will always first look for a setting specific for the current tenant, and if no such setting exists, fallback to the default non-prefixed setting.
 
-Here's an example configuration with two tenants, both using output caching with a named cache `OutputCache` on the Windows Azure Cache Service, but each using its own cache service instance:
+Here's an example Azure Web Site configuration with two tenants, both using output caching with a named cache `OutputCache` on the Windows Azure Cache Service, but each using its own cache service instance:
 
 	<appSettings>
 		<!-- Settings for Tenant1 -->

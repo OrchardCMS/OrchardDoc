@@ -99,3 +99,16 @@ You can now enable the feature *Windows Azure Media Storage* in the admin dashbo
 ### Enabling for any other hosting
 
 To enable the feature when running Orchard in any other hosting environment, use the `Web.config` method described above. Once the connection string has been added to the `<appSettings>` element, can enable the feature *Windows Azure Media Storage* in the admin dashboard.
+
+### Multi-tenancy configuration
+
+For multi-tenancy scenarios each setting can optionally be prefixed with a tenant name followed by colon, such as `SomeTenant:Orchard.Azure.Media.StorageConnectionString`. Whenever the media storage provider reads configuration settings it will always first look for a setting specific for the current tenant, and if no such setting exists, fallback to the default non-prefixed setting.
+
+Here's an example Azure Web Site configuration with two tenants, both using Windows Azure Blob Storage is the underlying file system implementation for storing media, but each using its own separate storage account:
+
+	<appSettings>
+		<!-- Setting for Tenant1 -->
+		<add key="Tenant1:Orchard.Azure.Media.StorageConnectionString" value="[storageConnectionString1]" />
+		<!-- Setting for Tenant2 -->
+		<add key="Tenant2:Orchard.Azure.Media.StorageConnectionString" value="[storageConnectionString2]" />
+	</appSettings>
