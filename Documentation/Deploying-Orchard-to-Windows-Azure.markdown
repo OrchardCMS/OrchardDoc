@@ -100,6 +100,8 @@ The steps for using Windows Azure SQL Database as the database are the same as f
 
 Start by opening the `Orchard.sln` solution in Visual Studio.
 
+Right click the solution node in *Solution Explorer* and select *Rebuild*. This step is necessary to get all modules and themes compiled, thereby having their resulting DLL files included in the published package; compilation of modules and themes does not happen automatically since they are not referenced by the `Orchard.Web` project being published.
+
 To deploy the web site, right click the `Orchard.Web` project in *Solution Explorer* and select *Publish*, and follow the instructions in the publishing wizard. Click the *Import* button to import a web deploy publishing configuration from your Windows Azure subscriptions. How to use the Windows Azure publishing tools in Visual Studio is beyond the scope of this topic, but they are pretty self-explanatory.
 
 Once deployment has successfully completed, browse to the newly deployed Orchard site and go through setup. Specify the connection string to the Windows Azure SQL Database you created earlier.
