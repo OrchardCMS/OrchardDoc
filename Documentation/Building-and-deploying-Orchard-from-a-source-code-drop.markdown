@@ -22,4 +22,4 @@ Make sure the directory is empty.
 7. Create a Media folder under the IIS application's root and give write access.
 8. Browse to the application. You should see the setup screen at this point.
 
-Note: if you are using IIS6, you need to configure the star mapping: <http://haacked.com/archive/2008/11/26/asp.net-mvc-on-iis-6-walkthrough.aspx>.
+Note: IIS6 is not supported.
