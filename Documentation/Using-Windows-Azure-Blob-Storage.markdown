@@ -110,7 +110,7 @@ To ensure the public URLs for your media files contain your custom domain name, 
 
 Here's an example connection string using a custom domain name:
 
->  BlobEndpoint=http://blobs.mycustomdomain.com;AccountName=mystorageaccount;AccountKey=KauG3A5f...An3QlW5dA==
+	BlobEndpoint=http://blobs.mycustomdomain.com;AccountName=mystorageaccount;AccountKey=KauG3A5f...An3QlW5dA==
 
 ### Multi-tenancy configuration
 
