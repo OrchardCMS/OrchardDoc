@@ -100,6 +100,18 @@ You can now enable the feature *Windows Azure Media Storage* in the admin dashbo
 
 To enable the feature when running Orchard in any other hosting environment, use the `Web.config` method described above. Once the connection string has been added to the `<appSettings>` element, can enable the feature *Windows Azure Media Storage* in the admin dashboard.
 
+### Using a custom domain name for blob storage
+
+Windows Azure Blob Storage allows the use of your own custom domain instead of the default endpoint hostname `[mystorageaccount].blob.core.windows.net`.
+
+However, registering and configuring a custom domain in your storage account is not enough to make Orchard use it. Unless you also reconfigure your storage connection string to take advantage of your custom domain, Orchard will continue to generate public URLs for the media files stored in Windows Azure Blob Storage based on the default `[mystorageaccount].blob.core.windows.net` hostname.
+
+To ensure the public URLs for your media files contain your custom domain name, modify your storage account connection string accordingly. See the topic [Configuring Connection Strings](http://msdn.microsoft.com/en-us/library/windowsazure/ee758697.aspx) in the Windows Azure Storage documentation for details.
+
+Here's an example connection string using a custom domain name:
+
+>  BlobEndpoint=http://blobs.mycustomdomain.com;AccountName=mystorageaccount;AccountKey=KauG3A5f...An3QlW5dA==
+
 ### Multi-tenancy configuration
 
 For multi-tenancy scenarios each setting can optionally be prefixed with a tenant name followed by colon, such as `SomeTenant:Orchard.Azure.Media.StorageConnectionString`. Whenever the media storage provider reads configuration settings it will always first look for a setting specific for the current tenant, and if no such setting exists, fallback to the default non-prefixed setting.
