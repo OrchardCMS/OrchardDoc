@@ -1,4 +1,3 @@
-
 # Building up a menu structure
 
 > This information is for Orchard version >= 1.5.1.0.
@@ -39,7 +38,7 @@ that the new menu item that you created was added to the Main Menu.
 # Creating a submenu
 
 Creating a submenu is very easy:
-Navigate to the **Navigation** section. If you **hover** an already added Menu Item with your mouse, you'll see
+Navigate to the **Navigation** section. If you **hover** over an already added Menu Item with your mouse, you'll see
 that you can drag and drop the Menu Item.
 The trick is to simply drag the Menu Item a bit to the right until it snaps to a sub container. 
 Now you can visually create your navigation hierarchy without having to configure anything.
