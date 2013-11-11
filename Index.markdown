@@ -3,7 +3,7 @@
 [راهنمای سبک ویرایش مستندات](Documentation/Documentation-style-guidelines)
 و [ارائه پیشنهادات جهت موضوع جدید](Documentation/Suggestions-for-New-Topics).
 
-## شروع با کار ##
+## شروع به کار ##
 * [نصب اورچارد](Documentation/Installing-Orchard)
 * [نصب دستی اورچارد با استفاده از فایل زیپ](Documentation/Manually-installing-Orchard-zip-file)
 * [کار با اورچارد در محیط WebMatrix](Documentation/Working-with-Orchard-in-WebMatrix)
