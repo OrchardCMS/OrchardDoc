@@ -1,12 +1,12 @@
-> **Note:** This documentation site, like all of Orchard, is a community effort.
-If you would like to contribute, please see
-[Documentation Style Guidelines](Documentation/Documentation-style-guidelines)
-and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
+> **توجه:** این سامانه مستندات ، همانند پروژه اورچارد، حاصل تلاش گروهی از دوستان میباشد.
+در صورت تمایل به همکاری به مستنات زیر توجه نمایید:
+[راهنمای سبک ویرایش مستندات](Documentation/Documentation-style-guidelines)
+و [ارائه پیشنهادات جهت موضوع جدید](Documentation/Suggestions-for-New-Topics).
 
-## Getting Started ##
-* [Installing Orchard](Documentation/Installing-Orchard)
-* [Manually Installing Orchard Using a .zip File](Documentation/Manually-installing-Orchard-zip-file)
-* [Working with Orchard in WebMatrix](Documentation/Working-with-Orchard-in-WebMatrix)
+## شروع با کار ##
+* [نصب اورچارد](Documentation/Installing-Orchard)
+* [نصب دستی اورچارد با استفاده از فایل زیپ](Documentation/Manually-installing-Orchard-zip-file)
+* [کار با اورچارد در محیط WebMatrix](Documentation/Working-with-Orchard-in-WebMatrix)
 * [Getting Around the Dashboard](Documentation/Getting-around-the-dashboard)
 * [Building Your First Orchard Site](Documentation/Getting-Started)
 * [Navigation and Menus](Documentation/Navigation-and-menus)

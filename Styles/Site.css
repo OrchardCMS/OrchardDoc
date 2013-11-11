@@ -6,7 +6,7 @@ table { border-collapse:collapse; border-spacing:0; }
 fieldset,img { border:0; }
 address,caption,cite,code,dfn,em,strong,th,var { font-style:normal; font-weight:normal; }
 ol,ul { list-style:none; }
-caption,th { text-align:left; }
+caption,th { text-align:right; }
 h1,h2,h3,h4,h5,h6 { font-size:100%; font-weight:normal; }
 /*q:before,q:after { content:�; }*/
 abbr,acronym { border:0; }
@@ -16,16 +16,17 @@ abbr,acronym { border:0; }
 html {height: 100%;}
 
 body {
-	font: normal 100% Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	background:url(Images/background_pageTop.gif) top left repeat-x #f6faea;
+	direction:rtl;
+	font: normal 100% Tahoma, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background:url(Images/background_pageTop.gif) top right repeat-x #f6faea;
 	height: 100%;
-	text-align:left;
+	text-align:right;
 	color:#3e483c;
 }
 
 
 /* ---------- Headings and defaults ---------- */
-h1,h2,h3,h4,h5,h6,legend {padding:4px 0; font-family:"Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif; font-weight:normal; font-style: normal;color:#27320a;}
+h1,h2,h3,h4,h5,h6,legend {padding:4px 0; font-family:Tahoma, "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif; font-weight:normal; font-style: normal;color:#27320a;}
 
 h1 {font-size: 190%;}
 h2 {font-size: 150%;}
@@ -53,7 +54,7 @@ em {font-style:italic;}
 }
 
 input, label {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	color: #000000;
 	padding: 2px;
@@ -61,7 +62,7 @@ input, label {
 }
 
 select {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	color: #000000;
 	margin: 0px;
@@ -132,13 +133,13 @@ h1, h2, h3 {
 }
 
 a.editsectionlink {
-	float: right;
+	float: left;
 	font-size: 75%;
 	margin: 4px 0px 0px 0px;
 }
 
 code, pre {
-	font-family: Courier New, Lucida Console, Monospace;
+	font-family: Tahoma, Courier New, Lucida Console, Monospace;
 	font-size:95%;
 	color: #000000;
 	padding: 0px;
@@ -196,28 +197,28 @@ div.clear {
 	clear: both;
 }
 
-/* Div containing images alighed to the left */
-div.imageleft {
-	border: solid 1px #CCCCCC;
-	background-color: #F9F9F9;
-	padding: 4px;
-	margin-left: 0px;
-	margin-right: 8px;
-	margin-top: 4px;
-	margin-bottom: 4px;
-	float: left;
-}
-
 /* Div containing images alighed to the right */
 div.imageright {
 	border: solid 1px #CCCCCC;
 	background-color: #F9F9F9;
 	padding: 4px;
-	margin-left: 8px;
 	margin-right: 0px;
+	margin-left: 8px;
 	margin-top: 4px;
 	margin-bottom: 4px;
 	float: right;
+}
+
+/* Div containing images alighed to the left */
+div.imageleft {
+	border: solid 1px #CCCCCC;
+	background-color: #F9F9F9;
+	padding: 4px;
+	margin-right: 8px;
+	margin-left: 0px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	float: left;
 }
 
 /* Table containing images not aligned */
@@ -260,8 +261,7 @@ div.box {
 }
 
 #branding h1 a {
-	background:url(images/orchardLogo.jpg) no-repeat scroll 0 0;
-	float:left;
+	float:right;
 	display:block;
 	width:216px;
 	height:90px;
@@ -286,11 +286,11 @@ div.box {
 	margin:0;
 	padding:0;
 	list-style:none;
-	float:left;
+	float:right;
 }
 
 #navMain ul li {
-	float:left;
+	float:right;
 	margin:0 8px;
 }
 
@@ -332,10 +332,10 @@ html>body #ContainerDiv {height: auto;}
 
 /* Contains the Sidebar */
 #SidebarDiv {
-	float:right;
+	float:left;
 	padding:34px 10px 10px 10px;
 	width:225px;
-	background:url(Images/background_module.gif) no-repeat bottom right;
+	background:url(Images/background_module.gif) no-repeat bottom left;
 }
 
 #SidebarDiv h2 {
@@ -373,12 +373,12 @@ html>body #ContainerDiv {height: auto;}
 
 /* Contains the link to the page editing form (Edit.aspx) and history */
 #EditHistoryLinkDiv {
-	float: right;
+	float: left;
 	font-size: 75%;
 	padding: 24px 0 8px 0;
 }
 #EditLink, #HistoryLink, #ViewCodeLink, #DiscussLink, #BackLink, #PostReplyLink {
-	margin-left: 4px;
+	margin-right: 4px;
 	padding: 2px;
 	border: solid 1px #999999;
 	text-decoration: none;
@@ -414,7 +414,7 @@ p.editlink {font-size: 75%;}
 }
 
 #EditProviderListDiv {
-	float: right;
+	float: left;
 }
 
 /* Contains the page preview in the Edit.aspx page */
@@ -423,8 +423,8 @@ p.editlink {font-size: 75%;}
 
 
 blockquote {
-	border-left: solid 8px #DDDDDD;
-	margin-left: 16px;
+	border-right: solid 8px #DDDDDD;
+	margin-right: 16px;
 	padding: 0px 0px 2px 6px;
     margin: 10px 0 10px 0;
 }
@@ -434,7 +434,7 @@ blockquote {
 #TxtSearchBox {
 	font-size: 75%;
 	width: 160px;
-	background: url(Images/Search.png) no-repeat right center #b2b89d;
+	background: url(Images/Search.png) no-repeat left center #b2b89d;
 	background-color:#fff; /*Remove when search gets moved up to top branding area*/
 	margin:4px 0;
 	padding:3px;
@@ -447,7 +447,7 @@ blockquote {
 	width: 170px;
 	background-image: url(Images/Search.png);
 	background-repeat: no-repeat;
-	background-position: right center;
+	background-position: left center;
 	background-color: #FFFFFF;
 	border: solid 1px #CCCCCC;
 	margin: 1px;
@@ -488,30 +488,30 @@ span.signature {
 }
 
 .TocContainer h2 {
-    margin-left: 8px;
+    margin-right: 8px;
 }
 
 .TocContainer h3 {
-    margin-left: 16px;
+    margin-right: 16px;
 }
 
 .TocContainer h4 {
-    margin-left: 24px;
+    margin-right: 24px;
 }
 
 .TocContainer h5 {
-    margin-left: 32px;
+    margin-right: 32px;
 }
 
 .TocContainer h6 {
-    margin-left: 40px;
+    margin-right: 40px;
 }
 
 /* Search page begin */
 
 #SearchCatExtDiv {
-	float: right;
-	margin-left: 15px;
+	float: left;
+	margin-right: 15px;
 	background-color: #FFFFFF;
 }
 
@@ -592,11 +592,11 @@ span.signature {
 /* Extensions
 ----------------------------------------------------------*/
 
-.floatLeft {float: left;} /*Use this class to float anything to the left*/
+.floatright {float: right;} /*Use this class to float anything to the right*/
 
-.floatRight {float: right;}  /*Use this class to float anything to the right*/
+.floatleft {float: left;}  /*Use this class to float anything to the left*/
 
-.alignRight {text-align: right;}
+.alignleft {text-align: left;}
 
 .Inline {display: inline;}
 

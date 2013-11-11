@@ -9,40 +9,26 @@
         <link href="@Href("~/Styles/Site.css")" rel="stylesheet" />
         <link href="http://orchardproject.net/themes/orchardproject.net/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <script>(function(d){d.className="dyn "+d.className.substring(7,d.length);})(document.documentElement);</script> 
-        <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-20757794-1']);
-        _gaq.push(['_setDomainName', 'orchardproject.net']);
-        _gaq.push(['_trackPageview']);
-        (function () {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-        </script>
     </head>
     <body>
         <header id="HeaderDiv">
             <div id="branding">
-                <h1><a href="http://orchardproject.net/"><span class="displayText">Orchard Documentation</span></a></h1>
+                <h1><a href="http://www.orchardpro.ir"><span class="displayText">مستندات / راهنماهای اورچارد</span></a></h1>
             </div>
             <nav id="navMain">
                 <ul>
-                    <li><a href="http://orchardproject.net/">Home</a></li>
-                    <li><a href="http://orchardproject.net/download">Download</a></li>
-                    <li class="On"><a href="http://docs.orchardproject.net/">Documentation</a></li>
-                    <li><a href="http://orchardproject.net/gallery">Gallery</a></li>
-                    <li><a href="http://orchardproject.net/localize">Translate</a></li>
-                    <li><a href="http://orchardproject.net/contribution">Contribute</a></li>
-                    <li><a href="http://orchardproject.net/discussions">Discussions and Help</a></li>
-                    <li><a href="http://orchardproject.net/about">About Us</a></li>
+                    <li><a href="http://www.orchardpro.ir/">خانه</a></li>
+                    <li><a href="http://orchardproject.net/download">دانلود</a></li>
+                    <li class="On"><a href="http://docs.orchardpro.ir/">راهنما</a></li>
+                    <li><a href="http://orchardproject.net/gallery">گالری</a></li>
+                    <li><a href="http://www.orchardpro.ir/%D8%AA%D8%A7%D9%84%D8%A7%D8%B1-%DA%AF%D9%81%D8%AA%DA%AF%D9%88">تالار گفتگو</a></li>
                 </ul>
             </nav>
         </header>
         <div id="ContainerDiv">
             <div id="SidebarDiv">
                 <div id="SidebarContentDiv">
-                    <h2>Search</h2>
+                    <h2>جستجو</h2>
                     <form action="@Href("Search.cshtml")" method="GET">
                         <input class="txtsearchbox" type="text" name="q" value="@Request.QueryString["q"]"/><button type="submit" class="searchButton" title="Search">&raquo;</button>
                     </form>
@@ -51,7 +37,7 @@
                 <h2>Table of Contents</h2>
                 <nav class="TocContainer"><ol></ol></nav>
                 <div id="SidebarFooterDiv">
-                    <a href="@Page.EditUrl">Edit this page</a>
+                    <a href="@Page.EditUrl">ویرایش این صفحه</a>
                 </div>
                 }
             </div>
@@ -72,12 +58,8 @@
                 <div id="siteInfo">
                     <div id="siteInfoContent">
                         <ul>
-                        <li><a href="http://orchardproject.net">Home</a></li>
-                        <li><a href="mailto:ofeedbk@microsoft.com">Contact Us</a></li>
-                        <li><a href="http://orchardproject.net/about">About Us</a></li>
-                        <li><a href="http://orchardproject.net/TermsOfUse">Terms Of Use</a></li>
-                        <li><a href="http://orchardproject.net/PrivacyStatement">Privacy Statement</a></li>
-                        <li><a href="http://appharbor.com">Hosted and Powered by AppHarbor</a></li>
+                        <li><a href="http://www.orchardpro.ir">خانه</a></li>
+                        <li><a href="mailto:k1m@orchardpro.ir">تماس با ما</a></li>
                         </ul>
                     </div>
                 </div>
