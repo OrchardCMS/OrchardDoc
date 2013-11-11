@@ -14,21 +14,21 @@
 * [افزودن و مدیریت محتویات چند رسانه ای](Documentation/Adding-and-managing-media-content)
 * [مدیریت ویجت](Documentation/Managing-widgets)
 * [سامان دهی محتویات با استفاده از برچسب](Documentation/Organizing-content-with-tags)
-* [طراحی فرم دلخواه](Documentation/Creating-Custom-Forms "Use Custom Form to create subscribe and contact us pages in Orchard")
+* [طراحی فرم سفارشی](Documentation/Creating-Custom-Forms "استفاده از فرم های سفارشی برای ایجاد صفحه اشتراک و تماس با ما")
 
-## About the Project ##
-* [Orchard Concept Definitions](Documentation/Basic-Orchard-Concepts)
-* [A guide to all the built-in modules and features of Orchard](Documentation/Builtin-features)
-* [What's Happening Now?](Documentation/feature-roadmap)
-* [Frequently Asked Questions](Documentation/frequently-asked-questions)
+## درباره پروژه ##
+* [تعاریف مفهومی اورچارد](Documentation/Basic-Orchard-Concepts)
+* [یک راهنمای کلی برای تمام ماژول ها و ویژگی های ساخته شده در اورچارد](Documentation/Builtin-features)
+* [نقشه راه طراحی اورچارد](Documentation/feature-roadmap)
+* [پرسش و پاسخهای متداول](Documentation/frequently-asked-questions)
 
-## Tutorial Videos ##
+## ویدیوهای آموزشی ##
 
-* [Tutorial videos about Orchard](Documentation/Orchard-TV)
+* [ویدیوهای آموزشی درباره اورچارد](Documentation/Orchard-TV)
 
-## Documentation ##
+## مستندات ##
 
-* **Authoring Websites**
+* **نوشتن در وبسایت**
     * [Blogging with LiveWriter](Documentation/Blogging-with-LiveWriter)
     * [Creating Global-Ready Applications](Documentation/Creating-global-ready-applications)
     * [Search and Indexing](Documentation/Search-and-indexing)
