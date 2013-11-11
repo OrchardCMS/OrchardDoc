@@ -1,15 +1,15 @@
 ﻿@{
     var path = Request.PhysicalPath.Trim('\\');
     if (path == Request.PhysicalApplicationPath.Trim('\\')) {
-        Page.DocumentTitle = "Orchard Documentation";
+        Page.DocumentTitle = "مستندات / راهنماهای اورچارد";
         Page.Title = Page.DocumentTitle;
-        Page.EditUrl = "https://github.com/OrchardCMS/OrchardDoc/blob/master/Index.markdown";
+        Page.EditUrl = "https://github.com/OrchardPro/OrchardDoc/blob/master/Index.markdown";
     }
     else {
         var docName = Path.GetFileNameWithoutExtension(path);
         Page.DocumentTitle = docName.Replace('-', ' ');
-        Page.Title = Page.DocumentTitle + " - Orchard Documentation";
-        Page.EditUrl = "https://github.com/OrchardCMS/OrchardDoc/blob/master/Documentation/" + docName + ".markdown";
+        Page.Title = Page.DocumentTitle + " - مستندات / راهنماهای اورچارد";
+        Page.EditUrl = "https://github.com/OrchardPro/OrchardDoc/blob/master/Documentation/" + docName + ".markdown";
     }
     Layout = "_SiteLayout.cshtml";
 }
