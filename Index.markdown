@@ -32,36 +32,36 @@ k1m@OrchardPro.ir
 ## مستندات ##
 
 * **نوشتن در وبسایت**
-    * [Blogging with LiveWriter](Documentation/Blogging-with-LiveWriter)
-    * [Creating Global-Ready Applications](Documentation/Creating-global-ready-applications)
-    * [Search and Indexing](Documentation/Search-and-indexing)
-    * [Saving, Scheduling, and Publishing Drafts](Documentation/Saving-scheduling-and-publishing-drafts)
-    * [Creating Custom Content Types](Documentation/Creating-custom-content-types)
+    * [بلاگ نویسی با استفاده از LiveWriter](Documentation/Blogging-with-LiveWriter)
+    * [ایجاد برنامه به زبانهای گوناگون](Documentation/Creating-global-ready-applications)
+    * [جستجو و فهرست کردن](Documentation/Search-and-indexing)
+    * [ذخیره، زمانبندی و انتشار پیشنویس](Documentation/Saving-scheduling-and-publishing-drafts)
+    * [ایجاد محتوی سفارشی گوناگون](Documentation/Creating-custom-content-types)
 
 
-* **Customizing Websites**
-    * [Previewing and Applying a Theme](Documentation/Previewing-and-applying-a-theme)
-    * [Installing Themes](Documentation/Installing-themes)
-    * [Customizing Themes](Documentation/Customizing-the-default-theme)
+* **سفارشی سازی وبسایتها**
+    * [بررسی و استفاده از پوسته](Documentation/Previewing-and-applying-a-theme)
+    * [نصب پوسته](Documentation/Installing-themes)
+    * [سفارشی سازی پوسته ها](Documentation/Customizing-the-default-theme)
 
 
-* **Using the Orchard Gallery**
-    * [Gallery Overview](Documentation/Gallery-overview)
-    * [Installing Modules and Themes from the Gallery](Documentation/Installing-modules-and-themes-from-the-gallery)
-    * [Browsing the Gallery Web Site](Documentation/Browsing-the-gallery-web-site)
-    * [Contributing a Module or Theme to the Gallery](Documentation/Contributing-a-module-or-theme-to-the-gallery)
-    * [Registering Additional Gallery Feeds](Documentation/Module-gallery-feeds)
+* **استفاده از گالری اورچارد**
+    * [بررسی گالری](Documentation/Gallery-overview)
+    * [نصب ماژول ها و پوسته ها از گالری](Documentation/Installing-modules-and-themes-from-the-gallery)
+    * [مرور وبسایت گالری](Documentation/Browsing-the-gallery-web-site)
+    * [ارسال ماژول یا پوسته به گالری](Documentation/Contributing-a-module-or-theme-to-the-gallery)
+    * [ثبت فید گالریهای دیگر](Documentation/Module-gallery-feeds)
 
 
-* **Managing Websites**
-    * [Enabling and Disabling Features](Documentation/Enabling-and-disabling-features)
-    * [Using the Command-Line Interface](Documentation/Using-the-command-line-interface)
-    * [Installing and Upgrading Modules](Documentation/Installing-and-upgrading-modules)
-    * [Modifying Site Settings](Documentation/Modifying-site-settings)
-    * [Moderating Comments](Documentation/Moderating-comments)
-    * [Managing Users and Roles](Documentation/Managing-users-and-roles)
-    * [Understanding Permissions](Documentation/Understanding-permissions)
-    * [Making a Website Recipe](Documentation/Making-a-Web-Site-Recipe)
+* **مدیریت وبسایت**
+    * [فعال/غیر فعال کردن ویژگی های](Documentation/Enabling-and-disabling-features)
+    * [استفاده از رابط خط فرمان](Documentation/Using-the-command-line-interface)
+    * [نصب/بروزرسانی ماژولها](Documentation/Installing-and-upgrading-modules)
+    * [ویرایش تنظیمات سایت](Documentation/Modifying-site-settings)
+    * [مدیریت نظرات](Documentation/Moderating-comments)
+    * [مدیریت کاربران و نقشها](Documentation/Managing-users-and-roles)
+    * [آشنایی با سطوح دسترسی](Documentation/Understanding-permissions)
+    * [ایجاد دستورالعمل ساخت یک وبسایت](Documentation/Making-a-Web-Site-Recipe)
 
 
 * **Hosting and Deploying Websites**
@@ -108,8 +108,8 @@ k1m@OrchardPro.ir
     * [Customizing Orchard Using Designer Helper Tools](Documentation/Customizing-Orchard-using-Designer-Helper-Tools)
 
 
-* **Developer Tools and Guidelines**
-    * [Developer FAQ](Documentation/Developer-FAQ)
+* **ابزار و راهنماهای توسعه**
+    * [سوالات و پاسخ های توسعه دهندگان](Documentation/Developer-FAQ)
     * [Setting Up a Source Enlistment](Documentation/Setting-up-a-source-enlistment)
     * [Source Code Organization](Documentation/Source-code-organization)
     * [Dependencies and Libraries](Documentation/Orchard-dependencies-and-libraries)
@@ -117,19 +117,19 @@ k1m@OrchardPro.ir
     * [Continuous Integration](Documentation/Continuous-integration)
 
 
-* **Additional Topics**
-    * [Orchard Dynamic Compilation](Documentation/Orchard-module-loader-and-dynamic-compilation)
-    * [Configuring Email](Documentation/Configuring-Email)
+* **سایر موضوعات**
+    * [کامپایلر پویای اورچارد](Documentation/Orchard-module-loader-and-dynamic-compilation)
+    * [پیکره بندی ایمیل](Documentation/Configuring-Email)
 
 
-* **Getting Involved**
-    * [Contributing Documentation](Documentation/Contributing-documentation)
-    * [Documentation Style Guidelines](Documentation/Documentation-style-guidelines)
-    * [Contributing Patches](Documentation/Contributing-patches)
+* **مشارکت در پروژه**
+    * [راهنمای مشارکت](Documentation/Contributing-documentation)
+    * [راهنمای سبک ویرایش مستندات](Documentation/Documentation-style-guidelines)
+    * [مشارکت در اصلاحیه ها](Documentation/Contributing-patches)
 
-## User Experiences ##
-* [Walkthroughs and UI Mockups](Documentation/walkthroughs)
+## تجارب کاربر ##
+* [مشاهده نمونه تم ها و وبسایت های ایجاد شده توسط کاربران](Documentation/walkthroughs)
 
-## Archived Specs ##
+## آرشیو مشخصات ##
 
-[Click here to view archived specs](Documentation/archived-specs).
+[برای دیدن آرشیو مشخصات اینجا را کلیک کنید](Documentation/archived-specs).
