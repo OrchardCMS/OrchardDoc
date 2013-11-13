@@ -28,7 +28,7 @@ jQuery(function($) {
           .css({
             overflow: "visible",
             position: "absolute",
-            right: "10px",
+            left: "10px",
         }).hide()
           .on("mouseleave", function() {tocOverlay.hide();});
 });
