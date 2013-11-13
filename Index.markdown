@@ -1,6 +1,6 @@
 > **توجه:** این سامانه مستندات ، همانند پروژه اورچارد، حاصل تلاش گروهی از دوستان میباشد.
 در صورت تمایل به همکاری به مستندات زیر توجه نمایید:
-[راهنمای سبک ویرایش مستندات](Documentation/Documentation-style-guidelines)
+[راهنمای سبک ویرایش مستندات](Documentation/راهنمای-سبک-ویرایش-مستندات)
 و [ارائه پیشنهادات جهت موضوع جدید](Documentation/Suggestions-for-New-Topics).
 جهت همکاری با ایمیل زیر تماس بگیرید:
 
@@ -124,7 +124,7 @@ k1m@OrchardPro.ir
 
 * **مشارکت در پروژه**
     * [راهنمای مشارکت](Documentation/Contributing-documentation)
-    * [راهنمای سبک ویرایش مستندات](Documentation/Documentation-style-guidelines)
+    * [راهنمای سبک ویرایش مستندات](Documentation/راهنمای-سبک-ویرایش-مستندات)
     * [مشارکت در اصلاحیه ها](Documentation/Contributing-patches)
 
 ## تجارب کاربر ##
