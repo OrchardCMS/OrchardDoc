@@ -6,7 +6,7 @@
     var resultSet = SearchHelpers.Query(HttpContext.Current, q, page);
     var documents = resultSet.Documents;
     if (resultSet.TotalCount == 0) {
-        @:No results found.
+        @:مطلبی پیدا نگشت.
     }
     else {
         <div class="searchResultCount">@resultSet.TotalCount @(resultSet.TotalCount > 1 ? "مطلب" : "مطلب") پیدا گشت.</div>
