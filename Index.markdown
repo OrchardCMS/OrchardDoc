@@ -87,7 +87,7 @@ k1m@OrchardPro.ir
     * [بسته بندی و اشتراک گذاری ماژول](Documentation/Packaging-and-sharing-a-module)
     * [نوشتن یک ویجت](Documentation/Writing-a-widget)
     * [ایجاد رابطه های  _1-N_ و _N-N_](Documentation/Creating-1-n-and-n-n-relations)
-    * [فایل مشخصات پسته و ماژول](Documentation/manifest-files)
+    * [فایل مشخصات پوسته و ماژول](Documentation/manifest-files)
     * [Caching](Documentation/Caching)
 
 
