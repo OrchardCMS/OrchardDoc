@@ -64,57 +64,57 @@ k1m@OrchardPro.ir
     * [ایجاد دستورالعمل ساخت یک وبسایت](Documentation/Making-a-Web-Site-Recipe)
 
 
-* **Hosting and Deploying Websites**
-    * [Upgrading a Site to a New Version of Orchard](Documentation/Upgrading-a-site-to-a-new-version-of-Orchard)
-    * [Optimizing Server Performance of Orchard Applications](Documentation/Optimizing-Performance-of-Orchard-with-Shared-Hosting)
-    * [What's New for Windows Azure in Orchard 1.7.1](Documentation/Whats-new-for-Windows-Azure-in-Orchard-1-7-1)
-    * [Deploying Orchard to Windows Azure](Documentation/Deploying-Orchard-to-Windows-Azure)
-	* [Using Windows Azure Blob Storage](Documentation/Using-Windows-Azure-Blob-Storage)
-	* [Using Windows Azure Cache](Documentation/Using-Windows-Azure-Cache)
-    * [Running Orchard on Mono](Documentation/Running-Orchard-on-Mono)
-    * [Setting Up a Multi-Tenant Orchard Site](Documentation/Setting-up-a-multi-tenant-orchard-site)
-    * [Setting up a Machine Key](Documentation/Setting-up-a-machine-key)
+* **میزبانی و استقرار وب سایت**
+    * [بروز رسانی اورچارد](Documentation/Upgrading-a-site-to-a-new-version-of-Orchard)
+    * [بهینه سازی عملکرد سرور](Documentation/Optimizing-Performance-of-Orchard-with-Shared-Hosting)
+    * [امکانات اورچارد 1.7.1 برای Windows Azure](Documentation/Whats-new-for-Windows-Azure-in-Orchard-1-7-1)
+    * [استقرار اورچارد در Windows Azure](Documentation/Deploying-Orchard-to-Windows-Azure)
+	* [استفاده از Windows Azure Blob Storage](Documentation/Using-Windows-Azure-Blob-Storage)
+	* [استفاده از Windows Azure Cache](Documentation/Using-Windows-Azure-Cache)
+    * [اجرای اورچارد یا استفاده از Mono](Documentation/Running-Orchard-on-Mono)
+    * [راه اندازی چند سایت با استفاده از یک برنامه](Documentation/Setting-up-a-multi-tenant-orchard-site)
+    * [تعریف Machine Key](Documentation/Setting-up-a-machine-key)
 
 
-* **Extending Orchard**
-    * [First Steps into Orchard](Documentation/First-steps-into-Orchard)
-    * [How Orchard Works](Documentation/How-Orchard-works)
-    * [Command-Line Code Generation](Documentation/Command-line-scaffolding)
-    * [Building a Hello World module](Documentation/Building-a-hello-world-module)
-    * [Creating a Module with a Simple Text Editor](Documentation/Creating-a-module-with-a-simple-text-editor)
-    * [Writing a Content Part](Documentation/Writing-a-content-part)
-    * [Writing a Content Field](Documentation/Creating-a-custom-field-type)
-    * [Packaging and Sharing a Module](Documentation/Packaging-and-sharing-a-module)
-    * [Writing a Widget](Documentation/Writing-a-widget)
-    * [Creating _1-N_ and _N-N_ Relations](Documentation/Creating-1-n-and-n-n-relations)
-    * [Manifest Files for Modules and Themes](Documentation/manifest-files)
+* **توسعه اورجارد**
+    * [قدم اول در اورچارد](Documentation/First-steps-into-Orchard)
+    * [چگونه اورچارد کار میکند](Documentation/How-Orchard-works)
+    * [ایجاد کد با استفاده از خط فرمان](Documentation/Command-line-scaffolding)
+    * [نوشتن ماژول سلام جهان](Documentation/Building-a-hello-world-module)
+    * [ایجاد یک ماژول با یک ویرایشگر متن ساده](Documentation/Creating-a-module-with-a-simple-text-editor)
+    * [نوشتن یک Content Part](Documentation/Writing-a-content-part)
+    * [نوشتن یک Content Field](Documentation/Creating-a-custom-field-type)
+    * [بسته بندی و اشتراک گذاری ماژول](Documentation/Packaging-and-sharing-a-module)
+    * [نوشتن یک ویجت](Documentation/Writing-a-widget)
+    * [ایجاد رابطه های  _1-N_ و _N-N_](Documentation/Creating-1-n-and-n-n-relations)
+    * [فایل مشخصات پسته و ماژول](Documentation/manifest-files)
     * [Caching](Documentation/Caching)
 
 
-* **Working with Data**
-    * [Understanding Data Access](Documentation/Understanding-data-access)
-    * [Understanding Content Handlers](Documentation/Understanding-content-handlers)
+* **کار با پایگاه داده**
+    * [شناخت دسترسی به داده ها](Documentation/Understanding-data-access)
+    * [آشنایی با گردانندگان محتوا](Documentation/Understanding-content-handlers)
 <!-- ** [Understanding Content Drivers](Documentation/Understanding-content-drivers) (TBD) -->
 
-* **Creating Themes**
-    * [Writing a New Theme](Documentation/Writing-a-new-theme)
-    * [The Anatomy of a Theme](Documentation/Anatomy-of-a-theme)
-    * [Understanding the placement.info File](Documentation/Understanding-placement-info)
-    * [Accessing and Rendering Shapes](Documentation/Accessing-and-rendering-shapes)
-    * [Alternates](Documentation/Alternates)
-    * [Template File Syntax Guide](Documentation/Template-file-syntax-guide)
-    * [Packaging and Sharing Themes](Documentation/Packaging-and-sharing-themes)
-    * [UI Guidelines for Theme Authors](Documentation/UI-guidelines-for-theme-authors)
-    * [Customizing Orchard Using Designer Helper Tools](Documentation/Customizing-Orchard-using-Designer-Helper-Tools)
+* **ایجاد پوسته(قالب)**
+    * [نوشتن یک پوسته جدید](Documentation/Writing-a-new-theme)
+    * [ساختار پوسته](Documentation/Anatomy-of-a-theme)
+    * [آشنایی با فایل placement.info](Documentation/Understanding-placement-info)
+    * [دسترسی و ارائه Shapes](Documentation/Accessing-and-rendering-shapes)
+    * [جایگزین ها](Documentation/Alternates)
+    * [راهنمای سینتکس فایل الگو](Documentation/Template-file-syntax-guide)
+    * [بسته بندی و به اشتراک گذاری پوسته](Documentation/Packaging-and-sharing-themes)
+    * [راهنمای رابط کاربری برای طراحان پوسته](Documentation/UI-guidelines-for-theme-authors)
+    * [سفارشی سازی اورچارد با استفاده از ابزار کمک طراحی](Documentation/Customizing-Orchard-using-Designer-Helper-Tools)
 
 
 * **ابزار و راهنماهای توسعه**
     * [سوالات و پاسخ های توسعه دهندگان](Documentation/Developer-FAQ)
-    * [Setting Up a Source Enlistment](Documentation/Setting-up-a-source-enlistment)
-    * [Source Code Organization](Documentation/Source-code-organization)
-    * [Dependencies and Libraries](Documentation/Orchard-dependencies-and-libraries)
-    * [Code Conventions](Documentation/Code-conventions)
-    * [Continuous Integration](Documentation/Continuous-integration)
+    * [چگونگی دریافت سورس کد](Documentation/Setting-up-a-source-enlistment)
+    * [ساختار سورس کد](Documentation/Source-code-organization)
+    * [وابستگیها و کتابخانه](Documentation/Orchard-dependencies-and-libraries)
+    * [قاعده نام گذاری در کدنویسی](Documentation/Code-conventions)
+    * [یکپارچه سازی مداوم](Documentation/Continuous-integration)
 
 
 * **سایر موضوعات**
