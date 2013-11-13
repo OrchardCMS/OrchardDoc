@@ -1,7 +1,7 @@
-The Orchard documentation is built in [Markdown](http://daringfireball.net/projects/markdown/).
-We use a few simple conventions to ensure a homogeneous style throughout the full set of documents.
+مستندات اورچارد با استفاده از [Markdown](http://daringfireball.net/projects/markdown/) بوجود آمده اند.
+ما از چند قرار داد ساده جهت اطمینان از همگن بودن سراسر مجموعه اسناد استفاده مینماییم.
 
-# File Name And Title
+# نام فایل و عنوان
 
 The document should not specify its own title as part of the document itself, but its file name should be the document title, with spaces replaced by dashes (-).
 The title will be added by the site dynamically, from the file name.
