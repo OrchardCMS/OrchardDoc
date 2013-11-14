@@ -1,18 +1,19 @@
-مستندات اورچارد با استفاده از [Markdown](http://daringfireball.net/projects/markdown/) بوجود آمده اند.
+مستندات اورچارد با استفاده از [Markdown](http://daringfireball.net/projects/markdown/) تهیه شده اند.
 ما از چند قرار داد ساده جهت اطمینان از همگن بودن سراسر مجموعه اسناد استفاده مینماییم.
 
 # نام فایل و عنوان
 
-The document should not specify its own title as part of the document itself, but its file name should be the document title, with spaces replaced by dashes (-).
-The title will be added by the site dynamically, from the file name.
+در داخل سند نمی بایستی عنوان سند را مشخص نمود، عنوان سند با استفاده از نام فایل مشخص میگردد و توسط برنامه در سند کنجانده میگردد.
+نام فایل نبایستی شامل فاصله باشد، به جای آن میتوانید از خط فاصله "-" استفاده نمایید.
 
-# Structure
 
-Topics should begin with a brief summary explaining what audience it targets and their key takeaways.
-This summary will be displayed in search results, so it should make sense by itself.
-It should consist of one paragraph of text, without a leading title.
+# ساختار
 
-If the topic is not complete enough to fulfill its goals, the top of the document should specify `> Draft topic` on the first line.
+عناوین میبایستی با خلاصه ای که مشخص میکند خواننده از این مطلب به چه اهدافی دست می یابد.
+این خلاصه در هنگان نمایش نتایج جستجو نمایش داده میشود، بنابراین به تنهایی میبایستی نشاندهنده محتویات مطلب باشد.
+این خلاصه به صورت پارگرافی بدون عنوان در ابتدای سند نوشته میگردد.
+
+اگر عنوان مورد نظر به اندازه کافی تکمیل نیست، میبایستی در بالای سند عبارت`> Draft topic`را در خط اول بنویسیم.
 
 After the summary, the actual contents of the document should all be under section headers,
 and the top section headers should be in header 1 style: `# This Is A Top Header`.
