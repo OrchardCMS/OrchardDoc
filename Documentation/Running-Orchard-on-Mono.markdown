@@ -1,3 +1,4 @@
+> Orchard doesn't currently run on Mono, and hence can't run on Linux.
 
 All command line examples in this article assume you are using a Linux machine.
 
