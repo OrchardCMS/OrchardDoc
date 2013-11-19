@@ -17,15 +17,11 @@
 
 بعد از خلاصه، محتوای اصلی که بخش بندی شده است را در زیر عنوان هر بخش می آوریم، عنوان اصلی که با استیل عنوان 1 می آید به صورت زیر نوشته میشود:
 `# این یک عنوان اصلی میباشد`.
-در رسم الخط لاتین عناوین با حروف بزرگ شروع میگردد([نوشتن با حروف بزرگ][نوشتن با حروف بزرگ]را ببینید).
-[نوشتن با حروف بزرگ]: #نوشتن با حروف بزرگ
 
-After the summary, the actual contents of the document should all be under section headers,
-and the top section headers should be in header 1 style: `# This Is A Top Header`.
-Headers should use capital letters to begin each word (see [capitalization][capitalization]).
-[capitalization]: #Capitalization
+در رسم الخط لاتین عناوین با حروف بزرگ شروع میگردد([نوشتن با حروف بزرگ][نوشتنباحروفبزرگ] را ببینید).
+[نوشتنباحروفبزرگ]: #نوشتنباحروفبزرگ
 
-Subsections should be one level deeper than their parent section.
+زیر عنوان میبایستی یک سطح از عنوان اصلی خودش پایینتر باشد.
 
 Do use explicitly named anchors when building links to a specific section of the document.
 Anchors are automatically created for all headers from their title by removing spaces.
@@ -123,7 +119,7 @@ If you are using the reference syntax, the references may be grouped at the end 
 Do use links to specific sections of a document where relevant (see the [structure section][structure]).
 [structure]: #Structure
 
-## Capitalization
+## نوشتن با حروف بزرگ
 
 In topic titles and in section headings, use title-style capitalization (as opposed to sentence style).
 When referring to UI elements, follow the capitalization style used in the UI elements themselves. 
