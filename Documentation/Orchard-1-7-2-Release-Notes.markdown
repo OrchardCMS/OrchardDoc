@@ -130,7 +130,8 @@ all the current usage of Media Picker Fields to the new Media Library Picker Fie
 
 ### Upgrading from Orchard 1.7.1 
 
-If you were using the Roles or Comments Workflow Activities you will need to enable the corresponding features
+If you were using the Roles or Comments Workflow Activities you will need to enable the corresponding features:
+
 * Comments Workflows Activities
 * Roles Workflows Activities
 
@@ -151,6 +152,7 @@ we should all be grateful to the following people who contributed patches and fe
 - Jeff Olmstead ([jao28](https://www.codeplex.com/site/users/view/jao28))
 - Jim Macdonald ([Jimasp](http://www.codeplex.com/site/users/view/Jimasp))
 - Piotr Szmyd ([pszmyd](https://www.codeplex.com/site/users/view/pszmyd))
+- Sebastien Ros ([sebastienros](http://www.codeplex.com/site/users/view/sebastienros))
 - Sipke Schoorstra ([sfmskywalker](http://www.codeplex.com/site/users/view/sfmskywalker))
 - Stanley Goldman ([StanleyGoldman](http://www.codeplex.com/site/users/view/StanleyGoldman))
 - Vladimir Makaev ([VMakaev](https://www.codeplex.com/site/users/view/VMakaev))
