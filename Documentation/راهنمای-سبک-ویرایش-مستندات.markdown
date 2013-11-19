@@ -15,6 +15,11 @@
 
 اگر عنوان مورد نظر به اندازه کافی تکمیل نیست، میبایستی در بالای سند عبارت`> Draft topic`را در خط اول بنویسیم.
 
+بعد از خلاصه، محتوای اصلی که بخش بندی شده است را در زیر عنوان هر بخش می آوریم، عنوان اصلی که با استیل عنوان 1 می آید به صورت زیر نوشته میشود:
+`# این یک عنوان اصلی میباشد`.
+در رسم الخط لاتین عناوین با حروف بزرگ شروع میگردد([نوشتن با حروف بزرگ][نوشتن با حروف بزرگ]را ببینید).
+[نوشتن با حروف بزرگ]: #نوشتن با حروف بزرگ
+
 After the summary, the actual contents of the document should all be under section headers,
 and the top section headers should be in header 1 style: `# This Is A Top Header`.
 Headers should use capital letters to begin each word (see [capitalization][capitalization]).
