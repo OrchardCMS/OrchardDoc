@@ -32,17 +32,6 @@ This release is expected to be released for November 2013
   * Loop activities
   * Piotr ([pszmyd](https://www.codeplex.com/site/users/view/pszmyd)) owns this contribution
 
-#### Priorities for Orchard 1.7.2
-
-This release might not be necessary if 1.8 is progressing fast enough.
-
-* New SSL module integrated into Core
-  * Bertrand ([bertrandleroy](http://www.codeplex.com/site/users/view/bertrandleroy)) owns this contribution
-* Performance improvements
-  * Some indexes are added by default to the core tables
-  * New eager fetching filter in Orchard.Projections
-* Bug fixes
-
 ### Currently Implemented (Partially or in Full)
 
 * Basic admin panel and login
@@ -110,6 +99,7 @@ This release might not be necessary if 1.8 is progressing fast enough.
 * Tokens
 * Custom forms
 * Content permissions
+* SSL
 
 ### Areas of Focus for Future Iterations (Backlog, Not in Priority Order)
 
