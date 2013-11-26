@@ -7,30 +7,30 @@ The feature roadmap is subject to change as the project evolves, and we welcome 
 
 This release is expected to be released for November 2013
 
-* Migration to Microsoft .NET 4.5 (on track)
+* Migration to Microsoft .NET 4.5 (done)
   * Upgrade project targets
   * Remove unnecessary Medium Trust support code
   * Define 4.5 framework in web.config files
   * Erik ([erik_oppedijk](https://www.codeplex.com/site/users/view/erik_oppedijk)) owns this contribution
-* Upgrade ASP.NET Web Stack to newest versions (not started)
+* Upgrade ASP.NET Web Stack to newest versions (almost done)
   * ASP.NET MVC5
   * WebAPI 2
   * Razor 3
-  * Identity
 * Put back the List module with improved functionnalities
   * The goal is to be able to use it to mimick the Blogs module (on track)
   * Sipke ([sfmskywalker](http://www.codeplex.com/site/users/view/sfmskywalker)) owns this contribution
 * Performance improvements by unleashing the power of the document db architecture built in Orchard (started)
   * Sebastien ([sebastienros](http://www.codeplex.com/site/users/view/sebastienros)) owns this contribution
-* Integrate OWIN middlewares suppport (started)
+  * Multi-tenancy improvements
+* Integrate OWIN middlewares support (started)
+  * Identity
 * Improved Media Library
-  * Search support (done)
-  * Custom media types support (done)
   * Media updates (started) 
 * Improved Workflow module (on track)
   * Error/Exception branches support
   * Loop activities
   * Piotr ([pszmyd](https://www.codeplex.com/site/users/view/pszmyd)) owns this contribution
+* Calendar support
 
 ### Currently Implemented (Partially or in Full)
 
