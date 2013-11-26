@@ -31,6 +31,9 @@ This release is expected to be released for November 2013
   * Loop activities
   * Piotr ([pszmyd](https://www.codeplex.com/site/users/view/pszmyd)) owns this contribution
 * Calendar support
+* Messaging module (needs to be integrated)
+* Templates module (needs to be integrated)
+* Include Business Caching modules
 
 ### Currently Implemented (Partially or in Full)
 
