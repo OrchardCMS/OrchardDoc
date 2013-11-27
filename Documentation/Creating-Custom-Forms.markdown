@@ -66,4 +66,4 @@ In the current situation we are only interested in exporting the data so there i
 
 ![Export the Subscribe Form content](../upload/custom-forms/export.png "Export the emails by checking the Subscribe Form content type")
 
-The exported file is and XML file that can be opened in MS Excel and manipulated to be made ready for the email campaign platform of your choice.  And that's it... The site not is able to collect visitor's email addresses and save them for export later for a newsletter.  The Custom Forms is also a great way to implement a Contact Us page or any other number of types of information a site should collect from it's users.
+The exported file is and XML file that can be opened in MS Excel and manipulated to be made ready for the email campaign platform of your choice.  And that's it... The site is now able to collect visitor's email addresses and save them for export later for a newsletter.  The Custom Forms is also a great way to implement a Contact Us page or any other number of types of information a site should collect from it's users.
