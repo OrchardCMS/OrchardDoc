@@ -16,7 +16,7 @@ This release is expected to be released for November 2013
   * ASP.NET MVC5
   * WebAPI 2
   * Razor 3
-* Put back the List module with improved functionnalities
+* Put back the List module with improved functionnalities (done)
   * The goal is to be able to use it to mimick the Blogs module (on track)
   * Sipke ([sfmskywalker](http://www.codeplex.com/site/users/view/sfmskywalker)) owns this contribution
 * Performance improvements by unleashing the power of the document db architecture built in Orchard (started)
