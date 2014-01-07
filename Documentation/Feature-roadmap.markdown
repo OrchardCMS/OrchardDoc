@@ -12,17 +12,17 @@ This release is expected to be released for November 2013
   * Remove unnecessary Medium Trust support code
   * Define 4.5 framework in web.config files
   * Erik ([erik_oppedijk](https://www.codeplex.com/site/users/view/erik_oppedijk)) owns this contribution
-* Upgrade ASP.NET Web Stack to newest versions (almost done)
+* Upgrade ASP.NET Web Stack to newest versions (done)
   * ASP.NET MVC5
   * WebAPI 2
   * Razor 3
 * Put back the List module with improved functionnalities (done)
   * The goal is to be able to use it to mimick the Blogs module (on track)
   * Sipke ([sfmskywalker](http://www.codeplex.com/site/users/view/sfmskywalker)) owns this contribution
-* Performance improvements by unleashing the power of the document db architecture built in Orchard (started)
+* Performance improvements by unleashing the power of the document db architecture built in Orchard (almost done)
   * Sebastien ([sebastienros](http://www.codeplex.com/site/users/view/sebastienros)) owns this contribution
   * Multi-tenancy improvements
-* Integrate OWIN middlewares support (started)
+* Integrate OWIN middlewares support (postponed)
   * Identity
 * Improved Media Library
   * Media updates (started) 
@@ -30,9 +30,9 @@ This release is expected to be released for November 2013
   * Error/Exception branches support
   * Loop activities
   * Piotr ([pszmyd](https://www.codeplex.com/site/users/view/pszmyd)) owns this contribution
-* Calendar support
-* Messaging module (needs to be integrated)
-* Templates module (needs to be integrated)
+* Calendar support (started)
+* Messaging module (almost done)
+* Templates module (almost done)
 * Include Business Caching modules
 
 ### Currently Implemented (Partially or in Full)
