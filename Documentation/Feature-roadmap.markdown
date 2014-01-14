@@ -17,7 +17,7 @@ This release is expected to be released for November 2013
   * WebAPI 2
   * Razor 3
 * Put back the List module with improved functionnalities (done)
-  * The goal is to be able to use it to mimick the Blogs module (on track)
+  * The goal is to be able to use it to mimick the Blogs module
   * Sipke ([sfmskywalker](http://www.codeplex.com/site/users/view/sfmskywalker)) owns this contribution
 * Performance improvements by unleashing the power of the document db architecture built in Orchard (almost done)
   * Sebastien ([sebastienros](http://www.codeplex.com/site/users/view/sebastienros)) owns this contribution
@@ -31,8 +31,8 @@ This release is expected to be released for November 2013
   * Loop activities
   * Piotr ([pszmyd](https://www.codeplex.com/site/users/view/pszmyd)) owns this contribution
 * Calendar support (started)
-* Messaging module (almost done)
-* Templates module (almost done)
+* Jobs Queue module (done)
+* Templates module (done)
 * Include Business Caching modules
 
 ### Currently Implemented (Partially or in Full)
