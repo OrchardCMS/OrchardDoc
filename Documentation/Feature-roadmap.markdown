@@ -12,10 +12,10 @@ This release is expected to be released for November 2013
   * Remove unnecessary Medium Trust support code
   * Define 4.5 framework in web.config files
   * Erik ([erik_oppedijk](https://www.codeplex.com/site/users/view/erik_oppedijk)) owns this contribution
-* Upgrade ASP.NET Web Stack to newest versions (done)
-  * ASP.NET MVC5
-  * WebAPI 2
-  * Razor 3
+* Upgrade ASP.NET Web Stack to newest versions (almost done)
+  * ASP.NET MVC 5.1
+  * WebAPI 2.1
+  * Razor 3.1
 * Put back the List module with improved functionnalities (done)
   * The goal is to be able to use it to mimick the Blogs module
   * Sipke ([sfmskywalker](http://www.codeplex.com/site/users/view/sfmskywalker)) owns this contribution
@@ -33,7 +33,9 @@ This release is expected to be released for November 2013
 * Calendar support (started)
 * Jobs Queue module (done)
 * Templates module (done)
-* Include Business Caching modules
+* Include Business Caching modules (almost done)
+  * Business data cache service
+  * Distributed cache providers
 
 ### Currently Implemented (Partially or in Full)
 
