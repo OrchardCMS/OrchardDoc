@@ -5,7 +5,7 @@ The feature roadmap is subject to change as the project evolves, and we welcome 
 
 #### Priorities for Orchard 1.8:
 
-This release is expected to be released for November 2013
+This release is expected to be released for February 2014
 
 * Migration to Microsoft .NET 4.5 (done)
   * Upgrade project targets
