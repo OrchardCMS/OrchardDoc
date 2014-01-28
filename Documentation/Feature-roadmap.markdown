@@ -38,6 +38,7 @@ This release is expected to be released for November 2013
   * Distributed cache providers
     * Azure
     * Memcached ?
+    * Redis ?
 
 ### Currently Implemented (Partially or in Full)
 
