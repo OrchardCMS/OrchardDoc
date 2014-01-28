@@ -12,7 +12,7 @@ This release is expected to be released for November 2013
   * Remove unnecessary Medium Trust support code
   * Define 4.5 framework in web.config files
   * Erik ([erik_oppedijk](https://www.codeplex.com/site/users/view/erik_oppedijk)) owns this contribution
-* Upgrade ASP.NET Web Stack to newest versions (almost done)
+* Upgrade ASP.NET Web Stack to newest versions (done)
   * ASP.NET MVC 5.1
   * WebAPI 2.1
   * Razor 3.1
@@ -36,6 +36,8 @@ This release is expected to be released for November 2013
 * Include Business Caching modules (almost done)
   * Business data cache service
   * Distributed cache providers
+    * Azure
+    * Memcached ?
 
 ### Currently Implemented (Partially or in Full)
 
