@@ -31,6 +31,7 @@ This release is expected to be released for February 2014
   * Loop activities
   * Piotr ([pszmyd](https://www.codeplex.com/site/users/view/pszmyd)) owns this contribution
 * Calendar support (started)
+  * Daniel Stolt ([Decorum](https://www.codeplex.com/site/users/view/Decorum)) owns this contribution
 * Jobs Queue module (done)
 * Templates module (done)
 * Include Business Caching modules (almost done)
