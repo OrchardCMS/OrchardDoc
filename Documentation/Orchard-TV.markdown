@@ -27,6 +27,10 @@ The first part of the Pluralsight video course is free, and subsequent episodes 
 
 <iframe width="500" height="284" src="http://www.youtube.com/embed/uDqY14mDG_Y" frameborder="0" allowfullscreen></iframe>
 
+### Orchard CMS for Absolute Beginners - Free Udemy Course
+
+[Orchard CMS for Absolute Beginners](https://www.udemy.com/orchard-cms-for-absolute-beginners/) by Abhishek Luv
+
 ## Hands-on Labs
 
 Kris van der Mast made his hands-on lab material available to anyone for free:
