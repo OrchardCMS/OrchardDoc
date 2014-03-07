@@ -52,7 +52,10 @@ This includes commercial derivative work.
 
 Orchard 1.8 fixes bugs and introduces the following changes and features:
 
-* TODO
+* *Orchard.Azure*:
+	* PlatformConfiguration (static class to read settings from CloudConfigurationManager) is gone. Its place is taken by an injectable dependency (IPlatformConfigurationAccessor) and the old implementation's logic is moved to the DefaultPlatformConfigurationAccessor class. These changes are reflected throughout the Orchard.Azure module, one of them being that Orchard.Azure.Media depends of Orchard.Azure.
+	* DefaultPlatformConfigurationAccessor's logic is extended to also check for settings among the ConnectionStrings and the AppSettings.
+	* Added a new setting called "Orchard.Azure.Media.StoragePublicHostName" which makes it possible to override the public host name when using Azure storage.
 
 The full list of fixed bugs for this release can be found here:
 
@@ -125,6 +128,10 @@ If you were using the Roles or Comments Workflow Activities you will need to ena
 If you were using Multi-Tenancy then you might need to change the settings of the tenants. Multi-tenant host name are
 not more matching sub-domains automatically. You will need to replace `foo.com` by `*.foo.com` if you want the tenant 
 to match any sub-domain. You can also specifically set which sub-domains to accept like this: `foo.com, www.foo.com`
+
+### Upgrading from Orchard 1.7.2
+
+If you were using the Orchard.Azure.Media feature, you need to enable Orchard.Azure before upgrading, since it's a dependency of Orchard.Azure.Media now.
 
 *** Contributors
 ------------
