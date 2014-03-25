@@ -53,9 +53,10 @@ This includes commercial derivative work.
 Orchard 1.8 fixes bugs and introduces the following changes and features:
 
 * *Orchard.Azure*:
-	* PlatformConfiguration (static class to read settings from CloudConfigurationManager) is gone. Its place is taken by an injectable dependency (IPlatformConfigurationAccessor) and the old implementation's logic is moved to the DefaultPlatformConfigurationAccessor class. These changes are reflected throughout the Orchard.Azure module, one of them being that Orchard.Azure.Media depends of Orchard.Azure.
-	* DefaultPlatformConfigurationAccessor's logic is extended to also check for settings among the ConnectionStrings and the AppSettings.
-	* Added a new setting called "Orchard.Azure.Media.StoragePublicHostName" which makes it possible to override the public host name when using Azure storage.
+	* `PlatformConfiguration` (static class to read settings from `CloudConfigurationManager`) is extended to look for settings in among the `ConnectionStrings` and the `AppSettings` too.
+	* Added an injectable dependency called `IPlatformConfigurationAccessor` to provide an extensibility point for retrieving settings. The default implementation's (`DefaultPlatformConfigurationAccessor`) only purpose is to wrap `PlatformConfiguration` and is currently used by `AzureBlobStorageProvider`. IMPORTANT: Custom implementations don't have any effect on the cache-related services due to NHibernate limitations.
+	* Orchard.Azure.Media now depends of Orchard.Azure.
+	* Added a new setting called `Orchard.Azure.Media.StoragePublicHostName` which makes it possible to override the public host name when using Azure storage.
 
 The full list of fixed bugs for this release can be found here:
 
