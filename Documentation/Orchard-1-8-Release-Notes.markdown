@@ -152,7 +152,6 @@ we should all be grateful to the following people who contributed patches and fe
 - Eric Schultz ([wwahammy](https://www.codeplex.com/site/users/view/wwahammy))
 - ([fassetar](https://www.codeplex.com/site/users/view/fassetar))
 - Gilian Keulens ([Walance](http://www.codeplex.com/site/users/view/Walance))
-- ([Gorizon47](http://www.codeplex.com/site/users/view/Gorizon47))
 - Henry Kuijpers ([hkui](https://www.codeplex.com/site/users/view/hkui))
 - Jay Harris ([jayharris](https://www.codeplex.com/site/users/view/jayharris))
 - Jasper Dunker ([jasperd](http://www.codeplex.com/site/users/view/jasperd))
@@ -168,6 +167,7 @@ we should all be grateful to the following people who contributed patches and fe
 - Stanley Goldman ([StanleyGoldman](http://www.codeplex.com/site/users/view/StanleyGoldman))
 - Thierry Fleury ([Codinlab](https://www.codeplex.com/site/users/view/Codinlab))
 - Tony Mackay ([toneuk](https://www.codeplex.com/site/users/view/toneuk))
+- Yury Arzhevikin ([Gorizon47](http://www.codeplex.com/site/users/view/Gorizon47))
 - Zoltán Lehóczky ([Piedone](http://www.codeplex.com/site/users/view/Piedone))
 
 Special Thanks to Christian Surieux ([csadnt](http://www.codeplex.com/site/users/view/csadnt)) for his active participation on the forums.
