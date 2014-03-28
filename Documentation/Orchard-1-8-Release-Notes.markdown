@@ -107,9 +107,11 @@ Then proceed with the upgrade steps from 1.7.2.
 ### Upgrading from Orchard 1.7.2
 
 __BEFORE DOING ANYTHING PLEASE FOLLOW THIS STEPS:__
+
 * Backup your database and your website content
 * __Assign the `Administrator` role to your current Super User account__. 
-  * You will need an account with the _Site Owner_ permission before you update your website with the new release. Without this step you won't be able to access the dashboard.
+
+You will need an account with the _Site Owner_ permission before you update your website with the new release. Without this step you won't be able to access the dashboard.
 
 In case you are discovering this notice too late, here is the manual operation to apply. In your database table Orchard_Framework_ContentItemRecord, on the record with `id=1` (the site content item), update the value with this content `<Data><SiteSettingsPart SuperUser="admin"/></Data>`
 
