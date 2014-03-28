@@ -1,6 +1,6 @@
 Build: 1.8
 
-Published: dd/MM/2014
+Published: 03/28/2014
 
 How to Install Orchard
 ----------------------
@@ -47,20 +47,48 @@ Suggestions are welcome in the discussion forums.
 You are allowed to use this software in any way that is compatible with the new BSD license.
 This includes commercial derivative work.
 
-*** What's new?
+What's new?
 -----------
 
 Orchard 1.8 fixes bugs and introduces the following changes and features:
 
-* *Orchard.Azure*:
-	* `PlatformConfiguration` (static class to read settings from `CloudConfigurationManager`) is extended to look for settings in among the `ConnectionStrings` and the `AppSettings` too.
-	* Added an injectable dependency called `IPlatformConfigurationAccessor` to provide an extensibility point for retrieving settings. The default implementation's (`DefaultPlatformConfigurationAccessor`) only purpose is to wrap `PlatformConfiguration` and is currently used by `AzureBlobStorageProvider`. IMPORTANT: Custom implementations don't have any effect on the cache-related services due to NHibernate limitations.
-	* Orchard.Azure.Media now depends of Orchard.Azure.
-	* Added a new setting called `Orchard.Azure.Media.StoragePublicHostName` which makes it possible to override the public host name when using Azure storage.
+* Migration to Microsoft .NET 4.5
+  * Upgrade project targets
+  * Remove unnecessary Medium Trust support code
+  * Define 4.5 framework in web.config files
+  * Erik ([erik_oppedijk](https://www.codeplex.com/site/users/view/erik_oppedijk)) owns this contribution
+* Upgrade ASP.NET Web Stack to newest versions
+  * ASP.NET MVC 5.1
+  * WebAPI 2.1
+  * Razor 3.1
+* Put back the List module with improved functionnalities
+  * The goal is to be able to use it to mimick the Blogs module
+  * Sipke ([sfmskywalker](http://www.codeplex.com/site/users/view/sfmskywalker)) owns this contribution
+* Performance improvements by unleashing the power of the document db architecture built in Orchard
+  * Sebastien ([sebastienros](http://www.codeplex.com/site/users/view/sebastienros)) owns this contribution
+  * Multi-tenancy improvements
+* Calendar support
+  * Daniel Stolt ([Decorum](https://www.codeplex.com/site/users/view/Decorum)) owns this contribution
+* Jobs Queue module (done)
+  * Orchard.JobsQueueing
+* Templates module (done)
+  * Orchard.Templates
+* Business Caching modules
+  * Orchard.Caching
+* Orchard.Email
+  * The messaging infrastructure has been deprecated and replaced by a simpler one. As part of this change you can now define the email templates directly in shapes. 
+  * The SMTP settings are read from the web.config file by default if available.
+* Azure Media Services has been contributed by Microsoft Open Technologies and provides a seamless integration with the Media module
+  * Orchard.Azure.MediaServices
+* Orchard.Azure:
+  * `PlatformConfiguration` (static class to read settings from `CloudConfigurationManager`) is extended to look for settings in among the `ConnectionStrings` and the `AppSettings` too.
+  * Added an injectable dependency called `IPlatformConfigurationAccessor` to provide an extensibility point for retrieving settings. The default implementation's (`DefaultPlatformConfigurationAccessor`) only purpose is to wrap `PlatformConfiguration` and is currently used by `AzureBlobStorageProvider`. IMPORTANT: Custom implementations don't have any effect on the cache-related services due to NHibernate limitations.
+  * Orchard.Azure.Media now depends of Orchard.Azure.
+  * Added a new setting called `Orchard.Azure.Media.StoragePublicHostName` which makes it possible to override the public host name when using Azure storage.
 
 The full list of fixed bugs for this release can be found here:
 
-* [Bugs fixed in 1.8](https://orchard.codeplex.com/workitem/list/advanced?keyword=&status=Resolved|Closed&type=All&priority=All&release=Orchard%201.x&assignedTo=All&component=All&sortField=LastUpdatedDate&sortDirection=Descending&page=0&reasonClosed=All).
+* [Bugs fixed in 1.8](https://orchard.codeplex.com/workitem/list/advanced?keyword=&status=Resolved%7CClosed&type=All&priority=All&release=Orchard%201.7.2&assignedTo=All&component=All&sortField=LastUpdatedDate&sortDirection=Descending&page=0&reasonClosed=All).
 
 How to upgrade from a previous version
 --------------------------------------
@@ -70,71 +98,41 @@ You can find migration instructions here: <http://docs.orchardproject.net/Docume
 No matter what migration path you take, please take the precaution of making a backup of your
 site and database first.
 
-### Upgrading from Orchard 1.3 and earlier
+### Upgrading from Orchard 1.7.1 and earlier
 
-Orchard 1.4 introduced breaking changes in the way content URLs are managed. Because of that,
-and if you're migrating from version 1.3 or earlier, the Upgrade module can be used to migrate
-data. If you upgrade a site to 1.7 from 1.3 or earlier and can't
-see your contents, you probably need to run this module. In order to do that, go to the admin
-section of the site (by appending /admin to the URL where the home page should be), then go
-to Modules and enable the feature.
+Please follow the upgrade instruction from this document : https://github.com/OrchardCMS/OrchardDoc/blob/1.8/Documentation/Orchard-1-7-2-Release-Notes.markdown
 
-The feature, once enabled, adds a new entry to the admin menu: "Upgrade to 1.7", that can
-migrate the Route data of your content items as well as field data from older field modules, and menu items.
-
-### Upgrading from Orchard 1.6 and earlier
-
-* Enable the Upgrade module
-
-#### Migrating Content Item Picker Field contents
-
-In Orchard 1.7 this field has been moved to a more appropriate module, and thus needs it definitions to be migrated
-in order to reflect this change.
-
-* Click on Upgrade To 1.7 from the menu
-* Select the Content Picker tab and click **Migrate**
-
-#### Migrating Contrib.Taxonomies module
-
-In Orchard 1.7 the Contrib.Taxonomies module has been integrated into the core modules as the Orchard.Taxonomies module.
-If you want to use the new module then you need to follow these steps. It will convert all your content and metadata
-which were associated with Contrib.Taxonomies.
-
-* Disable the module Contrib.Taxonomies
-* Enable the module Orchard.Taxonomies
-* Click on Upgrade To 1.7 from the menu
-* Select the Taxonomies tab and click **Migrate**
-* Finally, update any template which was previously using the Contrib.Taxonomies templates
-
-#### Importing Media files into the Media Library
-
-In Orchard 1.7 a new media management module is provided. In order to use it you will have to import all your media files
-to this new module. It will create a dedicated content item for each of your files. Ultimately it will also convert
-all the current usage of Media Picker Fields to the new Media Library Picker Field.
-
-* Disable the module Media
-* Enable the module Media Library
-* Click on Upgrade To 1.7 from the menu
-* Select the Media Library tab and click **Migrate**
-* In the Media Picker Field section click **Migrate**
-* Finally, update any template which was previously using the Media Picker Field directly
-
-### Upgrading from Orchard 1.7.1 
-
-If you were using the Roles or Comments Workflow Activities you will need to enable the corresponding features:
-
-* Comments Workflows Activities
-* Roles Workflows Activities
-
-If you were using Multi-Tenancy then you might need to change the settings of the tenants. Multi-tenant host name are
-not more matching sub-domains automatically. You will need to replace `foo.com` by `*.foo.com` if you want the tenant 
-to match any sub-domain. You can also specifically set which sub-domains to accept like this: `foo.com, www.foo.com`
+Then proceed with the upgrade steps from 1.7.2.
 
 ### Upgrading from Orchard 1.7.2
 
-If you were using the Orchard.Azure.Media feature, you need to enable Orchard.Azure before upgrading, since it's a dependency of Orchard.Azure.Media now.
+__BEFORE DOING ANYTHING PLEASE FOLLOW THIS STEPS:__
+* Backup your database and your website content
+* __Assign the `Administrator` role to your current Super User account__. 
+  * You will need an account with the _Site Owner_ permission before you update your website with the new release. Without this step you won't be able to access the dashboard.
 
-*** Contributors
+In case you are discovering this notice too late, here is the manual operation to apply. In your database table Orchard_Framework_ContentItemRecord, on the record with `id=1` (the site content item), update the value with this content `<Data><SiteSettingsPart SuperUser="admin"/></Data>`
+
+* Enable the Upgrade module
+
+#### Migrating Email activities
+
+In Orchard 1.8 the Send Email workflow activity has been replaced by a new one which is able to send emails asynchronously using the Jobs Queue.
+
+* Click on Upgrade To 1.8 from the menu
+* Select the Messaging tab and click **Migrate**
+
+#### Migrating Infoset
+
+In Orchard 1.8 a new data storage technique is introduced saving some of the content in the infoset document of content items instead of records. This way some records are obsolete and can be deleted. The data it contained needs to be migrated though.
+
+* Click on Upgrade To 1.8 from the menu
+* Select the Infoset tab and click on all the **Migrate** buttons one at a time
+
+If you are not sure if one button was clicked you can try again and it will just be ignored if it was already processed.
+
+
+Contributors
 ------------
 
 This software would not exist without the community. In particular, for this release,
@@ -142,18 +140,32 @@ we should all be grateful to the following people who contributed patches and fe
 
 - Antoine Griffard ([agriffard](http://www.codeplex.com/site/users/view/agriffard))
 - Benedek Farkas ([nightwolf226](https://www.codeplex.com/site/users/view/nightwolf226))
+- Benjamin Grabkowitz ([bgrabkowitz](https://www.codeplex.com/site/users/view/bgrabkowitz))
 - Bertrand Le Roy ([bertrandleroy](http://www.codeplex.com/site/users/view/bertrandleroy))
-- Christian Surieux ([csadnt](http://www.codeplex.com/site/users/view/csadnt))
+- Brett Morrison ([morrisonbrett](https://www.codeplex.com/site/users/view/morrisonbrett))
+- Claire Botman ([planetClaire](https://www.codeplex.com/site/users/view/planetClaire))
+- Daniel Dabrowski ([rodpl](https://www.codeplex.com/site/users/view/rodpl)) 
 - Daniel Stolt ([Decorum](https://www.codeplex.com/site/users/view/Decorum))
-- Eric McGrath ([EricMcGrath](https://www.codeplex.com/site/users/view/EricMcGrath))
+- Erik Oppedijk ([erik_oppedijk](https://www.codeplex.com/site/users/view/erik_oppedijk))
+- Eric Schultz ([wwahammy](https://www.codeplex.com/site/users/view/wwahammy))
+- ([fassetar](https://www.codeplex.com/site/users/view/fassetar))
+- Gilian Keulens ([Walance](http://www.codeplex.com/site/users/view/Walance))
+- ([Gorizon47](http://www.codeplex.com/site/users/view/Gorizon47))
+- Henry Kuijpers ([hkui](https://www.codeplex.com/site/users/view/hkui))
 - Jay Harris ([jayharris](https://www.codeplex.com/site/users/view/jayharris))
-- Jeff Bullock ([j3ffb](http://www.codeplex.com/site/users/view/j3ffb))
+- Jasper Dunker ([jasperd](http://www.codeplex.com/site/users/view/jasperd))
+- Jean-Thierry Kéchichian ([jtkech](https://www.codeplex.com/site/users/view/jtkech))
 - Jeff Olmstead ([jao28](https://www.codeplex.com/site/users/view/jao28))
 - Jim Macdonald ([Jimasp](http://www.codeplex.com/site/users/view/Jimasp))
+- Josh Berry ([joshby](https://www.codeplex.com/site/users/view/joshby))
+- kassobasi ([kassobasi](https://www.codeplex.com/site/users/view/kassobasi))
+- Michael Yates ([mjy78](http://www.codeplex.com/site/users/view/mjy78))
 - Piotr Szmyd ([pszmyd](https://www.codeplex.com/site/users/view/pszmyd))
 - Sebastien Ros ([sebastienros](http://www.codeplex.com/site/users/view/sebastienros))
 - Sipke Schoorstra ([sfmskywalker](http://www.codeplex.com/site/users/view/sfmskywalker))
 - Stanley Goldman ([StanleyGoldman](http://www.codeplex.com/site/users/view/StanleyGoldman))
-- Vladimir Makaev ([VMakaev](https://www.codeplex.com/site/users/view/VMakaev))
-- Volodymyr Usarskyy ([usarskyy](https://www.codeplex.com/site/users/view/usarskyy))
+- Thierry Fleury ([Codinlab](https://www.codeplex.com/site/users/view/Codinlab))
+- Tony Mackay ([toneuk](https://www.codeplex.com/site/users/view/toneuk))
 - Zoltán Lehóczky ([Piedone](http://www.codeplex.com/site/users/view/Piedone))
+
+Special Thanks to Christian Surieux ([csadnt](http://www.codeplex.com/site/users/view/csadnt)) for his active participation on the forums.
