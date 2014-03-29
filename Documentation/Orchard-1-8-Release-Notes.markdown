@@ -61,7 +61,7 @@ Orchard 1.8 fixes bugs and introduces the following changes and features:
   * ASP.NET MVC 5.1
   * WebAPI 2.1
   * Razor 3.1
-* Put back the List module with improved functionnalities
+* Put back the List module with improved functionalities
   * The goal is to be able to use it to mimick the Blogs module
   * Sipke ([sfmskywalker](http://www.codeplex.com/site/users/view/sfmskywalker)) owns this contribution
 * Performance improvements by unleashing the power of the document db architecture built in Orchard
@@ -88,7 +88,7 @@ Orchard 1.8 fixes bugs and introduces the following changes and features:
 
 The full list of fixed bugs for this release can be found here:
 
-* [Bugs fixed in 1.8](https://orchard.codeplex.com/workitem/list/advanced?keyword=&status=Resolved%7CClosed&type=All&priority=All&release=Orchard%201.7.2&assignedTo=All&component=All&sortField=LastUpdatedDate&sortDirection=Descending&page=0&reasonClosed=All).
+* [Bugs fixed in 1.8](https://orchard.codeplex.com/workitem/list/advanced?keyword=&status=Resolved%7CClosed&type=All&priority=All&release=Orchard%201.8&assignedTo=All&component=All&sortField=LastUpdatedDate&sortDirection=Descending&page=0&reasonClosed=All).
 
 How to upgrade from a previous version
 --------------------------------------
@@ -100,7 +100,7 @@ site and database first.
 
 ### Upgrading from Orchard 1.7.1 and earlier
 
-Please follow the upgrade instruction from this document : https://github.com/OrchardCMS/OrchardDoc/blob/1.8/Documentation/Orchard-1-7-2-Release-Notes.markdown
+Please follow the upgrade instruction from this document: <https://github.com/OrchardCMS/OrchardDoc/blob/1.8/Documentation/Orchard-1-7-2-Release-Notes.markdown>
 
 Then proceed with the upgrade steps from 1.7.2.
 
@@ -111,9 +111,9 @@ __BEFORE DOING ANYTHING PLEASE FOLLOW THIS STEPS:__
 * Backup your database and your website content
 * __Assign the `Administrator` role to your current Super User account__. 
 
-You will need an account with the _Site Owner_ permission before you update your website with the new release. Without this step you won't be able to access the dashboard.
+You will need an account with the `Site Owner` permission before you update your website with the new release. Without this step you won't be able to access the dashboard.
 
-In case you are discovering this notice too late, here is the manual operation to apply. In your database table Orchard_Framework_ContentItemRecord, on the record with `id=1` (the site content item), update the value with this content `<Data><SiteSettingsPart SuperUser="admin"/></Data>`
+In case you are discovering this notice too late, here is the manual operation to apply. In your database table `Orchard_Framework_ContentItemRecord`, on the record with `id=1` (the site content item), update the value with this content `<Data><SiteSettingsPart SuperUser="admin"/></Data>`
 
 * Enable the Upgrade module
 
