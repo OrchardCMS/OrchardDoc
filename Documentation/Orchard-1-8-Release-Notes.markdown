@@ -141,6 +141,7 @@ This software would not exist without the community. In particular, for this rel
 we should all be grateful to the following people who contributed patches and features:
 
 - Antoine Griffard ([agriffard](http://www.codeplex.com/site/users/view/agriffard))
+- Anthony R. Fassett ([fassetar](https://www.codeplex.com/site/users/view/fassetar))
 - Benedek Farkas ([nightwolf226](https://www.codeplex.com/site/users/view/nightwolf226))
 - Benjamin Grabkowitz ([bgrabkowitz](https://www.codeplex.com/site/users/view/bgrabkowitz))
 - Bertrand Le Roy ([bertrandleroy](http://www.codeplex.com/site/users/view/bertrandleroy))
@@ -150,7 +151,6 @@ we should all be grateful to the following people who contributed patches and fe
 - Daniel Stolt ([Decorum](https://www.codeplex.com/site/users/view/Decorum))
 - Erik Oppedijk ([erik_oppedijk](https://www.codeplex.com/site/users/view/erik_oppedijk))
 - Eric Schultz ([wwahammy](https://www.codeplex.com/site/users/view/wwahammy))
-- ([fassetar](https://www.codeplex.com/site/users/view/fassetar))
 - Gilian Keulens ([Walance](http://www.codeplex.com/site/users/view/Walance))
 - Henry Kuijpers ([hkui](https://www.codeplex.com/site/users/view/hkui))
 - Jay Harris ([jayharris](https://www.codeplex.com/site/users/view/jayharris))
