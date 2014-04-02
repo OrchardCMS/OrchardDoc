@@ -12,7 +12,7 @@ To view the packaging modules, open the Orchard dashboard and click **Modules**.
 The **Packaging** modules are enabled by default. If any of the modules have been disabled, you must enable them in order to package and upload your theme.
 
 # Packaging Your Theme
-To package your theme, open the Orchard command line and type the following command, replacing _MyFirstTheme_ with the name of your theme, and _C:\Temp_ with the output path for the generated package file. 
+To package your theme, open the <a href="/Documentation/Using-the-command-line-interface">Orchard command line</a> and type the following command, replacing _MyFirstTheme_ with the name of your theme, and _C:\Temp_ with the output path for the generated package file. 
 
     
     package create MyFirstTheme C:\Temp
