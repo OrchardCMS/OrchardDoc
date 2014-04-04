@@ -61,6 +61,7 @@ Rule Syntax                  | Description
 ---------------------------- | ------------------------------
 url("&lt;url&nbsp;path&gt;") | True if the current URL matches the specified path. If you add an asterisk (*) to the end of the path, all pages found in subfolders under that path will evaluate to true (for example, `url("~/home*")`).
 authenticated                | True if the user is logged in.
+ContentType("&lt;Type&gt;")  | True if the content type being view matches the content type specified e.g. ContentType("Page")
 not                          | Logical NOT.
 and                          | Logical AND.
 or                           | Logical OR.
@@ -107,4 +108,5 @@ Edit the field you want to change, then click **Save**. To remove the widget fro
 ### Change History
 * Updates for Orchard 1.1
     * 3-16-11: Updated screen shots for 1.1 version.
-    * test chage
+* Updates for Orchard 1.7
+    * 4-4-14: Added Content Type rule
