@@ -107,3 +107,4 @@ Edit the field you want to change, then click **Save**. To remove the widget fro
 ### Change History
 * Updates for Orchard 1.1
     * 3-16-11: Updated screen shots for 1.1 version.
+    * test chage
