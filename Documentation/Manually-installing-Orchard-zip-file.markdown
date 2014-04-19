@@ -1,58 +1,119 @@
+*This topic targets, and was tested with, the Orchard 1.8 release.*
 
-If you do not want to use the Microsoft Web Platform Installer to install Orchard, you can download a .zip file that contains everything you need to in order use Orchard. This topic shows the steps you need to perform to install Orchard using the .zip file. For information about using the Web Platform Installer, see [Installing Orchard](Installing-Orchard).
+This topic shows the steps you need to perform to install Orchard using the .zip file.
 
-> **Note**: If you plan to use Visual Studio 2010 to develop your Orchard site, we recommend that you install Visual Studio, and the ASP.NET MVC 3 Tool Update, before installing Orchard. If you plan to use WebMatrix to develop your site, you may want to see the topic [Installing Orchard](Installing-Orchard), which installs Orchard from the Web Platform Installer and includes WebMatrix in the installation. Also, if you previously installed pre-release versions of WebMatrix, ASP.NET Web Pages, or ASP.NET MVC 3, you must uninstall those or upgrade those products to the final release of each before Orchard will run correctly on your computer.
+We will use three different approaches:
 
+* IIS.
+* WebMatrix and IIS Express
+* Visual Studio and the Visual Studio Development Server.
+
+> **Note**: If you prefer using the Web Platform Installer, or if you plan to use WebMatrix to develop your site, you may want to see the topic [Installing Orchard](Installing-Orchard), which installs Orchard from the Web Platform Installer and includes WebMatrix in the installation.
 
 
 # Downloading the .zip File
 
-Download the Orchard [.zip file](http://orchard.codeplex.com/releases/view/90325) from CodePlex. Select the **Orchard.Web.1.x.xx.zip** file for the latest build of Orchard, as shown in the following illustration:
+Navigate to the [Downloads Section of Orchard in Codeplex](http://orchard.codeplex.com/releases/view/115750). 
 
-![](../Upload/screenshots/Install_downloadzip.png)
+You will find two .zip files.
 
-The website is in the "Orchard" folder that's included in the .zip file.
+* _Orchard.Web.1.x.xx.zip_ : In this file the site has already been built and can be run without additional compilation. It does not includes all the source code.
+* _Orchard.Source.1.x.xx.zip_ : This file includes the source code. If you plan to develop modules you probably prefer this one. It is easier to use with Visual Studio and you have plenty of source files to see how everything is done.
 
-You can run your downloaded Orchard site using IIS, WebMatrix and IIS Express, or Visual Studio and the Visual Studio Development Server. The site has already been built and can be run without additional compilation.
-//Orchard 1.6 - Running the Site Using IIS section still needs to be verified 11/12/2012
+
 # Running the Site Using IIS
+*This procedure was tested with a clean installation of Windows 8.1 Enterprise Edition.*
 
-To use IIS, extract the contents of the _Orchard_ folder from the .zip file to an IIS virtual directory (or site root), and then view the site using a browser. If you are using IIS 7, configure it to run in integrated mode, and configure the application pool to run the .NET Framework version 4.
+First let's setup the server. Search for "Add or Remove Programs" in your system. And execute it.
 
-You might have to set read/write permissions for the account that is configured as the identity for the IIS application pool on the following folders:
+![](/Attachments/Manually-installing-Orchard-zip-file/IISSearchForAddRemovePrograms.png)
+
+Click **Turn Windows features on or off**.
+
+![](/Attachments/Manually-installing-Orchard-zip-file/IISTurnOnWindowsFeatures.png)
+
+Click **Internet Information Services** and then **ASP.NET 4.5**. Click **OK**.
+
+![](/Attachments/Manually-installing-Orchard-zip-file/IISEnableIISAndASP45.png)
+
+At this point we recommend rebooting your system. This way you will be sure that all the required services are started from scratch.
+
+When the system restarts, download the _Orchard.Web.1.x.xx.zip_ file from [here](http://orchard.codeplex.com/releases/view/115750). Extract the .zip file to your Desktop. The extracted folder contains several files and an *Orchard* folder.
+Copy the *Orchard* Folder to *C:\inetpub\wwwroot\\*.
+
+In Windows Explorer go inside the *Orchard* Folder.Let's start with *App\_Data* folder.
+
+This folder is where Orchard stores site settings. Right-click *App\_Data* folder, click **Properties** and using the **Security** tab set modify and read permissions for the *IIS\_IUSRS* user.
+
+Then repeat the same procedure for the following folders:
 
 * _Modules_. This is required if you want to install modules from the gallery. (We recommend that you remove the read/write permissions for production sites.)
 * _Themes_. This is required if you want to install themes from the gallery. (We recommend that you remove the read/write permissions for production sites.)
-* _App_Data_. This folder is where Orchard stores site settings.  
 * _Media_. This folder is where Orchard stores media files (images, etc.).
 
-If you want to completely reset an Orchard site configuration to its default settings, you can delete the _App_Data_ directory. This removes all your custom settings, users, and configuration, as well as any custom data you have added to the site. If you delete the _App_Data_ folder, and if you want to remove custom images that you have added to the site, you can delete the _Media_ folder as well.
+
+![](/Attachments/Manually-installing-Orchard-zip-file/IISSetFolderPermissions.png)
+
+> **Tip**: If you want to completely reset an Orchard site configuration to its default settings, you can delete the contents of the App\_Data directory. This removes all your custom settings, users, and configuration, as well as any custom data you have added to the site. 
+If you delete the contents of the App\_Data folder, and if you want to remove custom images that you have added to the site, you can delete the contents of the Media folder as well. The required files will be recreated the next time Orchard is started.
+
+
+Now you can create your new website. Search your system for **Internet Information Services (IIS) Manager**, and execute it.
+
+![](/Attachments/Manually-installing-Orchard-zip-file/IISOpenIISManager.png)
+
+Click in **Default Web Site** and **stop**. This will free port 80 for our site.
+
+![](/Attachments/Manually-installing-Orchard-zip-file/IISStopDefaultWebSite.png)
+
+
+Right-click **Sites** and **Add Website**.
+
+![](/Attachments/Manually-installing-Orchard-zip-file/IISAddANewWebsite.png)
+
+Write your site name and point **Physical path** to your *Orchard* folder. Click **Ok**.
+
+![](/Attachments/Manually-installing-Orchard-zip-file/IISAddWebsiteScreen.png)
+
+Click **Yes** in the warning dialog about two sites using port 80.
+
+![](/Attachments/Manually-installing-Orchard-zip-file/IISPort80Conflict.png)
+
+Your website is running now. Click **browse** to navigate to it.
+
+![](/Attachments/Manually-installing-Orchard-zip-file/IISBrowseToSite.png)
+
+You should see the Orchard setup screen in your browser.
 
 # Running the Site Using WebMatrix and IIS Express
 
-To use WebMatrix and IIS Express, extract the Orchard .zip file to a local folder. Launch WebMatrix, and in the **Quick Start** screen, click **Open Site** and then **Folder as Site**.
+Download the _Orchard.Web.1.x.xx.zip_ file from [here](http://orchard.codeplex.com/releases/view/115750). Extract the Orchard .zip file to a local folder. Launch WebMatrix, and in the **Quick Start** screen, click **Open** and then **Folder**.
 
-![](../Upload/screenshots_675/webmatrix_sitefromfolder_675.png)
+![](/Attachments/Manually-installing-Orchard-zip-file/IISWMOpenFolder.png)
 
  Navigate to the folder where you extracted the .zip file, select the folder named **Orchard**, and then click **Select Folder** to open the site.
 
-![](../Upload/screenshots_675/webmatrix_selectfolder_675.png)
+![](/Attachments/Manually-installing-Orchard-zip-file/IISWMSelectFolder.png)
 
 To run the site, in the WebMatrix **Files** workspace, select the root **Orchard** folder. Click the drop-down list in the **Run** button and then select a browser.
 
-![](../Upload/screenshots_675/webmatrix_run_orchard_675.png)
+![](/Attachments/Manually-installing-Orchard-zip-file/IISWMRun.png)
+
+You should see the Orchard setup screen in your browser.
 
 # Running the Site Using Visual Studio and the Visual Studio Development Server
+*This procedure was tested with Visual Studio 2013 Update 1.*
 
-To run the site in Visual Studio, extract the full source code .zip file to a local folder.
+Altough you can run the precompiled version of Orchard in Visual Studio, you will find much easier to work in Visual Studio with the full source code version. 
+Download the full source code from [here](http://orchard.codeplex.com/releases/view/115750). Extract the .zip file to a local folder.
 
-![](../Upload/screenshots_675/contents_of_source_zip_file_675.png)
+![](/Attachments/Manually-installing-Orchard-zip-file/contents_of_source_zip_file.png)
 
  Launch Visual Studio and select **File** > **Open** > **Project/Solution**. Navigate to the folder where you extracted the .zip and open the folder named **src**. Select the **Orchard.sln** solution file.
 
-![](../Attachments/Manually-installing-Orchard-zip-file/OpenSolution.PNG)
+![](/Attachments/Manually-installing-Orchard-zip-file/VSOpenSolution.PNG)
 
-To run the site, press Ctrl+F5.
+To run the site, press Ctrl+F5. You should see the Orchard setup screen in your browser.
 
 # Setting Up a Site
 
@@ -83,10 +144,13 @@ You are now on the Orchard home page and can begin configuring your site.
   
 
 # Change History
-* Updates for Orchard 1.6
+	
+* 4-9-14: Updates for Orchard 1.8. Added screenshots and more detail to the IIS section. Updated Webmatrix screenshots. Changed a bit the structure of some paragraphs to make them clearer. Updated some links.
+	* Updates for Orchard 1.6		
 	* 11-07-12:  Updated screens for 1.6 installation.
 	* 4-12-11: Updated screens for 1.1 installation.
     * 3-14-11:  Added section on using WebMatrix and IIS Express.
     * 3-14-11:  Added information about recipes in the setup screen.
     * 3-15-11:  Fixed the IIS section to use the Orchard subfolder from the zip.
+	
 
