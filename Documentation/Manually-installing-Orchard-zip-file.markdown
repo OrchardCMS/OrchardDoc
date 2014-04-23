@@ -144,13 +144,13 @@ You are now on the Orchard home page and can begin configuring your site.
   
 
 # Change History
-	
-* 4-9-14: Updates for Orchard 1.8. Added screenshots and more detail to the IIS section. Updated Webmatrix screenshots. Changed a bit the structure of some paragraphs to make them clearer. Updated some links.
-	* Updates for Orchard 1.6		
-	* 11-07-12:  Updated screens for 1.6 installation.
+* Updates for Orchard 1.8
+    * 4-9-14: Added screenshots and more detail to the IIS section. Updated Webmatrix screenshots. Changed a bit the structure of some paragraphs to make them clearer. Updated some links.
+* Updates for Orchard 1.6
+    * 11-07-12: Updated screens for 1.6 installation.
 	* 4-12-11: Updated screens for 1.1 installation.
-    * 3-14-11:  Added section on using WebMatrix and IIS Express.
-    * 3-14-11:  Added information about recipes in the setup screen.
-    * 3-15-11:  Fixed the IIS section to use the Orchard subfolder from the zip.
+    * 3-14-11: Added section on using WebMatrix and IIS Express.
+    * 3-14-11: Added information about recipes in the setup screen.
+    * 3-15-11: Fixed the IIS section to use the Orchard subfolder from the zip.
 	
 

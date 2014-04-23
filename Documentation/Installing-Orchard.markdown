@@ -76,7 +76,8 @@ You can now begin configuring your site.
   
 
 # Change History
+* Updates for Orchard 1.8
+    * 4-15-14:	Updated info for 1.8 release. Updated some screenshots, requirements, .zip link and other minor changes.
 * Updates for Orchard 1.1
     * 4-12-11:  Updated screens for 1.1 installation.
     * 3-14-11:  Added information about recipes in the setup screen.
-	* 4-15-14:	Updated info for 1.8 release. Updated some screenshots, requirements, .zip link and other minor changes.

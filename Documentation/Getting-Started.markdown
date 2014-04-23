@@ -1,8 +1,10 @@
+*This topic targets, and was tested with, the Orchard 1.8 release.*
+
 This walkthrough provides a glimpse of the features that Orchard has to offer, provided as a step-by-step guide. If this is your first time using Orchard, this document is for you!
 
 This topic assumes that you have already installed Orchard and set up your website. If you haven't, follow the instructions in [Installing Orchard](Installing-Orchard).
 
-### Changing the layout of the Home Page
+### Changing The Layout Of The Home Page
 
 Out of the box, Orchard applies a theme to your website known as the "Theme Machine".  The Theme Machine includes CSS styles and a layout. Orchard allows you to selectively include or exclude portions (zones) of the layout on each page of your website. 
 By default, the zones highlighted in blue are enabled on the home page.
@@ -59,7 +61,7 @@ The TripelThird zone will no longer be visible on the home page.
 **8)** Select **Your Site** in the upper-left side of the Dashboard to view the modified home page with the new TripelThird zone.
 ![](../Upload/screenshots_675/homepage_modified_thirdleaderaside_675.png)
 
-### Editing the content of the Home Page
+### Editing The Content Of The Home Page
 
 Orchard provides a feature that makes it easy for you to edit the content in a zone or the page body.  To turn on this feature you must enable the **Content Control Wrapper** and **Widget Control Wrapper** modules 
 
@@ -79,43 +81,65 @@ Once these modules are enabled, you can edit the contents of an individual zone 
 
 **5)** Change the title, and optionally, change or remove the existing body text for the zone.  
 
-**6)** Select **Insert/Update Media**. 
+**6)** Select **Insert Media Item**. 
 
 ![](../Upload/screenshots_675/edit_widget_media_1_675.png)
 
-**7)** Browse to an image file on your computer and select **Upload** to upload it to your Orchard site.
+**7)** Click **Create Folder**. 
 
-![](../Upload/screenshots/pick_image.png)
+![](/Attachments/Getting-Started/MedLibCreateFolder.png)
 
-**8)** Select **Insert** to insert it into the TriplelFirst zone.
+**8)** Name the folder *myImages* and click **Save**. 
 
-> **Note:** Before you insert the uploaded image, it is helpful to specify width and height attributes for the image, for example 200 pixels wide by 150 pixels high, so that the image fits correctly into its zone. 
+![](/Attachments/Getting-Started/MedLibSaveFolderName.png)
 
-**9)** Select **Save** to save the changes to the widget. The home page is automatically displayed with the updated zone.
+**9)** Click the folder *myImages*, and then click **Import** 
 
-![](../Upload/screenshots_675/edit_widget_tulip_675.png)
+![](/Attachments/Getting-Started/MedLibImport.png)
 
-**10)** Select the **Edit** link for the **Body** of the page.
+**10)** Click *My Computer* and then click in the central zone to browse for an image. If you prefer you can drop your image into the central zone.
+
+![](/Attachments/Getting-Started/MedLibUpload.png)
+
+
+**11)** Close the dialog.
+
+![](/Attachments/Getting-Started/MedLibClose.png)
+
+
+**12)** Click the image and click **Select**.
+
+![](/Attachments/Getting-Started/MedLibSelectImage.png)
+
+**13)** If needed, resize the image using the handlers so that later it fits nicely into the zone. Then click **Save** to save the changes to the widget. 
+
+![](/Attachments/Getting-Started/MedLibSaveContent.png)
+
+The home page is automatically displayed with the updated zone.
+
+![](/Attachments/Getting-Started/FirstLeaderAside.png)
+
+**14)** Select the **Edit** link for the **Body** of the page.
 
 ![](../Upload/screenshots_675/edit_body_675.png)
 
  Orchard will display the **Edit Page** screen.
  > **Note:** The Edit Page screen can also be reached from the Dashboard by selecting **Content** on the Dashboard and then selecting **Edit** for the page you are interested in.
 
- **11)** Enter some text for the content. 
+ **15)** Enter some text for the content. 
 
 ![](../Upload/screenshots_675/edit_homepage_675.png)
 
-**12)** Select **Publish Now** at the bottom of the page to make the updates to the page visible immediately.
+**16)** Select **Publish Now** at the bottom of the page to make the updates to the page visible immediately.
 
-![](../Upload/screenshots_675/publishnow_homepage_675.png)
+![](/Attachments/Getting-Started/PagePublishNow.png)
 
 
 ### Adding a New Page to Your Site
 
 **1)** In the Orchard Dashboard, under **New**, select **Page**.
 
-**2)** Enter a title for the page.  When you enter a title for the page (for example, "Download"), the permalink (URL) for the page is filled in automatically ("download").  You can edit this link if you prefer a different URL.
+**2)** Enter a title for the page.  When you enter a title for the page and save it (for example, "Download"), the permalink (URL) for the page will be filled in automatically ("download").  You can edit this link if you prefer a different URL.
 
 **3)** Enter some text for the content page body.
 
@@ -126,30 +150,44 @@ Once these modules are enabled, you can edit the contents of an individual zone 
 
 **5)** Check **Show on main menu** and enter the menu text ("Downloads") to use in the site's main menu.
 
-**6)** Select **Publish Now** to make the page to make the updates to the page visible immediately. You can also save the page as a draft (to edit later before publishing), or you can choose to publish the page at a specific date and time.
+**6)** Select **Publish Now** to make the updates to the page visible immediately. You can also save the page as a draft (to edit later before publishing), or you can choose to publish the page at a specific date and time.
 
-![](../Upload/screenshots_675/create_new_page_1_1_675.png)
+![](/Attachments/Getting-Started/CreateNewPage.png)
 
- When you publish the page, you will be offered the opportunity to create a new Widget Layer for the page.
+**7)** Select **Your Site** in the upper-left side of the Dashboard to view the modified home page with the new menu. Clik **Downloads** and you will see your new page.
+ 
+### Changing The Layout Of Your Page
 
-**7)** Select **add a widget layer** to add a new layer for this page which will allow you to customize the layout for the new page at a later point in time.
+To change the layout of your new page without affecting the rest of the site you can create a new layer, that will be applied only to the *Downloads* page. Then you can place some widgets on that layer and they will be visible only in the *Downloads* page.
+ 
 
-![](../Upload/screenshots_675/create_new_page_1_2_675.png)
+**1)** Go to the Dashboard and select **Widgets**. Then click **add a new layer** to add a new layer for this page which will allow you to customize the layout for the new page at a later point in time.
 
-**8)** Select **Save** which will create the new layer with the default settings.
+![](/Attachments/Getting-Started/AddNewLayer.png)
+
+**2)** Write a name for the layer, a description, and a layer rule: url"~/download". This will instruct the Orchard System to show the widgets in this layer only when the url of the browser is pointing to "download". Select **Save**.
 
 ![](../Upload/screenshots_675/create_new_page_2_2_675.png)
 
-**9)** Select **Your Site** in the upper-left side of the Dashboard to view the updated website.
+**3)** To check that your layer rule is working you can add a widget to it. Ensure that **Current Layer** is **Download**. Click **Add** in *AsideFirst*.
 
-Notice that the **Downloads** tab has been added to the main menu, and that you can select the tab to view your page. Also notice that the new page has a different layout from the home page.  The only zones visible on the new page are the zones (Navigation) made visible by the Default layer.  To make additional zones visible only on the Download page, you must add widgets to zones in the Download layer.
+![](/Attachments/Getting-Started/AddNewWidget.png)
 
-![](../Upload/screenshots_675/website_new_page_added_675.png)
+**4)** Add a new **Html Widget**.
 
- 
+![](/Attachments/Getting-Started/AddHtmlWidget.png)
+
+**5)** Write a title and a body for it. Save it.
+
+![](/Attachments/Getting-Started/EditHtmlWidget.png)
+
+**6)** Select **Your Site** in the upper-left side of the Dashboard. Navigate to *Downloads*. You should see the custom layout.
+
+![](/Attachments/Getting-Started/CustomLayoutResult.png)
 
 
-### Selecting a Theme
+
+### Selecting A Theme
 
 To customize the look and feel of the Orchard website you change the theme. 
 
@@ -168,13 +206,13 @@ After a theme has been installed it appears as an option in the **Available** se
 ![](../Upload/screenshots_675/themes_manage_1_675.png)
 
 
-### Extending Orchard with Modules and Features
+### Extending Orchard With Modules And Features
 
 A key feature of Orchard is the ability to add new features in order to extend the functionality of your site. The primary way to do this is by installing modules. You can think of a module as a package of files (in a .zip folder) that can be installed on your site. To view the modules that are included with Orchard, in the Orchard Dashboard, click **Modules** and then click the **Installed** tab in the **Modules** screen.
 
 ![](../Upload/screenshots_675/installed_modules_1_675.png)
 
-Orchard provides some built-in modules, and you can install new modules. For details, see [Installing and Upgrading Modules](Installing-and-upgrading-modules) and [Registering additional gallery feeds](Module gallery feeds).
+Orchard provides some built-in modules, and you can install new modules. For details, see [Installing and Upgrading Modules](Installing-and-upgrading-modules) and [Registering additional gallery feeds](Module-gallery-feeds).
 
 Individual modules can expose features that can be independently enabled or disabled. To view the features exposed by the built-in modules in Orchard, click the **Features** tab in the **Modules** screen.  
 
@@ -184,6 +222,8 @@ Each feature has an **Enable** or **Disable** link (depending on its current sta
   
 
 ### Change History
+* Updates for Orchard 1.8
+    * 4-22-14:  Media selection is different now, updated that part. Adding a widget layer is not suggested anymore when adding a new page, updated that part. Link to registering additional gallery feeds was not working. Updated several screenshots. Added capitalization to section headers.
 * Updates for Orchard 1.6
 	* 11-25-12:  Added section describing how to change the layout for a page by enabling/disabling zones.  Removed section on Creating a Blog (which already has it's own topic).
 * Updates for Orchard 1.1
