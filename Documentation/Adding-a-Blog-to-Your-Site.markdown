@@ -17,7 +17,7 @@ In the *New Blog* screen add a title, description, and menu text for the blog an
 
 ### Add a post to the Blog
 
-When you click **New Post** a a new blog entry is created. The **New Blog Post** screen is displayed. Enter a title for your post and the post contents.
+Click **New Post** to create a new blog entry. The **New Blog Post** screen is displayed. Enter a title for your post and the post contents.
 
 ![](/Attachments/Adding-A-Blog-To-Your-Site/NewPost1.png)
 
