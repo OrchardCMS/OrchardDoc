@@ -7,6 +7,10 @@ Pluralsight has an introductory training course available here:
 
 The first part of the Pluralsight video course is free, and subsequent episodes require a subscription.
 
+### Orchard CMS Theme Development For Beginners
+
+[Orchard CMS Theme Development for Beginners](https://www.udemy.com/orchard-cms-theme-development-for-beginners) by Abhishek Luv
+
 ## Free
 
 ### Dojo Course
