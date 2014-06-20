@@ -40,7 +40,7 @@ Branches are described here: <http://docs.orchardproject.net/Documentation/Devel
 Who should use this software?
 -----------------------------
 
-This software is in version 1.8. The code is in a stable state and constitutes
+This software is in version 1.8.1. The code is in a stable state and constitutes
 a solid foundation for building applications, themes and modules.
 Suggestions are welcome in the discussion forums.
 
@@ -119,33 +119,14 @@ This software would not exist without the community. In particular, for this rel
 we should all be grateful to the following people who contributed patches and features:
 
 - Antoine Griffard ([agriffard](http://www.codeplex.com/site/users/view/agriffard))
-- Anthony R. Fassett ([fassetar](https://www.codeplex.com/site/users/view/fassetar))
 - Benedek Farkas ([nightwolf226](https://www.codeplex.com/site/users/view/nightwolf226))
-- Benjamin Grabkowitz ([bgrabkowitz](https://www.codeplex.com/site/users/view/bgrabkowitz))
 - Bertrand Le Roy ([bertrandleroy](http://www.codeplex.com/site/users/view/bertrandleroy))
-- Brett Morrison ([morrisonbrett](https://www.codeplex.com/site/users/view/morrisonbrett))
 - Claire Botman ([planetClaire](https://www.codeplex.com/site/users/view/planetClaire))
-- Daniel Dabrowski ([rodpl](https://www.codeplex.com/site/users/view/rodpl)) 
 - Daniel Stolt ([Decorum](https://www.codeplex.com/site/users/view/Decorum))
-- Erik Oppedijk ([erik_oppedijk](https://www.codeplex.com/site/users/view/erik_oppedijk))
-- Eric Schultz ([wwahammy](https://www.codeplex.com/site/users/view/wwahammy))
-- Gilian Keulens ([Walance](http://www.codeplex.com/site/users/view/Walance))
-- Henry Kuijpers ([hkui](https://www.codeplex.com/site/users/view/hkui))
-- Jay Harris ([jayharris](https://www.codeplex.com/site/users/view/jayharris))
-- Jasper Dunker ([jasperd](http://www.codeplex.com/site/users/view/jasperd))
-- Jean-Thierry Kéchichian ([jtkech](https://www.codeplex.com/site/users/view/jtkech))
-- Jeff Olmstead ([jao28](https://www.codeplex.com/site/users/view/jao28))
-- Jim Macdonald ([Jimasp](http://www.codeplex.com/site/users/view/Jimasp))
-- Josh Berry ([joshby](https://www.codeplex.com/site/users/view/joshby))
-- kassobasi ([kassobasi](https://www.codeplex.com/site/users/view/kassobasi))
-- Michael Yates ([mjy78](http://www.codeplex.com/site/users/view/mjy78))
-- Piotr Szmyd ([pszmyd](https://www.codeplex.com/site/users/view/pszmyd))
+- Jeff Bullock ([j3ffb](http://www.codeplex.com/site/users/view/j3ffb))
+- Nicholas Mayne ([Jetski5822](http://www.codeplex.com/site/users/view/Jetski5822))
 - Sebastien Ros ([sebastienros](http://www.codeplex.com/site/users/view/sebastienros))
 - Sipke Schoorstra ([sfmskywalker](http://www.codeplex.com/site/users/view/sfmskywalker))
 - Stanley Goldman ([StanleyGoldman](http://www.codeplex.com/site/users/view/StanleyGoldman))
-- Thierry Fleury ([Codinlab](https://www.codeplex.com/site/users/view/Codinlab))
-- Tony Mackay ([toneuk](https://www.codeplex.com/site/users/view/toneuk))
-- Yury Arzhevikin ([Gorizon47](http://www.codeplex.com/site/users/view/Gorizon47))
+- Wojciech Gadziński ([Ermesx](https://www.codeplex.com/site/users/view/Ermesx))
 - Zoltán Lehóczky ([Piedone](http://www.codeplex.com/site/users/view/Piedone))
-
-Special Thanks to Christian Surieux ([csadnt](http://www.codeplex.com/site/users/view/csadnt)) for his active participation on the forums.
