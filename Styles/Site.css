@@ -347,7 +347,7 @@ html>body #ContainerDiv {height: auto;}
 }
 
 /* Contains the contents of a Page */
-#MainDiv {
+#MainDiv, #disqus_thread {
 	padding:12px 10px 10px 22px;
 	width:680px;
 }
