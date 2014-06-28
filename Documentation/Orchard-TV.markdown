@@ -11,6 +11,11 @@ The first part of the Pluralsight video course is free, and subsequent episodes 
 
 [Orchard CMS Theme Development for Beginners](https://www.udemy.com/orchard-cms-theme-development-for-beginners) by Abhishek Luv
 
+### Orchard CMS Tutorial : Recipes in Orchard CMS
+
+[Orchard CMS Tutorial : Recipes in Orchard CMS](https://www.udemy.com/orchard-cms-tutorial-recipes-in-orchard-cms/) by Abhishek Luv
+
+
 ## Free
 
 ### Introduction to Orchard 1.5 by Sébastien Ros
