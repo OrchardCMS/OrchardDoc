@@ -1,23 +1,28 @@
 
-The default Orchard theme is called the Theme Machine, and it is designed to be a versatile starting point for customizing and developing new themes. 
+The default Orchard theme is called the Theme Machine. It is designed to be a versatile starting point for customizing and developing new themes. 
 
-This article introduces you to the Theme Machine and demonstrates how you can create your own theme by customizing the Theme Machine style sheet (Site.css).
-
+This article introduces you to The Theme Machine and demonstrates how to create your own theme by customizing The Theme Machine style sheet (Site.css).
 
 # Introducing the Theme Machine
-The Theme Machine provides a flexible and powerful foundation to base themes upon. The following image shows the file structure of the Theme Machine.
+The Theme Machine provides a flexible and powerful foundation for themes. The following image shows the file structure.
 
+![](../Upload/screenshots/ThemeMachine_structure.PNG)
 
-![](../Upload/screenshots/ThemeMachine_structure.PNG)The files at the heart of the Theme Machine are the layout page (Layout.cshtml) and the style sheet (Site.css).
-
+The files at the heart of the Theme Machine are the layout page (Layout.cshtml) and style sheet (Site.css).
 
 # Overview of the Layout Page
-The layout page defines multiple zones using conditional statements. The conditional statements cause only the zones to be rendered for which content is provided. If you don't provide the content, the rendered page will not contain the zone. The following images shows the zones defined in the layout page.
+The layout page defines multiple zones. Each zone has a conditional statements, so that it renders if and only if it has content. If you don't provide the content, the rendered page will not contain the zone. The following images show the zones.
 
 ![All the zones in The Theme Machine](../Attachments/Anatomy-of-a-theme/TheThemeMachineZoneScreenshot.PNG)
 
-You will typically provide content for selected zones by using the Admin Panel. 
+[This live demo site](https://orchard-theme-machine-designer.azurewebsites.net/ "The Theme Machine Designer") shows the anatomy of a theme.
 
+- Zones and their children have an aqua background,
+- widgets & content-items have a red border, and
+- a gradual lightening from black indicates the topography.
+- You can click through the menu to view zones collapse when they lack content.
+
+You will typically provide content for zones by using the Admin Panel. 
 
 # Overview of the CSS Styles
 The style sheet (Site.css) for the Theme Machine provides an extensive set of styles for fine-grained control of the look and feel of your website. The style sheet groups styles to make it easier for you to locate a style that you want to customize. The following table shows the groupings and describes the type of styles available to you.
