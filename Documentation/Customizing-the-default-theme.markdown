@@ -1,7 +1,7 @@
 
 The default Orchard theme is called the Theme Machine. It is designed as a versatile starting point for customizing and developing themes. 
 
-This article introduces you to The Theme Machine and demonstrates how to create your own theme by customizing The Theme Machine style sheet (Site.css).
+This article introduces The Theme Machine and demonstrates how to create your own theme by customizing The Theme Machine style sheet (Site.css).
 
 # Introducing the Theme Machine
 The Theme Machine provides a flexible and powerful foundation for themes. The following image shows the file structure.
