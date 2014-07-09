@@ -52,7 +52,41 @@ In this screen shot, we have already imported some images and created some folde
 - The Add Widget page will again display. Click **Save**.
 - Visit the front end of your site to see the scaffolding of an image gallery.
 
-# Customize the Look of the Image Gallery with Shape Tracing
+# Customize the Look of the Gallery
 
-- Create a new Alternate using Shape Tracing.
+- Turn on Shape Tracing
+- Create an Alternate for the Fields_MediaPickerLibrary
 - Edit the HTML and add CSS.
+- Here are example alternate templates, courtesy of Bertrand Le Roy's [Codeplex Reply](https://orchard.codeplex.com/discussions/454808) 
+
+Fields.MediaLibraryPicker.cshtml
+
+    @using Orchard.ContentManagement
+    @using Orchard.MediaLibrary.Fields
+    @using Orchard.Utility.Extensions;    
+    @{
+    	var field = (MediaLibraryPickerField) Model.ContentField;
+    	string name = field.DisplayName;
+    	var contents = field.MediaParts;
+    }
+    <section class="media-library-picker-field media-library-picker-field @name.HtmlClassify()">
+    @foreach(var content in contents) 
+	{
+   	 	<div>
+    		@Display(BuildDisplay(content, "Summary"))
+    	</div>
+	}
+    </section>
+
+Media.Summary.cshtml
+    
+    @using Orchard.MediaLibrary.Models
+    @using Orchard.Utility.Extensions;
+    @{
+    	MediaPart mediaPart = Model.ContentItem.MediaPart;
+    }
+    <a href="@mediaPart.MediaUrl">
+    <img 
+		src="@Display.ResizeMediaUrl(Width: 200, Height: 200, Mode: "crop", 	Alignment: "middlecenter", Path: mediaPart.MediaUrl)" 	
+		alt="@mediaPart.Caption" class="thumbnail"/>
+    </a>
