@@ -56,5 +56,4 @@ In the screen shot, we already have imported some images and created some folder
 # Customize the Look of the Image Gallery with Shape Tracing
 
 - Create a new Alternate using Shape Tracing
-- Add CSS
-- See also
+- Edit the HTML and add CSS
