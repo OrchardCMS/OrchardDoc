@@ -1,71 +1,54 @@
 > Draft topic 
 
-This document targets Orchard developers who use the admin dashboard to create and define new types of content. You will understand how to create and to customize an image gallery.
+This document targets Orchard developers who use the admin dashboard to create and define new types of content. You will understand how to create an image gallery.
 
-# Media Gallery Field & Media Library Picker Field
-- Display one or more media items on the site.
-- By default, displays only one media item. 
-- Configurable it to display multiple media items when adding the field to a Content Type.
-- Media items include Audio, Document, External Media, Image, or Video.
+# Create a New Content Type
 
-## Media Gallery Field
-- Downside is that you must choose media one at a time.
-
-## Media Library Picker Field
-- This is the most powerful of the Media Fields.
-- When choosing media, use ctrl + click to choose multiple at once.
-- In addition to displaying media, it this field lets you:
-	- Create a new Media folder
-	- Rename an existing Media folder
-	- Import media into an existing Media folder from My Computer, a Web Search, or a Media URL.
-	 
-## Media Picker Field
-- Deprecated
-- Display one image or media item on the site 
-
-## Other Fields
-- Boolean
-- Content Picker 
-- Date Time
-- Enumeration
-- Input
-- Link
-- Numeric
-- Text
-
-# Content Definition
-
-1. Content Definition
-2. Create new type
+- Content Definition
+- Create new type
+- Choose a Display Name (e.g. My Image Gallery)
+- Click Create
+- Orchard will create the new Content Type
+- The Add Parts page will open.
+- Check Widget and click Save.
+- Orchard will add the Widget part to the Content Type
 
 ![New content type](/Attachments/Creating-an-image-gallery/new-content-type.jpg)
 
+- The Edit Content Type page will now show.
+- Change the Stereotype to Widget
+- Then click Add Field
+- Choose Media Library Picker Field
+- Name the field (e.g. My Media Library Picker Field)
+- Click Save
 
-	1. My Image Gallery
-	2. Create
-3. Add Parts
-	1. Widget
-	2. Save
-4. Add Field
-	1. My Media Library Picker Field
-	2. Media Library Picker Field.
-		1. Allow multiple content items
-	3. Stereotype : Widget 
-	3. Save
-5. Save
-6. Widgets
-	1. Choose zone
-	2. Add
-	3. My Image Gallery
-	4. My Awesome Image Gallery
-	5. Add 
-		1. Create Folder
-		2. My Image Gallery Folder
-		3. Import 
-		4. Wait until complete
-		4. Close
-		5. Use ctrl + click to select as many images as you want in your gallery
-		6. Select
-7. Publish Now
+![Add a new field](/Attachments/Creating-an-image-gallery/add-new-field.jpg)
 
+- Click on the down carat beside the new field
+- Check "Allow multiple content items"
+- Click Save at the bottom of the page.
+- You will now have the following Content Type
 
+![Finished content type](/Attachments/Creating-an-image-gallery/finished-content-type.jpg)
+
+# Add the Content Type to a Zone
+
+- Widgets
+- Click Add beside any zone (e.g. BeforeContent)
+- The Choose a Widget page will open
+- Choose the Widget that you just created (i.e. My Image Gallery)
+- The Add Widget page will open
+- Give the Widget a Title (e.g. My Gallery Widget)
+- Click the Add button below "My Media Library Picker Field"
+- The Media Library Picker modal will show
+
+ ![Finished content type](/Attachments/Creating-an-image-gallery/modal-popup.jpg)
+
+In the screen shot, we already have imported some images and created some folders. Create folders using the Create Folder button. Import images by opening a folder and clicking the Import button. This tutorial does not currently cover importing images.
+
+- Select the images that you want to display in the gallery 
+- (Use ctrl + click to select multiple images at once)
+- Then, click the Select button in the lower left of the modal (it's a bit hidden)
+- Orchard will add the images and again show the Add Widget page
+- Click Save
+- Visit the front end of your site to see the image gallery
