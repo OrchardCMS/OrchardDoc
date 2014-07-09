@@ -1,8 +1,8 @@
 > Draft topic 
 
-This document targets Orchard developers who use the admin dashboard to create and define new types of content. You will understand how to create an image gallery.
+This document targets Orchard developers who want to create an image gallery.
 
-# Create a New Content Type
+# Create the Image Gallery Content Type
 
 - Content Definition
 - Create new type
@@ -31,7 +31,7 @@ This document targets Orchard developers who use the admin dashboard to create a
 
 ![Finished content type](/Attachments/Creating-an-image-gallery/finished-content-type.jpg)
 
-# Add the Content Type to a Zone
+# Add the Image Gallery Content Type to a Zone
 
 - Widgets
 - Click Add beside any zone (e.g. BeforeContent)
@@ -52,3 +52,9 @@ In the screen shot, we already have imported some images and created some folder
 - Orchard will add the images and again show the Add Widget page
 - Click Save
 - Visit the front end of your site to see the image gallery
+
+# Customize the Look of the Image Gallery with Shape Tracing
+
+- Create a new Alternate using Shape Tracing
+- Add CSS
+- See also
