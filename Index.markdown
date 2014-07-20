@@ -59,6 +59,7 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
     * [Managing Users and Roles](Documentation/Managing-users-and-roles)
     * [Understanding Permissions](Documentation/Understanding-permissions)
     * [Making a Website Recipe](Documentation/Making-a-Web-Site-Recipe)
+    * [Creating an Image Gallery](Documentation/Creating-an-image-gallery)
 
 
 * **Hosting and Deploying Websites**
