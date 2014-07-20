@@ -2,7 +2,7 @@
 Orchard provides a blogging engine that makes it easy to add a blog to your web site.
 This topic describes how to create a blog for your site and then add a new blog post.
 
-### Add the Blog
+### ایجاد وبلاگ
 
 On the Orchard dashboard and click **Blog**. The **New Blog** screen.
 Add a title, description, and menu text for the blog and click **Save**.
