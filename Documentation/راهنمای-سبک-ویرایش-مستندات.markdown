@@ -53,7 +53,7 @@ Use `**double asterisks**` for **strong emphasis**, which will be rendered as bo
 
 > Use `> angle bracket paragraphs` to highlight a whole paragraph.
 
-## Code
+## کد
 
 Inline code should be surrounded by `` `ticks` ``, and multi-line code samples should be in paragraphs indented with 4 spaces.
 

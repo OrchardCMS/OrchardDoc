@@ -1,4 +1,4 @@
-A _shape_ is a dynamic data model.
+﻿A _shape_ is a dynamic data model.
 The purpose of a shape is to replace the static view model of ASP.NET MVC by using a model
 that can be updated at run time&#151;that is, by using a dynamic shape.
 You can think of shapes as the blobs of data that get handed to templates for rendering.
