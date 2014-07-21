@@ -1,7 +1,7 @@
-Orchard provides a command-line interface for performing many of the functions that are available from the admin panel (and some that aren't).  The command-line tool is named "orchard.exe" and is located in the bin directory underneath to root of your site.  To run the command-line tool, first open a command prompt on the root of the site (i.e. Orchard.Web). This can be done for example by SHIFT+right-clicking on the folder in Windows Explorer and choosing "Open command window here". From there, type "bin\orchard.exe".  Note that you need to run this tool from the root of your site.
+﻿Orchard provides a command-line interface for performing many of the functions that are available from the admin panel (and some that aren't).  The command-line tool is named "orchard.exe" and is located in the bin directory underneath to root of your site.  To run the command-line tool, first open a command prompt on the root of the site (i.e. Orchard.Web). This can be done for example by SHIFT+right-clicking on the folder in Windows Explorer and choosing "Open command window here". From there, type "bin\orchard.exe".  Note that you need to run this tool from the root of your site.
 
 
-# Using Commands 
+# بکاربری دستورات
 
 ![](../Upload/screenshots_675/orchard_cmd_line.png)
 
