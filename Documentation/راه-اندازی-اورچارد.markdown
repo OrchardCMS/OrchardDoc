@@ -1,76 +1,52 @@
-There are four ways you can install Orchard. You can:
+راه اندازی اورچارد 
+در اینجا چهار روش برای نصب اورچارد وجود دارد. شما می توانید: 
 
-* Install it using the Microsoft Web Platform Installer.
-* Install it from Microsoft WebMatrix as shown in [Working with Orchard in WebMatrix](Working-with-Orchard-in-WebMatrix).
-* Download the Orchard [.zip file](http://orchard.codeplex.com/releases/view/90325) and install it as described in [Manually Installing Orchard Using a zip File](Manually-installing-Orchard-zip-file).
-* [Enlist](Setting-up-a-source-enlistment) in the Orchard source code and build Orchard from the command line or in Visual Studio.
-
-This topic shows how to install Orchard using the Microsoft Web Platform Installer.
-
-
-# Requirements
-The minimum requirements for running Orchard are the following:
-* ASP.NET 4
-* A web server such as IIS Express 8, 7.5 or IIS 7.x.
-
-When installing IIS, make sure you enable the ASP.NET IIS modules. Also make sure that you run Orchard
-in an integrated pipeline ASP.NET 4 application pool.
-
-> **Important**:  If you previously installed any pre-release versions of WebMatrix, ASP.NET Web Pages, or ASP.NET MVC 4, you must uninstall those products before Orchard will run correctly on your computer. Also, if you plan to use Visual Studio 2010 with Orchard, prior to installing Orchard, install ASP.NET MVC 4 from the Web Platform Installer.
-
-To develop Orchard sites, many developers will want to use a database such as SQL Server, and a web page programming environment such as WebMatrix or Visual Studio 2010.  The following installation using the Web Platform Installer includes Orchard and IIS Express 7.5, and also includes optional applications for Orchard development, including WebMatrix and SQL Server Compact 4.0. 
-
-# Installing Orchard
-
-To begin, download and install the [Web Platform Installer](http://www.microsoft.com/web/downloads/platform.aspx). When you're done, run it. 
-
-Find **Orchard CMS** and then click **Add** to include Orchard as an item to install.
-
+1-  نصب آن به وسیله اجرای برنامه Microsoft Web Platform.
+2-  نصب آن را از طریق Microsoft WebMatrix که در WebMatrix کار با اورچارد نشان داده شده است.
+3- دانلود فایل فشرده اورچارد از سایت http://orchard.codeplex.com/releases/view/90325 و نصب دستی آن که در قسمت فایل های فشرده نصب دستی آن شرح داده شده است.
+4-  [Enlist](Setting-up-a-source-enlistment) در سورس کد اورچارد از طریق زدن command و یا در ویژال استدیو.
+-	در اینجا نحوه نصب با وب پلت فرم آموزش داده می شود.
+موارد مورد نیاز
+حداقل مواردی که برای اجرای اورچارد نیاز است به شرح زیر می باشد:
+* ASP.NET 4 
+* یک سرور وب مانند IIS اکسپرس 8، 7.5 و یا 7.x. IIS
+-	وقتی iis  را نصب می کنید، اطمینان حاصل نمایید که ماژول ASP.NET فعال است . همچنین مطمئن شوید که اورچارد شما در یک سیستم یکپارچه ASP.NET 4 اجرا می شود.
+نکته مهم : اگر شما قبلا ورژن های از WebMatrix, ASP.NET Web Pages, یا  ASP.NET MVC 4, را نصب کرده اید باید قبل از نصب درست اورچارد بر روی سیستمتون آنها را حذف نمایید.
+همچنین اگر قصد استفاده  از ویژال استودیو 2010 با اورچارد را دارید ابتدا باید ASP.NET MVC 4 را از روی وب پلت فرم نصب و سپس اورچارد را نصب نمایید. 
+برای توسعه سایت های اورچارد ، بسیاری از توسعه دهنگان مایل به استفاده از یک پایگاه داده مانند SQL Server و یک محیط برنامه نویسی های صفحه وب مانند WebMatrix و یا ویژوال استودیو2010 هستند.
+در نصب به روش زیر از یک وب پلتفرم استفاده می کنیم که شامل اورچارد IIS Express 7.5, و همچنین شامل برنامه های اختیاری برای توسعه اورچاردکه شامل  WebMatrix  و SQL Server Compact 4.0. می شود.
+نصب اورچارد#
+برای شروع با مراجعه به سایت (http://www.microsoft.com/web/downloads/platform.aspx). وب پلتفرم را دانلود و سپس نصب می نماییم.
+در اینجا سیستم مدیریت محتوا اورچارد را پیدا کنید و سپس بر روی کیلد ADD کلیک نمایید و اورچارد را به عنوان یک آیتم نصب نمایید.
 ![](../Upload/screenshots_675/webpi_install_675.png)
 
-Click **Install**. Accept the license terms in order to continue.
-
+برای ادامه شرایط را قبول کنید. و بر روی دکمه نصب کلیک نمایید.
 ![](../Upload/screenshots_675/Install_acceptterms.png)
 
-When the installation is complete, the dialog shows the list of installed tools in addition to Orchard.  Click the **Launch** link to open the site in WebMatrix.
-
+وقتی که کاملا نصب شد لیستی از ابزارهای نصب شده به همراه اورچارد به شما نشان داده می شود. بر روی دکمه راه اندازی (Launch) کلیک  و سایت را از طریق وب ماتریکس باز نمایید.
 ![](../Upload/screenshots_675/Install_success.png)
-
-# Running Orchard in WebMatrix
-
-After WebMatrix starts, click the **Files** workspace to see the contents of the Orchard site. Launch Orchard in a browser by clicking the **Run** drop-down button, and selecting which browser to use.
-
+# اجرای اورچارد در وب ماتریکس
+پس از شروع وب ماتریکس بر روی Files کلیک نمایید اینجا فضای کاری است که محتویات سایت اورچارد را می بینید.
+برای راه اندازی اورچارد بر روی مرورگر از منوی کشویی بر روی اجرا (run) کلیک نمایید و مرورگری که می خواهید از آن استفاده نمایید را انتخاب کنید.
 ![](../Upload/screenshots_675/launch_Orchard_WebMatrix_675.png)
-
-When you launch Orchard in your browser, you see the Orchard setup screen. 
-
 ![](../Upload/screenshots/get_started_dialog_1.png)
-
-By default, Orchard includes a built-in database that you can use without installing a separate database server. However, if you are running SQL Server or SQL Server Express, you can configure Orchard to use either of those products instead by specifying a connection string. Optionally, you can enter a table prefix so that multiple Orchard installations can share the same database but keep their data separate.
-
+پس از راه اندازی اورچارد در صفحه نمایش تنظیمات اورچارد را ملاحظه می نمایید.
+به طور پیش فرض ، اورچارد شامل یک دیتابیس است که بدون نصب یک دیتا سرور جداگانه می توانید آنرا داشته باشید.
+بهر حال اگر شما در حال اجرای SQL Server  یا  SQL Server Expressهستید شما در پیکربندی اورچارد می توانید با مشخص کردن یک رشته اتصال از هر کدام از این محصولات استفاده نمایید.
+اختیاری شما می توانید برای جدول خود یک پیشوند ایجاد کنید به طوری که چندین اورچارد از یک دیتابیس به طوری که دیتا هاشون جدا گانه نگه داری می شود استفاده نمایید.
 ![](../Upload/screenshots_85/setup_sqlserver.png)
-
-The setup screen also includes a section where you can choose an Orchard recipe to set up your site. You can choose from the following Orchard recipes:
-
-* **Default**. Sets up a site with frequently used Orchard features.
-* **Blog**. Sets up a site as a personal blog.
-* **Core**. Sets up a site that has only the Orchard framework for development use.
-
-![](../Upload/screenshots/get_started_recipe.png)
-
-For information about recipes and how to make a custom recipe, see [Making a Web Site Recipe](http://orchardproject.net/docs/Making-a-Web-Site-Recipe.ashx). 
-
-After you've entered the required information on the setup  screen, click **Finish Setup**. When the setup process is complete, your new site's home page is displayed.
-
+راه اندازی صفحه نمایش شامل دستورالعمل های است که  برای تنظیم  سایت خود که می توانید یکی از دستورالعمل های زیر را انتخاب نمایید.
+پیش فرض : تنظیمات یک سایت که از اورچارد استفاده می کند.
+وبلاگ : تنظیم یک سایت به عنوان وبلاگ شخصی.
+هسته : تنظیم یک سایت فقط در چارچوب اورچارد برای توسعه آن.
+![](../Upload/screenshots/get_started_recipe.png) 
+برای اطلاعات بیشتر در مورد دستورالعمل ها و اینکه چگونه می توانید آنها را سفارشی کنید و دستورالعمل ساخت یک وب سایت به آدرس زیر مراجعه نمایید.
+http://orchardproject.net/docs/Making-a-Web-Site-Recipe.ashx
+.
+بعد از اینکه شما اطلاعات تنظیمات را بر روی صفحه نمایش وارد کردید بر روی اتمام تنظیمات کلیک نمایید. وقتی که پروسه تنظیمات تمام شد  ، صفحه جدید سایت شما نمایش داده می شود.
 ![](../Upload/screenshots_675/playground_new_page_675_1.png)
-
-You can now begin configuring your site.
-  
-  
-  
-
-# Change History
-* Updates for Orchard 1.1
-    * 4-12-11:  Updated screens for 1.1 installation.
-    * 3-14-11:  Added information about recipes in the setup screen.
-
+حالا شما می توانید پیکربندی سایت خود را آغاز نمایید.
+تغییر تاریخچه
+بروز رسانی اورچارد
+بروز رسانی صفحه نمایش برای نصب
+اطلاعات در مورد دستور العمل های اضافه شده در صفحه تنظیم 
