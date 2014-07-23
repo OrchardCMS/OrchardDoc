@@ -1,34 +1,34 @@
-[WebMatrix](http://www.microsoft.com/web/webmatrix/), Microsoft's one-stop web development tool, lets you create, edit, and publish websites with unprecedented ease. WebMatrix includes a built-in web server (IIS Express), along with a simple editor for editing and customizing applications like Orchard. When installing Orchard using the Web Platform Installer, you have the option to install to
-WebMatrix instead of IIS. 
 
+وب ماتریکس (http://www.microsoft.com/web/webmatrix/)  یک ابزار توسعه وب سایت ، که امکان ایجاد، ویرایش، و انتشار وب سایت را با سهولت فراهم می کند.
+وب ماتریکس شامل یک وب سرور (IIS Express) همراه با یک ویرایشگر ساده برای ویرایش و سفارشی کردن برنامه های کاربردی مانند اورچارد . هنگام نصب اورچارد بوسیله وب پلتفرم شما گزینه ای برای نصب وب ماتریکس دارید بجای iis.
+.
+نصب و راه اندازی WebMatrix 
+برای راه اندازی مایکروسافت وب پلت فرم آنرا دانلود ، سپس بر روی دکمه Add کلیک کنید و با کلیک بر روی نصب ماکروسافت وب ماتریکس را نصب نمایید.
+دانلود و راه اندازی مایکروسافت وب پلت فرم
+با قبول شرایط و راه اندازی وب ماتریکس فرایند نصب به پایان می رسد.
 
-## Installing and Launching WebMatrix
-
-Download and launch the Microsoft [Web Platform Installer](http://www.microsoft.com/web/downloads/platform.aspx)  Then click the **Add** button for **Microsoft WebMatrix** and click **Install**.
+استفاده از وب ماتریکس برای ایجاد یک وب سایت اورچارد
+برای ایجاد یک وب سایت اورچارد بوسیله وب ماتریکس در صفحه راه اندازی وب ماتریکس بر روی App Gallery کلیک نمایید.
 
 ![](../Upload/screenshots/Install_selectorWebMatrix.png)
 
-Accept the license terms and launch WebMatrix when the installation finishes.
-
-## Using WebMatrix to create an Orchard Website
-
-To create an Orchard Website using WebMatrix, click **App Gallery** on the WebMatrix startup page.  
-
-![](../Upload/screenshots_675/webmatrix_start_675.png)
-
-Scroll down and select **Orchard CMS**. Enter a name to be used as the folder name for your site. For example, if the site name "Orchard CMS" is entered, the folder "Documents/My Websites/Orchard CMS" will be created.  Click **Next**.
-
 ![](../Upload/screenshots_675/webmatrix_select_orchard_675.png)
 
-Click **I Accept** to accept the EULA agreement.
+از قسمت پایین Orchard CMS را انتخاب نمایید. یک نام وارد نمایید به عنوان پوشه ای برای سایت شما مورد استفاده قرار می گیرد.برای مثال، اگر شما نام “Orchard cms”  را وارد نمایید، پوشه ای به این نام در مسیر زیر ساخته می شود. "Documents/My Websites/Orchard CMS" . بر روی دکمه Next کلیک نمایید.
+
+Click **I Accept** to accept the EULA agreement
+
+با کلیک بر روی I Accept  موافقت خود را با قوانین اعلام نمایید.
 
 ![](../Upload/screenshots_675/webmatrix_orchard_eula_675.png)
 
-A new subfolder, "Orchard CMS", will be added to your "My Websites" folder. Click **OK**. Your Orchard site will then be opened in Web Matrix and the "Orchard Setup" page will be launched in a new browser window.
+پوشه فایل سایت شما به زیرمجموعه "Orchard CMS" اضافه می شود. بر روی ok کلیک نمایید. پس از این مرحله سایت اورچارد شما خود در وب ماتریکس باز خواهد شد و صفحه تنظیمات اورچارد در یک مرورگر جدید راه اندازی می شود.
 
 ![](../Upload/screenshots_675/webmatrix_orchard_project_675.png)
 
-Enter basic information about your site on the Orchard Setup page. Specifically: the name of the site, the name of a user of the site, the user's password, the kind of database to use for site data, and the Orchard recipe.  
+اطلاعات عمومی در مورد سایت خود را در صفحه راه اندازی اورچارد وارد نمایید.
+به طور خاص: نام سایت ، نام یک کاربر سایت ، رمز عبور، یک نوع دیتابیس برای داده های سایت و دستورالعمل اورچارد(Orchard recipe).
+
 
 If you are just starting out using Orchard, we recommend that you select **SQL Compact Server** for the database and **Default** for the recipe. Enter the information and click **Finish Setup**.
 
