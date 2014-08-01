@@ -78,7 +78,7 @@ site and database first.
 
 ### Upgrading from Orchard 1.7.1 and earlier
 
-Please follow the upgrade instruction from this document: <https://github.com/OrchardCMS/OrchardDoc/blob/1.8/Documentation/Orchard-1-7-2-Release-Notes.markdown>
+Please follow the upgrade instruction from this document: <http://docs.orchardproject.net/Documentation/Orchard-1-7-Release-Notes>
 
 Then proceed with the upgrade steps from 1.7.2.
 
