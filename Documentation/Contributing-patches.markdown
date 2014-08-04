@@ -51,8 +51,7 @@ Before preparing to submit a contribution, be sure to:
 3. Verify sources build and unit tests pass
 4. Commit your changes
 
-Once this is done you can create a patch file using git:
-![](http://git-scm.com/docs/git-format-patch)
+Once this is done you can create a patch file [using git](http://git-scm.com/docs/git-format-patch).
 
 You should now have a ".patch" file that you can attach to the issue it fixes in the [CodePlex Issue Tracker](http://orchard.codeplex.com/WorkItem/AdvancedList.aspx) by clicking "Choose File" under "Attach File" and then uploading.
 
