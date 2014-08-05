@@ -103,6 +103,7 @@ This release is expected to be released for October 2014
 ### Areas of Focus for Future Iterations (Backlog, Not in Priority Order)
 
 * REST APIs
+* Deployment module
 * Localization improvements (admin filtering, default selectors)
 * Improved content navigation and filtering
 * Multiple templates for pages
@@ -114,4 +115,6 @@ This release is expected to be released for October 2014
 * Performance - Caching, optimization, script combining/minification
 * Analytics - Reporting, site-use statistics
 * Mobile - Support for management, moderation, publishing from mobile device
-* Other Domain-specific packages - Commerce, Wiki, Forums, Ads, etc
+* Other Domain-specific packages - Wiki, Ads, etc
+* Forums 
+* Commerce
