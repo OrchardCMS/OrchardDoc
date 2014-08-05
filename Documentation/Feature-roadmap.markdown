@@ -6,6 +6,7 @@ The feature roadmap is subject to change as the project evolves, and we welcome 
 #### Priorities for Orchard 1.9:
 
 This release is expected to be released for October 2014
+
 * Audit Trail module (done)
 * Draftable widgets (done)
 * Indexable drafts (done)
