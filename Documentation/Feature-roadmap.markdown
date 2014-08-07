@@ -10,10 +10,11 @@ This release is expected to be released for October 2014
 * Audit Trail module (done)
 * Draftable widgets (done)
 * Indexable drafts (done)
-* Date localization refactoring (on track)
-  * Daniel ([Decorum](https://www.codeplex.com/site/users/view/Decorum)) owns this contribution
+* Date localization and calendar support improvements and fixes (done)
+  * Daniel Stolt with [IDeliverable](http://www.ideliverable.com) ([Decorum](https://www.codeplex.com/site/users/view/Decorum)) owns this contribution
+  * More information here: https://orchard.codeplex.com/discussions/560347
 * Dynamic Layout module (on track)
-  * Sipke ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) owns this contribution
+  * Sipke Schoorstra with [IDeliverable](http://www.ideliverable.com) ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) owns this contribution
 * Integrate OWIN middlewares support  (working, fixing small bug)
   * Nick ([Jetski5822](https://www.codeplex.com/site/users/view/Jetski5822)) is responsible for this feature
   * Identity
