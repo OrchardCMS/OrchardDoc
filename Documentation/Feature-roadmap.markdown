@@ -8,14 +8,14 @@ The feature roadmap is subject to change as the project evolves, and we welcome 
 This release is expected to be released for October 2014
 
 * Audit Trail module (done)
-  * Daniel Stolt and Sipke Schoorstra with [IDeliverable](http://www.ideliverable.com) own this contribution
+  * Daniel Stolt ([Decorum](https://www.codeplex.com/site/users/view/Decorum)) and Sipke Schoorstra ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) own this contribution
 * Draftable widgets (done)
 * Indexable drafts (done)
 * Date localization and calendar support improvements and fixes (done)
-  * Daniel Stolt ([Decorum](https://www.codeplex.com/site/users/view/Decorum)) with [IDeliverable](http://www.ideliverable.com) owns this contribution
+  * Daniel Stolt ([Decorum](https://www.codeplex.com/site/users/view/Decorum)) owns this contribution
   * More information here: https://orchard.codeplex.com/discussions/560347
 * Dynamic Layout module (on track)
-  * Sipke Schoorstra ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) with [IDeliverable](http://www.ideliverable.com) owns this contribution
+  * Sipke Schoorstra ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) owns this contribution
 * Integrate OWIN middlewares support  (working, fixing small bug)
   * Nick ([Jetski5822](https://www.codeplex.com/site/users/view/Jetski5822)) is responsible for this feature
   * Identity
