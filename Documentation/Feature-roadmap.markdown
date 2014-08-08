@@ -104,8 +104,8 @@ This release is expected to be released for October 2014
 
 ### Areas of Focus for Future Iterations (Backlog, Not in Priority Order)
 
-* REST APIs
-* Deployment module
+* REST APIs ([design notes](https://orchard.codeplex.com/discussions/560607))
+* Deployment module ([design notes](https://orchard.codeplex.com/discussions/452000))
 * Localization improvements (admin filtering, default selectors)
 * Improved content navigation and filtering
 * Multiple templates for pages
