@@ -26,6 +26,10 @@ This release is expected to be released for October 2014
 * Upgrading to ASP.NET MVC 5.2 (not started)
 * Adding Azure Redis Cache support (on track)
 * Upgrading to TinyMCe 4 (done)
+* Localization improvements (ongoing)
+  * Nick ([Jetski5822](https://www.codeplex.com/site/users/view/Jetski5822)) is responsible for this feature
+  * RTL support in Admin
+  * Culture selector (admin and front end)
 
 ### Currently Implemented (Partially or in Full)
 
