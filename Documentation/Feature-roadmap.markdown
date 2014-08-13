@@ -23,7 +23,7 @@ This release is expected to be released for October 2014
   * Error/Exception branches support
   * Loop activities
   * Piotr ([pszmyd](https://www.codeplex.com/site/users/view/pszmyd)) owns this contribution
-* Upgrading to ASP.NET MVC 5.2 (not started)
+* Upgrading to ASP.NET MVC 5.2 (done)
 * Adding Azure Redis Cache support (on track)
 * Upgrading to TinyMCe 4 (done)
 * Localization improvements (ongoing)
