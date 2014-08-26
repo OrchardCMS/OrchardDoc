@@ -15,10 +15,10 @@ and run **build Precompiled**. This will build the application into a "build" su
 4. Deploy the contents of the \build\Precompiled directory into a clean IIS web site's root directory.
 5. If you are running on a 64 bit system, go into the advanced setting of the application pool
 for the application and make sure 32 bit applications are enabled (create a new app pool if you have to).
-6. Create an App\_Data folder under the IIS application's root and make sure the user that
-IIS is running under has write access to that directory. If you're not sure what that user is,
-go to IIS Authentication for the application. If anonymous access is enabled, the user is the local IIS\_IUSRS.
-Make sure the directory is empty.
+6. Create an App\_Data folder under the IIS application's root and make sure the directory is empty.
+6. Configure folder permissions. Make sure the user that IIS is running under has write access to that directory. If you're not sure what that user is, go to IIS Authentication for the application. If anonymous access is enabled, the user is the local IIS\_IUSRS. Set the following permissions:
+	- Web site root requires Read & Execute. 
+	- App\_Data and Media require Read & Write.
 7. Create a Media folder under the IIS application's root and give write access.
 8. Browse to the application. You should see the setup screen at this point.
 

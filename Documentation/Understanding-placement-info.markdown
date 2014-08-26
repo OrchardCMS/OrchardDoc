@@ -1,9 +1,38 @@
-In a CMS such as Orchard, content is built as a composition of arbitrary parts. For example, a blog post is an assemblage of a route and title (`Routable` part), a body (`Body` part), tags (`Tags` part), comments (`Comment` part), and a few additional technical parts (`Common` and `PublishLater`). To get a template to render an object like this, you could access each of these parts explicitly and render them; that's a scenario that would work in Orchard. But that would not handle well the unpredictable changes in the definition of the content types that are the essence of a CMS. For example, what if the administrator of the site downloaded a star rating module and added the rating part to posts? If the layout for the whole item were explicitly defined, you would have to explicitly modify the template. 
+In a CMS such as Orchard, content is built as a composition of arbitrary parts. For example, a blog post is an assemblage of a route and title (`Routable` part), a body (`Body` part), tags (`Tags` part), comments (`Comment` part), and a few additional technical parts (`Common` and `PublishLater`). 
+
+To get a template to render an object like this, you could access each of these parts explicitly and render them; that's a scenario that would work in Orchard. But that would not handle well the unpredictable changes in the definition of the content types that are the essence of a CMS. For example, what if the administrator of the site downloaded a star rating module and added the rating part to posts? If the layout for the whole item were explicitly defined, you would have to explicitly modify the template. 
 
 In Orchard, this isn't necessary, and adding a new part and displaying it can be done without touching the templates. This is possible because the Orchard design separates layout into rendering (performed by templates or shape methods) and placement (done through the _placement.info_ file). This way, parts can not only specify their default rendering, which can be overridden by themes, they can also specify where they prefer to be rendered relative to other parts (which can also be overridden by themes).
 
+> Best Practice: Avoid creating templates for content types. Instead, create templates for content parts (and fields) and change their order with placement.
+
 Specifying placement using the _placement.info_ file is the subject of this article.
 
+# Summary
+
+- Placement works only on parts (and some fields) of content items. 
+- Place element attributes are shape names (not alternate names).
+- Find shape names via shape tracing or in driver code.
+- Match element attributes include `ContentType`, `DisplayType`, and `Path`.
+- Path can include a `*` to represent all child paths.
+
+# Syntax Overview
+
+	<placement>
+		[ <match scope> ]
+			<place Shape_Name="order[;alternate][;wrapper]" />
+		[ </match> ]
+	</placement>
+
+<table>
+<tr><td> scope<td>ContentType="value" | DisplayType="value" | Path="value"
+<tr><td>order<td>position | suppress
+
+<tr><td>position<td>zone_name[ : { int | after | before } ][ .int ][ ...n ]
+<tr><td>suppress<td> - 
+<tr><td>alternate<td>Alternate=alternate_name
+<tr><td>wrapper<td>Wrapper=wrapper_name
+</table>
 
 # The placement.info File
 
@@ -25,7 +54,7 @@ The following example shows an example of a placement file. (Specifically, it's 
 
 ## Scope
 
-A placement file acts at the content-item level. This means that you can use it to reorder the display of the parts of anything that is a content item (blog posts, pages, comments, custom items, widgets, etc.), but not necessarily arbitrary shapes. If a shape that is not representing a content part needs to handle placement, it is up to you to provide a placement mechanism for that shape.
+A placement file acts at the content-item level. This means that you can use it to reorder the display of the parts of anything that is a content item (blog posts, pages, comments, custom items, widgets, etc.), but not necessarily arbitrary shapes. If a shape that is not representing a content part needs placement, it is up to you to provide a placement mechanism for that shape.
 
 ## The "Placement" Element
 
