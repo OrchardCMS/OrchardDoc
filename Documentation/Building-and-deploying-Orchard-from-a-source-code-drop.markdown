@@ -6,7 +6,7 @@ If instead what you need is a clean version of the application ready to run, fol
 
 1. Make sure that you have either the .NET SDK or Visual Studio installed
 (in the latter case, make sure you are using a Visual Studio command prompt).
-2. [Enlist in the source](http://orchardproject.net/docs/Setting-up-a-source-enlistment.ashx)
+2. [Enlist in the source](http://docs.orchardproject.net/Documentation/Setting-up-a-source-enlistment)
 3. Open a Visual Studio command prompt or a .NET SDK command prompt at the location of your enlistment and run **build Precompiled**. This will build the application into a "build" subdirectory.
 4. Deploy the contents of the \build\Precompiled directory into a clean IIS web site's root directory.
 5. If you are running on a 64 bit system, go into the advanced setting of the application pool for the application and make sure 32 bit applications are enabled (create a new app pool if you have to).
