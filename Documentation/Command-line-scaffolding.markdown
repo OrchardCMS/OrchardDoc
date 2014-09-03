@@ -36,5 +36,6 @@ Once the code generation feature is enabled, new commmands are available for cre
     codegen theme <theme-name> [/CreateProject:true|false][/IncludeInSolution:true|false][/BasedOn:<theme-name>]
             Create a new Orchard theme
 
-
+    codegen moduletests <module-name> 
+            Create a new test for a module
 For a walkthrough of using the code generation feature to create a new module and data migration, see [Writing a content part](Writing-a-content-part).

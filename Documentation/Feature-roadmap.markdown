@@ -3,43 +3,34 @@ The feature roadmap is subject to change as the project evolves, and we welcome 
 
 ### Current Priorities
 
-#### Priorities for Orchard 1.8:
+#### Priorities for Orchard 1.9:
 
-This release is expected to be released for February 2014
+This release is expected to be released for October 2014
 
-* Migration to Microsoft .NET 4.5 (done)
-  * Upgrade project targets
-  * Remove unnecessary Medium Trust support code
-  * Define 4.5 framework in web.config files
-  * Erik ([erik_oppedijk](https://www.codeplex.com/site/users/view/erik_oppedijk)) owns this contribution
-* Upgrade ASP.NET Web Stack to newest versions (done)
-  * ASP.NET MVC 5.1
-  * WebAPI 2.1
-  * Razor 3.1
-* Put back the List module with improved functionnalities (done)
-  * The goal is to be able to use it to mimick the Blogs module
-  * Sipke ([sfmskywalker](http://www.codeplex.com/site/users/view/sfmskywalker)) owns this contribution
-* Performance improvements by unleashing the power of the document db architecture built in Orchard (almost done)
-  * Sebastien ([sebastienros](http://www.codeplex.com/site/users/view/sebastienros)) owns this contribution
-  * Multi-tenancy improvements
-* Integrate OWIN middlewares support (postponed)
+* Audit Trail module (done)
+  * Daniel Stolt ([Decorum](https://www.codeplex.com/site/users/view/Decorum)) and Sipke Schoorstra ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) own this contribution
+* Draftable widgets (done)
+* Indexable drafts (done)
+* Date localization and calendar support improvements and fixes (done)
+  * Daniel Stolt ([Decorum](https://www.codeplex.com/site/users/view/Decorum)) owns this contribution
+  * More information here: https://orchard.codeplex.com/discussions/560347
+* Dynamic Layout module (on track)
+  * Sipke Schoorstra ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) owns this contribution
+* Integrate OWIN middlewares support  (working, fixing small bug)
+  * Nick ([Jetski5822](https://www.codeplex.com/site/users/view/Jetski5822)) is responsible for this feature
   * Identity
-* Improved Media Library
-  * Media updates (started) 
 * Improved Workflow module (on track)
   * Error/Exception branches support
   * Loop activities
   * Piotr ([pszmyd](https://www.codeplex.com/site/users/view/pszmyd)) owns this contribution
-* Calendar support (started)
-  * Daniel Stolt ([Decorum](https://www.codeplex.com/site/users/view/Decorum)) owns this contribution
-* Jobs Queue module (done)
-* Templates module (done)
-* Include Business Caching modules (almost done)
-  * Business data cache service
-  * Distributed cache providers
-    * Azure
-    * Memcached ?
-    * Redis ?
+* Upgrading to ASP.NET MVC 5.2 (done)
+* Upgrading to .NET Framework 4.5.1 (done)
+* Adding Azure Redis Cache support (on track)
+* Upgrading to TinyMCe 4 (done)
+* Localization improvements (ongoing)
+  * Nick ([Jetski5822](https://www.codeplex.com/site/users/view/Jetski5822)) is responsible for this feature
+  * RTL support in Admin
+  * Culture selector (admin and front end)
 
 ### Currently Implemented (Partially or in Full)
 
@@ -101,7 +92,7 @@ This release is expected to be released for February 2014
 * [Admin placement](http://orchard.codeplex.com/discussions/348649)
 * [Spam Protection](http://orchard.codeplex.com/discussions/348654)
 * NHibernate 3 and 2nd level caching
-* ASP.NET MVC 4 / WebAPI
+* ASP.NET MVC 5 / WebAPI
 * MySQL provider
 * Workflows
 * Output cache
@@ -109,17 +100,28 @@ This release is expected to be released for February 2014
 * Custom forms
 * Content permissions
 * SSL
+* .NET 4.5 support
+* Lists
+* Timezones and Calendars
+* Jobs Queue
+* Templates management 
+* Business data caching 
 
 ### Areas of Focus for Future Iterations (Backlog, Not in Priority Order)
 
+* REST APIs ([design notes](https://orchard.codeplex.com/discussions/560607))
+* Deployment module ([design notes](https://orchard.codeplex.com/discussions/452000))
+* Localization improvements (admin filtering, default selectors)
+* Improved content navigation and filtering
 * Multiple templates for pages
 * SEO - Semantic URLs, metas/keywords, Web standards, sitemap
-* Navigation - Navigation management, front-end UI (menus, breadcrumbs)
 * Admin - UI improvements, dashboard, notifications/email
+  * Improved admin theme (Based on Bootstrap)
 * Profiles - User profiles, avatars, reputation system
 * Themes - Additional themes improvements (in-browser editing, etc)
 * Performance - Caching, optimization, script combining/minification
 * Analytics - Reporting, site-use statistics
 * Mobile - Support for management, moderation, publishing from mobile device
-* Audit Trail
-* Other Domain-specific packages - Commerce, Wiki, Forums, Ads, etc
+* Other Domain-specific packages - Wiki, Ads, etc
+* Forums 
+* Commerce

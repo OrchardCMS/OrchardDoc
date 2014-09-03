@@ -23,6 +23,12 @@ The first part of the Pluralsight video course is free, and subsequent episodes 
 
 ## Free
 
+### Dojo Course
+
+Course for beginners interested in developing on Orchard, starting with how to use Orchard from the UI.
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/hn9T0G0TMag?list=PLuskKJW0FhJdI_I3bhEBYw5BZBiWmsjtK" frameborder="0" allowfullscreen></iframe>
+
 ### Introduction to Orchard 1.5 by Sébastien Ros
 
 <iframe style="height:281px;width:500px" src="http://channel9.msdn.com/Shows/Web+Camps+TV/Sebastien-Ros-Introduces-Orchard-15/player?w=500&h=281" frameBorder="0" scrolling="no" ></iframe>

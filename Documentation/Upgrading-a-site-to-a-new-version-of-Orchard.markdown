@@ -22,15 +22,10 @@ It is highly recommended that you work on a local copy of your site throughout t
 * Copy your existing site's _Media_ folder into the new directory.
 * Copy the remaining module and themes directories that you have on your existing site and that are not already in the new one into the new directory's _Modules_ and _Themes_ directories.
 * Copy the _App_Data_ folder from the existing site into the new directory.
-* Point a local web server to the new directory. You can use IIS; in that case, use IIS Manager to create a new web site that points at the directory and then navigate to it. Alternatively, you can use WebMatrix and IIS Express; to do that, right-click the directory in Windows Explorer and choose **Open as a Web Site with Microsoft WebMatrix** and then run the site. Finally, you can open the site in Visual Studio as a web site and run it. The new site will have all the data from the old site and have all the new features of Orchard 1.1.
-* Go into the dashboard. You're prompted to upgrade features. Click **Modules** and upgrade each of the modules one by one until they are all up to date.
-* If you are upgrading from 1.0, the Recipes feature is disabled at this point, and unfortunately it can't be enabled from the admin UI. Open an [Orchard command-line](Using-the-command-line-interface) and execute the following command:
-    
-    feature enable Orchard.Recipes
-
-Alternatively, if you can't run the command-line, you can use the web command-line from the [Experimental module](http://orchardproject.net/gallery/List/Modules/Orchard.Module.Orchard.Experimental). Once the Web Command Line feature has been enabled, the web command-line can be navigated to by going to /Experimental/Commands.
-A third alternative is to unzip the following archive under a new Upgrade.From.1.0 folder under Modules: [Upgrade.From.1.0.zip](../Attachments/Upgrading-a-site-to-a-new-version-of-Orchard/Upgrade.From.1.0.zip). Enabling the Upgrade From 1.0 feature will enable the Recipes module. Once this is done and you've verified that Recipes are enabled, you can safely delete the upgrade.from.1.0 folder from Modules.
+* Point a local web server to the new directory. You can use IIS; in that case, use IIS Manager to create a new web site that points at the directory and then navigate to it. Alternatively, you can use WebMatrix and IIS Express; to do that, right-click the directory in Windows Explorer and choose **Open as a Web Site with Microsoft WebMatrix** and then run the site. Finally, you can open the site in Visual Studio as a web site and run it. The new site will have all the data from the old site and have all the new features.
+* Go into the dashboard. Modules should have already upgraded themselves automatically. In rare cases, you may be prompted to upgrade features. Click **Modules** and upgrade each of the modules one by one until they are all up to date. If this doesn't work, it means that something is wrong with your install and/or one of the modules you're using, and you should investigate further in App_Data\logs.
 * Go to the Orchard Gallery and get the latest version of all the modules you have on your site.
+* Some versions of Orchard come with version-specific upgrade features. Go to Modules and locate the "Upgrade" feature. Enable it, then click on the new upgrade menu entry that was added to the admin menu. Visit all the relevant tabs and execute the required upgrade actions they present. Once you're done, the feature can be disabled, which will remove the menu entry.
 
 ## Publishing the Upgraded Site
 
@@ -39,6 +34,8 @@ You can deploy the locally upgraded site to your production server using your pr
 As you deploy, make sure that the target _settings.txt_ files aren't overwritten, so that the production site continues to point to the production database.
 
 While you deploy, you might want to shut the site down by dropping an _app_offline.htm_ file into the root. Remove that file once you're done.
+
+Once deployed, manual upgrade actions (for example, those from the "Upgrade" feature) need to be performed again on the deployed production site.
 
 # Upgrading An Orchard Site In-Place
 
@@ -52,13 +49,9 @@ It is possible to upgrade a site in-place, if you can't or don't want to work wi
 * Extract the new version's zip file and copy what's in its Orchard folder over the server's Orchard web directory (answer yes to all prompts to overwrite).
 * Remove the app_offline file.
 * The site should be running now. Log-in and go into admin.
-* Modules need to be updated. Do each of them.
-* If you are upgrading from 1.0, the Recipes feature is disabled at this point, and unfortunately it can't be enabled from the admin UI. Open an [Orchard command-line](Using-the-command-line-interface) and execute the following command:
-    
-    feature enable Orchard.Recipes
-
-Alternatively, if you can't run the command-line, you can use the web command-line from the [Experimental module](http://orchardproject.net/gallery/List/Modules/Orchard.Module.Orchard.Experimental). Once the Web Command Line feature has been enabled, the web command-line can be navigated to by going to /Experimental/Commands.
-A third alternative is to unzip the following archive under a new Upgrade.From.1.0 folder under Modules: [Upgrade.From.1.0.zip](../Attachments/Upgrading-a-site-to-a-new-version-of-Orchard/Upgrade.From.1.0.zip). Enabling the Upgrade From 1.0 feature will enable the Recipes module. Once this is done and you've verified that Recipes are enabled, you can safely delete the upgrade.from.1.0 folder from Modules.
+* Go into the dashboard. Modules should have already upgraded themselves automatically. In rare cases, you may be prompted to upgrade features. Click **Modules** and upgrade each of the modules one by one until they are all up to date. If this doesn't work, it means that something is wrong with your install and/or one of the modules you're using, and you should investigate further in App_Data\logs.
+* Go to the Orchard Gallery and get the latest version of all the modules you have on your site.
+* Some versions of Orchard come with version-specific upgrade features. Go to Modules and locate the "Upgrade" feature. Enable it, then click on the new upgrade menu entry that was added to the admin menu. Visit all the relevant tabs and execute the required upgrade actions they present. Once you're done, the feature can be disabled, which will remove the menu entry.
 
 You are done.
 
@@ -71,8 +64,8 @@ You are done.
 * Open the Azure Management Portal, go to Hosted Services, Storage Accounts & CDN and choose your deployment target. Click Upgrade. ![](../Attachments/Upgrading-a-site-to-a-new-version-of-Orchard/AzureDeployNewPackage.PNG)
 * Browse to the package and config file, click OK. ![](../Attachments/Upgrading-a-site-to-a-new-version-of-Orchard/AzureDeployNewPackageDialog.PNG)
 * Log-in and go to admin.
-* Upgrade features.
-* If you are upgrading from 1.0, you need to enable the Recipes module. Enable the Web Command Line feature. Go to /experimental/commands and type "feature enable Orchard.Recipes". Hit return. You may disable the web command line feature.
+* Go into the dashboard. Modules should have already upgraded themselves automatically. In rare cases, you may be prompted to upgrade features. Click **Modules** and upgrade each of the modules one by one until they are all up to date. If this doesn't work, it means that something is wrong with your install and/or one of the modules you're using, and you should investigate further in logs.
+* Some versions of Orchard come with version-specific upgrade features. Go to Modules and locate the "Upgrade" feature. Enable it, then click on the new upgrade menu entry that was added to the admin menu. Visit all the relevant tabs and execute the required upgrade actions they present. Once you're done, the feature can be disabled, which will remove the menu entry.
 
 You're done.
 
