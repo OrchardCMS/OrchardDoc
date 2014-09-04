@@ -7,9 +7,9 @@ To see the gallery feed registration screen, expand the dashboard **Settings** s
 
 The **Gallery Feeds** screen displays currently registered feeds. 
 
-![](../Upload/screenshots_675/gallery_registered_feeds_675.png)
+![](../Upload/screenshots_675/galleryfeedupdated.png)
 
-As the illustration shows, by default an Orchard site provides a single registered gallery feed from [http://orchardproject.net/gallery/server/FeedService.svc](http://orchardproject.net/gallery/server/FeedService.svc/Packages). You can add feeds or delete existing feeds.
+As the illustration shows, by default an Orchard site provides a single registered gallery feed from [http://packages.orchardproject.net/FeedService.svc](http://packages.orchardproject.net/FeedService.svc). You can add feeds or delete existing feeds.
 
 To register an additional feed, click the **Add Feed** button.
 
@@ -28,5 +28,7 @@ To view the contents of a feed in your browser, click the feed link in the **Gal
   
 
 # Change History
+* Updates for Orchard 1.8
+	* 9-04-14: Updated the gallery feed and the screen shots.
 * Updates for Orchard 1.1
     * 3-23-11: Updated screens and UI options for registering feeds. 
