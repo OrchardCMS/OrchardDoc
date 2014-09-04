@@ -301,6 +301,7 @@ Each feature has an **Enable** or **Disable** link (depending on its current sta
 
 ### Change History
 * Updates for Orchard 1.8
+	* 9-04-14: Added new sections for how to get started with Orchard and how to get up and running with Orchard : Try Orchard, DotNest, Azure Websites. Updated screen shots for themes, modules and control wrappers.
     * 4-22-14:  Media selection is different now, updated that part. Adding a widget layer is not suggested anymore when adding a new page, updated that part. Link to registering additional gallery feeds was not working. Updated several screenshots. Added capitalization to section headers.
 * Updates for Orchard 1.6
 	* 11-25-12:  Added section describing how to change the layout for a page by enabling/disabling zones.  Removed section on Creating a Blog (which already has it's own topic).
