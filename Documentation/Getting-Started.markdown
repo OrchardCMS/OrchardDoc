@@ -49,18 +49,18 @@ Convenience does come with disadvantages: due to the architecture of DotNest you
 
 
 **1)** What is **DotNest** 
-![Try Orchard](../Upload/getting-started/3.png)
+![](../Upload/getting-started/3.png)
 
 **2)** Click **New Tenant** to create a new tenant on DotNest
 
-![Try Orchard](../Upload/getting-started/4.png)
+![](../Upload/getting-started/4.png)
 
 **3)** Fill in the required details to create a **New Tenant**
 
-![Try Orchard](../Upload/getting-started/5.png)
+![](../Upload/getting-started/5.png)
 
 **3)** **New Tenant** successfully created
-![Try Orchard](../Upload/getting-started/6.png)
+![](../Upload/getting-started/6.png)
 
 ### Orchard on Azure Websites
 
@@ -68,13 +68,13 @@ After a [free registration](http://azure.microsoft.com/en-us/services/websites/)
 
 Your Orchard site on Azure Websites will be completely under your control: you can install any module and theme you want too. However this also comes with responsibilities: you have to maintain your website yourself, upgrade and fix it as necessary.
 
-![Try Orchard](../Upload/getting-started/7.png)
+![](../Upload/getting-started/7.png)
 
-![Try Orchard](../Upload/getting-started/8.png)
+![](../Upload/getting-started/8.png)
   
-![Try Orchard](../Upload/getting-started/15.png)
+![](../Upload/getting-started/15.png)
 
-![Try Orchard](../Upload/getting-started/14.png)
+![](../Upload/getting-started/14.png)
 
 ### Changing The Layout Of The Home Page
 
@@ -143,7 +143,7 @@ Orchard provides a feature that makes it easy for you to edit the content in a z
 
 **3)** Enable **Widget Control Wrapper**
 
-![Try Orchard](../Upload/getting-started/9.png)
+![](../Upload/getting-started/9.png)
 
 Once these modules are enabled, you can edit the contents of an individual zone by clicking the **Edit** link (at the top right) in the zone.  
 
@@ -280,28 +280,28 @@ After a theme has been installed it appears as an option in the **Available** se
 
 **5)** To see how your site will look with an available them,  select **Preview** for the theme.  To apply an available theme to your site select **Set Current** for the theme. For more details, see [Previewing and Applying a Theme](Previewing-and-applying-a-theme) and [Installing Themes](Installing-themes).
 
-![Try Orchard](../Upload/getting-started/10.png)
+![](../Upload/getting-started/10.png)
 
-![Try Orchard](../Upload/getting-started/11.png)
+![](../Upload/getting-started/11.png)
 
 
 ### Extending Orchard With Modules And Features
 
 A key feature of Orchard is the ability to add new features in order to extend the functionality of your site. The primary way to do this is by installing modules. You can think of a module as a package of files (in a .zip folder) that can be installed on your site. To view the modules that are included with Orchard, in the Orchard Dashboard, click **Modules** and then click the **Installed** tab in the **Modules** screen.
 
-![Try Orchard](../Upload/getting-started/12.png)
+![](../Upload/getting-started/12.png)
 
 Orchard provides some built-in modules, and you can install new modules. For details, see [Installing and Upgrading Modules](Installing-and-upgrading-modules) and [Registering additional gallery feeds](Module-gallery-feeds).
 
 Individual modules can expose features that can be independently enabled or disabled. To view the features exposed by the built-in modules in Orchard, click the **Features** tab in the **Modules** screen.  
 
-![Try Orchard](../Upload/getting-started/13.png)
+![](../Upload/getting-started/13.png)
 
 Each feature has an **Enable** or **Disable** link (depending on its current state), as well as an optional list of dependencies that must also be enabled for a specific feature. The documentation throughout this site describes the variety of features in Orchard and how you can use them to customize your site's user interface and behavior.
 
 ### Change History
 * Updates for Orchard 1.8
-	* 9-04-14: Added new sections for how to get started with Orchard and how to get up and running with Orchard : Try Orchard, DotNest, Azure Websites. Updated screen shots for themes, modules and control wrappers.
+	* 9-04-14: Added new sections for how to get started with Orchard and how to get up and running with Orchard : Try Orchard, DotNest, Azure Websites. Updated screen shots for themes (PJS.Bootstrap Theme), modules and control wrappers. 
     * 4-22-14:  Media selection is different now, updated that part. Adding a widget layer is not suggested anymore when adding a new page, updated that part. Link to registering additional gallery feeds was not working. Updated several screenshots. Added capitalization to section headers.
 * Updates for Orchard 1.6
 	* 11-25-12:  Added section describing how to change the layout for a page by enabling/disabling zones.  Removed section on Creating a Blog (which already has it's own topic).
