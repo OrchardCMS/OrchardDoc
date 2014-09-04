@@ -2,12 +2,83 @@
 
 This walkthrough provides a glimpse of the features that Orchard has to offer, provided as a step-by-step guide. If this is your first time using Orchard, this document is for you!
 
+### Getting Started with Orchard
+
+Being new to Orchard, you should know the right place where you can find the resources and latest information about Orchard.
+
+1. [Orchard CodePlex - Orchard Code Repository][1]
+2. [Orchard Documentation - Documentation area for Orchard][2] 
+3. [Orchard Discussion Forum - Discussion area for Orchard][3]
+4. [Orchard Community Websites - Community sites on Orchard from all over the world][4]
+5. [Orchard CMS Weekly Meeting][5]
+
+
+
+  [1]: http://orchard.codeplex.com/
+  [2]: http://docs.orchardproject.net/
+  [3]: http://orchard.codeplex.com/discussions
+  [4]: http://orchardproject.net/
+  [5]: http://orchardproject.net/discussions
+
+
+
+
 This topic assumes that you have already installed Orchard and set up your website. If you haven't, follow the instructions in [Installing Orchard](Installing-Orchard).
+
+There are plenty of options to get up and running with Orchard without installing Orchard on your local machine or local IIS Server.
+
+### Try Orchard
+
+[Try Orchard!](http://tryorchard.net/) is a showcase for the Orchard content management framework: you can try how Orchard feels by checking out an already running demo site where you can play with Orchard as you wish.
+
+No registration, no setup, nothing required, you can just go to [Try Orchard!](http://tryorchard.net/), open one of the continuously re-installed demo sites and play with it. This is the simplest way of taking the first steps with Orchard.
+
+Be aware though that Try Orchard! is really just for testing: since the demo sites are wiped out hourly you don't try to publish your blog there!
+
+![Try Orchard](../Upload/getting-started/1.png)
+
+![Try Orchard](../Upload/getting-started/2.png)
+
+### DotNest : Orchard SaaS provider
+
+[DotNest](http://dotnest.com/) is the Orchard SaaS provider: this means that you can simply register and create Orchard websites that run in the cloud without any hassle. Your website will just work: you don't have to deploy and later upgrade it, you can just use it.
+
+With DotNest you can try out Orchard very simply, very quickly and since your website is already hosted for you you can also show it to everybody. Apart from getting used to the user interface and features of Orchard you can also get into the [basics of Orchard theme development](http://dotnest.com/knowledge-base/topics/theming) with it and style and customize your Orchard website in a lot of ways.
+
+Convenience does come with disadvantages: due to the architecture of DotNest you can't install custom modules, so you have to use what is already available (that however should be enough for a big part of websites).
+
+
+**1)** What is **DotNest** 
+![Try Orchard](../Upload/getting-started/3.png)
+
+**2)** Click **New Tenant** to create a new tenant on DotNest
+
+![Try Orchard](../Upload/getting-started/4.png)
+
+**3)** Fill in the required details to create a **New Tenant**
+
+![Try Orchard](../Upload/getting-started/5.png)
+
+**3)** **New Tenant** successfully created
+![Try Orchard](../Upload/getting-started/6.png)
+
+### Orchard on Azure Websites
+
+After a [free registration](http://azure.microsoft.com/en-us/services/websites/) you can create websites from the Azure Gallery where you can select Orchard to deploy in one click too.
+
+Your Orchard site on Azure Websites will be completely under your control: you can install any module and theme you want too. However this also comes with responsibilities: you have to maintain your website yourself, upgrade and fix it as necessary.
+
+![Try Orchard](../Upload/getting-started/7.png)
+
+![Try Orchard](../Upload/getting-started/8.png)
+  
+![Try Orchard](../Upload/getting-started/15.png)
+
+![Try Orchard](../Upload/getting-started/14.png)
 
 ### Changing The Layout Of The Home Page
 
 Out of the box, Orchard applies a theme to your website known as the "Theme Machine".  The Theme Machine includes CSS styles and a layout. Orchard allows you to selectively include or exclude portions (zones) of the layout on each page of your website. 
-By default, the zones highlighted in blue are enabled on the home page.
 
 ![](../Upload/screenshots_675/ThemeZonePreview_homepage_675.png)
 
@@ -61,6 +132,7 @@ The TripelThird zone will no longer be visible on the home page.
 **8)** Select **Your Site** in the upper-left side of the Dashboard to view the modified home page with the new TripelThird zone.
 ![](../Upload/screenshots_675/homepage_modified_thirdleaderaside_675.png)
 
+
 ### Editing The Content Of The Home Page
 
 Orchard provides a feature that makes it easy for you to edit the content in a zone or the page body.  To turn on this feature you must enable the **Content Control Wrapper** and **Widget Control Wrapper** modules 
@@ -71,7 +143,7 @@ Orchard provides a feature that makes it easy for you to edit the content in a z
 
 **3)** Enable **Widget Control Wrapper**
 
-![](../Upload/screenshots_675/enable_content_control_675.png)
+![Try Orchard](../Upload/getting-started/9.png)
 
 Once these modules are enabled, you can edit the contents of an individual zone by clicking the **Edit** link (at the top right) in the zone.  
 
@@ -80,6 +152,8 @@ Once these modules are enabled, you can edit the contents of an individual zone 
 **4)** Select the **Edit** link for the *TripelFirst* zone of the home page. 
 
 **5)** Change the title, and optionally, change or remove the existing body text for the zone.  
+
+### Inserting a Media Item
 
 **6)** Select **Insert Media Item**. 
 
@@ -156,7 +230,7 @@ The home page is automatically displayed with the updated zone.
 
 **7)** Select **Your Site** in the upper-left side of the Dashboard to view the modified home page with the new menu. Clik **Downloads** and you will see your new page.
  
-### Changing The Layout Of Your Page
+### Adding New Layer for a Page
 
 To change the layout of your new page without affecting the rest of the site you can create a new layer, that will be applied only to the *Downloads* page. Then you can place some widgets on that layer and they will be visible only in the *Downloads* page.
  
@@ -168,6 +242,9 @@ To change the layout of your new page without affecting the rest of the site you
 **2)** Write a name for the layer, a description, and a layer rule: url"~/download". This will instruct the Orchard System to show the widgets in this layer only when the url of the browser is pointing to "download". Select **Save**.
 
 ![](../Upload/screenshots_675/create_new_page_2_2_675.png)
+
+
+### Adding a New HTML Widget
 
 **3)** To check that your layer rule is working you can add a widget to it. Ensure that **Current Layer** is **Download**. Click **Add** in *AsideFirst*.
 
@@ -195,31 +272,32 @@ To customize the look and feel of the Orchard website you change the theme.
 
 **2)** To download new themes, select the **Gallery** tab.
 
-**3)** Search for **Contoso** to find the Contoso Theme. Install the **Contoso** theme.
+**3)** Search for **PJS.Bootstrap** to find the PJS.Bootstrap Theme. Install the **PJS.Bootstrap** theme.
 
 **4)** Select the **Installed** tab. 
 
-After a theme has been installed it appears as an option in the **Available** section on the **Installed** tab. In the following illustration, the **Contoso** theme has been installed so it appears in the **Available** section. (The current theme for the site is **The Theme Machine**.) 
+After a theme has been installed it appears as an option in the **Available** section on the **Installed** tab. In the following illustration, the **PJS.Bootstrap** theme has been installed so it appears in the **Available** section. (The current theme for the site is **PJS.Bootstrap**.) 
 
 **5)** To see how your site will look with an available them,  select **Preview** for the theme.  To apply an available theme to your site select **Set Current** for the theme. For more details, see [Previewing and Applying a Theme](Previewing-and-applying-a-theme) and [Installing Themes](Installing-themes).
 
-![](../Upload/screenshots_675/themes_manage_1_675.png)
+![Try Orchard](../Upload/getting-started/10.png)
+
+![Try Orchard](../Upload/getting-started/11.png)
 
 
 ### Extending Orchard With Modules And Features
 
 A key feature of Orchard is the ability to add new features in order to extend the functionality of your site. The primary way to do this is by installing modules. You can think of a module as a package of files (in a .zip folder) that can be installed on your site. To view the modules that are included with Orchard, in the Orchard Dashboard, click **Modules** and then click the **Installed** tab in the **Modules** screen.
 
-![](../Upload/screenshots_675/installed_modules_1_675.png)
+![Try Orchard](../Upload/getting-started/12.png)
 
 Orchard provides some built-in modules, and you can install new modules. For details, see [Installing and Upgrading Modules](Installing-and-upgrading-modules) and [Registering additional gallery feeds](Module-gallery-feeds).
 
 Individual modules can expose features that can be independently enabled or disabled. To view the features exposed by the built-in modules in Orchard, click the **Features** tab in the **Modules** screen.  
 
-![](../Upload/screenshots_675/features_link_675.png)
+![Try Orchard](../Upload/getting-started/13.png)
 
 Each feature has an **Enable** or **Disable** link (depending on its current state), as well as an optional list of dependencies that must also be enabled for a specific feature. The documentation throughout this site describes the variety of features in Orchard and how you can use them to customize your site's user interface and behavior.
-  
 
 ### Change History
 * Updates for Orchard 1.8
