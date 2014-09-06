@@ -248,7 +248,7 @@ permissions per content item instead of per content type.
 ## Orchard.ContentPicker
 
 This module provides an extensible content item picker that can be used to build
-relationships between content items. The content picker module provides a content picker field which can be attached to a any Content Type.
+relationships between content items. The content picker module provides a content picker field which can be attached to any Content Type.
 
 This module is available from source code packages or [from the gallery][30].
 
@@ -550,7 +550,7 @@ This module is available from source code packages or [from the gallery][42].
 
 ## Orchard.Taxonomies
 
-The taxonomy module is providing custom categorization of arbitrary content types. The taxonomy module provides a taxonomy field which can be attached to a any Content Type.
+The taxonomy module is providing custom categorization of arbitrary content types. The taxonomy module provides a taxonomy field which can be attached to any Content Type.
 
 ## Orchard.Themes 
 
