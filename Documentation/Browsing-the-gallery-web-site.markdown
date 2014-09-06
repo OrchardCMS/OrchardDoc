@@ -1,9 +1,9 @@
 
-The [Orchard Gallery web site](http://orchardproject.net/gallery) allows you to browse and search for available modules and themes to extend and customize the behavior of any Orchard site.  It also provides a convenient way for developers and designers to [upload and share modules and themes with others](Contributing-a-module-or-theme-to-the-gallery). 
+The [Orchard Gallery web site](http://gallery.orchardproject.net/) allows you to browse and search for available modules and themes to extend and customize the behavior of any Orchard site.  It also provides a convenient way for developers and designers to [upload and share modules and themes with others](Contributing-a-module-or-theme-to-the-gallery). 
 
 > You can also browse modules and themes from the gallery using the Orchard admin panel.  Refer to [Installing modules and themes from the gallery](Installing-modules-and-themes-from-the-gallery) for more information. 
 
-To view the gallery website, navigate to [http://orchardproject.net/gallery](http://orchardproject.net/gallery) in your browser.
+To view the gallery website, navigate to [http://gallery.orchardproject.net/](http://gallery.orchardproject.net/) in your browser.
 
 ![](../Upload/screenshots_675/gallery_home.png)
 

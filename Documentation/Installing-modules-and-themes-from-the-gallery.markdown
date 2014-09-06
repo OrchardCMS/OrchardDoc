@@ -44,7 +44,7 @@ The **Gallery** tabs on the **Modules** page and the **Themes** page of the dash
 
 ![](../Upload/screenshots_675/modules_gallerytab_filterbyfeed_675.png)
 
-By default, the [Orchard Gallery feed](http://orchardproject.net/gallery/) is registered for an Orchard site. To register additional gallery feeds see [Registering Additional Gallery Feeds](Module gallery feeds).
+By default, the [Orchard Gallery feed](http://gallery.orchardproject.net/) is registered for an Orchard site. To register additional gallery feeds see [Registering Additional Gallery Feeds](Module gallery feeds).
 
   
   
