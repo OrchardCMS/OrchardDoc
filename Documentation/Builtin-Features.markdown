@@ -7,8 +7,7 @@ core modules from non core modules. Core features cannot be disabled and are all
 at all times, but there are features that are implemented in core modules that can be
 enabled and disabled. Those features are simply not in the "Core" category.
 
-Each module details its features and whether it's available from the WebPI package or
-only from the gallery or the source code releases.
+Each module details its features, whether it's available from the gallery or the source code releases.
 
 # Core modules
 
@@ -145,7 +144,7 @@ on this module to enable specifically blog post creation.
 
 # Non-core modules
 
-## Markdown (WebPI, off by default)
+## Markdown (off by default)
 
 [Markdown][2] is a human-readable text format used to describe rich text without the
 complexity of HTML. Some people prefer to write in Markdown rather than in a WYSYWYG
@@ -156,7 +155,7 @@ the existing ones to use the Markdown format instead of HTML by opening the sett
 for the Body part and changing the flavor setting from "html" to "markdown". The
 Markdown editor will then be shown instead of TinyMCE in the content item editor.
 
-## Orchard.Alias (WebPI)
+## Orchard.Alias 
 
 The Alias module sets up the infrastructure to map friendly URLs to content items
 and custom routes. It is the foundation on which Autoroute is built.
@@ -166,7 +165,7 @@ and custom routes. It is the foundation on which Autoroute is built.
 * Alias: this is the core infrastructure piece for aliases to work.
 * Alias UI (off by default): provides admin UI to modify, create or remove aliases.
 
-## Orchard.AntiSpam (WebPI, off by default)
+## Orchard.AntiSpam (off by default)
 
 The AntiSpam module provides various spam-fighting features and infrastructure
 pieces. It makes it possible to prevent spam on arbitrary contents (previous
@@ -186,7 +185,7 @@ Using the part provided by this module, you can schedule a content item to be ar
 
 This module is available from source code packages or [from the gallery][28].
 
-## Orchard.Autoroute (WebPI)
+## Orchard.Autoroute 
 
 This very powerful feature makes it possible for content type creators to specify a
 token-based URL blueprint. For example, if you want the URL of your blog posts
@@ -196,7 +195,21 @@ set the pattern to "posts/{Content.Date.Format:yyyy}/{Content.Date.Format:MM}/{C
 
 Autoroute is built on top of the Alias feature.
 
-## Orchard.Blogs (WebPI)
+## Orchard.Azure (Off by default)
+
+Orchard.Azure provides a set of Orchard service implementations targeting Microsoft Azure services.
+
+### Features
+
+* Orchard.Azure.Media : Activates an Orchard media storage provider that targets Microsoft Azure Blob Storage.
+* Orchard.Azure.OutputCache : Activates an Orchard output cache provider that targets Windows Azure Cache.
+* Orchard.Azure.DatabaseCache : Activates an NHibernate second-level cache provider that targets Microsoft Azure Cache.
+
+## Orchard.Azure.MediaServices (Off by default)
+
+Provides integration of Microsoft Azure Media Services functionality into Orchard.
+
+## Orchard.Blogs 
 
 The blogs module provides Orchard's blogging features. It relies heavily on Orchard's
 content type composition and other features such as comments.
@@ -206,6 +219,10 @@ content type composition and other features such as comments.
 * [Adding a blog to your site][6]
 * [Blogging with Live Writer][7]
 
+## Orchard.Caching
+
+Orchard.Caching provides an API to cache business data.
+
 ## Orchard.CodeGeneration
 
 This module provides developers with scaffolding commands that help with the creation
@@ -213,7 +230,7 @@ of new modules and themes.
 
 This module is available from source code packages or [from the gallery][29].
 
-## Orchard.Comments (WebPI)
+## Orchard.Comments 
 
 You can use the Comments part provided by this module on any content type, in order
 to enable users of your site to provide feedback.
@@ -222,7 +239,7 @@ to enable users of your site to provide feedback.
 
 * [Moderating comments][8]
 
-## Orchard.ContentPermissions (WebPI, off by default)
+## Orchard.ContentPermissions (off by default)
 
 Without this module, Orchard only provides configurable permissions for whole content types.
 This module provides a part that can be added to any content type to restrict viewing
@@ -231,11 +248,11 @@ permissions per content item instead of per content type.
 ## Orchard.ContentPicker
 
 This module provides an extensible content item picker that can be used to build
-relationships between content items.
+relationships between content items. The content picker module provides a content picker field which can be attached to any Content Type.
 
 This module is available from source code packages or [from the gallery][30].
 
-## Orchard.ContentTypes (WebPI, off by default)
+## Orchard.ContentTypes (off by default)
 
 Enable this module to enable the creation and modification of content types from the admin UI.
 
@@ -243,7 +260,7 @@ Enable this module to enable the creation and modification of content types from
 
 * [Creating custom content types][9]
 
-## Orchard.CustomForms (WebPI, off by default)
+## Orchard.CustomForms (off by default)
 
 Custom forms are built as content types, typically using fields. Once you've built the content
 type for your custom form, you can enable its instances to be created from the front-end by
@@ -280,12 +297,12 @@ email notifications from rules.
 
 This module is available from source code packages or [from the gallery][38].
 
-## Orchard.Fields (WebPI)
+## Orchard.Fields 
 
 Orchard.Fields provides Input, Boolean, DateTime, Numeric, Link, Enumeration, and Media Picker fields
 that can be used in custom content types.
 
-## Orchard.Forms (WebPI)
+## Orchard.Forms 
 
 This developer-targeted module provides shapes that are useful to dynamically build forms from code.
 
@@ -299,6 +316,10 @@ is the same XML format that is used in recipes.
 
 This module is available from source code packages or [from the gallery][33].
 
+## Orchard.ImageEditor 
+
+Orchard.ImageEditor adds a client side image editor for Media Library
+
 ## Orchard.Indexing, Orchard.Search and Lucene
 
 Those three modules constitute the default full-text search infrastructure for Orchard.
@@ -309,17 +330,23 @@ The search index queries the index and formats results.
 This module is available from source code packages or from the gallery: [search][34],
 [indexing][35] and [Lucene][36].
 
-## Orchard.jQuery (WebPI)
+## Orchard.JobsQueue
+
+This module provides a jobs queue to process jobs asynchronously.
+
+### Features 
+
+* Orchard.JobsQueue : Provides a jobs queue to process jobs asynchronously.
+* Orchard.JobsQueue.UI : Provides a UI to manage queued jobs.
+
+## Orchard.jQuery 
 
 Used as a dependency by other modules, this provides jQuery and jQueryUI scripts.
 
-## Orchard.Lists (deprecated)
+## Orchard.Lists
 
 This module provides a simple implementation for lists of content items, following
 a folder/file metaphor where a content item can belong to only one list.
-
-This module is deprecated and we recommend users switch to Taxonomies and Projections,
-which enable much richer scenarios.
 
 ## Orchard.Localization
 
@@ -328,27 +355,29 @@ The items of the modified types can have several versions that differ by culture
 
 This module is available from source code packages or [from the gallery][37].
 
-## Orchard.Media (WebPI)
+## Orchard.MediaLibrary 
 
-Orchard.Media manages the contents of the /media folder.
+Orchard.MediaLibrary Provides enhanced Media management tools
 
 ### See Also
 
 * [Adding and managing media content][10]
 
-## Orchard.MediaPicker (WebPI)
+## Orchard.MediaProcessing
 
-MediaPicker adds the media picker to the content body editor.
+Module for processing Media e.g. image resizing
 
-## Orchard.Messaging
 
-This module provides the messaging infrastructure that module such as Rules can
-use. It is only useful as a dependency for other modules that implement
-specific channels, such as e-mail or Twitter.
+## Orchard.Migrations
 
-This module is available from source code packages or [from the gallery][39].
+Data migration commands.
 
-## Orchard.Modules (WebPI)
+### Features
+
+* DatabaseUpdate : Commands for updating the database schema according to the definition of the "Record" classes in code.
+
+
+## Orchard.Modules 
 
 This is the module that provides the admin UI to enable and disable features.
 
@@ -370,7 +399,11 @@ or complete database separation.
 
 This module is available from source code packages or [from the gallery][41].
 
-## Orchard.Packaging (WebPI)
+## Orchard.OutputCache
+
+Adds Output Caching functionality.
+
+## Orchard.Packaging 
 
 This module handles the packaging of themes and modules.
 
@@ -384,7 +417,7 @@ This module handles the packaging of themes and modules.
 
 * [Installing modules and themes from the gallery][12]
 
-## Orchard.Pages (WebPI)
+## Orchard.Pages 
 
 The Pages modules adds the Page content type, and associated commands.
 
@@ -392,7 +425,7 @@ The Pages modules adds the Page content type, and associated commands.
 
 * [Adding pages to your site][13]
 
-## Orchard.Projections (WebPI)
+## Orchard.Projections 
 
 This tremendously useful module enables the creation of arbitrary queries over
 the contents of the site, and then to present the results in flexible layouts,
@@ -402,7 +435,7 @@ without leaving the admin dashboard.
 
 * [Presentation video on Projections][14]
 
-## Orchard.PublishLater (WebPI, off by default)
+## Orchard.PublishLater (off by default)
 
 The PublishLater part can be added to draftable content types and allows scheduled
 publication of contents.
@@ -411,7 +444,7 @@ publication of contents.
 
 * [Saving, scheduling and publishing drafts][15]
 
-## Orchard.Recipes (WebPI)
+## Orchard.Recipes 
 
 Recipes are XML files that describe a set of operations on the contents and configuration
 of the site. Recipes are used at setup to describe predefined initial configurations
@@ -423,7 +456,7 @@ Finally, the import/export feature uses this same recipe format to transfer cont
 
 * [Making a web site recipe][16]
 
-## Orchard.Roles (WebPI)
+## Orchard.Roles 
 
 Security APIs in Orchard do not make many presuppositions about authentication, membership
 and permissions, but we do ship role-based security as a default security implementation.
@@ -435,14 +468,15 @@ users.
 * [Managing users and roles][17]
 * [Understanding permissions][18]
 
-## Orchard.Rules (WebPI, off by default)
+## Orchard.Rules (deprecated) (off by default)
 
 Orchard events can be picked up by rules and trigger actions. For example, the publication
 event on the comment content type can be picked-up by a user-defined rule and trigger
 the action of sending an e-mail to the owner of the blog.
-The Rules module provides simple admin UI to create and manage rules.
+The Rules module provides simple admin UI to create and manage rules. This module is deprecated. 
+We recommend users switch to Orchard.Workflows Module.
 
-## Orchard.Scripting (WebPI)
+## Orchard.Scripting 
 
 In order to enable simple programmability of the application without requiring the
 development of a whole module, certain key areas of Orchard expose extensibility through
@@ -457,12 +491,21 @@ is a simple expression language whose syntax is a subset of Ruby.
 * Lightweight Scripting: a simple expression language that is a subset of Ruby.
 * Scripting Rules: makes it possible for rules to be triggered by arbitrary scripted expressions.
 
+## Orchard.Scripting.CSharp
+
+Provides C# compiler services.
+
+### Features
+
+* Orchard.Scripting.CSharp : Provides C# compiler services.
+* Orchard.Scripting.CSharp.Validation : Provides a Script Validation part.
+
 ## Orchard.Scripting.DLR
 
 This module, built on Orchard.Scripting, enables the possibility to use DLR languages
 such as Ruby and Python as scripting languages.
 
-## Orchard.Setup (WebPI, off after setup)
+## Orchard.Setup (off after setup)
 
 This module is always disabled except before the application has been setup. It is responsible
 for implementing the setup mechanism. It contains the original recipes in its Recipes subfolder.
@@ -472,7 +515,23 @@ for implementing the setup mechanism. It contains the original recipes in its Re
 * [Installing Orchard][20]
 * [Making a web site recipe][16]
 
-## Orchard.Tags (WebPI)
+## Orchard.Search 
+
+Standard interface to Orchard's built-in search.
+
+### Features
+
+* Orchard.Search : Standard interface to Orchard's built-in search.
+* Orchard.Search.Content : Provides a Content Search tab in Admin.
+* Orchard.Search.ContentPicker : Provides a search tab in Content Picker.
+* Orchard.Search.MediaLibrary : Provides search menu item in the Media Library explorer.
+
+## Orchard.SecureSocketsLayer
+
+This module will ensure SSL is used when accessing specific parts of the website like the dashboard, authentication pages or custom pages.
+
+
+## Orchard.Tags 
 
 Tags are a very simple way to categorize contents. It is a flat and easily extensible structure.
 For more elaborate classifications, we strongly recommend the use of the [Contrib.Taxonomies][21]
@@ -489,7 +548,11 @@ module implements a way for code to communicate tasks to the whole server farm.
 
 This module is available from source code packages or [from the gallery][42].
 
-## Orchard.Themes (WebPI)
+## Orchard.Taxonomies
+
+The taxonomy module is providing custom categorization of arbitrary content types. The taxonomy module provides a taxonomy field which can be attached to any Content Type.
+
+## Orchard.Themes 
 
 This module provides the infrastructure for easy customization of the look and feel of the site
 through the definition of themes, which are a set of scripts, stylesheets and template overrides.
@@ -500,7 +563,16 @@ through the definition of themes, which are a set of scripts, stylesheets and te
 * [Previewing and applying a theme][24]
 * [Customizing the default theme][25]
 
-## Orchard.Tokens (WebPI, off by default)
+## Orchard.Templates
+
+Provides a Template type that can be used to store template code and used as a shape.
+
+### Features
+
+* Orchard.Templates : Provides a Template type that represents a shape template, stored as a content item.
+* Orchard.Templates.Razor : Extends Templates with Razor templates.
+
+## Orchard.Tokens (off by default)
 
 Tokens are contextual environment variables that are used in dynamic expressions. For example,
 the Autoroute feature makes it possible to define URL patterns for content items of a given
@@ -508,7 +580,7 @@ type. Those patterns rely on tokens that will be dynamically evaluated in a spec
 The "{Content.Date.Format:yyyy}/{Content.Slug}" would be evaluated for the specific content item
 it applies to and would be resolved to something like "2012/the-title".
 
-## Orchard.Users (WebPI)
+## Orchard.Users 
 
 This is the module that implements the default user management in Orchard.
 
@@ -516,14 +588,14 @@ This is the module that implements the default user management in Orchard.
 
 * [Managing users and roles][17]
 
-## Orchard.Warmup (WebPI, off by default)
+## Orchard.Warmup (off by default)
 
 Cold starts in ASP.NET applications can be slow, and shared hosting environments create the
 conditions for frequent such cold starts. In order to mitigate this situation, the warmup
 feature can prepare static versions of the most common pages of the site so those can be served
 as soon as possible even if the application is not entirely done warming up.
 
-## Orchard.Widgets (WebPI)
+## Orchard.Widgets 
 
 Widgets are reusable pieces of UI that can be positioned on any page of the site. Which widgets
 get displayed on what pages is determined by layer rules.
@@ -539,11 +611,17 @@ get displayed on what pages is determined by layer rules.
 * [Managing widgets][26]
 * [Writing a widget][27]
 
-## TinyMCE (WebPI)
+## Orchard.Workflows 
+
+Orchard.Workflows module provides tools to create custom workflows. 
+
+## TinyMCE 
 
 Used as a dependency by other features, this provides the scripts necessary to implement the TinyMCE WYSYWYG HTML editor.
 
-## UpgradeTo15 / UpgradeTo14 (WebPI, off by default)
+## Upgrade / UpgradeTo16 /UpgradeTo15 / UpgradeTo14 (off by default)
+
+Provides actions for upgrading Orchard instances.
 
 Orchard 1.4 brought breaking changes in the way URLs and titles are managed. 1.3 and previous versions
 were using the Route part to handle a static URL and title. 1.4 deprecated this in favor of the new
@@ -594,3 +672,7 @@ to the new fields.
   [40]: http://docs.orchardproject.net/Documentation/Setting-up-a-multi-tenant-Orchard-site
   [41]: http://gallery.orchardproject.net/List/Modules/Orchard.Module.Orchard.MultiTenancy
   [42]: http://gallery.orchardproject.net/List/Modules/Orchard.Module.Orchard.TaskLease
+
+# Change History
+* Updates for Orchard 1.8
+    * 9-06-14: Updated builtin features list to the latest version of Orchard i.e. v1.8.1
