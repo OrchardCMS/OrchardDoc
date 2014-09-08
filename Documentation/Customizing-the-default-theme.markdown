@@ -97,9 +97,15 @@ The following image was copied from TheThemeMachine and changed to show the ligh
 ![](../Upload/screenshots/NewTheme_thumbnail.PNG)
 
 ## Applying Your New Theme
-In the Admin Panel, under **Site Design**, select **Themes**. The **Manage Themes** page is displayed, and the new theme is listed under **Available Themes**:
+In the Admin Panel, under **Themes**, select **Installed**. The **Installed** tab will display the new theme under the **Available Themes**:
 
 
-![](../Upload/screenshots/themes_available.png)Click **Set Current**. The **Manage Themes** page is redisplayed showing **MyTheme** as the current theme.
+![](../Upload/screenshots/themes_available.png) 
+
+Click **Set Current**. The **Installed** tab is redisplayed showing **MyTheme** as the current theme.
 
 You can now go to your website to see the new theme in action. 
+
+# Change History
+* Updates for Orchard 1.8
+    * 9-8-14: Updated screen shots for Customizing Default Theme.
