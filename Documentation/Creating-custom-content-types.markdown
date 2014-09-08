@@ -3,7 +3,7 @@ Although Orchard includes the Page and Blog Post content types by default, it is
 
 ![](../Upload/screenshots_675/ContentTypes_enable.png)
 
-To create a content type, select the **Content Types** link in the admin panel.
+To create a content type, Click **Content Definition** and select the **Content Types** link in the admin panel.
 
 ![](../Upload/screenshots/ContentTypes_startcustom.png)
 
@@ -19,13 +19,11 @@ You can also edit the definition of the Page type by clicking "Edit" for this ty
 
 ![](../Upload/screenshots_675/edit_content_type_page.png)
 
-A content type in Orchard is made up of fields and parts.  An good overview of these concepts is described in [Basic Orchard Concepts](Basic-Orchard-Concepts).  A field is something specific to the type; for example, a Product type might have SKU and Price fields.  A part, however, is a reusable component that can be attached to one or more types.  For example, the Route part gives a type the ability to be addressed on the front-end via a route/url.  In some ways, you can think of a type as _having_ fields, and _being_ made up of one or more parts.  This is actually reflected in the underlying code in Orchard as well.  To treat a blog post as a RoutePart and access it's RoutePart.Slug property, you would write something like this: post.As&lt;RoutePart&gt;.Slug.  Fortunately you don't have to write code to have fun with types and parts.  We are going to look at this in more detail by way of example in the next section.
+A content type in Orchard is made up of fields and parts.  An good overview of these concepts is described in [Basic Orchard Concepts](Basic-Orchard-Concepts).  A field is something specific to the type; for example, a Product type might have SKU and Price fields.  A part, however, is a reusable component that can be attached to one or more types.  For example, the Autoroute part gives a type the ability to be addressed on the front-end via a route/url.  In some ways, you can think of a type as _having_ fields, and _being_ made up of one or more parts.  This is actually reflected in the underlying code in Orchard as well.  To treat a blog post as a AutoroutePart and access it's AutoroutePart.Slug property, you would write something like this: post.As&lt;AutoroutePart&gt;.Slug.  Fortunately you don't have to write code to have fun with types and parts.  We are going to look at this in more detail by way of example in the next section.
 
 ### Defining a New Content Type
 
 Let's define a custom content type.  Suppose you wanted to define an "Event" type, for listing events with location and date fields.  To do this in the **Manage Content Types** screen, click on **Create new type**.
-
-![](../Upload/screenshots/ContentTypes_createnew.png)
 
 Type the name "Event" for the content type. The **Content Type Id** field is automatically populated with "Event" which you can keep.
 
@@ -39,6 +37,8 @@ Currently Orchard only includes a single field type (TextField), but [more can b
 
 ![](../Upload/screenshots/ContentTypes_addfieldname.png)
 
+![](../Upload/screenshots/locationfieldsetting.png)
+
 The field is now listed in the Event type screen.
 
 ![](../Upload/screenshots/add_field3.png)
@@ -47,17 +47,19 @@ Go ahead and repeat the previous two steps to add a second field named "Date".
 
 To add a part to your type, click "Add" in the "Parts" section of the Event type.
 
-![](../Upload/screenshots_675/add_part.png)
-
-Here you can see the available parts in Orchard (as of the current release).  For our Event type, we want to be able to comment on the event ("Comments" part), tag the event ("Tags part"), access the event from the front-end via a URL/route ("Route" part), add the event to the main menu ("Menu" part), and be able to publish the event immediately, on a schedule, or as a draft ("PublishLater" part).
+Here you can see the available parts in Orchard (as of the current release).  For our Event type, we want to be able to comment on the event ("Comments" part), tag the event ("Tags part"), access the event from the front-end via a URL/route ("Autoroute" part), add the event to the main menu ("Menu" part), and be able to publish the event immediately, on a schedule, or as a draft ("PublishLater" part).
 
 Also add the "Common" part so that your items can appear in lists of content items.
 
-![](../Upload/screenshots_85/add_part2.png)
+![](../Upload/screenshots_675/add_part.png)
 
 Types, fields and parts can have settings as well.  The specific settings that are available on the fields or parts is determined by the features that are activated in Orchard.  If we have enabled the "Indexing" feature, there is a setting to "Index this content type for search" and on each field, a setting to "Include in the index".  Select these options for the "Location" field of the custom "Event" type.  This will enable visitors of your site to search by location on the front-end (when the "Search" feature is enabled). Hit Save.
 
 ![](../Upload/screenshots_675/content_type_field_settings.png)
+
+![](../Upload/screenshots_675/includefieldinsearch.png)
+
+
 
 Now that we have defined our custom content type, let's create a new item of this type.  Notice the "Create New Event" link in "Manage Content Types".
 
@@ -67,7 +69,7 @@ Similarly, there is a new admin menu link entitled **Event** under **New**.  Cli
 
 ![](../Upload/screenshots/ContentTypes_newevent.png)
 
-We can see that the editor for our "Event" type has all the fields and parts we defined.  It has a **Title** and **Permalink** because of the **RoutePart**, a **Location** and **Date** because of the fields we added, a **Tags** input from the **Tags** part, a **Show on main menu** checkbox from the **Menu** part, and the ability to enable comments from the **Comments** part.  The fact that we can **Publish Now**, **Publish Later** or **Save As Draft** is given by the **Publish Later** part.  Once you have filled in these fields, go ahead and publish the event.
+We can see that the editor for our "Event" type has all the fields and parts we defined.  It has a **Title** because of the **TitlePart** and **Permalink** because of the **AutoroutePart**, a **Location** because of the fields we added, a **Tags** input from the **Tags** part, a **Show on main menu** checkbox from the **Menu** part, and the ability to enable comments from the **Comments** part.  The fact that we can **Publish Now**, **Publish Later** or **Save As Draft** is given by the **Publish Later** part.  Once you have filled in these fields, go ahead and publish the event.
 
 ![](../Upload/screenshots_675/ContentTypes_adddinner.png)
 
@@ -91,10 +93,13 @@ We can tell the Search feature to query this field by going to the **Settings** 
 
 On the front-end type a keyword that matches the location of your event.
 
-![](../Upload/screenshots/ContentTypes_searchevent.png)
-
 Search indexing has indexed our Location field and our event appears in search results as expected!
 
 ![](../Upload/screenshots_675/ContentTypes_searchresults.png)
 
 This concludes the tutorial on custom content types.  If you are interested in delving further, check out the related tutorials on this site for how to build a custom type, field or part using code.
+
+
+### Change History
+* Updates for Orchard 1.8
+    * 9-6-14: Updated all screen shots for creating custom content type.
