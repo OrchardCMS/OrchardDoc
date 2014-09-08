@@ -1,12 +1,14 @@
-> This topic has been updated for the Orchard 1.0 release.
+> This topic has been updated for the Orchard 1.8.1 release.
 
 Each role has a set of permissions assigned to it, and these permissions indicate which actions a user in that role can perform. For each role, you can only grant permissions; you cannot specifically deny a permission. A user's permission set consists of all granted permissions for all roles that the user belongs to.
 
 To assign or review permissions for a role, click the **Roles** link.
-![](../Upload/screenshots/Permission_ManageRoles.png)
+
 
 Click **Edit** for the role you want to modify or review.
-![](../Upload/screenshots_675/Permission_ManageRolesMenu.png)
+
+![](../Upload/screenshots/Users_roles.png)
+
 
 By default, Orchard includes a number of roles with default permissions:
 
