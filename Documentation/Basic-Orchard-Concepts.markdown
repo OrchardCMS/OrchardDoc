@@ -84,18 +84,23 @@ Here is an example of a manifest:
 
     
     Name: Comments
-    AntiForgery: enabled
-    Author: The Orchard Team
-    Website: http://orchardproject.net
-    Version: 0.9.0
-    OrchardVersion: 0.9.0
-    Description: The comments system implemented by this module can be applied to arbitrary Orchard content types, such as blogs and pages. It includes comment validation and spam protection through the Akismet service.
-    Features:
-        Orchard.Comments:
-            Name: Comments
-            Description: Standard content item comments.
-            Dependencies: Settings
-            Category: Social
+	AntiForgery: enabled
+	Author: The Orchard Team
+	Website: http://orchardproject.net
+	Version: 1.8.1
+	OrchardVersion: 1.8
+	Description: The comments system implemented by this module can be applied to arbitrary Orchard content types, such as blogs and pages. It includes comment validation and spam protection through the Akismet service.
+	Features:
+    Orchard.Comments:
+        Name: Comments
+        Description: Standard content item comments.
+        Dependencies: Settings, Orchard.Tokens
+        Category: Social
+	Orchard.Comments.Workflows:
+		Name: Comments Workflows Activities
+        Description: Provides workflow activities for comments management.
+		Category: Workflows
+		Dependencies: Orchard.Workflows
 
 
 # UI composition
@@ -230,3 +235,6 @@ A migration is a description of the operations to execute when first installing 
 ## Injection
 Inversion of Control, or injection, is widely used in Orchard. When any piece of code requires a dependency, it will typically demand the injection of one or several instances of a specific interface. The framework will take care of selecting, instantiating and injecting the right implementations at runtime.
 
+### Change History
+* Updates for Orchard 1.8
+    * 9-6-14: Updated all screen shots for setup, dashboard, content parts and modules/feaures.
