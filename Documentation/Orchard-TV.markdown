@@ -3,7 +3,7 @@
 ## Commercial
 
 Pluralsight has an introductory training course available here:
-<http://www.pluralsight-training.net/microsoft/courses/tableofcontents?courseName=orchard-fundamentals>
+<http://pluralsight.com/training/courses/tableofcontents?courseName=orchard-fundamentals>
 
 The first part of the Pluralsight video course is free, and subsequent episodes require a subscription.
 
@@ -29,6 +29,10 @@ Course for beginners interested in developing on Orchard, starting with how to u
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/hn9T0G0TMag?list=PLuskKJW0FhJdI_I3bhEBYw5BZBiWmsjtK" frameborder="0" allowfullscreen></iframe>
 
+### Orchard CMS for Absolute Beginners
+
+[Orchard CMS for Absolute Beginners](https://www.udemy.com/orchard-cms-for-absolute-beginners/) by Abhishek Luv
+
 ### Introduction to Orchard 1.5 by Sébastien Ros
 
 <iframe style="height:281px;width:500px" src="http://channel9.msdn.com/Shows/Web+Camps+TV/Sebastien-Ros-Introduces-Orchard-15/player?w=500&h=281" frameBorder="0" scrolling="no" ></iframe>
@@ -46,10 +50,6 @@ Course for beginners interested in developing on Orchard, starting with how to u
 ### Introduction to Orchard 1.4 by Bertrand Le Roy:
 
 <iframe width="500" height="284" src="http://www.youtube.com/embed/uDqY14mDG_Y" frameborder="0" allowfullscreen></iframe>
-
-### Orchard CMS for Absolute Beginners - Free Udemy Course
-
-[Orchard CMS for Absolute Beginners](https://www.udemy.com/orchard-cms-for-absolute-beginners/) by Abhishek Luv
 
 ## Hands-on Labs
 
@@ -74,23 +74,11 @@ Kris van der Mast made his hands-on lab material available to anyone for free:
 
 [Deconstructing Orchard: Build, Customize, Extend, Ship](http://channel9.msdn.com/events/mix/mix11/FRM06) by Brad Millington
 
-## LIDNUG
-
-[Bertrand Le Roy at LIDNUG](http://www.lidnug.org/archives.aspx)
-
 # Themes
 
 ## Getting Started With Custom Theme Development
 
 <iframe width="500" height="314" src="http://www.youtube.com/embed/rk1iJJJ9Itg?hd=1" frameborder="0" allowfullscreen></iframe>
-
-## Ryan Keeter's Creating an Orchard Theme
-
-[Part 0 of the series, with links to the other episodes](http://ryankeeter.com/Creating-an-orchard-theme-pt-0)
-
-## Using Ad-Hoc Shapes
-
-[Using Ad-Hoc Shapes](http://ryankeeter.com/using-ad-hoc-shapes-in-orchard-cms)
 
 # Deployment
 
