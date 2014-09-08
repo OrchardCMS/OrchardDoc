@@ -12,7 +12,7 @@ Click **Enable**
 
 ## Configuring Email SMTP Settings ##
 
-Once the *Email Messaging* modules have been enabled the email settings can be configured.  To configure the email settings in Orchard, select 'Email' under the Settings section of the admin.
+Once the *Email Messaging* module has been enabled the email settings can be configured.  To configure the email settings in Orchard, select 'Email' under the Settings section of the admin.
 
 ![Orchard CMS Email Settings Navigation](../Upload/Messaging/Email-Settings.PNG)
 
