@@ -34,7 +34,7 @@ You might want to require moderator approval of comments before they become visi
 
 To require approval of comments, click **Settings > Comments** in the dashboard. A screen appears for managing site-level comment settings. 
 
-![](../Upload/screenshots_675/comments_sitewide_settings_675.png)
+![](../Upload/screenshots_675/manage_site_comments_settings_675.png)
 
 Select **Comments must be approved before they appear** and then save the settings.  After you have enabled this setting, you will need to review all new user comments in the **Comments** screen, and for the comments that you want to allow on the site, change their status from "pending" to "approved". 
 
@@ -42,17 +42,21 @@ Select **Comments must be approved before they appear** and then save the settin
 
 The spam-protection feature helps to automatically categorize certain comments as spam so that you can prevent them from being displayed in your site. 
 
+![](../Upload/screenshots_675/spamcomments.png)
+
 To implement spam protection, Orchard uses [Akismet spam protection](http://akismet.com/), which reviews comments as they are posted. When Akismet detects a comment that fits the criteria for spam, it automatically assigns it to the **Mark as spam** category. 
 
 To enable the Akismet spam protection feature on a site, do the following:
 
 * Obtain an Akismet key from [Akismet.com](http://akismet.com/). 
-* Click **Settings > Comments** on the dashboard and then select **Enable spam protection**.
 * Enter your Akismet key in the field.
-* Add the URL of your Orchard site (the text box calls it your **Blog URL** but you can use your site URL). 
 * Save the updated setting.
 
 ![](../Upload/screenshots_675/comments_sitewide_settings_2_675.png)
+
+
+
+
 
 After you enable spam protection in your site, you can use the **Comments** screen described earlier to select the comments that are marked as spam, review them, and delete the comments that really are spam.
 
@@ -61,6 +65,8 @@ After you enable spam protection in your site, you can use the **Comments** scre
   
 
 # Change History
+* Updates for Orchard 1.8
+    * 3-28-11:  Updated existing screens for site level comment and anti-spam settings.
 * Updates for Orchard 1.1
     * 3-28-11:  Updated existing screens, added new step showing how to require pre-approval of comments. 
 
