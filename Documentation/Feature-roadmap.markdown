@@ -16,7 +16,9 @@ This release is expected to be released for October 2014
   * More information here: https://orchard.codeplex.com/discussions/560347
 * Dynamic Layout module (on track)
   * Sipke Schoorstra ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) owns this contribution
-* Integrate OWIN middlewares support  (working, fixing small bug)
+* Dynamic Forms module (on track)
+  * Sipke Schoorstra ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) owns this contribution
+* Integrate OWIN middlewares support  (working, specflow tests broken)
   * Nick ([Jetski5822](https://www.codeplex.com/site/users/view/Jetski5822)) is responsible for this feature
   * Identity
 * Improved Workflow module (on track)
@@ -25,9 +27,9 @@ This release is expected to be released for October 2014
   * Piotr ([pszmyd](https://www.codeplex.com/site/users/view/pszmyd)) owns this contribution
 * Upgrading to ASP.NET MVC 5.2 (done)
 * Upgrading to .NET Framework 4.5.1 (done)
-* Adding Azure Redis Cache support (on track)
+* Adding Azure Redis Cache support (on track, test/feedback needed)
 * Upgrading to TinyMCe 4 (done)
-* Localization improvements (ongoing)
+* Localization improvements (on track, test/feedback needed)
   * Nick ([Jetski5822](https://www.codeplex.com/site/users/view/Jetski5822)) is responsible for this feature
   * RTL support in Admin
   * Culture selector (admin and front end)
