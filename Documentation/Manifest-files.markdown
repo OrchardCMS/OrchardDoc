@@ -29,35 +29,40 @@ Features           | A description of the features provided by a module. If a mo
 The following example shows an example of a manifest for the **Email Messaging** module. This module has a single feature, so it uses the `FeatureDescription` field. It also includes `Category` and `Dependencies` fields for the feature.
 
     Name: Email Messaging
-    AntiForgery: enabled
-    Author: The Orchard Team
-    Website: http://orchardproject.net
-    Version: 1.0.20
-    OrchardVersion: 1.0.20
-    Description: The Email Messaging module adds Email sending functionalities.
-    FeatureDescription: Email Messaging services.
-    Category: Messaging
-    Dependencies: Orchard.Messaging
+	AntiForgery: enabled
+	Author: The Orchard Team
+	Website: http://orchardproject.net
+	Version: 1.8.1
+	OrchardVersion: 1.8
+	Description: The Email Messaging module adds Email sending functionalities.
+	Features:
+    	Orchard.Email:
+	        Name: Email Messaging
+	        FeatureDescription: Email Messaging services.
+	        Category: Messaging
+	        Dependencies: Orchard.Workflows
+
 
 
 The following example shows a manifest for the **Blogs** module. This module has a default feature, which is described in the `FeatureDescription` field, and it specifies a category and dependencies for the default feature.  The module has an additional feature that is described in the `Features` field. 
 
     Name: Blogs
-    AntiForgery: enabled
-    Author: The Orchard Team
-    Website: http://orchardproject.net
-    Version: 1.0.20
-    OrchardVersion: 1.0.20
-    Description: The Orchard Blogs module is implementing basic blogging features. 
-    FeatureDescription: A simple web log.
-    Dependencies: Shapes, Common, Routable, Feeds, Navigation, Orchard.Widgets, Orchard.jQuery, Orchard.PublishLater
-    Category: Content
-    Features:
-        Orchard.Blogs.RemotePublishing:
-            Name: Remote Blog Publishing
-            Description: Blog easier using a dedicated MetaWeblogAPI-compatible publishing tool.
-            Dependencies: XmlRpc, Orchard.Blogs
-            Category: Content Publishing
+	AntiForgery: enabled
+	Author: The Orchard Team
+	Website: http://orchardproject.net
+	Version: 1.8.1
+	OrchardVersion: 1.8
+	Description: The Orchard Blogs module is implementing basic blogging features. 
+	FeatureDescription: A simple web log.
+	Dependencies: Shapes, Common, Feeds, Navigation, Orchard.Widgets, Orchard.jQuery, Orchard.PublishLater, Orchard.Autoroute
+	Category: Content
+	Features:
+    	Orchard.Blogs.RemotePublishing:
+	        Name: Remote Blog Publishing
+	        Description: Blog easier using a dedicated MetaWeblogAPI-compatible publishing tool.
+	        Dependencies: XmlRpc, Orchard.Autoroute, Orchard.ContentPicker
+	        Category: Content Publishing
+
 
 
 Notice the structure that is used for each feature described in the `Features` field. The ID of the feature is listed followed by ":". Then on a new line for each field, you can specify the name, description, category, and dependencies (if any). 
@@ -82,12 +87,13 @@ BaseTheme   | The ID of another theme that this theme inherits from. This is an 
 The following example shows the manifest for **The Theme Machine** theme, which is the default Orchard theme.  
 
     Name: The Theme Machine
-    Author: jowall, mibach, loudej, heskew
-    Description: Orchard Theme Machine is a flexible multi-zone theme that provides a solid foundation to build your site. It features 20 collapsible widget zones and is flexible enough to cover a wide range of layouts.
-    Version: 1.0.20
-    Tags: Customize, Default
-    Website: http://orchardproject.net
-    Zones: Header, Navigation, Featured, BeforeMain, AsideFirst, Messages, BeforeContent, Content, AfterContent, AsideSecond, AfterMain, TripelFirst, TripelSecond, TripelThird, FooterQuadFirst, FooterQuadSecond, FooterQuadThird, FooterQuadFourth, Footer
+	Author: jowall, mibach, loudej, heskew
+	Description: Orchard Theme Machine is a flexible multi-zone theme that provides a solid foundation to build your site. It features 20 collapsible widget zones and is flexible enough to cover a wide range of layouts.
+	Version: 1.8.1
+	Tags: Awesome
+	Website: http://orchardproject.net
+	Zones: Header, Navigation, Featured, BeforeMain, AsideFirst, Messages, BeforeContent, Content, AfterContent, AsideSecond, AfterMain, TripelFirst, TripelSecond, TripelThird, FooterQuadFirst, FooterQuadSecond, FooterQuadThird, FooterQuadFourth, Footer
+
 
 
 For more information about how to write a theme, including how to generate and modify a manifest, see [Writing a New Theme](Writing-a-new-theme). For information about how to customize an existing theme and then generate a manifest for it, see [Customizing Themes](Customizing-the-default-theme).
