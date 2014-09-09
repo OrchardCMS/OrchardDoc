@@ -21,12 +21,13 @@ To be valid, a theme must have a manifest that describes it to the system. The m
 
     
     Name: The Theme Machine
-    Author: jowall, mibach, loudej, heskew
-    Description: Orchard Theme Machine is a flexible multi-zone theme that provides a solid foundation to build your site. It features 20 collapsible widget zones and is flexible enough to cover a wide range of layouts.
-    Version: 0.1
-    Tags: Awesome
-    Website: http://orchardproject.net
-    Zones: Header, Navigation, Featured, BeforeMain, AsideFirst, Messages, BeforeContent, Content, AfterContent, AsideSecond, AfterMain, TripelFirst, TripelSecond, TripelThird, FooterQuadFirst, FooterQuadSecond, FooterQuadThird, FooterQuadFourth, Footer
+	Author: jowall, mibach, loudej, heskew
+	Description: Orchard Theme Machine is a flexible multi-zone theme that provides a solid foundation to build your site. It features 20 collapsible widget zones and is flexible enough to cover a wide range of layouts.
+	Version: 1.8.1
+	Tags: Awesome
+	Website: http://orchardproject.net
+	Zones: Header, Navigation, Featured, BeforeMain, AsideFirst, Messages, BeforeContent, Content, AfterContent, AsideSecond, AfterMain, TripelFirst, TripelSecond, TripelThird, FooterQuadFirst, FooterQuadSecond, FooterQuadThird, FooterQuadFourth, Footer
+
 
 
 The beginning of the file gives the theme a friendly name, description, author, description, and tags. The `Zones` field provides a list of all the zone names that are going to be available for widgets throughout the theme's layouts and templates. Zones are containers that can be added to any template or layout. Various UI elements can be injected into zones, but the most common ones are widgets. Not all zones need to be exposed in the manifest, only those that are intended to host widgets.
@@ -59,25 +60,22 @@ A theme typically contains a number of static resources, such as CSS style sheet
 
     
     <?xml version="1.0" encoding="UTF-8"?>
-    <configuration>
-      <system.web>
-        <httpHandlers>
-          <!-- iis6 - for any request in this location,
-               return via managed static file handler -->
-          <add path="*" verb="*" type="System.Web.StaticFileHandler" />
-        </httpHandlers>
-      </system.web>
-      <system.webServer>
-        <handlers accessPolicy="Script,Read">
-          <!-- iis7 - for any request to a file exists on disk,
-               return it via native http module.
-               accessPolicy 'Script' is to allow for a managed 404 page. -->
-          <add name="StaticFile" path="*" verb="*" modules="StaticFileModule"
-               preCondition="integratedMode" resourceType="File"
-               requireAccess="Read" />
-        </handlers>
-      </system.webServer>
-    </configuration>
+	<configuration>
+	  <system.webServer>
+	    <staticContent>
+	      <clientCache cacheControlMode="UseMaxAge" cacheControlMaxAge="7.00:00:00" />
+	    </staticContent>
+	
+	    <handlers accessPolicy="Script,Read">
+	      <!--
+	      iis7 - for any request to a file exists on disk, return it via native http module.
+	      accessPolicy 'Script' is to allow for a managed 404 page.
+	      -->
+	      <add name="StaticFile" path="*" verb="*" modules="StaticFileModule" preCondition="integratedMode" resourceType="File" requireAccess="Read" />
+	    </handlers>
+	  </system.webServer>
+	</configuration>
+
 
 
 
