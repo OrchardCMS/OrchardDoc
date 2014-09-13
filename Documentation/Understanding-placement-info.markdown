@@ -25,13 +25,12 @@ Specifying placement using the _placement.info_ file is the subject of this arti
 	</placement>
 
 <table>
-<tr><td> scope<td>ContentType="value" | DisplayType="value" | Path="value"
-<tr><td>order<td>position | suppress
-
-<tr><td>position<td>zone_name[ : { int | after | before } ][ .int ][ ...n ]
-<tr><td>suppress<td> - 
-<tr><td>alternate<td>Alternate=alternate_name
-<tr><td>wrapper<td>Wrapper=wrapper_name
+<tr><th>scope<td colspan="2">ContentType="value" | DisplayType="value" | Path="value"
+<tr><th rowspan="3">order<td colspan="2">position | suppress
+<tr><th>position<td>zone_name[ : { int | after | before } ][ .int ][ ...n ]
+<tr><th>suppress<td> - 
+<tr><th>alternate<td colspan="2">Alternate=alternate_name
+<tr><th>wrapper<td colspan="2">Wrapper=wrapper_name
 </table>
 
 # The placement.info File
