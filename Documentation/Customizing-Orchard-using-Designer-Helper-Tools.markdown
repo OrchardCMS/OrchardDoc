@@ -2,7 +2,7 @@
 Orchard provides a designer tool named **Shape Tracing** that enables you to customize the appearance of your site. The **Shape Tracing** module provides tools that you can use to select sections of your website and discover information about the rendering code.
 
 ## Getting Started with Shape Tracing
-To use **Shape Tracing**, first enable the **Shape Tracing** feature in the dashboard. The **Shape Tracing** feature comes with the [Designer Tools](http://orchardproject.net/gallery/List/Modules/Orchard.Module.Orchard.DesignerTools) module, that you may have to install. After you enable the feature, you will notice a narrow frame across the bottom of the web page when you navigate to your site, similar to the following illustration:
+To use **Shape Tracing**, first enable the **Shape Tracing** feature in the dashboard. The **Shape Tracing** feature comes with the [Designer Tools](http://gallery.orchardproject.net/List/Modules/Orchard.Module.Orchard.DesignerTools) module, that you may have to install. After you enable the feature, you will notice a narrow frame across the bottom of the web page when you navigate to your site, similar to the following illustration:
 
 ![](../Upload/screenshots_675/ShapeTracing_ExpandFrame_675.png)
 

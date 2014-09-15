@@ -33,7 +33,7 @@ You should now have a new HelloWorld folder under the Modules folder of your Orc
     author: The Orchard Team
     website: http://orchardproject.net
     version: 0.5.0
-    orchardversion: 0.5.0
+    orchardversion: 1.8.1
     description: The Hello World module is greeting the world and not doing much more. 
     features:
         HelloWorld:
