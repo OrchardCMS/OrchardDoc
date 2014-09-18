@@ -1,0 +1,19 @@
+﻿<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>
+<script src="/contributor.js"></script>
+
+<div ng-controller="OrchardContributor">
+    <ul>
+        <li ng-repeat = "contributor in totalContribtors">
+            <a href="https://www.github.com/{{ contributor.login }}" target="_blank">{{ contributor.login }}</a>
+            <br/>
+            <img src="http://www.gravatar.com/avatar/{{ contributor.gravatar_id}}" alt="{{ contributor.login}}" />
+            <br/>
+            <div> Number of Contributions by {{ contributor.login }} : {{ contributor.contributions }}</div>
+        </li>
+    </ul>
+</div>
+<style type="text/css">
+  ul li{
+   list-style : none;
+  }
+</style>

@@ -2,7 +2,7 @@
     var isDoc = Request.FilePath.IndexOf("/Documentation/") != -1;
 }
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
     <head>
         <meta charset="utf-8" />
         <title>@Page.Title</title>
@@ -46,6 +46,10 @@
                     <form action="@Href("Search.cshtml")" method="GET">
                         <input class="txtsearchbox" type="text" name="q" value="@Request.QueryString["q"]"/><button type="submit" class="searchButton" title="Search">&raquo;</button>
                     </form>
+                    <div>
+                        <h2>Contributors</h2>
+                        <a href="/Contributors" title="Contributors">Contributors</a>
+                    </div>
                 </div>
                 @if (isDoc) {
                 <h2>Table of Contents</h2>
