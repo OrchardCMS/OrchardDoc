@@ -60,6 +60,7 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
     * [Understanding Permissions](Documentation/Understanding-permissions)
     * [Making a Website Recipe](Documentation/Making-a-Web-Site-Recipe)
     * [Creating an Image Gallery](Documentation/Creating-an-image-gallery)
+    * [Workflows](Documentation/Workflows)
 
 
 * **Hosting and Deploying Websites**
