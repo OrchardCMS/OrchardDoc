@@ -27,12 +27,13 @@ This release is expected to be released for October 2014
   * Piotr ([pszmyd](https://www.codeplex.com/site/users/view/pszmyd)) owns this contribution
 * Upgrading to ASP.NET MVC 5.2 (done)
 * Upgrading to .NET Framework 4.5.1 (done)
-* Adding Azure Redis Cache support (on track, test/feedback needed)
+* Adding Azure Redis Cache support (done)
 * Upgrading to TinyMCe 4 (done)
 * Localization improvements (on track, test/feedback needed)
   * Nick ([Jetski5822](https://www.codeplex.com/site/users/view/Jetski5822)) is responsible for this feature
   * RTL support in Admin
   * Culture selector (admin and front end)
+* Message Bus (on track)
 
 ### Currently Implemented (Partially or in Full)
 
