@@ -52,6 +52,7 @@ Accessing your site setting is a simple one liner:
     
     var shareSettings = _services.WorkContext.CurrentSite.As<ShareBarSettingsPart>();
 
+Where _services is the `IOrchardServices` object (eg. injected in the constructor).
 
 ## Defining site scope settings (Pre-Orchard 1.8)
 
