@@ -9,7 +9,45 @@ Basically, there are two scopes you can define your settings in:
 2. **Content type scope** - for settings common to all items of a given type
 (eg. a Page, a Blog, a BlogPost and so on).
 
-## Defining site scope settings
+##Defining site scope settings (Orchard 1.8 Onwards)
+
+Orchard 1.8 drastically simplifies creation of site settings, removing the previous need for "Part Records" an migration files. To create new site settings for your module you now only need three classes; A ```ContentPart```, a ```Handler``` and a view file
+
+The Content Part
+
+    public class ShareBarSettingsPart : ContentPart {
+        public string AddThisAccount {
+            get { return this.Retrieve(x=> x.AddThisAccount); }
+            set { this.Store(x=> x.AddThisAccount, value); }
+            }
+        }
+
+The Handler
+
+    [UsedImplicitly]
+    public class ShareBarSettingsPartHandler : ContentHandler {
+        public ShareBarSettingsPartHandler(
+            IRepository<ShareBarSettingsPartRecord> repository) {
+
+            Filters.Add(new ActivatingFilter<ShareBarSettingsPart>("Site"));
+            Filters.Add(new TemplateFilterForPart<ShareBarSettingsPart>("ShareBarSettings", "Parts/ShareBar.ShareBarSettings", "Modules"));
+        }
+    }
+    
+The View
+
+    @model Szmyd.Orchard.Modules.Sharing.Models.ShareBarSettingsPart
+    <fieldset>
+        <legend>@T("Content sharing settigs")</legend>
+        <div>
+            @Html.LabelFor(m => m.AddThisAccount, @T("AddThis service account"))
+            @Html.EditorFor(m => m.AddThisAccount)
+            @Html.ValidationMessageFor(m => m.AddThisAccount, "*")
+        </div>
+    </fieldset>
+
+
+## Defining site scope settings (Pre-Orchard 1.8)
 
 This document traces the process of defining and implementing and individual site setting for a live orchard module that can be added to your site to enable the webservice known as 'AddThis' [Content Sharing](http://orchardsharing.codeplex.com/)
 
