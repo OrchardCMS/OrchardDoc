@@ -61,6 +61,7 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
     * [Making a Website Recipe](Documentation/Making-a-Web-Site-Recipe)
     * [Creating an Image Gallery](Documentation/Creating-an-image-gallery)
     * [Workflows](Documentation/Workflows)
+    * [Projection](Documentation/Projection)
 
 
 * **Hosting and Deploying Websites**
