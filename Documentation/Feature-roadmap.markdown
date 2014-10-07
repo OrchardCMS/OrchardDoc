@@ -28,6 +28,7 @@ This release is expected to be released for October 2014
 * Upgrading to ASP.NET MVC 5.2 (done)
 * Upgrading to .NET Framework 4.5.1 (done)
 * Adding Azure Redis Cache support (done)
+  * Add business cache implementation
 * Upgrading to TinyMCe 4 (done)
 * Localization improvements (on track, test/feedback needed)
   * Nick ([Jetski5822](https://www.codeplex.com/site/users/view/Jetski5822)) is responsible for this feature
