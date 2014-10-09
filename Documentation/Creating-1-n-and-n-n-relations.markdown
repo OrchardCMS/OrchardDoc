@@ -836,22 +836,23 @@ The example that we will build is a Sponsor part that records that a specific cu
 
 The Sponsor part will consist of a single Sponsor property. This time, we will use a lazy field so that its content only gets fetched when it is needed.
 
-    
-    using Orchard.ContentManagement;
-    using Orchard.Core.Common.Utilities;
-    
-    namespace RelationSample.Models {
-        public class SponsorPart : ContentPart<SponsorPartRecord> {
-            private readonly LazyField<IContent> _sponsor = new LazyField<IContent>();
-    
-            public LazyField<IContent> SponsorField { get { return _sponsor; } }
-    
-            public IContent Sponsor {
-                get { return _sponsor.Value; }
-                set { _sponsor.Value = value; }
-            }
-        }
-    }
+```C#
+using Orchard.ContentManagement;
+using Orchard.Core.Common.Utilities;
+
+namespace RelationSample.Models {
+	public class SponsorPart : ContentPart<SponsorPartRecord> {
+		private readonly LazyField<IContent> _sponsor = new LazyField<IContent>();
+
+		public LazyField<IContent> SponsorField { get { return _sponsor; } }
+
+		public IContent Sponsor {
+			get { return _sponsor.Value; }
+			set { _sponsor.Value = value; }
+		}
+	}
+}
+```
 
 
 We will see how the lazy field gets set and populated when we look at the code for the handler.
@@ -859,14 +860,16 @@ We will see how the lazy field gets set and populated when we look at the code f
 The corresponding record is extremely simple:
 
     
-    using Orchard.ContentManagement;
-    using Orchard.ContentManagement.Records;
-    
-    namespace RelationSample.Models {
-        public class SponsorPartRecord : ContentPartRecord {
-            public virtual ContentItemRecord Sponsor { get; set; }
-        }
-    }
+```C#
+using Orchard.ContentManagement;
+using Orchard.ContentManagement.Records;
+
+namespace RelationSample.Models {
+	public class SponsorPartRecord : ContentPartRecord {
+		public virtual ContentItemRecord Sponsor { get; set; }
+	}
+}
+```
 
 
 ## Building the Database Table and Part
@@ -874,19 +877,21 @@ The corresponding record is extremely simple:
 The migration for this part is as follows:
 
     
-    public int UpdateFrom4() {
-    
-        SchemaBuilder.CreateTable("SponsorPartRecord",
-            table => table
-                .ContentPartRecord()
-                .Column<int>("Sponsor_Id")
-            );
-    
-        ContentDefinitionManager.AlterPartDefinition(
-            "SponsorPart", builder => builder.Attachable());
-    
-        return 5;
-    }
+```C#
+public int UpdateFrom4() {
+
+	SchemaBuilder.CreateTable("SponsorPartRecord",
+		table => table
+			.ContentPartRecord()
+			.Column<int>("Sponsor_Id")
+		);
+
+	ContentDefinitionManager.AlterPartDefinition(
+		"SponsorPart", builder => builder.Attachable());
+
+	return 5;
+}
+```
 
 
 We are in known territory here: the table uses the convention that we have already applied twice in the previous examples, where the name of the column establishing the relation is the concatenation of the column names in both records.
@@ -898,49 +903,51 @@ We also make the new SponsorPart attachable, as usual.
 The handler is going to be a little more elaborate than usual, because of the use of lazy fields:
 
     
-    using Orchard.ContentManagement;
-    using Orchard.Data;
-    using Orchard.ContentManagement.Handlers;
-    using RelationSample.Models;
-    
-    namespace RelationSample.Handlers {
-        public class SponsorPartHandler : ContentHandler {
-            private readonly IContentManager _contentManager;
-    
-            public SponsorPartHandler(
-                IRepository<SponsorPartRecord> repository,
-                IContentManager contentManager) {
-    
-                Filters.Add(StorageFilter.For(repository));
-                _contentManager = contentManager;
-    
-                OnInitializing<SponsorPart>(PropertySetHandlers);
-                OnLoaded<SponsorPart>(LazyLoadHandlers);
-            }
-    
-            void LazyLoadHandlers(LoadContentContext context, SponsorPart part) {
-                // add handlers that will load content just-in-time
-                part.SponsorField.Loader(() =>
-                    part.Record.Sponsor == null ?
-                    null : _contentManager.Get(part.Record.Sponsor.Id));
-            }
-    
-            static void PropertySetHandlers(
-                InitializingContentContext context, SponsorPart part) {
-                // add handlers that will update records when part properties are set
-                part.SponsorField.Setter(sponsor => {
-                    part.Record.Sponsor = sponsor == null
-                        ? null
-                        : sponsor.ContentItem.Record;
-                    return sponsor;
-                });
-    
-                // Force call to setter if we had already set a value
-                if (part.SponsorField.Value != null)
-                    part.SponsorField.Value = part.SponsorField.Value;
-            }
-        }
-    }
+```C#
+using Orchard.ContentManagement;
+using Orchard.Data;
+using Orchard.ContentManagement.Handlers;
+using RelationSample.Models;
+
+namespace RelationSample.Handlers {
+	public class SponsorPartHandler : ContentHandler {
+		private readonly IContentManager _contentManager;
+
+		public SponsorPartHandler(
+			IRepository<SponsorPartRecord> repository,
+			IContentManager contentManager) {
+
+			Filters.Add(StorageFilter.For(repository));
+			_contentManager = contentManager;
+
+			OnInitializing<SponsorPart>(PropertySetHandlers);
+			OnLoaded<SponsorPart>(LazyLoadHandlers);
+		}
+
+		void LazyLoadHandlers(LoadContentContext context, SponsorPart part) {
+			// add handlers that will load content just-in-time
+			part.SponsorField.Loader(() =>
+				part.Record.Sponsor == null ?
+				null : _contentManager.Get(part.Record.Sponsor.Id));
+		}
+
+		static void PropertySetHandlers(
+			InitializingContentContext context, SponsorPart part) {
+			// add handlers that will update records when part properties are set
+			part.SponsorField.Setter(sponsor => {
+				part.Record.Sponsor = sponsor == null
+					? null
+					: sponsor.ContentItem.Record;
+				return sponsor;
+			});
+
+			// Force call to setter if we had already set a value
+			if (part.SponsorField.Value != null)
+				part.SponsorField.Value = part.SponsorField.Value;
+		}
+	}
+}
+```
 
 
 The storage filter is as usual setting up the repository of sponsor part records, but we also have OnInitializing and OnLoaded event handlers that will respectively set-up the setter for the lazy field and the loader of the value that will be executed the first time the field is accessed.
@@ -954,97 +961,101 @@ The lazy field setter just sets the underlying record's Sponsor property.
 The driver is relying on the following view model:
 
     
-    using System.Collections.Generic;
-    using Orchard.ContentManagement;
-    using RelationSample.Models;
-    
-    namespace RelationSample.ViewModels {
-        public class EditSponsorViewModel {
-            public int CustomerId { get; set; }
-            public int SponsorId { get; set; }
-            public IEnumerable<CustomerViewModel> Customers { get; set; }
-        }
-    
-        public class CustomerViewModel {
-            public int Id { get; set;}
-            public string Name { get; set;}
-        }
-    }
+```C#
+using System.Collections.Generic;
+using Orchard.ContentManagement;
+using RelationSample.Models;
+
+namespace RelationSample.ViewModels {
+	public class EditSponsorViewModel {
+		public int CustomerId { get; set; }
+		public int SponsorId { get; set; }
+		public IEnumerable<CustomerViewModel> Customers { get; set; }
+	}
+
+	public class CustomerViewModel {
+		public int Id { get; set;}
+		public string Name { get; set;}
+	}
+}
+```
 
 
 Here is the code for the driver itself, which should by now seem very familiar:
 
     
-    using System.Linq;
-    using JetBrains.Annotations;
-    using Orchard.ContentManagement;
-    using Orchard.ContentManagement.Drivers;
-    using RelationSample.Models;
-    using RelationSample.Services;
-    using RelationSample.ViewModels;
-    
-    namespace RelationSample.Drivers {
-        [UsedImplicitly]
-        public class SponsorPartDriver : ContentPartDriver<SponsorPart> {
-            private readonly ICustomerService _customerService;
-    
-            private const string TemplateName = "Parts/Sponsor";
-    
-            public SponsorPartDriver(ICustomerService customerService) {
-                _customerService = customerService;
-            }
-    
-            protected override string Prefix {
-                get { return "Sponsor"; }
-            }
-    
-            protected override DriverResult Display(
-                SponsorPart part, string displayType, dynamic shapeHelper) {
-    
-                return ContentShape("Parts_Sponsor",
-                    () => shapeHelper.Parts_Sponsor(
-                        ContentPart: part,
-                        Sponsor: part.Sponsor,
-                        SponsorName: _customerService.GetCustomerName(part.Sponsor)
-                        ));
-            }
-    
-            protected override DriverResult Editor(
-                SponsorPart part, dynamic shapeHelper) {
-    
-                return ContentShape("Parts_Sponsor_Edit",
-                        () => shapeHelper.EditorTemplate(
-                            TemplateName: TemplateName,
-                            Model: BuildEditorViewModel(part),
-                            Prefix: Prefix));
-            }
-    
-            protected override DriverResult Editor(
-                SponsorPart part, IUpdateModel updater, dynamic shapeHelper) {
-    
-                var model = new EditSponsorViewModel();
-                updater.TryUpdateModel(model, Prefix, null, null);
-    
-                if (part.ContentItem.Id != 0) {
-                    _customerService.UpdateSponsorForContentItem(
-                        part.ContentItem, model);
-                }
-    
-                return Editor(part, shapeHelper);
-            }
-    
-            private EditSponsorViewModel BuildEditorViewModel(SponsorPart part) {
-                var itemSponsor = new EditSponsorViewModel {
-                    CustomerId = part.ContentItem.Id,
-                    Customers = _customerService.GetCustomers()
-                };
-                if (part.Sponsor != null) {
-                    itemSponsor.SponsorId = part.Sponsor.Id;
-                }
-                return itemSponsor;
-            }
-        }
-    }
+```C#
+using System.Linq;
+using JetBrains.Annotations;
+using Orchard.ContentManagement;
+using Orchard.ContentManagement.Drivers;
+using RelationSample.Models;
+using RelationSample.Services;
+using RelationSample.ViewModels;
+
+namespace RelationSample.Drivers {
+	[UsedImplicitly]
+	public class SponsorPartDriver : ContentPartDriver<SponsorPart> {
+		private readonly ICustomerService _customerService;
+
+		private const string TemplateName = "Parts/Sponsor";
+
+		public SponsorPartDriver(ICustomerService customerService) {
+			_customerService = customerService;
+		}
+
+		protected override string Prefix {
+			get { return "Sponsor"; }
+		}
+
+		protected override DriverResult Display(
+			SponsorPart part, string displayType, dynamic shapeHelper) {
+
+			return ContentShape("Parts_Sponsor",
+				() => shapeHelper.Parts_Sponsor(
+					ContentPart: part,
+					Sponsor: part.Sponsor,
+					SponsorName: _customerService.GetCustomerName(part.Sponsor)
+					));
+		}
+
+		protected override DriverResult Editor(
+			SponsorPart part, dynamic shapeHelper) {
+
+			return ContentShape("Parts_Sponsor_Edit",
+					() => shapeHelper.EditorTemplate(
+						TemplateName: TemplateName,
+						Model: BuildEditorViewModel(part),
+						Prefix: Prefix));
+		}
+
+		protected override DriverResult Editor(
+			SponsorPart part, IUpdateModel updater, dynamic shapeHelper) {
+
+			var model = new EditSponsorViewModel();
+			updater.TryUpdateModel(model, Prefix, null, null);
+
+			if (part.ContentItem.Id != 0) {
+				_customerService.UpdateSponsorForContentItem(
+					part.ContentItem, model);
+			}
+
+			return Editor(part, shapeHelper);
+		}
+
+		private EditSponsorViewModel BuildEditorViewModel(SponsorPart part) {
+			var itemSponsor = new EditSponsorViewModel {
+				CustomerId = part.ContentItem.Id,
+				Customers = _customerService.GetCustomers()
+			};
+			if (part.Sponsor != null) {
+				itemSponsor.SponsorId = part.Sponsor.Id;
+			}
+			return itemSponsor;
+		}
+	}
+}
+```
 
 
 ## The Service Class
@@ -1052,56 +1063,58 @@ Here is the code for the driver itself, which should by now seem very familiar:
 The driver is also using the following helper service:
 
     
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using Orchard;
-    using Orchard.ContentManagement;
-    using Orchard.Data;
-    using RelationSample.Models;
-    using RelationSample.ViewModels;
-    
-    namespace RelationSample.Services {
-        public interface ICustomerService : IDependency {
-            void UpdateSponsorForContentItem(
-                ContentItem item, EditSponsorViewModel model);
-            string GetCustomerName(IContent customer);
-            IEnumerable<CustomerViewModel> GetCustomers();
-        }
-    
-        public class CustomerService : ICustomerService {
-            private readonly IContentManager _contentManager;
-    
-            public CustomerService(IContentManager contentManager) {
-                _contentManager = contentManager;
-            }
-    
-            public void UpdateSponsorForContentItem(
-                ContentItem item, EditSponsorViewModel model) {
-    
-                var sponsorPart = item.As<SponsorPart>();
-                sponsorPart.Sponsor = _contentManager.Get(model.SponsorId);
-            }
-    
-            public string GetCustomerName(IContent customer) {
-                return customer.ContentItem.Parts
-                    .SelectMany(p => p.Fields)
-                    .Where(f => f.Name == "Name")
-                    .First()
-                    .Storage.Get<string>(null);
-            }
-    
-            public IEnumerable<CustomerViewModel> GetCustomers() {
-                return _contentManager
-                    .Query("Customer")
-                    .List()
-                    .Select(ci => new CustomerViewModel {
-                        Id = ci.Id,
-                        Name = GetCustomerName(ci)
-                    });
-            }
-        }
-    }
+```C#
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using Orchard;
+using Orchard.ContentManagement;
+using Orchard.Data;
+using RelationSample.Models;
+using RelationSample.ViewModels;
+
+namespace RelationSample.Services {
+	public interface ICustomerService : IDependency {
+		void UpdateSponsorForContentItem(
+			ContentItem item, EditSponsorViewModel model);
+		string GetCustomerName(IContent customer);
+		IEnumerable<CustomerViewModel> GetCustomers();
+	}
+
+	public class CustomerService : ICustomerService {
+		private readonly IContentManager _contentManager;
+
+		public CustomerService(IContentManager contentManager) {
+			_contentManager = contentManager;
+		}
+
+		public void UpdateSponsorForContentItem(
+			ContentItem item, EditSponsorViewModel model) {
+
+			var sponsorPart = item.As<SponsorPart>();
+			sponsorPart.Sponsor = _contentManager.Get(model.SponsorId);
+		}
+
+		public string GetCustomerName(IContent customer) {
+			return customer.ContentItem.Parts
+				.SelectMany(p => p.Fields)
+				.Where(f => f.Name == "Name")
+				.First()
+				.Storage.Get<string>(null);
+		}
+
+		public IEnumerable<CustomerViewModel> GetCustomers() {
+			return _contentManager
+				.Query("Customer")
+				.List()
+				.Select(ci => new CustomerViewModel {
+					Id = ci.Id,
+					Name = GetCustomerName(ci)
+				});
+		}
+	}
+}
+```
 
 
 The only notable thing here is the way we are assuming the content type has a "Name" field that we'll use to build the list of customers that will be used to build the UI to select the sponsor. The GetCustomerName is implementing this assumption. Of course, you could also have a Customer part that has a Name property, or you could use Routable and its Title.
@@ -1111,22 +1124,24 @@ The only notable thing here is the way we are assuming the content type has a "N
 The editor and front-end views should by now look fairly familiar:
 
     
-    @model RelationSample.ViewModels.EditSponsorViewModel
-    <fieldset>
-      <legend>Sponsor</legend>
-      <div class="editor-field">
-        @Html.DropDownListFor(model => model.SponsorId,
-            Model.Customers
-    			.Where(c => c.Id != Model.CustomerId)
-    			.Select(c => new SelectListItem {
-    				Selected = c.Id == Model.SponsorId,
-    				Text = c.Name,
-    				Value = c.Id.ToString()
-    			}),
-            "Choose a customer...")
-        @Html.ValidationMessageFor(model => model.SponsorId)
-      </div>
-    </fieldset>
+```cshtml
+@model RelationSample.ViewModels.EditSponsorViewModel
+<fieldset>
+  <legend>Sponsor</legend>
+  <div class="editor-field">
+	@Html.DropDownListFor(model => model.SponsorId,
+		Model.Customers
+			.Where(c => c.Id != Model.CustomerId)
+			.Select(c => new SelectListItem {
+				Selected = c.Id == Model.SponsorId,
+				Text = c.Name,
+				Value = c.Id.ToString()
+			}),
+		"Choose a customer...")
+	@Html.ValidationMessageFor(model => model.SponsorId)
+  </div>
+</fieldset>
+```
 
 
 > **Note:** Again, we are assuming a small number of customers. In a real scenario where there are too many customers to be handled in a drop-down-list, it would be possible to adapt the code in this sample by changing among other things the kind of UI that is used to select the sponsor customer.
@@ -1134,22 +1149,26 @@ The editor and front-end views should by now look fairly familiar:
 The front-end view is as follows:
 
     
-    @if (Model.Sponsor != null) {
-      <text>Customer sponsored by @Model.SponsorName.</text>
-    }
+```cshtml
+@if (Model.Sponsor != null) {
+  <text>Customer sponsored by @Model.SponsorName.</text>
+}
+```
 
 
 Of course, the placement file also needs to be updated:
 
     
-    <Placement>
-        <Place Parts_Address_Edit="Content:10"/>
-        <Place Parts_Address="Content:10"/>
-        <Place Parts_Rewards_Edit="Content:11"/>
-        <Place Parts_Rewards="Content:11"/>
-        <Place Parts_Sponsor_Edit="Content:12"/>
-        <Place Parts_Sponsor="Content:12"/>
-    </Placement>
+```xml
+<Placement>
+	<Place Parts_Address_Edit="Content:10"/>
+	<Place Parts_Address="Content:10"/>
+	<Place Parts_Rewards_Edit="Content:11"/>
+	<Place Parts_Rewards="Content:11"/>
+	<Place Parts_Sponsor_Edit="Content:12"/>
+	<Place Parts_Sponsor="Content:12"/>
+</Placement>
+```
 
 
 ## Using the Sponsor Part
