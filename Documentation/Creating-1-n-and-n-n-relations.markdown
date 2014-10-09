@@ -12,56 +12,59 @@ The model that we're going to build here consists of an Address part that can be
 
 Here is the code for the `Address` part:
 
-    
-    using Orchard.ContentManagement;
-    
-    namespace RelationSample.Models {
-        public class AddressPart : ContentPart<AddressPartRecord> {
-            public string Address {
-                get { return Record.Address; }
-                set { Record.Address = value; }
-            }
-            public string City {
-                get { return Record.City; }
-                set { Record.City = value; }
-            }
-            public StateRecord State {
-                get { return Record.StateRecord; }
-                set { Record.StateRecord = value; }
-            }
-            public string Zip {
-                get { return Record.Zip; }
-                set { Record.Zip = value; }
-            }
-        }
-    }
+```C#
+using Orchard.ContentManagement;
+
+namespace RelationSample.Models {
+	public class AddressPart : ContentPart<AddressPartRecord> {
+		public string Address {
+			get { return Record.Address; }
+			set { Record.Address = value; }
+		}
+		public string City {
+			get { return Record.City; }
+			set { Record.City = value; }
+		}
+		public StateRecord State {
+			get { return Record.StateRecord; }
+			set { Record.StateRecord = value; }
+		}
+		public string Zip {
+			get { return Record.Zip; }
+			set { Record.Zip = value; }
+		}
+	}
+}
+```
 
 
 All properties are proxies to the record properties:
 
-    
-    using Orchard.ContentManagement.Records;
-    
-    namespace RelationSample.Models {
-        public class AddressPartRecord : ContentPartRecord {
-            public virtual string Address { get; set; }
-            public virtual string City { get; set; }
-            public virtual StateRecord StateRecord { get; set; }
-            public virtual string Zip { get; set; }
-        }
-    }
+```C#
+using Orchard.ContentManagement.Records;
+
+namespace RelationSample.Models {
+	public class AddressPartRecord : ContentPartRecord {
+		public virtual string Address { get; set; }
+		public virtual string City { get; set; }
+		public virtual StateRecord StateRecord { get; set; }
+		public virtual string Zip { get; set; }
+	}
+}
+```
 
 
 The state record class itself has a two-letter code and a name:
 
-    
-    namespace RelationSample.Models {
-        public class StateRecord {
-            public virtual int Id { get; set; }
-            public virtual string Code { get; set; }
-            public virtual string Name { get; set; }
-        }
-    }
+```C#
+namespace RelationSample.Models {
+	public class StateRecord {
+		public virtual int Id { get; set; }
+		public virtual string Code { get; set; }
+		public virtual string Name { get; set; }
+	}
+}
+```
 
 
 Here is a representation of what we just showed in code:
@@ -71,29 +74,30 @@ Here is a representation of what we just showed in code:
 
 The database structure for the model we just built can be created from a migration:
 
-    
-    public int Create() {
-        SchemaBuilder.CreateTable("AddressPartRecord",
-            table => table
-                .ContentPartRecord()
-                .Column<string>("Address")
-                .Column<string>("City")
-                .Column<int>("StateRecord_Id")
-                .Column<string>("Zip")
-            );
-    
-        SchemaBuilder.CreateTable("StateRecord",
-            table => table
-                .Column<int>("Id", column => column.PrimaryKey().Identity())
-                .Column<string>("Code", column => column.WithLength(2))
-                .Column<string>("Name")
-            );
-    
-        ContentDefinitionManager.AlterPartDefinition("AddressPart",
-            builder => builder.Attachable());
-    
-        return 1;
-    }
+```C#
+public int Create() {
+	SchemaBuilder.CreateTable("AddressPartRecord",
+		table => table
+			.ContentPartRecord()
+			.Column<string>("Address")
+			.Column<string>("City")
+			.Column<int>("StateRecord_Id")
+			.Column<string>("Zip")
+		);
+
+	SchemaBuilder.CreateTable("StateRecord",
+		table => table
+			.Column<int>("Id", column => column.PrimaryKey().Identity())
+			.Column<string>("Code", column => column.WithLength(2))
+			.Column<string>("Name")
+		);
+
+	ContentDefinitionManager.AlterPartDefinition("AddressPart",
+		builder => builder.Attachable());
+
+	return 1;
+}
+```
 
 
 This migration creates an AddressPartRecord table that is a content part record (this gets us the default fields that a content part needs). It adds columns for address, city and zip that are going to be auto-mapped to our record's properties.
@@ -110,37 +114,40 @@ The last statement before the return in the migration is declaring the AddressPa
 
 Because the list of states is going to be relatively stable, I did not make them content items (although that would be entirely possible with just a little more work). Instead, I'm populating the table with a list of states right in the migration code. The migration class has a reference to the state repository:
 
-    
-    private readonly IRepository<StateRecord> _stateRepository;
-    [...]
-    public RelationSampleDataMigration(IRepository<StateRecord> stateRepository) {
-        _stateRepository = stateRepository;
-    }
+```C#
+private readonly IRepository<StateRecord> _stateRepository;
+[...]
+public RelationSampleDataMigration(IRepository<StateRecord> stateRepository) {
+	_stateRepository = stateRepository;
+}
+```
 
 
 It also has the list of states to add to the database:
 
-    
-    private readonly IEnumerable<StateRecord> _states =
-    new List<StateRecord> {
-        new StateRecord {Code = "AL", Name = "Alabama"},
-        new StateRecord {Code = "AK", Name = "Alaska"},
-    [...]
-        new StateRecord {Code = "WS", Name = "Western Australia"},
-    };
+```C#
+private readonly IEnumerable<StateRecord> _states =
+new List<StateRecord> {
+	new StateRecord {Code = "AL", Name = "Alabama"},
+	new StateRecord {Code = "AK", Name = "Alaska"},
+[...]
+	new StateRecord {Code = "WS", Name = "Western Australia"},
+};
+```
 
 
 The population of the table is done by the following code:
 
-    
-    public int UpdateFrom1() {
-        if (_stateRepository == null)
-            throw new InvalidOperationException("Couldn't find state repository.");
-        foreach (var state in _states) {
-            _stateRepository.Create(state);
-        }
-        return 2;
-    }
+```C#
+public int UpdateFrom1() {
+	if (_stateRepository == null)
+		throw new InvalidOperationException("Couldn't find state repository.");
+	foreach (var state in _states) {
+		_stateRepository.Create(state);
+	}
+	return 2;
+}
+```
 
 
 ## The Address Part Handler
@@ -148,17 +155,19 @@ The population of the table is done by the following code:
 The handler for the address part is rather uninteresting and just wires up the repository:
 
     
-    using Orchard.Data;
-    using Orchard.ContentManagement.Handlers;
-    using RelationSample.Models;
-    
-    namespace RelationSample.Handlers {
-        public class AddressPartHandler : ContentHandler {
-            public AddressPartHandler(IRepository<AddressPartRecord> repository) {
-                Filters.Add(StorageFilter.For(repository));
-            }
-        }
-    }
+```C#
+using Orchard.Data;
+using Orchard.ContentManagement.Handlers;
+using RelationSample.Models;
+
+namespace RelationSample.Handlers {
+	public class AddressPartHandler : ContentHandler {
+		public AddressPartHandler(IRepository<AddressPartRecord> repository) {
+			Filters.Add(StorageFilter.For(repository));
+		}
+	}
+}
+```
 
 
 ## The Address Part Driver
@@ -166,85 +175,87 @@ The handler for the address part is rather uninteresting and just wires up the r
 The driver is more interesting as it prepares the shapes for rendering and handles posted back admin forms.
 
     
-    using JetBrains.Annotations;
-    using Orchard.ContentManagement;
-    using Orchard.ContentManagement.Drivers;
-    using RelationSample.Models;
-    using RelationSample.Services;
-    using RelationSample.ViewModels;
-    
-    namespace RelationSample.Drivers {
-        [UsedImplicitly]
-        public class AddressPartDriver : ContentPartDriver<AddressPart> {
-            private readonly IAddressService _addressService;
-    
-            private const string TemplateName = "Parts/Address";
-    
-            public AddressPartDriver(IAddressService addressService) {
-                _addressService = addressService;
-            }
-    
-            protected override string Prefix {
-                get { return "Address"; }
-            }
-    
-            protected override DriverResult Display(
-                AddressPart part,
-                string displayType,
-                dynamic shapeHelper) {
-    
-                return ContentShape("Parts_Address",
-                                () => shapeHelper.Parts_Address(
-                                    ContentPart: part,
-                                    Address: part.Address,
-                                    City: part.City,
-                                    Zip: part.Zip,
-                                    StateCode: part.State.Code,
-                                    StateName: part.State.Name));
-            }
-    
-            protected override DriverResult Editor(
-                AddressPart part,
-                dynamic shapeHelper) {
-    
-                return ContentShape("Parts_Address_Edit",
-                        () => shapeHelper.EditorTemplate(
-                            TemplateName: TemplateName,
-                            Model: BuildEditorViewModel(part),
-                            Prefix: Prefix));
-            }
-    
-            protected override DriverResult Editor(
-                AddressPart part,
-                IUpdateModel updater,
-                dynamic shapeHelper) {
-    
-                var model = new EditAddressViewModel();
-                updater.TryUpdateModel(model, Prefix, null, null);
-    
-                if (part.ContentItem.Id != 0) {
-                    _addressService.UpdateAddressForContentItem(
-                        part.ContentItem, model);
-                }
-    
-                return Editor(part, shapeHelper);
-            }
-    
-            private EditAddressViewModel BuildEditorViewModel(AddressPart part) {
-                var avm = new EditAddressViewModel {
-                    Address = part.Address,
-                    City = part.City,
-                    Zip = part.Zip,
-                    States = _addressService.GetStates()
-                };
-                if (part.State != null) {
-                    avm.StateCode = part.State.Code;
-                    avm.StateName = part.State.Name;
-                }
-                return avm;
-            }
-        }
-    }
+```C#
+using JetBrains.Annotations;
+using Orchard.ContentManagement;
+using Orchard.ContentManagement.Drivers;
+using RelationSample.Models;
+using RelationSample.Services;
+using RelationSample.ViewModels;
+
+namespace RelationSample.Drivers {
+	[UsedImplicitly]
+	public class AddressPartDriver : ContentPartDriver<AddressPart> {
+		private readonly IAddressService _addressService;
+
+		private const string TemplateName = "Parts/Address";
+
+		public AddressPartDriver(IAddressService addressService) {
+			_addressService = addressService;
+		}
+
+		protected override string Prefix {
+			get { return "Address"; }
+		}
+
+		protected override DriverResult Display(
+			AddressPart part,
+			string displayType,
+			dynamic shapeHelper) {
+
+			return ContentShape("Parts_Address",
+							() => shapeHelper.Parts_Address(
+								ContentPart: part,
+								Address: part.Address,
+								City: part.City,
+								Zip: part.Zip,
+								StateCode: part.State.Code,
+								StateName: part.State.Name));
+		}
+
+		protected override DriverResult Editor(
+			AddressPart part,
+			dynamic shapeHelper) {
+
+			return ContentShape("Parts_Address_Edit",
+					() => shapeHelper.EditorTemplate(
+						TemplateName: TemplateName,
+						Model: BuildEditorViewModel(part),
+						Prefix: Prefix));
+		}
+
+		protected override DriverResult Editor(
+			AddressPart part,
+			IUpdateModel updater,
+			dynamic shapeHelper) {
+
+			var model = new EditAddressViewModel();
+			updater.TryUpdateModel(model, Prefix, null, null);
+
+			if (part.ContentItem.Id != 0) {
+				_addressService.UpdateAddressForContentItem(
+					part.ContentItem, model);
+			}
+
+			return Editor(part, shapeHelper);
+		}
+
+		private EditAddressViewModel BuildEditorViewModel(AddressPart part) {
+			var avm = new EditAddressViewModel {
+				Address = part.Address,
+				City = part.City,
+				Zip = part.Zip,
+				States = _addressService.GetStates()
+			};
+			if (part.State != null) {
+				avm.StateCode = part.State.Code;
+				avm.StateName = part.State.Name;
+			}
+			return avm;
+		}
+	}
+}
+```
 
 
 When displaying on the front-end, we prepare a Parts_Address shape that has a reference to the original part (although that is not necessary), all the part properties flattened out and the state is available as both a code and a name.
@@ -252,19 +263,21 @@ When displaying on the front-end, we prepare a Parts_Address shape that has a re
 When in the admin UI, we build shapes with a statically-typed view model because these are still easier to use when using form fields and MVC model binding. That view model, like the shape used on the front-end, has a flattened view of the data that we need to display, but it also has a full list of all the available states, that the view will use to render the state drop-down list:
 
     
-    using System.Collections.Generic;
-    using RelationSample.Models;
-    
-    namespace RelationSample.ViewModels {
-        public class EditAddressViewModel {
-            public string Address { get; set; }
-            public string City { get; set; }
-            public string StateCode { get; set; }
-            public string StateName { get; set; }
-            public string Zip { get; set; }
-            public IEnumerable<StateRecord> States { get; set; }
-        }
-    }
+```C#
+using System.Collections.Generic;
+using RelationSample.Models;
+
+namespace RelationSample.ViewModels {
+	public class EditAddressViewModel {
+		public string Address { get; set; }
+		public string City { get; set; }
+		public string StateCode { get; set; }
+		public string StateName { get; set; }
+		public string Zip { get; set; }
+		public IEnumerable<StateRecord> States { get; set; }
+	}
+}
+```
 
 
 The last thing to notice in the driver is that the Editor override that handles postbacks is just using `updater.TryUpdateModel()`, which is enough to incorporate the submitted form values onto the view model. This is followed by a call into the address service class which will update the actual content part data with the updated model.
@@ -273,46 +286,47 @@ The last thing to notice in the driver is that the Editor override that handles 
 
 The address service class takes a dependency on the state repository in order to be able to query for the full list of states. Its other method, `UpdateAddressForContentItem`, copies an EditAddressViewModel onto the address content part of a content item. It does so by looking up a state record from the state repository using the state code from the model.
 
-    
-    using System.Collections.Generic;
-    using System.Linq;
-    using Orchard;
-    using Orchard.ContentManagement;
-    using Orchard.Data;
-    using RelationSample.Models;
-    using RelationSample.ViewModels;
-    
-    namespace RelationSample.Services {
-        public interface IAddressService : IDependency {
-            void UpdateAddressForContentItem(
-                ContentItem item, EditAddressViewModel model);
-            IEnumerable<StateRecord> GetStates();
-        }
-    
-        public class AddressService : IAddressService {
-            private readonly IRepository<StateRecord> _stateRepository;
-    
-            public AddressService(IRepository<StateRecord> stateRepository) {
-                _stateRepository = stateRepository;
-            }
-    
-            public void UpdateAddressForContentItem(
-                ContentItem item,
-                EditAddressViewModel model) {
-    
-                var addressPart = item.As<AddressPart>();
-                addressPart.Address = model.Address;
-                addressPart.City = model.City;
-                addressPart.Zip = model.Zip;
-                addressPart.State = _stateRepository.Get(
-                    s => s.Code == model.StateCode);
-            }
-    
-            public IEnumerable<StateRecord> GetStates() {
-                return _stateRepository.Table.ToList();
-            }
-        }
-    }
+```C#
+using System.Collections.Generic;
+using System.Linq;
+using Orchard;
+using Orchard.ContentManagement;
+using Orchard.Data;
+using RelationSample.Models;
+using RelationSample.ViewModels;
+
+namespace RelationSample.Services {
+	public interface IAddressService : IDependency {
+		void UpdateAddressForContentItem(
+			ContentItem item, EditAddressViewModel model);
+		IEnumerable<StateRecord> GetStates();
+	}
+
+	public class AddressService : IAddressService {
+		private readonly IRepository<StateRecord> _stateRepository;
+
+		public AddressService(IRepository<StateRecord> stateRepository) {
+			_stateRepository = stateRepository;
+		}
+
+		public void UpdateAddressForContentItem(
+			ContentItem item,
+			EditAddressViewModel model) {
+
+			var addressPart = item.As<AddressPart>();
+			addressPart.Address = model.Address;
+			addressPart.City = model.City;
+			addressPart.Zip = model.Zip;
+			addressPart.State = _stateRepository.Get(
+				s => s.Code == model.StateCode);
+		}
+
+		public IEnumerable<StateRecord> GetStates() {
+			return _stateRepository.Table.ToList();
+		}
+	}
+}
+```
 
 
 ## Building the Views
@@ -321,13 +335,14 @@ The address service class takes a dependency on the state repository in order to
 
 The front-end view for the part is straightforward as it's just displaying the properties of the shape:
 
-    
-    <p class="adr">
-        <div class="street-address">@Model.Address</div>
-        <span class="locality">@Model.City</span>,
-        <span class="region">@Model.StateCode</span>
-        <span class="postal-code">@Model.Zip</span>
-    </p>
+```cshtml
+<p class="adr">
+	<div class="street-address">@Model.Address</div>
+	<span class="locality">@Model.City</span>,
+	<span class="region">@Model.StateCode</span>
+	<span class="postal-code">@Model.Zip</span>
+</p>
+```
 
 
 We are using the vcard microformat in this template so the address can get picked-up by consumers that understand this format.
@@ -337,48 +352,50 @@ We are using the vcard microformat in this template so the address can get picke
 The editor view is also relatively straightforward, with just the editor for the state being of a little more interest:
 
     
-    @model RelationSample.ViewModels.EditAddressViewModel
-    <fieldset>
-      <legend>Address</legend>
-                
-      <div class="editor-label">
-        @Html.LabelFor(model => model.Address, T("Street Address"))
-      </div>
-      <div class="editor-field">
-        @Html.TextAreaFor(model => model.Address)
-        @Html.ValidationMessageFor(model => model.Address)
-      </div>
-                
-      <div class="editor-label">
-        @Html.LabelFor(model => model.City, T("City"))
-      </div>
-      <div class="editor-field">
-        @Html.TextBoxFor(model => model.City)
-        @Html.ValidationMessageFor(model => model.City)
-      </div>
-                
-      <div class="editor-label">
-        @Html.LabelFor(model => model.StateCode, T("State"))
-      </div>
-      <div class="editor-field">
-        @Html.DropDownListFor(model => model.StateCode,
-                          Model.States.Select(s => new SelectListItem {
-                              Selected = s.Code == Model.StateCode,
-                              Text = s.Code + " " + s.Name,
-                              Value = s.Code
-                          }),
-                          "Choose a state...")
-        @Html.ValidationMessageFor(model => model.StateCode)
-      </div>
-                
-      <div class="editor-label">
-        @Html.LabelFor(model => model.Zip, T("Zip"))
-      </div>
-      <div class="editor-field">
-        @Html.TextBoxFor(model => model.Zip)
-        @Html.ValidationMessageFor(model => model.Zip)
-      </div>
-    </fieldset>
+```cshtml
+@model RelationSample.ViewModels.EditAddressViewModel
+<fieldset>
+  <legend>Address</legend>
+			
+  <div class="editor-label">
+	@Html.LabelFor(model => model.Address, T("Street Address"))
+  </div>
+  <div class="editor-field">
+	@Html.TextAreaFor(model => model.Address)
+	@Html.ValidationMessageFor(model => model.Address)
+  </div>
+			
+  <div class="editor-label">
+	@Html.LabelFor(model => model.City, T("City"))
+  </div>
+  <div class="editor-field">
+	@Html.TextBoxFor(model => model.City)
+	@Html.ValidationMessageFor(model => model.City)
+  </div>
+			
+  <div class="editor-label">
+	@Html.LabelFor(model => model.StateCode, T("State"))
+  </div>
+  <div class="editor-field">
+	@Html.DropDownListFor(model => model.StateCode,
+					  Model.States.Select(s => new SelectListItem {
+						  Selected = s.Code == Model.StateCode,
+						  Text = s.Code + " " + s.Name,
+						  Value = s.Code
+					  }),
+					  "Choose a state...")
+	@Html.ValidationMessageFor(model => model.StateCode)
+  </div>
+			
+  <div class="editor-label">
+	@Html.LabelFor(model => model.Zip, T("Zip"))
+  </div>
+  <div class="editor-field">
+	@Html.TextBoxFor(model => model.Zip)
+	@Html.ValidationMessageFor(model => model.Zip)
+  </div>
+</fieldset>
+```
 
 
 The DropDownListFor method takes an expression for the property to represent, and a list of SelectListItems that we build on the fly from the complete list of states and what we know of the current state for that address (notice the expression for Selected).
@@ -388,10 +405,12 @@ The DropDownListFor method takes an expression for the property to represent, an
 Finally, we need a placement file to determine the default position of our part within a larger content type:
 
     
-    <Placement>
-        <Place Parts_Address_Edit="Content:10"/>
-        <Place Parts_Address="Content:10"/>
-    </Placement>
+```xml
+<Placement>
+	<Place Parts_Address_Edit="Content:10"/>
+	<Place Parts_Address="Content:10"/>
+</Placement>
+```
 
 
 ## Using the Address Part
@@ -424,52 +443,55 @@ The rewards part and its association with reward programs are modeled as follows
 
 The part record has just one property, the collection of rewards:
 
-    
-    using System.Collections.Generic;
-    using Orchard.ContentManagement.Records;
-    
-    namespace RelationSample.Models {
-        public class RewardsPartRecord : ContentPartRecord {
-            public RewardsPartRecord() {
-                Rewards = new List<ContentRewardProgramsRecord>();
-            }
-            public virtual IList<ContentRewardProgramsRecord> Rewards { get; set; }
-        }
-    }
+```C#
+using System.Collections.Generic;
+using Orchard.ContentManagement.Records;
+
+namespace RelationSample.Models {
+	public class RewardsPartRecord : ContentPartRecord {
+		public RewardsPartRecord() {
+			Rewards = new List<ContentRewardProgramsRecord>();
+		}
+		public virtual IList<ContentRewardProgramsRecord> Rewards { get; set; }
+	}
+}
+```
 
 
 ### The Rewards Part
 
 The rewards part itself proxies the Rewards property to the record:
 
-    
-    using System.Collections.Generic;
-    using System.Linq;
-    using Orchard.ContentManagement;
-    
-    namespace RelationSample.Models {
-        public class RewardsPart : ContentPart<RewardsPartRecord> {
-            public IEnumerable<RewardProgramRecord> Rewards {
-                get {
-                    return Record.Rewards.Select(r => r.RewardProgramRecord);
-                }
-            }
-        }
-    }
+```C#
+using System.Collections.Generic;
+using System.Linq;
+using Orchard.ContentManagement;
+
+namespace RelationSample.Models {
+	public class RewardsPart : ContentPart<RewardsPartRecord> {
+		public IEnumerable<RewardProgramRecord> Rewards {
+			get {
+				return Record.Rewards.Select(r => r.RewardProgramRecord);
+			}
+		}
+	}
+}
+```
 
 
 ### The Reward Program Record
 
 Reward programs have a name and a discount rate:
 
-    
-    namespace RelationSample.Models {
-        public class RewardProgramRecord {
-            public virtual int Id { get; set; }
-            public virtual string Name { get; set; }
-            public virtual double Discount { get; set; }
-        }
-    }
+```C#
+namespace RelationSample.Models {
+	public class RewardProgramRecord {
+		public virtual int Id { get; set; }
+		public virtual string Name { get; set; }
+		public virtual double Discount { get; set; }
+	}
+}
+```
 
 
 ### The Association Record
@@ -477,46 +499,49 @@ Reward programs have a name and a discount rate:
 Finally, the association record has a reference to a reward part record and a reference to a reward program:
 
     
-    namespace RelationSample.Models {
-        public class ContentRewardProgramsRecord {
-            public virtual int Id { get; set; }
-            public virtual RewardsPartRecord RewardsPartRecord { get; set; }
-            public virtual RewardProgramRecord RewardProgramRecord { get; set; }
-        }
-    }
+```C#
+namespace RelationSample.Models {
+	public class ContentRewardProgramsRecord {
+		public virtual int Id { get; set; }
+		public virtual RewardsPartRecord RewardsPartRecord { get; set; }
+		public virtual RewardProgramRecord RewardProgramRecord { get; set; }
+	}
+}
+```
 
 
 ## Creating the Database Tables and Record
 
 Here is the migration:
 
-    
-    public int UpdateFrom2() {
-        SchemaBuilder.CreateTable("RewardsPartRecord",
-            table => table
-                .ContentPartRecord()
-            );
-    
-        SchemaBuilder.CreateTable("RewardProgramRecord",
-            table => table
-                .Column<int>("Id", column => column.PrimaryKey().Identity())
-                .Column<string>("Name")
-                .Column<double>("Discount")
-            );
-    
-        SchemaBuilder.CreateTable("ContentRewardProgramsRecord",
-            table => table
-                .Column<int>("Id", column => column.PrimaryKey().Identity())
-                .Column<int>("RewardsPartRecord_Id")
-                .Column<int>("RewardProgramRecord_Id")
-            );
-    
-        ContentDefinitionManager.AlterPartDefinition(
-            "RewardsPart",
-            builder => builder.Attachable());
-    
-        return 3;
-    }
+```C#
+public int UpdateFrom2() {
+	SchemaBuilder.CreateTable("RewardsPartRecord",
+		table => table
+			.ContentPartRecord()
+		);
+
+	SchemaBuilder.CreateTable("RewardProgramRecord",
+		table => table
+			.Column<int>("Id", column => column.PrimaryKey().Identity())
+			.Column<string>("Name")
+			.Column<double>("Discount")
+		);
+
+	SchemaBuilder.CreateTable("ContentRewardProgramsRecord",
+		table => table
+			.Column<int>("Id", column => column.PrimaryKey().Identity())
+			.Column<int>("RewardsPartRecord_Id")
+			.Column<int>("RewardProgramRecord_Id")
+		);
+
+	ContentDefinitionManager.AlterPartDefinition(
+		"RewardsPart",
+		builder => builder.Attachable());
+
+	return 3;
+}
+```
 
 
 This code creates the three tables we need to persist the three records that we just modeled. It also declares the RewardsPart and makes it attachable.
@@ -528,42 +553,45 @@ As with addresses and states, you can see the convention for relations in action
 Like we did with states, we pre-populate the reward program table from the migration class. In a real world scenario, the rewards could be content items and you could have a specific management screen for them. There would be nothing specific about that coming from the fact that these items happen to be at one end of a n-n relation.
 
     
-    private readonly IRepository<RewardProgramRecord> _rewardProgramRepository;
-    [...]
-    private readonly IEnumerable<RewardProgramRecord> _rewardPrograms =
-        new List<RewardProgramRecord> {
-            new RewardProgramRecord {Name = "Senior", Discount = 0.05},
-            new RewardProgramRecord {Name = "Family", Discount = 0.10},
-            new RewardProgramRecord {Name = "Member", Discount = 0.15},
-        };
-    [...]
-    public int UpdateFrom3() {
-        if (_rewardProgramRepository == null)
-            throw new InvalidOperationException(
-                "Couldn't find reward program repository.");
-        foreach (var rewardProgram in _rewardPrograms) {
-            _rewardProgramRepository.Create(rewardProgram);
-        }
-        return 4;
-    }
+```C#
+private readonly IRepository<RewardProgramRecord> _rewardProgramRepository;
+[...]
+private readonly IEnumerable<RewardProgramRecord> _rewardPrograms =
+	new List<RewardProgramRecord> {
+		new RewardProgramRecord {Name = "Senior", Discount = 0.05},
+		new RewardProgramRecord {Name = "Family", Discount = 0.10},
+		new RewardProgramRecord {Name = "Member", Discount = 0.15},
+	};
+[...]
+public int UpdateFrom3() {
+	if (_rewardProgramRepository == null)
+		throw new InvalidOperationException(
+			"Couldn't find reward program repository.");
+	foreach (var rewardProgram in _rewardPrograms) {
+		_rewardProgramRepository.Create(rewardProgram);
+	}
+	return 4;
+}
+```
 
 
 ## The Reward Handler
 
 There is nothing remarkable with the driver for this part, which is just wiring the repository:
 
-    
-    using Orchard.Data;
-    using Orchard.ContentManagement.Handlers;
-    using RelationSample.Models;
-    
-    namespace RelationSample.Handlers {
-        public class RewardsPartHandler : ContentHandler {
-            public RewardsPartHandler(IRepository<RewardsPartRecord> repository) {
-                Filters.Add(StorageFilter.For(repository));
-            }
-        }
-    }
+```C#
+using Orchard.Data;
+using Orchard.ContentManagement.Handlers;
+using RelationSample.Models;
+
+namespace RelationSample.Handlers {
+	public class RewardsPartHandler : ContentHandler {
+		public RewardsPartHandler(IRepository<RewardsPartRecord> repository) {
+			Filters.Add(StorageFilter.For(repository));
+		}
+	}
+}
+```
 
 
 ## The Reward Driver
@@ -571,99 +599,102 @@ There is nothing remarkable with the driver for this part, which is just wiring 
 The driver is also surprisingly unsurprising given the requirement to persist the n-n relationship:
 
     
-    using System.Linq;
-    using JetBrains.Annotations;
-    using Orchard.ContentManagement;
-    using Orchard.ContentManagement.Drivers;
-    using RelationSample.Models;
-    using RelationSample.Services;
-    using RelationSample.ViewModels;
-    
-    namespace RelationSample.Drivers {
-        [UsedImplicitly]
-        public class RewardsPartDriver : ContentPartDriver<RewardsPart> {
-            private readonly IRewardService _rewardService;
-    
-            private const string TemplateName = "Parts/Rewards";
-    
-            public RewardsPartDriver(IRewardService rewardService) {
-                _rewardService = rewardService;
-            }
-    
-            protected override string Prefix {
-                get { return "Rewards"; }
-            }
-    
-            protected override DriverResult Display(
-                RewardsPart part,
-                string displayType,
-                dynamic shapeHelper) {
-    
-                return ContentShape("Parts_Rewards",
-                                () => shapeHelper.Parts_Rewards(
-                                    ContentPart: part,
-                                    Rewards: part.Rewards));
-            }
-    
-            protected override DriverResult Editor(
-                RewardsPart part,
-                dynamic shapeHelper) {
-    
-                return ContentShape("Parts_Rewards_Edit",
-                        () => shapeHelper.EditorTemplate(
-                            TemplateName: TemplateName,
-                            Model: BuildEditorViewModel(part),
-                            Prefix: Prefix));
-            }
-    
-            protected override DriverResult Editor(
-                RewardsPart part,
-                IUpdateModel updater,
-                dynamic shapeHelper) {
-    
-                var model = new EditRewardsViewModel();
-                updater.TryUpdateModel(model, Prefix, null, null);
-    
-                if (part.ContentItem.Id != 0) {
-                    _rewardService.UpdateRewardsForContentItem(
-                        part.ContentItem, model.Rewards);
-                }
-    
-                return Editor(part, shapeHelper);
-            }
-    
-            private EditRewardsViewModel BuildEditorViewModel(RewardsPart part) {
-                var itemRewards = part.Rewards.ToLookup(r => r.Id);
-                return new EditRewardsViewModel {
-                    Rewards = _rewardService.GetRewards().Select(
-                        r => new RewardProgramEntry {
-                            RewardProgram = r,
-                            IsChecked = itemRewards.Contains(r.Id)
-                        }).ToList()
-                };
-            }
-        }
-    }
+```C#
+using System.Linq;
+using JetBrains.Annotations;
+using Orchard.ContentManagement;
+using Orchard.ContentManagement.Drivers;
+using RelationSample.Models;
+using RelationSample.Services;
+using RelationSample.ViewModels;
+
+namespace RelationSample.Drivers {
+	[UsedImplicitly]
+	public class RewardsPartDriver : ContentPartDriver<RewardsPart> {
+		private readonly IRewardService _rewardService;
+
+		private const string TemplateName = "Parts/Rewards";
+
+		public RewardsPartDriver(IRewardService rewardService) {
+			_rewardService = rewardService;
+		}
+
+		protected override string Prefix {
+			get { return "Rewards"; }
+		}
+
+		protected override DriverResult Display(
+			RewardsPart part,
+			string displayType,
+			dynamic shapeHelper) {
+
+			return ContentShape("Parts_Rewards",
+							() => shapeHelper.Parts_Rewards(
+								ContentPart: part,
+								Rewards: part.Rewards));
+		}
+
+		protected override DriverResult Editor(
+			RewardsPart part,
+			dynamic shapeHelper) {
+
+			return ContentShape("Parts_Rewards_Edit",
+					() => shapeHelper.EditorTemplate(
+						TemplateName: TemplateName,
+						Model: BuildEditorViewModel(part),
+						Prefix: Prefix));
+		}
+
+		protected override DriverResult Editor(
+			RewardsPart part,
+			IUpdateModel updater,
+			dynamic shapeHelper) {
+
+			var model = new EditRewardsViewModel();
+			updater.TryUpdateModel(model, Prefix, null, null);
+
+			if (part.ContentItem.Id != 0) {
+				_rewardService.UpdateRewardsForContentItem(
+					part.ContentItem, model.Rewards);
+			}
+
+			return Editor(part, shapeHelper);
+		}
+
+		private EditRewardsViewModel BuildEditorViewModel(RewardsPart part) {
+			var itemRewards = part.Rewards.ToLookup(r => r.Id);
+			return new EditRewardsViewModel {
+				Rewards = _rewardService.GetRewards().Select(
+					r => new RewardProgramEntry {
+						RewardProgram = r,
+						IsChecked = itemRewards.Contains(r.Id)
+					}).ToList()
+			};
+		}
+	}
+}
+```
 
 
 Like with the address part, we are fetching all the reward programs and putting them on the editor view model for the template to display as checkboxes. In BuildEditorViewModel, you can see that we build the current rewards as a lookup and then use that to determine the checked state of each reward program.
 
 Here is the editor view model:
 
-    
-    using System.Collections.Generic;
-    using RelationSample.Models;
-    
-    namespace RelationSample.ViewModels {
-        public class EditRewardsViewModel {
-            public IList<RewardProgramEntry> Rewards { get; set; }
-        }
-    
-        public class RewardProgramEntry {
-            public RewardProgramRecord RewardProgram { get; set; }
-            public bool IsChecked { get; set; }
-        }
-    }
+```C#
+using System.Collections.Generic;
+using RelationSample.Models;
+
+namespace RelationSample.ViewModels {
+	public class EditRewardsViewModel {
+		public IList<RewardProgramEntry> Rewards { get; set; }
+	}
+
+	public class RewardProgramEntry {
+		public RewardProgramRecord RewardProgram { get; set; }
+		public bool IsChecked { get; set; }
+	}
+}
+```
 
 
 > Note: we are making the assumption here that there are only a few reward programs. If you are modeling a relationship with a large number of records on both sides of the relationship, the basic principles and models exposed here still stand but you'll have to adapt and optimize the code. In particular, using checkboxes to select the associated records is the best UI solution for small numbers of records but it won't scale well to more than a few dozens of records. Instead, you'd probably need to use a search UI of sorts and an Add/Remove pattern.
@@ -672,76 +703,77 @@ Here is the editor view model:
 
 The rewards service is responsible for driving the relatively complex task of updating the database for the new values for the relation:
 
-    
-    using System.Collections.Generic;
-    using System.Linq;
-    using Orchard;
-    using Orchard.ContentManagement;
-    using Orchard.Data;
-    using RelationSample.Models;
-    using RelationSample.ViewModels;
-    
-    namespace RelationSample.Services {
-        public interface IRewardService : IDependency {
-            void UpdateRewardsForContentItem(
-                ContentItem item,
-                IEnumerable<RewardProgramEntry> rewards);
-            IEnumerable<RewardProgramRecord> GetRewards();
-        }
-    
-        public class RewardService : IRewardService {
-            private readonly IRepository<RewardProgramRecord>
-                _rewardProgramRepository;
-            private readonly IRepository<ContentRewardProgramsRecord>
-                _contentRewardRepository;
-    
-            public RewardService(
-                IRepository<RewardProgramRecord> rewardProgramRepository,
-                IRepository<ContentRewardProgramsRecord> contentRewardRepository) {
-    
-                _rewardProgramRepository = rewardProgramRepository;
-                _contentRewardRepository = contentRewardRepository;
-            }
-    
-            public void UpdateRewardsForContentItem(
-                ContentItem item,
-                IEnumerable<RewardProgramEntry> rewards) {
-    
-                var record = item.As<RewardsPart>().Record;
-                var oldRewards = _contentRewardRepository.Fetch(
-                    r => r.RewardsPartRecord == record);
-                var lookupNew = rewards
-                    .Where(e => e.IsChecked)
-                    .Select(e => e.RewardProgram)
-                    .ToDictionary(r => r, r => false);
-                // Delete the rewards that are no longer there
-                // and mark the ones that should stay
-                foreach(var contentRewardProgramsRecord in oldRewards) {
-                    if (lookupNew.ContainsKey(
-                        contentRewardProgramsRecord.RewardProgramRecord)) {
-    
-                        lookupNew[contentRewardProgramsRecord.RewardProgramRecord]
-                            = true;
-                    }
-                    else {
-                        _contentRewardRepository.Delete(contentRewardProgramsRecord);
-                    }
-                }
-                // Add the new rewards
-                foreach(var reward in lookupNew.Where(kvp => !kvp.Value)
-                                               .Select(kvp => kvp.Key)) {
-                    _contentRewardRepository.Create(new ContentRewardProgramsRecord {
-                        RewardsPartRecord = record,
-                        RewardProgramRecord = reward
-                    });
-                }
-            }
-    
-            public IEnumerable<RewardProgramRecord> GetRewards() {
-                return _rewardProgramRepository.Table.ToList();
-            }
-        }
-    }
+```C#
+using System.Collections.Generic;
+using System.Linq;
+using Orchard;
+using Orchard.ContentManagement;
+using Orchard.Data;
+using RelationSample.Models;
+using RelationSample.ViewModels;
+
+namespace RelationSample.Services {
+	public interface IRewardService : IDependency {
+		void UpdateRewardsForContentItem(
+			ContentItem item,
+			IEnumerable<RewardProgramEntry> rewards);
+		IEnumerable<RewardProgramRecord> GetRewards();
+	}
+
+	public class RewardService : IRewardService {
+		private readonly IRepository<RewardProgramRecord>
+			_rewardProgramRepository;
+		private readonly IRepository<ContentRewardProgramsRecord>
+			_contentRewardRepository;
+
+		public RewardService(
+			IRepository<RewardProgramRecord> rewardProgramRepository,
+			IRepository<ContentRewardProgramsRecord> contentRewardRepository) {
+
+			_rewardProgramRepository = rewardProgramRepository;
+			_contentRewardRepository = contentRewardRepository;
+		}
+
+		public void UpdateRewardsForContentItem(
+			ContentItem item,
+			IEnumerable<RewardProgramEntry> rewards) {
+
+			var record = item.As<RewardsPart>().Record;
+			var oldRewards = _contentRewardRepository.Fetch(
+				r => r.RewardsPartRecord == record);
+			var lookupNew = rewards
+				.Where(e => e.IsChecked)
+				.Select(e => e.RewardProgram)
+				.ToDictionary(r => r, r => false);
+			// Delete the rewards that are no longer there
+			// and mark the ones that should stay
+			foreach(var contentRewardProgramsRecord in oldRewards) {
+				if (lookupNew.ContainsKey(
+					contentRewardProgramsRecord.RewardProgramRecord)) {
+
+					lookupNew[contentRewardProgramsRecord.RewardProgramRecord]
+						= true;
+				}
+				else {
+					_contentRewardRepository.Delete(contentRewardProgramsRecord);
+				}
+			}
+			// Add the new rewards
+			foreach(var reward in lookupNew.Where(kvp => !kvp.Value)
+										   .Select(kvp => kvp.Key)) {
+				_contentRewardRepository.Create(new ContentRewardProgramsRecord {
+					RewardsPartRecord = record,
+					RewardProgramRecord = reward
+				});
+			}
+		}
+
+		public IEnumerable<RewardProgramRecord> GetRewards() {
+			return _rewardProgramRepository.Table.ToList();
+		}
+	}
+}
+```
 
 
 > Note: again, this is designed for small numbers of reward programs. If you have larger models and have adopted an Add/Remove pattern talked about in the previous note, the code for the service actually becomes simpler as it executes lower-level operations that affect one program at a time rather than try to synchronize the whole collection at once.
@@ -752,13 +784,14 @@ The rewards service is responsible for driving the relatively complex task of up
 
 The front-end view is just displaying the list of rewards as an unordered list:
 
-    
-    <h4>@T("Rewards"):</h4>
-    <ul>
-    @foreach (var reward in Model.Rewards) {
-        <li>@string.Format("{0} ({1:P1})", reward.Name,  -reward.Discount)</li>
-    }
-    </ul>
+```cshtml
+<h4>@T("Rewards"):</h4>
+<ul>
+@foreach (var reward in Model.Rewards) {
+	<li>@string.Format("{0} ({1:P1})", reward.Name,  -reward.Discount)</li>
+}
+</ul>
+```
 
 
 ### The Editor View
@@ -766,29 +799,31 @@ The front-end view is just displaying the list of rewards as an unordered list:
 The editor view is a little more remarkable:
 
     
-    @model RelationSample.ViewModels.EditRewardsViewModel
-    <fieldset><legend>@T("Rewards")</legend>
-    <ul>
-    @{
-     var rewardIndex = 0;
-    }
-    @foreach (var reward in Model.Rewards) {
-        <li><input type="hidden" value="@reward.RewardProgram.Id"
-            name="@Html.FieldNameFor(m => m.Rewards[rewardIndex].RewardProgram.Id)"/>
-            <label for="@Html.FieldNameFor(m => m.Rewards[rewardIndex].IsChecked)">
-                <input type="checkbox" value="true"
-                    name="@Html.FieldNameFor(m => m.Rewards[rewardIndex].IsChecked)"
-                    id="@Html.FieldNameFor(m => m.Rewards[rewardIndex].IsChecked)"
-                    @if (reward.IsChecked) {<text>checked="checked"</text>}/>
-                @string.Format("{0} ({1:P1})",
-                    reward.RewardProgram.Name,
-                    -reward.RewardProgram.Discount))
-            </label>
-            @{rewardIndex++;}
-        </li>
-    }
-    </ul>
-    </fieldset>
+```cshtml
+@model RelationSample.ViewModels.EditRewardsViewModel
+<fieldset><legend>@T("Rewards")</legend>
+<ul>
+@{
+ var rewardIndex = 0;
+}
+@foreach (var reward in Model.Rewards) {
+	<li><input type="hidden" value="@reward.RewardProgram.Id"
+		name="@Html.FieldNameFor(m => m.Rewards[rewardIndex].RewardProgram.Id)"/>
+		<label for="@Html.FieldNameFor(m => m.Rewards[rewardIndex].IsChecked)">
+			<input type="checkbox" value="true"
+				name="@Html.FieldNameFor(m => m.Rewards[rewardIndex].IsChecked)"
+				id="@Html.FieldNameFor(m => m.Rewards[rewardIndex].IsChecked)"
+				@if (reward.IsChecked) {<text>checked="checked"</text>}/>
+			@string.Format("{0} ({1:P1})",
+				reward.RewardProgram.Name,
+				-reward.RewardProgram.Discount))
+		</label>
+		@{rewardIndex++;}
+	</li>
+}
+</ul>
+</fieldset>
+```
 
 
 Notice how the check-boxes use Html.FieldNameFor. This will ensure that they will have a name that the model binder will be able to understand and correctly bind when it is posted back.
@@ -801,13 +836,14 @@ Of course, any variation from that naming scheme would make the binding fail.
 
 For the parts to appear at all in the UI, we need to update our placement.info file:
 
-    
-    <Placement>
-        <Place Parts_Address_Edit="Content:10"/>
-        <Place Parts_Address="Content:10"/>
-        <Place Parts_Rewards_Edit="Content:11"/>
-        <Place Parts_Rewards="Content:11"/>
-    </Placement>
+```xml
+<Placement>
+	<Place Parts_Address_Edit="Content:10"/>
+	<Place Parts_Address="Content:10"/>
+	<Place Parts_Rewards_Edit="Content:11"/>
+	<Place Parts_Rewards="Content:11"/>
+</Placement>
+```
 
 
 ## Using the Rewards Part
