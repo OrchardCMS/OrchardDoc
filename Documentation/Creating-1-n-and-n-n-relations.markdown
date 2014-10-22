@@ -12,7 +12,7 @@ The model that we're going to build here consists of an Address part that can be
 
 Here is the code for the `Address` part:
 
-```C#
+```csharp
 using Orchard.ContentManagement;
 
 namespace RelationSample.Models {
@@ -40,7 +40,7 @@ namespace RelationSample.Models {
 
 All properties are proxies to the record properties:
 
-```C#
+```csharp
 using Orchard.ContentManagement.Records;
 
 namespace RelationSample.Models {
@@ -56,7 +56,7 @@ namespace RelationSample.Models {
 
 The state record class itself has a two-letter code and a name:
 
-```C#
+```csharp
 namespace RelationSample.Models {
 	public class StateRecord {
 		public virtual int Id { get; set; }
@@ -74,7 +74,7 @@ Here is a representation of what we just showed in code:
 
 The database structure for the model we just built can be created from a migration:
 
-```C#
+```csharp
 public int Create() {
 	SchemaBuilder.CreateTable("AddressPartRecord",
 		table => table
@@ -114,7 +114,7 @@ The last statement before the return in the migration is declaring the AddressPa
 
 Because the list of states is going to be relatively stable, I did not make them content items (although that would be entirely possible with just a little more work). Instead, I'm populating the table with a list of states right in the migration code. The migration class has a reference to the state repository:
 
-```C#
+```csharp
 private readonly IRepository<StateRecord> _stateRepository;
 [...]
 public RelationSampleDataMigration(IRepository<StateRecord> stateRepository) {
@@ -125,7 +125,7 @@ public RelationSampleDataMigration(IRepository<StateRecord> stateRepository) {
 
 It also has the list of states to add to the database:
 
-```C#
+```csharp
 private readonly IEnumerable<StateRecord> _states =
 new List<StateRecord> {
 	new StateRecord {Code = "AL", Name = "Alabama"},
@@ -138,7 +138,7 @@ new List<StateRecord> {
 
 The population of the table is done by the following code:
 
-```C#
+```csharp
 public int UpdateFrom1() {
 	if (_stateRepository == null)
 		throw new InvalidOperationException("Couldn't find state repository.");
@@ -155,7 +155,7 @@ public int UpdateFrom1() {
 The handler for the address part is rather uninteresting and just wires up the repository:
 
     
-```C#
+```csharp
 using Orchard.Data;
 using Orchard.ContentManagement.Handlers;
 using RelationSample.Models;
@@ -175,7 +175,7 @@ namespace RelationSample.Handlers {
 The driver is more interesting as it prepares the shapes for rendering and handles posted back admin forms.
 
     
-```C#
+```csharp
 using JetBrains.Annotations;
 using Orchard.ContentManagement;
 using Orchard.ContentManagement.Drivers;
@@ -263,7 +263,7 @@ When displaying on the front-end, we prepare a Parts_Address shape that has a re
 When in the admin UI, we build shapes with a statically-typed view model because these are still easier to use when using form fields and MVC model binding. That view model, like the shape used on the front-end, has a flattened view of the data that we need to display, but it also has a full list of all the available states, that the view will use to render the state drop-down list:
 
     
-```C#
+```csharp
 using System.Collections.Generic;
 using RelationSample.Models;
 
@@ -286,7 +286,7 @@ The last thing to notice in the driver is that the Editor override that handles 
 
 The address service class takes a dependency on the state repository in order to be able to query for the full list of states. Its other method, `UpdateAddressForContentItem`, copies an EditAddressViewModel onto the address content part of a content item. It does so by looking up a state record from the state repository using the state code from the model.
 
-```C#
+```csharp
 using System.Collections.Generic;
 using System.Linq;
 using Orchard;
@@ -443,7 +443,7 @@ The rewards part and its association with reward programs are modeled as follows
 
 The part record has just one property, the collection of rewards:
 
-```C#
+```csharp
 using System.Collections.Generic;
 using Orchard.ContentManagement.Records;
 
@@ -462,7 +462,7 @@ namespace RelationSample.Models {
 
 The rewards part itself proxies the Rewards property to the record:
 
-```C#
+```csharp
 using System.Collections.Generic;
 using System.Linq;
 using Orchard.ContentManagement;
@@ -483,7 +483,7 @@ namespace RelationSample.Models {
 
 Reward programs have a name and a discount rate:
 
-```C#
+```csharp
 namespace RelationSample.Models {
 	public class RewardProgramRecord {
 		public virtual int Id { get; set; }
@@ -499,7 +499,7 @@ namespace RelationSample.Models {
 Finally, the association record has a reference to a reward part record and a reference to a reward program:
 
     
-```C#
+```csharp
 namespace RelationSample.Models {
 	public class ContentRewardProgramsRecord {
 		public virtual int Id { get; set; }
@@ -514,7 +514,7 @@ namespace RelationSample.Models {
 
 Here is the migration:
 
-```C#
+```csharp
 public int UpdateFrom2() {
 	SchemaBuilder.CreateTable("RewardsPartRecord",
 		table => table
@@ -553,7 +553,7 @@ As with addresses and states, you can see the convention for relations in action
 Like we did with states, we pre-populate the reward program table from the migration class. In a real world scenario, the rewards could be content items and you could have a specific management screen for them. There would be nothing specific about that coming from the fact that these items happen to be at one end of a n-n relation.
 
     
-```C#
+```csharp
 private readonly IRepository<RewardProgramRecord> _rewardProgramRepository;
 [...]
 private readonly IEnumerable<RewardProgramRecord> _rewardPrograms =
@@ -579,7 +579,7 @@ public int UpdateFrom3() {
 
 There is nothing remarkable with the driver for this part, which is just wiring the repository:
 
-```C#
+```csharp
 using Orchard.Data;
 using Orchard.ContentManagement.Handlers;
 using RelationSample.Models;
@@ -599,7 +599,7 @@ namespace RelationSample.Handlers {
 The driver is also surprisingly unsurprising given the requirement to persist the n-n relationship:
 
     
-```C#
+```csharp
 using System.Linq;
 using JetBrains.Annotations;
 using Orchard.ContentManagement;
@@ -680,7 +680,7 @@ Like with the address part, we are fetching all the reward programs and putting 
 
 Here is the editor view model:
 
-```C#
+```csharp
 using System.Collections.Generic;
 using RelationSample.Models;
 
@@ -703,7 +703,7 @@ namespace RelationSample.ViewModels {
 
 The rewards service is responsible for driving the relatively complex task of updating the database for the new values for the relation:
 
-```C#
+```csharp
 using System.Collections.Generic;
 using System.Linq;
 using Orchard;
@@ -872,7 +872,7 @@ The example that we will build is a Sponsor part that records that a specific cu
 
 The Sponsor part will consist of a single Sponsor property. This time, we will use a lazy field so that its content only gets fetched when it is needed.
 
-```C#
+```csharp
 using Orchard.ContentManagement;
 using Orchard.Core.Common.Utilities;
 
@@ -896,7 +896,7 @@ We will see how the lazy field gets set and populated when we look at the code f
 The corresponding record is extremely simple:
 
     
-```C#
+```csharp
 using Orchard.ContentManagement;
 using Orchard.ContentManagement.Records;
 
@@ -913,7 +913,7 @@ namespace RelationSample.Models {
 The migration for this part is as follows:
 
     
-```C#
+```csharp
 public int UpdateFrom4() {
 
 	SchemaBuilder.CreateTable("SponsorPartRecord",
@@ -939,7 +939,7 @@ We also make the new SponsorPart attachable, as usual.
 The handler is going to be a little more elaborate than usual, because of the use of lazy fields:
 
     
-```C#
+```csharp
 using Orchard.ContentManagement;
 using Orchard.Data;
 using Orchard.ContentManagement.Handlers;
@@ -997,7 +997,7 @@ The lazy field setter just sets the underlying record's Sponsor property.
 The driver is relying on the following view model:
 
     
-```C#
+```csharp
 using System.Collections.Generic;
 using Orchard.ContentManagement;
 using RelationSample.Models;
@@ -1020,7 +1020,7 @@ namespace RelationSample.ViewModels {
 Here is the code for the driver itself, which should by now seem very familiar:
 
     
-```C#
+```csharp
 using System.Linq;
 using JetBrains.Annotations;
 using Orchard.ContentManagement;
@@ -1099,7 +1099,7 @@ namespace RelationSample.Drivers {
 The driver is also using the following helper service:
 
     
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;
