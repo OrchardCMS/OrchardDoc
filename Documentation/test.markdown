@@ -3,7 +3,7 @@
 '''c#
 	
 	using Orchard.ContentManagement;
-
+	
 	namespace RelationSample.Models {
 		public class AddressPart : ContentPart<AddressPartRecord> {
 			public string Address {
@@ -30,7 +30,7 @@
 
 
 '''c#
-
+	
 	using Orchard.ContentManagement;
 	
 	namespace RelationSample.Models {
@@ -58,7 +58,7 @@
 ## And some XML for fun!
 
 '''xml
-
+	
 	<Placement>
 		<Place Parts_Address_Edit="Content:10"/>
 		<Place Parts_Address="Content:10"/>
