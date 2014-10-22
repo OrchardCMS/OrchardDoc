@@ -28,7 +28,7 @@
 ## Some Other Markdown
 
 
-```c#
+'''c#
 using Orchard.ContentManagement;
 	
 	namespace RelationSample.Models {
@@ -51,11 +51,11 @@ using Orchard.ContentManagement;
 			}
 		}
 	}
-```
+'''
 
 ## And some XML for fun!
 
-```c#
+```xml
 	<Placement>
 		<Place Parts_Address_Edit="Content:10"/>
 		<Place Parts_Address="Content:10"/>
