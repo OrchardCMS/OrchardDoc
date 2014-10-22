@@ -3,10 +3,9 @@
 ## Some Test Markdown
 
 '''c#
-
 	
 	using Orchard.ContentManagement;
-	
+
 	namespace RelationSample.Models {
 		public class AddressPart : ContentPart<AddressPartRecord> {
 			public string Address {
