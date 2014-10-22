@@ -1,6 +1,6 @@
 ## Some Test Markdown
 
-'''c#
+```c#
 	using Orchard.ContentManagement;
 	
 	namespace RelationSample.Models {
@@ -23,13 +23,13 @@
 			}
 		}
 	}
-'''
+```
 
 ## Some Other Markdown
 
 
-'''c#
-	using Orchard.ContentManagement;
+```c#
+using Orchard.ContentManagement;
 	
 	namespace RelationSample.Models {
 		public class AddressPart : ContentPart<AddressPartRecord> {
@@ -51,16 +51,15 @@
 			}
 		}
 	}
-'''
+```
 
 ## And some XML for fun!
 
-'''xml
-
+```c#
 	<Placement>
 		<Place Parts_Address_Edit="Content:10"/>
 		<Place Parts_Address="Content:10"/>
 	</Placement>
-'''
+```
 
 And that's all there is to it!
