@@ -1,12 +1,12 @@
-1
+2
 
 ## Some Test Markdown
 
 '''c#
 	
-	using Orchard.ContentManagement;
-
-	namespace RelationSample.Models {
+    using Orchard.ContentManagement;
+    
+    namespace RelationSample.Models {
 		public class AddressPart : ContentPart<AddressPartRecord> {
 			public string Address {
 				get { return Record.Address; }
@@ -25,7 +25,7 @@
 				set { Record.Zip = value; }
 			}
 		}
-	}
+    }
 '''
 
 ## Some Other Markdown
