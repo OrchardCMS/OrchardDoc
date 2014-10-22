@@ -1,6 +1,6 @@
 ## Some Test MarkDown
 
-```cs
+```c#
 using Orchard.ContentManagement;
 
 namespace RelationSample.Models {
