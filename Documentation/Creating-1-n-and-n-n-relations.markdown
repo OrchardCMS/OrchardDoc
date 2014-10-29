@@ -28,8 +28,8 @@ Here is the code for the `Address` part:
             }
             
             public StateRecord State {
-                get { return Retrieve(r => r.State); }
-                set { Store(r => r.State, value); }
+                get { return Retrieve(r => r.StateRecord); }
+                set { Store(r => r.StateRecord, value); }
             }
             
             public string Zip {
