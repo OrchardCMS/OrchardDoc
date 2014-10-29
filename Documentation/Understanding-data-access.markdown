@@ -25,25 +25,26 @@ Typically, the record class resides in a folder named Models. The parent class, 
 
 When you define a content part, you use the record as shown below:
 
-    
-    namespace Map.Models {
-        public class MapPart : ContentPart<MapRecord> {
+
+    namespace Maps.Models
+    {
+        public class MapPart : ContentPart<MapRecord>
+        {
             [Required]
             public double Latitude
             {
-                get { return Record.Latitude; }
-                set { Record.Latitude = value; }
+                get { return Retrieve(r => r.Latitude); }
+                set { Store(r => r.Latitude, value); }
             }
     
             [Required]
             public double Longitude
             {
-                get { return Record.Longitude; }
-                set { Record.Longitude = value; }
+                get { return Retrieve(r => r.Longitude); }
+                set { Store(r => r.Longitude, value); }
             }
         }
-    }
-
+    }    
 
 Notice that only data that's relevant to the part is defined in the `MapPart` class. You do not define any properties that are needed to maintain the data relationships between `MapPart` and other content.
 
