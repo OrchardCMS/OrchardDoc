@@ -18,13 +18,13 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
 
 ## About the Project ##
 * [Orchard Concept Definitions](Documentation/Basic-Orchard-Concepts)
-* [A guide to all the built-in modules and features of Orchard](Documentation/Builtin-features)
+* [A Guide to All the Built-in Modules and Features of Orchard](Documentation/Builtin-features)
 * [What's Happening Now?](Documentation/feature-roadmap)
 * [Frequently Asked Questions](Documentation/frequently-asked-questions)
 
 ## Tutorial Videos ##
 
-* [Tutorial videos about Orchard](Documentation/Orchard-TV)
+* [Tutorial Videos About Orchard](Documentation/Orchard-TV)
 
 ## Documentation ##
 
@@ -73,7 +73,7 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
 	* [Using Windows Azure Cache](Documentation/Using-Windows-Azure-Cache)
     * [Running Orchard on Mono](Documentation/Running-Orchard-on-Mono)
     * [Setting Up a Multi-Tenant Orchard Site](Documentation/Setting-up-a-multi-tenant-orchard-site)
-    * [Setting up a Machine Key](Documentation/Setting-up-a-machine-key)
+    * [Setting Up a Machine Key](Documentation/Setting-up-a-machine-key)
 
 
 * **Extending Orchard**
@@ -133,4 +133,4 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
 
 ## Archived Specs ##
 
-[Click here to view archived specs](Documentation/archived-specs).
+* [Archived Specs](Documentation/archived-specs).
