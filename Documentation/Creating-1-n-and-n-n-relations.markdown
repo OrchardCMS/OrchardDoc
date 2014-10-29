@@ -18,20 +18,23 @@ Here is the code for the `Address` part:
     namespace RelationSample.Models {
         public class AddressPart : ContentPart<AddressPartRecord> {
             public string Address {
-                get { return Record.Address; }
-                set { Record.Address = value; }
+                get { return Retrieve(r => r.Address); }
+                set { Store(r => r.Address, value); }
             }
+            
             public string City {
-                get { return Record.City; }
-                set { Record.City = value; }
+                get { return Retrieve(r => r.City); }
+                set { Store(r => r.City, value); }
             }
+            
             public StateRecord State {
-                get { return Record.StateRecord; }
-                set { Record.StateRecord = value; }
+                get { return Retrieve(r => r.State); }
+                set { Store(r => r.State, value); }
             }
+            
             public string Zip {
-                get { return Record.Zip; }
-                set { Record.Zip = value; }
+                get { return Retrieve(r => r.Zip); }
+                set { Store(r => r.Zip, value); }
             }
         }
     }
