@@ -102,7 +102,7 @@ In _Modules/SimpleCommerce/Models_, create a _Product.cs_ file and add the follo
     
         [Required]
         public float Price {
-          get { return Retrive(r => r.Price); }
+          get { return Retrieve(r => r.Price); }
           set { Store(r => r.Price, value); }
         }
       }
