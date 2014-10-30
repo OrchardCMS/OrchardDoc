@@ -21,7 +21,7 @@ The **administrator** has access to a few more aspects of the website:
 1. When [installing Orchard](Installing-Orchard), he will see the Installation page. This step results in the creation of a database where all the content and settings of the website are stored.
 Figure 2. Screenshot of the setup page
 1. Of course, as a user, he can see the front-end as well
-2. He can open the **[dashboard](Getting-Around-the-Admin-Panel)** (aka control panel/back-end) for two reasons:
+2. He can open the **[dashboard](Getting-around-the-dashboard)** (aka control panel/back-end) for two reasons:
     1. [Configure the website](Getting-Started): Edit settings around the behavior and look of the website (or install/disable/upgrade them)
 Figure 3. Screenshot of the settings page
     1. [Edit the content](Getting-Started) of the website
@@ -77,4 +77,4 @@ Note that a content type can only have one of each kind of content parts. But it
 Since Orchard is an [open source project](frequently-asked-questions), feel free to [contribute](Contributing-patches) any feature/module you would like.
 
 # Conclusion
-We are going to stop here. At this point, you should have a good understanding of what is Orchard. Any article talking about [how to use it](MainPage) should be easier to understand. The next step is to get into a bit more details about modules, themes and the [low-level architecture of Orchard](How-Orchard-works). This would be useful when you start learning [how to extend Orchard](Building-a-hello-world-module).
+We are going to stop here. At this point, you should have a good understanding of what is Orchard. The next step is to get into a bit more details about modules, themes and the [low-level architecture of Orchard](How-Orchard-works). This would be useful when you start learning [how to extend Orchard](Building-a-hello-world-module).
