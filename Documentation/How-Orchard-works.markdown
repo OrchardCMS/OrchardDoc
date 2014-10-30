@@ -216,7 +216,7 @@ Modules can surface messages to the admin UI by getting a dependency on INotifie
 
 ## Localization
 
-Localization of the application and its modules is done by wrapping string resources in a call to the T method: `<%: T("This string can be localized") %>`. See [Using the localization helpers](Using-the-localization-helpers) for more details and guidelines. Orchard's resource manager can load localized resource strings from PO files located in specific places in the application.
+Localization of the application and its modules is done by wrapping string resources in a call to the T method: `@T("This string can be localized")`. See [Using the localization helpers](Using-the-localization-helpers) for more details and guidelines. Orchard's resource manager can load localized resource strings from PO files located in specific places in the application.
 
 Content item localization is done through a different mechanism: localized versions of a content item are physically separate content items that are linked together by a special part.
 
