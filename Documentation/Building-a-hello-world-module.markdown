@@ -67,15 +67,15 @@ Your module will have to handle the /HelloWorld relative URL under your Orchard 
                     new RouteDescriptor {
                         Priority = 5,
                         Route = new Route(
-                            "HelloWorld",
+                            "HelloWorld", // this is the name of the page url
                             new RouteValueDictionary {
-                                {"area", "HelloWorld"},
+                                {"area", "HelloWorld"}, // this is the name of your module
                                 {"controller", "Home"},
                                 {"action", "Index"}
                             },
                             new RouteValueDictionary(),
                             new RouteValueDictionary {
-                                {"area", "HelloWorld"}
+                                {"area", "HelloWorld"} // this is the name of your module
                             },
                             new MvcRouteHandler())
                     }
