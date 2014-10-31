@@ -9,7 +9,7 @@ To get started, click on the **Contribute** tab of the gallery site.
 
 ## Creating a User Account
 
-To [submit a module or theme to the gallery](#submittingapackage), you must first create a user account on the gallery.  Click the **Sign In** link in the header area of the site to get to the **Log On** page.  In the sidebar for the site, click the  link to **Register Now**.
+To submit a module or theme to the gallery, you must first create a user account on the gallery.  Click the **Sign In** link in the header area of the site to get to the **Log On** page.  In the sidebar for the site, click the  link to **Register Now**.
 
 ![](../Upload/screenshots_675/gallery_logon.png)
 
@@ -70,7 +70,7 @@ Many of the fields on this form are optional, but allow you to specify tags, lic
 
 There are a couple key fields worth calling out:
 
-* **Package ID** is the unique name for your package.  It is obtained from the package when you upload it, and if you are the first person to submit a package with this ID, you will given exclusive ownership for that ID.  While you can upload additional versions of packages sharing this ID, no other submitter will be able to use this ID for their package uploads unless you grant explicit owner rights to that user (see [Assigning additional owners for a package](#assignpackageowners)). It is also possible to [register a package ID in advance](#registerpackageid) of uploading your module, to be sure you can claim the name that you want.
+* **Package ID** is the unique name for your package.  It is obtained from the package when you upload it, and if you are the first person to submit a package with this ID, you will given exclusive ownership for that ID.  While you can upload additional versions of packages sharing this ID, no other submitter will be able to use this ID for their package uploads unless you grant explicit owner rights to that user. It is also possible to register a package ID in advance of uploading your module, to be sure you can claim the name that you want.
 
 * **Package Version** is a version number for the package, and must be unique among all other packages in the gallery that same the same package ID.  Every time you submit a package to the gallery, you will need to increment the version number for your package.  This allows users of your package to know when a new version is available.
 
@@ -93,7 +93,7 @@ Once your package appears on the web site, you will notice that you can perform 
 ![](../Upload/screenshots_675/gallery_testpackage.png)
 
 * **Edit** allows you to return to the package details form and update information about your package.
-* **Manage Owners** allows you to assign additional owners for your package.  See [Assigning additional owners for a package](#assignpackageowners).
+* **Manage Owners** allows you to assign additional owners for your package.
 * **Delete** allows you to delete a submission from the gallery. Note: When you delete a submission, you will lose the download count history for that package version.
 
 To see all of the packages that you previously uploaded to the gallery, visit the **Contribute** tab and click the **Manage My Contributions** link.
