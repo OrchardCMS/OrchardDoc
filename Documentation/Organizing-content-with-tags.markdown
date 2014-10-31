@@ -15,3 +15,7 @@ Here you can edit the tag keywords and remove tags. When you remove a tag, it is
 Clicking on a tag keyword in this screen will display the list of content items that share that tag.
 
 ![](../Upload/screenshots_675/Tags_manage.png)
+
+### Change History
+* Updates for Orchard 1.8
+    * 10-31-14: Updated screen shots for managing tags
