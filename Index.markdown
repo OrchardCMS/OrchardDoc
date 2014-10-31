@@ -80,7 +80,7 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
     * [First Steps into Orchard](Documentation/First-steps-into-Orchard)
     * [How Orchard Works](Documentation/How-Orchard-works)
     * [Command-Line Code Generation](Documentation/Command-line-scaffolding)
-    * [Building a Hello World module](Documentation/Building-a-hello-world-module)
+    * [Building a Hello World Module](Documentation/Building-a-hello-world-module)
     * [Creating a Module with a Simple Text Editor](Documentation/Creating-a-module-with-a-simple-text-editor)
     * [Writing a Content Part](Documentation/Writing-a-content-part)
     * [Writing a Content Field](Documentation/Creating-a-custom-field-type)
@@ -133,4 +133,4 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
 
 ## Archived Specs ##
 
-* [Archived Specs](Documentation/archived-specs).
+* [Archived Specs](Documentation/archived-specs)
