@@ -470,7 +470,7 @@ This template creates a label for the setting and then a drop-down that enables 
 
 If you are using Visual Studio, you should skip this section as your project file has already been updated, provided you saved all (CTRL+SHIFT+S). Otherwise, in order for the Orchard dynamic compilation engine to be able to pick up our new module's cs files, we need to add them to the **CustomFields.csproj** file. Find the `<compile Include="Properties\AssemblyInfo.cs"/>` line in **CustomFields.csproj** and add the following right after it:
 
-``xml
+```xml
 <Compile Include="Drivers\DateTimeFieldDriver.cs" />
 <Compile Include="Fields\DateTimeField.cs" />
 <Compile Include="Settings\DateTimeFieldEditorEvents.cs" />
