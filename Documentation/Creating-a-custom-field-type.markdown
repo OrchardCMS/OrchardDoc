@@ -51,39 +51,41 @@ We are defining two features here because this module will eventually contain mo
 
 Let's now create a **Fields** folder inside of our **CustomFields** folder and create the following **DateTimeField.cs** file in there:
 
-    
-    using System;
-    using System.Globalization;
-    using Orchard.ContentManagement;
-    using Orchard.ContentManagement.FieldStorage;
-    using Orchard.Environment.Extensions;
-    
-    namespace CustomFields.DateTimeField.Fields {
-        [OrchardFeature("DateTimeField")]
-        public class DateTimeField : ContentField {
-    
-            public DateTime? DateTime {
-                get {
-                    var value = Storage.Get<string>();
-                    DateTime parsedDateTime;
-    
-                    if (System.DateTime.TryParse(value, CultureInfo.InvariantCulture,
-                        DateTimeStyles.AdjustToUniversal, out parsedDateTime)) {
-    
-                        return parsedDateTime;
-                    }
-    
-                    return null;
-                }
-    
-                set {
-                    Storage.Set(value == null ?
-                        String.Empty :
-                        value.Value.ToString(CultureInfo.InvariantCulture));
-                }
-            }
-        }
-    }
+
+```c#
+using System;
+using System.Globalization;
+using Orchard.ContentManagement;
+using Orchard.ContentManagement.FieldStorage;
+using Orchard.Environment.Extensions;
+
+namespace CustomFields.DateTimeField.Fields {
+	[OrchardFeature("DateTimeField")]
+	public class DateTimeField : ContentField {
+
+		public DateTime? DateTime {
+			get {
+				var value = Storage.Get<string>();
+				DateTime parsedDateTime;
+
+				if (System.DateTime.TryParse(value, CultureInfo.InvariantCulture,
+					DateTimeStyles.AdjustToUniversal, out parsedDateTime)) {
+
+					return parsedDateTime;
+				}
+
+				return null;
+			}
+
+			set {
+				Storage.Set(value == null ?
+					String.Empty :
+					value.Value.ToString(CultureInfo.InvariantCulture));
+			}
+		}
+	}
+}
+```
 
 
 The field is defined as a class that derives from `ContentField`, which gives us a few services for free, such as the storage of the value of the field. The fields will be stored as strings. The conversion of dates to and from strings could be handled automatically, but we are doing it explicitly here to give a good idea of how you would do things for more complex field types.
@@ -92,20 +94,22 @@ The field is defined as a class that derives from `ContentField`, which gives us
 
 It is good practice (although not mandatory) to create one or several view models that will be used as the model in the admin template that we will use to render instances of our field. Let's create the following **DateTimeFieldViewModel.cs** file in a new **ViewModels** folder:
 
-    
-    namespace CustomFields.DateTimeField.ViewModels {
-    
-        public class DateTimeFieldViewModel {
-    
-            public string Name { get; set; }
-    
-            public string Date { get; set; }
-            public string Time { get; set; }
-    
-            public bool ShowDate { get; set; }
-            public bool ShowTime { get; set; }
-        }
-    }
+
+```c#
+namespace CustomFields.DateTimeField.ViewModels {
+
+	public class DateTimeFieldViewModel {
+
+		public string Name { get; set; }
+
+		public string Date { get; set; }
+		public string Time { get; set; }
+
+		public bool ShowDate { get; set; }
+		public bool ShowTime { get; set; }
+	}
+}
+```
 
 
 This not only exposes the date and time as separate properties, it also has some parameters that can be passed into the view to customize the rendering.
@@ -116,19 +120,20 @@ This flexibility in rendering that we just introduced in the view model can be e
 
 Create a **Settings** folder and add the following **DateTimeFieldSettings.cs** file to it:
 
-    
-    namespace CustomFields.DateTimeField.Settings {
-    
-        public enum DateTimeFieldDisplays {
-            DateAndTime,
-            DateOnly,
-            TimeOnly
-        }
-    
-        public class DateTimeFieldSettings {
-            public DateTimeFieldDisplays Display { get; set; }
-        }
-    }
+```c#
+namespace CustomFields.DateTimeField.Settings {
+
+	public enum DateTimeFieldDisplays {
+		DateAndTime,
+		DateOnly,
+		TimeOnly
+	}
+
+	public class DateTimeFieldSettings {
+		public DateTimeFieldDisplays Display { get; set; }
+	}
+}
+```
 
 
 We have defined here an enumeration describing the possible values of our display setting, which is the only setting for the field. The settings class itself is just an ordinary class with one property typed with that enumeration.
@@ -139,153 +144,155 @@ Exactly like a part, a field has a driver that will be responsible for handling 
 
 Create a **Drivers** folder and add the following **DateTimeFieldDriver.cs**:
 
-    
-    using System;
-    using JetBrains.Annotations;
-    using Orchard;
-    using Orchard.ContentManagement;
-    using Orchard.ContentManagement.Drivers;
-    using Contrib.DateTimeField.Settings;
-    using Contrib.DateTimeField.ViewModels;
-    using Orchard.ContentManagement.Handlers;
-    using Orchard.Localization;
-    
-    namespace CustomFields.DateTimeField.Drivers {
-        [UsedImplicitly]
-        public class DateTimeFieldDriver : ContentFieldDriver<Fields.DateTimeField> {
-            public IOrchardServices Services { get; set; }
-    
-            // EditorTemplates/Fields/Custom.DateTime.cshtml
-            private const string TemplateName = "Fields/Custom.DateTime";
-    
-            public DateTimeFieldDriver(IOrchardServices services) {
-                Services = services;
-                T = NullLocalizer.Instance;
-            }
-    
-            public Localizer T { get; set; }
-    
-            private static string GetPrefix(ContentField field, ContentPart part) {
-                // handles spaces in field names
-                return (part.PartDefinition.Name + "." + field.Name)
-                       .Replace(" ", "_");
-            }
-    
-            protected override DriverResult Display(
-                ContentPart part, Fields.DateTimeField field,
-                string displayType, dynamic shapeHelper) {
-    
-                var settings = field.PartFieldDefinition.Settings
-                                    .GetModel<DateTimeFieldSettings>();
-                var value = field.DateTime;
-                
-                return ContentShape("Fields_Custom_DateTime", // key in Shape Table
-                        field.Name, // used to differentiate shapes in placement.info overrides, e.g. Fields_Common_Text-DIFFERENTIATOR
-                        // this is the actual Shape which will be resolved
-                        // (Fields/Custom.DateTime.cshtml)
-                        s =>
-                        s.Name(field.Name)
-                         .Date(value.HasValue ?
-                             value.Value.ToLocalTime().ToShortDateString() :
-                             String.Empty)
-                         .Time(value.HasValue ?
-                             value.Value.ToLocalTime().ToShortTimeString() :
-                             String.Empty)
-                         .ShowDate(
-                             settings.Display == DateTimeFieldDisplays.DateAndTime ||
-                             settings.Display == DateTimeFieldDisplays.DateOnly)
-                         .ShowTime(
-                             settings.Display == DateTimeFieldDisplays.DateAndTime ||
-                             settings.Display == DateTimeFieldDisplays.TimeOnly)
-                    );
-            }
-    
-            protected override DriverResult Editor(ContentPart part,
-                                                   Fields.DateTimeField field,
-                                                   dynamic shapeHelper) {
-    
-                var settings = field.PartFieldDefinition.Settings
-                                    .GetModel<DateTimeFieldSettings>();
-                var value = field.DateTime;
-    
-                if (value.HasValue) {
-                    value = value.Value.ToLocalTime();
-                }
-    
-                var viewModel = new DateTimeFieldViewModel {
-                    Name = field.Name,
-                    Date = value.HasValue ?
-                           value.Value.ToLocalTime().ToShortDateString() : "",
-                    Time = value.HasValue ?
-                           value.Value.ToLocalTime().ToShortTimeString() : "",
-                    ShowDate =
-                        settings.Display == DateTimeFieldDisplays.DateAndTime ||
-                        settings.Display == DateTimeFieldDisplays.DateOnly,
-                    ShowTime =
-                        settings.Display == DateTimeFieldDisplays.DateAndTime ||
-                        settings.Display == DateTimeFieldDisplays.TimeOnly
-    
-                };
-    
-                return ContentShape("Fields_Custom_DateTime_Edit",
-                    () => shapeHelper.EditorTemplate(
-                              TemplateName: TemplateName,
-                              Model: viewModel,
-                              Prefix: GetPrefix(field, part)));
-            }
-    
-            protected override DriverResult Editor(ContentPart part,
-                                                   Fields.DateTimeField field,
-                                                   IUpdateModel updater,
-                                                   dynamic shapeHelper) {
-    
-                var viewModel = new DateTimeFieldViewModel();
-    
-                if (updater.TryUpdateModel(viewModel,
-                                           GetPrefix(field, part), null, null)) {
-                    DateTime value;
-    
-                    var settings = field.PartFieldDefinition.Settings
-                                        .GetModel<DateTimeFieldSettings>();
-                    if (settings.Display == DateTimeFieldDisplays.DateOnly) {
-                        viewModel.Time = DateTime.Now.ToShortTimeString();
-                    }
-    
-                    if (settings.Display == DateTimeFieldDisplays.TimeOnly) {
-                        viewModel.Date = DateTime.Now.ToShortDateString();
-                    }
-    
-                    if (DateTime.TryParse(
-                            viewModel.Date + " " + viewModel.Time, out value)) {
-                        field.DateTime = value.ToUniversalTime();
-                    }
-                    else {
-                        updater.AddModelError(GetPrefix(field, part),
-                                              T("{0} is an invalid date and time",
-                                              field.Name));
-                        field.DateTime = null;
-                    }
-                }
-    
-                return Editor(part, field, shapeHelper);
-            }
-    
-            protected override void Importing(ContentPart part, Fields.DateTimeField field, 
-                ImportContentContext context) {
-    
-                var importedText = context.Attribute(GetPrefix(field, part), "DateTime");
-                if (importedText != null) {
-                    field.Storage.Set(null, importedText);
-                }
-            }
-    
-            protected override void Exporting(ContentPart part, Fields.DateTimeField field, 
-                ExportContentContext context) {
-                context.Element(GetPrefix(field, part))
-                    .SetAttributeValue("DateTime", field.Storage.Get<string>(null));
-            }
-        }
-    }
+
+```c#
+using System;
+using JetBrains.Annotations;
+using Orchard;
+using Orchard.ContentManagement;
+using Orchard.ContentManagement.Drivers;
+using Contrib.DateTimeField.Settings;
+using Contrib.DateTimeField.ViewModels;
+using Orchard.ContentManagement.Handlers;
+using Orchard.Localization;
+
+namespace CustomFields.DateTimeField.Drivers {
+	[UsedImplicitly]
+	public class DateTimeFieldDriver : ContentFieldDriver<Fields.DateTimeField> {
+		public IOrchardServices Services { get; set; }
+
+		// EditorTemplates/Fields/Custom.DateTime.cshtml
+		private const string TemplateName = "Fields/Custom.DateTime";
+
+		public DateTimeFieldDriver(IOrchardServices services) {
+			Services = services;
+			T = NullLocalizer.Instance;
+		}
+
+		public Localizer T { get; set; }
+
+		private static string GetPrefix(ContentField field, ContentPart part) {
+			// handles spaces in field names
+			return (part.PartDefinition.Name + "." + field.Name)
+				   .Replace(" ", "_");
+		}
+
+		protected override DriverResult Display(
+			ContentPart part, Fields.DateTimeField field,
+			string displayType, dynamic shapeHelper) {
+
+			var settings = field.PartFieldDefinition.Settings
+								.GetModel<DateTimeFieldSettings>();
+			var value = field.DateTime;
+			
+			return ContentShape("Fields_Custom_DateTime", // key in Shape Table
+					field.Name, // used to differentiate shapes in placement.info overrides, e.g. Fields_Common_Text-DIFFERENTIATOR
+					// this is the actual Shape which will be resolved
+					// (Fields/Custom.DateTime.cshtml)
+					s =>
+					s.Name(field.Name)
+					 .Date(value.HasValue ?
+						 value.Value.ToLocalTime().ToShortDateString() :
+						 String.Empty)
+					 .Time(value.HasValue ?
+						 value.Value.ToLocalTime().ToShortTimeString() :
+						 String.Empty)
+					 .ShowDate(
+						 settings.Display == DateTimeFieldDisplays.DateAndTime ||
+						 settings.Display == DateTimeFieldDisplays.DateOnly)
+					 .ShowTime(
+						 settings.Display == DateTimeFieldDisplays.DateAndTime ||
+						 settings.Display == DateTimeFieldDisplays.TimeOnly)
+				);
+		}
+
+		protected override DriverResult Editor(ContentPart part,
+											   Fields.DateTimeField field,
+											   dynamic shapeHelper) {
+
+			var settings = field.PartFieldDefinition.Settings
+								.GetModel<DateTimeFieldSettings>();
+			var value = field.DateTime;
+
+			if (value.HasValue) {
+				value = value.Value.ToLocalTime();
+			}
+
+			var viewModel = new DateTimeFieldViewModel {
+				Name = field.Name,
+				Date = value.HasValue ?
+					   value.Value.ToLocalTime().ToShortDateString() : "",
+				Time = value.HasValue ?
+					   value.Value.ToLocalTime().ToShortTimeString() : "",
+				ShowDate =
+					settings.Display == DateTimeFieldDisplays.DateAndTime ||
+					settings.Display == DateTimeFieldDisplays.DateOnly,
+				ShowTime =
+					settings.Display == DateTimeFieldDisplays.DateAndTime ||
+					settings.Display == DateTimeFieldDisplays.TimeOnly
+
+			};
+
+			return ContentShape("Fields_Custom_DateTime_Edit",
+				() => shapeHelper.EditorTemplate(
+						  TemplateName: TemplateName,
+						  Model: viewModel,
+						  Prefix: GetPrefix(field, part)));
+		}
+
+		protected override DriverResult Editor(ContentPart part,
+											   Fields.DateTimeField field,
+											   IUpdateModel updater,
+											   dynamic shapeHelper) {
+
+			var viewModel = new DateTimeFieldViewModel();
+
+			if (updater.TryUpdateModel(viewModel,
+									   GetPrefix(field, part), null, null)) {
+				DateTime value;
+
+				var settings = field.PartFieldDefinition.Settings
+									.GetModel<DateTimeFieldSettings>();
+				if (settings.Display == DateTimeFieldDisplays.DateOnly) {
+					viewModel.Time = DateTime.Now.ToShortTimeString();
+				}
+
+				if (settings.Display == DateTimeFieldDisplays.TimeOnly) {
+					viewModel.Date = DateTime.Now.ToShortDateString();
+				}
+
+				if (DateTime.TryParse(
+						viewModel.Date + " " + viewModel.Time, out value)) {
+					field.DateTime = value.ToUniversalTime();
+				}
+				else {
+					updater.AddModelError(GetPrefix(field, part),
+										  T("{0} is an invalid date and time",
+										  field.Name));
+					field.DateTime = null;
+				}
+			}
+
+			return Editor(part, field, shapeHelper);
+		}
+
+		protected override void Importing(ContentPart part, Fields.DateTimeField field, 
+			ImportContentContext context) {
+
+			var importedText = context.Attribute(GetPrefix(field, part), "DateTime");
+			if (importedText != null) {
+				field.Storage.Set(null, importedText);
+			}
+		}
+
+		protected override void Exporting(ContentPart part, Fields.DateTimeField field, 
+			ExportContentContext context) {
+			context.Element(GetPrefix(field, part))
+				.SetAttributeValue("DateTime", field.Storage.Get<string>(null));
+		}
+	}
+}
+```
 
 
 Let's enumerate a few things we're doing in this code in order to explain how it works.
@@ -310,70 +317,74 @@ We need to write the views that will determine how our field is represented in a
 
 Create a **Fields** and an **EditorTemplates** directory under **Views**. Then create another **Fields** directory under EditorTemplates. In **Views/Fields**, create the following **Custom.DateTime.cshtml**:
 
-    
-    <p class="text-field"><span class="name">@Model.Name:</span> 
-        @if(Model.ShowDate) { <text>@Model.Date</text> } 
-        @if(Model.ShowTime) { <text>@Model.Time</text> }
-    </p>
+```html
+<p class="text-field"><span class="name">@Model.Name:</span> 
+	@if(Model.ShowDate) { <text>@Model.Date</text> } 
+	@if(Model.ShowTime) { <text>@Model.Time</text> }
+</p>
+```
 
 
 This code renders the name of the field, a colon and then the date and time according to the field's configuration.
 
 Now create a file of the same name under **Views/EditorTemplates/Fields** with the following contents:
 
-    
-    @model CustomFields.DateTimeField.ViewModels.DateTimeFieldViewModel
-    
-    @{
-    Style.Include("datetime.css");
-    Style.Require("jQueryUI_DatePicker");
-    Style.Require("jQueryUtils_TimePicker");
-    Style.Require("jQueryUI_Orchard");
-    
-    Script.Require("jQuery");
-    Script.Require("jQueryUtils");
-    Script.Require("jQueryUI_Core");
-    Script.Require("jQueryUI_Widget");
-    Script.Require("jQueryUI_DatePicker");
-    Script.Require("jQueryUtils_TimePicker");
-    }
-    
-    <fieldset>
-      <label for="@Html.FieldIdFor(m => Model.Date)">@Model.Name</label>
-    
-      @if ( Model.ShowDate ) {
-      <label class="forpicker"
-        for="@Html.FieldIdFor(m => Model.Date)">@T("Date")</label>
-      <span class="date">@Html.EditorFor(m => m.Date)</span>
-      }
-    
-      @if ( Model.ShowTime ) {
-      <label class="forpicker"
-        for="@Html.FieldIdFor(m => Model.Time)">@T("Time")</label>
-      <span class="time">@Html.EditorFor(m => m.Time)</span>
-      }
-      @if(Model.ShowDate) { <text>@Html.ValidationMessageFor(m=>m.Date)</text> }
-      @if(Model.ShowTime) { <text>@Html.ValidationMessageFor(m=>m.Time)</text> }
-    </fieldset>
-    
-    @using(Script.Foot()) {
-    <script type="text/javascript">
-    $(function () {
-      $("#@Html.FieldIdFor(m => Model.Date)").datepicker();
-      $("#@Html.FieldIdFor(m => Model.Time)").timepickr();
-    });
-    </script>
-    }
+```html
+@model CustomFields.DateTimeField.ViewModels.DateTimeFieldViewModel
+
+@{
+Style.Include("datetime.css");
+Style.Require("jQueryUI_DatePicker");
+Style.Require("jQueryUtils_TimePicker");
+Style.Require("jQueryUI_Orchard");
+
+Script.Require("jQuery");
+Script.Require("jQueryUtils");
+Script.Require("jQueryUI_Core");
+Script.Require("jQueryUI_Widget");
+Script.Require("jQueryUI_DatePicker");
+Script.Require("jQueryUtils_TimePicker");
+}
+
+<fieldset>
+  <label for="@Html.FieldIdFor(m => Model.Date)">@Model.Name</label>
+
+  @if ( Model.ShowDate ) {
+  <label class="forpicker"
+	for="@Html.FieldIdFor(m => Model.Date)">@T("Date")</label>
+  <span class="date">@Html.EditorFor(m => m.Date)</span>
+  }
+
+  @if ( Model.ShowTime ) {
+  <label class="forpicker"
+	for="@Html.FieldIdFor(m => Model.Time)">@T("Time")</label>
+  <span class="time">@Html.EditorFor(m => m.Time)</span>
+  }
+  @if(Model.ShowDate) { <text>@Html.ValidationMessageFor(m=>m.Date)</text> }
+  @if(Model.ShowTime) { <text>@Html.ValidationMessageFor(m=>m.Time)</text> }
+</fieldset>
+
+@using(Script.Foot()) {
+<script type="text/javascript">
+$(function () {
+  $("#@Html.FieldIdFor(m => Model.Date)").datepicker();
+  $("#@Html.FieldIdFor(m => Model.Time)").timepickr();
+});
+</script>
+}
+```
 
 
 This template is registering a few styles and scripts (note that if other parts register the same files, they will still be rendered only once). Then, it defines the editor as a date picker and a time picker according to the field's configuration. The fields are regular text boxes that are unobtrusively enriched by date and time pickers using jQuery UI plug-ins.
 
 To specify the order and location where these templates will be rendered within the composed page, we need to add a placement.info file into the root of the module's directory:
     
-    <Placement>
-        <Place Fields_Custom_DateTime_Edit="Content:2.5"/>
-        <Place Fields_Custom_DateTime="Content:2.5"/>
-    </Placement>
+```xml
+<Placement>
+	<Place Fields_Custom_DateTime_Edit="Content:2.5"/>
+	<Place Fields_Custom_DateTime="Content:2.5"/>
+</Placement>
+```
 
 
 
@@ -383,71 +394,74 @@ We are not quite done yet. We still need to take care of managing and persisting
 
 Add the following **DateTimeFieldEditorEvents.cs** file to the **Settings** folder:
 
-    
-    using System.Collections.Generic;
-    using Orchard.ContentManagement;
-    using Orchard.ContentManagement.MetaData;
-    using Orchard.ContentManagement.MetaData.Builders;
-    using Orchard.ContentManagement.MetaData.Models;
-    using Orchard.ContentManagement.ViewModels;
-    
-    namespace CustomFields.DateTimeField.Settings {
-        public class DateTimeFieldEditorEvents : ContentDefinitionEditorEventsBase {
-    
-            public override IEnumerable<TemplateViewModel>
-              PartFieldEditor(ContentPartFieldDefinition definition) {
-                if (definition.FieldDefinition.Name == "DateTimeField") {
-                    var model = definition.Settings.GetModel<DateTimeFieldSettings>();
-                    yield return DefinitionTemplate(model);
-                }
-            }
-    
-            public override IEnumerable<TemplateViewModel> PartFieldEditorUpdate(
-              ContentPartFieldDefinitionBuilder builder, IUpdateModel updateModel) {
-                var model = new DateTimeFieldSettings();
-                if (builder.FieldType != "DateTimeField") {
-                  yield break;
-                }
-                
-                if (updateModel.TryUpdateModel(
-                  model, "DateTimeFieldSettings", null, null)) {
-                    builder.WithSetting("DateTimeFieldSettings.Display",
-                                        model.Display.ToString());
-                }
-    
-                yield return DefinitionTemplate(model);
-            }
-        }
-    }
+
+```c#
+using System.Collections.Generic;
+using Orchard.ContentManagement;
+using Orchard.ContentManagement.MetaData;
+using Orchard.ContentManagement.MetaData.Builders;
+using Orchard.ContentManagement.MetaData.Models;
+using Orchard.ContentManagement.ViewModels;
+
+namespace CustomFields.DateTimeField.Settings {
+	public class DateTimeFieldEditorEvents : ContentDefinitionEditorEventsBase {
+
+		public override IEnumerable<TemplateViewModel>
+		  PartFieldEditor(ContentPartFieldDefinition definition) {
+			if (definition.FieldDefinition.Name == "DateTimeField") {
+				var model = definition.Settings.GetModel<DateTimeFieldSettings>();
+				yield return DefinitionTemplate(model);
+			}
+		}
+
+		public override IEnumerable<TemplateViewModel> PartFieldEditorUpdate(
+		  ContentPartFieldDefinitionBuilder builder, IUpdateModel updateModel) {
+			var model = new DateTimeFieldSettings();
+			if (builder.FieldType != "DateTimeField") {
+			  yield break;
+			}
+			
+			if (updateModel.TryUpdateModel(
+			  model, "DateTimeFieldSettings", null, null)) {
+				builder.WithSetting("DateTimeFieldSettings.Display",
+									model.Display.ToString());
+			}
+
+			yield return DefinitionTemplate(model);
+		}
+	}
+}
+```
 
 
 This is the equivalent of a driver, but for field settings. The first method gets the settings and determines the template to render, and the second updates the model with the values from the submitted form and then calls the first.
 
 The editor template for the field is defined by the following **DateTimeFieldSettings.cshtml** that you should create in a new **DefinitionTemplates** folder under **Views**:
 
-    
-    @model CustomFields.DateTimeField.Settings.DateTimeFieldSettings
-    @using CustomFields.DateTimeField.Settings;
-    
-    <fieldset>
-        <label for="@Html.FieldIdFor(m => m.Display)"
-          class="forcheckbox">@T("Display options")</label>  
-        <select id="@Html.FieldIdFor(m => m.Display)"
-          name="@Html.FieldNameFor(m => m.Display)">
-            @Html.SelectOption(DateTimeFieldDisplays.DateAndTime, 
-              Model.Display == DateTimeFieldDisplays.DateAndTime,
-              T("Date and time").ToString())
-            @Html.SelectOption(DateTimeFieldDisplays.DateOnly,
-              Model.Display == DateTimeFieldDisplays.DateOnly,
-              T("Date only").ToString())
-            @Html.SelectOption(DateTimeFieldDisplays.TimeOnly,
-              Model.Display == DateTimeFieldDisplays.TimeOnly,
-              T("Time only").ToString())
-        </select> 
-    
-        @Html.ValidationMessageFor(m => m.Display)
-            
-    </fieldset>
+```html
+@model CustomFields.DateTimeField.Settings.DateTimeFieldSettings
+@using CustomFields.DateTimeField.Settings;
+
+<fieldset>
+	<label for="@Html.FieldIdFor(m => m.Display)"
+	  class="forcheckbox">@T("Display options")</label>  
+	<select id="@Html.FieldIdFor(m => m.Display)"
+	  name="@Html.FieldNameFor(m => m.Display)">
+		@Html.SelectOption(DateTimeFieldDisplays.DateAndTime, 
+		  Model.Display == DateTimeFieldDisplays.DateAndTime,
+		  T("Date and time").ToString())
+		@Html.SelectOption(DateTimeFieldDisplays.DateOnly,
+		  Model.Display == DateTimeFieldDisplays.DateOnly,
+		  T("Date only").ToString())
+		@Html.SelectOption(DateTimeFieldDisplays.TimeOnly,
+		  Model.Display == DateTimeFieldDisplays.TimeOnly,
+		  T("Time only").ToString())
+	</select> 
+
+	@Html.ValidationMessageFor(m => m.Display)
+		
+</fieldset>
+```
 
 
 This template creates a label for the setting and then a drop-down that enables the site administrator to pick one of the options for the setting.
@@ -456,33 +470,35 @@ This template creates a label for the setting and then a drop-down that enables 
 
 If you are using Visual Studio, you should skip this section as your project file has already been updated, provided you saved all (CTRL+SHIFT+S). Otherwise, in order for the Orchard dynamic compilation engine to be able to pick up our new module's cs files, we need to add them to the **CustomFields.csproj** file. Find the `<compile Include="Properties\AssemblyInfo.cs"/>` line in **CustomFields.csproj** and add the following right after it:
 
-    
-    <Compile Include="Drivers\DateTimeFieldDriver.cs" />
-    <Compile Include="Fields\DateTimeField.cs" />
-    <Compile Include="Settings\DateTimeFieldEditorEvents.cs" />
-    <Compile Include="Settings\DateTimeFieldSettings.cs" />
-    <Compile Include="ViewModels\DateTimeFieldViewModel.cs" />
+```xml
+<Compile Include="Drivers\DateTimeFieldDriver.cs" />
+<Compile Include="Fields\DateTimeField.cs" />
+<Compile Include="Settings\DateTimeFieldEditorEvents.cs" />
+<Compile Include="Settings\DateTimeFieldSettings.cs" />
+<Compile Include="ViewModels\DateTimeFieldViewModel.cs" />
+```
 
 
 # Adding the Style Sheet
 
 Create a **Styles** directory and create the following **datetime.css**:
 
-    
-    html.dyn label.forpicker {
-        display:none;
-    }
-    
-    html.dyn input.hinted {
-        color:#ccc;
-        font-style:italic;
-    }
-    .date input{
-        width:10em;
-    }
-    .time input {
-        width:6em;
-    }
+```css    
+html.dyn label.forpicker {
+	display:none;
+}
+
+html.dyn input.hinted {
+	color:#ccc;
+	font-style:italic;
+}
+.date input{
+	width:10em;
+}
+.time input {
+	width:6em;
+}
+```
 
 
 # Using the Field

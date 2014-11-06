@@ -24,60 +24,60 @@ After you choose a recipe and click **Finish Setup**, Orchard creates the websit
 
 An Orchard recipe is an XML file that contains website configuration information. The following example shows the contents of the default recipe file.
 
-    
-    <?xml version="1.0"?>
-    <Orchard>
-      <Recipe>
-        <Name>Default</Name>
-        <Description>The default recipe for an Orchard site that includes pages, blogs, custom content types, comments, tags, widgets and basic navigation.</Description>
-        <Author>The Orchard Team</Author>
-        <WebSite>http://orchardproject.net</WebSite>
-        <Tags></Tags>
-        <Version>1.0</Version>
-      </Recipe>
-      
-      <Feature enable="Orchard.Blogs,Orchard.Comments,Orchard.Tags,
-                       Orchard.Lists,TinyMce,Orchard.Media,Orchard.MediaPicker,Orchard.PublishLater,
-                       Orchard.jQuery,Orchard.Widgets,Orchard.ContentTypes,
-                       Orchard.Scripting,Orchard.Scripting.Lightweight,
-                       PackagingServices,Orchard.Packaging,Gallery,Gallery.Updates,
-                       TheThemeMachine" />
-      
-      <Metadata>
-        <Types>
-          <Page ContentTypeSettings.Draftable="True" TypeIndexing.Included="true">
-            <TagsPart />
-            <LocalizationPart />
-          </Page>
-          <BlogPost ContentTypeSettings.Draftable="True" TypeIndexing.Included="true">
-            <CommentsPart />
-            <TagsPart />
-            <LocalizationPart />
-          </BlogPost>
-        </Types>
-        <Parts>
-          <BodyPart BodyPartSettings.FlavorDefault="html" />
-        </Parts>
-      </Metadata>
-    
-      <Settings />
-    
-      <Migration features="*" />
-    
-      <Command>
-        layer create Default /LayerRule:"true"
-        layer create Authenticated /LayerRule:"authenticated"
-        layer create Anonymous /LayerRule:"not authenticated"
-        layer create Disabled /LayerRule:"false"
-        layer create TheHomepage /LayerRule:"url '~/'"
-        page create /Slug:"welcome-to-orchard" /Title:"Welcome to Orchard!" /Path:"welcome-to-orchard" /Homepage:true /Publish:true /UseWelcomeText:true
-        widget create HtmlWidget /Title:"First Leader Aside" /Zone:"TripelFirst" /Position:"5" /Layer:"TheHomepage" /UseLoremIpsumText:true
-        widget create HtmlWidget /Title:"Second Leader Aside" /Zone:"TripelSecond" /Position:"5" /Layer:"TheHomepage" /UseLoremIpsumText:true
-        widget create HtmlWidget /Title:"Third Leader Aside" /Zone:"TripelThird" /Position:"5" /Layer:"TheHomepage" /UseLoremIpsumText:true
-        menuitem create /MenuPosition:"1" /MenuText:"Home" /Url:"" /OnMainMenu:true
-      </Command>
-    </Orchard>
+```xml
+<?xml version="1.0"?>
+<Orchard>
+  <Recipe>
+	<Name>Default</Name>
+	<Description>The default recipe for an Orchard site that includes pages, blogs, custom content types, comments, tags, widgets and basic navigation.</Description>
+	<Author>The Orchard Team</Author>
+	<WebSite>http://orchardproject.net</WebSite>
+	<Tags></Tags>
+	<Version>1.0</Version>
+  </Recipe>
+  
+  <Feature enable="Orchard.Blogs,Orchard.Comments,Orchard.Tags,
+				   Orchard.Lists,TinyMce,Orchard.Media,Orchard.MediaPicker,Orchard.PublishLater,
+				   Orchard.jQuery,Orchard.Widgets,Orchard.ContentTypes,
+				   Orchard.Scripting,Orchard.Scripting.Lightweight,
+				   PackagingServices,Orchard.Packaging,Gallery,Gallery.Updates,
+				   TheThemeMachine" />
+  
+  <Metadata>
+	<Types>
+	  <Page ContentTypeSettings.Draftable="True" TypeIndexing.Included="true">
+		<TagsPart />
+		<LocalizationPart />
+	  </Page>
+	  <BlogPost ContentTypeSettings.Draftable="True" TypeIndexing.Included="true">
+		<CommentsPart />
+		<TagsPart />
+		<LocalizationPart />
+	  </BlogPost>
+	</Types>
+	<Parts>
+	  <BodyPart BodyPartSettings.FlavorDefault="html" />
+	</Parts>
+  </Metadata>
 
+  <Settings />
+
+  <Migration features="*" />
+
+  <Command>
+	layer create Default /LayerRule:"true"
+	layer create Authenticated /LayerRule:"authenticated"
+	layer create Anonymous /LayerRule:"not authenticated"
+	layer create Disabled /LayerRule:"false"
+	layer create TheHomepage /LayerRule:"url '~/'"
+	page create /Slug:"welcome-to-orchard" /Title:"Welcome to Orchard!" /Path:"welcome-to-orchard" /Homepage:true /Publish:true /UseWelcomeText:true
+	widget create HtmlWidget /Title:"First Leader Aside" /Zone:"TripelFirst" /Position:"5" /Layer:"TheHomepage" /UseLoremIpsumText:true
+	widget create HtmlWidget /Title:"Second Leader Aside" /Zone:"TripelSecond" /Position:"5" /Layer:"TheHomepage" /UseLoremIpsumText:true
+	widget create HtmlWidget /Title:"Third Leader Aside" /Zone:"TripelThird" /Position:"5" /Layer:"TheHomepage" /UseLoremIpsumText:true
+	menuitem create /MenuPosition:"1" /MenuText:"Home" /Url:"" /OnMainMenu:true
+  </Command>
+</Orchard>
+```
 
 The following sections of a recipe file are the elements that are most important to understand:
 
@@ -95,68 +95,70 @@ You can create your own recipe, which can then be added to the setup page or to 
 To get started with creating a custom recipe, you can select an existing recipe that you can tailor to your purposes. The following example shows how to start with the default recipe _(default.recipe.xml)_ and add the **Bing.Maps** module and a theme, both of which will be downloaded and enabled during setup. The recipe also creates a blog and a page that displays the map widget. Finally, the recipe adds layers and menu tabs for the blog and map page.
 
     
-    <?xml version="1.0"?>
-    <Orchard>
-      <Recipe>
-        <Name>Custom Recipe</Name>
-        <Description>A recipe that includes a landing page with blog on a second tab.</Description>
-        <Author>The Orchard Team</Author>
-        <WebSite>http://orchardproject.net</WebSite>
-        <Tags></Tags>
-        <Version>1.0</Version>
-      </Recipe>
-    
-      <Module packageId="Orchard.Module.Bing.Maps" />
-    
-      <Theme packageId="Orchard.Theme.Dark" current="true" />
-    
-      <Feature enable="Orchard.Blogs,Orchard.Comments,Orchard.Tags,
-                       Orchard.Lists,TinyMce,Orchard.Media,Orchard.MediaPicker,Orchard.PublishLater,
-                       Orchard.jQuery,Orchard.Widgets,Orchard.Widgets.PageLayerHinting,Orchard.ContentTypes,
-                       Orchard.Scripting,Orchard.Scripting.Lightweight,
-                       PackagingServices,Orchard.Packaging,Gallery,Gallery.Updates,
-                       TheThemeMachine,Bing.Maps" />
-    
-      <Metadata>
-        <Types>
-          <Page ContentTypeSettings.Draftable="True" TypeIndexing.Included="true">
-            <TagsPart />
-            <LocalizationPart />
-          </Page>
-          <BlogPost ContentTypeSettings.Draftable="True" TypeIndexing.Included="true">
-            <CommentsPart />
-            <TagsPart />
-            <LocalizationPart />
-          </BlogPost>
-        </Types>
-        <Parts>
-          <BodyPart BodyPartSettings.FlavorDefault="html" />
-        </Parts>
-      </Metadata>
-    
-      <Settings />
-    
-      <Migration features="*" />
-    
-      <Command>
-        layer create Default /LayerRule:"true"
-        layer create Authenticated /LayerRule:"authenticated"
-        layer create Anonymous /LayerRule:"not authenticated"
-        layer create Disabled /LayerRule:"false"
-        layer create TheHomepage /LayerRule:"url '~/'"
-        layer create Blog /LayerRule:"url '~/Blog'"
-        layer create Maps /LayerRule:"url '~/Maps'"
-        page create /Slug:"welcome-to-orchard" /Title:"Welcome to Orchard!" /Path:"welcome-to-orchard" /Homepage:true /Publish:true /UseWelcomeText:true
-        blog create /Slug:"blog" /Title:"Blog" /Homepage:false /Description:"This is your Orchard Blog."
-        page create /Slug:"maps" /Title:"Bing Maps" /Path:"bing-maps" /Homepage:false /Publish:true /UseWelcomeText:false
-        widget create HtmlWidget /Title:"First Leader Aside" /Zone:"TripelFirst" /Position:"5" /Layer:"TheHomepage" /UseLoremIpsumText:true
-        widget create HtmlWidget /Title:"Second Leader Aside" /Zone:"TripelSecond" /Position:"5" /Layer:"TheHomepage" /UseLoremIpsumText:true
-        widget create HtmlWidget /Title:"Third Leader Aside" /Zone:"TripelThird" /Position:"5" /Layer:"TheHomepage" /UseLoremIpsumText:true
-        menuitem create /MenuPosition:"1" /MenuText:"Home" /Url:"" /OnMainMenu:true
-        menuitem create /MenuPosition:"2" /MenuText:"Blog" /Url:"~/Blog" /OnMainMenu:true
-        menuitem create /MenuPosition:"3" /MenuText:"Maps" /Url:"~/Maps" /OnMainMenu:true
-      </Command>
-    </Orchard>
+```xml
+<?xml version="1.0"?>
+<Orchard>
+  <Recipe>
+	<Name>Custom Recipe</Name>
+	<Description>A recipe that includes a landing page with blog on a second tab.</Description>
+	<Author>The Orchard Team</Author>
+	<WebSite>http://orchardproject.net</WebSite>
+	<Tags></Tags>
+	<Version>1.0</Version>
+  </Recipe>
+
+  <Module packageId="Orchard.Module.Bing.Maps" />
+
+  <Theme packageId="Orchard.Theme.Dark" current="true" />
+
+  <Feature enable="Orchard.Blogs,Orchard.Comments,Orchard.Tags,
+				   Orchard.Lists,TinyMce,Orchard.Media,Orchard.MediaPicker,Orchard.PublishLater,
+				   Orchard.jQuery,Orchard.Widgets,Orchard.Widgets.PageLayerHinting,Orchard.ContentTypes,
+				   Orchard.Scripting,Orchard.Scripting.Lightweight,
+				   PackagingServices,Orchard.Packaging,Gallery,Gallery.Updates,
+				   TheThemeMachine,Bing.Maps" />
+
+  <Metadata>
+	<Types>
+	  <Page ContentTypeSettings.Draftable="True" TypeIndexing.Included="true">
+		<TagsPart />
+		<LocalizationPart />
+	  </Page>
+	  <BlogPost ContentTypeSettings.Draftable="True" TypeIndexing.Included="true">
+		<CommentsPart />
+		<TagsPart />
+		<LocalizationPart />
+	  </BlogPost>
+	</Types>
+	<Parts>
+	  <BodyPart BodyPartSettings.FlavorDefault="html" />
+	</Parts>
+  </Metadata>
+
+  <Settings />
+
+  <Migration features="*" />
+
+  <Command>
+	layer create Default /LayerRule:"true"
+	layer create Authenticated /LayerRule:"authenticated"
+	layer create Anonymous /LayerRule:"not authenticated"
+	layer create Disabled /LayerRule:"false"
+	layer create TheHomepage /LayerRule:"url '~/'"
+	layer create Blog /LayerRule:"url '~/Blog'"
+	layer create Maps /LayerRule:"url '~/Maps'"
+	page create /Slug:"welcome-to-orchard" /Title:"Welcome to Orchard!" /Path:"welcome-to-orchard" /Homepage:true /Publish:true /UseWelcomeText:true
+	blog create /Slug:"blog" /Title:"Blog" /Homepage:false /Description:"This is your Orchard Blog."
+	page create /Slug:"maps" /Title:"Bing Maps" /Path:"bing-maps" /Homepage:false /Publish:true /UseWelcomeText:false
+	widget create HtmlWidget /Title:"First Leader Aside" /Zone:"TripelFirst" /Position:"5" /Layer:"TheHomepage" /UseLoremIpsumText:true
+	widget create HtmlWidget /Title:"Second Leader Aside" /Zone:"TripelSecond" /Position:"5" /Layer:"TheHomepage" /UseLoremIpsumText:true
+	widget create HtmlWidget /Title:"Third Leader Aside" /Zone:"TripelThird" /Position:"5" /Layer:"TheHomepage" /UseLoremIpsumText:true
+	menuitem create /MenuPosition:"1" /MenuText:"Home" /Url:"" /OnMainMenu:true
+	menuitem create /MenuPosition:"2" /MenuText:"Blog" /Url:"~/Blog" /OnMainMenu:true
+	menuitem create /MenuPosition:"3" /MenuText:"Maps" /Url:"~/Maps" /OnMainMenu:true
+  </Command>
+</Orchard>
+```
 
 
 Note the following about the changes made to the default recipe:
