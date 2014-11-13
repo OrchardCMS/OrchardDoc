@@ -6,7 +6,7 @@
         <li ng-repeat = "contributor in totalContribtors">
             <a href="https://www.github.com/{{ contributor.login }}" target="_blank">{{ contributor.login }}</a>
             <br/>
-            <img src="http://www.gravatar.com/avatar/{{ contributor.gravatar_id}}" alt="{{ contributor.login}}" />
+            <img src="{{ contributor.avatar_url }}" alt="{{ contributor.login}}" />
             <br/>
             <div> Number of Contributions by {{ contributor.login }} : {{ contributor.contributions }}</div>
         </li>
