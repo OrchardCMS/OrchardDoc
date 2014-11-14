@@ -1,19 +1,18 @@
 ﻿<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>
 <script src="/contributor.js"></script>
+<link rel="stylesheet" href="/contributors.css" type="text/css" />
 
 <div ng-controller="OrchardContributor">
     <ul>
-        <li ng-repeat = "contributor in totalContribtors">
-            <a href="https://www.github.com/{{ contributor.login }}" target="_blank">{{ contributor.login }}</a>
-            <br/>
-            <img src="{{ contributor.avatar_url }}" alt="{{ contributor.login}}" />
-            <br/>
-            <div> Number of Contributions by {{ contributor.login }} : {{ contributor.contributions }}</div>
+        <li ng-repeat="contributor in totalContribtors" class="contributor">
+            <a class="contributor-left" href="#">
+                <img src="{{ contributor.avatar_url }}" alt="{{ contributor.login }}" class="contributor-image" />
+            </a>
+            <div class="contributor-body">
+                <h4 class="contributor-heading">{{ contributor.login }}</h4>
+                <p><a href="{{ contributor.html_url }}" target="_blank">{{ contributor.html_url }}</a></p>
+                <p>Total Contributions: {{ contributor.contributions }}</p>
+            </div>
         </li>
     </ul>
 </div>
-<style type="text/css">
-  ul li{
-   list-style : none;
-  }
-</style>
