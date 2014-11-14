@@ -1,3 +1,5 @@
 *Thumbs.db
 *.refresh
 /App_Data/Index
+/App_Data/packages
+/Bin/
