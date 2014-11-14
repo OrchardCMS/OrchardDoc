@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Text.RegularExpressions;
 using Lucene.Net.Analysis.Standard;
 using Lucene.Net.Documents;
 using Lucene.Net.QueryParsers;
@@ -49,7 +50,8 @@ namespace App_Code {
                     Lucene.Net.Util.Version.LUCENE_29,
                     new[] { "Text" },
                     new StandardAnalyzer(Lucene.Net.Util.Version.LUCENE_29));
-                Query multiQuery = parser.Parse(query);
+
+                Query multiQuery = GetSafeQuery(parser, query);
 
                 var result = searchService.SearchIndex(multiQuery);
                 return new SearchResults {
@@ -64,6 +66,30 @@ namespace App_Code {
                     TotalCount = result.Results.Count()
                 };
             }
+        }
+
+        // http://stackoverflow.com/a/855189/156388
+        private static Query GetSafeQuery(QueryParser qp, string query)
+        {
+            Query q;
+            try 
+            {
+                q = qp.Parse(query);
+            } 
+
+            catch(Lucene.Net.QueryParsers.ParseException e) 
+            {
+                q = null;
+            }
+
+            if(q==null)
+            {
+                string cooked;
+                cooked = Regex.Replace(query, @"[^\w\.@-]", " ");
+                q = qp.Parse(cooked);
+            }
+
+            return q;
         }
     }
 }
