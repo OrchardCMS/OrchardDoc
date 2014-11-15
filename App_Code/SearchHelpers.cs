@@ -84,9 +84,7 @@ namespace App_Code {
 
             if(q==null)
             {
-                string cooked;
-                cooked = Regex.Replace(query, @"[^\w\.@-]", " ");
-                q = qp.Parse(cooked);
+                q = qp.Parse(QueryParser.Escape(query));
             }
 
             return q;
