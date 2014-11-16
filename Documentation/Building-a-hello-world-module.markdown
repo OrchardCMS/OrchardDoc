@@ -43,8 +43,6 @@ You should now have a new HelloWorld folder under the Modules folder of your Orc
 
 This text file is describing your module to the system. The information contained in this file will be used for example in the features administration screen.
 
-> Note: be careful to use spaces and not tabs to indent this file
-
 # Adding the Route
 
 Your module will have to handle the /HelloWorld relative URL under your Orchard web site. In order to declare what to do when that URL gets hit, create the following Routes.cs file in the HelloWorld folder:
