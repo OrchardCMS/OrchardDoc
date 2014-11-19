@@ -14,6 +14,8 @@
 
 از قسمت پایین Orchard CMS را انتخاب نمایید. یک نام وارد نمایید به عنوان پوشه ای برای سایت شما مورد استفاده قرار می گیرد.برای مثال، اگر شما نام “Orchard cms”  را وارد نمایید، پوشه ای به این نام در مسیر زیر ساخته می شود. "Documents/My Websites/Orchard CMS" . بر روی دکمه Next کلیک نمایید.
 
+Click **I Accept** to accept the EULA agreement
+
 با کلیک بر روی I Accept  موافقت خود را با قوانین اعلام نمایید.
 
 ![](../Upload/screenshots_675/webmatrix_orchard_eula_675.png)
@@ -26,7 +28,6 @@
 به طور خاص: نام سایت ، نام یک کاربر سایت ، رمز عبور، یک نوع دیتابیس برای داده های سایت و دستورالعمل اورچارد(Orchard recipe).
 
 اگر شما می خواهید فقط از اورچارد شروع کنید. ما توصیه می کنیم که برای دیتابیس SQL Compact Server را انتخاب نمایید. برای دستورالعمل هم Default را انتخاب نمایید. اطلاعات را وارد نمایید و بر روی اتمام تنظیمات (Finish Setup) کلیک نمایید.
-
 ![](../Upload/screenshots/setup_new_site.png)
 
 ![](../Upload/screenshots_675/webmatrix_finish_setup_675.png) 
@@ -44,7 +45,9 @@
 
 ![](../Upload/screenshots/webmatrix_run.png)
 
+
 کار با فایل ها 
+
 
 شما می توانید از وب ماتریکس برای ویرایش فایل ها و نصب اورچارد استفاده نمایید. وب ماتریکس یک ویرایشگر ساده را فراهم می کند برای رنگ دهی     HTML, CSS, JavaScript و کد فایل ها.
 
@@ -105,32 +108,29 @@
 ![](../Upload/screenshots/webmatrix_publish.png)
 
 برای اولین باری که سایت را منتشر می نمایید کادر محاوره ای نمایش داده می شود.
-
 ![](../Upload/screenshots_675/webmatrix_publish_firsttime_675.png)
+
 
 برای انتشار وب سایت ، باید یک اکانت ارائه دهنده خدمات میزبانی وب (hosting)  داشته باشد، اگر شما به هاست دسترسی ندارید می توانید چیز دیگری انتخاب نمایید، می توانید با ویندوز Azure شروع به کار نمایید یا از وب سایت های میزبانی وب ویندوز استفاده نمایید.
 اگر شما Windows Azure را انتخاب می نمایید. شما گزینه ای برای ایجاد وب سایت دارید. اگر Windows Azure را انتخاب نمایید، گزینه ای برای ایجاد وب سایت یا Azure Web Role دارید  به دستورالعمل های مربوط به کار با  Azure  نگاه کنید.
 
- ![](../Upload/screenshots_675/webmatrix_AzurePortal_675.png) 
 
+After you've set up an account with a hosting provider, the provider will typically send you an email with your user name, server name, and other information. To save you the extra step of entering this information manually, the provider might send you a "Profile XML" file (named with the _.publishsettings_ extension) that contains this information. 
+You can use these settings by selecting **Import publish profile** and then selecting the file provided by your hoster. Otherwise, you can enter the settings manually. 
 
-پس از تنظیم یک حساب کاربری با ارائه دهنده میزبانی وب 
-پس از شما در راه اندازی یک حساب کاربری با ارائه دهنده میزبانی وب، ارائه خواهد شد به طور معمول شما یک ایمیل با نام کاربری، نام سرور، و دیگر اطلاعات خصوصی بفرستید. برای صرفه جویی در شما گام اضافی از وارد کردن این اطلاعات به صورت دستی، ارائه دهنده ممکن است شما را یک "نمایش XML" فایل (به نام با فرمت _.publishsettings_) که حاوی این اطلاعات ارسال
-می توان با انتخاب **Import publish profile** این تنظیمات را انجام داد و سپس انتخاب فایل ارائه شده میزبان سایت خود را وارد نمایید. در غیر اینصورت می توانید تنظیمات را دستی وارد نمایید.
-
-![](../Upload/screenshots_675/webmatrix_import_settings_675.png)  
+ ![](../Upload/screenshots_675/webmatrix_import_settings_675.png)  
  
-بعد از انتشار سایت خود ممکن است مایل به ایجاد تغییراتی مجدد در سایت باشید و مجدد آنرا راه اندازی نمایید.
-زمانی که سایت را مجدد منتشر کردید ، وب ماتریکس لیستی از فایلهایی که تغییرات بر روی آن اعمال کرده اید نمایش می دهد.
-در این مرحله شما می توانید انتخاب کنید فایلهای را که می خواهید بارگذاری نمایید و با انتخاب ادامه یا انصراف سایت را کنترل نمایید.
+After you've published your site, you might want to make changes to it and republish it.  When you subsequently select **Publish**, WebMatrix will list the local files that have been changed since the last time the local site was published.
+At this point you can select which files you want to upload to the remote stie and select **Continue** or cancel.
+ ![](../Upload/screenshots_675/webmatrix_publish_preview_675.png) 
 
-![](../Upload/screenshots_675/webmatrix_publish_preview_675.png) 
  
-
-هنگامی که می خواهید وب سایت خود را منتشر کردید، می توانید فایلها را ببینید و فایلها را از دور کنترل نمایید.
-
+Once you have published your website, you can view the files in the remote site by opening the **Remote View**.
 
 ![](../Upload/screenshots_675/webmatrix_remote_view_675.png)
 
-برای اطلاعات بیشتر در مورد استفاده از وب ماتریکس و انتشار سایت به  آدرس زیر مراجعه نمایید.
- [here]
+More information about using WebMatrix to publish websites can be found [here](http://www.microsoft.com/web/post/how-to-publish-a-web-application-using-webmatrix).
+
+# Change History
+* Updates for Orchard 1.6
+	* 11-14-12:  Updated screens and workflow.
