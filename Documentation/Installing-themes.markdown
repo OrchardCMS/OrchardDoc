@@ -1,9 +1,7 @@
 
-There are two ways to add a theme to Orchard. The first and easiest is to use the **Gallery** tab on the **Themes** page in the dashboard to browse and install themes from an online feed of available themes. The second is to go to the dashboard **Themes** page and click the link to install a theme, which allows you to browse for a theme package on your local computer and install it.
-دو راه براي افزودن زمينه به ارچارد وجود دارد. اولين و ساده  راه ترين استفاده از تب **Gallery** در صفحه **Theme** در داشبورد براي جستوجو و نصب  زمينه ها از از زمينه هاي هاي موجود. دومين راه گرفتن از صفحه **Theme** و کليک بر روي لينک نصب زمينه ,که براي بسته هاي زمينه دز کاپيوتر و نصب آن به شما اجازه مي دهد.
+دو راه براي افزودن زمينه به اورچارد وجود دارد. اولين و ساده ترين راه  استفاده از تب **Gallery** در صفحه **Theme** در داشبورد جهت جستوجو و نصب  زمينه از زمينه هاي موجود در سایت اورچارد. دومين راه به صفحه **Theme** بروید و با کليک بر روي لينک نصب زمينه ,که به شما اجازه از سیستم خود پکیج زمینه را به سایت ارسال و نصب نمایید.
 > **Note** If your site is running under IIS, make sure you have granted read/write permissions to the _~/Themes_ folder under the root of your site for the service account that is being used as the IIS application pool identity. However, you should remove the write permissions on a production server.
-يادداشت:
-اگر سايت شما تحت IIS  اجرا مي شود  , مطمئن شويد که شما …………………………پوشه _/Themes_  بر پايه  سايت شما براي  سرويس 
+> **نکته:** اگر سايت شما تحت IIS  اجرا مي شود  , مطمئن شويد که شما …………………………پوشه _/Themes_  بر پايه  سايت شما براي  سرويس 
 
 # Installing a Theme from the Gallery
 When the gallery feature is enabled, as it is by default in Orchard, a **Gallery** tab appears at the top of the both the **Themes** screen and the **Modules** screen in the dashboard. 
