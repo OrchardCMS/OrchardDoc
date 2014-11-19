@@ -1,6 +1,7 @@
 
-Orchard provides a blogging engine that makes it easy to add a blog to your web site.
-This topic describes how to create a blog for your site and then add a new blog post.
+اورچارد یک موتور بلاگ نویسی در اختیار ما میگذارد که با آن می توان به سادگی یک وبلاگ به وب سایتمان اضافه نمود.
+در اینجا نحوه ایجاد و اضافه نمودن آن به وبسایت را توضیح میدهیم سپس نحوه اضافه نمودن یک متن جدید به این وبلاگ را شرح می دهیم.
+
 
 ### ایجاد وبلاگ
 
