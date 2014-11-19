@@ -1,8 +1,14 @@
+﻿ ساختن یک سیستم مدیریت محتوا (CMS)همانندایجاد یک سامانه وب معمولی نیست :
+بیشتر شبیه ساختن یک برنامه container . زمانی که اینچنین سیستمی طراحی می کنید می بایستی قابلیت گسترش پذیری را داشته باشد.
+داشتن این قابلیت چالشی بزرگ می باشد ، چرا که وجود ساختار باز برای ایجاد قابلیت گسترش پذیری می تواند کارایی این نرم افزار را به خطر اندازد. همه چیز در این سیستم می بایستی گسترش پذیر در قالب ویژگی و یاابزارک باشد، این قابلیت شامل واسظ کاربری نیز می باشد. در کل هدف اورچارد هماهنگی تمام این قسمت های کوچک که با هم ارتباطی ندارند به صورت یک مجموعه منسجم است.
+
 Building a Web CMS (Content Management System) is unlike building a regular web application: it is more like building an application container. When designing such a system, it is necessary to build extensibility as a first-class feature. This can be a challenge as the very open type of architecture that's necessary to allow for great extensibility may compromise the usability of the application: everything in the system needs to be composable with unknown future modules, including at the user interface level. Orchestrating all those little parts that don't know about each other into a coherent whole is what Orchard is all about.
+ 
+این مقاله چگونگی انتخاب معماری مناسب برای دستیابی به دو هدف مهم انعتاف پذیری و تجربه کاربری خوب را بیان می کند.
 
 This document explains the architectural choices we made in Orchard and how they are solving that particular problem of getting both flexibility and a good user experience.
 
-
+ساختار 
 # Architecture
 
 <table cellspacing="2" cellpadding="2" border="1" style="width:100%">
@@ -25,11 +31,19 @@ This document explains the architectural choices we made in Orchard and how they
 </tr>
 </table>
 
+بنیان اورچارد
 # Orchard Foundations
 
+سیستم مدیریت مهتوای اورچارد بر پایه فرم ورک ها و کتابخانه ها ی موجود ساخته شده است. لیست مهمترین و 
 The Orchard CMS is built on existing frameworks and libraries. Here are a few of the most fundamental ones:
 
+
+-[ASP.NET MVC](http://www.asp.net/mvc): یک فرم ورک پیشرفته توسعه که جداسازی و حداقل وابستگی را پیشتهاد می کند.
+
 - [ASP.NET MVC](http://www.asp.net/mvc): ASP.NET MVC is a modern Web development framework that encourages separation of concerns.
+
+- [NHibernate](http://nhforge.org/): یک ابزار 
+
 - [NHibernate](http://nhforge.org/): NHibernate is an object-relational mapping tool. It handles the persistence of the Orchard content items to the database and considerably simplifies the data model by removing altogether the concern of persistence from module development. You can see examples of that by looking at the source code of any core content type, for example Pages.
 - [Autofac](http://code.google.com/p/autofac/): Autofac is an [IoC container](http://en.wikipedia.org/wiki/Inversion_of_control). Orchard makes heavy use of dependency injection. Creating an injectable Orchard dependency is as simple as writing a class that implements IDependency or a more specialized interface that itself derives from IDependency (a marker interface), and consuming the dependency is as simple as taking a constructor parameter of the right type. The scope and lifetime of the injected dependency will be managed by the Orchard framework. You can see examples of that by looking at the source code for IAuthorizationService, RolesBasedAuthorizationService and XmlRpcHandler.
 - [Castle Dynamic Proxy](http://www.castleproject.org/projects/dynamicproxy/): we use Castle for dynamic proxy generation.
