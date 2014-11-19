@@ -1,9 +1,9 @@
 
 There are two ways to add a theme to Orchard. The first and easiest is to use the **Gallery** tab on the **Themes** page in the dashboard to browse and install themes from an online feed of available themes. The second is to go to the dashboard **Themes** page and click the link to install a theme, which allows you to browse for a theme package on your local computer and install it.
-Ïæ ÑÇå ÈÑÇí ÇİÒæÏä Òãíäå Èå ÇÑÇÑÏ æÌæÏ ÏÇÑÏ. Çæáíä æ ÓÇÏå  ÑÇå ÊÑíä ÇÓÊİÇÏå ÇÒ ÊÈ **Gallery** ÏÑ ÕİÍå **Theme** ÏÑ ÏÇÔÈæÑÏ ÈÑÇí ÌÓÊæÌæ æ äÕÈ  Òãíäå åÇ ÇÒ ÇÒ Òãíäå åÇí åÇí ãæÌæÏ. Ïæãíä ÑÇå ÑİÊä ÇÒ ÕİÍå **Theme** æ ˜áí˜ ÈÑ Ñæí áíä˜ äÕÈ Òãíäå ,˜å ÈÑÇí ÈÓÊå åÇí Òãíäå ÏÒ ˜ÇíæÊÑ æ äÕÈ Âä Èå ÔãÇ ÇÌÇÒå ãí ÏåÏ.
+Ø¯Ùˆ Ø±Ø§Ù‡ Ø¨Ø±Ø§ÙŠ Ø§ÙØ²ÙˆØ¯Ù† Ø²Ù…ÙŠÙ†Ù‡ Ø¨Ù‡ Ø§Ø±Ú†Ø§Ø±Ø¯ ÙˆØ¬ÙˆØ¯ Ø¯Ø§Ø±Ø¯. Ø§ÙˆÙ„ÙŠÙ† Ùˆ Ø³Ø§Ø¯Ù‡  Ø±Ø§Ù‡ ØªØ±ÙŠÙ† Ø§Ø³ØªÙØ§Ø¯Ù‡ Ø§Ø² ØªØ¨ **Gallery** Ø¯Ø± ØµÙØ­Ù‡ **Theme** Ø¯Ø± Ø¯Ø§Ø´Ø¨ÙˆØ±Ø¯ Ø¨Ø±Ø§ÙŠ Ø¬Ø³ØªÙˆØ¬Ùˆ Ùˆ Ù†ØµØ¨  Ø²Ù…ÙŠÙ†Ù‡ Ù‡Ø§ Ø§Ø² Ø§Ø² Ø²Ù…ÙŠÙ†Ù‡ Ù‡Ø§ÙŠ Ù‡Ø§ÙŠ Ù…ÙˆØ¬ÙˆØ¯. Ø¯ÙˆÙ…ÙŠÙ† Ø±Ø§Ù‡ Ú¯Ø±ÙØªÙ† Ø§Ø² ØµÙØ­Ù‡ **Theme** Ùˆ Ú©Ù„ÙŠÚ© Ø¨Ø± Ø±ÙˆÙŠ Ù„ÙŠÙ†Ú© Ù†ØµØ¨ Ø²Ù…ÙŠÙ†Ù‡ ,Ú©Ù‡ Ø¨Ø±Ø§ÙŠ Ø¨Ø³ØªÙ‡ Ù‡Ø§ÙŠ Ø²Ù…ÙŠÙ†Ù‡ Ø¯Ø² Ú©Ø§Ù¾ÙŠÙˆØªØ± Ùˆ Ù†ØµØ¨ Ø¢Ù† Ø¨Ù‡ Ø´Ù…Ø§ Ø§Ø¬Ø§Ø²Ù‡ Ù…ÙŠ Ø¯Ù‡Ø¯.
 > **Note** If your site is running under IIS, make sure you have granted read/write permissions to the _~/Themes_ folder under the root of your site for the service account that is being used as the IIS application pool identity. However, you should remove the write permissions on a production server.
-íÇÏÏÇÔÊ:
-ÇÑ ÓÇíÊ ÔãÇ ÊÍÊ IIS  ÇÌÑÇ ãí ÔæÏ  , ãØãÆä ÔæíÏ ˜å ÔãÇ …………………………æÔå _/Themes_  ÈÑ Çíå  ÓÇíÊ ÔãÇ ÈÑÇí  ÓÑæíÓ 
+ÙŠØ§Ø¯Ø¯Ø§Ø´Øª:
+Ø§Ú¯Ø± Ø³Ø§ÙŠØª Ø´Ù…Ø§ ØªØ­Øª IIS  Ø§Ø¬Ø±Ø§ Ù…ÙŠ Ø´ÙˆØ¯  , Ù…Ø·Ù…Ø¦Ù† Ø´ÙˆÙŠØ¯ Ú©Ù‡ Ø´Ù…Ø§ â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦Ù¾ÙˆØ´Ù‡ _/Themes_  Ø¨Ø± Ù¾Ø§ÙŠÙ‡  Ø³Ø§ÙŠØª Ø´Ù…Ø§ Ø¨Ø±Ø§ÙŠ  Ø³Ø±ÙˆÙŠØ³ 
 
 # Installing a Theme from the Gallery
 When the gallery feature is enabled, as it is by default in Orchard, a **Gallery** tab appears at the top of the both the **Themes** screen and the **Modules** screen in the dashboard. 
@@ -11,26 +11,26 @@ When the gallery feature is enabled, as it is by default in Orchard, a **Gallery
 ![](../Upload/screenshots/Themes_gallery_enabled.png)
 
 > Note:  If the gallery feature has been disabled, there will be no **Gallery** tab visible in the **Themes** or **Modules** dashboard screens. To enable a disabled gallery, click **Modules** in the dashboard, and click **Enable** on the Gallery feature. 
-#äÕÈ Òãíäå ÇÒ ÇáÑí
-ÒãÇäí ˜å ÎÇÕíÊ ÇáÑí İÚÇá ÇÓÊ , åäÇãí ˜å Èå ØæÑ íÔ İÑÖ ÏÑ ÇÑÇÑÏ ,  ÊÈ  **Gallery** ÏÑ ÈÇáÇí åÑ Ïæ ÕİÍå **Theme**  æ ÕİÍå **Modules** ÏÑ ÏÇÔÈæÑÏ ÙÇåÑ ãí ÔæÏ.
-íÇÏÏÇÔÊ: ÇÑ æíí ÇáÑí ÛíÑİÚÇá ÔÏå ÈÇÔÏ , åí ÊÈ **Gallery**  ÏÑ ÏÇÔÈæÑÏ **Theme** íÇ **Module** ÙÇåÑ äãí ÔæÏ.ÈÑÇí İÚÇá ˜ÑÏä ÇáÑí ÛíÑ İÚÇá , **Module** ÏÑ ÏÇÔÈæÑÏ ÑÇ ÇäÊÎÇÈ ˜äíÏ ,  æ æíí ÇáÑí** Enable** ÑÇ ÈÑ ÒíäíÏ
+#Ù†ØµØ¨ Ø²Ù…ÙŠÙ†Ù‡ Ø§Ø² Ú¯Ø§Ù„Ø±ÙŠ
+Ø²Ù…Ø§Ù†ÙŠ Ú©Ù‡ Ø®Ø§ØµÙŠØª Ú¯Ø§Ù„Ø±ÙŠ ÙØ¹Ø§Ù„ Ø§Ø³Øª , Ù‡Ù†Ú¯Ø§Ù…ÙŠ Ú©Ù‡ Ø¨Ù‡ Ø·ÙˆØ± Ù¾ÙŠØ´ ÙØ±Ø¶ Ø¯Ø± Ø§Ø±Ú†Ø§Ø±Ø¯ ,  ØªØ¨  **Gallery** Ø¯Ø± Ø¨Ø§Ù„Ø§ÙŠ Ù‡Ø± Ø¯Ùˆ ØµÙØ­Ù‡ **Theme**  Ùˆ ØµÙØ­Ù‡ **Modules** Ø¯Ø± Ø¯Ø§Ø´Ø¨ÙˆØ±Ø¯ Ø¸Ø§Ù‡Ø± Ù…ÙŠ Ø´ÙˆØ¯.
+ÙŠØ§Ø¯Ø¯Ø§Ø´Øª: Ø§Ú¯Ø± ÙˆÙŠÚ˜Ú¯ÙŠ Ú¯Ø§Ù„Ø±ÙŠ ØºÙŠØ±ÙØ¹Ø§Ù„ Ø´Ø¯Ù‡ Ø¨Ø§Ø´Ø¯ , Ù‡ÙŠÚ† ØªØ¨ **Gallery**  Ø¯Ø± Ø¯Ø§Ø´Ø¨ÙˆØ±Ø¯ **Theme** ÙŠØ§ **Module** Ø¸Ø§Ù‡Ø± Ù†Ù…ÙŠ Ø´ÙˆØ¯.Ø¨Ø±Ø§ÙŠ ÙØ¹Ø§Ù„ Ú©Ø±Ø¯Ù† Ú¯Ø§Ù„Ø±ÙŠ ØºÙŠØ± ÙØ¹Ø§Ù„ , **Module** Ø¯Ø± Ø¯Ø§Ø´Ø¨ÙˆØ±Ø¯ Ø±Ø§ Ø§Ù†ØªØ®Ø§Ø¨ Ú©Ù†ÙŠØ¯ ,  Ùˆ ÙˆÙŠÚ˜Ú¯ÙŠ Ú¯Ø§Ù„Ø±ÙŠ** Enable** Ø±Ø§ Ø¨Ø± Ú¯Ø²ÙŠÙ†ÙŠØ¯
 
 In the **Themes** screen of the dashboard, click the **Gallery** tab. A set of themes appears with a pair of **Install** and **Download** links next to each theme. 
 
-ÏÑ ÕİÍå  **Theme** ÇÒ ÏÇÔÈæÑÏ , ÊÈ **Gallery** ÑÇ ÇäÊÎÇÈ ˜äíÏ. í˜ ãÌãæÚå ÇÒ Òãíäå åÇ ÏÑ ˜äÇÑ åÑ Ïæ áíä˜ **Install** æ**Download** ÏÑ ˜äÇÑ í˜ÏíÑ ÙÇåÑ ãí ÔæäÏ.
+Ø¯Ø± ØµÙØ­Ù‡  **Theme** Ø§Ø² Ø¯Ø§Ø´Ø¨ÙˆØ±Ø¯ , ØªØ¨ **Gallery** Ø±Ø§ Ø§Ù†ØªØ®Ø§Ø¨ Ú©Ù†ÙŠØ¯. ÙŠÚ© Ù…Ø¬Ù…ÙˆØ¹Ù‡ Ø§Ø² Ø²Ù…ÙŠÙ†Ù‡ Ù‡Ø§ Ø¯Ø± Ú©Ù†Ø§Ø± Ù‡Ø± Ø¯Ùˆ Ù„ÙŠÙ†Ú© **Install** Ùˆ**Download** Ø¯Ø± Ú©Ù†Ø§Ø± ÙŠÚ©Ø¯ÙŠÚ¯Ø± Ø¸Ø§Ù‡Ø± Ù…ÙŠ Ø´ÙˆÙ†Ø¯.
 ![](../Upload/screenshots_675/Gallerythemes_installing_675.png)
 
 To install a theme in your site, click the **Install** link next to the theme. Installing a theme adds it to your site in the **Available** list of themes on the **Themes** page in the dashboard. From there, you can preview a theme or set it as the current site theme, as described [Previewing and Applying a Theme](Previewing-and-applying-a-theme).
-ÈÑÇí äÕÈ Òãíäå ÏÑ ÓÇíÊ ÎæÏ ,  áíä˜ **Install**  ÏÑ ˜äÇÑ Òãíäå ÇäÊÎÇÈ ˜äíÏ .  äÕÈ ˜ÑÏä Òãíäå Âä ÑÇ Èå ÓÇíÊ ÔãÇ ÏÑ áíÓÊ Òãíäå åÇí **Available**   ÏÑ ÕİÍå **Theme** ÏÑ ÏÇÔÈæÑÏ ÇÖÇİå ãí ˜äÏ.ÇÒ ÂäÌÇ ÔãÇ ãí ÊæÇäíÏ Òãíäå ÑÇ ãÔÇåÏå íÇ Âä ÑÇ Èå ÚäæÇä Òãíäå ÓÇíÊ ÇäÊÎÇÈ ˜äíÏ,   åãÇäØæÑ ˜å ÏÑ[Previewing and Applying a Theme](Previewing-and-applying-a-theme)   ÔÑÍ ÏÇÏå ÔÏå.
+Ø¨Ø±Ø§ÙŠ Ù†ØµØ¨ Ø²Ù…ÙŠÙ†Ù‡ Ø¯Ø± Ø³Ø§ÙŠØª Ø®ÙˆØ¯ ,  Ù„ÙŠÙ†Ú© **Install**  Ø¯Ø± Ú©Ù†Ø§Ø± Ø²Ù…ÙŠÙ†Ù‡ Ø§Ù†ØªØ®Ø§Ø¨ Ú©Ù†ÙŠØ¯ .  Ù†ØµØ¨ Ú©Ø±Ø¯Ù† Ø²Ù…ÙŠÙ†Ù‡ Ø¢Ù† Ø±Ø§ Ø¨Ù‡ Ø³Ø§ÙŠØª Ø´Ù…Ø§ Ø¯Ø± Ù„ÙŠØ³Øª Ø²Ù…ÙŠÙ†Ù‡ Ù‡Ø§ÙŠ **Available**   Ø¯Ø± ØµÙØ­Ù‡ **Theme** Ø¯Ø± Ø¯Ø§Ø´Ø¨ÙˆØ±Ø¯ Ø§Ø¶Ø§ÙÙ‡ Ù…ÙŠ Ú©Ù†Ø¯.Ø§Ø² Ø¢Ù†Ø¬Ø§ Ø´Ù…Ø§ Ù…ÙŠ ØªÙˆØ§Ù†ÙŠØ¯ Ø²Ù…ÙŠÙ†Ù‡ Ø±Ø§ Ù…Ø´Ø§Ù‡Ø¯Ù‡ ÙŠØ§ Ø¢Ù† Ø±Ø§ Ø¨Ù‡ Ø¹Ù†ÙˆØ§Ù† Ø²Ù…ÙŠÙ†Ù‡ Ø³Ø§ÙŠØª Ø§Ù†ØªØ®Ø§Ø¨ Ú©Ù†ÙŠØ¯,   Ù‡Ù…Ø§Ù†Ø·ÙˆØ± Ú©Ù‡ Ø¯Ø±[Previewing and Applying a Theme](Previewing-and-applying-a-theme)   Ø´Ø±Ø­ Ø¯Ø§Ø¯Ù‡ Ø´Ø¯Ù‡.
 
 # Installing a Theme from your Local Computer
 To install a theme from your local computer, in the **Themes** screen of the dashboard, click the link to **Install a theme from your computer**. This displays a screen that lets you install a theme.
 ![](../Upload/screenshots/themes_installnew_upload.png)
 Browse to a local package file that contains a theme (, select it, and then click **Install**.  The theme package is installed in your site, and you will see the theme listed in the **Available** section of the **Themes** screen. 
 
-#äÕÈ í˜ Òãíäå  ÈÑÇí ÑÇíÇäå 
-ÈÑÇí äÕÈ í˜ Òãíäå ÇÒ ÒÇíÇäå ÎæÏ ,  ÏÑ ÕİÍå **Theme**  ÇÒ ÏÇÔÈæÑÏ , áíä˜ **install a theme  from your compuer** ÑÇ ÇäÊÎÇÈ ˜äíÏ.Çíä í˜ ÕİÍå ˜å Èå ÔãÇ ÇÌÇÒå ãí ÏåÏ í˜ Òãíäå ÑÇ  äÕÈ ˜äíÏ äãÇíÔ ãí ÏåÏ.
-ÌÓÊ æ Ìæ í˜ ÈÓÊå ÑæäÏå  ˜å ÔÇãá  Òãíäå the file will have a _.nupkg_ extension))  Âä ÑÇ ÇäÊÎÇÈ ˜äíÏ, æ **Install** ÑÇ ÇäÊÎÇÈ ˜äíÏ. ÈÓÊå Òãíäå ÏÑ ÓÇíÊ ÔãÇ äÕÈ ãí ÔæÏ, æ ÔãÇ ãí ÊæÇäíÏ áíÓÊ Òãíäå åÇ ÑÇ ÏÑ ŞÓãÊ **Available** ÏÑ ÕİÍå **Themes** ãÔÇåÏå ˜äíÏ
+#Ù†ØµØ¨ ÙŠÚ© Ø²Ù…ÙŠÙ†Ù‡  Ø¨Ø±Ø§ÙŠ Ø±Ø§ÙŠØ§Ù†Ù‡ 
+Ø¨Ø±Ø§ÙŠ Ù†ØµØ¨ ÙŠÚ© Ø²Ù…ÙŠÙ†Ù‡ Ø§Ø² Ø²Ø§ÙŠØ§Ù†Ù‡ Ø®ÙˆØ¯ ,  Ø¯Ø± ØµÙØ­Ù‡ **Theme**  Ø§Ø² Ø¯Ø§Ø´Ø¨ÙˆØ±Ø¯ , Ù„ÙŠÙ†Ú© **install a theme  from your compuer** Ø±Ø§ Ø§Ù†ØªØ®Ø§Ø¨ Ú©Ù†ÙŠØ¯.Ø§ÙŠÙ† ÙŠÚ© ØµÙØ­Ù‡ Ú©Ù‡ Ø¨Ù‡ Ø´Ù…Ø§ Ø§Ø¬Ø§Ø²Ù‡ Ù…ÙŠ Ø¯Ù‡Ø¯ ÙŠÚ© Ø²Ù…ÙŠÙ†Ù‡ Ø±Ø§  Ù†ØµØ¨ Ú©Ù†ÙŠØ¯ Ù†Ù…Ø§ÙŠØ´ Ù…ÙŠ Ø¯Ù‡Ø¯.
+Ø¬Ø³Øª Ùˆ Ø¬Ùˆ ÙŠÚ© Ø¨Ø³ØªÙ‡ Ù¾Ø±ÙˆÙ†Ø¯Ù‡  Ú©Ù‡ Ø´Ø§Ù…Ù„  Ø²Ù…ÙŠÙ†Ù‡ the file will have a _.nupkg_ extension))  Ø¢Ù† Ø±Ø§ Ø§Ù†ØªØ®Ø§Ø¨ Ú©Ù†ÙŠØ¯, Ùˆ **Install** Ø±Ø§ Ø§Ù†ØªØ®Ø§Ø¨ Ú©Ù†ÙŠØ¯. Ø¨Ø³ØªÙ‡ Ø²Ù…ÙŠÙ†Ù‡ Ø¯Ø± Ø³Ø§ÙŠØª Ø´Ù…Ø§ Ù†ØµØ¨ Ù…ÙŠ Ø´ÙˆØ¯, Ùˆ Ø´Ù…Ø§ Ù…ÙŠ ØªÙˆØ§Ù†ÙŠØ¯ Ù„ÙŠØ³Øª Ø²Ù…ÙŠÙ†Ù‡ Ù‡Ø§ Ø±Ø§ Ø¯Ø± Ù‚Ø³Ù…Øª **Available** Ø¯Ø± ØµÙØ­Ù‡ **Themes** Ù…Ø´Ø§Ù‡Ø¯Ù‡ Ú©Ù†ÙŠØ¯
 
 
 
@@ -40,16 +40,16 @@ The following illustration shows the Terra theme, which was previously downloade
 
 ![](../Upload/screenshots_675/theme_addLocal_install_675.png)
 
-íÇÏÏÇÔÊ :
-í˜ Òãíäå ÔÇãá ÊÚÏÇÏí  ÑæäÏå æ æÔå ãí ÔæÏ ˜å ÏÑ í˜ ÑæäÏå ZIP   ˜å İÑãÊ _.nupkg_    ÑÇ ÏÇÑÏ. 
-ÈÓÊå åÇí æíí åÇ ÊæÓØ ÈÓÊå åÇí ãÏíÑíÊ ÓíÓÊã NuGet  ÇÑÇÆå ÔÏå ÇÓÊ.ÈÓÊå åÇí Òãíäå åÇ æ  ………………. 
-¿
-¿
-¿
-¿
-¿
+ÙŠØ§Ø¯Ø¯Ø§Ø´Øª :
+ÙŠÚ© Ø²Ù…ÙŠÙ†Ù‡ Ø´Ø§Ù…Ù„ ØªØ¹Ø¯Ø§Ø¯ÙŠ  Ù¾Ø±ÙˆÙ†Ø¯Ù‡ Ùˆ Ù¾ÙˆØ´Ù‡ Ù…ÙŠ Ø´ÙˆØ¯ Ú©Ù‡ Ø¯Ø± ÙŠÚ© Ù¾Ø±ÙˆÙ†Ø¯Ù‡ ZIP   Ú©Ù‡ ÙØ±Ù…Øª _.nupkg_    Ø±Ø§ Ø¯Ø§Ø±Ø¯. 
+Ø¨Ø³ØªÙ‡ Ù‡Ø§ÙŠ ÙˆÙŠÚ˜Ú¯ÙŠ Ù‡Ø§ ØªÙˆØ³Ø· Ø¨Ø³ØªÙ‡ Ù‡Ø§ÙŠ Ù…Ø¯ÙŠØ±ÙŠØª Ø³ÙŠØ³ØªÙ… NuGet  Ø§Ø±Ø§Ø¦Ù‡ Ø´Ø¯Ù‡ Ø§Ø³Øª.Ø¨Ø³ØªÙ‡ Ù‡Ø§ÙŠ Ø²Ù…ÙŠÙ†Ù‡ Ù‡Ø§ Ùˆ  â€¦â€¦â€¦â€¦â€¦â€¦. 
+ØŸ
+ØŸ
+ØŸ
+ØŸ
+ØŸ
 
-ãËÇá ÒíÑ äÔÇä ãí ÏåÏ Òãíäå Terra  ÑÇ ,  ˜å Èå ÊÇÒí ÇÒ  Gallery  ÈÑ Ñæí ÑÇíÇäå ÏÇäáæÏ ÔÏå , ÈÚÏ ÇÑ ÇäÊÎÇÈ áíä˜ ** Install a theme from your computer**  æ äÕÈ Âä ÈÑ Ñæí ÓÇíÊ ÇÑÇÑÏ  , Òãíäå äÕÈ ÔÏå ÏÑ ŞÓãÊ **Available** ØÇåÑ ãí ÔæÏ.
+Ù…Ø«Ø§Ù„ Ø²ÙŠØ± Ù†Ø´Ø§Ù† Ù…ÙŠ Ø¯Ù‡Ø¯ Ø²Ù…ÙŠÙ†Ù‡ Terra  Ø±Ø§ ,  Ú©Ù‡ Ø¨Ù‡ ØªØ§Ø²Ú¯ÙŠ Ø§Ø²  Gallery  Ø¨Ø± Ø±ÙˆÙŠ Ø±Ø§ÙŠØ§Ù†Ù‡ Ø¯Ø§Ù†Ù„ÙˆØ¯ Ø´Ø¯Ù‡ , Ø¨Ø¹Ø¯ Ø§Ø± Ø§Ù†ØªØ®Ø§Ø¨ Ù„ÙŠÙ†Ú© ** Install a theme from your computer**  Ùˆ Ù†ØµØ¨ Ø¢Ù† Ø¨Ø± Ø±ÙˆÙŠ Ø³Ø§ÙŠØª Ø§Ø±Ú†Ø§Ø±Ø¯  , Ø²Ù…ÙŠÙ†Ù‡ Ù†ØµØ¨ Ø´Ø¯Ù‡ Ø¯Ø± Ù‚Ø³Ù…Øª **Available** Ø·Ø§Ù‡Ø± Ù…ÙŠ Ø´ÙˆØ¯.
 
 
 
@@ -57,9 +57,9 @@ To use an example theme to test this feature, download an existing theme from th
 
 When a theme is installed, the theme files are placed in the _~/Themes_ folder. You can see the installed themes in your site by checking the **Available** section on the **Themes** page in the dashboard. For more information about how to preview themes and apply them to your site, see [Previewing and Applying a Theme](Previewing-and-applying-a-theme).
   
-ÈÑÇí ÇÓÊİÇÏå ÇÒ Òãíäå     ÈÑÇí ÇãÊÍÇä ˜ÑÏä Çíä æíí ,  Òãíäå ãæÌæÏ ÑÇ  ÇÒ ÊÈ  **Gallery** ÏÑ ÕİÍå **Themes**   ÏÇäáæÏ ˜äíÏ ,  ÓÓ İÇíá ĞÎíÑå ÔÏå  _.nupkg_ ÏÑ ÑÇíÇäå ÑÇ ÌÓÊ æ Ìæ ˜äíÏ æ Âä ÑÇ Èå ÚäæÇä ãÚÑİí ÔÏå äÕÈ ˜äíã.
+Ø¨Ø±Ø§ÙŠ Ø§Ø³ØªÙØ§Ø¯Ù‡ Ø§Ø² Ø²Ù…ÙŠÙ†Ù‡     Ø¨Ø±Ø§ÙŠ Ø§Ù…ØªØ­Ø§Ù† Ú©Ø±Ø¯Ù† Ø§ÙŠÙ† ÙˆÙŠÚ˜Ú¯ÙŠ ,  Ø²Ù…ÙŠÙ†Ù‡ Ù…ÙˆØ¬ÙˆØ¯ Ø±Ø§  Ø§Ø² ØªØ¨  **Gallery** Ø¯Ø± ØµÙØ­Ù‡ **Themes**   Ø¯Ø§Ù†Ù„ÙˆØ¯ Ú©Ù†ÙŠØ¯ ,  Ø³Ù¾Ø³ ÙØ§ÙŠÙ„ Ø°Ø®ÙŠØ±Ù‡ Ø´Ø¯Ù‡  _.nupkg_ Ø¯Ø± Ø±Ø§ÙŠØ§Ù†Ù‡ Ø±Ø§ Ø¬Ø³Øª Ùˆ Ø¬Ùˆ Ú©Ù†ÙŠØ¯ Ùˆ Ø¢Ù† Ø±Ø§ Ø¨Ù‡ Ø¹Ù†ÙˆØ§Ù† Ù…Ø¹Ø±ÙÙŠ Ø´Ø¯Ù‡ Ù†ØµØ¨ Ú©Ù†ÙŠÙ….
 
-ÒãÇäí ˜å Òãíäå äÕÈ ÔÏ ,  ÑæäÏå åÇí Òãíäå ÏÑ æÔå     _~/Themes_ŞÑÇÑ ãí íÑäÏ. ÔãÇ ãí ÊæÇäíÏ Òãíäå åÇí äÕÈ ÔÏå ÎæÏ ÑÇ ÈÇ ÈÑÑÓí ˜ÑÏä ŞÓãÊ**Availabe**    ÏÑ ÕİÍå **Themes** ÏÑ ÏÇÔÈæÑÏ ãÔÇåÏå ˜äíÏ. ÈÑÇí ÇØáÇÚÇÊ ÈíÔÊÑ ÏÑÈÇÑå æäí íÔ äãÇíÔ  Òãíäå åÇ  æ ÇÚãÇá ˜ÑÏä Âä ÏÑ ÓÇíÊ ,  [Previewing and Applying a Theme](Previewing-and-applying-a-theme). ÑÇ ãÔÇåÏå ˜äíÏ.
+Ø²Ù…Ø§Ù†ÙŠ Ú©Ù‡ Ø²Ù…ÙŠÙ†Ù‡ Ù†ØµØ¨ Ø´Ø¯ ,  Ù¾Ø±ÙˆÙ†Ø¯Ù‡ Ù‡Ø§ÙŠ Ø²Ù…ÙŠÙ†Ù‡ Ø¯Ø± Ù¾ÙˆØ´Ù‡     _~/Themes_Ù‚Ø±Ø§Ø± Ù…ÙŠ Ú¯ÙŠØ±Ù†Ø¯. Ø´Ù…Ø§ Ù…ÙŠ ØªÙˆØ§Ù†ÙŠØ¯ Ø²Ù…ÙŠÙ†Ù‡ Ù‡Ø§ÙŠ Ù†ØµØ¨ Ø´Ø¯Ù‡ Ø®ÙˆØ¯ Ø±Ø§ Ø¨Ø§ Ø¨Ø±Ø±Ø³ÙŠ Ú©Ø±Ø¯Ù† Ù‚Ø³Ù…Øª**Availabe**    Ø¯Ø± ØµÙØ­Ù‡ **Themes** Ø¯Ø± Ø¯Ø§Ø´Ø¨ÙˆØ±Ø¯ Ù…Ø´Ø§Ù‡Ø¯Ù‡ Ú©Ù†ÙŠØ¯. Ø¨Ø±Ø§ÙŠ Ø§Ø·Ù„Ø§Ø¹Ø§Øª Ø¨ÙŠØ´ØªØ± Ø¯Ø±Ø¨Ø§Ø±Ù‡ Ú†Ú¯ÙˆÙ†Ú¯ÙŠ Ù¾ÙŠØ´ Ù†Ù…Ø§ÙŠØ´  Ø²Ù…ÙŠÙ†Ù‡ Ù‡Ø§  Ùˆ Ø§Ø¹Ù…Ø§Ù„ Ú©Ø±Ø¯Ù† Ø¢Ù† Ø¯Ø± Ø³Ø§ÙŠØª ,  [Previewing and Applying a Theme](Previewing-and-applying-a-theme). Ø±Ø§ Ù…Ø´Ø§Ù‡Ø¯Ù‡ Ú©Ù†ÙŠØ¯.
   
 
 # Change History
