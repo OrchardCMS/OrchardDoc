@@ -17,7 +17,7 @@ namespace App_Code {
         public static void BuildIndex(HttpContext ctx) {
             var indexPath = ctx.Server.MapPath("~/App_Data/Index");
             var indexWriter = new DirectoryIndexWriter(new DirectoryInfo(indexPath), true);
-            var documentPath = ctx.Server.MapPath("~/Documentation");
+            var documentPath = ctx.Server.MapPath("~/مستندات");
             using (var indexService = new IndexService(indexWriter)) {
                 indexService.IndexEntities(
                     Directory.EnumerateFiles(documentPath, "*.markdown", SearchOption.AllDirectories),
