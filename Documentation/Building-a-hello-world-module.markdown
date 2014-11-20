@@ -43,7 +43,7 @@ You should now have a new HelloWorld folder under the Modules folder of your Orc
 
 This text file is describing your module to the system. The information contained in this file will be used for example in the features administration screen.
 
-  Note: While both spaces and tabs are supported to indent the manifest file, we recommend that you use spaces instead of tabs. As with your main coding, using spaces gives a more consistent editing experience when working in teams.
+> Note: While both spaces and tabs are supported to indent the manifest file, we recommend that you use spaces instead of tabs. As with your main coding, using spaces gives a more consistent editing experience when working in teams.
 
 # Adding the Route
 
