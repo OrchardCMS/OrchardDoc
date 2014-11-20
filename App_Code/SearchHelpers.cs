@@ -26,7 +26,7 @@ namespace App_Code {
                         var name = Path.GetFileNameWithoutExtension(f);
                         var text = File.ReadAllText(f);
                         doc.Add(new Field("Id", name, Field.Store.YES, Field.Index.NOT_ANALYZED));
-                        doc.Add(new Field("Url", "~/Documentation/" + name, Field.Store.YES, Field.Index.NOT_ANALYZED));
+                        doc.Add(new Field("Url", "~/مستندات/" + name, Field.Store.YES, Field.Index.NOT_ANALYZED));
                         doc.Add(new Field("Title", name.Replace('-', ' '), Field.Store.YES, Field.Index.ANALYZED));
                         doc.Add(new Field("Text", text, Field.Store.YES, Field.Index.ANALYZED));
                         doc.Add(new Field("Summary", MarkdownExtensions.ExtractSummary(text), Field.Store.YES, Field.Index.NOT_ANALYZED));
