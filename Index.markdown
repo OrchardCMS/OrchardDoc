@@ -6,7 +6,7 @@ k1m@OrchardPro.ir
 
 ## شروع به کار ##
 * [راه اندازی اورچارد](Documentation/راه-اندازی-اورچارد)
-* [راه اندازی دستی اورچارد با استفاده از فایل زیپ](Documentation/Manually-installing-Orchard-zip-file)
+* [راه اندازی دستی اورچارد با استفاده از فایل فشرده](Documentation/راه-اندازی-دستی-اورچارد-با-استفاده-از-فایل-فشرده)
 * [کار با اورچارد در محیط WebMatrix](Documentation/Working-with-Orchard-in-WebMatrix)
 * [آشنایی با داشبورد مدیریتی](Documentation/Getting-around-the-dashboard)
 * [ساختن اولین سایت با استفاده از اورچارد](Documentation/Getting-Started)
