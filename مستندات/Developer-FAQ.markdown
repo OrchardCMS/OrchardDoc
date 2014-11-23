@@ -1,6 +1,9 @@
 ## What are the dependencies?
 Orchard uses a number of external libraries. They can all be found under \lib directory in your enlistment, as well as are enumerated in [Orchard dependencies and libraries](Orchard-dependencies-and-libraries).
 
+وابستگی ها چیست ؟
+اورچارد از تعدادی کتابخانه خارجی استفاده می کند . که می توان تمامی آنها را در فولدر /lib در شاخه مربوطه پیدا کرد همچنین می توان از لینک رو به رو آنها را پیدا کرد : [Orchard dependencies and libraries](Orchard-dependencies-and-libraries).
+
 ## What framework versions does Orchard support?
 Up to version 1.7 Orchard supports .NET 4.0. As of version 1.8, Orchard is going to run on .NET 4.5 and IIS 7 (or newer).
 
