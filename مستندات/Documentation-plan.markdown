@@ -1,15 +1,15 @@
-## What are the dependencies?
+ï»¿## What are the dependencies?
 Orchard uses a number of external libraries. They can all be found under \lib directory in your enlistment, as well as are enumerated in [Orchard dependencies and libraries](Orchard-dependencies-and-libraries).
 
-æÇÈÓÊí åÇ íÓÊ ¿
-ÇæÑÇÑÏ ÇÒ ÊÚÏÇÏí ˜ÊÇÈÎÇäå ÎÇÑÌí ÇÓÊİÇÏå ãí ˜äÏ . ˜å ãí ÊæÇä ÊãÇãí ÂäåÇ ÑÇ ÏÑ İæáÏÑ /lib ÏÑ ÔÇÎå ãÑÈæØå íÏÇ ˜ÑÏ åãäíä ãí ÊæÇä ÇÒ áíä˜ Ñæ Èå Ñæ ÂäåÇ ÑÇ íÏÇ ˜ÑÏ : [Orchard dependencies and libraries](Orchard-dependencies-and-libraries).
+ÙˆØ§Ø¨Ø³ØªÚ¯ÙŠ Ù‡Ø§ Ú†ÙŠØ³Øª ØŸ
+Ø§ÙˆØ±Ú†Ø§Ø±Ø¯ Ø§Ø² ØªØ¹Ø¯Ø§Ø¯ÙŠ Ú©ØªØ§Ø¨Ø®Ø§Ù†Ù‡ Ø®Ø§Ø±Ø¬ÙŠ Ø§Ø³ØªÙØ§Ø¯Ù‡ Ù…ÙŠ Ú©Ù†Ø¯ . Ú©Ù‡ Ù…ÙŠ ØªÙˆØ§Ù† ØªÙ…Ø§Ù…ÙŠ Ø¢Ù†Ù‡Ø§ Ø±Ø§ Ø¯Ø± ÙÙˆÙ„Ø¯Ø± /lib Ø¯Ø± Ø´Ø§Ø®Ù‡ Ù…Ø±Ø¨ÙˆØ·Ù‡ Ù¾ÙŠØ¯Ø§ Ú©Ø±Ø¯ Ù‡Ù…Ú†Ù†ÙŠÙ† Ù…ÙŠ ØªÙˆØ§Ù† Ø§Ø² Ù„ÙŠÙ†Ú© Ø±Ùˆ Ø¨Ù‡ Ø±Ùˆ Ø¢Ù†Ù‡Ø§ Ø±Ø§ Ù¾ÙŠØ¯Ø§ Ú©Ø±Ø¯ : [Orchard dependencies and libraries](Orchard-dependencies-and-libraries).
 
 ## What framework versions does Orchard support?
 Up to version 1.7 Orchard supports .NET 4.0. As of version 1.8, Orchard is going to run on .NET 4.5 and IIS 7 (or newer).
 
-ÇæÑÇÑÏ å æÑä ÇÒ framework ÑÇ ÔÊíÈÇäí ãí ˜äÏ ¿
+Ø§ÙˆØ±Ú†Ø§Ø±Ø¯ Ú†Ù‡ ÙˆØ±Ú˜Ù† Ø§Ø² framework Ø±Ø§ Ù¾Ø´ØªÙŠØ¨Ø§Ù†ÙŠ Ù…ÙŠ Ú©Ù†Ø¯ ØŸ
 
-ÇæÑÇÑÏ ÇÒ æÑä 1.7 ÈÇ ÈÇáÇ ŞÇÈáíÊ ÔÊíÈÇäí ÇÒ .NET 4.0 æ ÇÒ æÑä 1.8 ÇæÑÇÑÏ ŞÇÏÑ Èå ÔÊíÈÇäí ÇÒ .NET 4.5 æ IIS 7(íÇ ÌÏíÏÊÑ( ÇÓÊ .
+Ø§ÙˆØ±Ú†Ø§Ø±Ø¯ Ø§Ø² ÙˆØ±Ú˜Ù† 1.7 Ø¨Ø§ Ø¨Ø§Ù„Ø§ Ù‚Ø§Ø¨Ù„ÙŠØª Ù¾Ø´ØªÙŠØ¨Ø§Ù†ÙŠ Ø§Ø² .NET 4.0 Ùˆ Ø§Ø² ÙˆØ±Ú˜Ù† 1.8 Ø§ÙˆØ±Ú†Ø§Ø±Ø¯ Ù‚Ø§Ø¯Ø± Ø¨Ù‡ Ù¾Ø´ØªÙŠØ¨Ø§Ù†ÙŠ Ø§Ø² .NET 4.5 Ùˆ IIS 7(ÙŠØ§ Ø¬Ø¯ÙŠØ¯ØªØ±( Ø§Ø³Øª .
 
 ## What are the master and 1.x branches? Which one should I be using?
 
