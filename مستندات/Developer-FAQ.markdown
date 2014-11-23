@@ -8,6 +8,7 @@ Orchard uses a number of external libraries. They can all be found under \lib di
 Up to version 1.7 Orchard supports .NET 4.0. As of version 1.8, Orchard is going to run on .NET 4.5 and IIS 7 (or newer).
 
 اورچارد چه ورژن از framework را پشتیبانی می کند ؟
+
 اورچارد از ورژن 1.7 با بالا قابلیت پشتیبانی از .NET 4.0 و از ورژن 1.8 اورچارد قادر به پشتیبانی از .NET 4.5 و IIS 7(یا جدیدتر( است .
 
 ## What are the master and 1.x branches? Which one should I be using?
