@@ -1,37 +1,31 @@
-# Building up a menu structure
+ایجاد یک ساختار منو
 
-> This information is for Orchard version >= 1.5.1.0.
+این اطلاعات برای اورچارد ورژن1.5.1.0. است 
+راه های مختلفی برای ساختن یک ساختار منو وجود دارد. در اینجا ما دو روش معمول است که می تواند مورد استفاده قرار گیرد 
 
-There are different ways to build up a menu structure. Here we will show two common methods that could be used:
-
-* Adding menu items first, content later
-* Content first, navigation later
-
-## Adding menu items first, content later
-
-In the Orchard administration panel click the **Navigation** menu item. 
-You will see that there is a default menu available, called 'Main Menu'.
-The right side contains all types of menu items that you can add:
-* Content Menu Item
-* Custom Link
-* Html Menu Item
+*ابتدا ایجاد منو و سپس ایجاد محتوا
+*ایجاد محتوا و پس از آن ایجاد منو
+ابتدا ایجاد منو و سپس ایجاد محتوا 
+در پنل مدیریت اورچارد بر روی آیتم منو کلیک نمایید.
+شما به ملاحظه می کنید به صورت پیش فرض منوی به نام منوی اصلی وجود دارد
+در سمت راست انواع آیتم های منو وجود دارد که شما می توانید اضافه نمایید.
+*محتوا منو
+* لینک سفارشی
+HTML* آیتم های منو
 * Query Link
+برای اضافه کردن یک آیتم منوی جدید بر روی ADD کلیک نمایید. 
+در صفحه ایجاد منو شما می توانید نام منو را پر نمایید.
 
-Click *Add* next to the **Content Menu Item** to add a new menu item.
-On the 'Create Menu Item' page you can fill in the Menu text.
-Either you can already select your Content Item (e.g. a Page) where you want to link to by selecting the
-**Browse** button under the **Content Item** section. By default the content item is empty.
-If you plan to first fully create your navigation structure and link up your pages later you only have to edit
-your menu item and select the **Browse** button to attach a Content Item (your Page).
-This method could be prefered when you first want to style your website to see all menu items.
+در هر صورت شما در حال حاضر می تواند مورد محتوای شما (به عنوان مثال صفحه) که در آن شما می خواهید برای پیوند را انتخاب کنید تا با انتخاب
+** مرور ** دکمه زیر ** آیتم محتوا ** بخش. به طور پیش فرض مورد محتوای خالی است.
+اگر قصد دارید در ابتدا ساختار منوی خود را ایجاد نمایید سپس لینک کنید به صفحه مورد نظر خود بعد از ان شما مجبور به ویرایش 
+منوی آیتم خود را انتخاب و سپس صفحه مورد نظر خود را سرچ می کنیم و به منوی خود وصل می کنیم  
+این روش می تواند برای زمانی موثر که شما می خواهید استایل سایت خود با آیتم منو ببینید
+## ایجاد محتوا و سپس ایجا منو 
+ابتدا یک صفحه جدید ایجاد و یا ادیت می نماییم.
+در پایین صفحه محتوا شما بخشی را می بینید به نام منو که در قسمت چک باکس آپشن منو شما می توانید منو را وارد نمایید.
+متن منو صفحه  به طور پیش فرض در منوی اصلی استفاده می شود.
 
-
-## Content first, navigation later
-
-Here we first create a new Page (or edit a Page). 
-At the bottom you will see a section **Menu Item**. Check the **Add on a menu** checkbox to see the menu options
-for that page. The **Menu text** is the name of your menu item. By default the **Main Menu** will be used where
-the Menu Item will be added to. 
 When you now **Save** your page and navigate to the **Navigation** menu item on the left side you will see
 that the new menu item that you created was added to the Main Menu.
 
