@@ -1,29 +1,18 @@
-﻿## What are the dependencies?
+## What are the dependencies?
 Orchard uses a number of external libraries. They can all be found under \lib directory in your enlistment, as well as are enumerated in [Orchard dependencies and libraries](Orchard-dependencies-and-libraries).
 
-<<<<<<< HEAD
 وابستگي ها چيست ؟
 اورچارد از تعدادي کتابخانه خارجي استفاده مي کند . که مي توان تمامي آنها را در فولدر /lib در شاخه مربوطه پيدا کرد همچنين مي توان از لينک رو به رو آنها را پيدا کرد : [Orchard dependencies and libraries](Orchard-dependencies-and-libraries).
-=======
-وابستگی ها چیست ؟
-اورچارد از تعدادی کتابخانه خارجی استفاده می کند . که می توان تمامی آنها را در فولدر /lib در شاخه مربوطه پیدا کرد همچنین می توان از لینک رو به رو آنها را پیدا کرد : [Orchard dependencies and libraries](Orchard-dependencies-and-libraries).
->>>>>>> origin/master
 
 ## What framework versions does Orchard support?
 Up to version 1.7 Orchard supports .NET 4.0. As of version 1.8, Orchard is going to run on .NET 4.5 and IIS 7 (or newer).
 
-<<<<<<< HEAD
 اورچارد چه ورژن از framework را پشتيباني مي کند ؟
 
 اورچارد از ورژن 1.7 با بالا قابليت پشتيباني از .NET 4.0 و از ورژن 1.8 اورچارد قادر به پشتيباني از .NET 4.5 و IIS 7(يا جديدتر( است .
-=======
-اورچارد چه ورژن از framework را پشتیبانی می کند ؟
-
-اورچارد از ورژن 1.7 با بالا قابلیت پشتیبانی از .NET 4.0 و از ورژن 1.8 اورچارد قادر به پشتیبانی از .NET 4.5 و IIS 7(یا جدیدتر( است .
->>>>>>> origin/master
 
 ## What are the master and 1.x branches? Which one should I be using?
-
+شاخه های ورژن 1.x  و تنه ی اصلی چیست ؟ کدامیک را بهتر است استفاده کنم ؟
 Those are the 2 branches corresponding to trunk (master) and development (1.x). 
 
 All the active feature work is being done by the core team in the 1.x branch.
@@ -35,18 +24,27 @@ Everything in 1.x in terms of the public surface is also more volatile: APIs can
 making a potential external contributor working on the branch more difficult.
 For these reasons, it is advised to use master for your development purposes, and 1.x only if you're interested
 in checking out how brand new features are being developed.
+در اینجا 2 بخش که مربوط به  تنه ی اصلی و توسعه  (1.x) وجود دارد . تمامی خصوصیات پویای کار توسط تیم اصلی در بخش 1.x  انجام شده است . هروقت که یک ورژن جدید منتشر شده آماده باشد تغییرات با تنه ی اصلی ادغام داده می شود.
+تنه ی اصلی یک بخش پایدار است و در حالت عادی همیشه در وضعیت سبز است . این در حالت عادی بهترین بخش برای شما برای کار کردن است . 1.x  آخرین ورژن از نظر کارهای انجام شده است ولی در حال حاضر ممکن است به دلیل کارهای در حال پیشرفت ناپایدار باشد. همچنین همه چیز در 1.x   در سطح عمومی راحت تر است . API ها میتوانند به درلحظه ی تمایل و روزانه تغییر کنند ، ایجاد بستر مشارکت بلقوه ی خارجی جهت کار بر روی نسخه ی نماینده بسیار سخت تر می باشد.  در حالت کلی پیشنهاد می شود که از نسخه ی اصلی استفاده شود و اگر خیلی مشتاق بودید که ببینید ورژن های 1.x چگونه توسعه پیدا می شوند.
 
 ## What types of extensions can I write?
+ چه افزونه هایی می توانم بنویسم ؟
 Orchard Modules and Themes are supported extensions today. Note that the module and themes API is a work-in-progress, and although it's possible to build these extensions today, you should expect changes that may break extensions built on the current codebase. Regular MVC 2 Areas are also supported as modules. 
+ماژول های اورچارد و پوسته هایش امروزه افزونه های پشتیبانی شده هستند . در نظر داشته باشید که API  ماژول ها و پوسته ها یک کار در حال انجام شدن است و اگرچه ساختن این افزونه ها امکان پذیر است ، شما بهتر است  که تغییرات احتمالی در ساختار را در نظر داشته باشید . هرگونه فضایی در MVC 2 به عنوان ماژول نیز پشتیبانی می شوند .
 
 ## Where are Modules physically located?
+ماژول ها کجا هستند ؟
 The projects in the "Modules" folder are physically located under the "src\Orchard.Web\Modules" folder. This allows modules to contain ASP.NET views (aspx, ascx) and static content without having to copy files between projects to be able to run the project.
+پروژه هایی که در فولدر ماژول قرار دارند در آدرس "src\Orchard.Web\Modules" قرار دارند . این به شما اجازه می دهد تا View(aspx, ascx)  و محتوای static  بدون داشتن کپی فایل ها بین پروژه ها تا قادر به راه انداختن پروژه باشیم . 
 
 The Core modules are physically located under the "\src\Orchard.Web\Core" folder. 
+ماژول های اصلی در آدرس  "\src\Orchard.Web\Core" قرار دارند .
 
 ## What is a Module.txt file?
+فایل Module.txt چیست ؟
 This is the module manifest. It has to be present at the root of the module's directory for Orchard to recognize it as a module and load it. It is a YAML-format file. Example module.txt with all possible supported fields:
-
+این فایل حاوی مشخصات ماژول ما است . این فایل باید در روت فولدر ماژول قرار بگرد تا اوچارد ان را به عنوان ماژول تشخیص بدهد و آن را لود کند . دارای فرمت YAML  است .
+به عنوان مثال یک module.txt  با تمام فیلد های پشتیبانی شده :
     
     name: AnotherWiki
     author: Coder Notaprogrammer
@@ -74,7 +72,9 @@ This is the module manifest. It has to be present at the root of the module's di
 
 
 ## What is the AdminMenu.cs file?
+AdminMenu.cs  فایل چیست ؟
 This file has an implementation of the Orchard interface called INavigationProvider. It lets modules hook themselves into the admin menu in the backend. This is typically where you declare what links should your module inject into the Admin menu and what controller actions these links invoke.
+این فایل پیاده سازی ای از اینترفیس اورچارد به نام INavigationProvider است. این اجازه می دهد ... این داستان ادامه دارد
 
 ## What is the Permissions.cs file?
 This file has an implementation of the Orchard interface called IPermissionProvider. It lets modules declare a set of permissions as well as attach those permissions to default Orchard roles. Once you add a new permission type to your module here, you will be able to use the Orchard authorization APIs to check that permission against the current user. You will also be able to manage which custom roles the permission belongs to in the Roles administration page.
