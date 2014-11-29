@@ -74,10 +74,14 @@ This is the module manifest. It has to be present at the root of the module's di
 ## What is the AdminMenu.cs file?
 AdminMenu.cs  فایل چیست ؟
 This file has an implementation of the Orchard interface called INavigationProvider. It lets modules hook themselves into the admin menu in the backend. This is typically where you declare what links should your module inject into the Admin menu and what controller actions these links invoke.
-این فایل پیاده سازی ای از اینترفیس اورچارد به نام INavigationProvider است. این اجازه می دهد ... این داستان ادامه دارد
+این فایل پیاده سازی ای از اینترفیس اورچارد به نام INavigationProvider است. این اجازه می دهد که ماژولها خودشان را در پنل ادمین جا کنند . این معمولا جایی است که شما باید بیان کنید که کدام لینک از ماژول شما باید در منوی ادمین باشد و چه عملگر کنترلری این لینکها نیازدارند .
+
 
 ## What is the Permissions.cs file?
+ فایل Permissions.cs چیست ؟
 This file has an implementation of the Orchard interface called IPermissionProvider. It lets modules declare a set of permissions as well as attach those permissions to default Orchard roles. Once you add a new permission type to your module here, you will be able to use the Orchard authorization APIs to check that permission against the current user. You will also be able to manage which custom roles the permission belongs to in the Roles administration page.
+این فایل دارای یک پیاده سازی از Orchard Interface به نام IPermissionProvider هست . این به ماژولهای شما اجازه می دهد که یک سری از دسترسی ها به دسترسی های اولیه ی ارچارد اضافه کرد . هنگامی که شما یک نوع دسترسی به ماژولتان اضافه می کنید ، شما قادر هستید که از Orchard authorization APIs استفاده کنید تا دسترسی یوزر هایتان را چک کنید . شما همچنین قادر هستید که در پنل مدیریت نقش به مدیریت کنید که کدام دسترسی به چه کسی تعلق دارد .
+
 
 ## How do I do authorization inside my module against current user/roles?
 Orchard comes with a default services implementation of the IOrchardServices interface. Simply include IOrchardService in your constructor and you will get the default implementation injected. Like
