@@ -84,7 +84,11 @@ This file has an implementation of the Orchard interface called IPermissionProvi
 
 
 ## How do I do authorization inside my module against current user/roles?
+چگونه دسترسی به یوزر/نقش در ماژولم بدهم ؟
 Orchard comes with a default services implementation of the IOrchardServices interface. Simply include IOrchardService in your constructor and you will get the default implementation injected. Like
+
+اورچارد با یک سرویس اولیه که پیاده سازی ای از IOrchardServices interface است آمده است .
+به راحتی IOrchardService را به constructor اضافه کنید و شما یک پیاده سازی اولیه اعمال کرده اید . به طور مثال :
 
     
     public AdminController(IMyService myService, IOrchardServices orchardServices) {
@@ -95,12 +99,17 @@ Orchard comes with a default services implementation of the IOrchardServices int
 
 At this point, services gives you Authorizer for authorization, Notifier for writing out notifications, ContentManager for access to the Orchard content manager and TransactionManager. At this point, to check if the current user has a certain permission, you would simply do:
 
+در این مرحله سرویس ها به شما سرویس برای دادن درسترسی ،  اطلاع دهنده برای نوشتن اطلاعات ، مدیر محتوا برای دسترسی به محتوای مدیر اورچارد و مدیر تراکنش می دهد . در این مرحله برای چک کردن اینکه یوزر دسترسی های مورد نظر را دارد ، باید این کار را انجام دهید : 
+
     
     Services.Authorizer.Authorize(Permissions.SomeModulePermission, T("Some operation failed"));
 
 
 ## What are Core Modules?
+ماژول های هسته ی اورچارد  چه هستند ؟
 Core Modules are Orchard Modules you can find under \src\Orchard.Web\Core. They also constitute the Orchard.Core project in the solution. These are modules that are always enabled and come with the default Orchard installation. See "Why are Core modules modules?" and "Why are Core Modules Core Modules?" for more detailed information.
+
+ماژول های هسته همان Orchard Modules هستند و شما می توانید آنها را در فولدر \src\Orchard.Web\Core پیدا کنید . اینها به علاوه شامل Orchard.Core Project نیز می شوند . اینها ماژول های هستند که همیشه فعال هستند و با اینستال اولیه ی اورچارد ریخته می شوند . برای اطلاعات بیشتر به سوال بعدی توجه کنید.
 
 ## Why are Core modules modules?
 The difference is similar to OS concepts of monolithic vs micro-kernel: it was pretty obvious during high level design of Orchard that an extensibility point such as modules was needed. Everything else would constitute the core framework. Take the Common module for example, which introduces the BodyPart, a core concept common to many types of content types, such as blog posts or pages. Now we could've implemented this as part of the Orchard framework dll, and have modules depend on it. But then it wouldn't get the benefit of being a module, such as being able to hook up handlers, drivers, views, routes etc. This also relates to MVC and areas, where everything that belongs to an area is under the same directory. It was pretty clear that the right choice was to get some core concepts out of the framework dll into a separate dll, and have them be modules. This is very similar to non-monolithic operating systems where parts of the core functionality is implemented as modules outside the kernel, talking to it via the same exact interfaces as the more higher level modules.
