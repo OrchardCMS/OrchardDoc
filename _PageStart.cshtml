@@ -6,10 +6,12 @@
         Page.EditUrl = "https://github.com/OrchardCMS/OrchardDoc/blob/master/Index.markdown";
     }
     else {
-        var docName = Path.GetFileNameWithoutExtension(path);
-        Page.DocumentTitle = docName.Replace('-', ' ');
+        // https://github.com/NuGet/NuGetDocs/blob/master/Docs.Core/MarkdownEngine/MarkdownWebPage.cs
+        var caseSensitiveDocName = System.Web.Hosting.HostingEnvironment.VirtualPathProvider.GetFile(Request.Path + ".markdown").Name;
+        var docNameWithoutExtension = Path.GetFileNameWithoutExtension(caseSensitiveDocName);
+        Page.DocumentTitle = docNameWithoutExtension.Replace('-', ' ');
         Page.Title = Page.DocumentTitle + " - Orchard Documentation";
-        Page.EditUrl = "https://github.com/OrchardCMS/OrchardDoc/blob/master/Documentation/" + docName + ".markdown";
+        Page.EditUrl = "https://github.com/OrchardCMS/OrchardDoc/blob/master/Documentation/" + caseSensitiveDocName;
     }
     Page.IssuesUrl = "https://github.com/OrchardCMS/OrchardDoc/issues";
     Layout = "_SiteLayout.cshtml";
