@@ -1,4 +1,4 @@
-*This topic targets, and was tested with, the Orchard 1.8 release. It includes too a reference to navigation in Orchard <1.5*
+*This topic targets, and was tested with, the Orchard 1.8 release. It also includes a reference to navigation in Orchard <1.5*
 
 
 There are different ways to build up a menu structure. Here we will show two common methods that could be used:
