@@ -10,7 +10,7 @@ For this example, you will use the `Map` part that is described in [Writing a co
 # Turning a Part into a Widget
 To turn a content part into a widget, you must update the database with your widget's type definition. You do this by adding an `UpdateFrom{version}` method to the part's _Migrations.cs_ file.
 
-The following example shows the `Map` part's _Migrations.cs_ file with the `UpateFrom1` method added.
+The following example shows the `Map` part's _Migrations.cs_ file with the `UpdateFrom1` method added.
 
     
     using System.Data;
