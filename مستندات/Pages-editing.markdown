@@ -1,9 +1,9 @@
-
+ï»¿
 
 ## Page creation
 The page draft is created in the database when the save or preview button is clicked (preview saves the draft implicitly). In order to save, the state of the page form must be valid.
-##ÓÇÎÊä ÕİÍå
-íÔ äæíÓ ÕİÍå ÏÑ database  ÓÇÎÊå ÔÏå ÒãÇäí ˜å Ï˜ãå íÔ äãÇíÔ íÇ ĞÎíÑå  ÇäÊÎÇÈ ÔÏå(íÔ äãÇíÔ , íÔ äæíÓ åÇ ÑÇ ãÌÇÒí ĞÎíÑå ãí ˜äÏ.) 
+##Ø³Ø§Ø®ØªÙ† ØµÙØ­Ù‡
+Ù¾ÛŒØ´ Ù†ÙˆÛŒØ³ ØµÙØ­Ù‡ Ø¯Ø± database  Ø³Ø§Ø®ØªÙ‡ Ø´Ø¯Ù‡ Ø²Ù…Ø§Ù†ÛŒ Ú©Ù‡ Ø¯Ú©Ù…Ù‡ Ù¾ÛŒØ´ Ù†Ù…Ø§ÛŒØ´ ÛŒØ§ Ø°Ø®ÛŒØ±Ù‡  Ø§Ù†ØªØ®Ø§Ø¨ Ø´Ø¯Ù‡(Ù¾ÛŒØ´ Ù†Ù…Ø§ÛŒØ´ , Ù¾ÛŒØ´ Ù†ÙˆÛŒØ³ Ù‡Ø§ Ø±Ø§ Ù…Ø¬Ø§Ø²ÛŒ Ø°Ø®ÛŒØ±Ù‡ Ù…ÛŒ Ú©Ù†Ø¯.) 
 ## Validation rules
 The slug rules are described here: [Slugs](slugs).
 
@@ -13,10 +13,10 @@ The slug rules are described here: [Slugs](slugs).
 * If a publication date is specified, it must be parsable under the current culture. Message: "'{0}' is not recognized as a valid date. An example of a valid date is: '{1}'." Substitute {1} with the current date, formatted with the current culture.
 * The publication date, if specified, must be in the future. "Please specify a future date."
 
-ŞæÇäíä The slugs  ÏÑ [Slugs](slugs) ÊæÖíÍ ÏÇÏå ÔÏå .
-İíáÏ ÚäæÇä ÑÇ äãí ÊæÇä ÎÇáí ĞÇÔÊ..íÇã : "ÚäæÇä ÑÇ ãÔÎÕ ˜äíÏ"
-İíáÏ ÚäæÇä ãí ÊæÇäÏ ÔÇãá  åÑ ÍÑİí ÈÇÔÏ ãÑ ÈÑÇí tabd,newline/ CR       æ ÍÑæİ ˜äÊÑáí . íÇã " ÍÑæİ ˜äÊÑáí  ÏÑ İíáÏ ÚäæÇä ãÌÇÒ äíÓÊäÏ ."
-ÇÑ Ï˜ãå ÑÇÏíæ ÈÑÇí ÇäÊÔÇÑ ÈÚÏí ÈÑÑÓí ÔÏå ,  ÊÇÑíÎ  ÈÇíÏ ãÔÎÕ ÔæÏ . íÇã "ÊÇÑíÎ ÇäÊÔÇÑ ÑÇ 
+Ù‚ÙˆØ§Ù†ÛŒÙ† The slugs  Ø¯Ø± [Slugs](slugs) ØªÙˆØ¶ÛŒØ­ Ø¯Ø§Ø¯Ù‡ Ø´Ø¯Ù‡ .
+ÙÛŒÙ„Ø¯ Ø¹Ù†ÙˆØ§Ù† Ø±Ø§ Ù†Ù…ÛŒ ØªÙˆØ§Ù† Ø®Ø§Ù„ÛŒ Ú¯Ø°Ø§Ø´Øª..Ù¾ÛŒØ§Ù… : "Ø¹Ù†ÙˆØ§Ù† Ø±Ø§ Ù…Ø´Ø®Øµ Ú©Ù†ÛŒØ¯"
+ÙÛŒÙ„Ø¯ Ø¹Ù†ÙˆØ§Ù† Ù…ÛŒ ØªÙˆØ§Ù†Ø¯ Ø´Ø§Ù…Ù„  Ù‡Ø± Ø­Ø±ÙÛŒ Ø¨Ø§Ø´Ø¯ Ù…Ú¯Ø± Ø¨Ø±Ø§ÛŒ tabd,newline/ CR       Ùˆ Ø­Ø±ÙˆÙ Ú©Ù†ØªØ±Ù„ÛŒ . Ù¾ÛŒØ§Ù… " Ø­Ø±ÙˆÙ Ú©Ù†ØªØ±Ù„ÛŒ  Ø¯Ø± ÙÛŒÙ„Ø¯ Ø¹Ù†ÙˆØ§Ù† Ù…Ø¬Ø§Ø² Ù†ÛŒØ³ØªÙ†Ø¯ ."
+Ø§Ú¯Ø± Ø¯Ú©Ù…Ù‡ Ø±Ø§Ø¯ÛŒÙˆ Ø¨Ø±Ø§ÛŒ Ø§Ù†ØªØ´Ø§Ø± Ø¨Ø¹Ø¯ÛŒ Ø¨Ø±Ø±Ø³ÛŒ Ø´Ø¯Ù‡ ,  ØªØ§Ø±ÛŒØ®  Ø¨Ø§ÛŒØ¯ Ù…Ø´Ø®Øµ Ø´ÙˆØ¯ . Ù¾ÛŒØ§Ù… "ØªØ§Ø±ÛŒØ® Ø§Ù†ØªØ´Ø§Ø± Ø±Ø§ 
 
 
 
@@ -28,11 +28,11 @@ When the user switches the page to a layout that has less zones than the previou
 
 
 
-ÒãÇäí ˜å ˜ÇÑÈÑ ÇÒ ÕİÍå ÈÑ Ñæí áÇíå åÇíí ˜å ãäØŞå åÇí ˜ãÊÑí ÇÒ  
+Ø²Ù…Ø§Ù†ÛŒ Ú©Ù‡ Ú©Ø§Ø±Ø¨Ø± Ø§Ø² ØµÙØ­Ù‡ Ø¨Ø± Ø±ÙˆÛŒ Ù„Ø§ÛŒÙ‡ Ù‡Ø§ÛŒÛŒ Ú©Ù‡ Ù…Ù†Ø·Ù‚Ù‡ Ù‡Ø§ÛŒ Ú©Ù…ØªØ±ÛŒ Ø§Ø²  
 Instead, we display the following message in the top alert zone: "You have switched to a template that does not have the same content zones as the previous one, resulting in some of your contents not showing up on your site. You can either delete that content or copy it into another zone."
 
 
-ÏÑ ÍÇáí ˜å ãÇ íÇã ÒíÑ ÑÇ ÏÑ ãÍÏæÏå åÔÏÇÑ ÈÇáÇíí äãÇíÔ ãí Ïåíã:" 
+Ø¯Ø± Ø­Ø§Ù„ÛŒ Ú©Ù‡ Ù…Ø§ Ù¾ÛŒØ§Ù… Ø²ÛŒØ± Ø±Ø§ Ø¯Ø± Ù…Ø­Ø¯ÙˆØ¯Ù‡ Ù‡Ø´Ø¯Ø§Ø± Ø¨Ø§Ù„Ø§ÛŒÛŒ Ù†Ù…Ø§ÛŒØ´ Ù…ÛŒ Ø¯Ù‡ÛŒÙ…:" 
 In the admin screen for the page, we show the orphaned contents with an alert "This content is assigned to a zone that does not exist in the current template. Please delete it or copy it to another zone."
 
 When the page is saved, we delete empty orphaned contents. By empty, we mean empty of contents, not necessarily empty string: &lt;p&gt;&lt;/p&gt; is empty contents. Warning, &lt;img src="foo.gif"/&gt; is not.
