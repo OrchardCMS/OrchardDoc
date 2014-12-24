@@ -1,23 +1,21 @@
 ﻿
-
 ## Page creation
 The page draft is created in the database when the save or preview button is clicked (preview saves the draft implicitly). In order to save, the state of the page form must be valid.
 ##ساختن صفحه
-پیش نویس صفحه در database  ساخته شده زمانی که دکمه پیش نمایش یا ذخیره  انتخاب شده(پیش نمایش , پیش نویس ها را مجازی ذخیره می کند.) 
+پیش نویس صفحه در پایگاه داده زمانی که دکمه پیش نمایش یا ذخیره  انتخاب شده  ساخته شده (پیش نمایش , پیش نویس ها را مجازی ذخیره می کند.) 
 ## Validation rules
 The slug rules are described here: [Slugs](slugs).
-
 * The title field cannot be empty. Message: "Please specify a title."
 * The title field can contain any character except for tabs, newlines/CR and control characters. Message: "No control characters are allowed in the title field."
 * If the radio button for later publication is checked, a date must be specified. Message: "Please specify a publication date."
 * If a publication date is specified, it must be parsable under the current culture. Message: "'{0}' is not recognized as a valid date. An example of a valid date is: '{1}'." Substitute {1} with the current date, formatted with the current culture.
 * The publication date, if specified, must be in the future. "Please specify a future date."
-
-قوانین The slugs  در [Slugs](slugs) توضیح داده شده .
+##قواعد اعتبار سنجی
+قواعد ایراد  در [Slugs](slugs) توضیح داده شده .
 فیلد عنوان را نمی توان خالی گذاشت..پیام : "عنوان را مشخص کنید"
-فیلد عنوان می تواند شامل  هر حرفی باشد مگر برای tabd,newline/ CR       و حروف کنترلی . پیام " حروف کنترلی  در فیلد عنوان مجاز نیستند ."
-اگر دکمه رادیو برای انتشار بعدی بررسی شده ,  تاریخ  باید مشخص شود . پیام "تاریخ انتشار را 
-
+فیلد عنوان می تواند شامل  هر حرفی باشد مگر برای برگه ها,خط جدید/CR  و حروف کنترلی . پیام :  " حروف کنترلی  در فیلد عنوان مجاز نیستند ."
+اگر دکمه رادیو برای انتشار بعدی بررسی شده ,  تاریخ  باید مشخص شود . پیام "تاریخ انتشار را مشخص کنید."
+اگر تاریخ انتشار مشخص باشد ، می بایست تحت 
 
 
 
