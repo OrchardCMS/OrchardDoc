@@ -46,6 +46,11 @@ Misc      | Contains styles for miscellaneous formatting, such as small, large, 
 # Creating a Child Theme
 You can create your own theme by customizing the Theme Machine. However, you should not edit the Theme Machine files directly. Instead, you should create a child theme and copy any files that you intend to change into the child theme. You don't need to copy any files that you do not intend to change -- a child theme inherits from its parent theme, and overrides just the files from the parent theme that you have customized.  When your child theme is active as the current theme, Orchard first looks to that theme to resolve files, and if not found, it will look to the parent (BaseTheme) to find the files instead (and so on... even your parent theme can have it's own parent).
 
+ایجاد یک تم کوچک
+شما می توانید با سفارشی کردن تم Machine تم خود را بسازید. به هر حال نباید مستقیما هیچ کدام از فایلهای تم Machine را ادیت نمایید. برای ایجاد یک تم باید فایلها تم را کپی نمایید و تغییرات را بر روی آن فایلها اعمال نمایید. 
+لازم نیست فایلهایی که نیاز به تغییر ندارند را کپی نمایید یک تم زیر مجموعه ارث بری می کند از تم  و فقط  که تغییر داده اید   overrides نمایید. وقتی که شما تم خود را فعال می نمایید. اورچارد فایلها را resolve  می کند و اگر فایلی پیدا نکرد به تم مادر نگاه می کند برای ارث بری به عنوان تم مادر. 
+
+
 The process of creating a child theme is this:
 
 1. Generate the child theme's code structure using the command-line CodeGen utility.
