@@ -1,26 +1,36 @@
 
-The default Orchard theme is called the Theme Machine, and it is designed to be a versatile starting point for customizing and developing new themes. 
-
-This article introduces you to the Theme Machine and demonstrates how you can create your own theme by customizing the Theme Machine style sheet (Site.css).
-
-
-# Introducing the Theme Machine
-The Theme Machine provides a flexible and powerful foundation to base themes upon. The following image shows the file structure of the Theme Machine.
+سفارشی سازی تم 
+تم پیشفرض اورچارد تم Machine نامیده می شود.به گونه ای طراحی شده است که نقطه شروع برای سفارشی سازی و توسعه تم جدید است .
+در این مقاله تم Machine معرفی و نشان می دهد که چگونه شما می توانید تم خود را بر اساس (Site.css) تم Machine ایجاد و سفارشی کنید.
 
 
-![](../Upload/screenshots/ThemeMachine_structure.PNG)The files at the heart of the Theme Machine are the layout page (Layout.cshtml) and the style sheet (Site.css).
+
+معرفی تم Machine
+تم Machine یک پایه (Base) قدرتمند و انعطاف پذیر را فراهم می آورد. تصویر زیر ساختار فایل تم Machine  را نشان می دهد. 
 
 
-# Overview of the Layout Page
-The layout page defines multiple zones using conditional statements. The conditional statements cause only the zones to be rendered for which content is provided. If you don't provide the content, the rendered page will not contain the zone. The following images shows the zones defined in the layout page.
+
+![](../Upload/screenshots/ThemeMachine_structure.PNG)
+فایل های  که قلب تم Machine هستند طرح صفحه بندی (Layout.cshtml) و استایل صفحه (Site.css). می باشد
+
+
+بررسی اجمالی صفحه آرایی
+با شرایط متفاوت در صفحه آرایی مناطق مختلفی تعریف شده است.  این عبارات شرطی محتوای هر قسمت را مشخص می نماید. اگر محتوای برای آن منطقه اختصاص داده نشود در صفحه آن قسمت نمایش داده نمی شود..
+تصاویر زیر مناطق تعریف شده در طرح بندی صفحه را نشان می دهد.
+
 
 ![All the zones in The Theme Machine](../Attachments/Anatomy-of-a-theme/TheThemeMachineZoneScreenshot.PNG)
 
-You will typically provide content for selected zones by using the Admin Panel. 
-
+ 
+به طور معمول با استفاده از پنل مدیریت می توان محتوا برای مناطق انتخاب شده قرار داد.
 
 # Overview of the CSS Styles
+بررسی اجمالی CSS Styles
+
+
 The style sheet (Site.css) for the Theme Machine provides an extensive set of styles for fine-grained control of the look and feel of your website. The style sheet groups styles to make it easier for you to locate a style that you want to customize. The following table shows the groupings and describes the type of styles available to you.
+
+صفحه استایل (Site.css) برای تم Machine مجموعه گسترده ای از  استایل ها را برای کنترل وب سایت از لحاظ دیداری . صفحه استایلها شرایط راحت تری را برای سفارشی کردن تم فراهم می نماید. جدول زیر توضیح می دهد انواع استایل های که برای شما وجود دارد.
 
 Grouping  | Description
 --------- | ------------------------------------------------------------------------------------------------------------
