@@ -112,25 +112,35 @@ Core Modules are Orchard Modules you can find under \src\Orchard.Web\Core. They 
 ماژول های هسته همان Orchard Modules هستند و شما می توانید آنها را در فولدر \src\Orchard.Web\Core پیدا کنید . اینها به علاوه شامل Orchard.Core Project نیز می شوند . اینها ماژول های هستند که همیشه فعال هستند و با اینستال اولیه ی اورچارد ریخته می شوند . برای اطلاعات بیشتر به سوال بعدی توجه کنید.
 
 ## Why are Core modules modules?
+## چرا ماژولهای اصلی ماژول حساب می شوند ؟
+
 The difference is similar to OS concepts of monolithic vs micro-kernel: it was pretty obvious during high level design of Orchard that an extensibility point such as modules was needed. Everything else would constitute the core framework. Take the Common module for example, which introduces the BodyPart, a core concept common to many types of content types, such as blog posts or pages. Now we could've implemented this as part of the Orchard framework dll, and have modules depend on it. But then it wouldn't get the benefit of being a module, such as being able to hook up handlers, drivers, views, routes etc. This also relates to MVC and areas, where everything that belongs to an area is under the same directory. It was pretty clear that the right choice was to get some core concepts out of the framework dll into a separate dll, and have them be modules. This is very similar to non-monolithic operating systems where parts of the core functionality is implemented as modules outside the kernel, talking to it via the same exact interfaces as the more higher level modules.
+تفاوت مشابه است به مفاهیم OS  یکپارچه در مقابل micro-kernel : این بسیار مشهود است که در فرایند طراحی ارچارد یک نقطه ی قابل گسترش مانند ماژول نیاز مند هستیم . هرچیز دیگری جزو فریم ورک اصلی حساب می شوند. یک ماژول معمول را به عنوان مثال در نظر بگیرید ، که یک BodyPart ، یک مفاهیم معمولی به بسیاری از انواع داده ها به عنوان مثال پست ها یا صفحه های یک بلاگ. حال ما توانسته ایم این قسمت از فریم ورک ارچارد dll را پیاده سازی کنیم ، و ماژولهایی وابسته به آن داشته باشیم. ولی این نمی تواند مزیت های یک ماژول را داشته باشد ، به عنوان مثال قابلیت  کار با handlers , drivers, views, routes etc. این مربوط می شود به MVC و فضاها، هرجا که متعلق به یک فضا (area) باشد در بک فولد جای می گیرد . این خیلی مشهود است که
 
 ## Why are Core Modules Core Modules?
 Now that we want core concepts to be implemented as modules, why not put them into the modules directory along with the rest of the more obvious Orchard modules, such as the comments module. Well, this time it's about dependencies. In Orchard, modules that are in the modules directory can be disabled, uninstalled or otherwise updated in a breaking way. We prefer modules that are self-contained and don't require other non-core modules as dependencies, as much as possible. That's part of the entire dynamism behind the content type architecture. Pages and Blog posts, which belong to Pages and Blog modules, don't reference Comments or Tags modules, but it's possible to attach comments or tags to pages and blogposts. This decoupled behavior is ensured by the underlying content type architecture and not by direct reference from one or the other modules. Core modules are part of the Orchard framework and it's ok for modules to depend on them. They will be distributed by us and for all practical purposes are integral parts of the Orchard framework. Modules can depend on them and directly access their public surface.
 
 ## How do I write and run tests?
+## چگونه تست بنویسم و اجرا کنم ؟
 Orchard comes with a solution folder called Tests. This hosts 2 types of tests:
+ارچارد با یک فولدر راه حل به نام Tests آمده است . و 2 گونه از تست ها را پشتیبانی می کند :
 
 * **Unit Tests**: These are NUnit test fixtures. To write a fixture for a module, simply create a new directory under Orchard.Tests.Modules and populate it with your tests. 
+* **Unit Tests**: این ها لوازم NUnit تست هستند.  برای نوشتن یک تست برای یک ماژول ، به سادگی یک فولدر در زیر Orchard.Test.Modules میسازیم و تست خود را در آنجا می نویسیم
 * **Integration Tests**: These are also NUnit tests, generated using SpecFlow ([http://www.specflow.org](http://www.specflow.org)) .feature files. Your integration tests would go under Orchard.Specs and there are a multitude of examples there you can look at if you are new to the BDD approach.  
+* **Integration Tests**: این نیز جزو NUnit test, generated با استفاده از  ([http://www.specflow.org](http://www.specflow.org)) محصوب می شود .فایل های جانبی . تست های مختلط و ادغام شده در زیر Orchard.Specs می روند و در آنجا مثال هایی بسیاری وجود دارد که می توانید ببینید ، اگر به BDD approach جدید هستید.
 
 Running the unit tests is a matter of right clicking the solution or appropriate project and choose Run Unit Tests.
 
 > Note: this applies to writing tests for the modules that come with the standard source code distribution of Orchard. To write code for your own third-party modules, please work in your own separated directory. We will provide guidance on setting up a third-party module development environment.
 
 ## How do I contribute my changes to Orchard?
+## چگونه به اورچارد کمک کنم ؟
 Orchard is a community project and has a number of external contributors. To ensure the patch is accepted to Orchard, there are a few points to highlight:
+اورجارد یک پروژه انجمن محور است و دارای تعدادی کمک دهنده خارجی است . برای اینکه مطمئن باشید patch شما مورد قبول اورچارد است باید تعدادی از قوائد را در نظر داشته باشید :
 
 * **Code Conventions**: Orchard code conventions and style guidelines are explained in [Code conventions](Code-conventions). The source tree also contains a ReSharper ([http://www.jetbrains.com/resharper](http://www.jetbrains.com/resharper)) file at \src\Orchard.4.5.resharper that's going to considerably simplify you working with the Orchard conventions.
+* **Code Conventions**:
 
 * **Patch submission process:** Is detailed in [Contributing patches](Contributing-patches). Although .patch files are still supported as explained there, it is preferred to use forks and use the CodePlex UI to submit a pull request. For smaller changes patch files are also OK, however there is no CodePlex UI to manage them so you would have to attach them to bugs and hope they don't get lost. Also, always use the default branch for patches.
 
@@ -193,5 +203,9 @@ A bug that is in "Active" state has been triaged and should have been assigned a
 Impact is usually set during triage but a "Low" value does not necessarily mean much: this is the default value so it might just mean that it hasn't been touched. It's OK to investigate with the team on the impact of a bug you care about.
 
 ## Developer Troubleshooting
+##  عیب یابی توسعه دهنده
 
 * **Record Names**: Your implementations of the ContentPartRecords shouldn't have properties that are known keywords to NHibernate. Examples include Identity, Version.
+* 
+* **Record Names**: پیاده سازی ContentPartRecords شما بهتر است که از کلمات رزرو شده Nhibernate نباشد ، به عنوان مثال Identity , Version.
+* 
