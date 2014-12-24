@@ -1,10 +1,9 @@
-ÓÇÎÊä ÕİÍå##
 
 
 ## Page creation
 The page draft is created in the database when the save or preview button is clicked (preview saves the draft implicitly). In order to save, the state of the page form must be valid.
-
-
+##ÓÇÎÊä ÕİÍå
+íÔ äæíÓ ÕİÍå ÏÑ database  ÓÇÎÊå ÔÏå ÒãÇäí ˜å Ï˜ãå íÔ äãÇíÔ íÇ ĞÎíÑå  ÇäÊÎÇÈ ÔÏå(íÔ äãÇíÔ , íÔ äæíÓ åÇ ÑÇ ãÌÇÒí ĞÎíÑå ãí ˜äÏ.) 
 ## Validation rules
 The slug rules are described here: [Slugs](slugs).
 
@@ -14,11 +13,26 @@ The slug rules are described here: [Slugs](slugs).
 * If a publication date is specified, it must be parsable under the current culture. Message: "'{0}' is not recognized as a valid date. An example of a valid date is: '{1}'." Substitute {1} with the current date, formatted with the current culture.
 * The publication date, if specified, must be in the future. "Please specify a future date."
 
+ŞæÇäíä The slugs  ÏÑ [Slugs](slugs) ÊæÖíÍ ÏÇÏå ÔÏå .
+İíáÏ ÚäæÇä ÑÇ äãí ÊæÇä ÎÇáí ĞÇÔÊ..íÇã : "ÚäæÇä ÑÇ ãÔÎÕ ˜äíÏ"
+İíáÏ ÚäæÇä ãí ÊæÇäÏ ÔÇãá  åÑ ÍÑİí ÈÇÔÏ ãÑ ÈÑÇí tabd,newline/ CR       æ ÍÑæİ ˜äÊÑáí . íÇã " ÍÑæİ ˜äÊÑáí  ÏÑ İíáÏ ÚäæÇä ãÌÇÒ äíÓÊäÏ ."
+ÇÑ Ï˜ãå ÑÇÏíæ ÈÑÇí ÇäÊÔÇÑ ÈÚÏí ÈÑÑÓí ÔÏå ,  ÊÇÑíÎ  ÈÇíÏ ãÔÎÕ ÔæÏ . íÇã "ÊÇÑíÎ ÇäÊÔÇÑ ÑÇ 
+
+
+
+
+
+
 ## Orphaned contents
 When the user switches the page to a layout that has less zones than the previous ones, he is potentially creating orphaned contents. We don't throw that contents away or try to merge them. We also don't try to reassign if the zone names are different, even if the number of zones is the same.
 
+
+
+ÒãÇäí ˜å ˜ÇÑÈÑ ÇÒ ÕİÍå ÈÑ Ñæí áÇíå åÇíí ˜å ãäØŞå åÇí ˜ãÊÑí ÇÒ  
 Instead, we display the following message in the top alert zone: "You have switched to a template that does not have the same content zones as the previous one, resulting in some of your contents not showing up on your site. You can either delete that content or copy it into another zone."
 
+
+ÏÑ ÍÇáí ˜å ãÇ íÇã ÒíÑ ÑÇ ÏÑ ãÍÏæÏå åÔÏÇÑ ÈÇáÇíí äãÇíÔ ãí Ïåíã:" 
 In the admin screen for the page, we show the orphaned contents with an alert "This content is assigned to a zone that does not exist in the current template. Please delete it or copy it to another zone."
 
 When the page is saved, we delete empty orphaned contents. By empty, we mean empty of contents, not necessarily empty string: &lt;p&gt;&lt;/p&gt; is empty contents. Warning, &lt;img src="foo.gif"/&gt; is not.
