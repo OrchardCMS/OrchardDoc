@@ -26,8 +26,7 @@ Orchard 1.8 drastically simplifies creation of site settings, removing the previ
 
     [UsedImplicitly]
     public class ShareBarSettingsPartHandler : ContentHandler {
-        public ShareBarSettingsPartHandler(
-            IRepository<ShareBarSettingsPartRecord> repository) {
+        public ShareBarSettingsPartHandler() {
 
             Filters.Add(new ActivatingFilter<ShareBarSettingsPart>("Site"));
             Filters.Add(new TemplateFilterForPart<ShareBarSettingsPart>("ShareBarSettings", "Parts/ShareBar.ShareBarSettings", "Modules"));
