@@ -37,7 +37,6 @@ To do so, open the web.config file that is at the root of the Orchard web site. 
 
 To create the keys that go into the placeholders above, you can use one of the available online generators, such as:
 
-* [http://aspnetresources.com/tools/machineKey](http://aspnetresources.com/tools/machineKey)
 * [http://www.eggheadcafe.com/articles/GenerateMachineKey/GenerateMachineKey.aspx](http://www.eggheadcafe.com/articles/GenerateMachineKey/GenerateMachineKey.aspx)
 * [http://www.betterbuilt.com/machinekey/](http://www.betterbuilt.com/machinekey/)
 * [http://www.codeproject.com/KB/aspnet/Machine_Key_Generator.aspx](http://www.codeproject.com/KB/aspnet/Machine_Key_Generator.aspx)
