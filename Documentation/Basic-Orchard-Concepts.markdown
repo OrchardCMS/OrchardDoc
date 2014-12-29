@@ -62,7 +62,7 @@ For example, a Product content type can have a text field representing its Sku, 
 
 ## Module
 
-The various possible custom possible extensions that can be built for Orchard are typically built as modules. A module is a set of extensions for Orchard that are grouped under a single sub-folder of the Modules directory that can be found under the Orchard web site.
+The various custom extensions that can be built for Orchard are typically built as modules. A module is a set of extensions for Orchard that are grouped under a single sub-folder of the Modules directory that can be found under the Orchard web site.
 
 Optional modules for Orchard can be found in the Orchard Gallery (see the menu entry on top of this page).
 
