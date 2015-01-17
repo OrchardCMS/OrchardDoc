@@ -77,6 +77,12 @@ As per the [work item #21036](https://orchard.codeplex.com/workitem/21036) the h
 
 By default all existing user passwords will be migrated to the new hash when the user successfully logs in next time. If you want to prevent this migration and force every existing password hashes to stay SHA1 then add an appSettings or connectionString configuration to the Web.config (or equivalent) with the name `"Orchard.Users.KeepOldPasswordHash"` and value `"true"`.
 
+#### Note on improved handling of setup recipes
+
+Setup recipes are now [automatically harvested](https://orchard.codeplex.com/workitem/20942) from all modules for the setup screen. This means that you don't have to add your setup recipes to the Orchard.Setup module any more, you can keep them in your own modules.
+
+Keep in mind however that recipes intended for setup now should possess the IsSetupRecipe metadata (see the recipes in Orchard.Setup), otherwise they won't show up on the setup screen.
+
 
 Contributors
 ------------
