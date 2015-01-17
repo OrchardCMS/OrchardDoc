@@ -8,7 +8,7 @@
 
 We are using the C# coding conventions described in this document: [C# Coding Guidelines](http://blogs.msdn.com/brada/articles/361363.aspx) with the following exceptions:
 
-* Opening braces are on the same line as the statement that begins the block, with a space before the brace (this is consistent with what we do in JavaScript), a.k.a. K&R convention.
+* Opening braces are on the same line as the statement that begins the block, with a space before the brace (this is consistent with what we do in JavaScript), a.k.a. K&R convention. If you have the [Rebracer Visual Studio extension](https://visualstudiogallery.msdn.microsoft.com/410e9b9f-65f3-4495-b68e-15567e543c58) installed it will automatically configure the editor to use the conventional brace styling.
 * Private fields are prefixed with an underscore and camel-cased.
 * Using directives appear before the namespace, not inside it.
 
