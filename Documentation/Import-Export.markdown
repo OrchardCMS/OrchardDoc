@@ -10,7 +10,7 @@ The Import/Export module ships with Orchard but it is not enabled by default.  S
 
 ## Export ##
 
-The export process has two general questions: What type of content should be exported and of that content type, should the meta data and/or the data be output.  There is also an option that will include the site's settings in the XML file.  This option is exactly what it sounds like; Any of the information under the settings menu in the admin will be included in the export.
+The export process has two general questions: What type of content should be exported and of that content type, should the meta data and/or the data be output.  There is also an option that will include the site's settings in the XML file: site settings to an extent can be automatically exported and imported without module authors writing import/export logic for their site settings content parts.  This option is exactly what it sounds like; Any of the information under the settings menu in the admin will be included in the export.
 
 The export process is a good way to copy the content structure from one Orchard instance to another.  A good example of that may be from a development site to a production site.  For example, let's say we want to create a new blog and add entries to the new blog on a dev site.  After all the powers that be have reviewed the blog and it's posts, all that information should then be pushed to the production site.  The Import/Export module is perfect for this.  But be warned, when exporting from a site and importing to another, the existing records may be updated.  We'll get into that in a bit.
 
