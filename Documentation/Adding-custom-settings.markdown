@@ -27,9 +27,19 @@ Orchard 1.8 drastically simplifies creation of site settings, removing the previ
     [UsedImplicitly]
     public class ShareBarSettingsPartHandler : ContentHandler {
         public ShareBarSettingsPartHandler() {
-
+            T = NullLocalizer.Instance;
             Filters.Add(new ActivatingFilter<ShareBarSettingsPart>("Site"));
             Filters.Add(new TemplateFilterForPart<ShareBarSettingsPart>("ShareBarSettings", "Parts/ShareBar.ShareBarSettings", "Modules"));
+        }
+        
+        public Localizer T { get; set; }
+
+        protected override void GetItemMetadata(GetContentItemMetadataContext context)
+        {
+            if (context.ContentItem.ContentType != "Site")
+                return;
+            base.GetItemMetadata(context);
+            context.Metadata.EditorGroupInfo.Add(new GroupInfo(T("Modules")));
         }
     }
     
