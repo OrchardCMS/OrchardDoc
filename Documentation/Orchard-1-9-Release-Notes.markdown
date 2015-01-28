@@ -71,6 +71,10 @@ site and database first.
 
 ...
 
+#### Upgrading modules
+
+Orchard 1.9 bumps up the .NET Framework version it depends on from 4.5 to 4.5.1. You may need to perform the same upgrade in your module's project properties before it successfully compiles.
+
 #### Note on the change of the default password hash algorithm
 
 As per the [work item #21036](https://orchard.codeplex.com/workitem/21036) the hash algorithm used by default to hash user passwords for storage was changed from SHA1 to PBKDF2 (more precisely the `System.Web.Helpers.Crypto.HashPassword()` implementation).
