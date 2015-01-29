@@ -1,4 +1,4 @@
-> This topic has been updated for the Orchard 1.4 release.
+> This topic has been updated for the Orchard 1.9 release.
 
 Data access in an Orchard project is different than data access in a traditional web application, because the data model is built through code rather than through a database management system. You define your data properties in code and the Orchard framework builds the database components to persist the data. If you need to change the data structure, you write code that specifies the changes, and those changes are then propagated by that code to the database system. This code-centric model includes layers of abstraction that permit you to reuse components in different content types and to add or change behaviors without breaking other layers.
 
@@ -61,7 +61,11 @@ You can create a data migration class by running the following command from the 
     codegen datamigration <feature_name>
 
 
-This command creates a _Migrations.cs_ file in the root of the feature. A `Create` method is automatically created in the migration class. In the `Create` method, you use the `SchemaBuilder` class to create the database table, as shown below for the `MapPart` feature.
+This command creates a _Migrations.cs_ file in the root of the feature. A `Create` method is automatically created in the migration class.
+
+In the `Create` method, you use the `SchemaBuilder` class to create the database table, as shown below for the `MapPart` feature.
+
+In the `Uninstall` method you can implement destructive operations that will be executed when the module is uninstalled. Keep in mind that when a module is re-added and enabled after it was uninstalled it will be installed again, thus the `Create` method of migrations will also run.
 
     
     namespace Map.DataMigrations {
@@ -80,6 +84,12 @@ This command creates a _Migrations.cs_ file in the root of the feature. A `Creat
     
                 return 1;
             }
+
+	        public void Uninstall() {
+				// Dropping tables can potentially cause data loss for users so be sure to warn them in your module's documentation about the implications.
+				SchemaBuilder.DropTable("MapRecord");
+	            ContentDefinitionManager.DeletePartDefinition(typeof(MapPart).Name);
+	        }
         }
     }
 
