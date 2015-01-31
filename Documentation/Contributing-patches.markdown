@@ -7,7 +7,7 @@ Creating **a branch inside a fork should be preferred** because it makes merging
 
 ## Working on a Pull Request
 
-When working on a pull request, your local enlistment should in most cases be synchronized to the latest check-in in the current development branches. If you intend to provide a bug fix then the best branch to work on is the short-cylce dev branch, currently named 1.8.x. If instead you intend to provide a new or enhanced feature then it's recommended to use the long-cycle dev branc, currently named 1.x.
+When working on a pull request, your local enlistment should in most cases be synchronized to the latest check-in in the current development branches. If you intend to provide a bug fix then the best branch to work on is the short-cylce dev branch, currently named 1.8.x. If instead you intend to provide a new or enhanced feature then it's recommended to use the long-cycle dev branch, currently named 1.x.
 
 Another thing to consider is the status of the issue you are fixing. Bugs that are marked as "Proposed" have been reported, but not yet triaged by the team. It just means that we didn't have time to look at them and see if they are valid, or duplicates of existing issues, or have since already been fixed. Thus, for best results, please send pull requests for issues that are marked as "Active".
 
