@@ -116,7 +116,7 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
     * [Dependencies and Libraries](Documentation/Orchard-dependencies-and-libraries)
     * [Code Conventions](Documentation/Code-conventions)
     * [Continuous Integration](Documentation/Continuous-integration)
-
+    * [Merging Pull Requests](Documentation/Merging-Pull-Requests)
 
 * **Additional Topics**
     * [Orchard Dynamic Compilation](Documentation/Orchard-module-loader-and-dynamic-compilation)
