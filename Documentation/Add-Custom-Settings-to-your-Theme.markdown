@@ -41,7 +41,7 @@ We are going to attach a new part to the Site content type to store these custom
 
 This example is using the InfoSet storage that was made available in 1.8 (it is perfectly possible to achieve the same in older versions of Orchard using the ContentPartRecord storage method and building the table in the migrations, see *this* for more details). The "custom_blue.css" parameter in the getter for HoverColor is the default value for that setting.
 
-We will be offering them the option to choose from 3 different colours to have their <a> tags, so let's create three style sheets in the Styles folder of our theme:
+We will be offering them the option to choose from 3 different colours to have their links, so let's create three style sheets in the Styles folder of our theme:
 
 - custom_blue.css
 - custom_green.css
