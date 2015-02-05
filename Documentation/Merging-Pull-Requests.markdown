@@ -30,12 +30,10 @@ accept-pr = "!f(){ git checkout -b PR $1 && git pull $2 $3 && git rebase $1 && a
 
 This `accept-pr` command is now accessible from the git console and will apply all the necessary steps.
 
-| Parameter | Description | Example |
-|-----------|-------------|---------|
-| `$1` | The branch to apply the PR to | `1.8.x`, `1.x` |
-| `$2` | The url of the remote PR | `https://git01.codeplex.com/forks/jchenga/orchard` |
-| `$3` | The branch to pull from the remote PR | `issues/20311` |
-| `$4` | The commit message for the squashed commit | `$'#1234: Short \n Long \n Work Item: 1234'` |
+* `$1`: The branch to apply the PR to, e.g., `1.8.x`, `1.x`
+* `$2`: The url of the remote PR, e.g., `https://git01.codeplex.com/forks/jchenga/orchard`
+* `$3`: The branch to pull from the remote PR, e.g., `issues/20311`
+* `$4`: The commit message for the squashed commit, e.g., `$'#1234: Short \n Long \n Work Item: 1234'`
 
 The parameters $2 and $3 can be found in the modal dialog which appears when clicking on the `Accept` link of the pull request page on codeplex. For instance it will show up a line like this:
 
