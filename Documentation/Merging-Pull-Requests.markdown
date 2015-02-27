@@ -6,7 +6,7 @@ However we might need to rewrite the changes to keep the repository clean:
 - By updating the commit message if it needs to be shortened or improved. For instance if the patch is related to a work item, the commit message should look like this:
 
 ```
-#12345: Short message
+\#12345: Short message
 
 A longer message than can span multiple lines and describe the reasonning behind the change.
 
@@ -22,6 +22,7 @@ Doing so can be tedious depending on your level of knowledge on git. To help wit
 
 - In your user's profile folder (e.g., `c:\users\sebros`) open the file `.gitconfig`.
 - Anywhere in the file (at the end for instance) add a new alias like this:
+
 ```
 [alias]
 accept-pr = "!f(){ git checkout -b PR $1 && git pull $2 $3 && git rebase $1 && author=`git log -n 1 --pretty='format:%an <%ae>'` && git reset $1 && git checkout $1 && git commit -a -m \"$4\" && git commit --amend --author=\"$author\" --no-edit && git branch -D PR; };f"
