@@ -56,7 +56,7 @@ Orchard 1.9 fixes bugs and introduces the following changes and features:
 
 The full list of fixed bugs for this release can be found here:
 
-* [Bugs fixed in 1.9](https://orchard.codeplex.com/workitem/list/advanced?keyword=&status=Resolved|Closed&type=All&priority=All&release=Orchard 1.9&assignedTo=All&component=All&sortField=LastUpdatedDate&sortDirection=Descending&page=0&reasonClosed=All).
+* [Bugs fixed in 1.9][bugs-fixed-in-1-9].
 
 How to upgrade from a previous version
 --------------------------------------
@@ -95,3 +95,5 @@ This software would not exist without the community. In particular, for this rel
 we should all be grateful to the following people who contributed patches and features:
 
 - ...
+
+  [bugs-fixed-in-1-9]: https://orchard.codeplex.com/workitem/list/advanced?keyword=&status=Resolved|Closed&type=All&priority=All&release=Orchard 1.9&assignedTo=All&component=All&sortField=LastUpdatedDate&sortDirection=Descending&page=0&reasonClosed=All
