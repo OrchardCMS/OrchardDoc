@@ -96,4 +96,4 @@ we should all be grateful to the following people who contributed patches and fe
 
 - ...
 
-  [bugs-fixed-in-1-9]: https://orchard.codeplex.com/workitem/list/advanced?keyword=&status=Resolved|Closed&type=All&priority=All&release=Orchard 1.9&assignedTo=All&component=All&sortField=LastUpdatedDate&sortDirection=Descending&page=0&reasonClosed=All
+  [bugs-fixed-in-1-9]: https://orchard.codeplex.com/workitem/list/advanced?keyword=&status=Resolved|Closed&type=All&priority=All&release=Orchard%201.9&assignedTo=All&component=All&sortField=LastUpdatedDate&sortDirection=Descending&page=0&reasonClosed=All
