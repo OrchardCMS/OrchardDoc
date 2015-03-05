@@ -45,7 +45,7 @@ The parameters $2 and $3 can be found in the modal dialog which appears when cli
 ### Usage
 
 ```
-accept-pr 1.8.x https://git01.codeplex.com/forks/jchenga/orchard issues/20797 $'#20797: Fixing taxonomy handler exception\n\nWork Item: 20797'
+git accept-pr 1.8.x https://git01.codeplex.com/forks/jchenga/orchard issues/20797 $'#20797: Fixing taxonomy handler exception\n\nWork Item: 20797'
 ```
 
 If this command results with an error, it's probably because the PR is too old and there are some merge conflicts. In this case reopen the PR by requesting the user to rebase his changes on the targeted branch or to merge the conflicts, clean you local changes, then try again.
