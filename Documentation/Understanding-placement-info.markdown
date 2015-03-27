@@ -75,11 +75,15 @@ The name of the attribute can be any shape name (but not an alternate name; use 
 
 You can learn more about shapes and alternates in these topics: [Accessing and Rendering Shapes](Accessing-and-rendering-shapes) and [Alternates](Alternates).
 
-The value itself is split into a zone name (this is a local zone, usually `Header`, `Meta`, `Content`. or `Footer`), a colon, and then a position. The position is defined using a dotted notation. It can be a single number (1, 5, 10, 42) or it can be a succession of numbers separated by a dot (1.2, 1.52.3, etc.). The order will be determined starting from the first number, and if multiple positions have the same first number, using the subsequent numbers. This way, 1 comes before 2.4.5, and 2.4.5 comes before 2.10.
+The value itself is split into a zone name, a colon, and then a position. 
 
-There is a special value, "-", that suppresses the shape rendering instead of sending it to a local zone.
+The zone name can specify a local zone (usually `Header`, `Meta`, `Content`. or `Footer`) or a top-level zone (those defined in *Layout.cshtml*). In the case of a top-level zone, the zone name must begin with a slash, e.g. `/AsideFirst`
+
+The position is defined using a dotted notation. It can be a single number (1, 5, 10, 42) or it can be a succession of numbers separated by a dot (1.2, 1.52.3, etc.). The order will be determined starting from the first number, and if multiple positions have the same first number, using the subsequent numbers. This way, 1 comes before 2.4.5, and 2.4.5 comes before 2.10.
 
 You can also use `before` and `after` qualifiers to position shapes before or after a certain position. For example, `Header:after` positions the shape at the next available position following everything that's defined using numeric positions.
+
+There is a special value, "-", that suppresses the shape rendering instead of sending it to a zone.
 
 A new feature in Orchard 1.1 is the ability to specify shape alternates and wrappers from `Place` elements and to rename the shape. For example, if you want to enable a theme author to specify a different template for rendering the tags for blog posts, you can do the following:
 
