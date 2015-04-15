@@ -5,7 +5,7 @@ There are four ways you can install Orchard. You can:
 
 * Install it using the Microsoft Web Platform Installer.
 * Install it from Microsoft WebMatrix as shown in [Working with Orchard in WebMatrix](Working-with-Orchard-in-WebMatrix).
-* Download the Orchard [.zip file](http://orchard.codeplex.com/releases/view/115750) and install it as described in [Manually Installing Orchard Using a zip File](Manually-installing-Orchard-zip-file).
+* Download the Orchard [.zip file](http://orchard.codeplex.com/releases/view/119931) and install it as described in [Manually Installing Orchard Using a zip File](Manually-installing-Orchard-zip-file).
 * [Enlist](Setting-up-a-source-enlistment) in the Orchard source code and build Orchard from the command line or in Visual Studio.
 
 This topic shows how to install Orchard using the Microsoft Web Platform Installer.

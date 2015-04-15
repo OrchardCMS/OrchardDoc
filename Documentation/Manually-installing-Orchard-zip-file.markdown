@@ -13,7 +13,7 @@ We will use three different approaches:
 
 # Downloading the .zip File
 
-Navigate to the [Downloads Section of Orchard in Codeplex](http://orchard.codeplex.com/releases/view/115750). 
+Navigate to the [Downloads Section of Orchard in Codeplex](http://orchard.codeplex.com/releases/view/119931). 
 
 You will find two .zip files.
 
