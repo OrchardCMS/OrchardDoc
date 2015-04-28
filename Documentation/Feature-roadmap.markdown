@@ -15,7 +15,7 @@ This release is expected to be released for May 2014
   * Daniel Stolt ([Decorum](https://www.codeplex.com/site/users/view/Decorum)) owns this contribution
   * More information here: https://orchard.codeplex.com/discussions/560347
 * Dynamic Layout module (done)
-  * Sipke Schoorstra ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) owns this contribution
+  * Sipke Schoorstra ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) and Daniel Stolt ([Decorum](https://www.codeplex.com/site/users/view/Decorum)) own this contribution
 * Dynamic Forms module (done)
   * Sipke Schoorstra ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) owns this contribution
 * Integrate OWIN middlewares support (done)
@@ -32,7 +32,7 @@ This release is expected to be released for May 2014
 * Message Bus (done)
 * Search widgets (done)
 * Improved caching features
-* 
+
 #### Candidates for 1.10
 
 * Improved Workflow module (on track)
