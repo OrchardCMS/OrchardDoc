@@ -5,7 +5,7 @@ The feature roadmap is subject to change as the project evolves, and we welcome 
 
 #### Priorities for Orchard 1.9:
 
-This release is expected to be released for October 2014
+This release is expected to be released for May 2014
 
 * Audit Trail module (done)
   * Daniel Stolt ([Decorum](https://www.codeplex.com/site/users/view/Decorum)) and Sipke Schoorstra ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) own this contribution
@@ -14,27 +14,34 @@ This release is expected to be released for October 2014
 * Date localization and calendar support improvements and fixes (done)
   * Daniel Stolt ([Decorum](https://www.codeplex.com/site/users/view/Decorum)) owns this contribution
   * More information here: https://orchard.codeplex.com/discussions/560347
-* Dynamic Layout module (on track)
+* Dynamic Layout module (done)
   * Sipke Schoorstra ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) owns this contribution
-* Dynamic Forms module (on track)
+* Dynamic Forms module (done)
   * Sipke Schoorstra ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) owns this contribution
-* Integrate OWIN middlewares support  (working, specflow tests broken)
+* Integrate OWIN middlewares support (done)
   * Nick ([Jetski5822](https://www.codeplex.com/site/users/view/Jetski5822)) is responsible for this feature
-  * Identity
-* Improved Workflow module (on track)
-  * Error/Exception branches support
-  * Loop activities
-  * Piotr ([pszmyd](https://www.codeplex.com/site/users/view/pszmyd)) owns this contribution
 * Upgrading to ASP.NET MVC 5.2 (done)
 * Upgrading to .NET Framework 4.5.1 (done)
 * Adding Azure Redis Cache support (done)
   * Add business cache implementation
 * Upgrading to TinyMCe 4 (done)
-* Localization improvements (on track, test/feedback needed)
+* Localization improvements (done)
   * Nick ([Jetski5822](https://www.codeplex.com/site/users/view/Jetski5822)) is responsible for this feature
   * RTL support in Admin
   * Culture selector (admin and front end)
-* Message Bus (on track)
+* Message Bus (done)
+* Search widgets (done)
+* Improved caching features
+* 
+#### Candidates for 1.10
+
+* Improved Workflow module (on track)
+  * Error/Exception branches support
+  * Loop activities
+  * Piotr ([pszmyd](https://www.codeplex.com/site/users/view/pszmyd)) owns this contribution
+
+* Owin identity providers
+* Javascript
 
 ### Currently Implemented (Partially or in Full)
 
