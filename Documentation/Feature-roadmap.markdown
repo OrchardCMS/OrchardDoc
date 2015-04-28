@@ -5,7 +5,7 @@ The feature roadmap is subject to change as the project evolves, and we welcome 
 
 #### Priorities for Orchard 1.9:
 
-This release is expected to be released for May 2014
+This release is expected to be released for May 2015
 
 * Audit Trail module (done)
   * Daniel Stolt ([Decorum](https://www.codeplex.com/site/users/view/Decorum)) and Sipke Schoorstra ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) own this contribution
