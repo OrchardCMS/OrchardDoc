@@ -113,7 +113,7 @@ we should all be grateful to the following people who contributed patches and fe
 - Daniel Dabrowski	([rodpl](https://www.codeplex.com/site/users/view/rodpl))
 - Daniel Stolt	([Decorum](https://www.codeplex.com/site/users/view/Decorum))
 - Denis Besic	([besicdenis](https://www.codeplex.com/site/users/view/besicdenis))
-- Eric Perez	
+- Eric Perez	([codereached](https://www.codeplex.com/site/users/view/codereached))
 - Jack Cheng	([jchenga](https://www.codeplex.com/site/users/view/jchenga))
 - Jay Harris	([jayharris](https://www.codeplex.com/site/users/view/jayharris))
 - Jason Burgard	([jburgard](https://www.codeplex.com/site/users/view/jburgard))
