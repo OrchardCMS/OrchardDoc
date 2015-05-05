@@ -118,7 +118,7 @@ we should all be grateful to the following people who contributed patches and fe
 - Jay Harris	([jayharris](https://www.codeplex.com/site/users/view/jayharris))
 - Jason Burgard	([jburgard](https://www.codeplex.com/site/users/view/jburgard))
 - Jasper Dunker	([jasperd](http://www.codeplex.com/site/users/view/jasperd))
-- 	([jcastillopino](http://www.codeplex.com/site/users/view/jcastillopino))
+- Jorge Castillo Pino ([jcastillopino](http://www.codeplex.com/site/users/view/jcastillopino))
 - Jeff Bullock	([j3ffb](https://www.codeplex.com/site/users/view/j3ffb))
 - Josh Berry	([joshby](https://www.codeplex.com/site/users/view/joshby))
 - Katsuyuki Ohmuro	([kohmuro](https://www.codeplex.com/site/users/view/kohmuro))
@@ -129,5 +129,5 @@ we should all be grateful to the following people who contributed patches and fe
 - Stanley Goldman	([StanleyGoldman](http://www.codeplex.com/site/users/view/StanleyGoldman))
 - Thierry Fleury	([Codinlab](https://www.codeplex.com/site/users/view/Codinlab))
 - Zoltán Lehóczky	([Piedone](http://www.codeplex.com/site/users/view/Piedone))
-- 	([qt1](http://www.codeplex.com/site/users/view/qt1))
+- Baruch Nissenbaum ([qt1](http://www.codeplex.com/site/users/view/qt1))
 
