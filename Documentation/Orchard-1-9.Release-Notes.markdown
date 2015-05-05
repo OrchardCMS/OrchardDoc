@@ -78,6 +78,8 @@ Orchard 1.9 fixes bugs and introduces the following changes and features:
 * Message Bus
 * Search widgets
 * Improved caching features
+* PBKDF2 is now the default password hashing algorithm
+
 
 The full list of fixed bugs for this release can be found here:
 
@@ -95,7 +97,21 @@ site and database first.
 
 Please follow the upgrade instruction from this document: <https://github.com/OrchardCMS/OrchardDoc/blob/1.8/Documentation/Orchard-1-8-2.Release-Notes.markdown>
 
-There are no specific update steps to apply in order to upgrade 1.8 to 1.9.
+#### Upgrading modules
+
+Orchard 1.9 bumps up the .NET Framework version it depends on from 4.5 to 4.5.1. You may need to perform the same upgrade in your module's project properties before it successfully compiles.
+
+#### Note on the change of the default password hash algorithm
+
+As per the [work item #21036](https://orchard.codeplex.com/workitem/21036) the hash algorithm used by default to hash user passwords for storage was changed from SHA1 to PBKDF2 (more precisely the `System.Web.Helpers.Crypto.HashPassword()` implementation).
+
+By default all existing user passwords will be migrated to the new hash when the user successfully logs in next time. If you want to prevent this migration and force every existing password hashes to stay SHA1 then add an appSettings or connectionString configuration to the Web.config (or equivalent) with the name `"Orchard.Users.KeepOldPasswordHash"` and value `"true"`.
+
+#### Note on improved handling of setup recipes
+
+Setup recipes are now [automatically harvested](https://orchard.codeplex.com/workitem/20942) from all modules for the setup screen. This means that you don't have to add your setup recipes to the Orchard.Setup module any more, you can keep them in your own modules.
+
+Keep in mind however that recipes intended for setup now should possess the IsSetupRecipe metadata (see the recipes in Orchard.Setup), otherwise they won't show up on the setup screen.
 
 Contributors
 ------------
