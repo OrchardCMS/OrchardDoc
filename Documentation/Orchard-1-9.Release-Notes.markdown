@@ -120,7 +120,7 @@ This software would not exist without the community. In particular, for this rel
 we should all be grateful to the following people who contributed patches and features:
 
 - Abhishek Luv	([abhishekluv](http://www.codeplex.com/site/users/view/abhishekluv))
-- 	([anoordende](http://www.codeplex.com/site/users/view/anoordende))
+- Arjan Noordende	([anoordende](http://www.codeplex.com/site/users/view/anoordende))
 - Antoine Griffard	([agriffard](http://www.codeplex.com/site/users/view/agriffard))
 - Benedek Farkas	([nightwolf226](https://www.codeplex.com/site/users/view/nightwolf226))
 - Benjamin Grabkowitz	([bgrabkowitz](https://www.codeplex.com/site/users/view/bgrabkowitz))
@@ -140,7 +140,7 @@ we should all be grateful to the following people who contributed patches and fe
 - Jay Harris	([jayharris](https://www.codeplex.com/site/users/view/jayharris))
 - Jason Burgard	([jburgard](https://www.codeplex.com/site/users/view/jburgard))
 - Jasper Dunker	([jasperd](http://www.codeplex.com/site/users/view/jasperd))
-- 	([jcastillopino](http://www.codeplex.com/site/users/view/jcastillopino))
+- Jorge Castillo Pino ([jcastillopino](http://www.codeplex.com/site/users/view/jcastillopino))
 - Jean-Thierry Kéchichian	([jtkech](https://www.codeplex.com/site/users/view/jtkech))
 - Jeff Bullock	([j3ffb](https://www.codeplex.com/site/users/view/j3ffb))
 - Josh Berry	([joshby](https://www.codeplex.com/site/users/view/joshby))
@@ -157,7 +157,7 @@ we should all be grateful to the following people who contributed patches and fe
 - Sipke Schoorstra	([sfmskywalker](http://www.codeplex.com/site/users/view/sfmskywalker))
 - Stanley Goldman	([StanleyGoldman](http://www.codeplex.com/site/users/view/StanleyGoldman))
 - Thierry Fleury	([Codinlab](https://www.codeplex.com/site/users/view/Codinlab))
-- Wojciech Gadzinski	([toneuk](https://www.codeplex.com/site/users/view/Ermesx))
+- Wojciech Gadzinski	([Ermesx](https://www.codeplex.com/site/users/view/Ermesx))
 - 	([Xeevis](https://www.codeplex.com/site/users/view/Xeevis))
 - Zoltán Lehóczky	([Piedone](http://www.codeplex.com/site/users/view/Piedone))
 - Baruch Nissenbaum	([qt1](http://www.codeplex.com/site/users/view/qt1))
