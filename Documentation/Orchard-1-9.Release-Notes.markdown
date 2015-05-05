@@ -160,4 +160,4 @@ we should all be grateful to the following people who contributed patches and fe
 - Wojciech Gadzinski	([toneuk](https://www.codeplex.com/site/users/view/Ermesx))
 - 	([Xeevis](https://www.codeplex.com/site/users/view/Xeevis))
 - Zoltán Lehóczky	([Piedone](http://www.codeplex.com/site/users/view/Piedone))
-- 	([qt1](http://www.codeplex.com/site/users/view/qt1))
+- Baruch Nissenbaum	([qt1](http://www.codeplex.com/site/users/view/qt1))
