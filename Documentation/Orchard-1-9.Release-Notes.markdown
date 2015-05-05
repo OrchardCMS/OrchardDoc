@@ -95,7 +95,7 @@ site and database first.
 
 ### Upgrading from Orchard 1.8.2 and earlier
 
-Please follow the upgrade instruction from this document: <https://github.com/OrchardCMS/OrchardDoc/blob/1.8/Documentation/Orchard-1-8-2.Release-Notes.markdown>
+Please follow the upgrade instruction from this document: <http://docs.orchardproject.net/Documentation/orchard-1-8-2.release-Notes>
 
 #### Upgrading modules
 
