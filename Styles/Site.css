@@ -27,7 +27,7 @@ body {
 /* ---------- Headings and defaults ---------- */
 h1,h2,h3,h4,h5,h6,legend {padding:4px 0; font-family:"Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif; font-weight:normal; font-style: normal;color:#27320a;}
 
-h1 {font-size: 190%;}
+h1 {font-size: 190%;line-height:1.1em;}
 h2 {font-size: 150%;}
 h3 {font-size: 140%;}
 h4 {font-size: 125%;}
