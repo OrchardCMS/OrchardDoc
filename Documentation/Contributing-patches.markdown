@@ -7,7 +7,7 @@ Creating **a branch inside a fork should be preferred** because it makes merging
 
 ## Working on a Pull Request
 
-When working on a pull request, your local enlistment should in most cases be synchronized to the latest check-in in the current development branches. If you intend to provide a bug fix then the best branch to work on is the short-cylce dev branch, currently named 1.8.x. If instead you intend to provide a new or enhanced feature then it's recommended to use the long-cycle dev branch, currently named 1.x.
+When working on a pull request, your local enlistment should in most cases be synchronized to the latest check-in in the current development branches. If you intend to provide a bug fix then the best branch to work on is the short-cylce dev branch, currently named **1.9.x**. If instead you intend to provide a new or enhanced feature then it's recommended to use the long-cycle **dev** branch.
 
 Another thing to consider is the status of the issue you are fixing. Bugs that are marked as "Proposed" have been reported, but not yet triaged by the team. It just means that we didn't have time to look at them and see if they are valid, or duplicates of existing issues, or have since already been fixed. Thus, for best results, please send pull requests for issues that are marked as "Active".
 
@@ -21,7 +21,7 @@ You can create a new fork by clicking "Create fork". You can then enter a name f
 
 Once you've hit save, you'll see a view of the forks that you own. Each of them has its own clone URL. What you want to do next is clone that remote CodePlex repository to your local machine in order to be able to start working.
 
-Based on the branch you want to submit your pull request on (1.8.x or 1.x) you will need to create a new branch dedicated to this work item. For instance you can name it based on the work item number or whatever you want which will help you organize your fork.
+Based on the branch you want to submit your pull request on (**1.9.x** or **dev**) you will need to create a new branch dedicated to this work item. For instance you can name it based on the work item number or whatever you want which will help you organize your fork.
 
 Once you've made your changes and are ready to submit them back to us, commit your changes then push your branch.
 
