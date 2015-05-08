@@ -54,18 +54,18 @@ Orchard 1.9 fixes bugs and introduces the following changes and features:
 
 * Migration to Microsoft .NET 4.5.1
 * Audit Trail module
-  * Daniel Stolt ([DanielStolt](https://github.com/DanielStolt) and Sipke Schoorstra ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) own this contribution
+  * Daniel Stolt ([DanielStolt](https://github.com/DanielStolt)) and Sipke Schoorstra ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) own this contribution
 * Draftable widgets
 * Indexable drafts
 * Date localization and calendar support improvements and fixes
-  * Daniel Stolt ([DanielStolt](https://github.com/DanielStolt) owns this contribution
+  * Daniel Stolt ([DanielStolt](https://github.com/DanielStolt)) owns this contribution
   * More information here: https://orchard.codeplex.com/discussions/560347
 * Dynamic Layout module
-  * Sipke Schoorstra ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) and Daniel Stolt ([DanielStolt](https://github.com/DanielStolt) own this contribution
+  * Sipke Schoorstra ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) and Daniel Stolt ([DanielStolt](https://github.com/DanielStolt)) own this contribution
 * Dynamic Forms module
   * Sipke Schoorstra ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) owns this contribution
 * Output cache improvements
-  * Daniel Stolt ([DanielStolt](https://github.com/DanielStolt) owns this contribution
+  * Daniel Stolt ([DanielStolt](https://github.com/DanielStolt)) owns this contribution
   * More information here: http://www.ideliverable.com/blog/output-cache-improvements-in-orchard-1-9
 * Integrate OWIN middlewares support
   * Nick ([Jetski5822](https://www.codeplex.com/site/users/view/Jetski5822)) is responsible for this feature
@@ -102,7 +102,7 @@ Please follow the upgrade instruction from this document: <http://docs.orchardpr
 
 Orchard 1.9 bumps up the .NET Framework version it depends on from 4.5 to 4.5.1. You may need to perform the same upgrade in your module's project properties before it successfully compiles.
 
-As part of upgrading to Azure SDK 2.6 most of the Azure-related binaries have been updated. Some of these may contain some breaking changes, so if you use them, you should test your sites/modules for compatibility.
+As part of upgrading to Azure SDK 2.5 most of the Azure-related binaries have been updated. Some of these may contain some breaking changes, so if you use them, you should test your sites/modules for compatibility.
 
 #### Note on the change of the default password hash algorithm
 
