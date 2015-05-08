@@ -54,20 +54,24 @@ Orchard 1.9 fixes bugs and introduces the following changes and features:
 
 * Migration to Microsoft .NET 4.5.1
 * Audit Trail module
-  * Daniel Stolt ([Decorum](https://www.codeplex.com/site/users/view/Decorum)) and Sipke Schoorstra ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) own this contribution
+  * Daniel Stolt ([DanielStolt](https://github.com/DanielStolt) and Sipke Schoorstra ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) own this contribution
 * Draftable widgets
 * Indexable drafts
 * Date localization and calendar support improvements and fixes
-  * Daniel Stolt ([Decorum](https://www.codeplex.com/site/users/view/Decorum)) owns this contribution
+  * Daniel Stolt ([DanielStolt](https://github.com/DanielStolt) owns this contribution
   * More information here: https://orchard.codeplex.com/discussions/560347
 * Dynamic Layout module
-  * Sipke Schoorstra ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) and Daniel Stolt ([Decorum](https://www.codeplex.com/site/users/view/Decorum)) own this contribution
+  * Sipke Schoorstra ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) and Daniel Stolt ([DanielStolt](https://github.com/DanielStolt) own this contribution
 * Dynamic Forms module
   * Sipke Schoorstra ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) owns this contribution
+* Output cache improvements
+  * Daniel Stolt ([DanielStolt](https://github.com/DanielStolt) owns this contribution
+  * More information here: http://www.ideliverable.com/blog/output-cache-improvements-in-orchard-1-9
 * Integrate OWIN middlewares support
   * Nick ([Jetski5822](https://www.codeplex.com/site/users/view/Jetski5822)) is responsible for this feature
 * Upgrading to ASP.NET MVC 5.2
 * Upgrading to .NET Framework 4.5.1
+* Upgrading to Microsoft Azure SDK 2.5
 * Adding Azure Redis Cache support
   * Add business cache implementation
 * Upgrading to TinyMCe 4
@@ -77,9 +81,7 @@ Orchard 1.9 fixes bugs and introduces the following changes and features:
   * Culture selector (admin and front end)
 * Message Bus
 * Search widgets
-* Improved caching features
 * PBKDF2 is now the default password hashing algorithm
-
 
 The full list of fixed bugs for this release can be found here:
 
@@ -90,8 +92,7 @@ How to upgrade from a previous version
 
 You can find migration instructions here: <http://docs.orchardproject.net/Documentation/Upgrading-a-site-to-a-new-version-of-Orchard>.
 
-No matter what migration path you take, please take the precaution of making a backup of your
-site and database first.
+No matter what migration path you take, please take the precaution of making a backup of your site and database first.
 
 ### Upgrading from Orchard 1.8.2 and earlier
 
@@ -100,6 +101,8 @@ Please follow the upgrade instruction from this document: <http://docs.orchardpr
 #### Upgrading modules
 
 Orchard 1.9 bumps up the .NET Framework version it depends on from 4.5 to 4.5.1. You may need to perform the same upgrade in your module's project properties before it successfully compiles.
+
+As part of upgrading to Azure SDK 2.6 most of the Azure-related binaries have been updated. Some of these may contain some breaking changes, so if you use them, you should test your sites/modules for compatibility.
 
 #### Note on the change of the default password hash algorithm
 
