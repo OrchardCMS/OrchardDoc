@@ -13,7 +13,7 @@ We will use three different approaches:
 
 # Downloading the .zip File
 
-Navigate to the [Downloads Section of Orchard in Codeplex](http://orchard.codeplex.com/releases/view/119931). 
+Navigate to the [Releases Section of Orchard in GitHub](https://github.com/OrchardCMS/Orchard/releases). 
 
 You will find two .zip files.
 
