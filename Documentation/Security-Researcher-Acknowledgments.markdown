@@ -15,7 +15,7 @@ May 19 2015 - http://docs.orchardproject.net/Documentation/Patch-20150519
 
 [Hitachi Systems, Ltd.](http://www.hitachi-systems.com/eng/)
 
-April 4 2015 - http://docs.orchardproject.net/Documentation/Patch-4-30-2013
+April 4 2013 - http://docs.orchardproject.net/Documentation/Patch-4-30-2013
 
 **Mesut Timur**
 
