@@ -19,4 +19,4 @@ For older versions of Orchard, we are releasing a patch file that can be applied
 The archive for each of these patches contains a Modules folder that has the right structure to be copied into the root directory of an Orchard site. 
 If you are using a source version, you need to copy the contents of the zip file into src/Orchard.Web.
 
-You can find patches for all other previous versions here (https://github.com/OrchardCMS/Orchard/releases/tag/patch-20150519) 
+You can find patches for all other previous versions here <https://github.com/OrchardCMS/Orchard/releases/tag/patch-20150519> 
