@@ -1,0 +1,22 @@
+# Security patch recommended for all versions of Orchard
+
+## Background
+
+A [CSRF](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29_Prevention_Cheat_Sheet) vulnerability has been discovered by Adrian Pastor, [MINERVA Information Security Inc.](http://minerva-is.net) in the _Users_ module that is distributed with the core distribution of the CMS. 
+
+The issue allows mass-disabling Orchard logins by tricking an administrator to visit a site containing specifically crafted script while logged in. Mass-approving the creation of user logins was also affected.
+However, the currently logged in user account is not affected by the attack.
+
+The latest released versions of Orchard (1.9 and 1.8.2) are immune to this vulnerability.
+
+## Action Required
+
+* Apply the patch for your version
+* Or update to Orchard 1.8.2
+* Or update to Orchard 1.9
+
+For older versions of Orchard, we are releasing a patch file that can be applied on top of a running instance of Orchard. 
+The archive for each of these patches contains a Modules folder that has the right structure to be copied into the root directory of an Orchard site. 
+If you are using a source version, you need to copy the contents of the zip file into src/Orchard.Web.
+
+You can find patches for all other previous versions here (https://github.com/OrchardCMS/Orchard/releases/tag/untagged-d0bc97590008f1d26373) 
