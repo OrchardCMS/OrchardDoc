@@ -75,6 +75,10 @@ Due to a fix on how Workflows activity outcomes (e.g. "Done") are localized, aft
 
 Thus make sure to take notes of the structure of your workflows **before** upgrading if your site's admin area is using a culture other than an English one and has a localization package installed. If your site doesn't make use of Workflows, uses and English-speaking culture or doesn't have a localization package installed then it's not affected.
 
+#### Warning on Email Workflows Activities
+
+If you use the Send Email activity in Workflows to send emails you may want to check whether you have the Email Workflows Activities feature enabled. Due to a bug you could use the Send Email activity even if you had the feature disabled, but this was fixed and now you have to enable Email Workflows Activities to be able to send emails.
+
 Contributors
 ------------
 
