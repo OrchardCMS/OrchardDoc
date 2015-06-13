@@ -79,6 +79,10 @@ Thus make sure to take notes of the structure of your workflows **before** upgra
 
 If you use the Send Email activity in Workflows to send emails you may want to check whether you have the Email Workflows Activities feature enabled. Due to a bug you could use the Send Email activity even if you had the feature disabled, but this was fixed and now you have to enable Email Workflows Activities to be able to send emails.
 
+#### Warning on Dynamic Forms feature relocation
+
+There are two new features in the Dynamic Forms module, Dynamic Forms Validation Activities and Dynamic Forms User Bindings. These contain the C# form submission validator and bindings for `UserPart`, respectively. Since these were moved to their own features from the root feature (to avoid the root feature depend on the Orchard.Scripting.CSharp and Orchard.Users modules) if you make use of these services you have to enable the new features.
+
 Contributors
 ------------
 
