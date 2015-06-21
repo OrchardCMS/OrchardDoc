@@ -371,6 +371,24 @@ This module provides a jobs queue to process jobs asynchronously.
 
 Used as a dependency by other modules, this provides jQuery and jQueryUI scripts.
 
+## Orchard.Layouts
+
+Orchard.Layouts module in Orchard provides tools to create layouts. In Orchard v.1.9 by default the Page content type has a LayoutPart instead of the BodyPart. 
+
+A LayoutPart is a layout canvas which is empty by default. The Layouts module consists of Elements like Grids, Rows, Columns and Content Item elements, Media elements and Part elements like Title, Common and Tags part.
+
+Layout elements can be dragged-n-dropped on the Layout canvas to form a layout for a Page or a master layout for other pages.
+
+The Layouts module has a feature called Snippets which allows you to use a shape from within your current theme as an element. Quite handy auh.
+
+### Features
+
+- Orchard.Layouts : Provides tools to create layouts.
+- Orchard.Layouts.Snippets : Enables support for adding elements based on shapes in the current theme.
+- Orchard.Layouts.Markdown : Adds a Markdown element to the system.
+- Orchard.Layouts.Projections : Adds a Projection element to the system.
+- Orchard.Layouts.Tokens : Provides an element token provider that enables elements to be rendered using a token and enables tokens to be used inside of various elements such as Html, Text and Paragraph.
+
 ## Orchard.Lists
 
 This module provides a simple implementation for lists of content items, following
