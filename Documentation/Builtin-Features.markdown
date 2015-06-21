@@ -185,6 +185,20 @@ Using the part provided by this module, you can schedule a content item to be ar
 
 This module is available from source code packages or [from the gallery][28].
 
+## Orchard.AuditTrail
+
+Audit Trail module in Orchard provides a log records for creation, deletion of any Content Type and events like user events, role events and it even provides a recycle bin.
+
+### Features
+
+- Orchard.AuditTrail : Provides a log for recording and viewing back-end changes.
+- Orchard.AudiTrail.ImportExport : Provides import/export functionality for the Audit Trail feature.
+- Orchard.AuditTrail.Trimming : Provides a background task that regularly deletes old audit trail records.
+-  Orchard.AuditTrail.Users : Provides audit trail support for user related events.
+- Orchard.AuditTrail.Roles : Provides audit trail support for role related events.
+- Orchard.AuditTrail.ContentDefinition : Provides audit trail support for content definition related events.
+- Orchard.AuditTrail.RecycleBin : Adds a Recycle Bin menu item to the Audit Trail menu, enabling you to recycle removed content items.
+
 ## Orchard.Autoroute 
 
 This very powerful feature makes it possible for content type creators to specify a
