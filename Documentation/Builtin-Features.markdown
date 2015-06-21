@@ -185,7 +185,7 @@ Using the part provided by this module, you can schedule a content item to be ar
 
 This module is available from source code packages or [from the gallery][28].
 
-## Orchard.AuditTrail
+## Orchard.AuditTrail (off by default)
 
 Audit Trail module in Orchard provides a log records for creation, deletion of any Content Type and events like user events, role events and it even provides a recycle bin.
 
@@ -274,7 +274,7 @@ Enable this module to enable the creation and modification of content types from
 
 * [Creating custom content types][9]
 
-## Orchard.CustomForms (off by default)
+## Orchard.CustomForms (off by default) (Deprecated in 1.9)
 
 Custom forms are built as content types, typically using fields. Once you've built the content
 type for your custom form, you can enable its instances to be created from the front-end by
@@ -303,6 +303,20 @@ This module contains a few features that help with the development of themes.
 * [Customizing Orchard using designer helper tools][31]
 
 This module is available from source code packages or [from the gallery][32].
+
+## Orchard.DynamicForms (off by default)
+
+DynamicForms module in Orchard allows to create custom forms like contact forms using layouts.
+
+After enabling the DynamicForms module -> click on Form in the dashboard area. The DynamicForms module is built using the DynamicLayouts module which allows us to place or drag-n-drop elements like a forms, checkboxes, buttons, labels, text areas, radio buttons, validation messages and many more on the Layout canvas.
+
+### Features
+
+- Orchard.DynamicForms : Create custom forms like contact forms using layouts.
+- Orchard.DynamicForms.AntiSpam : Provides anti-spam elements to protect your content from malicious submissions.
+- Orchard.DynamicForms.Taxonomies : Adds a Taxonomy form element to the sytem.
+- Orchard.DynamicForms.Projections : Adds a Query form element to the sytem.
+- Orchard.DynamicForms.ImportExport : Enables the import and export of form submissions.
 
 ## Orchard.Email
 
