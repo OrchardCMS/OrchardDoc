@@ -396,10 +396,15 @@ a folder/file metaphor where a content item can belong to only one list.
 
 ## Orchard.Localization
 
-This module provides a part that can be added to a content type to make it localizable.
-The items of the modified types can have several versions that differ by culture.
+The localization module enables the localization of content items. This module provides a part that can be added to a content type to make it localizable. The items of the modified types can have several versions that differ by culture.
 
-This module is available from source code packages or [from the gallery][37].
+### Features
+
+- Orchard.Localization : Enables localization of content items.
+- Orchard.Localization.DateTimeFormat : Enables PO-based translation of date/time formats and names of days and months.
+- Orchard.Localization.CultureSelector : Enables culture picker services, and also the admin culture picker.
+- Orchard.Localization.Transliteration : Enables transliteration of content.
+- Orchard.Localization.Transliteration.SlugGeneration : Enables transliteration of the autoroute slug when creating a piece of content.
 
 ## Orchard.MediaLibrary 
 
@@ -412,6 +417,18 @@ Orchard.MediaLibrary Provides enhanced Media management tools
 ## Orchard.MediaProcessing
 
 Module for processing Media e.g. image resizing
+
+## Orchard.MessageBus
+
+Provides communication APIs for server farms.
+
+### Features
+
+- Orchard.MessageBus : Reusable API abstractions to communicate in a server farm.
+- Orchard.MessageBus.DistributedSignals : Distribute signals cache invalidation calls.
+- Orchard.MessageBus.SqlServerServiceBroker : A message bus implementation using SQL Server Service Broker.
+- Orchard.MessageBus.DistributedShellRestart : Distribute shell restarts.
+
 
 
 ## Orchard.Migrations
@@ -448,6 +465,11 @@ This module is available from source code packages or [from the gallery][41].
 ## Orchard.OutputCache
 
 Adds Output Caching functionality.
+
+### Features
+
+- Orchard.OutputCache : Adds output caching functionality.
+- Orchard.OutputCache.Database : Activates a provider that stores output cache data in the database.
 
 ## Orchard.Packaging 
 
@@ -502,12 +524,25 @@ Finally, the import/export feature uses this same recipe format to transfer cont
 
 * [Making a web site recipe][16]
 
+## Orchard.Redis
+
+Provides Redis integration with Orchard.
+
+### Features
+
+- Orchard.Redis : Provides Redis integration with Orchard.
+- Orchard.Redis.MessageBus : A message bus implementation using Redis pub/sub.
+- Orchard.Redis.OutputCache : An output cache storage provider using Redis.
+- Orchard.Redis.Caching : Business data cache using Redis.
+
 ## Orchard.Roles 
 
-Security APIs in Orchard do not make many presuppositions about authentication, membership
-and permissions, but we do ship role-based security as a default security implementation.
-Users can belong to one or many groups, and permissions are granted to groups rather than
-users.
+The roles module is adding the ability to assign roles to users. It's also providing a set of default roles for which other modules can define default permissions.
+
+### Features
+
+- Orchard.Roles : Standard user roles.
+- Orchard.Roles.Workflows : Provides a role based activities.
 
 ### See Also
 
@@ -580,8 +615,13 @@ This module will ensure SSL is used when accessing specific parts of the website
 ## Orchard.Tags 
 
 Tags are a very simple way to categorize contents. It is a flat and easily extensible structure.
-For more elaborate classifications, we strongly recommend the use of the [Contrib.Taxonomies][21]
-module.
+
+### Features
+
+- Orchard.Tags : The tags module is providing basic tagging for arbitrary content types.
+- Orchard.Tags.Feeds : Adds tags to the RSS feeds. 
+- Orchard.Tags.TagCloud : Adds a tag cloud widget. 
+
 
 ### See Also
 
@@ -620,15 +660,27 @@ Provides a Template type that can be used to store template code and used as a s
 
 ## Orchard.Tokens (off by default)
 
-Tokens are contextual environment variables that are used in dynamic expressions. For example,
+Provides a system for performing string replacements with common site values. Tokens are contextual environment variables that are used in dynamic expressions. For example,
 the Autoroute feature makes it possible to define URL patterns for content items of a given
 type. Those patterns rely on tokens that will be dynamically evaluated in a specific context.
 The "{Content.Date.Format:yyyy}/{Content.Slug}" would be evaluated for the specific content item
 it applies to and would be resolved to something like "2012/the-title".
 
+### Features 
+
+- Orchard.Tokens : Provides a system for performing string replacements with common site values.
+- Orchard.Tokens.Feeds : Provides a content part to customize RSS fields based on tokens.
+- Orchard.Tokens.HtmlFilter : Evaluates tokens in a body.
+
 ## Orchard.Users 
 
 This is the module that implements the default user management in Orchard.
+
+### Features 
+
+- Orchard.Users : default user management in Orchard.
+- Orchard.Users.Workflows : Provides User based Workflow Activites.
+- Orchard.Users.PasswordEditor : Adds the ability for admins to edit users' passwords.
 
 ### See Also
 
@@ -660,6 +712,10 @@ get displayed on what pages is determined by layer rules.
 ## Orchard.Workflows 
 
 Orchard.Workflows module provides tools to create custom workflows. 
+
+## SysCache
+
+Enables database caching using the SysCache provider.
 
 ## TinyMCE 
 
