@@ -104,6 +104,7 @@ To get started with creating a custom recipe, you can select an existing recipe 
         <WebSite>http://orchardproject.net</WebSite>
         <Tags></Tags>
         <Version>1.0</Version>
+		<IsSetupRecipe>true</IsSetupRecipe>
       </Recipe>
     
       <Module packageId="Orchard.Module.Bing.Maps" />
@@ -171,9 +172,11 @@ Note the following about the changes made to the default recipe:
 
 In addition to the attributes shown here for the **Module** and **Theme** elements, both elements support a **version** attribute. If the version is specified, that version will be downloaded from the Orchard Gallery. Both elements also have a **repository** attribute. By default, the **repository** attribute points to the Orchard Gallery. However, you can set it to any feed URL.
 
-To add your custom recipe to the setup page, put the recipe XML file into the _Orchard.Web/Modules/Orchard.Setup/Recipes_ folder. When you set up a new Orchard website, the recipe list will contain your recipe.
+To add your custom recipe to the setup page use the `IsSetupRecipe` attribute in the `Recipe` element as shown above, and put the recipe XML file into the _Recipes_ folder (or its subfolder) of a module. Note that recipe files should have a name ending in _.recipe.xml_, e.g. _Custom.recipe.xml_. When you set up a new Orchard website, the recipe list will contain your setup recipe.
 
 ![](../Upload/screenshots/recipes_new_custom.png)
+
+Note that recipes used for importing mustn't contain an `IsSetupRecipe` element or it should be set to `false`.
 
 # Importing and Exporting a Recipe
 Orchard enables you to import and export recipes from and to the web server. It uses the **Import Export** module, which is disabled by default. Therefore you must enable the module to use this feature.
