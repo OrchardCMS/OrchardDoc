@@ -34,6 +34,7 @@ An Orchard recipe is an XML file that contains website configuration information
         <WebSite>http://orchardproject.net</WebSite>
         <Tags></Tags>
         <Version>1.0</Version>
+		<IsSetupRecipe>true</IsSetupRecipe>
       </Recipe>
       
       <Feature enable="Orchard.Blogs,Orchard.Comments,Orchard.Tags,
