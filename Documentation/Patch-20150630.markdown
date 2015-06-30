@@ -1,0 +1,19 @@
+# Security patch recommended for all versions of Orchard
+
+## Background
+
+A persistent [XSS](https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)) vulnerability has been discovered by Paris Zoumpouloglou , [Project Zero](http://projectzero.gr/en/) in the _Users_ module that is distributed with the core distribution of the CMS. 
+
+The issue potentially allows elevation of priviledges by tricking an administrator to execute some custom crafted script on his behalf.
+The version of Orchard affected by this issue are 1.7.3, 1.8.2 and 1.9.0. Version below 1.7.3 are not affected.
+To mitigate the vulnerability, don't click links in the users management page that appear to contain HTML.
+
+## Action Required
+
+* Apply the patch for your version or update to Orchard 1.9.1
+
+We are releasing a patch file for versions 1.7.3 to 1.9.1 that can be applied on top of a running instance of Orchard. 
+The archive for each of these patches contains a Modules folder that has the right structure to be copied into the root directory of an Orchard site. 
+If you are using a source version, you need to copy the contents of the zip file into src/Orchard.Web.
+
+You can find patches for all other previous versions here <https://github.com/OrchardCMS/Orchard/releases/tag/1.9.1> 
