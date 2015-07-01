@@ -2,6 +2,13 @@ Build: 1.9.1
 
 Published: 06/30/2015
 
+This release contains bug and security fixes. It is highly recommended to update to this version.
+
+We are also releasing patches for versions of Orchard which contain the security vulnerability described at http://docs.orchardproject.net/Documentation/Patch-20150630. It contains patch files for the following Orchard versions:
+
+1.7.3
+1.8.2
+
 How to Install Orchard
 ----------------------
 
