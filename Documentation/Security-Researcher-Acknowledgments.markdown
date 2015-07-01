@@ -9,7 +9,7 @@ _To submit any security vulnerability. please send an email to <orchardfeedback@
 
 [Project Zero](http://projectzero.gr/en/)
 
-June 30 2015 - http://docs.orchardproject.net/Documentation/Patch-20150530
+June 30 2015 - http://docs.orchardproject.net/Documentation/Patch-20150630
 
 **Adrian Pastor**
 
