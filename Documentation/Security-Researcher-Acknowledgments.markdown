@@ -5,13 +5,15 @@ _To submit any security vulnerability. please send an email to <orchardfeedback@
 
 ### Security Researchers
 
-June 30 2015 - http://docs.orchardproject.net/Documentation/Patch-20150530
-
 **Paris Zoumpouloglou**
 
 [Project Zero](http://projectzero.gr/en/)
 
-MINERVA Information Security Inc.](http://minerva-is.net)
+June 30 2015 - http://docs.orchardproject.net/Documentation/Patch-20150530
+
+**Adrian Pastor**
+
+[MINERVA Information Security Inc.](http://minerva-is.net)
 
 May 19 2015 - http://docs.orchardproject.net/Documentation/Patch-20150519
 
