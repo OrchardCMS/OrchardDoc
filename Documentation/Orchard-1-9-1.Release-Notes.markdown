@@ -65,7 +65,7 @@ Orchard 1.9.1 fixes bugs and introduces the following changes and features:
 * Fixed localization string encoding
 * Improved native clipboard support in layout editor
 * New heading, fieldset and break elements for the layout editor
-* Upgraded to ASP.NET 5.2.3 and Razor 3.2.3
+* Upgraded to ASP.NET MVC 5.2.3 and Razor 3.2.3
 * Improved performance of output cache key generation
 * Added the ability to set the SSL setting for cookies in the SSL module
 * Added support for Visual Studio 2015
