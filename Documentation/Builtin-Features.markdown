@@ -38,9 +38,8 @@ such as a single-line box of unformatted text.
 ## Containers
 
 This module introduces four parts that are useful to create simple hierarchies of contents.
-It is the basis for the Orchard.Lists module and has become somewhat obsolete as Lists got
-deprecated in favor of better content classification models such as taxonomies and better
-querying mechanisms such as projections.
+It is the basis for the Orchard.Lists module, but you may want to also consider other content
+classification models such as taxonomies and better querying mechanisms such as projections.
 
 The Container part can be added to a type to mark its ability to contain certain types of
 content items. It also has properties specifying sort order and pagination.
