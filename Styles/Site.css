@@ -313,6 +313,9 @@ div.box {
 }
 
 
+.SiteWrapper {
+    background:url(Images/background_content.jpg) top center no-repeat #F6FAEA;
+}
 
 /* Contains the SidebarDiv and the MainDiv */
 #ContainerDiv {

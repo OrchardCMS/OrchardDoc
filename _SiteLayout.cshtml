@@ -39,56 +39,58 @@
                 </ul>
             </nav>
         </header>
-        <div id="ContainerDiv">
-            <div id="SidebarDiv">
-                <div id="SidebarContentDiv">
-                    <h2>Search</h2>
-                    <form action="@Href("Search.cshtml")" method="GET">
-                        <input class="txtsearchbox" type="text" name="q" value="@Request.QueryString["q"]"/><button type="submit" class="searchButton" title="Search">&raquo;</button>
-                    </form>
-                    <div>
-                        <h2>Contributors</h2>
-                        <a href="/Contributors" title="Contributors">Contributors</a>
+        <div class="SiteWrapper">
+            <div id="ContainerDiv">
+                <div id="SidebarDiv">
+                    <div id="SidebarContentDiv">
+                        <h2>Search</h2>
+                        <form action="@Href("Search.cshtml")" method="GET">
+                            <input class="txtsearchbox" type="text" name="q" value="@Request.QueryString["q"]"/><button type="submit" class="searchButton" title="Search">&raquo;</button>
+                        </form>
+                        <div>
+                            <h2>Contributors</h2>
+                            <a href="/Contributors" title="Contributors">Contributors</a>
+                        </div>
                     </div>
-                </div>
-                @if (isDoc) {
-                <h2>Table of Contents</h2>
-                <nav class="TocContainer"><ol></ol></nav>
-                <div id="SidebarFooterDiv">
-                    <ul>
-                        <li><a href="@Page.EditUrl">Edit this page</a></li>
-                        <li><a href="@Page.IssuesUrl">Submit issue</a></li>                                                
-                    </ul>
-                </div>
-                }
-            </div>
-            <article id="MainDiv">
-                <div id="MainHeaderDiv">
-                </div>
-                <div id="PageInternalHeaderDiv">
-                </div>
-                <a id="PageTop"></a>
-            	<div id="PageHeaderDiv">
-            		<h1 class="pagetitle">@Page.DocumentTitle</h1>
-    			</div>
-            	<div id="PageContentDiv">
-                    @RenderBody()
-                </div>
-            </article>
-            <footer id="MainFooterDiv">
-                <div id="siteInfo">
-                    <div id="siteInfoContent">
+                    @if (isDoc) {
+                    <h2>Table of Contents</h2>
+                    <nav class="TocContainer"><ol></ol></nav>
+                    <div id="SidebarFooterDiv">
                         <ul>
-                        <li><a href="http://orchardproject.net">Home</a></li>
-                        <li><a href="mailto:ofeedbk@microsoft.com">Contact Us</a></li>
-                        <li><a href="http://orchardproject.net/about">About Us</a></li>
-                        <li><a href="http://orchardproject.net/TermsOfUse">Terms Of Use</a></li>
-                        <li><a href="http://orchardproject.net/PrivacyStatement">Privacy Statement</a></li>
-                        <li><a href="http://appharbor.com">Hosted and Powered by AppHarbor</a></li>
+                            <li><a href="@Page.EditUrl">Edit this page</a></li>
+                            <li><a href="@Page.IssuesUrl">Submit issue</a></li>                                                
                         </ul>
                     </div>
+                    }
                 </div>
-            </footer>
+                <article id="MainDiv">
+                    <div id="MainHeaderDiv">
+                    </div>
+                    <div id="PageInternalHeaderDiv">
+                    </div>
+                    <a id="PageTop"></a>
+            	    <div id="PageHeaderDiv">
+            		    <h1 class="pagetitle">@Page.DocumentTitle</h1>
+    			    </div>
+            	    <div id="PageContentDiv">
+                        @RenderBody()
+                    </div>
+                </article>
+                <footer id="MainFooterDiv">
+                    <div id="siteInfo">
+                        <div id="siteInfoContent">
+                            <ul>
+                            <li><a href="http://orchardproject.net">Home</a></li>
+                            <li><a href="mailto:ofeedbk@microsoft.com">Contact Us</a></li>
+                            <li><a href="http://orchardproject.net/about">About Us</a></li>
+                            <li><a href="http://orchardproject.net/TermsOfUse">Terms Of Use</a></li>
+                            <li><a href="http://orchardproject.net/PrivacyStatement">Privacy Statement</a></li>
+                            <li><a href="http://appharbor.com">Hosted and Powered by AppHarbor</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
+            </div>
         </div>
         <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
         <script type="text/javascript" src="@Href("~/Scripts/toc.js")"></script>
