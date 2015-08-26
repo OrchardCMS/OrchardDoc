@@ -34,10 +34,10 @@ h4 {font-size: 125%;}
 h5 {font-size: 115%;}
 h6 {font-size: 105%;}
 
-p {line-height:20px; padding:2px 8px;}
+p {line-height:20px; padding:2px 8px 1em;}
 
-ul {list-style:disc outside; line-height:22px; padding:0 0 0 24px;}
-ol {list-style:decimal outside; line-height:22px; padding:0 0 0 24px;}
+ul {list-style:disc outside; line-height:22px; padding:0 0 1em 24px;}
+ol {list-style:decimal outside; line-height:22px; padding:0 0 1em 24px;}
 
 strong {font-weight: bold;}
 em {font-style:italic;}
@@ -313,6 +313,9 @@ div.box {
 }
 
 
+.SiteWrapper {
+    background:url(Images/background_content.jpg) top center no-repeat #F6FAEA;
+}
 
 /* Contains the SidebarDiv and the MainDiv */
 #ContainerDiv {
@@ -356,6 +359,7 @@ html>body #ContainerDiv {height: auto;}
     margin-top: 10px;
     margin-bottom: 10px;
     max-width: 580px;
+    border: 1px solid #f9f9f9;
 }
 
 #MainFooterDiv {clear:both;}
@@ -421,12 +425,17 @@ p.editlink {font-size: 75%;}
 #PreviewDiv {
 }
 
-
 blockquote {
-	border-left: solid 8px #DDDDDD;
+	border-left: solid 8px #E66300;
+    background-color: #e6cbb6;
 	margin-left: 16px;
-	padding: 0px 0px 2px 6px;
-    margin: 10px 0 10px 0;
+	padding: .75em 0px .75em 6px;
+    margin: 1em 0;
+}
+
+blockquote p:last-child {
+    padding-bottom:  0;
+    margin-bottom: 0;
 }
 
 .search {padding:12px 0 0 12px;}
