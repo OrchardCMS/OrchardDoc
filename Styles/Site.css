@@ -36,8 +36,8 @@ h6 {font-size: 105%;}
 
 p {line-height:20px; padding:2px 8px 1em;}
 
-ul {list-style:disc outside; line-height:22px; padding:0 0 0 24px;}
-ol {list-style:decimal outside; line-height:22px; padding:0 0 0 24px;}
+ul {list-style:disc outside; line-height:22px; padding:0 0 1em 24px;}
+ol {list-style:decimal outside; line-height:22px; padding:0 0 1em 24px;}
 
 strong {font-weight: bold;}
 em {font-style:italic;}
