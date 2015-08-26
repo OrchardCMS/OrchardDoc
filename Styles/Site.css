@@ -356,6 +356,7 @@ html>body #ContainerDiv {height: auto;}
     margin-top: 10px;
     margin-bottom: 10px;
     max-width: 580px;
+    border: 1px solid #f9f9f9;
 }
 
 #MainFooterDiv {clear:both;}
