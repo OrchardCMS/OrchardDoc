@@ -422,12 +422,17 @@ p.editlink {font-size: 75%;}
 #PreviewDiv {
 }
 
-
 blockquote {
-	border-left: solid 8px #DDDDDD;
+	border-left: solid 8px #E66300;
+    background-color: #e6cbb6;
 	margin-left: 16px;
-	padding: 0px 0px 2px 6px;
-    margin: 10px 0 10px 0;
+	padding: .75em 0px .75em 6px;
+    margin: 1em 0;
+}
+
+blockquote p:last-child {
+    padding-bottom:  0;
+    margin-bottom: 0;
 }
 
 .search {padding:12px 0 0 12px;}
