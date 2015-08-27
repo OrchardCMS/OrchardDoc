@@ -1,3 +1,5 @@
+> **Deprecated:** This module is deprecated as of v1.9. We recommend you use the `Orchard.DynamicForms` module instead.
+
 The Custom Forms module is used to capture information from site visitors on the front end.  Custom Forms works in combination with a Content Type.  Custom Forms can be used to create *Contact Us* and *Subscribe* widgets/pages to name a couple. The information is then stored in Orchard and can be exported later.
 
 ### Enable the Custom Forms Module ###
