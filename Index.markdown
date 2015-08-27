@@ -14,7 +14,6 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
 * [Adding and Managing Media Content](Documentation/Adding-and-managing-media-content)
 * [Managing Widgets](Documentation/Managing-widgets)
 * [Organizing Content Using Tags](Documentation/Organizing-content-with-tags)
-* [Create Custom Forms](Documentation/Creating-Custom-Forms "Use Custom Form to create subscribe and contact us pages in Orchard")
 
 ## About the Project ##
 * [Orchard Concept Definitions](Documentation/Basic-Orchard-Concepts)
@@ -62,6 +61,7 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
     * [Creating an Image Gallery](Documentation/Creating-an-image-gallery)
     * [Workflows](Documentation/Workflows)
     * [Projection](Documentation/Projection)
+    * [Create Custom Forms](Documentation/Creating-Custom-Forms "Use Custom Form to create subscribe and contact us pages in Orchard")
 
 
 * **Hosting and Deploying Websites**
