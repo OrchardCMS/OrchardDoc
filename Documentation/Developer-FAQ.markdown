@@ -27,7 +27,7 @@ The projects in the "Modules" folder are physically located under the "src\Orcha
 The Core modules are physically located under the "\src\Orchard.Web\Core" folder. 
 
 ## What is a Module.txt file?
-This is the module manifest. It has to be present at the root of the module's directory for Orchard to recognize it as a module and load it. It is a YAML-format file. Example module.txt with all possible supported fields:
+This is the module manifest. It has to be present at the root of the module's directory for Orchard to recognize it as a module and load it. It is a YAML-format file. Please note that Dependencies are **case sensitive**. Example module.txt with all possible supported fields:
 
     
     name: AnotherWiki
@@ -43,7 +43,7 @@ This is the module manifest. It has to be present at the root of the module's di
         Category: Content types
       AnotherWiki Editor:
         Description: A rich editor for wiki contents.
-        Dependencies: TinyMCE, AnotherWiki
+        Dependencies: TinyMce, AnotherWiki
         Category: Input methods
       AnotherWiki DistributionList:
         Description: Sends e-mail alerts when wiki contents gets published.
