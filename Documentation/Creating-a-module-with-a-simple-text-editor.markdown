@@ -5,7 +5,7 @@ If you do not have the [Web Platform Installer](http://www.microsoft.com/web/dow
 
 # Setting Up the Orchard Site
 
-First, you will set up a new Orchard website. If you already have a site set up, you can skip this section and jump directly to [the code generation section](Command-line-scaffolding). To start the setup, open **IIS Manager**, right-click **Sites**, and click **Add Web Site**.
+First, you will set up a new Orchard website. If you already have a site set up, you can skip this section and jump directly to [the code generation section](/Documentation/Creating-a-module-with-a-simple-text-editor#GeneratingCodefortheModule). To start the setup, open **IIS Manager**, right-click **Sites**, and click **Add Web Site**.
 
 ![Figure 1. Creating the Orchard site](../Attachments/Creating-a-module-with-a-simple-text-editor/01_NewWebSite.PNG)
 
