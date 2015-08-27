@@ -1,15 +1,8 @@
-* [Overview of Orchard](overview-of-orchard)
 * [Deploying Orchard from Staging/Development to Production Servers](deploying-to-production)
 * [Configuring Orchard in Shared Hosting Environments](configuring-shared-hosting)
-* [Creating a Module in Visual Studio](module-from-vs)
-* [Adding Admin Panel Menu Items](adding-admin-menu-items)
 * [Adding Custom Admin Panel Pages](adding-custom-admin-pages)
 * [UI Guidelines for Module Authors](ui-guidelines-for-module-authors)
-* [Adding Custom Settings](custom-settings)
-* [Adding Custom Permissions](custom-permissions)
 * [Exposing and Handling Events](exposing-and-handling-events)
-* [Creating Content Types in Code](creating-types-from-code)
-* [Writing a Command-line Handler](writing-command-line-handlers)
 * [Localizing Modules](localizing-modules)
 * [Using Different View Engines in Themes](using-different-view-engines)
 * [Adding Code to a Theme](adding-code-to-themes)
@@ -17,7 +10,6 @@
 * [Filing Bugs](filing-bugs)
 * [Orchard Community Resources](community-resources)
 * [Getting Involved in Forums](getting-involved-in-forums)
-* [Where to put Startup Code for Module ](module-startup-code)
-
-
-
+* [Where to put Startup Code for Module](module-startup-code)
+* Using Orchard.Layouts
+* Using Orchard.DynamicForms
