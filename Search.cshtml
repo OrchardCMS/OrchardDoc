@@ -3,6 +3,7 @@
     var q = Request.QueryString["q"];
     var page = int.Parse(Request.QueryString["p"] ?? "1");
     Page.Title = "Orchard Documentation - Search - " + q;
+    Page.DocumentTitle = "Search Results";
     var resultSet = SearchHelpers.Query(HttpContext.Current, q, page);
     var documents = resultSet.Documents;
     if (resultSet.TotalCount == 0) {
