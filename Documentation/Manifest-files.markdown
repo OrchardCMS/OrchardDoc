@@ -5,7 +5,7 @@ This topic is a reference for manifest files. If you create a custom module or t
 
 The following sections describe the available fields in a manifest for themes and for modules. Because a theme is a type of module, many of the same metadata fields occur in both theme manifests and module manifests.
 
-## Module Manifest Fields
+## Module manifest fields
 
 The manifest for a module should be called `module.txt` and should be located in the root of the project. 
 
