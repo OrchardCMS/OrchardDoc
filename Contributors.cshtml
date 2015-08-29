@@ -1,12 +1,13 @@
 ﻿<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>
-<script src="/contributors.js"></script>
-<link rel="stylesheet" href="/contributors.css" type="text/css" />
+<script src="/Scripts/contributors.js"></script>
+<script src="/Scripts/app.js"></script>
+<link rel="stylesheet" href="/Styles/contributors.css" type="text/css" />
 
-<div ng-controller="OrchardContributor">
+<div ng-app="ContributorsApp" ng-controller="ContributorsCtrl">
     <ul>
         <li ng-repeat="contributor in totalContributors" class="contributor">
             <a class="contributor-left" href="{{ contributor.html_url }}" target="_blank">
-                <img src="{{ contributor.avatar_url }}" alt="{{ contributor.login }}" class="contributor-image" />
+                <img ng-src="{{ contributor.avatar_url }}" alt="{{ contributor.login }}" class="contributor-image" />
             </a>
             <div class="contributor-body">
                 <h4 class="contributor-heading">{{ contributor.login }}</h4>
