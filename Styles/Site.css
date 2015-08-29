@@ -323,7 +323,7 @@ div.box {
 	margin:0px auto;
 	background:url(Images/background_content.jpg) top center no-repeat #fff;
 	position: relative;
-	min-height: 100%;
+	min-height: 740px;
 	height: 100%;
 	voice-family: "\"}\"";
 	voice-family: inherit;
@@ -572,6 +572,7 @@ span.signature {
 /* Search page end */
 
 #siteInfo {
+    position:  absolute;
     bottom: 0;
     width:100%;
     display: block;
