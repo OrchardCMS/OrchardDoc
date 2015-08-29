@@ -1,4 +1,4 @@
-var app = angular.module('contributorApp');
+var app = angular.module('ContributorsApp', ['ContributorsApp.Controllers']);
 
 app.config(['$httpProvider', function($httpProvider) {
         $httpProvider.defaults.useXDomain = true;
