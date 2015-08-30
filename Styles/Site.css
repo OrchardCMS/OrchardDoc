@@ -589,7 +589,7 @@ span.signature {
 /* Search page end */
 
 #siteInfo {
-    position:  absolute;
+    position: relative;
     bottom: 0;
     width:100%;
     display: block;
