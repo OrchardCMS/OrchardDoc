@@ -368,7 +368,7 @@ html>body #ContainerDiv {height: auto;}
 
 /* Contains the contents of a Page */
 #MainDiv {
-	padding:12px 10px 10px 22px;
+	padding:12px 10px 140px 22px;
 	width:680px;
 }
 
@@ -589,7 +589,7 @@ span.signature {
 /* Search page end */
 
 #siteInfo {
-    position: relative;
+    position: absolute;
     bottom: 0;
     width:100%;
     display: block;
