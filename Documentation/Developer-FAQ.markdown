@@ -4,19 +4,9 @@ Orchard uses a number of external libraries. They can all be found under \lib di
 ## What framework versions does Orchard support?
 Up to version 1.7 Orchard supports .NET 4.0. As of version 1.8, Orchard is going to run on .NET 4.5 and IIS 7 (or newer).
 
-## What are the master and 1.x branches? Which one should I be using?
+## Which branch should I be using when working on the codebase?
 
-Those are the 2 branches corresponding to trunk (master) and development (1.x). 
-
-All the active feature work is being done by the core team in the 1.x branch.
-Whenever a new release is ready, changes get merged from 1.x to master.
-Master is a stable branch and is normally always in a "green" state.
-This should be the branch you would ideally work with.
-1.x is the most recent branch in terms of activity but it can at times be unstable due to ongoing work.
-Everything in 1.x in terms of the public surface is also more volatile: APIs can be changed at will and daily,
-making a potential external contributor working on the branch more difficult.
-For these reasons, it is advised to use master for your development purposes, and 1.x only if you're interested
-in checking out how brand new features are being developed.
+Branches are discussed on the [contributing patches](/Documentation/Contributing-patches#Branches) page.
 
 ## What types of extensions can I write?
 Orchard Modules and Themes are supported extensions today. Note that the module and themes API is a work-in-progress, and although it's possible to build these extensions today, you should expect changes that may break extensions built on the current codebase. Regular MVC 2 Areas are also supported as modules. 
@@ -97,11 +87,8 @@ Running the unit tests is a matter of right clicking the solution or appropriate
 > Note: this applies to writing tests for the modules that come with the standard source code distribution of Orchard. To write code for your own third-party modules, please work in your own separated directory. We will provide guidance on setting up a third-party module development environment.
 
 ## How do I contribute my changes to Orchard?
-Orchard is a community project and has a number of external contributors. To ensure the patch is accepted to Orchard, there are a few points to highlight:
 
-* **Code Conventions**: Orchard code conventions and style guidelines are explained in [Code conventions](Code-conventions). The source tree also contains a ReSharper ([http://www.jetbrains.com/resharper](http://www.jetbrains.com/resharper)) file at \src\Orchard.4.5.resharper that's going to considerably simplify you working with the Orchard conventions.
-
-* **Patch submission process:** Is detailed in [Contributing patches](Contributing-patches). Although .patch files are still supported as explained there, it is preferred to use forks and use the CodePlex UI to submit a pull request. For smaller changes patch files are also OK, however there is no CodePlex UI to manage them so you would have to attach them to bugs and hope they don't get lost. Also, always use the default branch for patches.
+Contributing changes to Orchard are discussed on the [contributing patches](/Documentation/Contributing-patches#Branches) page.
 
 ## How to build a WCF service that exposes Orchard functionality?
 
