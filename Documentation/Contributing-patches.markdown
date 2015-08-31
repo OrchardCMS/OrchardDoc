@@ -30,9 +30,11 @@ There is also a separate repository called [Brochard](https://github.com/Orchard
 
 New issues are opened all the time. After an issue is submitted the core team members will it. When it is acccepted as a valid task to complete it will be given a milestone and perhaps some labels. The milestone indicates which branch any pull requests for the issue should be sent to.
 
-**SCREENSHOT** milestones, labels
-
 You might also see some additional tags like a severity level or further categorization. These labels can help you prioritise which issues you should give your attention first based on their urgency or your speciality as a developer.
+
+![](../Upload/submitting-patches/milestones-and-labels.png)
+
+In the screenshot above you can see that the bug has been tagged with the labels `bug`, `high` and `layouts`. This means it has been confirmed as a bug, it is a high priority fix and it is part of the Orchard.Layouts module. Below that you can see the milestone icon with the word `dev` next to it. This means that if you do work on it you should work from the `dev` branch.
 
 ## How to fork and work with the repository
 
@@ -66,43 +68,106 @@ Once this is done, your changes are on GitHub, but not yet in the project's offi
 
 ## Submitting a pull request
 
-When you have finished your work on the issue you can create a pull request. A pull request opens a dialog with the community to review your work and provide feedback. If 
+When you have finished your work on the issue you can create a pull request. A pull request opens a dialog with the community to review your work and provide feedback.
 
 Creating a pull request is best done from within the GitHub.com website. You can create pull requests using other techniques but using the GitHub.com has a clear interface so that you can make sure you are creating a pull request with the correct branch and you can have one final check of the files before you initiate it.
 
-Navigate to your forked copy of the OrchardDocs repo. Its url will be https://github.com/{YourUserName}/OrchardDoc
+Navigate to your forked copy of the OrchardDocs repo. Its url will be `https://github.com/{YourUserName}/OrchardDoc`
 
 You should see a create pull request bar along the top of your repos page:
 
-**** SCREENSHOT ****
+![](../Upload/submitting-patches/create-pull-request-a.png)
 
-**** COMPLETE SCREENSHOTS PROCESS ****
+This is a shortcut that GitHub have implemented to help you quickly create a pull request from your most recent `push`. If this isn't the branch you want to create the pull request you want by following these steps:
 
-********** also dont forget the closes #issue in subject
-****** - The first line should be short, less than 80 characters 
+  1. Visit your fork of OrchardDocs in your GitHub account (don't forget, it can be found at `https://github.com/{YourUserName}/OrchardDoc`)
 
+  1. Click `Pull Requests` from down the right hand side of the site
 
-While committing your changes, please follow this convention for commit messages:
+     ![](../Upload/submitting-patches/pull-request-button.png)
 
-- If linked to a work item, it should start with its number, like `#12345: This is a change`
-- If linked to a work item the last line should reference it to automatically mark it as resolved: `Work Item: 123245` 
+  1. Click the `New pull request` button in the top right:
 
-Once this is done, your changes are on CodePlex, but not yet in the project's official repository. To get it there, you'll need to ask us to pull the changes in. In order to do that, send us a pull request from the fork management screen under the source control tab on CodePlex:
+     ![](../Upload/submitting-patches/new-pull-request.png)
 
-![](../Upload/submitting-patches/PullRequest.jpg)
+  1. You will be taken to the Comparing changes screen. In the main box it will probably say there isn't anything to compare:
 
-You will receive an e-mail update from us when your patch submission has been evaluated and applied.
+     ![](../Upload/submitting-patches/comparing-changes-initial.png)
+
+     The `base fork` is the place you are sending the changes to (the official Orchard repository). The `head fork` is your fork with the new files.
+
+  1. Next to the `head fork` select the drop down box that starts with the label `compare:`
+
+     ![](../Upload/submitting-patches/compare-button.png)
+
+     In this screenshot the  `upgrade-contributing-patches` branch is being selected.
+
+  1. Select the branch you want to merge:
+
+     ![](../Upload/submitting-patches/choose-branch-to-compare.png)
+
+  1. The page will refresh and you will see all the files that are going to be updated by your pull request:
+
+     ![](../Upload/submitting-patches/comparing-changes.png)
+
+     Review the files that are going to be changed. This is your last chance to double check everything is correct. Check that you haven't included any passwords or other sensitive data. (If you have you will need to change the passwords as they are already public on your GitHub account).
+
+     When you're happy with the pull request click the green `Create pull request` button.
+
+  1. On this final screen you can give your pull request a title and a description:
+
+     ![](../Upload/submitting-patches/open-pull-request.png)
+
+     You should make your description as detailed as possible. You can use markup to add headings and other formatting. You can also copy/paste screenshots into the description and it will automatically upload and insert them for you.
+
+     **IMPORTANT** GitHub supports automatically closing issues via pull requests. If you are working on issue #1234 then be sure to add the phrase `fixes #1234` somewhere in your description. When the pull request is accepted it will automatically close the corresponding issue. You can actually use [several different keywords](https://help.github.com/articles/closing-issues-via-commit-messages/) depending on whichever you prefer to achieve this same effect. 
+
+  1. The final step is to click the `Create pull request` below your description.
+
+Your pull request has now been created and will be reviewed by the community and the core team.
+
+> **Don't forget!** Your pull request is a living thing. If you make more commits to your branch and push them to your GitHub account they will be automatically included in the pull request.
+
+> This is useful if somebody gives you feedback suggesting changes but it also means that you shouldn't delete the branch until after the pull request has been accepted or declined.
+
+You will get a notification when there is any activity on your pull request. When you are on GitHub.com you will see your notification icon light up with a little blue dot:
+
+![](../Upload/submitting-patches/github-notification.png)
+
+Unless you have turned email notifications off, you will also receive an email from GitHub.
+
+You can check on your pull request at any time by navigating to it through one of several ways in GitHub:
+
+  * Click the Pull requests menu option in the top of the GitHub.com website:
+
+    ![](../Upload/submitting-patches/pull-requests-header-button.png)
+
+  * Navigate to the [OrchardDocs](https://github.com/OrchardCMS/OrchardDoc) repo and click Pull requests down the side menu:
+
+    ![](../Upload/submitting-patches/pull-request-sidebar-button.png)
 
 ## Pull request review process
-*************************
-The Orchard development team meets every week to review pull request and triage issues. During this meeting we'll decide if the pull request fulfills the prerequisites or comment on what improvements should be applied.
+
+The Orchard development team meets every week to review pull request and triage issues. During this meeting the team will decide if the pull request fulfills the prerequisites or comment if any improvements should be applied.
 
 If an agreement is reached to accept the pull request then it will be marked as so and someone with commit rights on the main repository will accept the pull request and merge your work into the Orchard CMS repository. This process might involve altering the history to remove any feeback loop changes which don't add anything to the work done.
 
+If more work is requested you make the changes on your local branch, `commit` them, `push` the branch to your GitHub account they will be automatically included in the pull request for futher review.
+
 ## What to do once your pull request has been reviewed
-*********************
-You will get a notification when there is any activity on your pull request. If you
 
-**SCREENSHOT** Notifications
+Once your contribution and has either been accepted and integrated into the official Orchard CMS repository you can now delete the branch. GitHub will let you know when this is safe to do. On the pull request page you will see a `Delete branch` button at the bottom:
 
-Once the patch master has looked at your contribution and has either accepted and integrated it, or he has rejected it, there is no point in the branch still existing, so we recommend that you go ahead and delete it in order to keep the list of branches as clean as possible in your fork. Moreover, if you don't need the branch anymore you can also delete it, but we suggest you use the same fork for all your pull request, by using branches for each of them.
+![](../Upload/submitting-patches/pull-complete-can-delete.png)
+
+If your feature was accepted please consider contributing some documentation to the [OrchardDoc](https://github.com/OrchardCMS/OrchardDoc) repo. Just as this article has helped you out today, by documenting your new feature you can help other Orchard users to get the most out of Orchard CMS. You can read more about [the documentation process here](/Documentation/Contributing-documentation).
+
+The fork that you made can be re-used for as many contributions as you like. Just remember to keep making a new branch each time you start work on a new issue. There is one thing to consider though. While you have been working on this there has probably been other commits and pull requests on whichever branch you're working on. You can bring your branch back in line with the main repo by [syncing your fork](https://help.github.com/articles/syncing-a-fork/).
+
+## What to do if your pull request is not accepted
+
+Sometimes pull requests don't get accepted. Maybe the feature isn't classed as complete enough, maybe you have a different vision for the feature compared to the core team. Whatever the reason, if you find yourself in this position then don't worry. 
+
+Consider implementing your new idea as an Orchard Module instead. There are plenty of tutorials on this website and around the web which will teach you how to do this. With the way Orchard has been built you can extend and replace almost every part of it. 
+
+When you have extracted your code into a module you can submit it on the [Orchard Gallery](http://gallery.orchardproject.net/) for other users to download and use in their sites.
