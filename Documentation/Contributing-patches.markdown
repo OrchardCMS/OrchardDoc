@@ -1,32 +1,89 @@
-Creating **a branch inside a fork should be preferred** because it makes merging a lot easier.
+Orchard CMS uses GitHub for its source code management and issue tracking. You can find the main Orchard CMS repository at:
 
-## Prerequisites
+  - [https://github.com/OrchardCMS/Orchard](https://github.com/OrchardCMS/Orchard)
 
-- In order to create pull requests, you will need to have a good understanding of git, the source code management tool.
-- Before working on a pull request, please file a work item describing what you are trying to achieve. This will let everyone talk about the issue and the best way to solve it.
+We welcome community contributions but please read these guidelines before you start work.
 
-## Working on a Pull Request
+## First step - open an issue or discuss an existing one
 
-When working on a pull request, your local enlistment should in most cases be synchronized to the latest check-in in the current development branches. If you intend to provide a bug fix then the best branch to work on is the short-cylce dev branch, currently named **1.9.x**. If instead you intend to provide a new or enhanced feature then it's recommended to use the long-cycle **dev** branch.
+If you're new to contributing then you should discuss your plans before you start work. This is especially true if it involves building new features or changing the architecture.
 
-Another thing to consider is the status of the issue you are fixing. Bugs that are marked as "Proposed" have been reported, but not yet triaged by the team. It just means that we didn't have time to look at them and see if they are valid, or duplicates of existing issues, or have since already been fixed. Thus, for best results, please send pull requests for issues that are marked as "Active".
+Don't know where to start? There are lots of existing bugs which have been reported the issue tracker.
 
-Please only fix one issue per pull request: if one fix is rejected and the other accepted, it would be more difficult for us to integrate the accepted fix and we might have to reject the whole pull request and ask you to resubmit. One fix per pull request also makes the source tree's history cleaner and more readable.
+All of Orchard's planning is done in the GitHub repo's [issue tracker](https://github.com/OrchardCMS/Orchard/issues).
 
-## Submitting a Pull Request as a Fork/Branch
+If your idea / bug isn't in the issue tracker (don't forget to check the closed issues as well - it might have been fixed in a development branch) then open a new issue to start a discussion with the community.
 
-If you go to the source code tab of the project, you'll see links on the top of the page to manage and create forks. Each fork is a copy of the full source code repository that you own entirely.
+## Branches
 
-You can create a new fork by clicking "Create fork". You can then enter a name for your fork, typically the name of the feature you want to work on or a bug number if you're patching a bug. The description is optional.
+The repository is split into two main development branches, `1.9.x` and `dev`. There is also a `master` branch which represents the latest released stable version of the software. While other features are being worked on you might find some additional branches temporarily created but they are just to test out ideas and they will get merged back into one of the main branches later on.
 
-Once you've hit save, you'll see a view of the forks that you own. Each of them has its own clone URL. What you want to do next is clone that remote CodePlex repository to your local machine in order to be able to start working.
+All the active feature work is being done by the core team in the `1.9.x` branch. Whenever a new release is ready, changes get merged from `1.9.x` to `master`. Master is a stable branch and is normally always in a "green" state. 
 
-Based on the branch you want to submit your pull request on (**1.9.x** or **dev**) you will need to create a new branch dedicated to this work item. For instance you can name it based on the work item number or whatever you want which will help you organize your fork.
+The `1.9.x` branch is the short-cycle dev branch. This is where features and bug fixes are being worked on for the next point release (for example, the difference between v1.9.1 and v1.9.2).
 
-Once you've made your changes and are ready to submit them back to us, commit your changes then push your branch.
+The `dev` branch is the long-cycle dev branch. This is where bigger features are being worked on that won't make it into the next version of Orchard CMS.
+
+There is also a separate repository called [Brochard](https://github.com/OrchardCMS/Brochard) which is the implementation of Orchard CMS in Asp.Net VNext (also known as DNX).
+
+## Milestones and labels
+
+New issues are opened all the time. After an issue is submitted the core team members will it. When it is acccepted as a valid task to complete it will be given a milestone and perhaps some labels. The milestone indicates which branch any pull requests for the issue should be sent to.
+
+**SCREENSHOT** milestones, labels
+
+You might also see some additional tags like a severity level or further categorization. These labels can help you prioritise which issues you should give your attention first based on their urgency or your speciality as a developer.
+
+## How to fork and work with the repository
+
+The easiest way to get started with GitHub is to use [Github Desktop](https://desktop.github.com/). This software has a built-in tutorial which will teach you the basics when you first install it.
+
+You can also create a fork via the GitHub website. GitHub have provided a guide explaining [how to fork a repo](https://help.github.com/articles/fork-a-repo/).
+
+GitHub is powered by [Git](http://git-scm.com/). If you're an advanced user with experience of using Git on the command line then you can interact with GitHub hosted repositories as you normally would. If you're interested in learning then GitHub have their own [interactive code school](https://try.github.io/) and the entire [Pro Git book is available](http://git-scm.com/book/en/v2) has also been made available by it's authors and is endorsed by the official Git website.
+
+## Working on an issue
+
+By now you should have agreed with the community what you're working on, you should know which branch you're targeting and you should have created your own fork.
+
+When working on an issue you should create a branch in your local clone per-issue. This branch isolates your changes from the main branch and you can merge the branch back in to the main codebase later on with a pull request.
+
+Please work on only one one issue per branch / pull request.
+
+Once you've made your changes you need to publish your local changes back to the remote fork in your GitHub account. The basic Git concept behind this process is to `commit` your local changes and the `push` the branch to your remote copy on GitHub.
+
+This can be done in many ways:
+
+  - [Using GitHub Desktop](https://help.github.com/desktop/guides/contributing/committing-and-reviewing-changes-to-your-project/)
+  - From within Microsoft WebMatrix 3
+  - From within Microsoft Visual Studio
+  - Using Git Extensions
+  - Using Git on the command line
+
+If you are just starting out with Git then you should use GitHub Desktop to make this process simple for yourself.
+
+Once this is done, your changes are on GitHub, but not yet in the project's official repository. To get it there, you'll need to ask us to pull the changes in. In order to do that, send us a pull request.
+
+## Submitting a pull request
+
+When you have finished your work on the issue you can create a pull request. A pull request opens a dialog with the community to review your work and provide feedback. If 
+
+Creating a pull request is best done from within the GitHub.com website. You can create pull requests using other techniques but using the GitHub.com has a clear interface so that you can make sure you are creating a pull request with the correct branch and you can have one final check of the files before you initiate it.
+
+Navigate to your forked copy of the OrchardDocs repo. Its url will be https://github.com/{YourUserName}/OrchardDoc
+
+You should see a create pull request bar along the top of your repos page:
+
+**** SCREENSHOT ****
+
+**** COMPLETE SCREENSHOTS PROCESS ****
+
+********** also dont forget the closes #issue in subject
+****** - The first line should be short, less than 80 characters 
+
 
 While committing your changes, please follow this convention for commit messages:
-- The first line should be short, less than 80 characters 
+
 - If linked to a work item, it should start with its number, like `#12345: This is a change`
 - If linked to a work item the last line should reference it to automatically mark it as resolved: `Work Item: 123245` 
 
@@ -36,35 +93,16 @@ Once this is done, your changes are on CodePlex, but not yet in the project's of
 
 You will receive an e-mail update from us when your patch submission has been evaluated and applied.
 
-More information about fork management on CodePlex can be found in this post: <http://blogs.msdn.com/codeplex/archive/2010/03/05/codeplex-mercurial-support-for-forks.aspx>.
+## Pull request review process
+*************************
+The Orchard development team meets every week to review pull request and triage issues. During this meeting we'll decide if the pull request fulfills the prerequisites or comment on what improvements should be applied.
 
-## Submitting a Patch as an Attachment to an Issue
+If an agreement is reached to accept the pull request then it will be marked as so and someone with commit rights on the main repository will accept the pull request and merge your work into the Orchard CMS repository. This process might involve altering the history to remove any feeback loop changes which don't add anything to the work done.
 
-An alternative to using a fork is to package your changes into a file and then to attach that file to the issue or feature proposal corresponding to your patch.
+## What to do once your pull request has been reviewed
+*********************
+You will get a notification when there is any activity on your pull request. If you
 
-In order to prepare your patch, you'll need to get a local enlistment of the source code of the application and work off of that.
-
-Before preparing to submit a contribution, be sure to: 
-
-1. Mark new files as added
-2. Mark missing files as deleted
-3. Verify sources build and unit tests pass
-4. Commit your changes
-
-Once this is done you can create a patch file [using git](http://git-scm.com/docs/git-format-patch).
-
-You should now have a ".patch" file that you can attach to the issue it fixes in the [CodePlex Issue Tracker](http://orchard.codeplex.com/WorkItem/AdvancedList.aspx) by clicking "Choose File" under "Attach File" and then uploading.
-
-If you have the permissions to do so, you can change the status of the issue to "Fixed".
-
-Once the patch has been attached to the issue, please send us e-mail at ofeedbk@microsoft.com so that we can evaluate and integrate it.
-
-## Pull Request Review Process
-
-The Orchard development team meets every week to review pull request and triage work items. During this meeting we'll decide if the pull request fulfills the prerequisites or comment on what improvements should be applied.
-
-If an agreement is reached to accept the pull request then it will be marked as so and someone with commit rights on the main repository will pull the changes in Orchard. This process might involve altering the history to remove any feeback loop changes which don't add anything to the work done.
-
-## What to Do Once Your Patch Has Been Processed
+**SCREENSHOT** Notifications
 
 Once the patch master has looked at your contribution and has either accepted and integrated it, or he has rejected it, there is no point in the branch still existing, so we recommend that you go ahead and delete it in order to keep the list of branches as clean as possible in your fork. Moreover, if you don't need the branch anymore you can also delete it, but we suggest you use the same fork for all your pull request, by using branches for each of them.
