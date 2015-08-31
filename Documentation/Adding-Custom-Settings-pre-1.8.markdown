@@ -72,7 +72,7 @@ If you have already written some content parts, than this part of code should lo
     }
 
 I omitted some code for checking permissions to edit the settings for better readability,
-but you are free to take a look at the full source code hosted on Codeplex.
+but you are free to take a look at the [full source code hosted on GitHub](https://github.com/OrchardCMS/Orchard).
 
 To review, so far we have our Content Part (plus it's attendant Content Part Record) and this just added driver. Two more structures are required before we can implement our new site-wide property setting:
 a Handler (controller) where we define the behavior of our Content Part, and the Shape (view)
