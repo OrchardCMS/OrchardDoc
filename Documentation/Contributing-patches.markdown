@@ -8,7 +8,7 @@ We welcome community contributions but please read these guidelines before you s
 
 If you're new to contributing then you should discuss your plans before you start work. This is especially true if it involves building new features or changing the architecture.
 
-Don't know where to start? There are lots of existing bugs which have been reported the issue tracker.
+Don't know where to start? There are lots of existing bugs which have been reported in the issue tracker.
 
 All of Orchard's planning is done in the GitHub repo's [issue tracker](https://github.com/OrchardCMS/Orchard/issues).
 
@@ -24,17 +24,17 @@ The `1.9.x` branch is the short-cycle dev branch. This is where features and bug
 
 The `dev` branch is the long-cycle dev branch. This is where bigger features are being worked on that won't make it into the next version of Orchard CMS.
 
-There is also a separate repository called [Brochard](https://github.com/OrchardCMS/Brochard) which is the implementation of Orchard CMS in Asp.Net VNext (also known as DNX).
+There is also a separate repository called [Brochard](https://github.com/OrchardCMS/Brochard) which is the implementation of Orchard CMS in Asp.Net vNext (also known as DNX).
 
 ## Milestones and labels
 
-New issues are opened all the time. After an issue is submitted the core team members will it. When it is acccepted as a valid task to complete it will be given a milestone and perhaps some labels. The milestone indicates which branch any pull requests for the issue should be sent to.
+New issues are opened all the time. After an issue is submitted the core team members will review it. When it's acccepted as a valid task to complete it will be given a milestone and perhaps some labels. The milestone indicates which branch any pull requests for the issue should be sent to.
 
 You might also see some additional tags like a severity level or further categorization. These labels can help you prioritise which issues you should give your attention first based on their urgency or your speciality as a developer.
 
 ![](../Upload/submitting-patches/milestones-and-labels.png)
 
-In the screenshot above you can see that the bug has been tagged with the labels `bug`, `high` and `layouts`. This means it has been confirmed as a bug, it is a high priority fix and it is part of the Orchard.Layouts module. Below that you can see the milestone icon with the word `dev` next to it. This means that if you do work on it you should work from the `dev` branch.
+In the screenshot above you can see that the bug has been tagged with the labels `bug`, `high` and `Layouts`. This means it has been confirmed as a bug, it is a high priority fix and it is part of the Orchard.Layouts module. Below that you can see the milestone icon with the word `dev` next to it. This means that if you do work on it you should work from the `dev` branch.
 
 ## How to fork and work with the repository
 
@@ -46,13 +46,15 @@ GitHub is powered by [Git](http://git-scm.com/). If you're an advanced user with
 
 ## Working on an issue
 
-By now you should have agreed with the community what you're working on, you should know which branch you're targeting and you should have created your own fork.
+By now you should have agreed with the community which issue you're working on, you should know which branch you're targeting and you should have created your own fork.
 
-When working on an issue you should create a branch in your local clone per-issue. This branch isolates your changes from the main branch and you can merge the branch back in to the main codebase later on with a pull request.
+When working on an issue you should create a branch in your local clone per-issue. This branch isolates your changes from the `master` branch. You can merge this new branch back in to the main codebase later on with a pull request.
 
-Please work on only one one issue per branch / pull request.
+Please work on only one issue per branch / pull request.
 
-Once you've made your changes you need to publish your local changes back to the remote fork in your GitHub account. The basic Git concept behind this process is to `commit` your local changes and the `push` the branch to your remote copy on GitHub.
+Please follow the [code conventions document](/Documentation/Code-conventions) when writing new code for Orchard.
+
+Once you've made your changes you need to publish your local commits back to the remote fork in your GitHub account. The basic Git concept behind this process is to `commit` your local changes and then `push` the branch to your remote copy on GitHub.
 
 This can be done in many ways:
 
@@ -62,7 +64,7 @@ This can be done in many ways:
   - Using Git Extensions
   - Using Git on the command line
 
-If you are just starting out with Git then you should use GitHub Desktop to make this process simple for yourself.
+If you're just starting out with Git then you should use GitHub Desktop to make this process simple for yourself.
 
 Once this is done, your changes are on GitHub, but not yet in the project's official repository. To get it there, you'll need to ask us to pull the changes in. In order to do that, send us a pull request.
 
@@ -100,25 +102,25 @@ This is a shortcut that GitHub have implemented to help you quickly create a pul
 
      ![](../Upload/submitting-patches/compare-button.png)
 
-     In this screenshot the  `upgrade-contributing-patches` branch is being selected.
-
   1. Select the branch you want to merge:
 
      ![](../Upload/submitting-patches/choose-branch-to-compare.png)
+     
+     In this screenshot the `upgrade-contributing-patches` branch is being selected.
 
   1. The page will refresh and you will see all the files that are going to be updated by your pull request:
 
      ![](../Upload/submitting-patches/comparing-changes.png)
 
-     Review the files that are going to be changed. This is your last chance to double check everything is correct. Check that you haven't included any passwords or other sensitive data. (If you have you will need to change the passwords as they are already public on your GitHub account).
+     Review the files that are going to be changed. This is your last chance to double check everything is correct. Check that you haven't included any passwords or other sensitive data (If you have you will need to change the passwords as they are already public on your GitHub account).
 
-     When you're happy with the pull request click the green `Create pull request` button.
+     When you're happy with the pull request click the green `Create pull request` button near the top of the Comparing changes page.
 
   1. On this final screen you can give your pull request a title and a description:
 
      ![](../Upload/submitting-patches/open-pull-request.png)
 
-     You should make your description as detailed as possible. You can use markup to add headings and other formatting. You can also copy/paste screenshots into the description and it will automatically upload and insert them for you.
+     You should make your description as detailed as possible. You can use markdown to add headings and other formatting. You can also copy/paste screenshots into the description and it will automatically upload and insert them for you.
 
      **IMPORTANT** GitHub supports automatically closing issues via pull requests. If you are working on issue #1234 then be sure to add the phrase `fixes #1234` somewhere in your description. When the pull request is accepted it will automatically close the corresponding issue. You can actually use [several different keywords](https://help.github.com/articles/closing-issues-via-commit-messages/) depending on whichever you prefer to achieve this same effect. 
 
@@ -156,13 +158,13 @@ If more work is requested you make the changes on your local branch, `commit` th
 
 ## What to do once your pull request has been reviewed
 
-Once your contribution and has either been accepted and integrated into the official Orchard CMS repository you can now delete the branch. GitHub will let you know when this is safe to do. On the pull request page you will see a `Delete branch` button at the bottom:
+Once your contribution and has been accepted and integrated into the official Orchard CMS repository you can now delete the branch. GitHub will let you know when this is safe to do. On the pull request page you will see a `Delete branch` button at the bottom for the pull requests activity and comments list:
 
 ![](../Upload/submitting-patches/pull-complete-can-delete.png)
 
 If your feature was accepted please consider contributing some documentation to the [OrchardDoc](https://github.com/OrchardCMS/OrchardDoc) repo. Just as this article has helped you out today, by documenting your new feature you can help other Orchard users to get the most out of Orchard CMS. You can read more about [the documentation process here](/Documentation/Contributing-documentation).
 
-The fork that you made can be re-used for as many contributions as you like. Just remember to keep making a new branch each time you start work on a new issue. There is one thing to consider though. While you have been working on this there has probably been other commits and pull requests on whichever branch you're working on. You can bring your branch back in line with the main repo by [syncing your fork](https://help.github.com/articles/syncing-a-fork/).
+The fork that you made can be re-used for as many contributions as you like. Just remember to keep making a new branch each time you start work on a new issue. There is one thing to consider though: While you've been working on this there has probably been other commits and pull requests on whichever branch you're working on. You can bring your branch back in line with the main repo by [syncing your fork](https://help.github.com/articles/syncing-a-fork/).
 
 ## What to do if your pull request is not accepted
 
@@ -170,4 +172,4 @@ Sometimes pull requests don't get accepted. Maybe the feature isn't classed as c
 
 Consider implementing your new idea as an Orchard Module instead. There are plenty of tutorials on this website and around the web which will teach you how to do this. With the way Orchard has been built you can extend and replace almost every part of it. 
 
-When you have extracted your code into a module you can submit it on the [Orchard Gallery](http://gallery.orchardproject.net/) for other users to download and use in their sites.
+When you have extracted your code into a module you can submit it to the [Orchard Gallery](http://gallery.orchardproject.net/) for other users to download and use in their sites.
