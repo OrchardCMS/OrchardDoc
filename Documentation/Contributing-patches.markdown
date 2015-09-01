@@ -158,7 +158,7 @@ If more work is requested you make the changes on your local branch, `commit` th
 
 ## What to do once your pull request has been reviewed
 
-Once your contribution and has been accepted and integrated into the official Orchard CMS repository you can now delete the branch. GitHub will let you know when this is safe to do. On the pull request page you will see a `Delete branch` button at the bottom of the pull requests activity and comments list:
+Once your contribution has been accepted and integrated into the official Orchard CMS repository you can now delete the branch. GitHub will let you know when this is safe to do. You will see a `Delete branch` button at the bottom of the pull request page:
 
 ![](../Upload/submitting-patches/pull-complete-can-delete.png)
 
