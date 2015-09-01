@@ -375,7 +375,7 @@ html>body #ContainerDiv {height: auto;}
 #MainDiv img {
     margin-top: 10px;
     margin-bottom: 10px;
-    max-width: 580px;
+    max-width: 100%;
     border: 1px solid #f9f9f9;
 }
 
