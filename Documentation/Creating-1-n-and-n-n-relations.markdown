@@ -1165,6 +1165,41 @@ On the front-end, the sponsor now also appears:
 
 ![](../Attachments/Creating-1-n-and-n-n-relations/CustomerWithSponsor.PNG)
 
+# Accessing NHibernate Configuration directly
+
+For most relationships these conventions should create and auto-map your data model appropriately. However, for more complex data models you may find that it's necessary to access the NHibernate configuration directly in order to appropriately map classes. You can do this by implementing the ISessionConfigurationEvents interface like so:
+
+    using FluentNHibernate.Automapping;
+    using FluentNHibernate.Cfg;
+    using NHibernate.Cfg;
+    using Orchard.Data;
+    using Orchard.Utility;
+
+	namespace DataMapping.Example
+	{
+		public class Mappings : ISessionConfigurationEvents
+		{
+			public void Created(FluentConfiguration cfg, AutoPersistenceModel defaultModel)
+			{
+				//Many-to-many mapping example
+				defaultModel.Override<ClassA>(x => x.HasManyToMany(y => y.ClassB).Cascade.All()
+					.Table("DataMapping_Example_ClassAClassBCrossReferenceTable"));
+					
+				//One-to-One example
+				defaultModel.Override<ClassA>(x => x.HasOne(y => y.ClassB));
+					
+			}
+
+			public void Prepared(FluentConfiguration cfg) {}
+
+			public void Building(Configuration cfg) {}
+
+			public void Finished(Configuration cfg) {}
+
+			public void ComputingHash(Hash hash) {}
+		}
+	}
+
 # Conclusion
 
 This topic should show the way for the creation of complex content parts involving arbitrary data relations. There is actually not much to it, as the system already knows how to persist and bind such complex objects. Rather, it's a matter of building the model according to the conventions in place.
