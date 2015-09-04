@@ -40,11 +40,11 @@ Once it is dropped an *Edit Email Field* will pop up. Enter the value as shown i
 
 ![Edit Email Field](../upload/dynamic-forms-edit-email-field.png "Edit Email Field")
 
-Then click on the *Validation* tab and make sure to check the **Required** checkbox.  Now you can save the form, but we are not finished yet.  After you save, now we can bind the form to your content type we created earlier.  On the email.  Hover back over the form and click on the angle brackets.  You should see the *Edit Form* pop up. Make sure to check the **Create Content** and then select your *Subscribe Form* from the dropdown. Now save the form. 
+Then click on the *Validation* tab and make sure to check the **Required** checkbox.  Now you can save the form, but we are not finished yet.  After you save, now we can bind the form to your content type we created earlier.  Hover back over the form and click on the angle brackets.  You should see the *Edit Form* pop up. Make sure to check the **Create Content** and then select your *Subscribe Form* from the dropdown. Now save the form. 
 
 ![Bind Form To Content](../upload/dynamic-forms-bind-form.png "Bind Form to Content")
 
-Almost there, now hover on the *Email Field* and click the angle brackets.  Click on the *Bindings* tab and then check the field you want to bind it too, which in our case is the *Email.Text* field of the *Subscribe Form* content type.
+Almost there, now hover on the *Email Field* and click the angle brackets.  Click on the *Bindings* tab and then check the field you want to bind it too, which in our case is the *Email.Text* field of the *Subscribe Form* content type. If you do not see the bindings tab, then please save your form and go back to edit it.
 
 ![Bind Email Field](../upload/dynamic-forms-bind-email.png "Bind Email Field")
 
