@@ -2,13 +2,13 @@ The Dynamic Forms module is used to capture information from site visitors on th
 
 ### Enable the Dynamic Forms Module ###
 
-The Dynamic Forms module is different from the custom forms module because it can work in combination with a Content Type to capture input on the front-end or you can choose to just store the form submission. If you choose to just store the submission you will find it in the **Form Submissions** section of the admin.  The information submitted is stored and can be exported using the Import-Export-Module.  Let's start by enabling the Dynamic Forms module that is shipped with Orchard by going to the Modules section in the admin.
+The Dynamic Forms module is different from the custom forms module because it can work in combination with a Content Type to capture input on the front-end or you can choose to just store the form submission. If you choose to just store the submission you will find it in the **Form Submissions** section of the admin.  The information submitted is stored and can be exported using the Import-Export module.  Let's start by enabling the Dynamic Forms module that is shipped with Orchard by going to the Modules section in the admin.
 
 ![Enabling Dynamic Forms in Orchard CMS](../upload/dynamic-forms/enable-dynamic-forms.png "Enable the Dynamic Forms module")
 
-Once the module has been enabled the feature a new content type called **Form** will appear in the create new content section of the admin.
+Once the module has enabled the feature, a new content type called **Form** will appear in the create new content section of the admin.
 
-As stated before, the Dynamic Forms module works with a content type in order to create submission form on the front-end of the site.  In the *New* content section of the admin, you can click on **Form** to create a new form, an edit form screen will popup allowing you to create your form. In this screen is where you can choose to either store the submission or create content from the submitted values. However, let's say we are looking to add a new widget that will live in the right rail (AsideSecond zone) that is a call for visitors to join a mailing list.  The only input that will be captured will be the users email address.
+As stated before, the Dynamic Forms module works with a content type either create a submission or create forms on the front-end of the site.  In the *New* content section of the admin, you can click on **Form** to create a new form, an edit form screen will popup allowing you to create your form. In this screen is where you can choose to either store the submission or create content from the submitted values. However, let's say we are looking to add a new widget that will live in the right rail (AsideSecond zone) that is a call for visitors to join a mailing list.  The only input that will be captured will be the users email address.
 
 ### Store Form Submission as a Content Type ###
 
@@ -26,13 +26,13 @@ After adding and saving the input field with the name 'Email' we can now customi
 
 At this point we have all the pieces we need to create out new widget in the right rail (AsideSecond zone).  We've enabled the *Dynamic Forms* module and we've created a new content type (Subscribe Form) that will be used to capture the email address of visitors looking to enroll in the mailing list.  All that's left is to create the Widget.
 
-### Create a Dynamic Forms Widget ###
+### Create a Form Widget ###
 
- Select **Widgets** in the left menu of the admin and find the appropriate *Add* button for the AsideSecond zone and add a Dynamic Forms Widget.
+ Select **Widgets** in the left menu of the admin and find the appropriate *Add* button for the AsideSecond zone and add a Form Widget.
 
 ![Add Widget to AsideSecond](../upload/dynamic-forms/subscribe-form.png "Add new Widget to AsideSecond zone")
 
-The only thing left to do is to adjust the settings on our new *Form Widget*.  In this example, the [layer](Managing-widgets#AddingaLayer) is set to 'Default' and the position is set to '1'.  This will render the widget on the top of the right rail (AsideSecond zone) for all pages.  In the Layout section of the form you need to add you form fields and bind it to your content type.  In the layout section, see highlighted below, edit the form by dragging an *Email Field* field from the **Layout** items on the right side of the screen.
+The only thing left to do is to adjust the settings on our new *Form Widget*.  In this example, the [layer](Managing-widgets#AddingaLayer) is set to 'Default' and the position is set to '1'.  This will render the widget on the top of the right rail (AsideSecond zone) for all pages.  In the Layout section of the form you need to add your form fields and bind it to your content type.  In the layout section, see highlighted below, edit the form by dragging an *Email Field* field from the **Layout** items on the right side of the screen.
 
 ![Forms Widget Layout](../upload/dynamic-forms-edit-layout.png "Forms Widget Layout")
 
@@ -60,7 +60,7 @@ After saving the widget browse to a page on the site and check out the new featu
 **NOTE**: If the input field for the owner is visible remove it by un-checking the 'Show editor for owner' option under the Common part of the Subscribe Form content type.
 ![Common Part](../upload/dynamic-forms/remove-owner.png "Remove owner option from Common Part")
 
-### Store Form Submission wihtout a Content Type ###
+### Store Form Submission without a Content Type ###
 
 This is easy to do, all you need to do is check the *Store Submission* option in the form layout.
 
