@@ -44,7 +44,7 @@ Then click on the *Validation* tab and make sure to check the **Required** check
 
 ![Bind Form To Content](../upload/dynamic-forms-bind-form.png "Bind Form to Content")
 
-Almost there, now hover on the *Email Field* and click the angle brackets.  Click on the *Bindings* tab and then check the field you want to bind it too, which in our case is the *Email.Text* field of the *Subscribe Form* content type. If you do not see the bindings tab, then please save your form and go back to edit it.
+Almost there, now hover on the *Email Field* and click the angle brackets.  Click on the *Bindings* tab and then check the field you want to bind it to, which in our case is the *Email.Text* field of the *Subscribe Form* content type. If you do not see the bindings tab, then please save your form and go back to edit it.
 
 ![Bind Email Field](../upload/dynamic-forms-bind-email.png "Bind Email Field")
 
@@ -78,6 +78,10 @@ You can view all submitted data without a content type by going to *Form Submiss
 
 ### Export Dynamic Forms Data ###
 
+Since Dynamic Forms can be either saved as a content type or as a form submissions you have different steps when exporting and importing.
+
+#### Exporting Forms saved as Content Type ####
+
 The only thing left to do is to export our list of submissions so that the email addresses can be used by services like Publicaster, Campaign Monitor, MailChimp and the like.  The easiest way to export anything and everything from the Orchard CMS is to use the Import/Export module.  The Import/Export module is shipped with Orchard by default in version 1.6 and on but is not enabled by default.  Let's enable the Import/Export module.
 
 ![Import/Export module](../upload/dynamic-forms/import-export-enabled.png "Enable the Import/Export module")
@@ -89,3 +93,13 @@ In the current situation we are only interested in exporting the data so there i
 ![Export the Subscribe Form content](../upload/dynamic-forms/export.png "Export the emails by checking the Subscribe Form content type")
 
 The exported file is and XML file that can be opened in MS Excel and manipulated to be made ready for the email campaign platform of your choice.  And that's it... The site is now able to collect visitor's email addresses and save them for export later for a newsletter.  The Dynamic Forms is also a great way to implement a Contact Us page or any other number of types of information a site should collect from it's users.
+
+#### Exporting Forms saved as a Form Submission ####
+
+To export form submissions you need to enable the Dyanmic Forms Import Export module.
+
+![Forms Import Export Module](../upload/dynamic-forms/enable-import-export.png "Enabling form submission import-export")
+
+Once enabled, now when you perform an export, you need to enable the custom step called "Forms" to export your **Form Submissions**
+
+![Exporting Form Submissions](../upload/dynamic-forms/exporting-form-submissions.png "Exporting Form Submissions")
