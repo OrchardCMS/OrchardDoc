@@ -12,4 +12,3 @@
 * [Getting Involved in Forums](getting-involved-in-forums)
 * [Where to put Startup Code for Module](module-startup-code)
 * Using Orchard.Layouts
-* Using Orchard.DynamicForms

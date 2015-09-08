@@ -61,7 +61,7 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
     * [Creating an Image Gallery](Documentation/Creating-an-image-gallery)
     * [Workflows](Documentation/Workflows)
     * [Projection](Documentation/Projection)
-    * [Create Custom Forms](Documentation/Creating-Custom-Forms "Use Custom Form to create subscribe and contact us pages in Orchard")
+    * [Create Dynamic Forms](Documentation/Creating-Dynamic-Forms "Use Dynamic Forms to create subscribe and contact us pages in Orchard")
 
 
 * **Hosting and Deploying Websites**
