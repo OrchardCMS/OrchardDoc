@@ -48,7 +48,7 @@ When you define a content part, you use the record as shown below:
 
 Notice that only data that's relevant to the part is defined in the `MapPart` class. You do not define any properties that are needed to maintain the data relationships between `MapPart` and other content.
 
-For a complete example of the MapPart, see [Writing a Content Part](Writing-a-content-part).
+For a complete example of the MapPart, see [Writing a Content Part](Writing-a-content-part). You can also read the [Getting Started with Modules course](Getting-Started-with-Modules) to familiarize yourself with the overall concepts of module development.
 
 ## Data Migrations
 Creating the record class does not create the database table; it only creates a model of the schema. To create the database table, you must write a data migration class.

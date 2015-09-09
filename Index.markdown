@@ -1,6 +1,4 @@
-> **Note:** This documentation site, like all of Orchard, is a [community effort](/Contributors).
-If you would like to contribute, please see
-[Documentation Style Guidelines](Documentation/Documentation-style-guidelines)
+> **Note:** This documentation site, like all of Orchard, is a [community effort](/Contributors). If you would like to contribute, please see [Documentation Style Guidelines](Documentation/Documentation-style-guidelines)
 and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
 
 ## Getting Started ##
@@ -80,6 +78,11 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
     * [First Steps into Orchard](Documentation/First-steps-into-Orchard)
     * [How Orchard Works](Documentation/How-Orchard-works)
     * [Command-Line Code Generation](Documentation/Command-line-scaffolding)
+    * [Getting Started with Modules Course](Documentation/Getting-Started-with-Modules)
+      * [Part 1 - Build a Static Widget](Documentation/Getting-Started-with-Modules-Part-1)
+      * [Part 2 - Make the Widget Dynamic](Documentation/Getting-Started-with-Modules-Part-2)
+      * [Part 3 - Using the Orchard API](Documentation/Getting-Started-with-Modules-Part-3)
+      * [Part 4 - Applying Best Practices](Documentation/Getting-Started-with-Modules-Part-4)
     * [Building a Hello World Module](Documentation/Building-a-hello-world-module)
     * [Creating a Module with a Simple Text Editor](Documentation/Creating-a-module-with-a-simple-text-editor)
     * [Writing a Content Part](Documentation/Writing-a-content-part)

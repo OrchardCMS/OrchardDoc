@@ -1,3 +1,5 @@
+> **This guide has been marked for review.** If you are just getting started with Orchard module development you should read the [Getting Started with Modules course](Getting-Started-with-Modules) first. It will introduce you to building modules with Orchard using Visual Studio Community, a free edition of Visual Studio. 
+
 Fields can be used in Orchard to [build new content types](Creating-custom-content-types).
 Orchard comes with a few built-in field types such as text, date or enumeration,
 but it is possible to build your own field types that can then be used to build new content types.

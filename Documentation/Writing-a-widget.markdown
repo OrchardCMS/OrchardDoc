@@ -1,4 +1,4 @@
-> This topic has been updated for the Orchard 1.1 release.
+> **This guide has been marked for review.** If you are just getting started with Orchard module development you should read the [Getting Started with Modules course](Getting-Started-with-Modules) first. It will introduce you to building modules with Orchard using Visual Studio Community, a free edition of Visual Studio. 
 
 In Orchard, a _widget_ is a piece of reusable UI that can be arbitrarily positioned on the pages of a web site. Examples of widgets could include a tag cloud, a search form, or a Twitter feed. A widget is a content type, which enables you to reuse existing code and UI.
 

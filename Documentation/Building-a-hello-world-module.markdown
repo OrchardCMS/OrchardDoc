@@ -1,7 +1,8 @@
-This article describes how to build a very small module for Orchard that will just display a "hello world" page.
+This article describes how to build a very small module for Orchard that will just display a "hello world" page. The technique that it shows you is a great start if you are looking to take control of the page lifecycle with your own MVC controller.
 
 Another simple example of a module can be found here: [Quick Start - Get module blueprint](http://orchardjumpstart.codeplex.com/)
 
+> **This guide has been marked for review.** If you are just getting started with Orchard module development you should read the [Getting Started with Modules course](Getting-Started-with-Modules) first. It will introduce you to building modules with Orchard using Visual Studio Community, a free edition of Visual Studio. 
 
 # Introduction
 
