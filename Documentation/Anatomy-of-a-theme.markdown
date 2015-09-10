@@ -85,7 +85,7 @@ The _Document.cshtml_ file is usually not found in themes because there is seldo
 
 ## Layouts
 
-Layouts are the outermost shape that is rendered within the `body` elemnent. For example, this is typically where you define the main widget zones. You can read about the details of the markup inside of a layout in the [Markup](#markup) section later in this document.
+Layouts are the outermost shape that is rendered within the `body` element. For example, this is typically where you define the main widget zones. You can read about the details of the markup inside of a layout in the [Markup](#markup) section later in this document.
 
 A theme can contain any number of layout files, even though currently only one is supported and included in the **TheThemeMachine** theme, namely _Layout.cshtml_. For example, a theme can add specialized layouts, such as _Layout-Blog.cshtml_ or _Layout-HomePage.cshtml_, that would be used instead of the default for a blog or for the homepage, provided there is an extension providing those layout shape alternates. Notice that layouts are named _Layout-\{layout name\}.cshtml_. Each layout can have a different set of zones, organized differently in markup.
 
@@ -173,4 +173,4 @@ Finally, you can also see in various templates calls such as `@Html.RegisterScri
 
 Most themes will consist only of a stylesheet, a few templates (usually layouts), and a few images. They will contain no code except for the simple code in the template files. For more advanced themes, you might want to provide settings, create custom shapes, or override shapes in code.
 
-To address these scenarios, it is possible to build a theme much like a module and include a _.csproj_ file that describes how to compile the code it contains. For informaiton about module development, see [Walkthrough: Writing An Orchard Module](Walkthrough-Writing-An-Orchard-Module) and [Creating a Module with a Simple Text Editor](Creating-a-module-with-a-simple-text-editor).
+To address these scenarios, it is possible to build a theme much like a module and include a _.csproj_ file that describes how to compile the code it contains. For information about module development, see [Walkthrough: Writing An Orchard Module](Walkthrough-Writing-An-Orchard-Module) and [Creating a Module with a Simple Text Editor](Creating-a-module-with-a-simple-text-editor).

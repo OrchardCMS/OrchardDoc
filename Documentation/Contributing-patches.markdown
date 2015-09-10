@@ -152,9 +152,9 @@ You can check on your pull request at any time by navigating to it through one o
 
 The Orchard development team meets every week to review pull request and triage issues. During this meeting the team will decide if the pull request fulfills the prerequisites or comment if any improvements should be applied.
 
-If an agreement is reached to accept the pull request then it will be marked as so and someone with commit rights on the main repository will accept the pull request and merge your work into the Orchard CMS repository. This process might involve altering the history to remove any feeback loop changes which don't add anything to the work done.
+If an agreement is reached to accept the pull request then it will be marked as so and someone with commit rights on the main repository will accept the pull request and merge your work into the Orchard CMS repository. This process might involve altering the history to remove any feedback loop changes which don't add anything to the work done.
 
-If more work is requested you make the changes on your local branch, `commit` them, `push` the branch to your GitHub account they will be automatically included in the pull request for futher review.
+If more work is requested you make the changes on your local branch, `commit` them, `push` the branch to your GitHub account they will be automatically included in the pull request for further review.
 
 ## What to do once your pull request has been reviewed
 

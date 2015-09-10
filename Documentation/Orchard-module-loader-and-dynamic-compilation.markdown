@@ -6,7 +6,7 @@ Orchard, as any ASP.NET MVC application, supports loading module compiled as ass
 
 In addition to that, Orchard supports (this is still somewhat experimental) the ability to dynamically compile modules deployed as source code only.  This is more flexible than deploying binaries, and enables some interesting scenarios such as "in place" code customization without having to use Visual Studio. This is somewhat similar to the ASP.NET "App_Code" directory, except Orchard supports multiple "logical folder" (typically one per module) independently.
 
-The goal of this section is to decribe at a technical level how Orchard load modules in the 0.5 release. This feature is often referred to as "Orchard Dynamic Compilation", even though technically dynamic compilation is only involved in very specific cases.
+The goal of this section is to describe at a technical level how Orchard load modules in the 0.5 release. This feature is often referred to as "Orchard Dynamic Compilation", even though technically dynamic compilation is only involved in very specific cases.
 
 # High Level Overview
 

@@ -78,7 +78,7 @@ Change the description to "A simple commerce module". Change the description of 
 
 # Creating the Model for the Part
 
-Next, you will create a data model that is a repesentation of what will be stored in the database.
+Next, you will create a data model that is a representation of what will be stored in the database.
 
 In _Modules/SimpleCommerce/Models_, create a _Product.cs_ file and add the following content:
 
