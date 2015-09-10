@@ -110,6 +110,6 @@ Kris van der Mast made his hands-on lab material available to anyone for free:
 
 # Localization
 
-## Building a Multilanguage Website Struture
+## Building a Multilanguage Website Structure
 
 <iframe width="560" height="315" src="http://www.youtube.com/embed/t6Tt8vjlOVw?hd=1" frameborder="0" allowfullscreen></iframe>

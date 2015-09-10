@@ -96,7 +96,7 @@ The exported file is and XML file that can be opened in MS Excel and manipulated
 
 #### Exporting Forms saved as a Form Submission ####
 
-To export form submissions you need to enable the Dyanmic Forms Import Export module.
+To export form submissions you need to enable the Dynamic Forms Import Export module.
 
 ![Forms Import Export Module](../upload/dynamic-forms/enable-import-export.png "Enabling form submission import-export")
 

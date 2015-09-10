@@ -97,7 +97,7 @@ folder of a theme or module.
 New content types, and even new content parts, can be built from the admin UI. For more details about
 this scenario, please read [creating custom content types](http://docs.orchardproject.net/Documentation/Creating-custom-content-types).
 
-Of course, content parts and types can also b ebuilt from code.
+Of course, content parts and types can also rebuilt from code.
 See [writing a content part](http://docs.orchardproject.net/Documentation/Writing-a-content-part) for an example.
 
 ## Composing types from parts

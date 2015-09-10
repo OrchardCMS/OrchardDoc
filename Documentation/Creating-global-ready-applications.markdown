@@ -1,4 +1,4 @@
-Orchard's localization management is hosted on an external service [(Crowdin)](https://crowdin.net/), [the project is avaiable for the public](https://crowdin.net/project/orchard-cms) and contributions are welcome!
+Orchard's localization management is hosted on an external service [(Crowdin)](https://crowdin.net/), [the project is available for the public](https://crowdin.net/project/orchard-cms) and contributions are welcome!
 
 
 Orchard supports two kinds of localization: 

@@ -15,7 +15,7 @@ Download the [latest release directly from GitHub](https://github.com/gitextensi
 
 Open the `msi` when it has downloaded. Follow the steps to complete the installation:
 
-  1. **Installation Scope** Install for all users unless you don't have administrator privilages.
+  1. **Installation Scope** Install for all users unless you don't have administrator privileges.
   2. **Required Software** Select `MsysGit` and `KDiff3`. You must have a a version of `MsysGit` installed for Git Extensions to function properly. `KDiff` is great for comparing the differences between two files or folders. You can optionally install `Windows Credential Store for Git`.
   3. **Destination Folder** Accept the default or select your preferred destination.
   4. **Custom Setup** The defaults are fine.
@@ -50,7 +50,7 @@ You can build and run Orchard either from the Visual Studio, or using a command-
 
 #### Using Visual Studio
 
-Open Orchard.sln from the Git enlistement directory, in `./src`. For information on the structure of the Orchard solution, see the [source code organization](Source-code-organization) page of this website.
+Open Orchard.sln from the Git enlistment directory, in `./src`. For information on the structure of the Orchard solution, see the [source code organization](Source-code-organization) page of this website.
 
 ![](../Attachments/Setting-up-a-source-enlistment/git_cmd.png)
 
@@ -64,9 +64,9 @@ Build the application from the command-line following the instructions found her
 
 ## Everyday Git Extensions Use
 
-The part of Git Extensions you're going to use the most is the Repository Explorer (right-click on the Git enlistement directory from the Windows Explorer to find it, it's called `GitEx Browse`). 
+The part of Git Extensions you're going to use the most is the Repository Explorer (right-click on the Git enlistment directory from the Windows Explorer to find it, it's called `GitEx Browse`). 
 
-For example, to get the lastest changes from GitHub, just click `Pull`. 
+For example, to get the latest changes from GitHub, just click `Pull`. 
 
 The repository explorer gives you a view of all the branching and merging that has been going on on the server. You can examine each change, read its description and view diffs. You can also right-click a change and update your local repository to it by clicking `Checkout revision`.
 

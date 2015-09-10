@@ -44,7 +44,7 @@ A developer wants to create an extension for Orchard. He points TortoiseSVN to t
 
 A developer downloads the latest version of the application (same as end users) and opens the project file that can be found at the root of the application in Visual Studio. He is able to use Visual Studio tooling to create a new area/module. Once his module is built and working, he can run a command-line tool to package his module into a zip file that he uploads to the Orchard module gallery.
 
-## Local install for theme developement
+## Local install for theme development
 
 A user wants to create his own theme for Orchard. He downloads the application (same as end users), installs it. Then, he creates a subdirectory under the themes folder, and with the help of existing themes and a few tools that are integrated into Orchard, he builds his own theme. He then zips it up and uploads it to the online gallery.
 
@@ -79,7 +79,7 @@ Here's a tentative list of possible error cases:
 
 * The setup information will have to persist its database setup information, and it obviously can't use the database for it. The first check setup should do is verify that app_data is writable: this will be necessary for many database configurations and in particular the default one, and it is a good place to store the setup completion file. If that directory is not writable, we should give an error message ("The app_data directory in the application is not writable. That will restrict your choice of database and may deteriorate the setup experience. If you have access to Windows file permissions on this server, please grant the NETWORK SERVICE account Write and Modify permissions on app_data. If you don't know what that means or are hosting the site externally, please contact your hoster or server administrator and ask him to do this for you. If this is still not possible, you can upload the following file into the app_data folder using ftp: \[link to database config file\]."). The link to the file should open a download dialog in the browser and should contain the chosen database configuration in YAML format (database provider name, and if relevant database login info).
 * When using a database provider that stores data locally in app_data, we also need to check write access to app_data. If it fails when validating the database configuration, we should display the following error message: "The database provider that you chose requires the application to be able to write into the app_data directory of the application. If you have access to Windows file permissions on this server, please grant the NETWORK SERVICE account Write and Modify permissions on app_data. If you don't know what that means or are hosting the site externally, please contact your hoster or server administrator and ask him to do this for you. If this is still not possible, please choose another database provider such as SQL Server. This may require a different hosting plan."
-* When providing database connection information, for some providers it will be necessary to provide credentials. Thos cerdentials will need to be checked right away. If authentication failed, we should surface the error message from the database.
+* When providing database connection information, for some providers it will be necessary to provide credentials. Those cerdentials will need to be checked right away. If authentication failed, we should surface the error message from the database.
 * When checking database access, database access may fail because the database provider is not available. We should then recommend the user pick a different provider.
 * Checking database access may fail in some configurations because the database server address was wrong or because the server timed out or responded in error. In those cases, display: "The database failed to respond in time. Please check that its address is correct and that the server is up and running."
 * The credentials provided may not give rights to create tables in the database. We should test that we can create tables and display the following error message if that fails: "The database credentials you provided don't seem to allow the application to create the table structures that it will need. Please check with your hoster or database administrator that the credentials have table creation rights."
@@ -179,7 +179,7 @@ The WebPI install should include making sure the write permissions that are nece
 
 The setup package should be the zipped contents of the web project, so that unzipping it into an IIS web application directory puts the application in a running state.
 
-The build process for this package should be automated and should run on the continuous integration server. It soutput should be the zip file and the WebPI manifest.
+The build process for this package should be automated and should run on the continuous integration server. It's output should be the zip file and the WebPI manifest.
 
 Versioning should be integrated into the generated file names: Orchard\.\[major\]\.\[minor\]\.\[build\]\.zip. The major and minor versions are manually incremented, whereas the build number comes from the changeset number.
 

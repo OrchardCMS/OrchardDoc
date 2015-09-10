@@ -90,7 +90,7 @@ This core module also provides the administration menu.
 ## Reports
 
 The Reports core module sets-up the infrastructure to generate and display basic reports.
-It is used during setup to log the various setup operations, including datbase operations.
+It is used during setup to log the various setup operations, including database operations.
 
 ## Scheduling
 
@@ -119,7 +119,7 @@ Any shape, core or otherwise, can be overridden by templates in a theme.
 * List: a standard shape to render lists of shapes.
 * Menu, MenuItem, LocalMenu, LocalMenuItem and MenuItemLink: the shapes that navigation renders.
 * Pager and associated shapes and alternates: the shapes used to render pagination.
-* Partial: a shape that can be used to render a template as a partial view, using the specified model. Creating a dynamic shape is often a preferrable technique.
+* Partial: a shape that can be used to render a template as a partial view, using the specified model. Creating a dynamic shape is often a preferable technique.
 * Resource, HeadScripts, FootScripts, Metas, HeadLinks, StyleSheetLinks, Style: shapes used to render resources such as script tags or stylesheets.
 * Zone: a special shape that is made to contain other shapes, typically but not always limited to widgets.
 
@@ -313,8 +313,8 @@ After enabling the DynamicForms module -> click on Form in the dashboard area. T
 
 - Orchard.DynamicForms : Create custom forms like contact forms using layouts.
 - Orchard.DynamicForms.AntiSpam : Provides anti-spam elements to protect your content from malicious submissions.
-- Orchard.DynamicForms.Taxonomies : Adds a Taxonomy form element to the sytem.
-- Orchard.DynamicForms.Projections : Adds a Query form element to the sytem.
+- Orchard.DynamicForms.Taxonomies : Adds a Taxonomy form element to the system.
+- Orchard.DynamicForms.Projections : Adds a Query form element to the system.
 - Orchard.DynamicForms.ImportExport : Enables the import and export of form submissions.
 
 ## Orchard.Email

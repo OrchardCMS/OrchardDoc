@@ -70,7 +70,7 @@ Listed below are the three different ways you can use the module manifest.
 
 #### Multiple features with a default module in the main manifest
 
-The Orchard.Alias module itself (defined as `Name: Alias`) is its own default feature. There are two extra optional features defined in the `Features` which can be separately enabled. In this case they both have dependencies on their parent feature `Orchard.Alias` but module developers can define independant features as well.
+The Orchard.Alias module itself (defined as `Name: Alias`) is its own default feature. There are two extra optional features defined in the `Features` which can be separately enabled. In this case they both have dependencies on their parent feature `Orchard.Alias` but module developers can define independent features as well.
 
     Name: Alias
     AntiForgery: enabled
