@@ -1,4 +1,4 @@
-> This topic has been updated for the Orchard 1.0 release.
+> This topic has been updated for the Orchard 1.9.1 release.
 
 A content handler defines what happens with a content part in response to specific events, such as when the part is activated. The content handler enables you to perform actions at particular moments in the lifecycle of the content item. It also enables you to set up data repositories and manipulate the data model prior to rendering the content item.
 
@@ -35,8 +35,14 @@ In addition to defining the repository, you can add code for handling events. Yo
 * `OnActivated`
 * `OnCreated`
 * `OnCreating`
+* `OnDestroyed`
+* `OnDestroying`
+* `OnGetContentItemMetadata`
+* `OnGetDisplayShape`
+* `OnGetEditorShape`
 * `OnIndexed`
 * `OnIndexing`
+* `OnInitialized`
 * `OnInitializing`
 * `OnLoaded`
 * `OnLoading`
@@ -44,6 +50,9 @@ In addition to defining the repository, you can add code for handling events. Yo
 * `OnPublishing`
 * `OnRemoved`
 * `OnRemoving`
+* `OnUpdated`
+* `OnUpdateEditorShape`
+* `OnUpdating`
 * `OnUnpublished`
 * `OnUnpublishing`
 * `OnVersioned`
