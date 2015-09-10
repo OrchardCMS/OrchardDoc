@@ -20,7 +20,7 @@ On the scheduled job, the linkback module should do a GET on the linked URL and 
 
 ## Sending pingback
 
-The GET request that is being made to search for trackback RDF can be re-used to look for pinkback HTTP headers or link tags, according to [the pinkback specification](http://www.hixie.ch/specs/pingback/pingback). If such a pingback URL is discovered, it should be pinged according to spec.
+The GET request that is being made to search for trackback RDF can be re-used to look for pingback HTTP headers or link tags, according to [the pingback specification](http://www.hixie.ch/specs/pingback/pingback). If such a pingback URL is discovered, it should be pinged according to spec.
 
 ## When both trackback and pingback are supported
 

@@ -1,6 +1,6 @@
 ## Challenges of integrating a Pull Request
 
-When a Pull Request has been reviewed and is ready to be merged it's usually marked with a __GG__ commnent meaning __Good to Go__. 
+When a Pull Request has been reviewed and is ready to be merged it's usually marked with a __GG__ comment meaning __Good to Go__. 
 At this point any dev with commit rights should be able to merge it in the main repository. 
 However we might need to rewrite the changes to keep the repository clean:
 - By updating the commit message if it needs to be shortened or improved. For instance if the patch is related to a work item, the commit message should look like this:
@@ -8,7 +8,7 @@ However we might need to rewrite the changes to keep the repository clean:
 ```
 \#12345: Short message
 
-A longer message than can span multiple lines and describe the reasonning behind the change.
+A longer message than can span multiple lines and describe the reasoning behind the change.
 
 Work Item: 12345
 ```

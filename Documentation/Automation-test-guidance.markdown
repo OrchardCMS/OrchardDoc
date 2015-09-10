@@ -65,7 +65,7 @@ If you need throw an exception from your test code, indicates test code error. P
     public Blog CreateBlog(string title, string menuText, string permalink,
         string description, bool addMainMenu, string owner)
     {
-        // empty string is intendly left for testing purpose
+        // empty string is intently left for testing purpose
         if (title == null)
             throw new CaseErrorException(new ArgumentNullException("title"));
         if (permalink != null)
@@ -92,9 +92,9 @@ Please check the following article to understand how data driven tests is done i
 <http://www.julmar.com/blog/mark/PermaLink,guid,e47f09cc-e893-46a6-aa13-7202d4e50986.aspx>
 
 ## Running tests against different browsers
-In order to run all tests on different browsers, and reuse the same test logics. The test code saves browsers settings in the excel file. Test team developed a script, which adds browser settings, such as "*opera", "*iexplore" and e.t.c to the excel files. So in test case automation phase, just put test data in the excel files is fine. The script is run before any tests, which adds browser settings to all excel files and copy the files to %TestOutputDir%.
+In order to run all tests on different browsers, and reuse the same test logics. The test code saves browsers settings in the excel file. Test team developed a script, which adds browser settings, such as "*opera", "*iexplorer" and e.t.c to the excel files. So in test case automation phase, just put test data in the excel files is fine. The script is run before any tests, which adds browser settings to all excel files and copy the files to %TestOutputDir%.
 
-There is another way to launch different browser, selenium remote control sever has a switch called -forcedBrowserMode, this switch overrides settings (hard code brower string) in ocde. This is also quite convenient while debugging test failures.
+There is another way to launch different browser, selenium remote control sever has a switch called -forcedBrowserMode, this switch overrides settings (hard code browser string) in code. This is also quite convenient while debugging test failures.
 
 ## Naming Convention
 In order to keep test cases and test data are easy to read, please follow below guideline:  

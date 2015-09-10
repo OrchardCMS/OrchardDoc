@@ -237,4 +237,4 @@ Inversion of Control, or injection, is widely used in Orchard. When any piece of
 
 ### Change History
 * Updates for Orchard 1.8
-    * 9-6-14: Updated all screen shots for setup, dashboard, content parts and modules/feaures.
+    * 9-6-14: Updated all screen shots for setup, dashboard, content parts and modules/features.

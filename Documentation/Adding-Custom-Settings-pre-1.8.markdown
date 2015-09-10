@@ -1,7 +1,7 @@
 ##Adding Custom Settings pre Orchard 1.8
 This document traces the process of defining and implementing and individual site setting for a live orchard module that can be added to your site to enable the webservice known as 'AddThis' [Content Sharing](http://orchardsharing.codeplex.com/)
 
-The specific goal being **"to store my AddThis service login cedentials so that all share bars across the site will be able to access my account"**
+The specific goal being **"to store my AddThis service login credentials so that all share bars across the site will be able to access my account"**
 
 The first thing to understand is that our site setting is really just another form of the basic Orchard building blocks - the ContentPart/ContentPartRecord. While most ContentParts render visual elements to the site's visitor, they can also deliver non-visible chunks of data that can provide dynamic functionality to your pages. A great introduction to the construction of content types can be found 
 [found here](http://www.szmyd.com.pl/blog/jumpstart-into-orchard-module-development)):
@@ -127,7 +127,7 @@ To do this we create a `Placement.info` file in our module root:
 
 which tells Orchard to display our form field at the beginning.
 
-Now that we've configured our settings we will look at what it takes to actaully _use_ them.
+Now that we've configured our settings we will look at what it takes to actually _use_ them.
 
 ## Using site scope settings
 

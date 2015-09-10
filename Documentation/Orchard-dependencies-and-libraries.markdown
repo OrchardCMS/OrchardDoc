@@ -11,7 +11,7 @@ This is a language recognition tool, which provides a framework for constructing
 ASP.NET MVC is used as the web programming model.
 
 ## Autofac 2 & Autofac contrib
-Dependency Injection is used heavily internally, mainly for publishing and consuming services between the Ochard.Web host and the Orchard packages. 
+Dependency Injection is used heavily internally, mainly for publishing and consuming services between the Orchard.Web host and the Orchard packages. 
 
 ## Castle Windsor 2.0
 Orchard uses Castle Winder 2.0 for type proxy generation and logging support.
@@ -43,7 +43,7 @@ Flexible HTML parsing and querying.
 ## Html5shim
 Provides Html 5 helpers.
 
-## jQuery & jQueryUI, jQuery ui.timepickr, jQuery utils, jQuery ScrollTo
+## jQuery & jQueryUI, jQuery ui.timepicker, jQuery utils, jQuery ScrollTo
 We use jQuery to progressively improve the user experience in Orchard.
 
 ## Log4Net
