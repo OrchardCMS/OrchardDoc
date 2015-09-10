@@ -65,7 +65,7 @@ If you need throw an exception from your test code, indicates test code error. P
     public Blog CreateBlog(string title, string menuText, string permalink,
         string description, bool addMainMenu, string owner)
     {
-        // empty string is intently left for testing purpose
+        // empty string is intentionally left for testing purpose
         if (title == null)
             throw new CaseErrorException(new ArgumentNullException("title"));
         if (permalink != null)

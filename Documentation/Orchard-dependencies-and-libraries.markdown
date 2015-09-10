@@ -43,7 +43,7 @@ Flexible HTML parsing and querying.
 ## Html5shim
 Provides Html 5 helpers.
 
-## jQuery & jQueryUI, jQuery ui.timepicker, jQuery utils, jQuery ScrollTo
+## jQuery & jQueryUI, jQuery ui.timepickr, jQuery utils, jQuery ScrollTo
 We use jQuery to progressively improve the user experience in Orchard.
 
 ## Log4Net
