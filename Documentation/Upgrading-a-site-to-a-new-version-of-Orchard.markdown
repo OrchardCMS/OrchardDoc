@@ -16,14 +16,14 @@ It is highly recommended that you work on a local copy of your site throughout t
 * Make a backup of everything in your site, including the database. This is extremely important so that you can roll back to a running site no matter what happens during migration.
 * Visit the **Settings** pages on your current Orchard instance and make a note of the current settings. This information might not be needed during the migration process, but if it is, it will otherwise be difficult to get the information.
 * Visit the **Modules/Features** and the **Themes** pages on your current Orchard instance and make a note of all the modules and themes you have installed.
-* Download a copy of the site from the server to your local computer. If you are routinely working with a staging environment from which you publish to production, you already have that local copy, but the data and media might be out of date. Make sure you download the _App_Data_ and _Media_ folders from the server.
-* If you're using a SQL Server Compact database, you've copied the site data by downloading the _App_Data_ folder. If your site is using SQL Server, you can copy that data to a local server in order to work with up-to-date data. However, this isn't required for migration. If you want to work with a local database, you'll also need to edit the _settings.txt_ file for each of the tenants. The _settings.txt_ files can be found under _App_Data\Sites\Default_ or _App_Data\Sites\\[NameOfTheTenant\]_.
+* Download a copy of the site from the server to your local computer. If you are routinely working with a staging environment from which you publish to production, you already have that local copy, but the data and media might be out of date. Make sure you download the `App_Data` and _Media_ folders from the server.
+* If you're using a SQL Server Compact database, you've copied the site data by downloading the `App_Data` folder. If your site is using SQL Server, you can copy that data to a local server in order to work with up-to-date data. However, this isn't required for migration. If you want to work with a local database, you'll also need to edit the _settings.txt_ file for each of the tenants. The _settings.txt_ files can be found under `App_Data\Sites\Default` or `App_Data\Sites\\[NameOfTheTenant\]`.
 * In a new, empty directory, install a fresh copy of the latest version of Orchard, but don't go through setup. 
 * Copy your existing site's _Media_ folder into the new directory.
 * Copy the remaining module and themes directories that you have on your existing site and that are not already in the new one into the new directory's _Modules_ and _Themes_ directories.
-* Copy the _App_Data_ folder from the existing site into the new directory.
+* Copy the `App_Data` folder from the existing site into the new directory.
 * Point a local web server to the new directory. You can use IIS; in that case, use IIS Manager to create a new web site that points at the directory and then navigate to it. Alternatively, you can use WebMatrix and IIS Express; to do that, right-click the directory in Windows Explorer and choose **Open as a Web Site with Microsoft WebMatrix** and then run the site. Finally, you can open the site in Visual Studio as a web site and run it. The new site will have all the data from the old site and have all the new features.
-* Go into the dashboard. Modules should have already upgraded themselves automatically. In rare cases, you may be prompted to upgrade features. Click **Modules** and upgrade each of the modules one by one until they are all up to date. If this doesn't work, it means that something is wrong with your install and/or one of the modules you're using, and you should investigate further in App_Data\logs.
+* Go into the dashboard. Modules should have already upgraded themselves automatically. In rare cases, you may be prompted to upgrade features. Click **Modules** and upgrade each of the modules one by one until they are all up to date. If this doesn't work, it means that something is wrong with your install and/or one of the modules you're using, and you should investigate further in `App_Data\logs`.
 * Go to the Orchard Gallery and get the latest version of all the modules you have on your site.
 * Some versions of Orchard come with version-specific upgrade features. Go to Modules and locate the "Upgrade" feature. Enable it, then click on the new upgrade menu entry that was added to the admin menu. Visit all the relevant tabs and execute the required upgrade actions they present. Once you're done, the feature can be disabled, which will remove the menu entry.
 
@@ -33,7 +33,7 @@ You can deploy the locally upgraded site to your production server using your pr
 
 As you deploy, make sure that the target _settings.txt_ files aren't overwritten, so that the production site continues to point to the production database.
 
-While you deploy, you might want to shut the site down by dropping an _app_offline.htm_ file into the root. Remove that file once you're done.
+While you deploy, you might want to shut the site down by dropping an `app_offline.htm` file into the root. Remove that file once you're done.
 
 Once deployed, manual upgrade actions (for example, those from the "Upgrade" feature) need to be performed again on the deployed production site.
 
@@ -43,13 +43,13 @@ It is possible to upgrade a site in-place, if you can't or don't want to work wi
 
 * Backup everything (site and database).
 * Download the new version to your local machine.
-* Add App_offline.htm to the root of the site during the upgrade. This effectively tells the web server to return this page for all requests. You should put a message such as "The site is currently being updated. Thank you for your patience. Please try again later." in the file.
+* Add `app_offline.htm` to the root of the site during the upgrade. This effectively tells the web server to return this page for all requests. You should put a message such as "The site is currently being updated. Thank you for your patience. Please try again later." in the file.
 * Delete what's in bin. This ensures that old versions of binaries that won't get replaced will not continue to be picked up by the application.
-* Delete the App_Data\Dependencies folder. Orchard will rebuild this folder on startup. This ensures that old versions of module assemblies will not be picked up by the application.
+* Delete the `App_Data\Dependencies` folder. Orchard will rebuild this folder on startup. This ensures that old versions of module assemblies will not be picked up by the application.
 * Extract the new version's zip file and copy what's in its Orchard folder over the server's Orchard web directory (answer yes to all prompts to overwrite).
-* Remove the app_offline file.
+* Remove the `app_offline.html` file.
 * The site should be running now. Log-in and go into admin.
-* Go into the dashboard. Modules should have already upgraded themselves automatically. In rare cases, you may be prompted to upgrade features. Click **Modules** and upgrade each of the modules one by one until they are all up to date. If this doesn't work, it means that something is wrong with your install and/or one of the modules you're using, and you should investigate further in App_Data\logs.
+* Go into the dashboard. Modules should have already upgraded themselves automatically. In rare cases, you may be prompted to upgrade features. Click **Modules** and upgrade each of the modules one by one until they are all up to date. If this doesn't work, it means that something is wrong with your install and/or one of the modules you're using, and you should investigate further in `App_Data\logs`.
 * Go to the Orchard Gallery and get the latest version of all the modules you have on your site.
 * Some versions of Orchard come with version-specific upgrade features. Go to Modules and locate the "Upgrade" feature. Enable it, then click on the new upgrade menu entry that was added to the admin menu. Visit all the relevant tabs and execute the required upgrade actions they present. Once you're done, the feature can be disabled, which will remove the menu entry.
 

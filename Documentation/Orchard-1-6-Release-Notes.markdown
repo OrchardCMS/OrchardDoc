@@ -102,7 +102,7 @@ template. If you have such a file in your theme then you will need to change lin
 How to Reset Your Site Data
 ---------------------------
 
-The App_Data directory contains database and settings documents produced during setup.  
+The `App_Data` directory contains database and settings documents produced during setup.  
 The contents of this directory are protected from download by visitors to your site. 
 
 *To completely reset your site* (destroy all data, starting from the setup screen again), 

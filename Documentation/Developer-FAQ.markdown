@@ -118,9 +118,9 @@ Register the service normally as an IDependency.
 
 Provide implementation (i.e.: Service : IService).
 
-## What's in App_Data?
+## What's in `App_Data`?
 
-The App_Data folder is used to store various kinds of data. Contents of App_data are never served. The contents are organized this way:
+The `App_Data` folder is used to store various kinds of data. Contents of `App_Data` are never served. The contents are organized this way:
 
 * File:**cache.dat** is a cache XML document describing what features are enabled for each tenant in the site. This being only a cache, modifying it may have unpredictable results.
 * File:**hrestart.txt** is a file that is touched by the system to indicate a need to restart the application.

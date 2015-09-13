@@ -48,7 +48,7 @@ Next, the host will get the Shell for the current tenant using the ShellContextF
 
 The shell, once created, will get the list of available extensions from the ExtensionManager. Extensions are modules and themes. The default implementation is scanning the modules and themes directories for extensions.
 
-At the same time, the shell will get the list of settings for the tenant from the ShellSettingsManager. The default implementation gets the settings from the appropriate subfolder of App_data but alternative implementations can get those from different places. For example, we have an Azure implementation that is using blob storage instead because App_data is not reliably writable in that environment.
+At the same time, the shell will get the list of settings for the tenant from the ShellSettingsManager. The default implementation gets the settings from the appropriate subfolder of `App_Data` but alternative implementations can get those from different places. For example, we have an Azure implementation that is using blob storage instead because `App_Data` is not reliably writable in that environment.
 
 The shell then gets the CompositionStrategy object and uses it to prepare the IoC container from the list of available extensions for the current host and from the settings for the current tenant. The result of this is not an IoC container for the shell, it is a ShellBlueprint, which is a list of dependency, controller and record blueprints.
 
