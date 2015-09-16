@@ -4,9 +4,9 @@ This topic shows the steps you need to perform to install Orchard using the .zip
 
 We will use three different approaches:
 
-* IIS.
-* WebMatrix and IIS Express
-* Visual Studio and the Visual Studio Development Server.
+  * IIS.
+  * WebMatrix and IIS Express
+  * Visual Studio and the Visual Studio Development Server.
 
 > **Note**: If you prefer using the Web Platform Installer, or if you plan to use WebMatrix to develop your site, you may want to see the topic [Installing Orchard](Installing-Orchard), which installs Orchard from the Web Platform Installer and includes WebMatrix in the installation.
 
@@ -38,7 +38,8 @@ Click **Internet Information Services** and then **ASP.NET 4.5**. Click **OK**.
 
 At this point we recommend rebooting your system. This way you will be sure that all the required services are started from scratch.
 
-When the system restarts, download the _Orchard.Web.1.x.xx.zip_ file from [here](http://orchard.codeplex.com/releases/view/115750). Extract the .zip file to your Desktop. The extracted folder contains several files and an *Orchard* folder.
+When the system restarts, download the _Orchard.Web.1.x.xx.zip_ file from [here](https://github.com/OrchardCMS/Orchard/releases/latest). Extract the .zip file to your Desktop. The extracted folder contains several files and an *Orchard* folder.
+
 Copy the *Orchard* Folder to *C:\inetpub\wwwroot\\*.
 
 In Windows Explorer go inside the *Orchard* Folder.Let's start with *App\_Data* folder.
@@ -87,7 +88,7 @@ You should see the Orchard setup screen in your browser.
 
 # Running the Site Using WebMatrix and IIS Express
 
-Download the _Orchard.Web.1.x.xx.zip_ file from [here](http://orchard.codeplex.com/releases/view/115750). Extract the Orchard .zip file to a local folder. Launch WebMatrix, and in the **Quick Start** screen, click **Open** and then **Folder**.
+Download the _Orchard.Web.1.x.xx.zip_ file from [here](https://github.com/OrchardCMS/Orchard/releases/latest). Extract the Orchard .zip file to a local folder. Launch WebMatrix, and in the **Quick Start** screen, click **Open** and then **Folder**.
 
 ![](/Attachments/Manually-installing-Orchard-zip-file/IISWMOpenFolder.png)
 
@@ -105,7 +106,7 @@ You should see the Orchard setup screen in your browser.
 *This procedure was tested with Visual Studio 2013 Update 1.*
 
 Altough you can run the precompiled version of Orchard in Visual Studio, you will find much easier to work in Visual Studio with the full source code version. 
-Download the full source code from [here](http://orchard.codeplex.com/releases/view/115750). Extract the .zip file to a local folder.
+Download the full source code from [here](https://github.com/OrchardCMS/Orchard/releases/latest). Extract the .zip file to a local folder.
 
 ![](/Attachments/Manually-installing-Orchard-zip-file/contents_of_source_zip_file.png)
 
@@ -121,7 +122,11 @@ When you first launch the Orchard site, you are presented with the Orchard setup
 
 ![](../Upload/screenshots/get_started_dialog_1.png)
 
-By default, Orchard includes a built-in database that you can use without installing a separate database server. However, if you are running SQL Server or SQL Server Express, you can configure Orchard to use either of those products instead by specifying a connection string. The database and user specified in the connection string must be created before you start the Orchard setup.  Optionally, you can enter a table prefix so that multiple Orchard installations can share the same database but keep their data separate.
+By default, Orchard includes a built-in database that you can use without installing a separate database server. If you choose this option then you don't need to configure the database at all. A mini version of SQL Server called SQL Server CE will be automatically run with your site. It keeps its data inside a database file that lives inside `App_Data`.  
+
+However, if you are running SQL Server or SQL Server Express, you can configure Orchard to use either of those products instead by specifying a connection string. The database and user specified in the connection string must be created before you start the Orchard setup. Just create an empty database on your database server, create the user and that's it. Orchard will set up all of the tables and data automatically for you during the setup process.
+ 
+Optionally, you can enter a table prefix so that multiple Orchard installations can share the same database but keep their data separate.
 
 ![](../Upload/screenshots_85/setup_sqlserver.png)
 
@@ -141,7 +146,6 @@ After you've entered the required information on the setup screen, click **Finis
 
 You are now on the Orchard home page and can begin configuring your site.
 
-  
 
 # Change History
 * Updates for Orchard 1.8
