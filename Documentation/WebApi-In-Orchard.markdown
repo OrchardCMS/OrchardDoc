@@ -20,7 +20,7 @@ The process of creating an Api Controller in Orchard is very similar to how you 
 		}
 	}
 	
-The above code sample will return the the 3 item list shown in code when you hit the endpoint "/api/MyCustomModule/MyApi".
+The above code sample will return the 3 item list shown in code when you hit the endpoint "/api/MyCustomModule/MyApi".
 
 ## Declaring custom Api Routes
 
