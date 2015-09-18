@@ -90,6 +90,7 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
     * [Manifest Files for Modules and Themes](Documentation/manifest-files)
     * [Caching](Documentation/Caching)
     * [Custom Site Settings](Documentation/Adding-custom-settings)
+    * [Web Api in Orchard](Documentation/WebApi-In-Orchard)
 
 
 * **Working with Data**
