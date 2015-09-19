@@ -252,11 +252,13 @@ The driver is more interesting as it prepares the shapes for rendering and handl
                 dynamic shapeHelper) {
     
                 var model = new EditAddressViewModel();
-                updater.TryUpdateModel(model, Prefix, null, null);
-    
-                if (part.ContentItem.Id != 0) {
-                    _addressService.UpdateAddressForContentItem(
-                        part.ContentItem, model);
+                if (updater.TryUpdateModel(model, Prefix, null, null))
+                {
+                    if (part.ContentItem.Id != 0)
+                    {
+                        _addressService.UpdateAddressForContentItem(
+                            part.ContentItem, model);
+                    }
                 }
     
                 return Editor(part, shapeHelper);
