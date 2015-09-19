@@ -28,8 +28,14 @@ Here is the code for the `Address` part:
             }
             
             public StateRecord State {
-                get { return Retrieve(r => r.StateRecord); }
-                set { Store(r => r.StateRecord, value); }
+                get {
+                    var rawStateRecord = Retrieve<string>("StateRecord");
+                    return StateRecord.DeserializeStateRecord(rawStateRecord);
+                }
+                set {
+                    var serializedStateRecord = StateRecord.SerializeStateRecord(value);
+                    Store("StateRecord", serializedStateRecord);
+                }
             }
             
             public string Zip {
@@ -39,8 +45,9 @@ Here is the code for the `Address` part:
         }
     }
 
+This uses stores the data in the infoset and in a database record. However you can only store simple datatypes in the infoset so you can see that `State` field runs some extra code to encode the class into a string. 
 
-All properties are proxies to the record properties:
+All properties in the `AddressPart` are proxies to the record properties:
 
     
     using Orchard.ContentManagement.Records;
@@ -55,7 +62,7 @@ All properties are proxies to the record properties:
     }
 
 
-The state record class itself has a two-letter code and a name:
+The state record class itself has a two-letter code and a name. It also has methods to serialize and deserialize its data into a string so that the `AddressPart` above can store its data in the infoset.
 
     
     namespace RelationSample.Models {
@@ -63,6 +70,28 @@ The state record class itself has a two-letter code and a name:
             public virtual int Id { get; set; }
             public virtual string Code { get; set; }
             public virtual string Name { get; set; }
+            
+            public static StateRecord DeserializeStateRecord(string rawStateRecord) {
+                if (rawStateRecord == null) {
+                    return new StateRecord();
+                }
+    
+                var stateRecordArray = rawStateRecord.Split(new[] { ',' });
+    
+                return new StateRecord() {
+                    Id = String.IsNullOrEmpty(stateRecordArray[0]) ? 0 : Int32.Parse(stateRecordArray[0]),
+                    Code = stateRecordArray[1],
+                    Name = stateRecordArray[2]
+                };
+            }
+    
+            public static string SerializeStateRecord(StateRecord stateRecord) {
+                if(stateRecord == null) {
+                    return "";
+                }
+    
+                return String.Join(",", stateRecord.Id, stateRecord.Code, stateRecord.Name);
+            }            
         }
     }
 
@@ -109,7 +138,7 @@ The last statement before the return in the migration is declaring the AddressPa
 
 ## Populating the State Table
 
-> Note: this section is included for completeness of the sample code but is far from essential to understanding how to implement relationships in Orchard. Please consider it as sample data generation.
+> Note: this section is included for completeness of the sample code but is far from essential to understanding how to implement relationships in Orchard. Please consider it as sample data generation. If you're following along and want to import this data you can find code in the `migrations.cs` file. This is included in the downloadable source code example link at the end of this guide.
 
 Because the list of states is going to be relatively stable, I did not make them content items (although that would be entirely possible with just a little more work). Instead, I'm populating the table with a list of states right in the migration code. The migration class has a reference to the state repository:
 
