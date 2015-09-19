@@ -57,7 +57,7 @@ Now, the Api endpoint can be reached by hitting "/api/myapi".
 
 Since Orchard doesn't have the concept of an AppStart file, in order to add custom configuration to Web Api in Orchard, you must do so in an Autofac module. For example, the following will set the default Web Api return type to Json, and will ensure that Json objects/properties returned by the Api follow the camelCased naming convention.
 
-	namespace Blue.Core {
+	namespace MyCustomModule {
 		public class WebApiConfig : Module {
 			protected override void Load(ContainerBuilder builder) {
 				GlobalConfiguration.Configuration.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
