@@ -1,7 +1,5 @@
 
-# Web Api in Orchard
 Web Api is available in Orchard. You can implement a web api to fit your needs in a custom module.
-
 
 ## Creating Api Controllers
 The process of creating an Api Controller in Orchard is very similar to how you would do so in a standard .NET Web Api application. Create your controller class and have it inherit from ApiController:
