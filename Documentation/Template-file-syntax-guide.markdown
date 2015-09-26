@@ -51,7 +51,7 @@ When the code block consists of a single expression, such as a `for` loop, you c
 
 ![](../Upload/screenshots/razorsyntax_forloop.png)
 
-The following example shows how to embed server-side comments in your web pages. These comments are stripped from the markup before the web page is sent to the browser, so users cannot see them. In contrast, client markup comments (`&lt;!-- --&gt;`) are not stripped from the markup, so users can see them.
+The following example shows how to embed server-side comments in your web pages. These comments are stripped from the markup before the web page is sent to the browser, so users cannot see them. In contrast, client markup comments (`<!-- -->`) are not stripped from the markup, so users can see them.
 
     
     @* This is a one-line comment. *@
