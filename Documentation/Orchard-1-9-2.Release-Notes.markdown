@@ -57,10 +57,15 @@ Orchard 1.9.2 fixes bugs and introduces the following changes and features:
 
 * [Feature] New ManageOwnMedia permission to prevent users from modifying media they don't own
 * [Feature] Ability to debug the Cloud Service locally
+* [Feature] Kudu deployment scripts
+* [Feature] Layout management permission
+* [Feature] "Owned by me" content filter
 * [Improvement] Support htmlAttributes in `ItemEditLink`
 * [Improvement] Layouts doesn't require TinyMCE anymore
 * [Improvement] Assets.json is global, and supports watch
 * [Regression] Removed "edit inline" which was not functional
+* [Bug] Too many sql connection opened
+* [Bug] Widget localization throwing exception
 * [Bug] Part settings are resetted when general settings are updated
 * [Bug] Cannot delete spam comment
 * [Bug] Default layout template is not populated automtically
