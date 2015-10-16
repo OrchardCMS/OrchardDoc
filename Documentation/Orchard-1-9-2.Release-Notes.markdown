@@ -7,7 +7,7 @@ This release contains bug fixes and new features.
 How to Install Orchard
 ----------------------
 
-To install Orchard using Web PI, follow these instructions:
+To install Orchard using WebPI, follow these instructions:
 <http://docs.orchardproject.net/Documentation/Installing-Orchard>.
 Web PI will detect your hardware environment and install the application.
 
@@ -68,10 +68,10 @@ Orchard 1.9.2 fixes bugs and introduces the following changes and features:
 * [Bug] Widget localization throwing exception
 * [Bug] Part settings are resetted when general settings are updated
 * [Bug] Cannot delete spam comment
-* [Bug] Default layout template is not populated automtically
+* [Bug] Default layout template is not populated automatically
 * [Bug] Double encoding issues across the admin
 * [Bug] Unable to translate content
-* [Bug] Editing workklow recreates activity records
+* [Bug] Editing workflow recreates activity records
 * [Bug] Processed images are regenerated after every restart
 
 
