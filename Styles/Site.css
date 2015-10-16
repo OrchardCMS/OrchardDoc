@@ -186,6 +186,7 @@ table, div {
     white-space: nowrap;
 }
 
+#PageContentDiv table th,
 #PageContentDiv table td {
     vertical-align: top;
     border: 1px solid #CCC;

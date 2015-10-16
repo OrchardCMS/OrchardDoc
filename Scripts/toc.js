@@ -8,7 +8,7 @@ jQuery(function($) {
     $("#MainDiv :header")
         .each(function() {
             var h = $(this),
-                name = h.text().replace(/[\s,-;\.]/g, "");
+                name = h.text().replace(/[^A-Za-z0-9\-]/g, "");
             h.before($("<a/>", {name: name}));
             toc.append(
                 $("<li></li>").append(

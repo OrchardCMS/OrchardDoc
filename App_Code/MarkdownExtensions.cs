@@ -46,6 +46,7 @@ namespace App_Code {
                     writer.WriteLine("    </tr>");
                 }
                 writer.WriteLine("</tbody></table>");
+                writer.WriteLine("");
                 return writer.ToString();
             }
             , RegexOptions.Multiline);
