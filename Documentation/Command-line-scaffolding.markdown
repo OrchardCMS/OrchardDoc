@@ -35,7 +35,8 @@ Once the code generation feature is enabled, new commmands are available for cre
 
     codegen moduletests <module-name> 
             Create a new test for a module
-For a walkthrough of using the code generation feature to create a new module and data migration, see [Writing a content part](Writing-a-content-part).
+            
+For a walkthrough of using the code generation feature to create a new module and data migration, read the [Getting Started with Modules course](Getting-Started-with-Modules).
 
 # Change History
 * Updates for Orchard 1.8

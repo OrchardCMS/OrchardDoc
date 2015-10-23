@@ -121,8 +121,9 @@ The Orchard.Alias module itself (defined as `Name: Alias`) is its own default fe
 
 Notice the structure that is used for each feature described in the `Features` field. The `FeatureId` of the feature is listed followed by a colon `:`. Then on a new line for each field, you can specify the other relevant fields including `Name`, `Description`, `Category` and `Dependencies`. 
 
-For more information about how to create a module, including how to generate a manifest file and how to modify the manifest, see these tutorials:
+For more information about how to create a module, including how to generate a manifest file and how to modify the manifest, see these guides:
 
+  * [Getting Started with Modules course](Getting-Started-with-Modules)
   * [Writing a Content Part](Writing-a-content-part)
   * [Writing a Content Field](Creating-a-custom-field-type)
   * [Building a Hello World Module](Building-a-hello-world-module).

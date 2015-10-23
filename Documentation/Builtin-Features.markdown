@@ -706,6 +706,7 @@ get displayed on what pages is determined by layer rules.
 ### See Also
 
 * [Managing widgets][26]
+* [Getting Started with Modules course](Getting-Started-with-Modules)
 * [Writing a widget][27]
 
 ## Orchard.Workflows 
