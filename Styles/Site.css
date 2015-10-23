@@ -113,9 +113,9 @@ p.big, big {font-size: 105%;}
 p.imagedescription {font: 75% italic; margin:4px 0 0 0;}
 
 /* ----------------------- links  ----------------------------- */
-a, a:visited {color:#006699; text-decoration:none;}
+a, a:visited {color:#0092DB; text-decoration:none;}
 a:hover {text-decoration: underline;}
-a:active {color:#006699;}
+a:active {color:#0092DB;}
 
 a.headeranchor {visibility: hidden;}
 
@@ -186,7 +186,6 @@ table, div {
     white-space: nowrap;
 }
 
-#PageContentDiv table th,
 #PageContentDiv table td {
     vertical-align: top;
     border: 1px solid #CCC;
@@ -456,6 +455,11 @@ blockquote p:last-child {
     margin-bottom: 0;
 }
 
+blockquote a:link,
+blockquote a:visited {
+	color:#006699;
+}
+
 .search {padding:12px 0 0 12px;}
 
 #TxtSearchBox {
@@ -568,6 +572,11 @@ span.signature {
 
 #SearchResultsDiv li {
     list-style: none;
+}
+
+#SearchResultsDiv article > blockquote {
+	border-left: solid 8px #6A6F5A;
+    background-color: #FDFDFD;
 }
 
 .searchPagination {
