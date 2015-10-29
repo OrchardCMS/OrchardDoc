@@ -2,6 +2,7 @@
 
 #### Orchard Branding
 
+* [Branding svg](https://raw.githubusercontent.com/OrchardCMS/OrchardDoc/master/Walkthroughs/branding/orchard-logo.svg)
 * [Branding vectors](/walkthroughs/branding/OrchardLogo1.png)
 * [Branding PSD](/walkthroughs/branding/OrchardLogo2.png)
 * [Adobe Illustrator logo sources](/Attachments/walkthroughs/OrchardLogos.zip)

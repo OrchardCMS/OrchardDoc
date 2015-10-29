@@ -11,7 +11,7 @@ This is a language recognition tool, which provides a framework for constructing
 ASP.NET MVC is used as the web programming model.
 
 ## Autofac 2 & Autofac contrib
-Dependency Injection is used heavily internally, mainly for publishing and consuming services between the Ochard.Web host and the Orchard packages. 
+Dependency Injection is used heavily internally, mainly for publishing and consuming services between the Orchard.Web host and the Orchard packages. 
 
 ## Castle Windsor 2.0
 Orchard uses Castle Winder 2.0 for type proxy generation and logging support.

@@ -26,57 +26,65 @@ An Orchard recipe is an XML file that contains website configuration information
 
     
     <?xml version="1.0"?>
-    <Orchard>
-      <Recipe>
-        <Name>Default</Name>
-        <Description>The default recipe for an Orchard site that includes pages, blogs, custom content types, comments, tags, widgets and basic navigation.</Description>
-        <Author>The Orchard Team</Author>
-        <WebSite>http://orchardproject.net</WebSite>
-        <Tags></Tags>
-        <Version>1.0</Version>
-      </Recipe>
-      
-      <Feature enable="Orchard.Blogs,Orchard.Comments,Orchard.Tags,
-                       Orchard.Lists,TinyMce,Orchard.Media,Orchard.MediaPicker,Orchard.PublishLater,
-                       Orchard.jQuery,Orchard.Widgets,Orchard.ContentTypes,
-                       Orchard.Scripting,Orchard.Scripting.Lightweight,
-                       PackagingServices,Orchard.Packaging,Gallery,Gallery.Updates,
-                       TheThemeMachine" />
-      
-      <Metadata>
-        <Types>
-          <Page ContentTypeSettings.Draftable="True" TypeIndexing.Included="true">
-            <TagsPart />
-            <LocalizationPart />
-          </Page>
-          <BlogPost ContentTypeSettings.Draftable="True" TypeIndexing.Included="true">
-            <CommentsPart />
-            <TagsPart />
-            <LocalizationPart />
-          </BlogPost>
-        </Types>
-        <Parts>
-          <BodyPart BodyPartSettings.FlavorDefault="html" />
-        </Parts>
-      </Metadata>
-    
-      <Settings />
-    
-      <Migration features="*" />
-    
-      <Command>
-        layer create Default /LayerRule:"true"
-        layer create Authenticated /LayerRule:"authenticated"
-        layer create Anonymous /LayerRule:"not authenticated"
-        layer create Disabled /LayerRule:"false"
-        layer create TheHomepage /LayerRule:"url '~/'"
-        page create /Slug:"welcome-to-orchard" /Title:"Welcome to Orchard!" /Path:"welcome-to-orchard" /Homepage:true /Publish:true /UseWelcomeText:true
-        widget create HtmlWidget /Title:"First Leader Aside" /Zone:"TripelFirst" /Position:"5" /Layer:"TheHomepage" /UseLoremIpsumText:true
-        widget create HtmlWidget /Title:"Second Leader Aside" /Zone:"TripelSecond" /Position:"5" /Layer:"TheHomepage" /UseLoremIpsumText:true
-        widget create HtmlWidget /Title:"Third Leader Aside" /Zone:"TripelThird" /Position:"5" /Layer:"TheHomepage" /UseLoremIpsumText:true
-        menuitem create /MenuPosition:"1" /MenuText:"Home" /Url:"" /OnMainMenu:true
-      </Command>
-    </Orchard>
+	<Orchard>
+	  <Recipe>
+	    <Name>Default</Name>
+	    <Description>The default recipe for an Orchard site that includes pages, blogs, custom content types, comments, tags, widgets and basic navigation.</Description>
+	    <Author>The Orchard Team</Author>
+	    <WebSite>http://orchardproject.net</WebSite>
+	    <Tags></Tags>
+	    <Version>1.0</Version>
+	    <IsSetupRecipe>true</IsSetupRecipe>
+	  </Recipe>
+	
+	  <Feature enable="Orchard.Blogs,Orchard.Comments,Orchard.Tags,Orchard.Alias,Orchard.Autoroute,
+	                   TinyMce,Orchard.MediaLibrary,Orchard.ContentPicker,Orchard.PublishLater,
+	                   Orchard.jQuery,Orchard.Widgets,Orchard.ContentTypes,
+	                   Orchard.Scripting,Orchard.Scripting.Lightweight,PackagingServices,Orchard.Packaging,
+	                   Orchard.Projections,Orchard.Fields,Orchard.OutputCache,Orchard.Taxonomies,Orchard.Workflows,
+	                   Orchard.Layouts,Orchard.Layouts.Tokens,
+	                   TheThemeMachine" />
+	
+	  <Metadata>
+	    <Types>
+	      <Page ContentTypeSettings.Draftable="True" TypeIndexing.Indexes="Search">
+	        <TagsPart />
+	        <LocalizationPart />
+	        <TitlePart/>
+	        <AutoroutePart />
+	        <MenuPart />
+	      </Page>
+	      <BlogPost ContentTypeSettings.Draftable="True" TypeIndexing.Indexes="Search">
+	        <CommentsPart />
+	        <TagsPart />
+	        <LocalizationPart />
+	        <TitlePart/>
+	        <AutoroutePart />
+	      </BlogPost>
+	    </Types>
+	    <Parts>
+	      <BodyPart BodyPartSettings.FlavorDefault="html" />
+	    </Parts>
+	  </Metadata>
+	
+	  <Settings />
+	
+	  <Migration features="*" />
+	
+	  <Command>
+	    layer create Default /LayerRule:"true" /Description:"The widgets in this layer are displayed on all pages"
+	    layer create Authenticated /LayerRule:"authenticated" /Description:"The widgets in this layer are displayed when the user is authenticated"
+	    layer create Anonymous /LayerRule:"not authenticated" /Description:"The widgets in this layer are displayed when the user is anonymous"
+	    layer create Disabled /LayerRule:"false" /Description:"The widgets in this layer are never displayed"
+	    layer create TheHomepage /LayerRule:"url '~/'" /Description:"The widgets in this layer are displayed on the home page"
+	    site setting set baseurl
+	    menu create /MenuName:"Main Menu"
+	    page create /Slug:"welcome-to-orchard" /Title:"Welcome to Orchard!" /Path:"welcome-to-orchard" /Homepage:true /Publish:true /UseWelcomeText:true
+	    menuitem create /MenuPosition:"0" /MenuText:"Home" /Url:"~/" /MenuName:"Main Menu"
+	    widget create MenuWidget /Title:"Main Menu" /RenderTitle:false /Zone:"Navigation" /Position:"1" /Layer:"Default" /Identity:"MenuWidget1" /MenuName:"Main Menu"
+	    theme activate "The Theme Machine"
+	  </Command>
+	</Orchard>
 
 
 The following sections of a recipe file are the elements that are most important to understand:
@@ -104,6 +112,7 @@ To get started with creating a custom recipe, you can select an existing recipe 
         <WebSite>http://orchardproject.net</WebSite>
         <Tags></Tags>
         <Version>1.0</Version>
+		<IsSetupRecipe>true</IsSetupRecipe>
       </Recipe>
     
       <Module packageId="Orchard.Module.Bing.Maps" />
@@ -171,9 +180,11 @@ Note the following about the changes made to the default recipe:
 
 In addition to the attributes shown here for the **Module** and **Theme** elements, both elements support a **version** attribute. If the version is specified, that version will be downloaded from the Orchard Gallery. Both elements also have a **repository** attribute. By default, the **repository** attribute points to the Orchard Gallery. However, you can set it to any feed URL.
 
-To add your custom recipe to the setup page, put the recipe XML file into the _Orchard.Web/Modules/Orchard.Setup/Recipes_ folder. When you set up a new Orchard website, the recipe list will contain your recipe.
+To add your custom recipe to the setup page use the `IsSetupRecipe` attribute in the `Recipe` element as shown above, and put the recipe XML file into the _Recipes_ folder (or its subfolder) of a module. Note that recipe files should have a name ending in _.recipe.xml_, e.g. _Custom.recipe.xml_. When you set up a new Orchard website, the recipe list will contain your setup recipe.
 
 ![](../Upload/screenshots/recipes_new_custom.png)
+
+Note that recipes used for importing mustn't contain an `IsSetupRecipe` element or it should be set to `false`.
 
 # Importing and Exporting a Recipe
 Orchard enables you to import and export recipes from and to the web server. It uses the **Import Export** module, which is disabled by default. Therefore you must enable the module to use this feature.

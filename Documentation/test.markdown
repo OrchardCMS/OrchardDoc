@@ -1,44 +1,89 @@
-4
-
-## Some Test Markdown
+## No indentation
 
 '''c#
-    
-    using Orchard.ContentManagement;
-    
-    namespace RelationSample.Models {
-        public class AddressPart : ContentPart<AddressPartRecord> {
-            public string Address {
-                get { return Record.Address; }
-                set { Record.Address = value; }
-            }
-            public string City {
-                get { return Record.City; }
-                set { Record.City = value; }
-            }
-            public StateRecord State {
-                get { return Record.StateRecord; }
-                set { Record.StateRecord = value; }
-            }
-            public string Zip {
-                get { return Record.Zip; }
-                set { Record.Zip = value; }
-            }
-        }
-    }
+using Orchard.ContentManagement;
+namespace RelationSample.Models {
+	public class AddressPart : ContentPart<AddressPartRecord> {
+		public string Address {
+			get { return Record.Address; }
+			set { Record.Address = value; }
+		}
+		public string City {
+			get { return Record.City; }
+			set { Record.City = value; }
+		}
+		public StateRecord State {
+			get { return Record.StateRecord; }
+			set { Record.StateRecord = value; }
+		}
+		public string Zip {
+			get { return Record.Zip; }
+			set { Record.Zip = value; }
+		}
+	}
+}
+'''
 
+## Can't handle any lines in the snippet
 
+'''c#
+	using Orchard.ContentManagement;
+	namespace RelationSample.Models {
+		public class AddressPart : ContentPart<AddressPartRecord> {
+			public string Address {
+				get { return Record.Address; }
+				set { Record.Address = value; }
+			}
+			
+			public string City {
+				get { return Record.City; }
+				set { Record.City = value; }
+			}
+			public StateRecord State {
+				get { return Record.StateRecord; }
+				set { Record.StateRecord = value; }
+			}
+			public string Zip {
+				get { return Record.Zip; }
+				set { Record.Zip = value; }
+			}
+		}
+	}
 '''
 
 
 ## Some Other Markdown
 
 
-'''c#
-	
+'''c#    
+using Orchard.ContentManagement;
+namespace RelationSample.Models {	
+	public class AddressPart : ContentPart<AddressPartRecord> {
+		public string Address {
+			get { return Record.Address; }
+			set { Record.Address = value; }
+		}
+		public string City {
+			get { return Record.City; }
+			set { Record.City = value; }
+		}
+		public StateRecord State {
+			get { return Record.StateRecord; }
+			set { Record.StateRecord = value; }
+		}
+		public string Zip {
+			get { return Record.Zip; }
+			set { Record.Zip = value; }
+		}
+	}
+}
+'''
+
+## No code fence
+
 	using Orchard.ContentManagement;
 	
-	namespace RelationSample.Models {
+	namespace RelationSample.Models {	
 		public class AddressPart : ContentPart<AddressPartRecord> {
 			public string Address {
 				get { return Record.Address; }
@@ -58,12 +103,10 @@
 			}
 		}
 	}
-'''
 
 ## And some XML for fun!
 
-'''xml
-	
+'''xml	
 	<Placement>
 		<Place Parts_Address_Edit="Content:10"/>
 		<Place Parts_Address="Content:10"/>
@@ -71,3 +114,5 @@
 '''
 
 And that's all there is to it!
+
+Escaped `App_Data`
