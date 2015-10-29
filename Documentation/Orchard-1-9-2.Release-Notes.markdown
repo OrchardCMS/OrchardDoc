@@ -50,6 +50,17 @@ Suggestions are welcome in the discussion forums.
 You are allowed to use this software in any way that is compatible with the new BSD license.
 This includes commercial derivative work.
 
+Breaking Change
+-----------
+We unintentionally introduced a breaking change with this release. It has to do with the Content Part's **Placeable** property which was originally named **Placable** (which was a typo).
+
+If your site uses Content Part Elements, you will need to perform the following actions *after* updating to 1.9.2:
+
+1. Go to each Content Part definition that you placed on the layout canvas and enable *Placeable* again.
+
+[Click here](https://github.com/OrchardCMS/Orchard/issues/5530) for more information.
+ 
+
 What's new?
 -----------
 
