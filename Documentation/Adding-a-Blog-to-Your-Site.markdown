@@ -68,6 +68,6 @@ If the URL is shortened to just the _/Tags/_ portion, the list of tags used in y
 * Updates for Orchard 1.8
 	* 4-25-14:  New Screenshots. Comment settings are different. You can add many blogs.
 * Updates for Orchard 1.6
-	* 11-25-12:  Broke into mutliple sections.
+	* 11-25-12:  Broke into multiple sections.
 
 

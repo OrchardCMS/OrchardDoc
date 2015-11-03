@@ -6,7 +6,7 @@ Orchard, as any ASP.NET MVC application, supports loading module compiled as ass
 
 In addition to that, Orchard supports (this is still somewhat experimental) the ability to dynamically compile modules deployed as source code only.  This is more flexible than deploying binaries, and enables some interesting scenarios such as "in place" code customization without having to use Visual Studio. This is somewhat similar to the ASP.NET "App_Code" directory, except Orchard supports multiple "logical folder" (typically one per module) independently.
 
-The goal of this section is to decribe at a technical level how Orchard load modules in the 0.5 release. This feature is often referred to as "Orchard Dynamic Compilation", even though technically dynamic compilation is only involved in very specific cases.
+The goal of this section is to describe at a technical level how Orchard load modules in the 0.5 release. This feature is often referred to as "Orchard Dynamic Compilation", even though technically dynamic compilation is only involved in very specific cases.
 
 # High Level Overview
 
@@ -75,7 +75,7 @@ If "module.txt" indicates a module from the "~/Core" folder, the CoreExtensionLo
 
 ##  "Precompiled Module" Loader 
 
-If "module.txt" indicates a module from the "~/Modules" folder, the PrecompiledExtensionLoader looks for an assembly named "&lt;ModuleName&gt;" in the "~/Modules/&lt;ModuleName&gt;/bin" folder. If the file exists, it's is copied to the "~/App_Data/Dependencies" folder, which is a special folder used to ASP.NET to look for additional assemblies outside of the traditional "~/bin" folder.
+If "module.txt" indicates a module from the "~/Modules" folder, the PrecompiledExtensionLoader looks for an assembly named "&lt;ModuleName&gt;" in the "~/Modules/&lt;ModuleName&gt;/bin" folder. If the file exists, it's is copied to the `~/App_Data/Dependencies` folder, which is a special folder used to ASP.NET to look for additional assemblies outside of the traditional "~/bin" folder.
 
 ##  "Dynamic Module" Loader 
 
@@ -165,6 +165,6 @@ When a change is detected, the current module configuration is discarded and mod
 (TODO: Explain that Orchard uses a Razor custom API to add Module dependencies to Views)
 
 
-#  The "~/App_Data/Dependencies/Dependencies.xml" File 
+#  The `~/App_Data/Dependencies/Dependencies.xml` File 
 
 This file contains the list of modules, their loader and their resolved references of the "last known good" configuration of module, i.e. the last time Orchard successfully loaded all modules of the application.  Examining the content of this file can be useful for debugging purposes, i.e. if a the latest version of a module doesn't seem to be loaded, for example.

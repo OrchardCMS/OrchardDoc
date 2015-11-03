@@ -2,10 +2,11 @@ In this tutorial, you will learn how to develop a simple commerce module using o
 
 If you do not have the [Web Platform Installer](http://www.microsoft.com/web/downloads/platform.aspx) on your computer, download it before beginning this tutorial.
 
+> **This guide has been marked for review.** If you are just getting started with Orchard module development you should read the [Getting Started with Modules course](Getting-Started-with-Modules) first. It will introduce you to building modules with Orchard using Visual Studio Community, a free edition of Visual Studio. 
 
 # Setting Up the Orchard Site
 
-First, you will set up a new Orchard website. If you already have a site set up, you can skip this section and jump directly to [the code generation section](Command-line-scaffolding). To start the setup, open **IIS Manager**, right-click **Sites**, and click **Add Web Site**.
+First, you will set up a new Orchard website. If you already have a site set up, you can skip this section and jump directly to [the code generation section](/Documentation/Creating-a-module-with-a-simple-text-editor#GeneratingCodefortheModule). To start the setup, open **IIS Manager**, right-click **Sites**, and click **Add Web Site**.
 
 ![Figure 1. Creating the Orchard site](../Attachments/Creating-a-module-with-a-simple-text-editor/01_NewWebSite.PNG)
 
@@ -78,7 +79,7 @@ Change the description to "A simple commerce module". Change the description of 
 
 # Creating the Model for the Part
 
-Next, you will create a data model that is a repesentation of what will be stored in the database.
+Next, you will create a data model that is a representation of what will be stored in the database.
 
 In _Modules/SimpleCommerce/Models_, create a _Product.cs_ file and add the following content:
 
@@ -111,7 +112,7 @@ In _Modules/SimpleCommerce/Models_, create a _Product.cs_ file and add the follo
 
 This code has two properties, `Sku` and `Price`, that are virtual in order to enable the creation of a dynamic proxy that will handle persistence transparently.
 
-The code also defines a content part that derives from `ContentPart<ProductPartRecord>` and that exposes the SKU and price from the record as public properties and infoset. [http://weblogs.asp.net/bleroy/the-shift-how-orchard-painlessly-shifted-to-document-storage-and-how-it-ll-affect-you](You can find more info about infoset here.). The properties have attributes that will surface in the UI as validation tests.
+The code also defines a content part that derives from `ContentPart<ProductPartRecord>` and that exposes the SKU and price from the record as public properties and infoset. [You can find more info about infoset here](http://weblogs.asp.net/bleroy/the-shift-how-orchard-painlessly-shifted-to-document-storage-and-how-it-ll-affect-you). The properties have attributes that will surface in the UI as validation tests.
 
 In order for the application to pick up the new file, you need to add it to the module's project file. Open the _SimpleCommerce.csproj_ file and look for "assemblyinfo.cs". After that line, add the following:
 

@@ -34,7 +34,7 @@ In this particular demo , we'll be creating a **Contact us Email Notification Wo
 
 ![](/Upload/Workflows/contactnotification.png)
 
-**3.** **Eidting Contact Us Email Notification Workflow**
+**3.** **Editing Contact Us Email Notification Workflow**
 
 ![](/Upload/Workflows/workflowcreated.png)
 
@@ -86,7 +86,7 @@ In this particular demo , we'll be creating a **Contact us Email Notification Wo
 
 **12.** **Blocking Activity**
 
-*The timer(Blocking Activity) has a delay period of 2 mins*
+*The timer (Blocking Activity) has a delay period of 2 mins*
 
 ![](/Upload/Workflows/blockingactivity.png)
 

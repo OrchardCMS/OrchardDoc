@@ -48,6 +48,6 @@ Once you've created a module package, you can share it easily with others.  Orch
 
 Additionally, Orchard provides a Gallery feature that can register one or more gallery feeds of module extensions (OData format).  Users can easily install modules from any registered feed.  A default gallery feed is exposed from this website, at [http://packages.orchardproject.net/FeedService.svc](http://packages.orchardproject.net/FeedService.svc).  For more information, refer to the [Module gallery feeds](Module gallery feeds) topic.
 
-You can visit the Gallery admin panel menu to browse and install available modules and themes online.  The [http://gallery.orchardproject.net/](http://gallery.orchardproject.net/) website provides a browseable front-end for finding and downloading available modules and themes too.
+You can visit the Gallery admin panel menu to browse and install available modules and themes online.  The [http://gallery.orchardproject.net/](http://gallery.orchardproject.net/) website provides a browsable front-end for finding and downloading available modules and themes too.
 
 You can easily upload your custom module package to our Galllery website to share it with other Orchard users. [Register an account](https://gallery.orchardproject.net/Users/Account/Register) and [contribute your module here](https://gallery.orchardproject.net/Contribute/Index).

@@ -3,39 +3,42 @@ The feature roadmap is subject to change as the project evolves, and we welcome 
 
 ### Current Priorities
 
-#### Priorities for Orchard 1.9:
+#### Priorities for Orchard 1.10:
 
-This release is expected to be released for October 2014
+This release is expected for May 2016
 
-* Audit Trail module (done)
-  * Daniel Stolt ([Decorum](https://www.codeplex.com/site/users/view/Decorum)) and Sipke Schoorstra ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) own this contribution
-* Draftable widgets (done)
-* Indexable drafts (done)
-* Date localization and calendar support improvements and fixes (done)
-  * Daniel Stolt ([Decorum](https://www.codeplex.com/site/users/view/Decorum)) owns this contribution
-  * More information here: https://orchard.codeplex.com/discussions/560347
-* Dynamic Layout module (on track)
-  * Sipke Schoorstra ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) owns this contribution
-* Dynamic Forms module (on track)
-  * Sipke Schoorstra ([sfmskywalker](https://www.codeplex.com/site/users/view/sfmskywalker)) owns this contribution
-* Integrate OWIN middlewares support  (working, specflow tests broken)
-  * Nick ([Jetski5822](https://www.codeplex.com/site/users/view/Jetski5822)) is responsible for this feature
-  * Identity
-* Improved Workflow module (on track)
+## Suggested features
+
+* Improved Workflow module
   * Error/Exception branches support
   * Loop activities
   * Piotr ([pszmyd](https://www.codeplex.com/site/users/view/pszmyd)) owns this contribution
-* Upgrading to ASP.NET MVC 5.2 (done)
-* Upgrading to .NET Framework 4.5.1 (done)
-* Adding Azure Redis Cache support (done)
-  * Add business cache implementation
-* Upgrading to TinyMCe 4 (done)
-* Localization improvements (on track, test/feedback needed)
-  * Nick ([Jetski5822](https://www.codeplex.com/site/users/view/Jetski5822)) is responsible for this feature
-  * RTL support in Admin
-  * Culture selector (admin and front end)
-* Message Bus (on track)
-
+* Owin identity providers
+  * OAuth, AAD ...
+* Javascript integration
+  * Rules engine
+  * Script activity
+  * Jint
+* Deployment feature
+* New admin theme
+  * Bootstrap: Antoine + Jasmin 
+  * Customizable dashboard
+  * Accessibility
+* Content tree
+* Tabs in placement
+  * Already implemented in code, needs views 
+* New base theme
+* REST APIs ([design notes](https://orchard.codeplex.com/discussions/560607))
+* Refactor output cache module as an Owin middleware
+* Powershell
+* Media library UI
+* Upgrades
+  * Nuget package
+* Gallery/Website
+  * Nuget v3
+  * Github/Whatever source
+* Widgets improvement
+* 
 ### Currently Implemented (Partially or in Full)
 
 * Basic admin panel and login
@@ -115,9 +118,7 @@ This release is expected to be released for October 2014
 
 * REST APIs ([design notes](https://orchard.codeplex.com/discussions/560607))
 * Deployment module ([design notes](https://orchard.codeplex.com/discussions/452000))
-* Localization improvements (admin filtering, default selectors)
 * Improved content navigation and filtering
-* Multiple templates for pages
 * SEO - Semantic URLs, metas/keywords, Web standards, sitemap
 * Admin - UI improvements, dashboard, notifications/email
   * Improved admin theme (Based on Bootstrap)

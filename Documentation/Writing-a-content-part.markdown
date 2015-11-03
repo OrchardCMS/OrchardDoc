@@ -1,4 +1,5 @@
-A content part is a piece of reusable functionality or UI (or both) that can be appended to any content type in Orchard.  Examples of parts include the Route part (for alowing a content item to be addressable with a URL from the front-end), the Tags part (for applying keywords/tags to a content item), and the Menu part (for allowing a content item to be added to the main menu).  
+> **This guide has been marked for review.** If you are just getting started with Orchard module development you should read the [Getting Started with Modules course](Getting-Started-with-Modules) first. It will introduce you to building modules with Orchard using Visual Studio Community, a free edition of Visual Studio. 
+
 
 This tutorial walks through the process of creating a new content part from scratch, using the scaffolding feature in Orchard as a productivity tool.  Although this tutorial assumes development in Visual Studio, it is not strictly necessary to have Visual Studio to develop a content part - feel free to use your editor of choice.  
 

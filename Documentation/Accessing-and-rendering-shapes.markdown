@@ -5,7 +5,7 @@ You can think of shapes as the blobs of data that get handed to templates for re
 
 This article introduces the concept of shapes and explains how to work with them.
 It's intended for module and theme developers who have at least a basic understanding of Orchard modules.
-For information about creating modules, see [Building a Hello World Module](Building-a-hello-world-module).
+For information about creating modules, see the [Getting Started with Modules course](Getting-Started-with-Modules).
 For information about dynamic objects, see [Creating and Using Dynamic Objects](http://msdn.microsoft.com/en-us/library/ee461504.aspx).
 
 # Introducing Shapes

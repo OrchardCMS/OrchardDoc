@@ -1,6 +1,4 @@
-> **Note:** This documentation site, like all of Orchard, is a [community effort](/Contributors).
-If you would like to contribute, please see
-[Documentation Style Guidelines](Documentation/Documentation-style-guidelines)
+> **Note:** This documentation site, like all of Orchard, is a [community effort](/Contributors). If you would like to contribute, please see [Documentation Style Guidelines](Documentation/Documentation-style-guidelines)
 and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
 
 ## Getting Started ##
@@ -14,7 +12,6 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
 * [Adding and Managing Media Content](Documentation/Adding-and-managing-media-content)
 * [Managing Widgets](Documentation/Managing-widgets)
 * [Organizing Content Using Tags](Documentation/Organizing-content-with-tags)
-* [Create Custom Forms](Documentation/Creating-Custom-Forms "Use Custom Form to create subscribe and contact us pages in Orchard")
 
 ## About the Project ##
 * [Orchard Concept Definitions](Documentation/Basic-Orchard-Concepts)
@@ -62,6 +59,7 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
     * [Creating an Image Gallery](Documentation/Creating-an-image-gallery)
     * [Workflows](Documentation/Workflows)
     * [Projection](Documentation/Projection)
+    * [Create Dynamic Forms](Documentation/Creating-Dynamic-Forms "Use Dynamic Forms to create subscribe and contact us pages in Orchard")
 
 
 * **Hosting and Deploying Websites**
@@ -80,6 +78,11 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
     * [First Steps into Orchard](Documentation/First-steps-into-Orchard)
     * [How Orchard Works](Documentation/How-Orchard-works)
     * [Command-Line Code Generation](Documentation/Command-line-scaffolding)
+    * [Getting Started with Modules Course](Documentation/Getting-Started-with-Modules)
+      * [Part 1 - Build a Static Widget](Documentation/Getting-Started-with-Modules-Part-1)
+      * [Part 2 - Make the Widget Dynamic](Documentation/Getting-Started-with-Modules-Part-2)
+      * [Part 3 - Using the Orchard API](Documentation/Getting-Started-with-Modules-Part-3)
+      * [Part 4 - Applying Best Practices](Documentation/Getting-Started-with-Modules-Part-4)
     * [Building a Hello World Module](Documentation/Building-a-hello-world-module)
     * [Creating a Module with a Simple Text Editor](Documentation/Creating-a-module-with-a-simple-text-editor)
     * [Writing a Content Part](Documentation/Writing-a-content-part)
@@ -90,6 +93,7 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
     * [Manifest Files for Modules and Themes](Documentation/manifest-files)
     * [Caching](Documentation/Caching)
     * [Custom Site Settings](Documentation/Adding-custom-settings)
+    * [Web Api in Orchard](Documentation/WebApi-In-Orchard)
 
 
 * **Working with Data**
