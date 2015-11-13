@@ -322,7 +322,7 @@ It then calls the original `POST` version of the `Editor()` method with the form
 
 > Don't forget, browsing the Orchard source code is an invaluable tool to learn more about its inner workings. A good reference module for both this and the last tip is the `WidgetPartDriver` located in `.\Orchard.Web\Modules\Orchard.Widgets\Drivers\WidgetPartDriver.cs`. It shows both the combining of shapes and extra validation in the editor update method.
 
-You should now end up with a `FeaturedProductHandler.cs` file that looks like this:
+You should now end up with a `FeaturedProductDriver.cs` file that looks like this:
 
     using Orchard.ContentManagement;
     using Orchard.ContentManagement.Drivers;
