@@ -1,6 +1,7 @@
 Orchard ships with providers for Microsoft Azure Blob Storage, allowing Orchard to use Microsoft Azure Blob Storage as the underlying file system implementation for shell settings (`Settings.txt`) and/or media storage. This topic describes how to configure and enable this functionality.
+Using shell settings storage
+----------------------------
 
-# Using shell settings storage
 
 Storing shell settings in Microsoft Azure Blob Storage is useful when running Orchard in server farm where there is no shared file system storage. Microsoft Azure Cloud Services is an example of this. For this reason, when deploying Orchard to a Microsoft Azure Cloud Service using the `Orchard.Azure.sln` solution, the resulting package is already preconfigured to store shell settings in Microsoft Azure Blob Storage.
 
@@ -29,8 +30,9 @@ Here's an example `Config\Host.config` configuration:
 			<component instance-scope="single-instance" type="Orchard.Azure.Services.Environment.Configuration.AzureBlobShellSettingsManager, Orchard.Azure" service="Orchard.Environment.Configuration.IShellSettingsManager"></component>
 		</components>
 	</autofac>
+Using Microsoft Azure Media Storage
+-----------------------------------
 
-# Using Microsoft Azure Media Storage
 
 The *Microsoft Azure Media Storage* feature in the `Orchard.Azure` module configures Orchard to use Microsoft Azure Blob Storage is the underlying file system implementation for storing media:
 

@@ -1,8 +1,11 @@
+Creating an Image Gallery
+=========================
 > Draft topic 
 
 This document targets Orchard developers. Using only the admin dashboard, you will create a gallery that renders thumbnails of images that you select from the Media folder. Afterward, you can customize the gallery with CSS and an alternate HTML template.
+Create the Image Gallery Content Type
+-------------------------------------
 
-# Create the Image Gallery Content Type
 
 - From the admin dashboard, click **Content Definition**.
 - The Manage Content Types page will open.
@@ -30,8 +33,9 @@ This document targets Orchard developers. Using only the admin dashboard, you wi
 - You will now have the following Content Type. It has both a Widget Part and a Media Library Picker Field.
 
 ![Finished content type](/Attachments/Creating-an-image-gallery/finished-content-type.jpg)
+Add the Widget a Zone
+---------------------
 
-# Add the Widget a Zone
 
 - From the admin dashboard, click on **Widgets**.
 - Click **Add** beside any zone (e.g. BeforeContent.)
@@ -51,8 +55,9 @@ In this screen shot, we have already imported some images and created some folde
 - Then click the **Select** button in the lower left of the modal (it's a bit hidden.)
 - The Add Widget page will again display. Click **Save**.
 - Visit the front end of your site to see the scaffolding of an image gallery.
+Customize the Look of the Gallery
+---------------------------------
 
-# Customize the Look of the Gallery
 
 - Turn on Shape Tracing
 - Create an Alternate for the Fields_MediaPickerLibrary

@@ -1,3 +1,5 @@
+Projection
+==========
 *This topic targets, and was tested with, the Orchard 1.8 release.*
 
 The **Orchard.Projections Module** Provides methods to control how lists of content items are filtered and displayed.

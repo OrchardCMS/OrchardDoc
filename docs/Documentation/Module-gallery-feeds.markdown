@@ -1,3 +1,5 @@
+Registering Additional Gallery Feeds
+====================================
 
 To facilitate sharing of modules and themes, Orchard lets you register gallery feeds. When gallery feeds are registered in an Orchard site, you can browse, install, or download the available modules and themes from the feeds by using the Orchard dashboard. This topic shows you how to register new gallery feeds and remove existing feeds from an Orchard site.
 
@@ -26,8 +28,9 @@ To view the contents of a feed in your browser, click the feed link in the **Gal
   
   
   
+Change History
+--------------
 
-# Change History
 * Updates for Orchard 1.8
 	* 9-04-14: Updated the gallery feed and the screen shots.
 * Updates for Orchard 1.1

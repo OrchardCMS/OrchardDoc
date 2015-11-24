@@ -1,3 +1,5 @@
+What's New for Windows Azure in Orchard 1.7.1
+=============================================
 The Windows Azure integration and deployment in Orchard have undergone a complete overhaul for version 1.7.1. This topic describes what's changed and the benefits of some of the new capabilities.
 
 ## Visual Studio tooling

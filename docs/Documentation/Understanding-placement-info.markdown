@@ -1,3 +1,5 @@
+Understanding the placement.info File
+=====================================
 In a CMS such as Orchard, content is built as a composition of arbitrary parts. For example, a blog post is an assemblage of a route (`Autoroute` Part), title (`Title` part), contents (`Body` part), tags (`Tags` part), comments (`Comment` part), and a few additional technical parts (`Common` and `PublishLater`). 
 
 To get a template to render an object like this, you could access each of these parts explicitly and render them; that's a scenario that would work in Orchard. But that would not handle well the unpredictable changes in the definition of the content types that are the essence of a CMS. For example, what if the administrator of the site downloaded a star rating module and added the rating part to posts? If the layout for the whole item were explicitly defined, you would have to explicitly modify the template. 

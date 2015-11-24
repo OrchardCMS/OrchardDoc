@@ -1,3 +1,5 @@
+Adding and Managing Media Content
+=================================
 When you upload images using the rich-text editor in Orchard
 (or using an XML-RPC client, such as [Windows Live Writer](http://explore.live.com/windows-live-writer)),
 the images are saved in a _Media_ folder under the root of your Orchard installation.

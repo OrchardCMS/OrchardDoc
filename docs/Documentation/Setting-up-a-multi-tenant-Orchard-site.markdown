@@ -1,3 +1,5 @@
+Setting Up a Multi-Tenant Orchard Site
+======================================
 When running Orchard, you most often will run a single site in a single application domain (app domain),
 which in ASP.NET terms is an isolation boundary between applications.
 However, Orchard provides an additional isolation boundary between sites,
@@ -12,8 +14,9 @@ because one deployment to Azure can easily support multiple websites.
 
 > **Note:** If you want to set up a multi-tenant test site on your local machine, first read
 [Testing Multi-Tenancy on a Local Machine](/Documentation/Setting-up-a-multi-tenant-Orchard-site#TestingMultiTenancyonaLocalMachine) later in this article.
+Enabling Multi-Tenancy
+----------------------
 
-# Enabling Multi-Tenancy
 
 By default, the multi-tenancy feature is not enabled when you install Orchard.
 To enable multi-tenancy, open the Orchard dashboard, click **Modules**,
@@ -27,8 +30,9 @@ which is initial site created after you install Orchard.
 You can think of the default tenant as the landlord of an apartment building
 who can provision new apartments and decide the terms for each tenant,
 and the individual tenants as inhabitants of each apartment.
+Adding Tenants
+--------------
 
-# Adding Tenants
 
 Initially, you will only have a single tenant, which is the **Default** tenant. 
 
@@ -56,8 +60,9 @@ However, the database options are not displayed, because they were decided when 
 string and for a table prefix. The table prefix will be added to each of the tenant's tables within the database:
 
 ![](../Upload/screenshots/sql_table_prefix.png)
+Working with Tenant Sites
+-------------------------
 
-# Working with Tenant Sites
 
 Isolated tenants can each have a unique configuration of content items, enabled features, and applied themes.
 Tenants all share the same file system view of the application, however, so the list of available modules
@@ -74,8 +79,9 @@ Under **List of Site's Tenants** for your default site, click **Suspend** for th
 ![](../Upload/screenshots_675/multiTenancy_suspend_675.png)
 
 To bring the tenant site back online, click **Resume**.
+Removing Tenants
+----------------
 
-# Removing Tenants
 
 Currently, there is no UI to remove a tenant, but it can be done by going to the `App_Data/Sites`
 directory of the site, locating the subdirectory for the tenant to remove, and then deleting it.
@@ -83,8 +89,9 @@ You might want to move the folder to a backup location in case you need to resto
 
 > **Note:** On Azure, there is currently no way to remove a tenant except by removing the actual
 database and the configuration from BLOB storage.
+Testing Multi-Tenancy on a Local Machine
+----------------------------------------
 
-# Testing Multi-Tenancy on a Local Machine
 
 If you are running locally and do not have a domain to map, you can edit your
 `\Windows\System32\drivers\etc\hosts` file to create a sample host.

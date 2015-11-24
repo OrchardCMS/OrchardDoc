@@ -1,3 +1,5 @@
+Getting Around the Dashboard
+============================
 
 *This topic targets, and was tested with, the Orchard 1.8 release.*
 
@@ -6,8 +8,9 @@ The Orchard dashboard lets you manage your website, change its appearance, add c
 When you open the dashboard, you see a list of application features and settings on the left side of the page. This list is divided into sections of related features. Each expandable section can be collapsed to show only the section title. If you click a section title, the first feature in that section is selected. This list changes as you enable and disable Orchard features. For example, the **Blog** section will have a set of additional collapsible items under it (as shown) after you actually create a blog. The **New** section allows you to create new instances of default content types as well as any custom content types that you define. The right side of the page displays the settings that are available for the selected feature. The following image shows the contents of the dashboard.
 
 ![](/Attachments/Getting-Around-The-Dashboard/Dashboard.png)
+Feature Settings Available in the Dashboard
+-------------------------------------------
 
-# Feature Settings Available in the Dashboard
 
 The following table shows each of the dashboard sections and briefly describes the available settings.
 

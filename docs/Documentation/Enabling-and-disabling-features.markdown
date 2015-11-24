@@ -1,3 +1,5 @@
+Enabling and Disabling Features
+===============================
 
 You can add additional functionality to your site by enabling and disabling features exposed by the modules that are installed to Orchard.  To view the available features, click **Features** under the **Modules** heading in the Orchard admin panel.
 
@@ -36,7 +38,8 @@ Enable a feature from the command-line by `typing feature enable &lt;feature-nam
 ![](../Upload/screenshots_85/features_cmd2.png)
 
 For more information about the Orchard command-line interface, see [Using the command-line interface](Using-the-command-line-interface).
+Change History
+--------------
 
-# Change History
 * Updates for Orchard 1.8
     * 9-07-14: Updated all the screen shots for Enabling/Disabling feaures

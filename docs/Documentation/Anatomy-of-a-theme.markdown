@@ -1,19 +1,24 @@
+The Anatomy of a Theme
+======================
 Themes enable Orchard users to customize the rendering of the site and tailor it to their needs and design goals. Themes can perform targeted overrides of style sheets, images, layouts, or of any content template provided by any Orchard module.
 
+Where Themes Live
+-----------------
 
-# Where Themes Live
 
 A theme is set of appropriately named files inside of a folder. That folder must be under the _Themes_ folder under your Orchard website's root folder.
+TheThemeMachine
+---------------
 
-# TheThemeMachine
 
 The theme named **TheThemeMachine** is the theme that comes built into Orchard. You can examine this theme in order to learn about Orchard themes. Like any theme, it can be found under the _Themes_ folder.
 
 ![The contents of The Theme Machine](../Attachments/Anatomy-of-a-theme/TheThemeMachine.PNG)
 
 The **TheThemeMachine** theme has been designed to be a clean-looking, modern theme and to be a good starting point for customization and for the development of new themes. This article uses this theme as an illustration.
+Anatomy of a Theme
+------------------
 
-# Anatomy of a Theme
 This section describes required and optional elements of a theme.
 
 ## Manifest
@@ -159,8 +164,9 @@ A theme can modify where shapes are rendered by including a _placement.info_ fil
     </Placement>
 
 
+Markup
+------
 
-# Markup
 The markup in each file is constrained by the view engine that you choose. The default in Orchard is Razor (_.cshtml_ files), for which a quick guide can be found in [Template File Syntax Guide](Template-file-syntax-guide).
 
 Within a template, the `Model` object represents the current shape being rendered. That means that if you are working with the message shape, which has a `Message` property, you can display that by writing `@Model.Message` from within the template markup.
@@ -168,8 +174,9 @@ Within a template, the `Model` object represents the current shape being rendere
 An important addition that Orchard provides is the `Display` method, which renders a shape. For example, if you look at the _layout.cshtml_ file, you can see how the zones are rendered, using calls such as `@Display(Model.Content)`.
 
 Finally, you can also see in various templates calls such as `@Html.RegisterScript("mystyle.css")` or `@Html.RegisterScript("myscript.js")`. These registration calls are necessary because the collections of scripts and stylesheets are a shared resource. The same `link` or `script` element should not be rendered twice even if multiple modules or multiple instances of the same widget require the same file.
+Themes with Code
+----------------
 
-# Themes with Code
 
 Most themes will consist only of a stylesheet, a few templates (usually layouts), and a few images. They will contain no code except for the simple code in the template files. For more advanced themes, you might want to provide settings, create custom shapes, or override shapes in code.
 

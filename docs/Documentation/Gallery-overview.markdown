@@ -1,3 +1,5 @@
+Gallery Overview
+================
 
 Orchard is a modular web-based CMS that's designed to be extended by installing additional module packages and by enabling features contained in those modules. A module package consists of a ZIP file in the [.nupkg](http://nuget.codeplex.com) format. In Orchard, a theme is also a module. To facilitate sharing for modules and themes, Orchard lets you search for modules and themes online and install them directly to your site.
 
@@ -19,7 +21,8 @@ If you want to set up your own gallery, a reference implementation for exposing 
   
   
   
+Change History
+--------------
 
-# Change History
 * Updates for Orchard 1.1
     * 3-22-11: Updated dashboard and UI references in the text. 

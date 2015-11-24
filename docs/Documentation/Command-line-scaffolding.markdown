@@ -1,3 +1,5 @@
+Command-Line Code Generation
+============================
 
 Code generation is an Orchard module that automates the task of creating additional files and extensions. This feature is useful for developers that want to create controllers, data migration classes, modules, and themes. The code generation feature is installed by default but has to be enabled by the end user/developer.
 
@@ -37,7 +39,8 @@ Once the code generation feature is enabled, new commmands are available for cre
             Create a new test for a module
             
 For a walkthrough of using the code generation feature to create a new module and data migration, read the [Getting Started with Modules course](Getting-Started-with-Modules).
+Change History
+--------------
 
-# Change History
 * Updates for Orchard 1.8
 	* 9-04-14: Updated the screen shots for Code Generation Module.

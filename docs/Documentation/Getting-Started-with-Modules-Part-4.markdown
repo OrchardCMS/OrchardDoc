@@ -1,3 +1,5 @@
+Part 4 - Applying Best Practices
+================================
 ## Introduction
 This is part four of a four part course. It will get you started with a gentle introduction to extending Orchard at the code level. You will build a very simple module which contains a widget that shows an imaginary featured product. 
 

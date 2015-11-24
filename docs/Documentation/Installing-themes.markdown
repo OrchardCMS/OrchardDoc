@@ -1,10 +1,13 @@
+Installing Themes
+=================
 
 There are two ways to add a theme to Orchard. The first and easiest is to use the **Gallery** tab on the **Themes** page in the dashboard to browse and install themes from an online feed of available themes. The second is to go to the dashboard **Themes** page and click the link to install a theme, which allows you to browse for a theme package on your local computer and install it.
 
 > **Note** If your site is running under IIS, make sure you have granted read/write permissions to the _~/Themes_ folder under the root of your site for the service account that is being used as the IIS application pool identity. However, you should remove the write permissions on a production server.
 
+Installing a Theme from the Gallery
+-----------------------------------
 
-# Installing a Theme from the Gallery
 
 When the gallery feature is enabled, as it is by default in Orchard, a **Gallery** tab appears at the top of the both the **Themes** screen and the **Modules** screen in the dashboard. 
 
@@ -17,8 +20,9 @@ In the **Themes** screen of the dashboard, click the **Gallery** tab. A set of t
 ![](../Upload/screenshots_675/Gallerythemes_installing_675.png)
 
 To install a theme in your site, click the **Install** link next to the theme. Installing a theme adds it to your site in the **Available** list of themes on the **Themes** page in the dashboard. From there, you can preview a theme or set it as the current site theme, as described [Previewing and Applying a Theme](Previewing-and-applying-a-theme).
+Installing a Theme from your Local Computer
+-------------------------------------------
 
-# Installing a Theme from your Local Computer
 
 To install a theme from your local computer, in the **Themes** screen of the dashboard, click the link to **Install a theme from your computer**. This displays a screen that lets you install a theme.
 
@@ -38,8 +42,9 @@ When a theme is installed, the theme files are placed in the _~/Themes_ folder. 
   
   
   
+Change History
+--------------
 
-# Change History
 * Updates for Orchard 1.1
     * 3-21-11:  Updated screen shots and text for installing themes. 
 

@@ -1,3 +1,5 @@
+Developer FAQ
+=============
 ## What are the dependencies?
 Orchard uses a number of external libraries. They can all be found under \lib directory in your enlistment. They are also enumerated in [Orchard dependencies and libraries](Orchard-dependencies-and-libraries).
 

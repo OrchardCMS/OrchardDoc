@@ -1,3 +1,5 @@
+Getting Started with Modules
+============================
 This four part course will get you started with a gentle introduction to extending Orchard at the code level. You will build a very simple module which contains a widget that shows an imaginary featured product. 
 
 It will teach you some of the basic components of module development and also encourage you to use best-practices when developing for Orchard.

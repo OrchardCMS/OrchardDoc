@@ -1,3 +1,5 @@
+Creating Global-Ready Applications
+==================================
 Orchard's localization management is hosted on an external service [(Crowdin)](https://crowdin.net/), [the project is available for the public](https://crowdin.net/project/orchard-cms) and contributions are welcome!
 
 
@@ -8,8 +10,9 @@ Orchard supports two kinds of localization:
 
 This topic describes both of these features. 
 
+Localizing the Orchard Application and Orchard Modules
+------------------------------------------------------
 
-# Localizing the Orchard Application and Orchard Modules
 
 All strings in the Orchard application are output through a single `T()` method that can look up a translated string based on the default site culture. By default, Orchard includes strings for  English (en-US), but you can add support for additional cultures. Translations for the dashboard UI and all static strings in the front end can also be added to the application through translation files in _.po_ format. To localize a site for a culture, you download and install the appropriate set of _.po_ files, and then you update your site settings as shown in this section.
 
@@ -133,8 +136,9 @@ From an Orchard command line, type the following command (for the example of the
 This will create a new Orchard.en-us.po.zip file with the strings for the module. The command looks at the source code for the module and creates entries for T-wrapped strings, manifest strings and everything that should be localizable.
 
 Please send this file to <join-orchard-localization@lists.outercurve.org> so that we can add it to the online localization database.
+Localizing Database-Driven Content Items
+----------------------------------------
 
-# Localizing Database-Driven Content Items
 
 In addition to application and module localization, Orchard provides the ability to translate content items that are stored in the database. To localize content items, you must enable the **Localization** feature. In the dashboard, click **Modules**, and then on the **Features** tab you will see **Localization**. Click the **Enable** link. 
 
@@ -167,8 +171,9 @@ To enable localization for custom content types, add the **Localization** part t
 For more information about creating and working with custom content types, refer to the [Creating Custom Content Types](Creating-custom-content-types) topic.
 
 > **Note** The localization feature is a work in progress, and not all parts of the Orchard application are yet localizable. For example, Orchard does not yet provide an automatic way to filter and display only content items in a given culture (one instance of this is the browser's default culture). We will address this in a future release. In the meantime you can provide your own implementation of `ICultureSelector` in a module. If you want to give us feedback on localization support in Orchard (for example, to help us understand the scenarios that are important for your site), please contact at <join-orchard-localization@lists.outercurve.org> and drop us a line!
+Translating an Html Widget
+--------------------------
 
-# Translating an Html Widget
 
 > **Note** these steps apply to a clean installation using the default theme 'The Theme Machine'
 

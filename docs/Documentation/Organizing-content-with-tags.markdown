@@ -1,3 +1,5 @@
+Organizing Content Using Tags
+=============================
 Content items in Orchard can be categorized with tags, and the list of items tagged with a given keyword are accessible via a front-end ~/tags/_tag-name_ URL. The browser navigates to the URL for a particular tag when that tag is selected by the user. 
 
 ![](../Upload/screenshots/tags2.png)

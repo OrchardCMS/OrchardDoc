@@ -1,8 +1,11 @@
+Setting Up a Machine Key
+========================
 
 We recommend that deployed versions of Orchard are configured with a fixed machine key rather than the default setting, which is to automatically generate the key at runtime. This default setting can cause the key to change unexpectedly, which can cause validation errors.
 
+Setting Up the Machine Key Using IIS Manager
+--------------------------------------------
 
-# Setting Up the Machine Key Using IIS Manager
 
 If you have access to the IIS management console for the server where Orchard is installed, it is the easiest way to set-up a machine key.
 
@@ -19,8 +22,9 @@ Uncheck "Automatically generate at runtime" for both the validation key and the 
 Click "Generate Keys" under "Actions" on the right side of the panel.
 
 Click "Apply".
+Setting Up the Machine Key Directly in the Web.config File
+----------------------------------------------------------
 
-# Setting Up the Machine Key Directly in the Web.config File
 
 If you do not have access to the IIS management console, it is still possible to set-up a machine key for an Orchard application.
 

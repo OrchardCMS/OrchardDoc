@@ -1,8 +1,11 @@
+Deploying Orchard to Windows Azure
+==================================
 Orchard can be deployed to both Windows Azure Cloud Services and Windows Azure Web Sites. Orchard also ships with a number of integration features that takes advantage of Windows Azure services such as blob storage and caching, and that can be configured before deployment if needed. This topic walks you through the process of deploying Orchard to Windows Azure.
 
 > NOTE: The Windows Azure deployment process in Orchard has undergone a complete overhaul for version 1.7.1. For more information about what's changed see the [What's new for Windows Azure in Orchard 1.7.1](Whats-new-for-Windows-Azure-in-Orchard-1-7-1) topic.
+Prerequisites
+-------------
 
-# Prerequisites
 
 Before you can deploy Orchard to Windows Azure you need the following:
 
@@ -10,8 +13,9 @@ Before you can deploy Orchard to Windows Azure you need the following:
 * Windows Azure SDK 2.1 for Visual Studio 2012
 * The Orchard source code
 * An active Windows Azure subscription
+Deploying Orchard to a Windows Azure Cloud Service 
+---------------------------------------------------
 
-# Deploying Orchard to a Windows Azure Cloud Service 
 
 If you only plan to run a single role instance, deploying is extremely simple. Starting with version 1.7.1 of Orchard, deployment can be performed using the Windows Azure tooling in Visual Studio.
 
@@ -89,8 +93,9 @@ Once setup has finished, navigate to the admin dashboard of the site and enable 
 Congratulations! Orchard is now fully configured for multiple role instances on Windows Azure. You can now scale out to as many role instances as you need and things will be handled.
 
 > NOTE: If you set the instance count to more than `1` before deploying, you must now restart all role instances once to make sure they pick up the new configuration.
+Deploying Orchard to a Windows Azure Web Site
+---------------------------------------------
 
-# Deploying Orchard to a Windows Azure Web Site
 
 Deploying to a Windows Azure Web Site is also done using the Windows Azure tooling in Visual Studio. However, instead of using the `Orchard.Azure.sln` as described for Windows Azure Cloud Services above, for a Windows Azure Web Site we use the normal `Orchard.sln` solution and publish the normal `Orchard.Web` project.
 

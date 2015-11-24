@@ -1,3 +1,5 @@
+Setting Up a Source Enlistment
+==============================
 ## Enlisting in the Source Code Using Git and Git Extensions
 
 The Orchard project source code is [hosted on GitHub](https://github.com/OrchardCMS/Orchard) and can be accessed using a Git client. This page explains how to set-up your development environment. This setup allows you to work on the project as a developer, fix issues, build your own site from it or build modules.

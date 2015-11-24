@@ -1,3 +1,5 @@
+Configuring Email
+=================
 Configuring Orchard to send email is done by enabling the **Email Messaging** module and adding the proper email settings. The Email Messaging module adds Email sending functionalities. This document will talk about setting up Orchard to be able to send emails using the localhost.
 
 ## Required Module ##
@@ -22,7 +24,8 @@ Emails can be sent from the local host with the below settings (be sure to repla
 
 And that's it!  Well, mostly...  Orchard is capable of sending emails now but how do we tell it to send email?  There's different reasons when it would be desirable for emails to be sent, one such reason would be when a new message is received from a site's *Contact Us* page.  Read how to create a [custom form](Creating-Custom-Forms "Custom Forms Module") and then use a rule or the new *Work Flow* to have Orchard send an email.
 
+Change History
+--------------
 
-# Change History
 * Updates for Orchard 1.8
     * 9-8-14: Updated screen shots for email messaging module

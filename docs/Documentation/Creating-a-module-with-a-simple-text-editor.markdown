@@ -1,10 +1,13 @@
+Creating a Module with a Simple Text Editor
+===========================================
 In this tutorial, you will learn how to develop a simple commerce module using only a text editor.
 
 If you do not have the [Web Platform Installer](http://www.microsoft.com/web/downloads/platform.aspx) on your computer, download it before beginning this tutorial.
 
 > **This guide has been marked for review.** If you are just getting started with Orchard module development you should read the [Getting Started with Modules course](Getting-Started-with-Modules) first. It will introduce you to building modules with Orchard using Visual Studio Community, a free edition of Visual Studio. 
+Setting Up the Orchard Site
+---------------------------
 
-# Setting Up the Orchard Site
 
 First, you will set up a new Orchard website. If you already have a site set up, you can skip this section and jump directly to [the code generation section](/Documentation/Creating-a-module-with-a-simple-text-editor#GeneratingCodefortheModule). To start the setup, open **IIS Manager**, right-click **Sites**, and click **Add Web Site**.
 
@@ -37,8 +40,9 @@ This is equivalent to setting up the site from the web interface.
 
 Leave the command window open. (In fact, don't close it until you have finished this tutorial.)
 
+Generating Code for the Module
+------------------------------
 
-# Generating Code for the Module
 
 Now you are ready to start developing the commerce module.
 Orchard provides a code generation feature that sets up the structure of an empty module to help you get started.
@@ -76,8 +80,9 @@ Change the description to "A simple commerce module". Change the description of 
             Description: A simple product part.
             Category: Commerce
 
+Creating the Model for the Part
+-------------------------------
 
-# Creating the Model for the Part
 
 Next, you will create a data model that is a representation of what will be stored in the database.
 
@@ -129,8 +134,9 @@ In the command window, enable the new feature using the following command:
     
     feature enable SimpleCommerce
 
+Creating the Initial Data Migration File
+----------------------------------------
 
-# Creating the Initial Data Migration File
 
 Data migration is a pattern that enables an application or component to handle new versions gracefully, without any data loss. The main idea is that the system keeps track of the current version installed and each data migration describes the changes to go from one version to the next. If the system detects that there is a new version installed and the current data is from a previous version, the administrator of the site is prompted to upgrade. The system then runs all necessary migration methods until the data version and the code version are in sync.
 
@@ -191,8 +197,9 @@ Make sure the following line is present in the _.csproj_ file. (It should alread
 
 
 Navigate to the **Features** screen in the dashboard. You see a warning that indicates that one of the features needs to be updated, and the **Simple Commerce** module is displayed in red. Click **Update** to ensure that the migrations are run and that the module is up to date.
+Adding a Handler
+----------------
 
-# Adding a Handler
 
 A handler in Orchard is analogous to a filter in ASP.NET MVC. It's a piece of code that is meant to run when specific events happen in the application, but that are not specific to a given content type. For example, you could build an analytics module that listens to the `Loaded` event in order to log usage statistics. To see what event handlers you can override in your own handlers, examine the source code for `ContentHandlerBase`. 
 
@@ -218,8 +225,9 @@ Add the file to the _.csproj_ file so that dynamic compilation can pick it up, u
 
     <Compile Include="Handlers\ProductHandler.cs" />
 
+Adding a Driver
+---------------
 
-# Adding a Driver
 
 A driver in Orchard is analogous to a controller in ASP.NET MVC, but is well adapted to the composition aspect that is necessary in web content management systems. It is specialized for a specific content part and can specify custom behavior for well-known actions such as displaying an item in the front end or editing it in the administration UI.
 
@@ -285,8 +293,9 @@ Add the _placement.info_ file to the _.csproj_ file using the following line:
     
     <Content Include="placement.info" />
 
+Building the Templates
+----------------------
 
-# Building the Templates
 
 The last thing to do in order for the new content part to work is to write the two templates (front end and admin) that are configured in the driver.
 
@@ -318,8 +327,9 @@ Add those two templates to the _.csproj_ file using the following lines:
     <Content Include="Views\Parts\Product.cshtml" />
     <Content Include="Views\EditorTemplates\Parts\Product.cshtml" />
 
+Putting it All Together into a Content Type
+-------------------------------------------
 
-# Putting it All Together into a Content Type
 
 The content part that you've put together could already be composed from the administration UI into a content type (see [Creating Custom Content Types](Creating-custom-content-types)), but per the goal of this topic, you will continue by writing code using a text editor.
 

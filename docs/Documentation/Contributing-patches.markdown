@@ -1,3 +1,5 @@
+Contributing Patches
+====================
 Orchard CMS uses GitHub for its source code management and issue tracking. You can find the main Orchard CMS repository at:
 
   - [https://github.com/OrchardCMS/Orchard](https://github.com/OrchardCMS/Orchard)

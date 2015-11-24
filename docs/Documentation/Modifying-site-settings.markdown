@@ -1,3 +1,5 @@
+Modifying Site Settings
+=======================
 
 You can configure the general, global, and feature-specific settings for your site in the **Settings** panel (the menu items contained in the  **Settings** section) of the Orchard dashboard. This topic describes these site-level settings. 
 
@@ -70,8 +72,9 @@ To access caches settings like Default Cache Duration, Max Age, Vary Query Strin
 ![](../Upload/screenshots_675/cachesettings_675.png)
   
   
+Change History
+--------------
 
-# Change History
 * Updates for Orchard 1.8
     * 9-8-14: Updated screen shots for dashboard settings. Added cache section. 
 * Updates for Orchard 1.1

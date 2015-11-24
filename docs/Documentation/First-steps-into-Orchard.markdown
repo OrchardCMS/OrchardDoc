@@ -1,3 +1,5 @@
+First Steps into Orchard
+========================
 
 
 The goal of this article is to ease you into Orchard. There are so many concepts to understand that I think it is necessary to give a high level view of the whole thing before digging in. So, this article starts with a common ground that any web user should understand and progressively deepens while introducing relevant technical terms.

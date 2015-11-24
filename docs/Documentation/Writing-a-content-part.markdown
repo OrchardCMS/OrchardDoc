@@ -1,3 +1,5 @@
+Writing a Content Part
+======================
 > **This guide has been marked for review.** If you are just getting started with Orchard module development you should read the [Getting Started with Modules course](Getting-Started-with-Modules) first. It will introduce you to building modules with Orchard using Visual Studio Community, a free edition of Visual Studio. 
 
 
@@ -262,7 +264,8 @@ Now go the "Manage Content" and edit an event content item.  Notice that the Map
 On the front-end of your site, you can see the effect of the Map part rendering on the event content item.
 
 ![](../Upload/screenshots_675/view_event_map.png)
+Getting the Code
+----------------
 
-# Getting the Code
 
 The Map part described in this topic is available from here: [Orchard.Module.Maps.1.0.0.zip](/Attachments/Writing-a-content-part/Orchard.Module.Maps.1.0.0.zip), ready to install and use, with full source code.

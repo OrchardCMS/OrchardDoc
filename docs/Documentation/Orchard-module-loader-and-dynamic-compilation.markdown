@@ -1,4 +1,7 @@
-# Introduction
+Orchard Dynamic Compilation
+===========================Introduction
+------------
+
 
 As a composable CMS, Orchard has the ability to load an arbitrary set of modules (also known as "extensions") at run-time. One of the goals of the 0.5 release was to make the process of installing and updating modules as easy as possible. 
 
@@ -7,8 +10,9 @@ Orchard, as any ASP.NET MVC application, supports loading module compiled as ass
 In addition to that, Orchard supports (this is still somewhat experimental) the ability to dynamically compile modules deployed as source code only.  This is more flexible than deploying binaries, and enables some interesting scenarios such as "in place" code customization without having to use Visual Studio. This is somewhat similar to the ASP.NET "App_Code" directory, except Orchard supports multiple "logical folder" (typically one per module) independently.
 
 The goal of this section is to describe at a technical level how Orchard load modules in the 0.5 release. This feature is often referred to as "Orchard Dynamic Compilation", even though technically dynamic compilation is only involved in very specific cases.
+High Level Overview
+-------------------
 
-# High Level Overview
 
 When an Orchard application starts, the Orchard Framework (the ExtensionLoaderCoordinator class to be precise) needs to figure out what are the modules installed in the Web Site and activate them (typically by loading their assembly).
 
@@ -19,8 +23,9 @@ At a high level, this process can be divided in 3 distinct phases:
 * References Resolution: figure out what are the assembly references needed to be activated for each module. This phase is technically part of the "Activation" phase, but it is easier to think about the problem of reference resolution as a separate concern.
 
 Once modules are properly activated, they are further examined to detect and enable individual _features_, but this is a topic for another section.
+Discovery 
+----------
 
-# Discovery 
 
 The list of available modules in an Orchard installation is built by searching various folders of the file system for "**module.txt**" files. The folders looked at by default are listed in the following sections.
 
@@ -58,8 +63,9 @@ Here is an example of a Orchard installation which contains 6 modules: "Common",
         T2
           theme.txt  <= "T2" theme
 
+Activation 
+-----------
 
-# Activation 
 
 Once Orchard has collected all the "Module.txt" files from the discovery phase, Orchard uses distinct strategies (or "Module Loaders") to load these modules in memory. Internally, the act of "loading a module" is an activity that takes a "module.txt" file as input and returns a list of "System.Type" as output. Note that this is slightly more generic than simply returning a "System.Assembly", as it allows Orchard to support multiple modules per assembly. For example, the "Orchard.Core.dll" assembly currently contains about 10 modules.
 
@@ -144,27 +150,32 @@ Deploy this file and restart the App Pool.
 NB: You will have to ensure that the binaries for every modules are available in the `/bin` folder of each module, 
 such that the Precompiled Module loader can use them directly. When using Visual Studio this should be the case. 
 Otherwise use the command line tool to build the website, which will have the same effect.
+ References Resolution 
+-----------------------
 
-#  References Resolution 
 
 (TODO: Explain how Orchard figures out references by looking at the "References" section of the csproj file as well as looking at additional assembly binaries dropped in each module "bin" directory)
+ Change of Configuration Detection 
+-----------------------------------
 
-#  Change of Configuration Detection 
 
 As explained above, modules are loaded at application startup. However, once the application is started up, changes can happen: a new module might be installed, the source code of a module might be manually updated, a module might be removed from the site, etc.  To detect these changes, Orchard asks each module loader in the system to "monitor" potential changes, and notify when a change happens.
 
 When a change is detected, the current module configuration is discarded and modules are re-examined, loaded and activated as if the application was starting up again.  In some cases, these changes require an ASP.NET AppDomain restart (e.g. a new version of a module assembly needs to be loaded). Orchard detects these situations and forces an ASP.NET AppDomain restart.
 
+ Rendering Web Forms Views 
+---------------------------
 
-#  Rendering Web Forms Views 
 
 (TODO: Explain that Orchard uses a custom virtual path provider to insert custom "Assembly Src=xx" and "Assembly Name=xxx" directive when reading .ascx and .aspx files)
+ Rendering Razor Views 
+-----------------------
 
-#  Rendering Razor Views 
 
 (TODO: Explain that Orchard uses a Razor custom API to add Module dependencies to Views)
 
+ The `~/App_Data/Dependencies/Dependencies.xml` File 
+-----------------------------------------------------
 
-#  The `~/App_Data/Dependencies/Dependencies.xml` File 
 
 This file contains the list of modules, their loader and their resolved references of the "last known good" configuration of module, i.e. the last time Orchard successfully loaded all modules of the application.  Examining the content of this file can be useful for debugging purposes, i.e. if a the latest version of a module doesn't seem to be loaded, for example.

@@ -1,3 +1,5 @@
+Merging Pull Requests
+=====================
 ## Challenges of integrating a Pull Request
 
 When a Pull Request has been reviewed and is ready to be merged it's usually marked with a __GG__ comment meaning __Good to Go__. 

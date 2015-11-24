@@ -1,9 +1,12 @@
+How Orchard Works
+=================
 Building a Web CMS (Content Management System) is unlike building a regular web application: it is more like building an application container. When designing such a system, it is necessary to build extensibility as a first-class feature. This can be a challenge as the very open type of architecture that's necessary to allow for great extensibility may compromise the usability of the application: everything in the system needs to be composable with unknown future modules, including at the user interface level. Orchestrating all those little parts that don't know about each other into a coherent whole is what Orchard is all about.
 
 This document explains the architectural choices we made in Orchard and how they are solving that particular problem of getting both flexibility and a good user experience.
 
+Architecture
+------------
 
-# Architecture
 
 <table cellspacing="2" cellpadding="2" border="1" style="width:100%">
 <tr>
@@ -24,8 +27,9 @@ This document explains the architectural choices we made in Orchard and how they
 <td colspan="4" align="center">IIS or Windows Azure
 </tr>
 </table>
+Orchard Foundations
+-------------------
 
-# Orchard Foundations
 
 The Orchard CMS is built on existing frameworks and libraries. Here are a few of the most fundamental ones:
 
@@ -35,8 +39,9 @@ The Orchard CMS is built on existing frameworks and libraries. Here are a few of
 - [Castle Dynamic Proxy](http://www.castleproject.org/projects/dynamicproxy/): we use Castle for dynamic proxy generation.
 
 The Orchard application and framework are built on top of these foundational frameworks as additional layers of abstraction. They are in many ways implementation details and no knowledge of NHibernate, Castle, or Autofac should be required to work with Orchard.
+Orchard Framework
+-----------------
 
-# Orchard Framework
 
 The Orchard framework is the deepest layer of Orchard. It contains the engine of the application or at least the parts that couldn't be isolated into modules. Those are typically things that even the most fundamental modules will have to rely on. You can think of it as the base class library for Orchard.
 
@@ -225,14 +230,16 @@ The current culture to use is determined by the culture manager. The default imp
 ## Logging
 
 Logging is done through a dependency of type ILogger. Different implementations can send the log entries to various storage types. Orchard comes with an implementation that uses [Castle.Core.Logging](http://docs.castleproject.org/Windsor.Logging-Facility.ashx) for logging.
+Orchard Core
+------------
 
-# Orchard Core
 
 The Orchard.Core assembly contains a set of modules that are necessary for Orchard to run. Other modules can safely take dependencies on these modules that will always be available.
 
 Examples of core modules are feeds, navigation or routable.
+Modules
+-------
 
-# Modules
 The default distribution of Orchard comes with a number of built-in modules such as blogging or pages, but third party modules are being built as well.
 
 A module is just an ASP.NET MVC area with a manifest.txt file that is extending Orchard.
@@ -242,8 +249,9 @@ A module typically contains event handlers, content types and their default rend
 Modules can be dynamically compiled from source code every time a change is made to their csproj file or to one of the files that the csproj file references. This enables a "notepad" style of development that does no require explicit compilation by the developer or even the use of an IDE such as Visual Studio.
 
 Modules must be placed in the Modules folder (Orchard.Web/Modules/MyModule) and the folder name *must* match the name of the compiled DLL produced by the project.  So, if you have a custom module project called My.Custom.Module.csproj and it compiles to My.Custom.Module.dll, then the module root folder must be named My.Custom.Module. [~/Modules/My.Custom.Module/]
+Themes
+------
 
-# Themes
 
 It is a basic design principle in Orchard that all the HTML that it produces can be replaced from themes, including markup produced by modules. Conventions define what files must go where in the theme's file hierarchy.
 

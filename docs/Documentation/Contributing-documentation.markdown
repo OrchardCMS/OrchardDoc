@@ -1,3 +1,5 @@
+Contributing Documentation
+==========================
 
 At the beginning of your topic, add a statement that clearly identifies the version of Orchard the topic was written for, such as the following.
 

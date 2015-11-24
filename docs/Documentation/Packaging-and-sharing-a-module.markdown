@@ -1,3 +1,5 @@
+Packaging and Sharing a Module
+==============================
 
 After developing a module extension to Orchard, you probably want to share it with others.  Orchard provides a module packaging feature that can be used to create a package file containing your module.  To enable this feature, visit the "Features" section of the Orchard admin panel and enable the "Orchard.Packaging" feature.
 

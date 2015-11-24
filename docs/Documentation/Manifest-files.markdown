@@ -1,3 +1,5 @@
+Manifest Files for Modules and Themes
+=====================================
 
 In the Orchard CMS, modules and themes are important tools for extending and customizing an application. Every module and theme is required to have a manifest, which is a text file named _module.txt_ or _theme.txt_ that resides in the root folder of the associated module or theme. A manifest stores metadata that Orchard uses to describe modules and themes to the system, such as name, version, description, author, and tags.
 

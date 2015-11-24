@@ -1,3 +1,5 @@
+Installing and Upgrading Modules
+================================
 
 Orchard is a modular web-based CMS, designed to be extended easily by installing additional modules and enabling module features. A _module_ is a package that can be installed and uninstalled. A _package_ consists of a ZIP  file in the [.nupkg](http://nuget.codeplex.com) file format.) A _feature_ is a behavior that's exposed by an installed module that you can individually enable or disable. 
 
@@ -5,8 +7,9 @@ This topic shows you how to install or download modules from the online gallery,
 
 > **Note** If your site is running under IIS, make sure you have granted read/write permissions to the _~/Themes_ folder under the root of your site for the service account that is being used as the IIS application pool identity. However, you should remove the write permissions on a production server.
 
+Viewing Installed Modules
+-------------------------
 
-# Viewing Installed Modules
 
 To view the modules that have been installed for your site, click **Modules** on the dashboard, and then in the **Modules** screen, click the **Installed** tab.
 
@@ -15,8 +18,9 @@ To view the modules that have been installed for your site, click **Modules** on
 The **Installed** tab displays a list of the modules that are included with Orchard, along with properties of each module such as version, author, a description, and a list of features. It also provides a link that you can use to upload and install a module package.
 
 You can add modules to Orchard in two ways. The first and easiest is to install a module from the online gallery. The second is to upload a module package from your local computer and install it in your site. If you simply want to use an existing module in your Orchard site, you can install the module directly from the gallery to your site. If you want to modify a module package, or if you want to upload it to multiple Orchard sites, you will probably want to download the module from the gallery to your local computer.
+Installing a Module from the Gallery
+------------------------------------
 
-# Installing a Module from the Gallery
 
 When you install a module, its package file is downloaded from the gallery, and the source files are extracted from the package and added to your site. After you install a module, its features are available for use. 
 
@@ -35,14 +39,16 @@ After the module has been installed, Orchard prompts you to enable features in t
 ![](../Upload/screenshots_675/install_enable_bing_675.png)
 
 When you return to the **Installed** tab, you can see the module that you just installed. 
+Downloading a Module from the Gallery
+-------------------------------------
 
-# Downloading a Module from the Gallery
 
 At times you may want to simply download a module package to your computer rather than installing it in a site. To download a module, return to the **Gallery** tab and click **Download** for a specific module. (For example, download the **Contact Form** module.) The download process lets you save the _.nupkg_ file that contains the module contents to your local machine. You can then optionally modify the module, or install it in an Orchard site.
 
 ![](../Upload/screenshots_675/download_module_contactform_675.png)
+Installing a Module from your Local Computer
+--------------------------------------------
 
-# Installing a Module from your Local Computer
 
 To install a module from your local computer to an Orchard site, go to the **Modules > Installed** tab and then click the link to **Install a module from your computer**.  
 
@@ -51,8 +57,9 @@ To install a module from your local computer to an Orchard site, go to the **Mod
 Browse to the local module (a _.nupkg_ file), select it, and then click **Install**. This installs the module package to your site the same way that clicking **Install** does for an online module in the gallery.
 
 ![](../Upload/screenshots_675/install_localmodule_675.png)
+Working with Module Features
+----------------------------
 
-# Working with Module Features
 
 When you install a module in an Orchard site, the module contains one or more features. You can enable or disable each feature individually, either when you first install the module, or later. The **Bing.Maps** module used as an example in the previous section contains a single feature, also called **Bing.Maps**. (Remember that a module can have one or many features, and that the features do not have to have the same name as their parent module.) In this section, you'll see how to enable or disable an individual feature (the **Bing.Maps** feature), and how to add that feature to a content type, such as a page.
 
@@ -69,8 +76,9 @@ Select the **Bing Map** content part from the list of available parts, and then 
 Now you can see the effect of adding the **Bing Maps** content part to the page type. On the dashboard in the **New** menu, click **Page** to create a new page. Because you installed the **Bing Maps** module, enabled the feature, and added the **Bing Map** content part to the page, when you create a new page instance, a number of map-related fields appear.
 
 ![](../Upload/screenshots_675/newpage_bingmap_enabled_675.png)
+Updating an Installed Module
+----------------------------
 
-# Updating an Installed Module
 
 Occasionally modules will be updated with fixes or new features. You can update an installed module by clicking **Modules** on the dashboard and then clicking the **Updates** tab. If there are no updates available for your installed modules, the **Updates** tab is empty. If there are updates available, you can install or download the updates the same way that you installed the module originally.
 
@@ -78,8 +86,9 @@ Occasionally modules will be updated with fixes or new features. You can update 
   
   
   
+Change History
+--------------
 
-# Change History
 * Updated for Orchard 1.1
     * 3-23-11: Reordered sections of the topic, added new section on enabling and disabling features, plus another section on updating a module. Updated screens and text in existing sections.
 

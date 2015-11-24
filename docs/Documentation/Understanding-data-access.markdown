@@ -1,3 +1,5 @@
+Understanding Data Access
+=========================
 > This topic has been updated for the Orchard 1.9 release.
 
 Data access in an Orchard project is different than data access in a traditional web application, because the data model is built through code rather than through a database management system. You define your data properties in code and the Orchard framework builds the database components to persist the data. If you need to change the data structure, you write code that specifies the changes, and those changes are then propagated by that code to the database system. This code-centric model includes layers of abstraction that permit you to reuse components in different content types and to add or change behaviors without breaking other layers.

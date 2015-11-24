@@ -1,3 +1,5 @@
+Saving, Scheduling, and Publishing Drafts
+=========================================
 > This topic has been updated for the Orchard 1.0 release.
 
 Orchard lets you save a page as a draft or publish it to your web site. When you publish a page, you can either publish immediately or specify a time when the page should be published. The options for saving or publishing a page are available at the bottom of the **Create Page** page.
@@ -29,7 +31,8 @@ The page will remain as a draft until the publication date and time. No further 
 In the **Manage Content** page, you can see the date and time the draft is scheduled to be published.
 
 ![](../Upload/screenshots_675/pagepublishlater.png)
+Change History
+--------------
 
-# Change History
 * Updates for Orchard 1.8
     * 9-05-14: Updated all screen shots for Scheduling and Publishing Draft

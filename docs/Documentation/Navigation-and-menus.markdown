@@ -1,3 +1,5 @@
+Navigation and Menus
+====================
 *This topic targets, and was tested with, the Orchard 1.8 release. It also includes a reference to navigation in Orchard <1.5*
 
 
@@ -7,8 +9,9 @@ There are different ways to build up a menu structure. Here we will show two com
 * Content first, navigation later.
 
 Of course they are not mutually exclusive, you can alternate both methods in the same site.
+Adding Menu Items First, Content Later
+--------------------------------------
 
-# Adding Menu Items First, Content Later
 This method could be prefered when you first want to style your website to see all menu items.
 
 In the Orchard administration panel click the **Navigation** menu item. 
@@ -31,8 +34,9 @@ Select **Browse** and link to any content item (e.g your Home Page). Later, when
 ![](/Attachments/Navigation-and-menus/CreateMenuItem.png)
 
 ![](/Attachments/Navigation-and-menus/SelectAContentItem.png)
+Content First, Navigation Later
+-------------------------------
 
-# Content First, Navigation Later
 
 Here we first create a new Page (or edit a Page). 
 Select **New Page** on the left menu. Create an *About Us* page. Give it a title and a body.
@@ -43,8 +47,9 @@ for that page. The **Menu text** is the name of your menu item. By default the P
 
 When you now **Save** your page and navigate to the **Navigation** menu item on the left side you will see
 that the new menu item that you created was added to the Main Menu.
+Creating A Submenu
+------------------
 
-# Creating A Submenu
 
 Creating a submenu is very easy:
 Navigate to the **Navigation** section. If you **hover** over an already added Menu Item with your mouse, you'll see
@@ -56,8 +61,9 @@ Simply drag the Menu Item a bit to the right until it snaps to a sub container. 
 
 
 
- 
-# Older Versions Of Orchard (Before 1.5)
+ Older Versions Of Orchard (Before 1.5)
+--------------------------------------
+
 Managing menus in older versions of Orchard was quite different.
 Orchard <1.5 has a very simple main menu feature that is a list of menu item text and links to display,
 accessible from the **Navigation** link in the Orchard admin panel.  When you add an item to the main menu

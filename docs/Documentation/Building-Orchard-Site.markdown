@@ -1,29 +1,28 @@
+Getting Started with Orchard
+============================
+
 *This topic targets, and was tested with, the Orchard 1.8 release.*
 
 This walkthrough provides a glimpse of the features that Orchard has to offer, provided as a step-by-step guide. If this is your first time using Orchard, this document is for you!
 
 Getting Started with Orchard
-============================
+----------------------------
+
 Being new to Orchard, you should know the right place where you can find the resources and latest information about Orchard.
 
-1. [Orchard Beginner][6]
-2. [Orchard in GitHub - Orchard Code Repository][1]
+1. [Orchard Beginner][1]
+2. [Orchard in GitHub - Orchard Code Repository][2]
 3. [Orchard Discussion Forum - Discussion area for Orchard][3]
-4. [Orchard Documentation - Documentation area for Orchard][2]
-5. [Orchard Community Websites - Community sites on Orchard from all over the world][4]
-6. [Orchard CMS Weekly Meeting][5]
+4. [Orchard Documentation - Documentation area for Orchard][4]
+5. [Orchard Community Websites - Community sites on Orchard from all over the world][5]
+6. [Orchard CMS Weekly Meeting][6]
 
-
-
-  [1]: https://github.com/OrchardCMS/Orchard
-  [2]: http://docs.orchardproject.net/
+  [1]: http://orchardbeginner.com 
+  [2]: https://github.com/OrchardCMS/Orchard
   [3]: http://orchard.codeplex.com/discussions
-  [4]: http://orchardproject.net/
-  [5]: http://orchardproject.net/discussions
-  [6]: http://orchardbeginner.com
-
-
-
+  [4]: http://docs.orchardproject.net/
+  [5]: http://orchardproject.net/
+  [6]: http://orchardproject.net/meeting
 
 This topic assumes that you have already installed Orchard and set up your website. If you haven't, follow the instructions in [Installing Orchard](Installing-Orchard).
 
@@ -160,8 +159,7 @@ Once these modules are enabled, you can edit the contents of an individual zone 
 
 **5)** Change the title, and optionally, change or remove the existing body text for the zone.  
 
-Inserting a Media Item
-----------------------
+### Inserting a Media Item
 
 **6)** Select **Insert Media Item**. 
 
@@ -313,7 +311,6 @@ Individual modules can expose features that can be independently enabled or disa
 Each feature has an **Enable** or **Disable** link (depending on its current state), as well as an optional list of dependencies that must also be enabled for a specific feature. The documentation throughout this site describes the variety of features in Orchard and how you can use them to customize your site's user interface and behavior.
 
 Change History
---------------
 * Updates for Orchard 1.8
 	* 9-04-14: Added new sections for how to get started with Orchard and how to get up and running with Orchard : Try Orchard, DotNest, Azure Websites. Updated screen shots for themes (PJS.Bootstrap Theme), modules and control wrappers. 
     * 4-22-14:  Media selection is different now, updated that part. Adding a widget layer is not suggested anymore when adding a new page, updated that part. Link to registering additional gallery feeds was not working. Updated several screenshots. Added capitalization to section headers.

@@ -1,6 +1,9 @@
+Using Windows Azure Cache
+=========================
 Windows Azure Caching is a distributed memory-based cache service that is part of Windows Azure. Orchard ships with two native providers for Windows Azure Caching, allowing Orchard to use Windows Azure Caching as the cache implementation for both output caching and database caching (NHibernate second-level caching). This topic describes how to configure and enable this functionality.
+Overview
+--------
 
-# Overview
 
 Support for Windows Azure Caching comes in the form of two features in the `Orchard.Azure` module:
 
@@ -23,8 +26,9 @@ They both configure Orchard to use Windows Azure Caching as the cache implementa
 Both features have been designed to work with both [Windows Azure Role-based Caching](http://msdn.microsoft.com/en-us/library/windowsazure/dn386103.aspx) and [Windows Azure Cache Service](http://msdn.microsoft.com/en-us/library/windowsazure/dn386094.aspx). Role-based Caching can be used only from within a Windows Azure Cloud Service. Cache Service is called via public HTTP endpoints and can be used from anywhere, irrespective of hosting environment.
 
 The caching providers are configured slightly differently depending on which flavor to use. See the [Configuration reference section][ConfigurationReference] for more information.
+Enabling for Windows Azure Cloud Services
+-----------------------------------------
 
-# Enabling for Windows Azure Cloud Services
 
 When deploying Orchard to a Windows Azure Cloud Service using the `Orchard.Azure.sln` solution, the resulting package is already preconfigured with everything required to enable the caching features. By default the cloud service project is configured for co-located role-based caching with 30% of the role instance memory allowed for cache usage.
 
@@ -57,8 +61,9 @@ To reconfigure the expiration settings or set of named caches, use the *Caching*
 Just remember that you must also reconfigure the provider settings to match whatever cache configuration you create, using the *Settings* tab of the cloud service project:
 
 ![](../Attachments/Using-Windows-Azure-Cache/role-configuration.png)
+Enabling for Windows Azure Web Sites
+------------------------------------
 
-# Enabling for Windows Azure Web Sites
 
 > NOTE: When running Orchard in a Windows Azure Web Site only Cache Service can be used - using Role-based Cache is not possible.
 
@@ -118,13 +123,15 @@ Here's an example configuration:
 Refer to the [Configuration reference section][ConfigurationReference] for more details on how to configure each setting.
 
 You can now enable the features *Windows Azure Output Cache* and/or *Windows Azure Database Cache* in the admin dashboard.
+Enabling for any other hosting
+------------------------------
 
-# Enabling for any other hosting
 
 To enable the features when running Orchard in any other hosting environment, use the `Web.config` method described above. Once the appropriate settings have been added to the `<appSettings>` element, can enable the features *Windows Azure Output Cache* and/or *Windows Azure Database Cache* in the admin dashboard.
 
-[ConfigurationReference]: #ConfigurationReference
-# Configuration reference
+[ConfigurationReference]: #ConfigurationReferenceConfiguration reference
+-----------------------
+
 
 Both Windows Azure Output Cache and Windows Azure Database Cache share the same configuration structure, differing only by a prefix added to each setting. The prefix is `Orchard.Azure.OutputCache.` or `Orchard.Azure.DatabaseCache.` respectively.
 
@@ -181,8 +188,9 @@ Here's an example Azure Web Site configuration with two tenants, both using outp
 		<!-- Common settings -->
 		<add key="Orchard.Azure.OutputCache.CacheName" value="OutputCache" />
 	</appSettings>
+Session state caching
+---------------------
 
-# Session state caching
 
 In addition to output caching and database caching, session state storage is also sensitive to server farm scenarios, primarily in solutions where there is no session affinity in the load balancer. The load balancer used in Windows Azure Cloud Services is one example of this.
 

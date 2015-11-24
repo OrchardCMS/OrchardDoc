@@ -1,3 +1,5 @@
+Accessing and Rendering Shapes
+==============================
 A _shape_ is a dynamic data model.
 The purpose of a shape is to replace the static view model of ASP.NET MVC by using a model
 that can be updated at run time&#151;that is, by using a dynamic shape.
@@ -7,8 +9,9 @@ This article introduces the concept of shapes and explains how to work with them
 It's intended for module and theme developers who have at least a basic understanding of Orchard modules.
 For information about creating modules, see the [Getting Started with Modules course](Getting-Started-with-Modules).
 For information about dynamic objects, see [Creating and Using Dynamic Objects](http://msdn.microsoft.com/en-us/library/ee461504.aspx).
+Introducing Shapes
+------------------
 
-# Introducing Shapes
 
 Shapes are dynamic data models that use shape templates to make the data visible to the user in the way you want.
 Shape templates are fragments of markup for rendering shapes.
@@ -36,8 +39,9 @@ After the shape object is created, the shape is rendered with the help of a shap
 A shape template is a piece of HTML markup (partial view) that is responsible for displaying the shape.
 Alternatively, you can use a shape attribute (`Orchard.DisplayManagement.ShapeAttribute`)
 that enables you to write code that creates and displays the shape without using a template.
+Creating Shapes
+---------------
 
-# Creating Shapes
 
 For module developers, the most common need for shapes is to transport data from a driver to a template for rendering.
 A driver derives from the `Orchard.ContentManagement.Drivers.ContentPartDriver` class
@@ -122,8 +126,9 @@ In this case, `"Parts/Map"` causes Orchard to look for a template in your module
 _Views/EditorTemplates/Parts/Map.cshtml_
 
 The `Model` property takes the name of the part's model file, but without the file-name extension.
+Naming Shapes and Templates
+---------------------------
 
-# Naming Shapes and Templates
 
 As noted, the name given to a shape type binds the shape to the template that will be used to render the shape.
 For example, suppose you create a part named `Map` that displays a map for the specified longitude and latitude.
@@ -217,8 +222,9 @@ The system also automatically adds the content type and the content ID as altern
 (for example `Content_Summary__Page` and `Content_Summary__42`).
 
 For more information about how to use alternates, see [Alternates](Alternates).
+Rendering Shapes Using Templates
+--------------------------------
 
-# Rendering Shapes Using Templates
 
 A shape template is a fragment of markup that is used to render the shape.
 The default view engine in Orchard is the Razor view engine.
@@ -284,8 +290,9 @@ If you enable the **Shape Tracing** feature, you'll see the available wrapper na
 You can also specify a wrapper in the _placement.info_ file.
 For more information about how to specify  a wrapper,
 see [Understanding the placement.info File](Understanding-placement-info).
+Creating a Shape Method
+-----------------------
 
-# Creating a Shape Method
 
 Another way to create and render a shape is to create a method that both defines and renders the shape.
 The method must be marked with the `Shape` attribute (the `Orchard.DisplayManagement.ShapeAttribute` class).

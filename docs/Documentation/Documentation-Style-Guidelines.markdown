@@ -1,12 +1,16 @@
+Documentation Style Guidelines
+==============================
 The Orchard documentation is built in [Markdown](http://daringfireball.net/projects/markdown/).
 We use a few simple conventions to ensure a homogeneous style throughout the full set of documents.
+File Name And Title
+-------------------
 
-# File Name And Title
 
 The document should not specify its own title as part of the document itself, but its file name should be the document title, with spaces replaced by dashes (-).
 The title will be added by the site dynamically, from the file name.
+Structure
+---------
 
-# Structure
 
 Topics should begin with a brief summary explaining what audience it targets and their key takeaways.
 This summary will be displayed in search results, so it should make sense by itself.
@@ -36,8 +40,9 @@ If the anchor is in another document, use the file name and the anchor name like
 Please note that anchor names are case-sensitive.
 
 The text within a section should be structured in short paragraphs. Don't forget to include an empty line in wiki markup between paragraphs.
+Markup and Styles
+-----------------
 
-# Markup and Styles
 
 Topics should use standard [Markdown](http://daringfireball.net/projects/markdown/) and should avoid inline HTML, including styles.
 
@@ -142,8 +147,9 @@ Cell A.2 | Cell B.2 | Cell C.2
 Cell A.3 | Cell B.3 | Cell C.3
 
 For details of table syntax see [Markdown Extra Tables Reference](http://michelf.com/projects/php-markdown/extra/#table).
+Contributing Documentation
+--------------------------
 
-# Contributing Documentation
 
 The Orchard documentation is managed as Markdown files in [a Git repository hosted on Github](https://github.com/OrchardCMS/OrchardDoc).
 

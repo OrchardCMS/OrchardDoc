@@ -1,3 +1,5 @@
+Customizing Orchard Using Designer Helper Tools
+===============================================
 
 Orchard provides a designer tool named **Shape Tracing** that enables you to customize the appearance of your site. The **Shape Tracing** module provides tools that you can use to select sections of your website and discover information about the rendering code.
 

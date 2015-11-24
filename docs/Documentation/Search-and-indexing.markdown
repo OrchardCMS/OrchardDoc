@@ -1,3 +1,5 @@
+Search and Indexing
+===================
 
 Orchard provides the ability to index and search content items in the application. The indexing functionality is provided by enabling the **Indexing** feature, along with a specific implementation of indexing (Lucene-based is included by default). In addition to the **Indexing**, the **Search** feature provides the ability to query the index (by keyword or using Lucene query syntax) to return a list of content items matching the query on the front end.
 
@@ -48,7 +50,8 @@ If you navigate now to any page in the front end of the site, you will see the s
 When you type a keyword or query into this input box, a list of matching content items is displayed.
 
 ![](../Upload/screenshots_675/searchwidgetfrontend.png)
+Change History
+--------------
 
-# Change History
 * Updates for Orchard 1.8
     * 9-05-14: Updated all screen shots for Search , Indexing and Lucene

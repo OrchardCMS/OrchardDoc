@@ -1,3 +1,5 @@
+Understanding Permissions
+=========================
 > This topic has been updated for the Orchard 1.8.1 release.
 
 Each role has a set of permissions assigned to it, and these permissions indicate which actions a user in that role can perform. For each role, you can only grant permissions; you cannot specifically deny a permission. A user's permission set consists of all granted permissions for all roles that the user belongs to.

@@ -1,4 +1,4 @@
-Built in features
+Built-in features
 =================
 There are lots of features available in Orchard out of the box, and many times more from
 the [gallery][1]. This topic gives a brief description of each of Orchard's first-party

@@ -1,3 +1,5 @@
+Custom Site Settings
+====================
 Sometimes you may need to persist some global settings 
 (eg. license code, service login, default width etc.)
 to be reused across your module. Orchard makes it really 

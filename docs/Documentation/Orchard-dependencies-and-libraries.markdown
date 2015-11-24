@@ -1,3 +1,5 @@
+Dependencies and Libraries
+==========================
 This section enumerates the dependencies used in the Orchard project, with a brief description of what Orchard makes use of. A copy of a dependencies is located in the "lib" directory of the source repository, along with their respective licenses.  You can also view the attributions for our library dependencies in the CREDITS.txt file at the root of the Orchard source tree.
 
 

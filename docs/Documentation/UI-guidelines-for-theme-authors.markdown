@@ -1,9 +1,12 @@
+UI Guidelines for Theme Authors
+===============================
 > This topic was updated for the Orchard 1.0 release.
 
 This article presents recommendations for coding and formatting HTML markup and CSS that will help you keep your themes organized.
 
+General Guidelines
+------------------
 
-# General Guidelines
 
 This section contains guidelines for a number of design topics, such as browser testing, file names, HTML elements, JavaScript and images.
 
@@ -81,8 +84,9 @@ Your HTML and CSS templates should pass the accessibility tests provided by [Wav
 ## Markup Validation
 
 We recommend that you always strive for standards compliance. Ensure that your templates pass validation by using the [W3C Markup Validation Service](http://validator.w3.org/).
+CSS Organization
+----------------
 
-# CSS Organization
 
 To allow users to easily find and read styles for modification, we recommend that you standardize on a structure and coding format. The organizational structure that is introduced in this section is used by the Orchard team.
 

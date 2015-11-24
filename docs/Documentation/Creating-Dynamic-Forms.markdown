@@ -1,3 +1,5 @@
+Create Dynamic Forms
+====================
 The Dynamic Forms module is used to capture information from site visitors on the front end.  Dynamic Forms can work in combination with a Content Type or standalone.  Dynamic Forms can be used to create *Contact Us* and *Subscribe* widgets/pages to name a couple. The information is then stored in Orchard and can be exported later.
 
 ### Enable the Dynamic Forms Module ###

@@ -1,8 +1,11 @@
+Moderating Comments
+===================
 
 The **Comments** feature of Orchard provides the ability to monitor and manage the comments for content items on your site. This topic describes two sets of tools that Orchard provides for working with site comments: tools for managing existing comments, and site-level settings for comments.
 
+Managing Comments
+-----------------
 
-# Managing Comments
 
 To access the comment management screen, click **Comments** on the Orchard dashboard.
 
@@ -23,8 +26,9 @@ You can assign comments to the following categories:
 * **Pending**. The comment is pending administrator approval. The comment will not be visible to users unless an administrator marks it as "Approved".
 * **Approved**. The comment is approved and will appear on the site. This is the default category for new comments unless you enable the site-level setting to require approval of all comments. (See the next section.) 
 * **Mark as spam**. The comment is spam and will not displayed. For more information, see the next section.  
+Setting Site-Level Comment Options
+----------------------------------
 
-# Setting Site-Level Comment Options
 
 Orchard provides two site-level features for comments: administrative approval of comments and spam protection. You can access both features by clicking **Settings > Comments** on the dashboard to open the screen for setting comment options. 
 
@@ -63,8 +67,9 @@ After you enable spam protection in your site, you can use the **Comments** scre
   
   
   
+Change History
+--------------
 
-# Change History
 * Updates for Orchard 1.8
     * 3-28-11:  Updated existing screens for site level comment and anti-spam settings.
 * Updates for Orchard 1.1

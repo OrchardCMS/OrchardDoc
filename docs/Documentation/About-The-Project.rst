@@ -1,13 +1,12 @@
-
 .. _index:
 
-About the project
----------------
-
-Contents:
+About the Project
+-----------------
 
 .. toctree::
-   :titlesonly:
+    :titlesonly:
 
-   Basic-Orchard-Concepts
-   Builtin-Features
+    Basic-Orchard-Concepts
+    Builtin-Features
+    Feature-roadmap
+    Frequently-asked-questions

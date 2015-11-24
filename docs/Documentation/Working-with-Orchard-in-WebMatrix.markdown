@@ -1,6 +1,10 @@
+Working with Orchard in WebMatrix
+=================================
 [WebMatrix](http://www.microsoft.com/web/webmatrix/), Microsoft's one-stop web development tool, lets you create, edit, and publish websites with unprecedented ease. WebMatrix includes a built-in web server (IIS Express), along with a simple editor for editing and customizing applications like Orchard. When installing Orchard using the Web Platform Installer, you have the option to install to
 WebMatrix instead of IIS. 
 
+Links
+-----
 
 ## Installing and Launching WebMatrix
 
@@ -130,6 +134,6 @@ Once you have published your website, you can view the files in the remote site 
 
 More information about using WebMatrix to publish websites can be found [here](http://www.microsoft.com/web/post/how-to-publish-a-web-application-using-webmatrix).
 
-# Change History
+### Change History
 * Updates for Orchard 1.6
 	* 11-14-12:  Updated screens and workflow.

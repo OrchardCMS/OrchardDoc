@@ -1,11 +1,16 @@
-## Introduction
+Part 1 - Getting Started with Modules
+=====================================
+
+Introduction
+------------
 This four part course will get you started with a gentle introduction to extending Orchard at the code level. You will build a very simple module which contains a widget that shows an imaginary featured product. 
 
 It will teach you some of the basic components of module development and also encourage you to use best-practices when developing for Orchard.
 
 In this first part we are going to set up our dev environment, scaffold a module and then build a simple `Widget` inside it. 
 
-## Prerequisites
+Prerequisites
+-------------
 This course assumes the following:
 
   * You have some experience using Orchard and understand its core concepts. Refreshers and links to related guides will be provided.
@@ -16,7 +21,8 @@ This course assumes the following:
   
 The course was written and tested against Orchard v1.9.2. It should work in new 1.x branch releases as they come out.
 
-## Getting help
+Getting help
+------------
 If you get stuck or need some support at any point in the course there are several places you can turn:
 
   1. Post a question in the [official support forums on CodePlex](http://orchard.codeplex.com/discussions).
@@ -25,17 +31,20 @@ If you get stuck or need some support at any point in the course there are sever
   
   1. Open an issue on the [Orchard Doc GitHub repo](https://github.com/OrchardCMS/OrchardDoc/issues).
 
-## Setting up
+Setting up
+----------
 First things first, you need to follow the [setting up for a lesson](Setting-up-for-a-lesson) guide.
 
 This will take you through the initial steps to set up your dev environment and pull a fresh copy of the source code down. When you've completed it please use your back button to come back to this course.
        
-## Getting the most out of this course
+Getting the most out of this course
+-----------------------------------
 Writing an Orchard module that actually does something is going to contain a *minimum* of 9 different files. You will need to do a lot of development before you can run your module code and see it working in Orchard.
 
 At first you might be overwhelmed by this, but here is a little tip; don't be. Just forge ahead with the tutorial and don't worry if terms like drivers, content parts, or placements seem unfamiliar at the moment. As you continue with your module development you will come across these files many times over. Before long you will start recognizing these core files and you will see how it all fits together.
 
-## Course structure
+Course structure
+----------------
 Throughout the course we will alternate between discussing topics and implementing them. The discussion may contain example code or other example scenarios. 
 
 So that there is no confusion for you as to what you should be doing, when it comes to implementing these lessons into the module it will be explained step-by-step via numbered lists.
@@ -44,12 +53,14 @@ Later on in the course, as the topics become more advanced, we may go through se
 
 You will also occasionally come across **Bonus Exercise** sections. These are completely optional. You can skip them, complete them at the time, or come back after completing the course to complete them. They are suggested when there is an extra feature you could implement using the skills you have just learned.
 
-## Getting started
+Getting started
+---------------
 Now that you've completed all of the setup tasks you will have a fresh copy of Orchard configured and ready to go.
 
 The rest of this part of the course will walk you through the process required to scaffold an empty module and then build a simple `Widget` inside of it.
 
-## Command line scaffolding with Orchard.exe
+Command line scaffolding with Orchard.exe
+-----------------------------------------
 You should now be looking at Visual Studio. Down the side, in your Solution Explorer window you will see many files and folders. 
 
 The first step to take is to collapse all of the projects down. Its a long list and we need to be able to see an overview of the solution so we can start working with it. You don't need to collapse these individually by hand however:
@@ -122,7 +133,8 @@ The basic framework for a module now exists inside the modules section of your s
 
 ![](../Attachments/getting-started-with-modules-part-1/scaffold-complete.png)
 
-## Core concepts refresher
+Core concepts refresher
+-----------------------
 If you are at the stage of wanting to build modules for Orchard then you should already be familiar with the concept of Content Types, Widgets, Content Items and Content Parts. These are all things that you can manage via the admin dashboard and you will have worked with them if you have built any kind of site in Orchard. To refresh your memory:
 
   - **Content Type**: The template for a type of content in Orchard. The most common example is the `Page` content type which provides the structure for a page of content in an Orchard site. 
@@ -133,7 +145,8 @@ If you are at the stage of wanting to build modules for Orchard then you should 
   
   - **Content Part**: A small module providing some specific functionality. The `Content Type` is made up by attaching various `Content Parts` to it. For example you could have a comments content part. It just manages a block of comments for whatever it is attached to. The same comments content part could be attached to a `Page` content type, a `Blog` content type, or within a `Widget`.
 
-## What we will be building
+What we will be building
+------------------------
 As you might have guessed from the module name, we are going to build a very simple featured product module. This first step into extending Orchard will be a small one. 
 
 The featured product module will be a `Widget` which shows a static message listing the featured product with a link to that page. It's not going to have any configurable settings behind it so we won't need to look at the database side of things yet. It's not going to be powered by an actual product system. A `Widget` is a great starting pointing point because it doesn't need to worry about menu settings, titles, URLs or integration into the admin dashboard.
@@ -142,7 +155,8 @@ It will be a simple banner which you can display on your site by adding a widget
 
 Let's get started with some development by adding classes and other files to our module.
 
-## Content part
+Content part
+------------
 The content part class is the core data structure. When you scaffolded the module it automatically made you a `Models` folder. Now we need to add the `FeaturedProductPart` class to this folder:
 
 ![](../Attachments/getting-started-with-modules-part-1/add-contentpart-class.png)
@@ -186,7 +200,8 @@ That's all you need to do for your first `ContentPart` class. Your `FeaturedProd
         }
     }
 
-## Data migrations
+Data migrations
+---------------
 When your module is enabled in the admin dashboard Orchard will execute a data migration process. The purpose of the data migration is to register a list of the features contained in the module and any data it uses.
 
 We aren't going to use this yet, but the migration is also used for upgrades. As you work on your modules you will want to add and remove bits. The data migration class can make changes and you can transform your existing data to meet your new requirements.
@@ -304,7 +319,8 @@ That's all for the data migration, your `Migrations.cs` should now look like thi
         }
     }
 
-## Update dependencies as you go along
+Update dependencies as you go along
+-----------------------------------
 In the `Create()` method of the data migration we introduced a dependency on `WidgetPart`.
 
 This means that our module won't run without the `Orchard.Widgets` module being installed and enabled within the system.
@@ -334,7 +350,8 @@ Lets update the manifest now to include the `Orchard.Widgets` dependency:
                  
       The indentation is important as creates hierarchy within a YAML document. Indent the line with 8 spaces.
       
-## How is all this magic working?
+How is all this magic working?
+------------------------------
 So far the `ContentPart` class has been magically detected as long as it uses the `.Model` namespace, now the data migration is automatically detected just for deriving from `DataMigrationImpl`. How is all of this happening?
 
 Under the hood Orchard uses [Autofac](http://autofac.org/), an Inversion of Control container. If you're interested you can learn about how it's integrated in the [how Orchard works](How-Orchard-works) guide. 
@@ -343,7 +360,8 @@ Don't worry though, you don't really need to know anything deeper about it other
 
 Later on we will use Autofac's dependency injection which let us automatically get instances of things we need supplied directly into our classes.
 
-## Content part driver
+Content part driver
+-------------------
 Everything you see in Orchard is composed from `Shapes`. If you don't know about shapes you can learn more about them in the [accessing and rendering shapes](Accessing-and-rendering-shapes) guide. 
 
 A content part driver is a class that composes the shapes that should be used to view and edit content parts. Drivers live in their own folder called `Drivers`. A basic driver class will contain three methods; a display driver for viewing a content part in the front end, an editor driver for presenting an editor form in the admin dashboard and an update method to handle changes submitted from the editor form.
@@ -391,7 +409,8 @@ Your `FeaturedProductDriver.cs` file should now look like this:
         }
     }
 
-## View
+View
+----
 Orchard uses Razor template views to display it's shapes. You can supply strongly-typed data models and use many of the normal ASP.NET MVC Razor view features within Orchard.
 
 For this first widget our needs are simple and we will only be putting plain HTML markup inside the `.cshtml` file:
@@ -450,7 +469,8 @@ The priority means that it will be near the top of the content zone. In more com
 
 Theme developers can customize these layout preferences by providing their own placement.info and overriding your initial configuration. This lets theme authors customize your module without having to make changes to the actual code. This means when the module is upgraded to a new version the theme developers changes will not be overwritten.
 
-## Trying the module out in Orchard
+Trying the module out in Orchard
+--------------------------------
 Congratulations, you've made it to the pay off, using the module in Orchard!
 
 The last few steps will enable the module in Orchard and assign the widget to a zone in the active template:
@@ -491,7 +511,8 @@ If you go back to the main site now you will see the module in the site:
 
 We haven't created a page for the Sprocket 9000 so clicking the button will give a 404 at the moment.
 
-## Download the code for this lesson
+Download the code for this lesson
+---------------------------------
 You can download a copy of the module so far at this link:
 
   * [Download Orchard.LearnOrchard.FeaturedProduct-Part1-v1.0.zip](../Attachments/getting-started-with-modules-part-1/Orchard.LearnOrchard.FeaturedProduct-Part1-v1.0.zip)
@@ -500,7 +521,8 @@ To use it in Orchard simply extract the archive into the modules directory at `.
 
 > For Orchard to recognize it the folder name should match the name of the module. Make sure that the folder name is `Orchard.LearnOrchard.FeaturedProduct` and then the modules files are located directly under that. 
 
-## Conclusion
+Conclusion
+----------
 This first guide in the module introduction course has shown the main components of a module.
 
 In the next part we will extend the module to add some interactivity to the module. This means adding database backing, an editor view, configuration settings and we will dip our toes in with some of the Orchard API features.

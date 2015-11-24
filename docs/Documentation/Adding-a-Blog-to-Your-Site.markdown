@@ -1,3 +1,5 @@
+Adding a Blog to Your Site
+==========================
 *This topic targets, and was tested with, the Orchard 1.8 release.*
 
 Orchard provides a blogging engine that makes it easy to add a blog to your web site.

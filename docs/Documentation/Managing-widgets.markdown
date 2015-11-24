@@ -1,8 +1,11 @@
+Managing Widgets
+================
 In Orchard, a widget is a fragment of UI (such as HTML) and code (such as a content part) that can be easily mapped to any location or zone in the active theme, such as a sidebar or footer zone.  Examples of widgets include navigation menus, image galleries, ads, videos, and tag clouds.
 
 This article explains the basics of widgets and shows you how to manage them.
+Layers, Zones, and Widgets
+--------------------------
 
-# Layers, Zones, and Widgets
 In Orchard, you manage widgets by clicking **Widgets** in the dashboard. The **Widgets** screen lists the available widgets and lets you assign the widget to a _layer_ and a _zone_. 
 
 You can think of a _layer_ as a set of rules for displaying a widget (or group of widgets). For example, a layer might display a widget on a specific page only if the user is logged in. A _zone_ helps to position a widget on a page. 
@@ -45,8 +48,9 @@ In Orchard, a web page is divided into zones (regions). The available zones are 
 
 For information about the zones that are available in the default theme (TheThemeMachine), see [Customizing the Default Theme](Customizing-the-default-theme).
 
+Adding a Layer
+--------------
 
-# Adding a Layer
 To add a layer, in the dashboard, click **Widgets**. On the **Widgets** screen, click **Add a new layer**. The **Add Layer** screen is displayed:
 
 ![](../Upload/screenshots_675/widgets_AddLayer_1_675.png)
@@ -79,8 +83,9 @@ To allow multiple URL values, you can use the following syntax:
     
     url("~/foo") or url("~/bar")
 
+Assigning a Widget to a Zone
+----------------------------
 
-# Assigning a Widget to a Zone
 To assign a widget to a zone, click the **Add** button on a zone that you want to add the widget to, and then select the widget to add.  
 
 For example, click **Add** on the Header zone, and then in the **Choose A Widget** screen click the **Html Widget**.  
@@ -94,8 +99,9 @@ The fields you need to fill in depend on the widget you're configuring. However,
 The value of the **Position** field can be an integer or a sequence of integers separated by dots. For example, the following values are all valid: 5, 10.1, 7.5.3.1. Widgets with lower position values will be rendered before those with higher values.
 
 After setting the values of all fields, click **Save**.
+Editing or Deleting a Widget
+----------------------------
 
-# Editing or Deleting a Widget
 To edit or delete a widget, in the **Widgets** screen, use the **Current Layer** drop-down list to select the layer that the widget is assigned to. In the list of zones displayed for the layer, click the widget you want to edit. The **Edit Widget** screen is displayed:
 
 ![](../Upload/screenshots_675/widgets_Delete_1_675.png)

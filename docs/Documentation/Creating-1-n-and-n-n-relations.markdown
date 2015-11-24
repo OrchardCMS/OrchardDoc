@@ -1,8 +1,10 @@
-
+Creating 1-N and N-N Relations
+==============================
 It is very common for contents to consist in part of lists or choices in lists. For example, an address can have a state or region property where the value is one in a predefined list of choices. That is a 1-n relationship. A n-n relationship could be for example a list of commercial rewards that a customer can benefit from. Orchard does of course provide support for those scenarios. This topic is going to walk you through the creation of such contents.
 
+Building a _1-N_ Relationship
+-----------------------------
 
-# Building a _1-N_ Relationship
 
 The model that we're going to build here consists of an Address part that can be attached for example to a Customer content type. The address part has a street address, a zip code, a city name and a state. The state is what we are going to model as a 1-n relationship to a table of states.
 
@@ -441,8 +443,9 @@ We now have a new "Customer" menu entry under "New", enabling us to create a new
 The customer can be displayed on the front-end as well.
 
 ![](../Attachments/Creating-1-n-and-n-n-relations/CustomerFrontEnd.PNG)
+Building an _N-N_ Relationship
+------------------------------
 
-# Building an _N-N_ Relationship
 
 Building a n-n relationship in Orchard relies on the same principles as what we did for the 1-n relationship. The main difference is that instead of having one foreign key on the part record, we have an intermediary object for the relationship that has two foreign keys to the records. This is of course close to the way this is done in relational databases.
 
@@ -859,8 +862,9 @@ If you go back to an existing customer's edit screen or create a new one, you'll
 On the front-end, the customer now looks like this:
 
 ![](../Attachments/Creating-1-n-and-n-n-relations/CustomerWithRewards.PNG)
+Building a Relation Between Content Items
+-----------------------------------------
 
-# Building a Relation Between Content Items
 
 Our third example will establish a relation between content items, which is a step up from our previous examples which were establishing relations between records. Doing the same thing with items is not fundamentally very different, but there are a couple of caveats that justify a specific example.
 
@@ -1195,8 +1199,9 @@ We can now go back to the Customer type definition and add our new part. Now whe
 On the front-end, the sponsor now also appears:
 
 ![](../Attachments/Creating-1-n-and-n-n-relations/CustomerWithSponsor.PNG)
+Accessing NHibernate Configuration directly
+-------------------------------------------
 
-# Accessing NHibernate Configuration directly
 
 For most relationships these conventions should create and auto-map your data model appropriately. However, for more complex data models you may find that it's necessary to access the NHibernate configuration directly in order to appropriately map classes. You can do this by implementing the ISessionConfigurationEvents interface like so:
 
@@ -1230,8 +1235,9 @@ For most relationships these conventions should create and auto-map your data mo
 			public void ComputingHash(Hash hash) {}
 		}
 	}
+Conclusion
+----------
 
-# Conclusion
 
 This topic should show the way for the creation of complex content parts involving arbitrary data relations. There is actually not much to it, as the system already knows how to persist and bind such complex objects. Rather, it's a matter of building the model according to the conventions in place.
 

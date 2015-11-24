@@ -1,3 +1,5 @@
+Continuous Integration
+======================
 
 There are currently two builds configured: "Continuous Builder" that runs on every check-in and "Full Build" that runs nightly. They are currently identical but eventually the nightly will also run functional tests.
 

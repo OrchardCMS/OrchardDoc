@@ -1,7 +1,10 @@
+Using the Command-Line Interface
+================================
 Orchard provides a command-line interface for performing many of the functions that are available from the admin panel (and some that aren't).  The command-line tool is named "orchard.exe" and is located in the bin directory underneath to root of your site.  To run the command-line tool, first open a command prompt on the root of the site (i.e. Orchard.Web). This can be done for example by SHIFT+right-clicking on the folder in Windows Explorer and choosing "Open command window here". From there, type "bin\orchard.exe".  Note that you need to run this tool from the root of your site.
 
+Using Commands 
+---------------
 
-# Using Commands 
 
 ![](../Upload/screenshots_675/orchard_cmd_line.png)
 
@@ -158,8 +161,9 @@ To execute this response file run the orchard.exe in the single command mode as 
 indicating a response file
 
     orchard @myfile.txt
+Adding Commands
+---------------
 
-# Adding Commands
 
 Modules developers can add their own commands to the system by implementing a new class deriving from Orchard.Commands.DefaultOrchardCommandHandler. A command is simply a method on that class that has the CommandName attribute. The following code creates a new "hello world" command that takes a name as a parameter and can take an optional "YouRock" switch.
 

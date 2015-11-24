@@ -1,4 +1,7 @@
-# Introduction Training Videos
+Tutorial Videos About Orchard
+=============================Introduction Training Videos
+----------------------------
+
 
 ## Commercial
 
@@ -55,8 +58,9 @@ Course for beginners interested in developing on Orchard, starting with how to u
 
 Kris van der Mast made his hands-on lab material available to anyone for free:
 <http://www.krisvandermast.com/downloads.html>
+Conferences
+-----------
 
-# Conferences
 
 ## CodeStock 11
 
@@ -73,14 +77,16 @@ Kris van der Mast made his hands-on lab material available to anyone for free:
 ## Mix11
 
 [Deconstructing Orchard: Build, Customize, Extend, Ship](http://channel9.msdn.com/events/mix/mix11/FRM06) by Brad Millington
+Themes
+------
 
-# Themes
 
 ## Getting Started With Custom Theme Development
 
 <iframe width="500" height="314" src="http://www.youtube.com/embed/rk1iJJJ9Itg?hd=1" frameborder="0" allowfullscreen></iframe>
+Deployment
+----------
 
-# Deployment
 
 ## Deploying an Orchard site using WebMatrix
 
@@ -89,26 +95,30 @@ Kris van der Mast made his hands-on lab material available to anyone for free:
 ## Migrating from SqlCe to SQL Express
 
 <iframe title="YouTube video player" height="311" src="http://www.youtube.com/embed/YM35lnaI1sA?hd=1" frameBorder="0" width="500" allowfullscreen="allowfullscreen" mce_src="http://www.youtube.com/embed/YM35lnaI1sA?hd=1"></iframe>
+Taxonomies
+----------
 
-# Taxonomies
 
 ## Getting Started With Taxonomies
 
 <iframe height="314" src="http://www.youtube.com/embed/B3jhgTeiEtw?hd=1" frameborder="0" width="500" allowfullscreen="allowfullscreen"></iframe>
+Projector
+---------
 
-# Projector
 
 ## Live demo of Projector by Sébastien Ros
 
 <iframe width="500" height="369" src="http://www.youtube.com/embed/SP912eWoOoo" frameborder="0" allowfullscreen></iframe>
+Development
+-----------
 
-# Development
 
 ## Setting up a source code environment
 
 <iframe height="314" src="http://www.youtube.com/embed/fb2Ywf-2e3Q?hd=1" frameborder="0" width="500" allowfullscreen="allowfullscreen"></iframe>
+Localization
+------------
 
-# Localization
 
 ## Building a Multilanguage Website Structure
 

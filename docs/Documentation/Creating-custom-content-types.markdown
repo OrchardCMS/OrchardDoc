@@ -1,3 +1,5 @@
+Creating Custom Content Types
+=============================
 
 Although Orchard includes the Page and Blog Post content types by default, it is very easy to create a custom content type (or even extend the definition of an existing content type) using the admin panel. By default, the **Content Types** feature is enabled. This feature must be enabled to create a custom content types. If needed, you can manually enable the feature in the **Manage Features** page.
 

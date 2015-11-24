@@ -1,3 +1,5 @@
+Contributing a Module or Theme to the Gallery
+=============================================
 
 Have you created an Orchard module or theme that you want to share with other Orchard users?  The [Orchard Gallery](http://gallery.orchardproject.net/) makes this easy, and you can always update and manage your contributions to the gallery as you have new versions to share, or when you want to make changes to existing contributions.  
 

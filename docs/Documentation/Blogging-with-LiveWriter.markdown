@@ -1,3 +1,5 @@
+Blogging with LiveWriter
+========================
 While Orchard provides a simple way to write blog posts using the built-in features of the admin panel, many people prefer to author posts using a client application, such as [Windows Live Writer](http://explore.live.com/windows-live-writer).  These clients use an XML-RPC interface to publish posts remotely, and offer additional capabilities like saving offline drafts (for example, to write your blog posts on an airplane and sync-up your site later).
 
 To enable Remote Blog Publishing, click **Features** in the Orchard admin panel.

@@ -1,3 +1,5 @@
+Caching
+=======
 Here are the different levels of caching that Orchard can provide:
 
 ## Application Settings Cache Using ICacheManager

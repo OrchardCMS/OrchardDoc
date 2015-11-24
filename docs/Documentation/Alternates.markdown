@@ -1,3 +1,5 @@
+Alternates
+==========
 Alternates are optional variations of a shape that you can implement in a theme in order to customize
 the rendering of the shape for specific cases.
 By using alternates, you can override which template is used to render content,

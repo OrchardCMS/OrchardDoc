@@ -1,3 +1,5 @@
+What's Happening Now?
+=====================
 In the near term, we'll be focused on servicing the V1 release and planning for the next version.
 The feature roadmap is subject to change as the project evolves, and we welcome your input.
 

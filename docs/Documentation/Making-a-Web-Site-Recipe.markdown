@@ -1,3 +1,5 @@
+Making a Website Recipe
+=======================
 
 Orchard simplifies the process of setting up a new website by letting you use _website recipes_. A recipe is an XML file that contains the startup configuration for an Orchard website. When you start Orchard for the first time, you can select a recipe that best matches the type of site you want to set up. For example, if you want your website to be a blog, you can select the **Blog** recipe, and much of the configuration work will be done for you.
 
@@ -5,8 +7,9 @@ You can create your own recipes and customize the process of setting a website a
 
 This article describes how to use recipes, how to create custom recipes, export or import recipes, and how to create a specialized distribution of Orchard using recipes. 
 
+Using a Recipe to Create a Website
+----------------------------------
 
-# Using a Recipe to Create a Website
 
 When you first set up an Orchard website, the setup page that is displayed contains a list of recipes. You can choose a recipe to base your new website on. 
 
@@ -19,8 +22,9 @@ The initial list contains the following recipes:
 * **Core**. A recipe that provides the Orchard framework with limited end-user functionality that can be used during development.
 
 After you choose a recipe and click **Finish Setup**, Orchard creates the website using the selected recipe and opens the home page.
+How Recipes Work
+----------------
 
-# How Recipes Work
 
 An Orchard recipe is an XML file that contains website configuration information. The following example shows the contents of the default recipe file.
 
@@ -95,8 +99,9 @@ The following sections of a recipe file are the elements that are most important
 * **Settings**. This section provides a way to configure website settings.
 * **Command**. This section lists commands that Orchard will run against your website in order to complete the setup. For more information about Orchard commands, see [Using the Command-line Interface](Using-the-command-line-interface).
 
+Creating a Custom Recipe
+------------------------
 
-# Creating a Custom Recipe
 
 You can create your own recipe, which can then be added to the setup page or to your own module. Recipes added to the setup page can be selected by the user only during site setup; recipes added to a module can be executed by the user after site setup.
 
@@ -185,8 +190,9 @@ To add your custom recipe to the setup page use the `IsSetupRecipe` attribute in
 ![](../Upload/screenshots/recipes_new_custom.png)
 
 Note that recipes used for importing mustn't contain an `IsSetupRecipe` element or it should be set to `false`.
+Importing and Exporting a Recipe
+--------------------------------
 
-# Importing and Exporting a Recipe
 Orchard enables you to import and export recipes from and to the web server. It uses the **Import Export** module, which is disabled by default. Therefore you must enable the module to use this feature.
 
 To enable the **Import Export** module, open the dashboard and click **Modules**. On the **Modules** page, select the **Features** tab. Under **Content**, locate the **Import Export** feature and click **Enable**. A message at the top of the page will notify you when the feature is enabled. You will also see **Import/Export** listed in the dashboard feature list.  
@@ -200,8 +206,9 @@ To export a recipe, open the dashboard and click **Import/Export**. Click the **
 To import a recipe, click **Import/Export** and then click the **Import** tab. Browse to the recipe file and click **Import**.
 
 ![](../Upload/screenshots/recipe_import.png)
+Creating a Specialized Distribution of Orchard
+----------------------------------------------
 
-# Creating a Specialized Distribution of Orchard
 
 Recipes simplify the process of creating a specialized distribution of Orchard. Using recipes (and optionally custom modules), you can configure a version of the Orchard platform that is optimized for nearly any type of website you can envision.
 

@@ -1,11 +1,14 @@
+Running Orchard on Mono
+=======================
 > Orchard doesn't currently run on Mono, and hence can't run on Linux.
 
 All command line examples in this article assume you are using a Linux machine.
 
 You can test the CMS using our [virtual machine and/or Live CD](http://susegallery.com/a/n1C2rA/orchard-cms-mono-demo) SuSE Studio appliance.
 
+ Prerequisites 
+---------------
 
-#  Prerequisites 
 
 You will need the following software in order to <b>run</b> Orchard on your Linux distribution of choice:
 
@@ -18,8 +21,9 @@ If you want to compile Orchard from source on Linux (compiling with VisualStudio
 
 * [MonoDevelop 2.6 Beta 1](http://monodevelop.com/Download) or newer
 * [Mono versions of certain assemblies](http://dl.dropbox.com/u/22037511/orchard/orchard-mono-sources-overlay-current.zip) used by Orchard
+ Common Setup Steps 
+--------------------
 
-#  Common Setup Steps 
 
 ##  Add a Host Name Alias for the Demo 
 
@@ -31,8 +35,9 @@ Since you are using a non-existing DNS name for this demo, you need to let the s
 
 
 If you want to visit the Orchard demo from another machine, you will need to modify the machine's <tt>/etc/hosts</tt> file in the similar way, replacing <tt>127.0.0.1</tt> with your server's IP address.
+ Database Setup 
+----------------
 
-#  Database Setup 
 
 First, make sure you have PostgreSQL installed and running:
 
@@ -71,8 +76,9 @@ At this point you must make sure the new <b>orchard</b> user has access rights t
 
 
 It is <b>extremely</b> important that the last item in the line above is <b>not</b> <tt>indent</tt> - it should be <tt>md5</tt>, <tt>password</tt> or <tt>trust</tt> (for other authentication methods please refer to the PostgreSQL documentation). After the line is in the file, restart PostgreSQL and you're ready to use the new database from Orchard.
+ Configuring with Apache 2 and mod_mono 
+----------------------------------------
 
-#  Configuring with Apache 2 and mod_mono 
 
 Make sure you have Apache 2 (the Worker MPM is recommended) and mod-mono 2.10.1 (or newer) installed. Configuration paths given below are specific to OpenSuSE 11.4, you will need to adjust them for your distribution. Contents of the created files does not change (save for the filesystem paths, of course).
 
@@ -151,16 +157,18 @@ As the result you should see output similar to:
 
 
 Now you are ready to start your favorite web browser and point it to <tt>http://orchard-demo/</tt>!
+ Configuring for XSP 
+---------------------
 
-#  Configuring for XSP 
 
 No extra steps are necessary. You need to run <tt>xsp4</tt> in the <tt>Orchard.Web</tt> directory using the following command line:
 
     
     MONO_IOMAP=all xsp4
 
+ Using Binary Version of Orchard 
+---------------------------------
 
-#  Using Binary Version of Orchard 
 
 Currently Orchard needs to be patched in order to run on Mono with PostgreSQL database, so for your convenience a [precompiled version is available](http://dl.dropbox.com/u/22037511/orchard/orchard-1.0.20-mono_bin.zip). All you need to do is to download the archive, create a directory on your server in which you want to put the application and unzip the archive in that directory (locations used here are samples which would work without changing on a machine running [OpenSuSE 11.4](http://software.opensuse.org)):
 
@@ -172,8 +180,9 @@ Currently Orchard needs to be patched in order to run on Mono with PostgreSQL da
     cd /srv/www/vhosts/orchard-demo
     unzip /tmp/orchard-1.0.20-mono_bin.zip
 
+ Compiling Orchard from Source 
+-------------------------------
 
-#  Compiling Orchard from Source 
 
 We will use the current (as of March 11 2011) version of Orchard sources - [1.0.20](http://orchard.codeplex.com/releases/view/50197#DownloadId=197217). After downloading and unzipping them in a directory of your choice, you need to perform the steps outlined below in before compiling the application.
 
@@ -203,8 +212,9 @@ After opening the solution in MonoDevelop just type <tt>F8</tt> (or use the <tt>
 ###  Deploying 
 
 Unfortunately at the time of this writing MonoDevelop will not deploy Orchard properly, so you need to do it manually. To do so, copy contents of the <tt>src/Orchard.Web/</tt> directory to your website root. If you want to remove the source and binary files which aren't necessary for the CMS to run, please consult the [binary release of Orchard](http://orchard.codeplex.com/releases/view/50197#DownloadId=197216) and use it as a template of what has to remain and what can be removed safely.
+ Resources 
+-----------
 
-#  Resources 
 
 ##  SuSE Studio Appliance with Orchard and Mono 
 
@@ -219,8 +229,9 @@ The first time you browse the above URL you will be greeted with Orchard setup s
     
     Server=localhost;Database=orchard;User ID=orchard;Password=orchard
 
+ Known Issues 
+--------------
 
-#  Known Issues 
 
 * Orchard requires [Mono IOMAP](http://mono-project.com/IOMap) to be active since there are a few files and directories that use inconsistent name case.
 * After a few requests you might get <tt>npgsql</tt> (PostgreSQL ADO.NET provider) connection errors. Only restarting the application will cure it.

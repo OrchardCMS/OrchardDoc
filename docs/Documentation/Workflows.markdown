@@ -1,3 +1,5 @@
+Workflows
+=========
 *This topic targets, and was tested with, the Orchard 1.8 release.*
 
 <br/>

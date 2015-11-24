@@ -1,3 +1,5 @@
+Part 2 - Make the Widget Dynamic
+================================
 ## Introduction
 This is part two of a four part course. It will get you started with a gentle introduction to extending Orchard at the code level. You will build a very simple module which contains a widget that shows an imaginary featured product. 
 
