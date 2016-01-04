@@ -40,12 +40,10 @@ The following example shows the `Map` part's _Migrations.cs_ file with the `Upda
     
             public int UpdateFrom1()
             {
-                // Create a new widget content type with our map
+                // Create a new widget content type with our map. We make use of the AsWidgetWithIdentity() helper.
                 ContentDefinitionManager.AlterTypeDefinition("MapWidget", cfg => cfg
                     .WithPart("MapPart")
-                    .WithPart("WidgetPart")
-                    .WithPart("CommonPart")
-                    .WithSetting("Stereotype", "Widget"));
+                    .AsWidgetWithIdentity());
     
                 return 2;
             }
