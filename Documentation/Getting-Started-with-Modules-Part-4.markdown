@@ -762,7 +762,7 @@ Your `Migrations.cs` file should now look like this:
                     .ContentPartRecord()
                     .Column<bool>("IsOnSale"));
     
-                return 1;
+                return 3;
             }
     
             public int UpdateFrom1() {
