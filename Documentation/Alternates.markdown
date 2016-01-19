@@ -29,7 +29,7 @@ see [Accessing and Rendering Shapes](Accessing-and-rendering-shapes).)
 To create a template file that maps to the corresponding shape name,
 you must name the template according to the  following naming convention:
 
-* Convert an underscore (_) in the shape name to either a dot (.) or backslash (\) in the template name.
+* Convert an underscore (_) in the shape name to either a dot (.) or backslash (\\) in the template name.
 A backslash indicates that the template resides in a subfolder.
 * Convert a double underscore \(\_\_\) in the shape name to a hyphen (-).
 * For any Display type value in the shape name, place the type name after a dot (.)
