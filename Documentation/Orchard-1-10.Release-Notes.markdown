@@ -1,6 +1,6 @@
 Build: 1.10
 
-Published: 
+Published: 2/1/2015
 
 How to Install Orchard
 ----------------------
@@ -50,9 +50,16 @@ This includes commercial derivative work.
 What's new?
 -----------
 
-Orchard 1.10 fixes bugs and introduces the following changes and features:
+Orchard 1.10 includes all the changes from version 1.9.2 (http://docs.orchardproject.net/Documentation/Orchard-1-9-3.Release-Notes) and introduces the following changes and features:
 
-* ...
+#### Features
+* Default values for content fields
+* Configurable location of Modules and Themes
+
+#### Improvements
+* Use of Nuget packages instead of the /lib folder
+* New extension methods for migrations
+* Upgraded to .NET 4.5.2
 
 The full list of fixed bugs for this release can be found here:
 
