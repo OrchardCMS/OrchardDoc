@@ -50,17 +50,28 @@ This includes commercial derivative work.
 What's new?
 -----------
 
-Orchard 1.10 includes all the changes from version 1.9.2 (http://docs.orchardproject.net/Documentation/Orchard-1-9-3.Release-Notes) and introduces the following changes and features:
+Orchard 1.10 includes all the changes from version 1.9.3 (http://docs.orchardproject.net/Documentation/Orchard-1-9-3.Release-Notes) and introduces the following changes and features:
 
 #### Features
 * Default values for content fields
 * Configurable location of Modules and Themes
+* Parameterized snippets
+* Orchard.Resources now contains common assets to be reused across core modules
+* Layer rules have been moved to Orchard.Conditions for reusability
+* Orchard.TaskLease has been deprecated in favor or distributed locks
+* Orchard.jQuery has been deprecated in favor of Orchard.Resources
+* Editor tabs support
+
 
 #### Improvements
 * Use of Nuget packages instead of the /lib folder
 * New extension methods for migrations
 * Upgraded to .NET 4.5.2
+* Recipees and Import/Export improvements
 
+#### Bugs
+
+Bug fixes are listed in the [1.9.3 release notes](http://docs.orchardproject.net/Documentation/Orchard-1-9-3.Release-Notes).
 The full list of fixed bugs for this release can be found here:
 
 * [Bugs fixed in 1.10](https://github.com/OrchardCMS/Orchard/issues?q=is%3Aissue+milestone%3A%22Orchard+1.10%22+is%3Aclosed).
