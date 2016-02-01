@@ -129,7 +129,7 @@ we should all be grateful to the following people who contributed patches and fe
 - Matt Varblow ([mvarblow](https://github.com/mvarblow))
 - Nicholas Mayne ([Jetski5822](https://github.com/Jetski5822))
 - Paul Devenney ([PaulDevenney](https://github.com/PaulDevenney))
-- Piotr Szmyd ([](https://github.com/))
+- Piotr Szmyd ([pszmyd](https://github.com/pszmyd))
 - Rob King ([gcsuk](https://github.com/gcsuk))
 - Ryan Drew Burnett ([ryandrewburnett](https://github.com/ryandrewburnett))
 - Sebastien Ros ([sebastienros](https://github.com/sebastienros))
