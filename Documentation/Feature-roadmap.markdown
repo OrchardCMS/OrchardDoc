@@ -3,42 +3,37 @@ The feature roadmap is subject to change as the project evolves, and we welcome 
 
 ### Current Priorities
 
-#### Priorities for Orchard 1.10:
+#### Priorities for Orchard 1.11:
 
-This release is expected for May 2016
+This release is expected for Q4 2016
 
 ## Suggested features
 
+### On-track
+
+* Deployment feature (OneStop will integrate this feature)
+* New admin theme ([Szymon](https://github.com/SzymonSel) owns this contribution) 
+  * Customizable dashboard
+  * Accessibility
+* Glimpse ([Chris](https://github.com/paynecrl97) owns this contribution) 
 * Improved Workflow module
   * Error/Exception branches support
   * Loop activities
   * Piotr ([pszmyd](https://www.codeplex.com/site/users/view/pszmyd)) owns this contribution
+
+### Looking for owners
 * Owin identity providers
   * OAuth, AAD ...
 * Javascript integration
   * Rules engine
   * Script activity
   * Jint
-* Deployment feature
-* New admin theme
-  * Bootstrap: Antoine + Jasmin 
-  * Customizable dashboard
-  * Accessibility
 * Content tree
-* Tabs in placement
-  * Already implemented in code, needs views 
 * New base theme
 * REST APIs ([design notes](https://orchard.codeplex.com/discussions/560607))
 * Refactor output cache module as an Owin middleware
-* Powershell
-* Media library UI
-* Upgrades
-  * Nuget package
-* Gallery/Website
-  * Nuget v3
-  * Github/Whatever source
-* Widgets improvement
-* 
+* New front facing website
+
 ### Currently Implemented (Partially or in Full)
 
 * Basic admin panel and login
@@ -113,6 +108,7 @@ This release is expected for May 2016
 * Jobs Queue
 * Templates management 
 * Business data caching 
+* Configurable dashboard
 
 ### Areas of Focus for Future Iterations (Backlog, Not in Priority Order)
 
@@ -122,7 +118,7 @@ This release is expected for May 2016
 * SEO - Semantic URLs, metas/keywords, Web standards, sitemap
 * Admin - UI improvements, dashboard, notifications/email
   * Improved admin theme (Based on Bootstrap)
-* Profiles - User profiles, avatars, reputation system
+* Profiles - User profiles, avatars, reputation system, using the dynamic forms module
 * Themes - Additional themes improvements (in-browser editing, etc)
 * Performance - Caching, optimization, script combining/minification
 * Analytics - Reporting, site-use statistics
