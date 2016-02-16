@@ -34,27 +34,27 @@ At this point we have all the pieces we need to create out new widget in the rig
 
 The only thing left to do is to adjust the settings on our new *Form Widget*.  In this example, the [layer](Managing-widgets#AddingaLayer) is set to 'Default' and the position is set to '1'.  This will render the widget on the top of the right rail (AsideSecond zone) for all pages.  In the Layout section of the form you need to add your form fields and bind it to your content type.  In the layout section, see highlighted below, edit the form by dragging an *Email Field* field from the **Layout** items on the right side of the screen.
 
-![Forms Widget Layout](../upload/dynamic-forms-edit-layout.png "Forms Widget Layout")
+![Forms Widget Layout](../upload/dynamic-forms/dynamic-forms-edit-layout.png "Forms Widget Layout")
 
 Once it is dropped an *Edit Email Field* will pop up. Enter the value as shown in the screenshot below.
 
-![Edit Email Field](../upload/dynamic-forms-edit-email-field.png "Edit Email Field")
+![Edit Email Field](../upload/dynamic-forms/dynamic-forms-edit-email-field.png "Edit Email Field")
 
 Then click on the *Validation* tab and make sure to check the **Required** checkbox.  Now you can save the form, but we are not finished yet.  After you save, now we can bind the form to your content type we created earlier.  Hover back over the form and click on the angle brackets.  You should see the *Edit Form* pop up. Make sure to check the **Create Content** and then select your *Subscribe Form* from the dropdown. Now save the form. 
 
-![Bind Form To Content](../upload/dynamic-forms-bind-form.png "Bind Form to Content")
+![Bind Form To Content](../upload/dynamic-forms/dynamic-forms-bind-form.png "Bind Form to Content")
 
 Almost there, now hover on the *Email Field* and click the angle brackets.  Click on the *Bindings* tab and then check the field you want to bind it to, which in our case is the *Email.Text* field of the *Subscribe Form* content type. If you do not see the bindings tab, then please save your form and go back to edit it.
 
-![Bind Email Field](../upload/dynamic-forms-bind-email.png "Bind Email Field")
+![Bind Email Field](../upload/dynamic-forms/dynamic-forms-bind-email.png "Bind Email Field")
 
 These are some example settings:
 
-![Dynamic Forms Widget](../upload/dynamic-forms/news-letter-widget.png "Dynamic Forms Widget")
+![Dynamic Forms Widget](../upload/dynamic-forms/dynamic-forms/news-letter-widget.png "Dynamic Forms Widget")
 
 After saving the widget browse to a page on the site and check out the new feature!
 
-![Page view with new widget](../upload/dynamic-forms/page-view.png "Page view with new widget")
+![Page view with new widget](../upload/dynamic-forms/dynamic-forms/page-view.png "Page view with new widget")
 
 
 **NOTE**: If the input field for the owner is visible remove it by un-checking the 'Show editor for owner' option under the Common part of the Subscribe Form content type.
