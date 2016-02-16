@@ -62,7 +62,6 @@ Orchard 1.10 includes all the changes from version 1.9.3 (http://docs.orchardpro
 * Orchard.jQuery has been deprecated in favor of Orchard.Resources
 * Editor tabs support
 
-
 #### Improvements
 * Use of Nuget packages instead of the /lib folder
 * New extension methods for migrations
@@ -86,6 +85,14 @@ No matter what migration path you take, please take the precaution of making a b
 ### Upgrading from Orchard 1.9 and earlier
 
 Please follow the upgrade instruction from this document: <http://docs.orchardproject.net/Documentation/orchard-1-9.Release-Notes>
+
+#### JetBrain annotations has been removed
+
+If your modules were using some of these attributes you will need to remove them or to include them in your projects.
+
+#### Nuget packages
+
+Because we have moved to using Nuget packages instead of the /lib folder, you will need to point to the same Nuget packages if you were using the /lib folder.
 
 #### Warning on Workflows localization fixes
 
