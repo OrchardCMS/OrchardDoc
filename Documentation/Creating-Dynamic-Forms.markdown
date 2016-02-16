@@ -50,11 +50,11 @@ Almost there, now hover on the *Email Field* and click the angle brackets.  Clic
 
 These are some example settings:
 
-![Dynamic Forms Widget](../upload/dynamic-forms/dynamic-forms/news-letter-widget.png "Dynamic Forms Widget")
+![Dynamic Forms Widget](../upload/dynamic-forms/news-letter-widget.png "Dynamic Forms Widget")
 
 After saving the widget browse to a page on the site and check out the new feature!
 
-![Page view with new widget](../upload/dynamic-forms/dynamic-forms/page-view.png "Page view with new widget")
+![Page view with new widget](../upload/dynamic-forms/page-view.png "Page view with new widget")
 
 
 **NOTE**: If the input field for the owner is visible remove it by un-checking the 'Show editor for owner' option under the Common part of the Subscribe Form content type.
