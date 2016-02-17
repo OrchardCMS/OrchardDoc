@@ -94,6 +94,18 @@ If your modules were using some of these attributes you will need to remove them
 
 Because we have moved to using Nuget packages instead of the /lib folder, you will need to point to the same Nuget packages if you were using the /lib folder.
 
+#### Database constraints
+
+Orchard 1.10 contains new database contraints to prevent corrupted data. One of them might fail if you already have duplicated content item versions.
+To check if you have some you can run this query and delete the duplicated entries.
+
+```
+SELECT [Number], [ContentItemRecord_id], COUNT(*) 
+FROM [Orchard_Framework_ContentItemVersionRecord]
+GROUP BY [Number], [ContentItemRecord_id]
+HAVING ( COUNT(*) > 1 )
+```
+
 #### Warning on Workflows localization fixes
 
 Due to a fix on how Workflows activity outcomes (e.g. "Done") are localized, after upgrading to Orchard 1.10 part of the connections between Workflows activities will get lost on a site that uses a localized (non-English) admin area and you'll have to re-connect activities. How many connections get lost depends on the completeness of the localization package for the Workflows module.
