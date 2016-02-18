@@ -58,7 +58,7 @@ Orchard 1.10 includes all the changes from version 1.9.3 (http://docs.orchardpro
 * Parameterized snippets
 * Orchard.Resources now contains common assets to be reused across core modules
 * Layer rules have been moved to Orchard.Conditions for reusability
-* Orchard.TaskLease has been deprecated in favor or distributed locks
+* Orchard.TaskLease has been deprecated in favor of distributed locks
 * Orchard.jQuery has been deprecated in favor of Orchard.Resources
 * Editor tabs support
 
@@ -85,6 +85,11 @@ No matter what migration path you take, please take the precaution of making a b
 ### Upgrading from Orchard 1.9 and earlier
 
 Please follow the upgrade instruction from this document: <http://docs.orchardproject.net/Documentation/orchard-1-9.Release-Notes>
+
+#### Deprected modules
+
+If your modules were using files or resources fom Orchard.jQuery you will need to point to the ones defined in Orchard.Resources.
+If your modules were using services from Orchard.TaskLease you will need to use `IDistributedLock` instead.
 
 #### JetBrain annotations has been removed
 
