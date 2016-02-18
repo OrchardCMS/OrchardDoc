@@ -66,7 +66,7 @@ Orchard 1.10 includes all the changes from version 1.9.3 (http://docs.orchardpro
 * Use of Nuget packages instead of the /lib folder
 * New extension methods for migrations
 * Upgraded to .NET 4.5.2
-* Recipees and Import/Export improvements
+* Recipes and Import/Export improvements
 
 #### Bugs
 
@@ -88,12 +88,13 @@ Please follow the upgrade instruction from this document: <http://docs.orchardpr
 
 #### Deprected modules
 
-If your modules were using files or resources fom Orchard.jQuery you will need to point to the ones defined in Orchard.Resources.
+If your modules were using files or resources from Orchard.jQuery you will need to point to the ones defined in Orchard.Resources.
+
 If your modules were using services from Orchard.TaskLease you will need to use `IDistributedLock` instead.
 
-#### JetBrain annotations has been removed
+#### JetBrains annotations has been removed
 
-If your modules were using some of these attributes you will need to remove them or to include them in your projects.
+If your modules were using some of these attributes you will need to remove them or to [include them](https://github.com/OrchardCMS/Orchard/blob/1.9.3/src/Orchard/Validation/JetBrains.Annotations.cs) back into your projects.
 
 #### Nuget packages
 
@@ -102,6 +103,7 @@ Because we have moved to using Nuget packages instead of the /lib folder, you wi
 #### Database constraints
 
 Orchard 1.10 contains new database contraints to prevent corrupted data. One of them might fail if you already have duplicated content item versions.
+
 To check if you have some you can run this query and delete the duplicated entries.
 
 ```
