@@ -1,6 +1,6 @@
 Build: 1.10
 
-Published: 2/1/2015
+Published: 2/1/2016
 
 How to Install Orchard
 ----------------------
@@ -61,6 +61,7 @@ Orchard 1.10 includes all the changes from version 1.9.3 (http://docs.orchardpro
 * Orchard.TaskLease has been deprecated in favor of distributed locks
 * Orchard.jQuery has been deprecated in favor of Orchard.Resources
 * Editor tabs support
+* Orchard.exe help improvements
 
 #### Improvements
 * Use of Nuget packages instead of the /lib folder
@@ -147,12 +148,14 @@ we should all be grateful to the following people who contributed patches and fe
 - Hannan Azam ([hannan-azam](https://github.com/hannan-azam))
 - Jamie Philips ([phillipsjs](https://github.com/phillipsjs))
 - Jean-Thierry Kéchichian ([jtkech](https://github.com/jtkech))
+- Jerome van den Heuvel ([Jwheuvel](https://github.com/Jwheuvel))
 - Katsuyuki Ohmuro ([harmony7](https://github.com/harmony7))
 - Kexy Biscuit ([KexyBiscuit](https://github.com/KexyBiscuit))
 - Levent Esen ([leventesen](https://github.com/leventesen))
-- Mohammed Kinawy ([mkinawy](https://github.com/mkinawy))
 - Marek Dzikiewicz ([MpDzik](https://github.com/MpDzik))
+- Matthew Harris ([rtpHarry](https://github.com/rtpHarry))
 - Matt Varblow ([mvarblow](https://github.com/mvarblow))
+- Mohammed Kinawy ([mkinawy](https://github.com/mkinawy))
 - Nicholas Mayne ([Jetski5822](https://github.com/Jetski5822))
 - Paul Devenney ([PaulDevenney](https://github.com/PaulDevenney))
 - Piotr Szmyd ([pszmyd](https://github.com/pszmyd))
@@ -166,4 +169,3 @@ we should all be grateful to the following people who contributed patches and fe
 - Westley Harris ([wharri220](https://github.com/wharri220))
 - Zhi Sun ([sunz7](https://github.com/sunz7))
 - Zoltán Lehóczky ([Lombiq](https://github.com/Lombiq))
-- ([Jwheuvel](https://github.com/Jwheuvel))
