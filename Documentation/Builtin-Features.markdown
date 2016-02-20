@@ -366,9 +366,11 @@ This module provides a jobs queue to process jobs asynchronously.
 * Orchard.JobsQueue : Provides a jobs queue to process jobs asynchronously.
 * Orchard.JobsQueue.UI : Provides a UI to manage queued jobs.
 
-## Orchard.jQuery 
+## Orchard.jQuery (deprecated)
 
 Used as a dependency by other modules, this provides jQuery and jQueryUI scripts.
+
+This module is deprecated as of Orchard v1.10, you should use Orchard.Resources now instead.
 
 ## Orchard.Layouts
 
@@ -533,6 +535,12 @@ Provides Redis integration with Orchard.
 - Orchard.Redis.MessageBus : A message bus implementation using Redis pub/sub.
 - Orchard.Redis.OutputCache : An output cache storage provider using Redis.
 - Orchard.Redis.Caching : Business data cache using Redis.
+
+## Orchard.Resources
+
+Provides a variety of third-party client-side libraries (stylesheets and scripts) used by other modules.
+
+Added in Orchard v1.10, replaces the deprecated Orchard.jQuery module.
 
 ## Orchard.Roles 
 
@@ -774,7 +782,3 @@ to the new fields.
   [40]: http://docs.orchardproject.net/Documentation/Setting-up-a-multi-tenant-Orchard-site
   [41]: http://gallery.orchardproject.net/List/Modules/Orchard.Module.Orchard.MultiTenancy
   [42]: http://gallery.orchardproject.net/List/Modules/Orchard.Module.Orchard.TaskLease
-
-# Change History
-* Updates for Orchard 1.8
-    * 9-06-14: Updated builtin features list to the latest version of Orchard i.e. v1.8.1
