@@ -1,6 +1,6 @@
 Build: 1.10
 
-Published: 2/1/2015
+Published: 2/1/2016
 
 How to Install Orchard
 ----------------------
@@ -50,7 +50,7 @@ This includes commercial derivative work.
 What's new?
 -----------
 
-Orchard 1.10 includes all the changes from version 1.9.3 (http://docs.orchardproject.net/Documentation/Orchard-1-9-3.Release-Notes) and introduces the following changes and features:
+Orchard 1.10 includes all the changes from version 1.9.3 <http://docs.orchardproject.net/Documentation/Orchard-1-9-3.Release-Notes> and introduces the following changes and features:
 
 #### Features
 * Default values for content fields
@@ -66,7 +66,8 @@ Orchard 1.10 includes all the changes from version 1.9.3 (http://docs.orchardpro
 * Use of Nuget packages instead of the /lib folder
 * New extension methods for migrations
 * Upgraded to .NET 4.5.2
-* Recipees and Import/Export improvements
+* Recipes and Import/Export improvements
+* Orchard.exe help command enhancement
 
 #### Bugs
 
@@ -88,12 +89,13 @@ Please follow the upgrade instruction from this document: <http://docs.orchardpr
 
 #### Deprected modules
 
-If your modules were using files or resources fom Orchard.jQuery you will need to point to the ones defined in Orchard.Resources.
+If your modules were using files or resources from Orchard.jQuery you will need to point to the ones defined in Orchard.Resources.
+
 If your modules were using services from Orchard.TaskLease you will need to use `IDistributedLock` instead.
 
-#### JetBrain annotations has been removed
+#### JetBrains annotations has been removed
 
-If your modules were using some of these attributes you will need to remove them or to include them in your projects.
+If your modules were using some of these attributes you will need to remove them or to [include them](https://github.com/OrchardCMS/Orchard/blob/1.9.3/src/Orchard/Validation/JetBrains.Annotations.cs) back into your projects.
 
 #### Nuget packages
 
@@ -102,6 +104,7 @@ Because we have moved to using Nuget packages instead of the /lib folder, you wi
 #### Database constraints
 
 Orchard 1.10 contains new database contraints to prevent corrupted data. One of them might fail if you already have duplicated content item versions.
+
 To check if you have some you can run this query and delete the duplicated entries.
 
 ```
@@ -145,12 +148,14 @@ we should all be grateful to the following people who contributed patches and fe
 - Hannan Azam ([hannan-azam](https://github.com/hannan-azam))
 - Jamie Philips ([phillipsjs](https://github.com/phillipsjs))
 - Jean-Thierry Kéchichian ([jtkech](https://github.com/jtkech))
+- Jerome van den Heuvel ([Jwheuvel](https://github.com/Jwheuvel))
 - Katsuyuki Ohmuro ([harmony7](https://github.com/harmony7))
 - Kexy Biscuit ([KexyBiscuit](https://github.com/KexyBiscuit))
 - Levent Esen ([leventesen](https://github.com/leventesen))
-- Mohammed Kinawy ([mkinawy](https://github.com/mkinawy))
 - Marek Dzikiewicz ([MpDzik](https://github.com/MpDzik))
+- Matthew Harris ([rtpHarry](https://github.com/rtpHarry))
 - Matt Varblow ([mvarblow](https://github.com/mvarblow))
+- Mohammed Kinawy ([mkinawy](https://github.com/mkinawy))
 - Nicholas Mayne ([Jetski5822](https://github.com/Jetski5822))
 - Paul Devenney ([PaulDevenney](https://github.com/PaulDevenney))
 - Piotr Szmyd ([pszmyd](https://github.com/pszmyd))
@@ -164,4 +169,3 @@ we should all be grateful to the following people who contributed patches and fe
 - Westley Harris ([wharri220](https://github.com/wharri220))
 - Zhi Sun ([sunz7](https://github.com/sunz7))
 - Zoltán Lehóczky ([Lombiq](https://github.com/Lombiq))
-- ([Jwheuvel](https://github.com/Jwheuvel))
