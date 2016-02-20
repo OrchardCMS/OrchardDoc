@@ -8,7 +8,8 @@ Orchard Version   | Framework Required
 ----------------- | ------------------
 Up to version 1.7 | Orchard supports .NET 4.0.
 Version 1.8       | Orchard runs on .NET 4.5 and IIS 7 (or newer)
-Version 1.9       | Orchard runs on .NET 4.5.1 and IIS 7 (or newer) 
+Version 1.9       | Orchard runs on .NET 4.5.1 and IIS 7 (or newer)
+Version 1.10      | Orchard runs on .NET 4.5.2 and IIS 7 (or newer) 
 
 ## Which branch should I be using when working on the codebase?
 Branches are discussed on the [contributing patches](/Documentation/Contributing-patches#Branches) page.
