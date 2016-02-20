@@ -50,7 +50,7 @@ This includes commercial derivative work.
 What's new?
 -----------
 
-Orchard 1.10 includes all the changes from version 1.9.3 (http://docs.orchardproject.net/Documentation/Orchard-1-9-3.Release-Notes) and introduces the following changes and features:
+Orchard 1.10 includes all the changes from version 1.9.3 <http://docs.orchardproject.net/Documentation/Orchard-1-9-3.Release-Notes> and introduces the following changes and features:
 
 #### Features
 * Default values for content fields
@@ -61,13 +61,13 @@ Orchard 1.10 includes all the changes from version 1.9.3 (http://docs.orchardpro
 * Orchard.TaskLease has been deprecated in favor of distributed locks
 * Orchard.jQuery has been deprecated in favor of Orchard.Resources
 * Editor tabs support
-* Orchard.exe help improvements
 
 #### Improvements
 * Use of Nuget packages instead of the /lib folder
 * New extension methods for migrations
 * Upgraded to .NET 4.5.2
 * Recipes and Import/Export improvements
+* Orchard.exe help command enhancement
 
 #### Bugs
 
