@@ -71,7 +71,7 @@ Orchard 1.7.1 fixes bugs and introduces the following features:
 	* Media parts
 * *Orchard.Workflows*: 
 	* New Custom Forms event activity
-	* Decoupled specialized from the Workflows modules, and moved some activities to specific modules
+	* Decoupled specialized activities from the Workflows module and moved some activities to specific modules
 * *Orchard.MediaLibrary*: Fixed XmlRpcHandler allowing blogging clients to work with Media Library
 * *Orchard.Indexing*: Added the container id to the search index
 * *Orchard.Antispam*: New JavaScriptAntiSpamPart (Lombiq)

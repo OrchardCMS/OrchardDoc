@@ -134,7 +134,6 @@ If you were using the Roles or Comments Workflow Activities you will need to ena
 
 * Comments Workflows Activities
 * Roles Workflows Activities
-* 
 
 If you were using Multi-Tenancy then you might need to change the settings of the tenants. Multi-tenant host name are
 not more matching sub-domains automatically. You will need to replace `foo.com` by `*.foo.com` if you want the tenant 
