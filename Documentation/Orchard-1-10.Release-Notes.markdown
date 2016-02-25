@@ -87,6 +87,14 @@ No matter what migration path you take, please take the precaution of making a b
 
 Please follow the upgrade instruction from this document: <http://docs.orchardproject.net/Documentation/orchard-1-9.Release-Notes>
 
+#### Disabled modules
+
+Some modules are not loaded automatically and need to be enabled manually if you are using them:
+- Orchard.Workflows.Timer
+- Orchard.Email.Workflow
+- Orchard.Users.Workflows
+- Orchard.Roles.Workflows
+
 #### Deprected modules
 
 If your modules were using files or resources from Orchard.jQuery you will need to point to the ones defined in Orchard.Resources.
