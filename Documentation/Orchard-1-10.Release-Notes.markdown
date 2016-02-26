@@ -95,6 +95,14 @@ Some modules are not loaded automatically and need to be enabled manually if you
 - Orchard.Users.Workflows
 - Orchard.Roles.Workflows
 
+#### Themes & Layouts
+
+If you are using the Orchard.Layouts module you might need to integrate a custom css file to support the grid system.
+Layouts is using some default classes like `span-4`, which was added automatically by the module but could conflict with the ones in other grid frameworks.
+It's no more added by default. TheThemeMachine is importing it by itself. Most Bootstrap theme should already override the Layout's tagging to incorporate its custom classes.
+If this file is necessary for your theme you will need to add it back to it:
+`https://github.com/OrchardCMS/Orchard/blob/dev/src/Orchard.Web/Modules/Orchard.Layouts/Styles/default-grid.css`
+
 #### Deprected modules
 
 If your modules were using files or resources from Orchard.jQuery you will need to point to the ones defined in Orchard.Resources.
