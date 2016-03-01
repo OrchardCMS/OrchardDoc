@@ -1,7 +1,7 @@
 
 The Orchard Community is pleased to recognize the security researchers who have helped make Orchard CMS safer by finding and reporting security vulnerabilities. Each name listed represents an individual or company who has privately disclosed one or more security vulnerabilities and worked with us to remediate the issue.
 
-_To submit any security vulnerability. please send an email to <orchardfeedback@outercurve.org>_
+_To submit any security vulnerability. please send an email to <orchard@microsoft.com>_
 
 ### Security Researchers
 
