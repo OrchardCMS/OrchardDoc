@@ -144,6 +144,11 @@ If you use the Send Email activity in Workflows to send emails you may want to c
 
 There are two new features in the Dynamic Forms module, Dynamic Forms Validation Activities and Dynamic Forms User Bindings. These contain the C# form submission validator and bindings for `UserPart`, respectively. Since these were moved to their own features from the root feature (to avoid the root feature depend on the Orchard.Scripting.CSharp and Orchard.Users modules) if you make use of these services you have to enable the new features.
 
+#### .NET 4.5.2 breaks module compilation 
+
+Because the Orchard.Framework project now targets .NET 4.5.2, all modules that are downloaded from the gallery during development will need to be retargetd to .NET 4.5.2 too.
+Not doing this will prevent the module from compiling and appearing in the modules list.
+
 Contributors
 ------------
 
