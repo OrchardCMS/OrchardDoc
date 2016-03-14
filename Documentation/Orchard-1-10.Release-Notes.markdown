@@ -117,6 +117,8 @@ If your modules were using some of these attributes you will need to remove them
 
 Because we have moved to using Nuget packages instead of the /lib folder, you will need to point to the same Nuget packages if you were using the /lib folder.
 
+@qt1 has created a script to help with the migration to Nuget here: https://github.com/OrchardCMS/Orchard/issues/6529
+
 #### Database constraints
 
 Orchard 1.10 contains new database contraints to prevent corrupted data. One of them might fail if you already have duplicated content item versions.
