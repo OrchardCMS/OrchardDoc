@@ -54,7 +54,7 @@ Orchard 1.10 includes all the changes from version 1.9.3 <http://docs.orchardpro
 
 #### Features
 * Default values for content fields
-* Configurable location of Modules and Themes
+* Configurable locations for Modules and Themes ([see this documentation page on how to configure them](http://docs.orchardproject.net/Documentation/Orchard-module-loader-and-dynamic-compilation#CustomFolders))
 * Parameterized snippets
 * Orchard.Resources now contains common assets to be reused across core modules
 * Layer rules have been moved to Orchard.Conditions for reusability

@@ -22,9 +22,9 @@ Once modules are properly activated, they are further examined to detect and ena
 
 # Discovery 
 
-The list of available modules in an Orchard installation is built by searching various folders of the file system for "**module.txt**" files. The folders looked at by default are listed in the following sections.
+The list of available extensions in an Orchard installation is built by searching various folders of the file system for "**module.txt**" and "**theme.txt**" files. The folders looked at by default are listed in the following sections.
 
-##  "~/Modules" folder 
+##  "~/Modules" Folder 
 
 The "~/Modules" folder is intended to contain the vast majority of Orchard modules. The convention is that each module is stored in a sub-folder named "&lt;ModuleName&gt;" containing a single "module.txt" file.  Packaging, distribution and sharing of modules is only supported for modules in the "~/Modules" folder.
 
@@ -36,27 +36,43 @@ The "~/Core" folder contains, by convention, modules defined in the "Orchard.Cor
 
 The "~/Themes" folder is intended to contain Orchard Themes. Wrt to dynamic compilation, Themes are treated almost exactly the same as Modules, except that Themes don't have to have code (assembly in bin or .csproj file). For the rest of this page, when we refer to "Module", it should be understand that the concept applies to "Theme" the same way.
 
+## Custom Folders
+
+Orchard 1.10 introduced a new feature that allows the loading of extensions from custom-defined folders outside of the ones listed above by adding the `ExtensionLocations` service that is utilised by each extension loader (see the Loaders in the Activation section below).
+
+Additional extension folders can be configured by defining an AppSetting (e.g. by adding it to the root web.config file, which contains appropriate examples) with the `key` "Modules" and/or "Themes" with their respective `value` being e.g. "~/Modules.Custom" and/or "~/Themes.Custom".
+
 ##  Example 
 
-Here is an example of a Orchard installation which contains 6 modules: "Common", "Localization", "Foo", "Bar".
+Here is an example of an Orchard installation which contains the following extensions: Common and Localization (Core modules), Orchard.Azure and Orchard.Caching (built-in modules), SafeMode and TheAdmin (built-in themes), MyModule1 and MyModule2 (custom modules), MyBaseTheme and MyTheme (custom themes).
 
     
-    RootFolder
+    Root (Orchard.Web)
       Core
         Common
           module.txt  <= "Common" module from "Core"
         Localization
           module.txt  <= "Localization" module from "Core"
       Modules
-        Foo
-          module.txt  <= "Foo" module
-        Bar
-          module.txt  <= "Bar" module
+        Orchard.Azure
+          module.txt  <= "Orchard.Azure" module
+        Orchard.Caching
+          module.txt  <= "Orchard.Caching" module
+	  Modules.Custom
+		MyModule1
+		  module.txt  <= "MyModule1" module
+		MyModule2
+		  module.txt  <= "MyModule2" module
       Themes
-        T2
-          theme.txt  <= "T1" theme
-        T2
-          theme.txt  <= "T2" theme
+        SafeMode
+          theme.txt  <= "SafeMode" theme
+        TheAdmin
+          theme.txt  <= "TheAdmin" theme
+	  Themes.Custom
+        MyBaseTheme
+          theme.txt  <= "MyBaseTheme" theme
+        MyTheme
+          theme.txt  <= "MyTheme" theme
 
 
 # Activation 
@@ -71,11 +87,11 @@ This loader looks in in "~/bin" directory for a assembly name corresponding to t
 
 ##  "Core Module" Loader 
 
-If "module.txt" indicates a module from the "~/Core" folder, the CoreExtensionLoader return the types from the "Orchard.Core.&lt;moduleMame&gt;" namespace of the "Orchard.Core" assembly. "Orchard.Core" is a special assembly containing modules that are "core" to the system, i.e. offering basic functionality on top of the Orchard Framework.
+If "module.txt" indicates a module from the "~/Core" folder, the CoreExtensionLoader returns the types from the "Orchard.Core.&lt;moduleMame&gt;" namespace of the "Orchard.Core" assembly. "Orchard.Core" is a special assembly containing modules that are "core" to the system, i.e. offering basic functionality on top of the Orchard Framework.
 
 ##  "Precompiled Module" Loader 
 
-If "module.txt" indicates a module from the "~/Modules" folder, the PrecompiledExtensionLoader looks for an assembly named "&lt;ModuleName&gt;" in the "~/Modules/&lt;ModuleName&gt;/bin" folder. If the file exists, it's is copied to the `~/App_Data/Dependencies` folder, which is a special folder used to ASP.NET to look for additional assemblies outside of the traditional "~/bin" folder.
+If "module.txt" indicates a module from the "~/Modules" folder, the PrecompiledExtensionLoader looks for an assembly named "&lt;ModuleName&gt;" in the "~/Modules/&lt;ModuleName&gt;/bin" folder. If the file exists, it's is copied to the `~/App_Data/Dependencies` folder, which is a special folder used by ASP.NET to look for additional assemblies outside of the traditional "~/bin" folder.
 
 ##  "Dynamic Module" Loader 
 
