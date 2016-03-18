@@ -1,6 +1,6 @@
 Build: 1.10
 
-Published: 2/1/2016
+Published: 3/18/2016
 
 How to Install Orchard
 ----------------------
@@ -24,7 +24,7 @@ or you may experience frequent disconnections.
 What file to download?
 ----------------------
 
-If you just want to use Orchard and don't care about the source code, Orchard.Web.1.10.zip
+If you just want to use Orchard and don't care about the source code, Orchard.Web.zip
 is what you want to use, preferably through the WebPI instructions.
 Do not attempt to build the WebPI version in VS. Use the full source if you want to use VS.
 
