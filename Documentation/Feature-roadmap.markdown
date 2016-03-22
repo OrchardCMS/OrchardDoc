@@ -20,8 +20,11 @@ This release is expected for Q4 2016
   * Error/Exception branches support
   * Loop activities
   * Piotr ([pszmyd](https://www.codeplex.com/site/users/view/pszmyd)) owns this contribution
+* New base theme ([Daniel](https://github.com/DanielStolt) and [Ryan]((https://github.com/ryandrewburnett)) own this contribution) 
+* Remove Cloud Services as a supported target
 
 ### Looking for owners
+* New front facing website
 * Owin identity providers
   * OAuth, AAD ...
 * Javascript integration
@@ -29,10 +32,9 @@ This release is expected for Q4 2016
   * Script activity
   * Jint
 * Content tree
-* New base theme
+
 * REST APIs ([design notes](https://orchard.codeplex.com/discussions/560607))
 * Refactor output cache module as an Owin middleware
-* New front facing website
 
 ### Currently Implemented (Partially or in Full)
 
