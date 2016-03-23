@@ -20,7 +20,7 @@ This release is expected for Q4 2016
   * Error/Exception branches support
   * Loop activities
   * Piotr ([pszmyd](https://www.codeplex.com/site/users/view/pszmyd)) owns this contribution
-* New base theme ([Daniel](https://github.com/DanielStolt) and [Ryan]((https://github.com/ryandrewburnett)) own this contribution) 
+* New base theme ([Daniel](https://github.com/DanielStolt) and [Ryan](https://github.com/ryandrewburnett) own this contribution) 
 * Remove Cloud Services as a supported target
 
 ### Looking for owners
