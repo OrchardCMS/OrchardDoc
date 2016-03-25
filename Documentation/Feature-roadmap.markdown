@@ -21,7 +21,7 @@ This release is expected for Q4 2016
   * Loop activities
   * Piotr ([pszmyd](https://www.codeplex.com/site/users/view/pszmyd)) owns this contribution
 * New base theme ([Daniel](https://github.com/DanielStolt) and [Ryan](https://github.com/ryandrewburnett) own this contribution) 
-* Remove Cloud Services as a supported target
+* Remove Cloud Services as a supported target ([Daniel](https://github.com/DanielStolt) owns this contribution)
 
 ### Looking for owners
 * New front facing website
