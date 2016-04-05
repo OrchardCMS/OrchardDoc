@@ -4,3 +4,6 @@
 - file references like `[text](./filename)` are automatically resolved
 - `#include(./filename.markdown)` are automatically inserted
 - comments can be done using `//` at the beginning of lines
+
+
+[![Join the chat at https://gitter.im/OrchardCMS/OrchardDoc](https://badges.gitter.im/OrchardCMS/OrchardDoc.svg)](https://gitter.im/OrchardCMS/OrchardDoc?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
