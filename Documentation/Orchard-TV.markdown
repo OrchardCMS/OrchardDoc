@@ -23,14 +23,19 @@ Course for beginners interested in developing on Orchard, starting with how to u
 
 [Orchard CMS Tutorial : Recipes in Orchard CMS](https://www.udemy.com/orchard-cms-tutorial-recipes-in-orchard-cms/) by Abhishek Luv
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL8AwaH3ssiASskvNYC69I-FKr3kjcBo8X" frameborder="0" allowfullscreen></iframe>
+
 ### Orchard CMS Theme Development For Beginners
 
 [Orchard CMS Theme Development for Beginners](https://www.udemy.com/orchard-cms-theme-development-for-beginners) by Abhishek Luv
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL8AwaH3ssiARImeICwvOavU_Gna-Xza_7" frameborder="0" allowfullscreen></iframe>
 
 ### Orchard CMS Tutorial : Workflows in Orchard CMS
 
 [Orchard CMS Tutorial : Workflows in Orchard CMS](https://www.udemy.com/orchard-cms-tutorial-workflows-in-orchard-cms/) by Abhishek Luv
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL8AwaH3ssiASR5GeZtPvKnyOAGogyMnjt" frameborder="0" allowfullscreen></iframe>
 
 ### Introduction to Orchard 1.5 by Sébastien Ros
 
