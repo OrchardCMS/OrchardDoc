@@ -3,7 +3,8 @@ Creating an Image Gallery
 > Draft topic 
 
 This document targets Orchard developers. Using only the admin dashboard, you will create a gallery that renders thumbnails of images that you select from the Media folder. Afterward, you can customize the gallery with CSS and an alternate HTML template.
-Create the Image Gallery Content Type
+
+Create the Image Gallery Content Type
 -------------------------------------
 
 
@@ -13,7 +14,7 @@ This document targets Orchard developers. Using only the admin dashboard, you wi
 - Give the new type a Display Name (e.g. *My Image Gallery*).
 - Click **Create**.
 
-![New content type](/Attachments/Creating-an-image-gallery/new-content-type.jpg)
+![New content type](/Attachments/Creating-an-image-gallery/new-content-type.JPG)
 
 - When you click create, Orchard will open the Add Parts page.
 - Check **Widget**, then click **Save**.
@@ -25,7 +26,7 @@ This document targets Orchard developers. Using only the admin dashboard, you wi
 - Name the field (e.g. *My Media Library Picker Field*.)
 - Click **Save**.
 
-![Add a new field](/Attachments/Creating-an-image-gallery/add-new-field.jpg)
+![Add a new field](/Attachments/Creating-an-image-gallery/add-new-field.JPG)
 
 - After you click save, click on the down carat beside the new field.
 - Check "**Allow multiple content items**."
@@ -33,7 +34,8 @@ This document targets Orchard developers. Using only the admin dashboard, you wi
 - You will now have the following Content Type. It has both a Widget Part and a Media Library Picker Field.
 
 ![Finished content type](/Attachments/Creating-an-image-gallery/finished-content-type.jpg)
-Add the Widget a Zone
+
+Add the Widget a Zone
 ---------------------
 
 
@@ -55,7 +57,8 @@ In this screen shot, we have already imported some images and created some folde
 - Then click the **Select** button in the lower left of the modal (it's a bit hidden.)
 - The Add Widget page will again display. Click **Save**.
 - Visit the front end of your site to see the scaffolding of an image gallery.
-Customize the Look of the Gallery
+
+Customize the Look of the Gallery
 ---------------------------------
 
 

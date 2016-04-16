@@ -14,73 +14,73 @@ In this particular demo, we'll create an **External Post** functionality using *
 
 1.**External Post** *Content Type*
 
-![](../Upload/Projections/CreateContentType.png)
+![](../Upload/projections/createcontenttype.PNG)
 
 2.**Adding 3 Fields Title, Author, Url** and **1 Part BodyPart**
 
-![](../Upload/Projections/addingfieldsnparts.png)
+![](../Upload/projections/addingfieldsnparts.PNG)
 
 3.Click on **Edit Placement** to place fields and parts accordingly
 
-![](../Upload/Projections/editingplacement.png)
+![](../Upload/projections/editingplacement.PNG)
 
 4.Creating **External Post**
 
-![](../Upload/Projections/creatingexternalpost.png)
+![](../Upload/projections/creatingexternalpost.PNG)
 
-![](../Upload/Projections/externalpostcreated.png)
+![](../Upload/projections/externalpostcreated.PNG)
 
 ## Creating a Query 
 
 1.Creating a **Query** "ExternalPostQuery"
 
-![](../Upload/Projections/addingquery.png)
+![](../Upload/projections/addingquery.PNG)
 
 
-![](../Upload/Projections/querycreated.png)
+![](../Upload/projections/querycreated.PNG)
 
 ## Editing a Query : **Filter, Sort, Layouts**
 
 
-![](../Upload/Projections/editingquery.png)
+![](../Upload/projections/editingquery.PNG)
 
 2.Click **Add a new Filter**
 
-![](../Upload/Projections/addfilter.png)
+![](../Upload/projections/addfilter.PNG)
 
 Select **External Post** as the *Content Type*
 
-![](../Upload/Projections/externalpostfilter.png)
+![](../Upload/projections/externalpostfilter.PNG)
 
 3.Click **Add a new Sort Criteria** and Select **Publication Date**
 
 
-![](../Upload/Projections/sortpublication.png)
+![](../Upload/projections/sortpublication.PNG)
 
 4.Click **Add a new Layout** and Select **Html List**
 
-![](../Upload/Projections/selectlayout.png)
+![](../Upload/projections/selectlayout.PNG)
 
 5.Save the Layout with Display Type as **Detail**
 
-![](../Upload/Projections/savelayout.png)
+![](../Upload/projections/savelayout.PNG)
 
 5.Previewing the query result
 
-![](../Upload/Projections/clickpreview.png)
+![](../Upload/projections/clickpreview.PNG)
 
-![](../Upload/Projections/queryresult.png)
+![](../Upload/projections/queryresult.PNG)
 
 ## Adding Properties to the Html List Layout
 
 Change **Display Mode** to **Properties**
 
-![](../Upload/Projections/changedisplaymode.png)
+![](../Upload/projections/changedisplaymode.PNG)
 
 1.**Title Property**
 
 
-![](../Upload/Projections/titleproperty.png)
+![](../Upload/projections/titleproperty.PNG)
 
 Open Rewrite Results -> Select **Rewrite output**
 
@@ -88,37 +88,37 @@ Rewriting the output for the Title Property and using **Tokens** to the Title an
 
 	<h1><a href="{Content.Fields.ExternalPost.Url}" target="_blank">{Content.Fields.ExternalPost.Title}</a></h1>
 
-![](../Upload/Projections/titlerewrite.png)
+![](../Upload/projections/titlerewrite.PNG)
 
 2.**Author Property**
 
-![](../Upload/Projections/addingproperties.png)
+![](../Upload/projections/addingproperties.PNG)
 
 Rewriting the output for the Author Property and using **Tokens**
 
 	<p>Posted By <b>{Content.Fields.ExternalPost.Author}</b> on {Content.Date}</p>
 
-![](../Upload/Projections/authorrewrite.png)
+![](../Upload/projections/authorrewrite.PNG)
 
 ## Creating a Projection Page for ExernalPostQuery(Unordered Html List)
 
 
-![](../Upload/Projections/projectionpage.png)
+![](../Upload/projections/projectionpage.PNG)
 
 Select the **Show Pager** check box to add a pager to the list.
 
-![](../Upload/Projections/creatingprojectionpage.png)
+![](../Upload/projections/creatingprojectionpage.PNG)
 
 
 ## Rendering Results using Projection Widget
 
 
-![](../Upload/Projections/projectionwidget.png)
+![](../Upload/projections/projectionwidget.PNG)
 
 Select **ExernalPostQuery(Unordered Html List)** For Query
 
-![](../Upload/Projections/creatingprojectionwidget.png)
+![](../Upload/projections/creatingprojectionwidget.PNG)
 
 Rendered Result 
 
-![](../Upload/Projections/renderedresult.png)
+![](../Upload/projections/renderedresult.PNG)
