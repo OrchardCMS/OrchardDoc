@@ -1,4 +1,4 @@
-Installing-Orchard
+Installing Orchard
 ==================
 
 This topic targets, and was tested with, the Orchard 1.8 release.
