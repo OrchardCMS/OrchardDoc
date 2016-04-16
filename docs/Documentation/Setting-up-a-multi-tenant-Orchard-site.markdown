@@ -13,8 +13,9 @@ Multi-tenancy is particularly nice in a [Windows Azure environment](Deploying-Or
 because one deployment to Azure can easily support multiple websites.
 
 > **Note:** If you want to set up a multi-tenant test site on your local machine, first read
-[Testing Multi-Tenancy on a Local Machine](/Documentation/Setting-up-a-multi-tenant-Orchard-site#TestingMultiTenancyonaLocalMachine) later in this article.
-Enabling Multi-Tenancy
+[Testing Multi-Tenancy on a Local Machine](Setting-up-a-multi-tenant-Orchard-site#TestingMultiTenancyonaLocalMachine) later in this article.
+
+Enabling Multi-Tenancy
 ----------------------
 
 
@@ -30,7 +31,8 @@ which is initial site created after you install Orchard.
 You can think of the default tenant as the landlord of an apartment building
 who can provision new apartments and decide the terms for each tenant,
 and the individual tenants as inhabitants of each apartment.
-Adding Tenants
+
+Adding Tenants
 --------------
 
 
@@ -60,7 +62,8 @@ However, the database options are not displayed, because they were decided when 
 string and for a table prefix. The table prefix will be added to each of the tenant's tables within the database:
 
 ![](../Upload/screenshots/sql_table_prefix.png)
-Working with Tenant Sites
+
+Working with Tenant Sites
 -------------------------
 
 
@@ -79,7 +82,8 @@ Under **List of Site's Tenants** for your default site, click **Suspend** for th
 ![](../Upload/screenshots_675/multiTenancy_suspend_675.png)
 
 To bring the tenant site back online, click **Resume**.
-Removing Tenants
+
+Removing Tenants
 ----------------
 
 
@@ -89,7 +93,8 @@ You might want to move the folder to a backup location in case you need to resto
 
 > **Note:** On Azure, there is currently no way to remove a tenant except by removing the actual
 database and the configuration from BLOB storage.
-Testing Multi-Tenancy on a Local Machine
+
+Testing Multi-Tenancy on a Local Machine
 ----------------------------------------
 
 

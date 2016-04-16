@@ -5,11 +5,12 @@ In this tutorial, you will learn how to develop a simple commerce module using o
 If you do not have the [Web Platform Installer](http://www.microsoft.com/web/downloads/platform.aspx) on your computer, download it before beginning this tutorial.
 
 > **This guide has been marked for review.** If you are just getting started with Orchard module development you should read the [Getting Started with Modules course](Getting-Started-with-Modules) first. It will introduce you to building modules with Orchard using Visual Studio Community, a free edition of Visual Studio. 
-Setting Up the Orchard Site
+
+Setting Up the Orchard Site
 ---------------------------
 
 
-First, you will set up a new Orchard website. If you already have a site set up, you can skip this section and jump directly to [the code generation section](/Documentation/Creating-a-module-with-a-simple-text-editor#GeneratingCodefortheModule). To start the setup, open **IIS Manager**, right-click **Sites**, and click **Add Web Site**.
+First, you will set up a new Orchard website. If you already have a site set up, you can skip this section and jump directly to [the code generation section](Creating-a-module-with-a-simple-text-editor#GeneratingCodefortheModule). To start the setup, open **IIS Manager**, right-click **Sites**, and click **Add Web Site**.
 
 ![Figure 1. Creating the Orchard site](../Attachments/Creating-a-module-with-a-simple-text-editor/01_NewWebSite.PNG)
 
@@ -40,7 +41,8 @@ This is equivalent to setting up the site from the web interface.
 
 Leave the command window open. (In fact, don't close it until you have finished this tutorial.)
 
-Generating Code for the Module
+
+Generating Code for the Module
 ------------------------------
 
 
@@ -80,7 +82,8 @@ Change the description to "A simple commerce module". Change the description of 
             Description: A simple product part.
             Category: Commerce
 
-Creating the Model for the Part
+
+Creating the Model for the Part
 -------------------------------
 
 
@@ -134,7 +137,8 @@ In the command window, enable the new feature using the following command:
     
     feature enable SimpleCommerce
 
-Creating the Initial Data Migration File
+
+Creating the Initial Data Migration File
 ----------------------------------------
 
 
@@ -197,7 +201,8 @@ Make sure the following line is present in the _.csproj_ file. (It should alread
 
 
 Navigate to the **Features** screen in the dashboard. You see a warning that indicates that one of the features needs to be updated, and the **Simple Commerce** module is displayed in red. Click **Update** to ensure that the migrations are run and that the module is up to date.
-Adding a Handler
+
+Adding a Handler
 ----------------
 
 
@@ -225,7 +230,8 @@ Add the file to the _.csproj_ file so that dynamic compilation can pick it up, u
 
     <Compile Include="Handlers\ProductHandler.cs" />
 
-Adding a Driver
+
+Adding a Driver
 ---------------
 
 
@@ -293,7 +299,8 @@ Add the _placement.info_ file to the _.csproj_ file using the following line:
     
     <Content Include="placement.info" />
 
-Building the Templates
+
+Building the Templates
 ----------------------
 
 
@@ -327,7 +334,8 @@ Add those two templates to the _.csproj_ file using the following lines:
     <Content Include="Views\Parts\Product.cshtml" />
     <Content Include="Views\EditorTemplates\Parts\Product.cshtml" />
 
-Putting it All Together into a Content Type
+
+Putting it All Together into a Content Type
 -------------------------------------------
 
 

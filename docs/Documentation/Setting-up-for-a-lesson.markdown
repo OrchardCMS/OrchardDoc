@@ -27,7 +27,7 @@ Instead of what you normally see with .NET code where the opening curly brace is
         }
     }
 
-The placement of the opening curly braces on the same line is a requirement listed in the [code conventions](/Documentation/Code-conventions) document for Orchard CMS.
+The placement of the opening curly braces on the same line is a requirement listed in the [code conventions](Code-conventions) document for Orchard CMS.
 
 You [can do it by editing the Visual Studio settings manually](http://articles.runtings.co.uk/2015/09/orchard-cms-quick-tipcurling-up-with.html) but this will apply it to all of your solutions whether they are Orchard-based or not.
 

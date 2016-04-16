@@ -1,13 +1,12 @@
 Walkthroughs and UI Mockups
 ===========================
 
-
 #### Orchard Branding
 
 * [Branding svg](https://raw.githubusercontent.com/OrchardCMS/OrchardDoc/master/walkthroughs/branding/orchard-logo.svg)
 * [Branding vectors](../Walkthroughs/branding/OrchardLogo1.png)
 * [Branding PSD](../Walkthroughs/branding/OrchardLogo2.png)
-* [Adobe Illustrator logo sources](/Attachments/walkthroughs/OrchardLogos.zip)
+* [Adobe Illustrator logo sources](../Attachments/walkthroughs/OrchardLogos.zip)
 
 #### Wireframes
 

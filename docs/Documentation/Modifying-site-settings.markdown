@@ -38,7 +38,7 @@ In the gallery feed settings, you can add or delete a feed using the following s
 * **Add Feed**. Lets you specify the URL to a gallery feed.
 * **Delete**. Lets you remove an existing gallery feed.
 
-For more information about how to add feeds to the gallery, see [Registering Additional Gallery Feeds](/Documentation/Module-gallery-feeds).
+For more information about how to add feeds to the gallery, see [Registering Additional Gallery Feeds](Module-gallery-feeds).
 
 ## Comments Settings
 To access settings for comments, click **Comments** in the **Settings** panel. This opens the following screen: 
@@ -72,7 +72,8 @@ To access caches settings like Default Cache Duration, Max Age, Vary Query Strin
 ![](../Upload/screenshots_675/cachesettings_675.png)
   
   
-Change History
+
+Change History
 --------------
 
 * Updates for Orchard 1.8

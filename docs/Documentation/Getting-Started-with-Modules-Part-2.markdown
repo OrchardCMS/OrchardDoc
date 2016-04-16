@@ -232,7 +232,7 @@ You do this registration inside the `Handler` class, although that's not it's on
 
 For example, you could build an analytics module that listens to the `Loaded` event in order to log usage statistics. 
 
-> If you're curious, you can see what event handlers you can override in your own handlers by examining the source code for `ContentHandlerBase` and reading the [understanding content handlers](/Documentation/Understanding-content-handlers) guide.
+> If you're curious, you can see what event handlers you can override in your own handlers by examining the source code for `ContentHandlerBase` and reading the [understanding content handlers](Understanding-content-handlers) guide.
 
 The handler you need in this module is not going to be very complex, but it will implement some plumbing that is necessary to set up the persistence of the part:
 
