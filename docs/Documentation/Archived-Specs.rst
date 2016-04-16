@@ -1,9 +1,9 @@
-.. _index:
+.. _archived-specs-index:
 
 Archived Specs
---------------
+----------------
 
 .. toctree::
     :titlesonly:
 
-    Archived-specs
+    Archived-specifications

@@ -1,7 +1,7 @@
-.. _index:
+.. _using-the-orchard-gallery-index:
 
 Using the Orchard Gallery
--------------------------
+----------------------------
 
 .. toctree::
     :titlesonly:

@@ -1,7 +1,7 @@
-.. _index:
+.. _additional-topics-index:
 
 Additional Topics
------------------
+-------------------
 
 .. toctree::
     :titlesonly:

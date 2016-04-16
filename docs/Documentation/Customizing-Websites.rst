@@ -1,7 +1,7 @@
-.. _index:
+.. _customizing-websites-index:
 
 Customizing Websites
---------------------
+------------------------
 
 .. toctree::
     :titlesonly:

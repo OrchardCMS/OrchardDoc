@@ -1,7 +1,7 @@
-.. _index:
+.. _creating-themes-index:
 
 Creating Themes
----------------
+------------------
 
 .. toctree::
     :titlesonly:

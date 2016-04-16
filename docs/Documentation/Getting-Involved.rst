@@ -1,7 +1,7 @@
-.. _index:
+.. _getting_involved-index:
 
 Getting Involved
-----------------
+------------------
 
 .. toctree::
     :titlesonly:

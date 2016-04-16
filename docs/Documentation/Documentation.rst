@@ -1,7 +1,7 @@
-.. _index:
+.. _documentation-index:
 
 Documentation
--------------
+-----------------
 
 .. toctree::
     :titlesonly:

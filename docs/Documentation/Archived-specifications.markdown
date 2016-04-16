@@ -1,5 +1,5 @@
-Archived Specs
-==============
+Archived Specifications
+=======================
 
 * [Blogs](blogs)
 * [Comments](comments)

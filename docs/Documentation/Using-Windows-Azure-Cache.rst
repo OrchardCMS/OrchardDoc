@@ -1,7 +1,7 @@
-.. _index:
+.. _using-windows-azure-cache-index:
 
 Using Windows Azure Cache
--------------------------
+-------------------------------
 
 .. toctree::
     :titlesonly:

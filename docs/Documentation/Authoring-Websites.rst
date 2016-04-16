@@ -1,7 +1,7 @@
-.. _index:
+.. _authoring-websites-index:
 
 Authoring Websites
-------------------
+---------------------
 
 .. toctree::
     :titlesonly:

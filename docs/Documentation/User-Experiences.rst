@@ -1,7 +1,7 @@
-.. _index:
+.. _user-experiences-index:
 
 User Experiences
-----------------
+------------------
 
 .. toctree::
     :titlesonly:

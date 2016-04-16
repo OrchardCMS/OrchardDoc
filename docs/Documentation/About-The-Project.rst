@@ -1,7 +1,7 @@
-.. _index:
+.. _about-the-project-index:
 
 About the Project
------------------
+-------------------
 
 .. toctree::
     :titlesonly:

@@ -1,7 +1,7 @@
-.. _index:
+.. _hosting-and-deploying-websites-index:
 
 Hosting and Deploying Websites
-------------------------------
+-----------------------------------
 
 .. toctree::
     :titlesonly:

@@ -1,7 +1,7 @@
-.. _index:
+.. _getting-started-with-modules-index:
 
 Getting-Started-with-Modules
-----------------------------
+---------------------------------
 
 .. toctree::
     :titlesonly:

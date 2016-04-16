@@ -1,7 +1,7 @@
-.. _index:
+.. _tutorial-videos-index:
 
 Tutorial Videos
----------------
+----------------
 
 .. toctree::
     :titlesonly:

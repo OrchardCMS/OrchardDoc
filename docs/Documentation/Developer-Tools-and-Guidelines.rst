@@ -1,7 +1,7 @@
-.. _index:
+.. _developer-tools-and-guidelines-index:
 
 Developer Tools and Guidelines
-------------------------------
+----------------------------------
 
 .. toctree::
     :titlesonly:

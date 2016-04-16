@@ -1,7 +1,7 @@
-.. _index:
+.. _extending-orchard-index:
 
 Extending Orchard
------------------
+--------------------
 
 .. toctree::
     :titlesonly:

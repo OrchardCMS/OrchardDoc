@@ -1,7 +1,7 @@
-.. _index:
+.. _managing-websites-index:
 
 Managing Websites
------------------
+---------------------
 
 .. toctree::
     :titlesonly:

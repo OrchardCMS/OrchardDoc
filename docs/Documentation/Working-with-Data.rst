@@ -1,7 +1,7 @@
-.. _index:
+.. _working-with-data-index:
 
 Working with Data
------------------
+--------------------
 
 .. toctree::
     :titlesonly:
