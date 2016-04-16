@@ -2,7 +2,7 @@
 The slug admin UI shows the first part of the URL as read only and follows that immediately with a textbox that is wide enough to accommodate long slugs.
 
 We should explain what a slug is and what it's used for right in the admin UI as many users will not be familiar with that notion:
-"A ‘slug' is what Orchard uses to build a unique and readable address for your pages. You can usually trust the system to build one for you from the title or you can tweak it to make it shorter or more or less explicit, at your convenience. An example of slug is 'about-us'."
+"A slug' is what Orchard uses to build a unique and readable address for your pages. You can usually trust the system to build one for you from the title or you can tweak it to make it shorter or more or less explicit, at your convenience. An example of slug is 'about-us'."
 
 ## Validation
 

@@ -20,7 +20,7 @@ A package is the deployment vehicle for all extensions. It is a versioned zip ar
 ## Theme
 A theme is a packaged look and feel for the front-end of the application.
 
-![](../Upload/definitions%2fThemeDefinedStyles.PNG)
+![](../Upload/definitions/ThemeDefinedStyles.PNG)
 Themes are also sometimes called skins.
 The most obvious way to personalize an application, themes provide a simple way to modify the structure and styling of the application markup. They should be easy to create, modify, install and switch. They should enable radical changes in presentation to the point where it would be difficult to tell what application technology is powering the site by looking at its UI or its markup.
  
@@ -42,7 +42,7 @@ A template is deployed as part of the views of the application, or as part of a 
 ## Widget
 A widget is a self-contained piece of UI that can be injected into specific placeholders in application pages.
 
-![](../Upload/definitions%2fWidgets.PNG)Widgets are similar to WebParts, and like WebParts can be added to predefined zones on the page but they are much simpler in implementation.
+![](../Upload/definitions/Widgets.PNG)Widgets are similar to WebParts, and like WebParts can be added to predefined zones on the page but they are much simpler in implementation.
 Widgets may surface the features of a plug-in or other feature of the application, and in many cases depend on underlying application or extended features.
 
 #### Examples

@@ -7,7 +7,7 @@ Orchard documentation
     :titlesonly:
 
     Documentation/Getting-Started
-    Documentation/About-the-Project
+    Documentation/About-The-Project
     Documentation/Tutorial-Videos
     Documentation/Documentation
     Documentation/User-Experiences
