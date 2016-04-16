@@ -1,15 +1,16 @@
+Tags
+====
 
 The system can also be queried to provide all tags currently in use or to provide all content items that have been tagged with a given tag.
 
 Because any content could be tagged, this will be implemented as a content part.
 
-
-# Applicability of the taggable content part
+## Applicability of the taggable content part
 The default setting for tags should be that they are available on any content type.
 
-# Scenarios
+## Scenarios
 
-## A content author can apply tags to any content item he creates
+### A content author can apply tags to any content item he creates
 Except is the site administrator disabled the taggable aspect from the content type being edited, content items can be tagged through UI that is dynamically added to the admin UI for the current item.
 
 1. The author goes to the admin page for his content item.
@@ -20,7 +21,7 @@ Except is the site administrator disabled the taggable aspect from the content t
 
 4. The author publishes the new version.
 
-## A user of the site can navigate contents by tags
+### A user of the site can navigate contents by tags
 
 1. A user navigates to the site and sees a tag cloud in one of the columns.
 
@@ -34,7 +35,7 @@ For the moment, and until we have widgets, we will hard-code the tag cloud into 
 
 5. The user clicks on the title of one of the items and can then read the full page.
 
-# Permissions
+## Permissions
 
 The owner here is the owner of the content item being tagged for the tag content permission, and the site owner for the tag management right.
 

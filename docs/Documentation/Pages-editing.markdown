@@ -1,4 +1,5 @@
-
+Pages editing
+=============
 
 ## Page creation
 The page draft is created in the database when the save or preview button is clicked (preview saves the draft implicitly). In order to save, the state of the page form must be valid.

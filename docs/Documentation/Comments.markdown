@@ -1,8 +1,9 @@
+Comments
+========
 
+## Scenarios
 
-# Scenarios
-
-## A user can comment content entries
+### A user can comment content entries
 
 1. User browses the site and wants to comment a blog post
 
@@ -14,7 +15,7 @@ When "remember me" is checked, a cookie with a long expiration is set on the cli
 
 3. The comment is published after validation by the spam filter.
 
-## A user can receive notifications when answers to his comments are published
+### A user can receive notifications when answers to his comments are published
 
 1. When adding a comment, a user can check "receive e-mail notifications for new comments on this post".
 
@@ -25,7 +26,7 @@ The e-mail contains the text of the new comment and a link (using a # anchor) to
 
 **Status: Not implemented yet**
 
-## A user can subscribe to the comments feed for any item
+### A user can subscribe to the comments feed for any item
 
 1. The user can use the feed icon for the comment stream to add it to his favorite feed reader (modus operandi varies with readers and browsers).
 
@@ -35,7 +36,7 @@ The e-mail contains the text of the new comment and a link (using a # anchor) to
 
 **Status: Not implemented yet**
 
-## The site administrator gets notified when new comments are added
+### The site administrator gets notified when new comments are added
 
 1. A user adds a comment.
 
@@ -45,7 +46,7 @@ The e-mail contains the text of the new comment and a link (using a # anchor) to
 
 **Status: Not implemented yet**
 
-## The site administrator can manage comments
+### The site administrator can manage comments
 
 1. The administrator of the site clicks "Manage comments" from the admin UI's global menu or from a "manage comments for this item" link at the bottom of the admin UI for a specific content item or from an alert e-mail he received from the site.
 
@@ -55,7 +56,7 @@ The e-mail contains the text of the new comment and a link (using a # anchor) to
 
 4. The new comment can be read by anyone.
 
-## The site administrator can configure comment publication rules
+### The site administrator can configure comment publication rules
 
 1. The administrator goes to the permission administration screen.
 
@@ -63,7 +64,7 @@ The e-mail contains the text of the new comment and a link (using a # anchor) to
 
 3. Comments by non-authenticated users are not published by default anymore, but only when an administrator publishes them.
 
-## A content owner can close comments on his items
+### A content owner can close comments on his items
 
 1. A content author feels the comment thread on one of his blog posts is spinning out of control into a troll fest.
 
@@ -71,7 +72,7 @@ The e-mail contains the text of the new comment and a link (using a # anchor) to
 
 3. No new comments can be added.
 
-## Comments are threaded
+### Comments are threaded
 
 1. A user sees a specific comment he wants to answer.
 
@@ -81,7 +82,7 @@ The e-mail contains the text of the new comment and a link (using a # anchor) to
 
 4. The resulting new comment gets added at the end of the comment thread and has a link to the original comment.
 
-## Authenticated users and author comments appear different
+### Authenticated users and author comments appear different
 
 1. An author answers a comment on one of his content items.
 
@@ -89,7 +90,7 @@ The e-mail contains the text of the new comment and a link (using a # anchor) to
 
 **Note:** authenticated users' comments could also appear differently (from non-authenticated and also from author comments) as they can have a different weight in people's minds on some sites.
 
-# Spam protection
+## Spam protection
 
 Spam protection is strictly necessary on a comment feature but is difficult to implement. Fortunately, many solutions already exist and can be integrated into existing applications.
 
@@ -97,7 +98,7 @@ The comment infrastructure should be ready to be extended with various spam prot
 
 Administrators can mark comments as spam rather than delete them, which could result in the comment being fed into the spam protection provider's feedback service.
 
-# Permissions
+## Permissions
 In this context, the owner is the owner of the content item being commented (the container of the comments).
 
 

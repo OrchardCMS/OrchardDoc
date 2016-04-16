@@ -1,11 +1,12 @@
+Creating Lists of Content Items
+===============================
+
 > The List feature has been rebuilt from the ground up. This topic may contain inaccuracies with regards to the current
   implementation.
 
 In Orchard, you can create custom content items and assign them as navigation menu entries. If you have more than a few custom content items, you'll probably want to organize them in lists. This topic walks you through this process. In the walkthrough, you'll create a custom content type and display its items in lists. (For information about how to create a custom content type, see [Creating Custom Content Types](Creating-custom-content-types).) 
 
-
-
-# Creating a Custom Containable Content Type
+## Creating a Custom Containable Content Type
 
 To begin, you will create a custom content type that represents a book review. 
 
@@ -50,7 +51,7 @@ On the dashboard, expand the **New** menu. You see the **Book Review** content t
 
 ![](../Upload/screenshots/dashboard_bookreview_contenttype.png)
 
-# Creating a List of Books
+## Creating a List of Books
 
 To create the **Book Review** list, in the **New** menu of the dashboard, click **List**. 
 
@@ -60,7 +61,7 @@ Name the new list "Book Reviews" and in the **Contains** field, select "Book Rev
 
 ![](../Upload/screenshots_675/create_bookreview_list_675.png)
 
-# Creating Book Content Items
+## Creating Book Content Items
 
 Now you can start creating book reviews.
 
@@ -75,13 +76,13 @@ In the dashboard, click the new **Book Review** menu item. Create a few book rev
 
 ![](../Upload/screenshots_675/completed_bookreview_csnutshell_675.png)
 
-# Displaying the List
+## Displaying the List
 
 To see the list of book reviews, return to the home page, and then click the new **Book Reviews** menu item.
 
 ![](../Upload/screenshots_675/completed_bookreview_list_675.png)
 
-# Customizing How the List is Rendered
+## Customizing How the List is Rendered
 
 The **Book Review** content type uses a text field for the **Buy** field, because that's the default option in Orchard. However, because this field is intended to contain URLs, a URL field would work better. No specialized URL field available, but you can modify the rendering of the text field to make it better suited for URLs. Create the following new text file in your Orchard site:
 
@@ -143,7 +144,7 @@ When the whole list of books is displayed, you want to display a more abbreviate
 
 > **Note** The zones referred to in this section of the topic are not layout-level widget zones, but rather local zones. As an example of how these are defined, check out the _/Core/Contents/Views/Items/Content.Summary.cshtml_ file.
 
-# Displaying Book Lists as Widgets
+## Displaying Book Lists as Widgets
 
 The next task is to display the latest book review in a right-hand sidebar on the home page of the site. You will use a container widget object to do that.
 
@@ -157,7 +158,7 @@ Return to the home page, and notice that the latest reviews from your book revie
 
 ![](../Upload/screenshots_675/bookreview_list_rightsidebar_675.png)
 
-# Creating a Custom List Widget
+## Creating a Custom List Widget
 
 Using the filter feature, you can filter the values of custom properties named **Custom1**, **Custom2**, and **Custom3**. This in turn lets you filter what items from a list are displayed in a page. Now you will add some custom properties that will let you filter the display of your reviews.
 
@@ -193,7 +194,7 @@ The following illustration shows what the home page looks like with the two widg
 
 ![](../Upload/screenshots/bookreview_homepagesidebar_bothwidgets.png)
 
-# Pagination
+## Pagination
 
 The list feature has built-in support for pagination on list pages. 
 
@@ -207,9 +208,6 @@ Go back to the **Book Reviews** page. Notice that there is an **Older** button t
 
 > **Note** Pagination is available only on list pages and not on list widgets. This is by design, because pagination within a widget would allow multiple pagers on the same page, which could be confusing.
   
-  
-  
-
-# Change History
+## Change History
 * Updated for Orchard 1.1
     * 3-18-11:  Updated all screens, menu options, and procedures for working with lists.

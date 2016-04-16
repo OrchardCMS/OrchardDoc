@@ -1,3 +1,5 @@
+Slugs
+=====
 
 The slug admin UI shows the first part of the URL as read only and follows that immediately with a textbox that is wide enough to accommodate long slugs.
 

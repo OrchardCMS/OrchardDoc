@@ -1,4 +1,5 @@
-
+Media management
+================
 
 ## Media storage
 When storing media such as images, there are basically two choices: the file system or the database.
@@ -50,7 +51,7 @@ See flow 2 below. Media management has its own specialized management UI.
 ### When JavaScript is off, I can still upload an image and get its URL as a result, which I can use in an img tag
 See flow 1 below. Embedding media in contents is easy with or without JavaScript.
 
-# Permissions
+## Permissions
 
 In this context, owner means the media asset owner when acting on a specific asset, or the folder owner otherwise.
 

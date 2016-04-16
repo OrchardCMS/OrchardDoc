@@ -1,8 +1,9 @@
+Navigation
+==========
 
 Navigation and search are an essential part of CMS applications. This specification aims at defining the default navigation menu generation experience.
 
-
-# Scenarios
+## Scenarios
 
 #### The application contains one main menu by default
 The application comes preconfigured with one static menu that is present in the header include of the default templates.
@@ -72,7 +73,7 @@ The API that asks content providers to contribute menu hierarchies knowing the c
 
 > Not implemented.
 
-# Permissions
+## Permissions
 The owner in this context is the site owner.
 
 Permission             | Anon. | Authentic. | Owner | Admin. | Author | Editor

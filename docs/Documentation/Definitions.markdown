@@ -1,6 +1,7 @@
+Definitions
+===========
 
-
-## Application
+### Application
 An application is a packaged and ready to use specialized web site.
  
 #### Examples
@@ -14,10 +15,10 @@ An application typically includes one or several packages (see definition below)
 #### Packaging
 Orchard applications can be deployed using WebPI, i.e. as MS-Deploy packages. They can also be xcopied into a web site.
 
-## Package
+### Package
 A package is the deployment vehicle for all extensions. It is a versioned zip archive.
 
-## Theme
+### Theme
 A theme is a packaged look and feel for the front-end of the application.
 
 ![](../Upload/definitions/ThemeDefinedStyles.PNG)
@@ -30,7 +31,7 @@ A theme usually consists of a file that contains the meta-data and possibly some
 #### Packaging
 The theme can either be exploded into its constituent files or can be uploaded under zipped form.
 
-## Template
+### Template
 A template is a file that contains only structural markup, but no content-specific markup. For example, a template file may describe a two-column layout. In that case, it would contain a place holder for each of the two columns but it does not specify what contents goes into them. This enables templates to be used to display a wide variety of contents. It enables the separation of layout from contents.
 
 #### Contents
@@ -39,7 +40,7 @@ A template is usually one aspx file that defines the markup for the template and
 #### Packaging
 A template is deployed as part of the views of the application, or as part of a theme or package.
 
-## Widget
+### Widget
 A widget is a self-contained piece of UI that can be injected into specific placeholders in application pages.
 
 ![](../Upload/definitions/Widgets.PNG)Widgets are similar to WebParts, and like WebParts can be added to predefined zones on the page but they are much simpler in implementation.
@@ -61,7 +62,7 @@ A widget is implemented as a code file (containing meta-data and code), a manife
 A widget can be either exploded into its different constituent files or packaged into a zip file and uploaded to the application under this form.
 A widget may be packaged together with its dependencies (such as a plug-in or other type of extension).
 
-## Plug-in
+### Plug-in
 A Plug-in is a piece of code that hooks into a specific extensibility point of the application to add new features.
 
 Plug-ins are sometimes called add-ons, extensions or modules in other CMS platforms.
@@ -98,7 +99,7 @@ A plug-in may be deployed as a simple code file into app_code or as a class in a
 
 A plug-in's code file or dll may be distributed and installed as part of a packaged zip file that may contain one or several widgets and corresponding resources.
 
-## Content-type
+### Content-type
 A content-type is a top-level feature of the application such as blog or wiki, a collection of top-level content entities..
 
 #### Examples
@@ -112,7 +113,7 @@ Examples of content-types include:
 #### Packaging
 A content-type is typically deployed as part of a package.
 
-## Content Item
+### Content Item
 A content item is a unit of contents in a content-type.
 
 An item is a concept that is close to an entity but more centered around the idea of contents (as in contents management). An item can appear in a list but will also typically have its own page in the site.
@@ -128,7 +129,7 @@ Examples of items include:
 #### Contents and packaging
 Items cannot be dissociated from their type.
 
-## Content part
+### Content part
 A content part is a feature that can enrich any existing content-types without prior knowledge of the content part by the content-type or by the content-type from the content part.
 
 #### Examples

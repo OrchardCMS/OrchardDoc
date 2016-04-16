@@ -1,11 +1,12 @@
+Themes includes
+===============
+
 This design proposal outlines enhancements to the Themes feature to support the following:
 
 1. The ability for the application to function independently of the Themes feature, by having default Views, Content, Scripts, Packages and Widgets folders
 2. The ability for an applied Theme to override the default files in the application for Views, Content, Scripts, Packages and Widgets
 3. The ability for an applied Theme to “fall back” to default files when they are not overridden by the Theme
 4. An include-style helper method syntax for composition of View-related files (either in the applied Theme or in the default Views folder)
-
-
 
 ## Theme Overrides
 

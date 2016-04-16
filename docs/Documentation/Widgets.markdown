@@ -1,16 +1,18 @@
+Widgets
+=======
 
 Widgets are fragments of UI that surface specific data or features. Examples of widgets include navigation menus, image galleries, ads,  videos, tag clouds.
 
 Widgets are typically rendered in a zone on the page. A zone can contain zero or more widgets.
 
 
-# Anatomy of a widget
+## Anatomy of a widget
 
 A widget is composed of two or more files that are placed in a /Packages/\[MyPackage\]/Widgets directory of the application.
 
 In many ways, a widget can become a simplified mini-MVC application, with a model, a controller and one or several views.
 
-## Widget meta-data
+### Widget meta-data
 
 The meta-data is defined as part of the package.txt manifest file at the root of the widget's directory:
 
@@ -26,7 +28,7 @@ The meta-data is defined as part of the package.txt manifest file at the root of
 
 In this example, we give the widget a display name (the name of the widget folder is used otherwise), we describe the author of the widget, give a long description and version number.
 
-## Widget code file
+### Widget code file
 
 The code file for a widget is named \[MyWidgetName\]\.cs by convention and is at the root of the widgets subdirectory of the package directory. This file contains the definition, settings and server code for the widget.
 
@@ -46,11 +48,11 @@ The widgets in the widgets directory are dynamically compiled by the application
 
 > **Note:** dynamic compilation of widgets will be implemented during the same iteration as plug-in dynamic compilation.
 
-### Data access
+#### Data access
 
 Widget instances are content items that are contained in widget groups, which are also content items. The data persistence will be handled by Orchard but might use serialization in a single widgets table that is not specialized by widget type.
 
-## View file
+### View file
 
 The second necessary part in a widget is an ascx file must be named \[MyWidgetName\]\.ascx by convention. This file is placed in the package's display template folder. The view file is actually just the display template for the widget.
 
@@ -76,7 +78,7 @@ Here is an example of a widget's view code:
       <%} %>
     </ul>
 
-### CSS conventions
+#### CSS conventions
 
 The widget views are built with a number of conventions that will make theme overrides and integration easier. The default view for a widget -the one that comes with the package- should be neutral, semantic markup so that it can inherit the current theme's styles without necessitating a specific view override.
 
@@ -85,7 +87,7 @@ We will set-up the conventions for a few class names that will make it easy to s
 * widgetTitle
 * widgetBody
 
-## Administration view
+### Administration view
 
 Optionally, a widget can provide its own UI to manage its settings.
 
@@ -93,7 +95,7 @@ It does so by having a \[MyWidgetName\]\.ascx (for example PageMap.ascx) partial
 
 If no edit view exists for the widget, Orchard will generate UI using MVC editor templates like for any other content type.
 
-## Content and script files
+### Content and script files
 
 Content files (resp. script files) should be placed in a "Content" (resp. "Scripts") directory under the package's directory. Content files include stylesheets and images.
 
@@ -120,7 +122,7 @@ To allow for the CDN scenario, the resource URLs can be specified either as loca
 
 > **Note:** Serving static files needs to be as fast as possible and the overhead of running any code on top of the web server's tends to be  high in comparison to the benefits. For this reason, the helper APIs presented here will directly generate URLs that directly map to the physical location of the resource files instead of, for example, generating a route-based URL that could be dynamically resolved later. Where that becomes problematic is that there are a few places, such as stylesheets, that are themselves static resources but that must reference other static resources (typically background images). Because the stylesheet is itself a static resource (it is possible to serve an aspx as the stylesheet but this is confusing and breaks IntelliSense), it cannot call into the helpers and must reference its dependencies using URLs that are relative to itself. This means in turn that the dependencies in question must be physically at the place the stylesheet points. This of course puts a limitation to resource fallback: you cannot override just the stylesheet, you also need to copy everything it depends on.
 
-## Widget controllers and routes
+### Widget controllers and routes
 
 A widget may expose its own controller to handle user interaction.
 
@@ -128,7 +130,7 @@ A widget's controller should be named by convention \[MyWidgetName\]Controller a
 
 To expose custom routes, the widget provider should act like other content type provider classes.
 
-# Widget groups
+## Widget groups
 
 The administrator can define named widget groups at the site level. These groups consist in an ordered list of widgets and the configuration for these widgets. The scope of the configuration is the widget group.
 
@@ -136,7 +138,7 @@ What group of widgets goes into each zone for a given content item is handled by
 
 > **Note:** we won't implement widget group administration in this iteration. Instead, we will code the infrastructure and will "hard-code" groups that the templates will statically include.
 
-# Initial widgets
+## Initial widgets
 
 We will implement the following widgets as part of the first widget iteration:
 
@@ -163,7 +165,7 @@ In future iteration, we could look at the following widgets (in no particular or
 
 Community contributions could also provide some of these widgets.
 
-# Permissions
+## Permissions
 
 The owner in this context refers to the content item owner when assigning a widget group to a zone in the template, or to the site owner for other permissions.
 

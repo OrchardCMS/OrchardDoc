@@ -1,3 +1,5 @@
+Themes
+======
 
 ## Context
 Many applications owe their success in part to the availability of a large number of themes, which is in turn due to the simplicity of building new themes. An MVC type of framework where the view to use can be dynamically determined instead of being mapped 1:1 from url to file system like in WebForms certainly helps building a theming engine.
@@ -374,7 +376,7 @@ The design of themes will be coupled to the widget infrastructure. The widgets s
 
 [Widgets](widgets)
 
-# Permissions
+## Permissions
 
 Here, owner means the site owner.
 

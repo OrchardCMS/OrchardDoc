@@ -1,3 +1,6 @@
+Page management and publishing
+==============================
+
 ####  I can create an empty CMS page and give it a slug from the admin interface. I can then navigate to that page 
 
 The CMS module contributes a "Pages / Add new page" entry to the admin menu. As part of its initialization, each module will register its admin menu entries as a list of paths and associated action names.
@@ -239,7 +242,7 @@ Design TBD.
 
 Design TBD.
 
-#  Permissions 
+##  Permissions 
 
 In this context, owner means the page owner when acting on a specific page, or the site owner otherwise.
 
@@ -251,7 +254,7 @@ Create draft pages                         | No    | No         | Yes   | Yes   
 Modify/delete pages                        | No    | No         | Yes   | Yes    | Yes    | No
 Publish/unpublish/schedule pages           | No    | No         | Yes   | Yes    | Yes    | No
 
-#  Flows 
+##  Flows 
 
 ![](../Upload/cms-scenarios/1small.png)
 

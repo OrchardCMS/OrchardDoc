@@ -1,3 +1,5 @@
+Page templates and syntax
+=========================
 
 Layout templates are aspx files with includes and calls to helpers.
 

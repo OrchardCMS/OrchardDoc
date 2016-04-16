@@ -1,44 +1,45 @@
+XML-RPC and Live Writer
+=======================
 
-
-# Supported tools
+## Supported tools
 
 On Windows, the best choice for a blogging tool is [Windows Live Writer](http://windowslivewriter.spaces.live.com). On the Mac, [MarsEdit](http://www.red-sweater.com/marsedit/) and [Ecto](http://illuminex.com/ecto/) are fairly popular. Also of note is [ScribeFire](http://www.scribefire.com/), which is a FireFox extension that provides blog writing features right from the browser.
 
 All of these tools support the MetaWeblog API (see below), so supporting MetaWeblog would give us instant support from all those tools.
 
-# Publication protocols
+## Publication protocols
 
 There are many blogging APIs, but the most important are:
 
-## MetaWeblog
+### MetaWeblog
 
 The [MetaWeblog API](http://www.xmlrpc.com/metaWeblogApi) is by far the most common API to get implemented by blogs and publishing software. Supporting it pretty much gives instant and universal support. It is a superset of the Blogger API.
 
-## WordPress
+### WordPress
 
 The [WordPress API](http://codex.wordpress.org/XML-RPC_wp) is an extended version of the Movable Type API. The WordPress API is interesting in that it also exposes the concept of page in addition to blog posts.
 
-## Movable Type
+### Movable Type
 
 The [Movable Type](http://www.sixapart.com/developers/xmlrpc/movable_type_api/) is a fairly minimal and limited API. WordPress uses an extended version of that API.
 
-## Blogger
+### Blogger
 
 The [Blogger API](http://code.google.com/apis/blogger/docs/2.0/developers_guide_protocol.html) is Google's blogging API. MetaWeblog is a superset of the Blogger API.
 
-## Atom Publishing Protocol
+### Atom Publishing Protocol
 
 The [Atom Publishing Protocol](http://www.atomenabled.org/developers/protocol/atom-protocol-spec.php) is what comes closest to an "official" standard. It does go well beyond simply blogging and is closer to the needs of a general purpose protocol to publish contents.
 
-## Recommendation
+### Recommendation
 
 If we had to support only one format, MetaWeblog looks like the most universally supported one. On the other hand, it is rather poor in terms of features when compared with the WordPress API. For example, it doesn't have page support and is quite specialized to handle blog posts, which means that in order to use it as a more general publishing protocol, we might need to use some custom meta-data. The WordPress API might be a better choice because of the larger scope of the application. In addition to WordPress or MetaWeblog, Atom seems like a good investment for the future, and it does offer more CMS-friendly features than the others but client tool support is lacking. It might be a way in the future to achieve the universality that MetaWeblog or WordPress will make more difficult.
 
-# Discoverability
+## Discoverability
 
 To enable tools to discover what API the application supports, we should implement [Really Simple Discovery](http://tales.phrasewise.com/rfc/rsd) and the [Live Writer Manifest](http://msdn.microsoft.com/en-us/library/bb463260.aspx).
 
-# Supported API capability
+## Supported API capability
 
 The Live Writer manifest enables a very granular implementation of the various APIs. The following table shows what set of APIs Orchard would support at first.
 
@@ -77,7 +78,7 @@ Categories in the Live Writer manifest correspond to tags in Orchard.
 
 Supporting custom date will mean for Orchard that that date gets translated into scheduled publication if the date is in the future, and to modifying the publication date on the post or page otherwise.
 
-# Permissions
+## Permissions
 
 Default permissions:
 

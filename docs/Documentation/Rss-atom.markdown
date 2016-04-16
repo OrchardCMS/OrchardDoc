@@ -1,8 +1,10 @@
+RSS and Atom feeds
+==================
 
 Orchard will provide an easy way for content type authors to expose new feeds and advertise them from a view.
 
 
-# Requirements
+## Requirements
 
 * Feeds should strictly conform to the relevant standards.
 * Any list of content items can be exposed as a feed.
@@ -10,7 +12,7 @@ Orchard will provide an easy way for content type authors to expose new feeds an
 * Feeds should be able to contain heterogeneous content types.
 * Feed contents should be easily extensible (for example by content parts).
 
-# Feed rendering and why it's not just a view
+## Feed rendering and why it's not just a view
 
 When rendering an HTML page, there are potentially going to be multiple content items and multiple parts for each item, all contributing to the rendering. But whereas in HTML the rendering for each part are relatively isolated from each other, in the case of a feed, the contribution actually happens on the same tag. In other words, in HTML, each aspect results in an island of HTML that it owns, whereas in RSS, everyone parties on the same tags, and there is only one tag (and subtags) for each item.
 
@@ -20,17 +22,17 @@ XML manipulation APIs are mature and will enable much cleaner construction of th
 
 The target audience for building handlers that contribute to feeds is also different as HTML templates are usually written by designers whereas feed handlers will be written by content type or part authors, who are developers.
 
-# Exposing contents as a feed
+## Exposing contents as a feed
 
 Orchard will provide a ready-made controller for RSS, Atom and other feeds. This controller will dispatch the request to registered feed handlers, providing them a context object. Each handler can decide whether to handle the request or not based on the information available on the context object. If it decides to handle the request, it can add feed items to the response object (a property of the context object).
 
 Multiple handlers can independently contribute to a given feed, allowing for example the home page feed of a site to include items from a blogging module, a pages module and a forum module.
 
-# Building a feed document from the list of feed items
+## Building a feed document from the list of feed items
 
 The way the feed document is built is specific per feed type (RSS, Atom, etc.) and per content part. Feed item builder objects will be able to contribute to the document based on the feed item and the type of feed.
 
-# Advertising a feed from a view
+## Advertising a feed from a view
 
 To be discoverable, feeds have to be advertised on the regular views that show the same data in HTML form. This advertising can be done as actual links in the HTML body, and as link tags in the header. The latter is the most important as it enables feed readers to discover the feeds automatically. The former is important to inform user who may not be aware of feeds.
 
@@ -44,7 +46,7 @@ A variation is to handle the whole markup from the view template and only get th
 
 Feed advertising could be automatically done on all content item containers. This way, feeds would become automatically available for all lists of contents without any specific development. Enabling finer-grained configuration of feed availability could be added later.
 
-# Lifecycle of a feed
+## Lifecycle of a feed
 
 * On a blog post page
     * Html.RegisterFeed(new {type="comment", parent=slug}, "Comment feed"); results in <link rel=rss href="/myapp/rss?type=comment&parent=my\-first\-post"/>.
@@ -61,38 +63,38 @@ Feed advertising could be automatically done on all content item containers. Thi
     * The controller returns the ActionResult it got back from the feed handler.
 * ActionResult gets executed, resulting in an XML string, a JSON string or even possibly it could be injected into the view engine if a "regular" ActionResult was returned.
 
-# Object model
+## Object model
 
-## FeedContext
+### FeedContext
 
 * FeedRequest Request {get;set;}
 * FeedResponse Response {get;set;}
 
-## FeedRequest
+### FeedRequest
 
 * RouteData RouteData {get;}
 * HttpRequestBase HttpRequest {get;}
 
-## FeedResponse
+### FeedResponse
 
 * XDocument Document {get;set;}
 * IEnumerable<FeedItem> {get;}
 
-## FeedItem
+### FeedItem
 
 * ContentItem ContentItem {get;set;}
 * XElement Element {get;set;}
 
-## IFeedHandler
+### IFeedHandler
 
 * void Invoke(FeedContext context)
 
-## IFeedBuilder
+### IFeedBuilder
 
 * string Format {get;}
 * ActionResult Invoke(FeedContext context)
 * void AddProperty(string name, string value, FeedItem item)
 
-## IFeedItemBuilder
+### IFeedItemBuilder
 
 * void Invoke(FeedContext context, IFeedBuilder feedBuilder)
