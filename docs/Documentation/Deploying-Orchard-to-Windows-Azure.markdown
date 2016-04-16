@@ -2,8 +2,9 @@ Deploying Orchard to Windows Azure
 ==================================
 Orchard can be deployed to both Windows Azure Cloud Services and Windows Azure Web Sites. Orchard also ships with a number of integration features that takes advantage of Windows Azure services such as blob storage and caching, and that can be configured before deployment if needed. This topic walks you through the process of deploying Orchard to Windows Azure.
 
-> NOTE: The Windows Azure deployment process in Orchard has undergone a complete overhaul for version 1.7.1. For more information about what's changed see the [What's new for Windows Azure in Orchard 1.7.1](Whats-new-for-Windows-Azure-in-Orchard-1-7-1) topic.
-Prerequisites
+> NOTE: The Windows Azure deployment process in Orchard has undergone a complete overhaul for version 1.7.1. For more information about what's changed see the [What's new for Windows Azure in Orchard 1.7.1](Whats-new-for-Windows-Azure-in-Orchard-1-7-1.html) topic.
+
+Prerequisites
 -------------
 
 
@@ -13,7 +14,8 @@ Before you can deploy Orchard to Windows Azure you need the following:
 * Windows Azure SDK 2.1 for Visual Studio 2012
 * The Orchard source code
 * An active Windows Azure subscription
-Deploying Orchard to a Windows Azure Cloud Service 
+
+Deploying Orchard to a Windows Azure Cloud Service 
 ---------------------------------------------------
 
 
@@ -73,8 +75,8 @@ First off, configure the number of instances you want to use in the cloud servic
 
 This section above describes only the most basic configuration steps and options. More detailed steps for enabling the *Windows Azure Media Storage*, *Windows Azure Output Cache* and *Windows Azure Database Cache* features for a Windows Azure Cloud Service, as well as more advanced configuration options, are described the following topics:
 
-* [Using Windows Azure Blob Storage](Using-Windows-Azure-Blob-Storage)
-* [Using Windows Azure Cache](Using-Windows-Azure-Cache)
+* [Using Windows Azure Blob Storage](Using-Windows-Azure-Blob-Storage.html)
+* [Using Windows Azure Cache](Using-Windows-Azure-Cache.html)
 
 ### Deploying
 
@@ -93,7 +95,8 @@ Once setup has finished, navigate to the admin dashboard of the site and enable 
 Congratulations! Orchard is now fully configured for multiple role instances on Windows Azure. You can now scale out to as many role instances as you need and things will be handled.
 
 > NOTE: If you set the instance count to more than `1` before deploying, you must now restart all role instances once to make sure they pick up the new configuration.
-Deploying Orchard to a Windows Azure Web Site
+
+Deploying Orchard to a Windows Azure Web Site
 ---------------------------------------------
 
 
@@ -119,5 +122,5 @@ As with cloud services, you need to do a little more configuration if you plan t
 
 The steps for enabling the *Windows Azure Media Storage*, *Windows Azure Output Cache* and *Windows Azure Database Cache* features for a Windows Azure Web Site are described the following topics:
 
-* [Using Windows Azure Blob Storage](Using-Windows-Azure-Blob-Storage)
-* [Using Windows Azure Cache](Using-Windows-Azure-Cache)
+* [Using Windows Azure Blob Storage](Using-Windows-Azure-Blob-Storage.html)
+* [Using Windows Azure Cache](Using-Windows-Azure-Cache.html)

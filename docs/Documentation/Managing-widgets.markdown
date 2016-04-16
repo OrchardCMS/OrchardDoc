@@ -3,7 +3,8 @@ Managing Widgets
 In Orchard, a widget is a fragment of UI (such as HTML) and code (such as a content part) that can be easily mapped to any location or zone in the active theme, such as a sidebar or footer zone.  Examples of widgets include navigation menus, image galleries, ads, videos, and tag clouds.
 
 This article explains the basics of widgets and shows you how to manage them.
-Layers, Zones, and Widgets
+
+Layers, Zones, and Widgets
 --------------------------
 
 In Orchard, you manage widgets by clicking **Widgets** in the dashboard. The **Widgets** screen lists the available widgets and lets you assign the widget to a _layer_ and a _zone_. 
@@ -31,7 +32,7 @@ Widget                | Description
 **Recent Blog Posts** | Displays a list of recent posts for the specified blog.
 
 ## List of Layers
-Orchard comes with a number of layers already defined. You can define additional layers as needed, as discussed later in [Adding a Layer](Managing-widgets#AddingaLayer). In the **Widgets** screen, you can edit the existing layers by selecting a layer in the **Current Layer** drop-down list, or you can add new layers by clicking **Add a new layer**. 
+Orchard comes with a number of layers already defined. You can define additional layers as needed, as discussed later in [Adding a Layer](Managing-widgets#AddingaLayer.html). In the **Widgets** screen, you can edit the existing layers by selecting a layer in the **Current Layer** drop-down list, or you can add new layers by clicking **Add a new layer**. 
 
 The following table lists the default layers, shows the rule that defines the layer, and describes the effect of the layer.
 
@@ -46,9 +47,10 @@ TheHomepage    | url("~/")         | Displayed on the home page.
 ## List of Zones
 In Orchard, a web page is divided into zones (regions). The available zones are defined by the website's theme. In the **Widgets** screen, you can see the list of all zones available for the currently selected layer. The list also shows the widgets assigned to each zone for the selected layer.
 
-For information about the zones that are available in the default theme (TheThemeMachine), see [Customizing the Default Theme](Customizing-the-default-theme).
+For information about the zones that are available in the default theme (TheThemeMachine), see [Customizing the Default Theme](Customizing-the-default-theme.html).
 
-Adding a Layer
+
+Adding a Layer
 --------------
 
 To add a layer, in the dashboard, click **Widgets**. On the **Widgets** screen, click **Add a new layer**. The **Add Layer** screen is displayed:
@@ -83,7 +85,8 @@ To allow multiple URL values, you can use the following syntax:
     
     url("~/foo") or url("~/bar")
 
-Assigning a Widget to a Zone
+
+Assigning a Widget to a Zone
 ----------------------------
 
 To assign a widget to a zone, click the **Add** button on a zone that you want to add the widget to, and then select the widget to add.  
@@ -99,7 +102,8 @@ The fields you need to fill in depend on the widget you're configuring. However,
 The value of the **Position** field can be an integer or a sequence of integers separated by dots. For example, the following values are all valid: 5, 10.1, 7.5.3.1. Widgets with lower position values will be rendered before those with higher values.
 
 After setting the values of all fields, click **Save**.
-Editing or Deleting a Widget
+
+Editing or Deleting a Widget
 ----------------------------
 
 To edit or delete a widget, in the **Widgets** screen, use the **Current Layer** drop-down list to select the layer that the widget is assigned to. In the list of zones displayed for the layer, click the widget you want to edit. The **Edit Widget** screen is displayed:

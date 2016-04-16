@@ -4,19 +4,19 @@ This four part course will get you started with a gentle introduction to extendi
 
 It will teach you some of the basic components of module development and also encourage you to use best-practices when developing for Orchard.
 
-  - **[Getting Started with Modules - Part 1](Getting-Started-with-Modules-Part-1) - Static Widget** 
+  - **[Getting Started with Modules - Part 1](Getting-Started-with-Modules-Part-1.html) - Static Widget** 
     
     This first part walks you through creating a static widget and introduces you to many of the classes that form the basis of module development in Orchard.
 
-  - **[Getting Started with Modules - Part 2](Getting-Started-with-Modules-Part-2) - Dynamic Widget**
+  - **[Getting Started with Modules - Part 2](Getting-Started-with-Modules-Part-2.html) - Dynamic Widget**
   
     The second part of the course explains how you can refine the widget to implement settings that are configurable via the admin dashboard.
     
-  - **[Getting Started with Modules - Part 3](Getting-Started-with-Modules-Part-3) - Orchard API**
+  - **[Getting Started with Modules - Part 3](Getting-Started-with-Modules-Part-3.html) - Orchard API**
     
     The third part examines Orchard at an API level. You will learn how to work with content items in code and make decisions based on the values of its fields. You will also learn about some of the support classes which make this easier. 
   
-  - **[Getting Started with Modules - Part 4](Getting-Started-with-Modules-Part-4) - Best Practices**
+  - **[Getting Started with Modules - Part 4](Getting-Started-with-Modules-Part-4.html) - Best Practices**
   
     The final installment reviews the completed widget and brings to light loose-ends. You take a tour back through the code, applying development best-practices along the way.
 

@@ -8,7 +8,8 @@ The Orchard dashboard lets you manage your website, change its appearance, add c
 When you open the dashboard, you see a list of application features and settings on the left side of the page. This list is divided into sections of related features. Each expandable section can be collapsed to show only the section title. If you click a section title, the first feature in that section is selected. This list changes as you enable and disable Orchard features. For example, the **Blog** section will have a set of additional collapsible items under it (as shown) after you actually create a blog. The **New** section allows you to create new instances of default content types as well as any custom content types that you define. The right side of the page displays the settings that are available for the selected feature. The following image shows the contents of the dashboard.
 
 ![](/Attachments/Getting-Around-The-Dashboard/Dashboard.png)
-Feature Settings Available in the Dashboard
+
+Feature Settings Available in the Dashboard
 -------------------------------------------
 
 
@@ -17,23 +18,23 @@ The following table shows each of the dashboard sections and briefly describes t
 Section Title       | Description
 -------------       | -----------
 Dashboard           | Contains the dashboard and displays the main ("Welcome to Orchard") page. This page contains a number of helpful links for working with Orchard. The page also shows the Orchard version that is running, and displays advisories from [http://orchardproject.net](http://orchardproject.net) (when advisories are available) that can notify you when a new version is available or when an important update needs to be applied.
-New                 | Lets you create new instances of default content types or of custom content types that you define in the **Content Definition** screen. For more information, see [Creating Custom Content Types](Creating-custom-content-types).
-Content             | Lets you manage the instances of your content types. For example it lets you create pages, edit or remove existing pages, and publish pages. For more information, see [Adding Pages to Your Site](Adding-pages-to-your-site)
-Content Definition  | Lets you manage existing content types as well as creating your own. For more information, see [Content Types](content-types)
-Blog                | Lets you add a blog to your website, create new blog posts, and manage your blog. For more information, see [Adding a Blog to Your Site](Adding-a-Blog-to-Your-Site).
+New                 | Lets you create new instances of default content types or of custom content types that you define in the **Content Definition** screen. For more information, see [Creating Custom Content Types](Creating-custom-content-types.html).
+Content             | Lets you manage the instances of your content types. For example it lets you create pages, edit or remove existing pages, and publish pages. For more information, see [Adding Pages to Your Site](Adding-pages-to-your-site.html)
+Content Definition  | Lets you manage existing content types as well as creating your own. For more information, see [Content Types](Content-types.html)
+Blog                | Lets you add a blog to your website, create new blog posts, and manage your blog. For more information, see [Adding a Blog to Your Site](Adding-a-Blog-to-Your-Site.html).
 Queries             | Lets you add new queries and edit or remove existing queries.Queries are later used for display lists of content items through the site.
-Comments            | If your website is configured to allow users to post comments, lets you manage the posted comments. For more information, see [Moderating Comments](Moderating-comments).
+Comments            | If your website is configured to allow users to post comments, lets you manage the posted comments. For more information, see [Moderating Comments](Moderating-comments.html).
 Taxonomies          | Lets you manage taxonomy terms. Later on you can use them to categorize content items and display or hide them in different ways according to their taxonomy.
-Widgets             | Lets you manage the widgets that appear on the pages of your site. For more information, see [Managing widgets](Managing-widgets).
-Media               | Lets you add or remove folders that contain media. For more information, see [Adding and Managing Media Content](Adding-and-Managing-Media-Content).
-Navigation          | Lets you add or remove items in the main menu and define additional navigation menus. For more information, see [Navigation and Menus](Navigation-and-Menus).
-Tags                | Lets you add or remove content tags for your site. For more information, see [Organizing Content with Tags](Organizing-content-with-tags).
-Modules             | Lets you download, install, and manage modules and features on your site. For more information, see [Installing Modules and Themes from the Gallery](Installing-modules-and-themes-from-the-gallery), [Enabling and Disabling Features](Enabling-and-Disabling-Features), and [Installing and Upgrading Modules](Installing-and-Upgrading-Modules).
-Themes              | Lets you install new themes and apply themes to your site. For more information, see [Installing Themes](Installing-Themes) and [Previewing and Applying a Theme](Previewing-and-Applying-a-Theme).
+Widgets             | Lets you manage the widgets that appear on the pages of your site. For more information, see [Managing widgets](Managing-widgets.html).
+Media               | Lets you add or remove folders that contain media. For more information, see [Adding and Managing Media Content](Adding-and-Managing-Media-Content.html.html).
+Navigation          | Lets you add or remove items in the main menu and define additional navigation menus. For more information, see [Navigation and Menus](Navigation-and-Menus.html).
+Tags                | Lets you add or remove content tags for your site. For more information, see [Organizing Content with Tags](Organizing-content-with-tags.html).
+Modules             | Lets you download, install, and manage modules and features on your site. For more information, see [Installing Modules and Themes from the Gallery](Installing-modules-and-themes-from-the-gallery.html), [Enabling and Disabling Features](Enabling-and-Disabling-Features.html), and [Installing and Upgrading Modules](Installing-and-Upgrading-Modules.html).
+Themes              | Lets you install new themes and apply themes to your site. For more information, see [Installing Themes](Installing-Themes.html) and [Previewing and Applying a Theme](Previewing-and-Applying-a-Theme.html).
 Workflows           | Lets you manage your workflows. Through workflows your site can perform simple or complex tasks based on system events or user interaction.
-Users               | Lets you manage users and roles for your site. For more information, see [Managing Users and Roles](Managing-Users-and-Roles).
+Users               | Lets you manage users and roles for your site. For more information, see [Managing Users and Roles](Managing-Users-and-Roles.html).
 Reports             | Lets you manage and view reports that Orchard generates for your site.
-Settings            | Lets you configure a variety of site settings such as the site name and culture, the default number of items per page, URLs for Gallery feeds, whether user-added comments must be approved, media file types that can be uploaded, and user registration settings. For more information see [Modifying Site Settings](Modifying-Site-Settings).
+Settings            | Lets you configure a variety of site settings such as the site name and culture, the default number of items per page, URLs for Gallery feeds, whether user-added comments must be approved, media file types that can be uploaded, and user registration settings. For more information see [Modifying Site Settings](Modifying-Site-Settings.html).
 
 ### Change History
 * Updated for Orchard 1.8

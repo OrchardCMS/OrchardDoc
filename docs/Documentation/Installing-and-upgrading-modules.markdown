@@ -7,7 +7,8 @@ This topic shows you how to install or download modules from the online gallery,
 
 > **Note** If your site is running under IIS, make sure you have granted read/write permissions to the _~/Themes_ folder under the root of your site for the service account that is being used as the IIS application pool identity. However, you should remove the write permissions on a production server.
 
-Viewing Installed Modules
+
+Viewing Installed Modules
 -------------------------
 
 
@@ -18,7 +19,8 @@ To view the modules that have been installed for your site, click **Modules** on
 The **Installed** tab displays a list of the modules that are included with Orchard, along with properties of each module such as version, author, a description, and a list of features. It also provides a link that you can use to upload and install a module package.
 
 You can add modules to Orchard in two ways. The first and easiest is to install a module from the online gallery. The second is to upload a module package from your local computer and install it in your site. If you simply want to use an existing module in your Orchard site, you can install the module directly from the gallery to your site. If you want to modify a module package, or if you want to upload it to multiple Orchard sites, you will probably want to download the module from the gallery to your local computer.
-Installing a Module from the Gallery
+
+Installing a Module from the Gallery
 ------------------------------------
 
 
@@ -28,7 +30,7 @@ To install a module from the gallery, click **Modules** on the dashboard, then c
 
 ![](../Upload/screenshots_675/browse_modules_gallery_675.png)
 
-The gallery displays the aggregated list of modules exposed by all [registered feeds](Module-gallery-feeds). You can also use the **Feed** drop-down list in the **Gallery** tab to display all feeds or to filter and display only the modules from a particular feed.
+The gallery displays the aggregated list of modules exposed by all [registered feeds](Module-gallery-feeds.html). You can also use the **Feed** drop-down list in the **Gallery** tab to display all feeds or to filter and display only the modules from a particular feed.
 
 To install a module, click the **Install** link for the module. This topic uses the **Bing.Maps** module as an example. 
 
@@ -39,14 +41,16 @@ After the module has been installed, Orchard prompts you to enable features in t
 ![](../Upload/screenshots_675/install_enable_bing_675.png)
 
 When you return to the **Installed** tab, you can see the module that you just installed. 
-Downloading a Module from the Gallery
+
+Downloading a Module from the Gallery
 -------------------------------------
 
 
 At times you may want to simply download a module package to your computer rather than installing it in a site. To download a module, return to the **Gallery** tab and click **Download** for a specific module. (For example, download the **Contact Form** module.) The download process lets you save the _.nupkg_ file that contains the module contents to your local machine. You can then optionally modify the module, or install it in an Orchard site.
 
 ![](../Upload/screenshots_675/download_module_contactform_675.png)
-Installing a Module from your Local Computer
+
+Installing a Module from your Local Computer
 --------------------------------------------
 
 
@@ -57,7 +61,8 @@ To install a module from your local computer to an Orchard site, go to the **Mod
 Browse to the local module (a _.nupkg_ file), select it, and then click **Install**. This installs the module package to your site the same way that clicking **Install** does for an online module in the gallery.
 
 ![](../Upload/screenshots_675/install_localmodule_675.png)
-Working with Module Features
+
+Working with Module Features
 ----------------------------
 
 
@@ -76,7 +81,8 @@ Select the **Bing Map** content part from the list of available parts, and then 
 Now you can see the effect of adding the **Bing Maps** content part to the page type. On the dashboard in the **New** menu, click **Page** to create a new page. Because you installed the **Bing Maps** module, enabled the feature, and added the **Bing Map** content part to the page, when you create a new page instance, a number of map-related fields appear.
 
 ![](../Upload/screenshots_675/newpage_bingmap_enabled_675.png)
-Updating an Installed Module
+
+Updating an Installed Module
 ----------------------------
 
 
@@ -86,7 +92,8 @@ Occasionally modules will be updated with fixes or new features. You can update 
   
   
   
-Change History
+
+Change History
 --------------
 
 * Updated for Orchard 1.1

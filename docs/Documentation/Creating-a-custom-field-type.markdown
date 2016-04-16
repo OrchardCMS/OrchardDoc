@@ -1,29 +1,31 @@
 Writing a Content Field
 =======================
-> **This guide has been marked for review.** If you are just getting started with Orchard module development you should read the [Getting Started with Modules course](Getting-Started-with-Modules) first. It will introduce you to building modules with Orchard using Visual Studio Community, a free edition of Visual Studio. 
+> **This guide has been marked for review.** If you are just getting started with Orchard module development you should read the [Getting Started with Modules course](Getting-Started-with-Modules.html) first. It will introduce you to building modules with Orchard using Visual Studio Community, a free edition of Visual Studio. 
 
-Fields can be used in Orchard to [build new content types](Creating-custom-content-types).
+Fields can be used in Orchard to [build new content types](Creating-custom-content-types.html).
 Orchard comes with a few built-in field types such as text, date or enumeration,
 but it is possible to build your own field types that can then be used to build new content types.
 
 This topic will teach you how to add such a new field type. You can find the source code for this tutorial here: [http://orcharddatetimefield.codeplex.com/](http://orcharddatetimefield.codeplex.com/).
 
-We will assume Visual Studio and a full source code enlistment are being used in this topic. It is possible to build this module without it by simply manipulating the csproj file and adding the relevant files in there. Please consult [Creating a module with a simple text editor](Creating-a-module-with-a-simple-text-editor) for an example of module building without Visual Studio.
+We will assume Visual Studio and a full source code enlistment are being used in this topic. It is possible to build this module without it by simply manipulating the csproj file and adding the relevant files in there. Please consult [Creating a module with a simple text editor](Creating-a-module-with-a-simple-text-editor.html) for an example of module building without Visual Studio.
 
-Objectives
+
+Objectives
 ----------
 
 
 Learn the steps to add a new field type to Orchard. The goal is to have a Date and Time editor so that any existing or new Content Type can let the user select a Date or a Time very easily.
 
 ![The date time field in the event editor](../Attachments/Creating-a-custom-field-type/EventEditor.PNG)
-Creating a Module
+
+Creating a Module
 -----------------
 
 
 We will create the new field type inside a new Orchard module so that it can be easily distributed. We will use Code Generation feature for that. 
 
-> **Important:** Before you can generate the file structure for your module, you need to download, install, and enable the **Code Generation** feature for Orchard. For more information, see [Command-line Code Generation](Command-line-scaffolding).
+> **Important:** Before you can generate the file structure for your module, you need to download, install, and enable the **Code Generation** feature for Orchard. For more information, see [Command-line Code Generation](Command-line-scaffolding.html).
 
 Once the **Code Generation** feature has been enabled, you can type the following `codegen` command on the Orchard command-line.
 
@@ -52,7 +54,8 @@ This should create a new **CustomFields** folder under Modules, pre-populated wi
 
 
 We are defining two features here because this module will eventually contain more fields and we want to distinguish between the default feature of the module (which has the same name as the module itself and has to exist in any module) and the date field feature. This also demonstrates categories and dependencies.
-Modeling the Field
+
+Modeling the Field
 ------------------
 
 
@@ -94,7 +97,8 @@ Let's now create a **Fields** folder inside of our **CustomFields** folder and c
 
 
 The field is defined as a class that derives from `ContentField`, which gives us a few services for free, such as the storage of the value of the field. The fields will be stored as strings. The conversion of dates to and from strings could be handled automatically, but we are doing it explicitly here to give a good idea of how you would do things for more complex field types.
-Creating a View Model
+
+Creating a View Model
 ---------------------
 
 
@@ -117,7 +121,8 @@ It is good practice (although not mandatory) to create one or several view model
 
 
 This not only exposes the date and time as separate properties, it also has some parameters that can be passed into the view to customize the rendering.
-Creating Settings for the Field
+
+Creating Settings for the Field
 -------------------------------
 
 
@@ -141,7 +146,8 @@ Create a **Settings** folder and add the following **DateTimeFieldSettings.cs** 
 
 
 We have defined here an enumeration describing the possible values of our display setting, which is the only setting for the field. The settings class itself is just an ordinary class with one property typed with that enumeration.
-Writing the Driver
+
+Writing the Driver
 ------------------
 
 
@@ -313,7 +319,8 @@ We then have two actions, `Display` and `Editor`, which start by fetching the `s
 The `shapeHelper` object provides some helper methods to create shapes, two of which can be seen in action here.
 
 The second `Editor` method is the one that is called when the admin form is submitted. Its job is to map the submitted data back into the field and then to call the first `Editor` method to render the editor on the screen again.
-Writing the Templates
+
+Writing the Templates
 ---------------------
 
 
@@ -387,7 +394,8 @@ To specify the order and location where these templates will be rendered within 
     </Placement>
 
 
-Managing the Field Settings
+
+Managing the Field Settings
 ---------------------------
 
 
@@ -463,7 +471,8 @@ The editor template for the field is defined by the following **DateTimeFieldSet
 
 
 This template creates a label for the setting and then a drop-down that enables the site administrator to pick one of the options for the setting.
-Updating the Project File
+
+Updating the Project File
 -------------------------
 
 
@@ -478,7 +487,8 @@ Find the `<Content Include="Properties\AssemblyInfo.cs"/>` line in **CustomField
       <Compile Include="Settings\DateTimeFieldSettings.cs" />
       <Compile Include="ViewModels\DateTimeFieldViewModel.cs" />
     </ItemGroup>
-Adding the Style Sheet
+
+Adding the Style Sheet
 ----------------------
 
 
@@ -500,7 +510,8 @@ Create a **Styles** directory and create the following **datetime.css**:
         width:6em;
     }
 
-Using the Field
+
+Using the Field
 ---------------
 
 
@@ -517,7 +528,8 @@ We can now add a new event by clicking **Create Event** in the admin menu. The e
 Create an event and save it. You can now view it on the site:
 
 ![The event as displayed on the front end](../Attachments/Creating-a-custom-field-type/Dinner.PNG)
-Getting the Code
+
+Getting the Code
 ----------------
 
 

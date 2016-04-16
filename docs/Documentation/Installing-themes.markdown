@@ -5,7 +5,8 @@ There are two ways to add a theme to Orchard. The first and easiest is to use th
 
 > **Note** If your site is running under IIS, make sure you have granted read/write permissions to the _~/Themes_ folder under the root of your site for the service account that is being used as the IIS application pool identity. However, you should remove the write permissions on a production server.
 
-Installing a Theme from the Gallery
+
+Installing a Theme from the Gallery
 -----------------------------------
 
 
@@ -19,8 +20,9 @@ In the **Themes** screen of the dashboard, click the **Gallery** tab. A set of t
 
 ![](../Upload/screenshots_675/Gallerythemes_installing_675.png)
 
-To install a theme in your site, click the **Install** link next to the theme. Installing a theme adds it to your site in the **Available** list of themes on the **Themes** page in the dashboard. From there, you can preview a theme or set it as the current site theme, as described [Previewing and Applying a Theme](Previewing-and-applying-a-theme).
-Installing a Theme from your Local Computer
+To install a theme in your site, click the **Install** link next to the theme. Installing a theme adds it to your site in the **Available** list of themes on the **Themes** page in the dashboard. From there, you can preview a theme or set it as the current site theme, as described [Previewing and Applying a Theme](Previewing-and-applying-a-theme.html).
+
+Installing a Theme from your Local Computer
 -------------------------------------------
 
 
@@ -38,11 +40,12 @@ The following illustration shows the Terra theme, which was previously downloade
 
 To use an example theme to test this feature, download an existing theme from the **Gallery** tab on the **Themes** page, then browse to the saved _.nupkg_ file on your computer and install it as described previously.
 
-When a theme is installed, the theme files are placed in the _~/Themes_ folder. You can see the installed themes in your site by checking the **Available** section on the **Themes** page in the dashboard. For more information about how to preview themes and apply them to your site, see [Previewing and Applying a Theme](Previewing-and-applying-a-theme).
+When a theme is installed, the theme files are placed in the _~/Themes_ folder. You can see the installed themes in your site by checking the **Available** section on the **Themes** page in the dashboard. For more information about how to preview themes and apply them to your site, see [Previewing and Applying a Theme](Previewing-and-applying-a-theme.html).
   
   
   
-Change History
+
+Change History
 --------------
 
 * Updates for Orchard 1.1

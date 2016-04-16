@@ -1,3 +1,5 @@
+Orchard 1.10 Release Notes
+==========================
 Build: 1.10
 
 Published: 

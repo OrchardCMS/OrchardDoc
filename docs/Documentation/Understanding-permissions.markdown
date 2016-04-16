@@ -37,7 +37,7 @@ The following image shows a role with only **Edit own blog posts** granted. No p
 ![](../Upload/screenshots_675/Permission_EditOwnBlog.png)
 
 <!--## Defining and Customizing Permissions
-For information about how to customize permissions, see [Adding custom permissions](Adding-custom-permissions). For advanced concepts, see [Permissions](Permissions).-->
+For information about how to customize permissions, see [Adding custom permissions](Adding-custom-permissions.html). For advanced concepts, see [Permissions](Permissions.html).-->
 
 ## Orchard.ContentPermissions
 

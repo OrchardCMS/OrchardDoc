@@ -9,11 +9,11 @@ and recycle from memory usage standpoint.
 Running multiple isolated Orchard sites in a single app domain can allow more sites to fit on a single server,
 which is favored by hosting providers to keep costs down.
 The assumption is that cost savings for hosting providers result in lower cost for hosting customers.
-Multi-tenancy is particularly nice in a [Windows Azure environment](Deploying-Orchard-to-Windows-Azure),
+Multi-tenancy is particularly nice in a [Windows Azure environment](Deploying-Orchard-to-Windows-Azure.html),
 because one deployment to Azure can easily support multiple websites.
 
 > **Note:** If you want to set up a multi-tenant test site on your local machine, first read
-[Testing Multi-Tenancy on a Local Machine](Setting-up-a-multi-tenant-Orchard-site#TestingMultiTenancyonaLocalMachine) later in this article.
+[Testing Multi-Tenancy on a Local Machine](Setting-up-a-multi-tenant-Orchard-site.html#TestingMultiTenancyonaLocalMachine) later in this article.
 
 Enabling Multi-Tenancy
 ----------------------

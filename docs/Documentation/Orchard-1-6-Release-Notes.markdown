@@ -1,3 +1,5 @@
+Orchard 1.6 Release Notes
+=========================
 Build: 1.6
 
 Published: 10/27/2012

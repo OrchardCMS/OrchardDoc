@@ -26,7 +26,7 @@ After creating the content part and record classes, you need to create appropria
 database mappings, called in Orchard - **Data Migration**.
 You shouldn't do it by hand: there is a command-line,
 `codegen datamigration <feature_name>`, which will create the appropriate file for you.
-You can see how to use it [here](Using-the-Command-Line-Interface).
+You can see how to use it [here](Using-the-Command-Line-Interface.html).
 
 The next step is to create a corresponding driver, which will be responsible for displaying the editor that the end-user invokes when setting the posted values.
 If you have already written some content parts, than this part of code should look familiar:
@@ -99,7 +99,7 @@ content parts from site settings.**
 
 So if the above handler can be thought of as a 'controller' the obvious next step is creating the 'view'. Orchard's term is 'shape' and is nothing more than a .cshtml file that combines HTML markup with razor's ability to render database elements.
 First, you have to create a .cshtml file under `/Views/EditorTemplates/Parts/`.
-This file, as the [naming convention](Accessing-and-rendering-shapes)
+This file, as the [naming convention](Accessing-and-rendering-shapes.html)
 informs us, should be named `Share.Settings.cshtml`.
 This name corresponds to the `Parts_Share_Settings` shape used inside the driver above.
 

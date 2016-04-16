@@ -52,7 +52,7 @@ You can build and run Orchard either from the Visual Studio, or using a command-
 
 #### Using Visual Studio
 
-Open Orchard.sln from the Git enlistment directory, in `./src`. For information on the structure of the Orchard solution, see the [source code organization](Source-code-organization) page of this website.
+Open Orchard.sln from the Git enlistment directory, in `./src`. For information on the structure of the Orchard solution, see the [source code organization](Source-code-organization.html) page of this website.
 
 ![](../Attachments/Setting-up-a-source-enlistment/git_cmd.png)
 
@@ -62,7 +62,7 @@ Hit `F5` to build and run the application.
 
 #### Without Visual Studio
 
-Build the application from the command-line following the instructions found here: [Building and deploying Orchard from a source code drop](Building-and-deploying-Orchard-from-a-source-code-drop). You may use IIS or IIS Express to run the application.
+Build the application from the command-line following the instructions found here: [Building and deploying Orchard from a source code drop](Building-and-deploying-Orchard-from-a-source-code-drop.html). You may use IIS or IIS Express to run the application.
 
 ## Everyday Git Extensions Use
 
@@ -78,7 +78,7 @@ You can also filter by branch, which is useful for example if you're only intere
 
 ## Viewing the Source Code Without Enlisting
 
-If you don't want to use Git you can still download the source code for the project. You can [download a .zip file of the source code](Manually-installing-Orchard-zip-file) but this means you don't get the advantages of being able to easily clone and update.
+If you don't want to use Git you can still download the source code for the project. You can [download a .zip file of the source code](Manually-installing-Orchard-zip-file.html) but this means you don't get the advantages of being able to easily clone and update.
 
 ## Branches
 

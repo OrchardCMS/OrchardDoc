@@ -1,12 +1,13 @@
 Template File Syntax Guide
 ==========================
-Orchard uses templates and shapes to build views. Templates are conceptually similar to partial views in ASP.NET MVC, and they provide the basic structure for rendering shape data in a page. A template can contain web page content such as HTML markup, CSS styles, and JavaScript code to help render shape data. In addition, a template can contain server-code blocks so that you can access and render shape data in a web page. Shapes are dynamic data models that represent content structures such as menus, menu items, content items, documents, and messages. Shapes provide the data for dynamic views (as opposed to the static ASP.NET views in MVC) that templates render at run time. For more information about working with shapes, see [Accessing and Rendering Shapes](Accessing-and-rendering-shapes). 
+Orchard uses templates and shapes to build views. Templates are conceptually similar to partial views in ASP.NET MVC, and they provide the basic structure for rendering shape data in a page. A template can contain web page content such as HTML markup, CSS styles, and JavaScript code to help render shape data. In addition, a template can contain server-code blocks so that you can access and render shape data in a web page. Shapes are dynamic data models that represent content structures such as menus, menu items, content items, documents, and messages. Shapes provide the data for dynamic views (as opposed to the static ASP.NET views in MVC) that templates render at run time. For more information about working with shapes, see [Accessing and Rendering Shapes](Accessing-and-rendering-shapes.html). 
 
 The view engine is responsible for parsing the template and rendering the shape data into a web page. The default view engine for Orchard is the Razor view engine, which is installed with [ASP.NET MVC 3](http://www.asp.net/mvc/mvc3). In order for the Razor view engine to correctly parse a template, you must write the template using the Razor syntax, which defines a small set of rules for writing web page templates that contain a mixture of static web page content (such as HTML markup) and programming code. 
 
 This topic gives an overview of the Razor syntax used in templates and layout pages. It then shows you how to create your own shape template.
 
-Razor Syntax Primer
+
+Razor Syntax Primer
 -------------------
 
 Using the simple rules of the Razor syntax, you can embed server-based code (in C# or Visual Basic) into web page markup. Like server code in other ASP.NET web applications, the server code that you embed in a web page using the Razor syntax runs on the server before the page is sent to the browser. The server code in ASP.NET web pages can dynamically generate client content such as HTML markup, CSS, or JavaScript, and then send it to the browser along with any static HTML that the page contains.
@@ -91,7 +92,8 @@ Here is an approach you can use in Orchard 1.1, with the amount of code required
 
     @Model.ContentItem.ProfilePart.Picture.Width
 
-Creating Shape Templates
+
+Creating Shape Templates
 ------------------------
 
 Shape templates are fragments of HTML markup for rendering shapes. To demonstrate how shape templates are used, suppose you want display a map on your web page. The shapes that will contain the map settings for display and edit are defined in the following driver code.
@@ -137,7 +139,7 @@ Shape templates are fragments of HTML markup for rendering shapes. To demonstrat
 
 The `Display` method is used to display the map. The `Editor` method marked `//GET` is used to display the shape result in editing view for user input. The `Editor` method marked `//POST` is used to redisplay the editor view using the values provided by the user. These methods use different overloads of the `Editor` method.
 
-For more information about how to define shapes, see [Accessing and Rendering Shapes](Accessing-and-rendering-shapes).
+For more information about how to define shapes, see [Accessing and Rendering Shapes](Accessing-and-rendering-shapes.html).
 
 The following example shows a simple template that is used to display the map. 
 
@@ -179,7 +181,8 @@ The following example shows the template for the editor. This template enables t
 
 
 The `@Html.LabelFor` expressions create labels using the name of the shape properties. The `@Html.TextBoxFor` expressions create text boxes where users enter values for the shape properties. The `@Html.ValidationMessageFor` expressions create messages that are displayed if users enter an invalid value.
-Layout and Document Templates
+
+Layout and Document Templates
 -----------------------------
 
 The layout and document templates are special template types that define the structure of a web page. These templates are most often used in themes for laying out a web page. Each web page has a `Layout` shape (dynamic object) associated with it. The `Layout` shape defines the zones that are available to hold web page contents. The layout and document templates determine how the zones defined in the `Layout` shape will be laid out on the web page.
@@ -273,7 +276,8 @@ In order for these zones to appear in the Orchard UI so you can add content to t
   
   
   
-Change History
+
+Change History
 --------------
 
 * Updates for Orchard 1.1

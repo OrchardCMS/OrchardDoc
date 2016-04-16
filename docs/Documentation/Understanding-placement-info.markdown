@@ -99,9 +99,9 @@ For example, the following placement will display text fields named "Occupation"
     
     <Place Fields_Common_Text-Occupation="Content:before"/>
 
-> **Note for field developers:** you may give your own fields this capability by using a special override of ContentShape in your driver that provides the differentiator (the part after the dash in the attribute name). See the Text Field driver for example, or read [Creating a Custom Field Type](Creating-a-custom-field-type).
+> **Note for field developers:** you may give your own fields this capability by using a special override of ContentShape in your driver that provides the differentiator (the part after the dash in the attribute name). See the Text Field driver for example, or read [Creating a Custom Field Type](Creating-a-custom-field-type.html).
 
-You can learn more about shapes and alternates in these topics: [Accessing and Rendering Shapes](Accessing-and-rendering-shapes) and [Alternates](Alternates).
+You can learn more about shapes and alternates in these topics: [Accessing and Rendering Shapes](Accessing-and-rendering-shapes.html) and [Alternates](Alternates.html).
 
 The value itself is split into a zone name, a colon, and then a position. 
 

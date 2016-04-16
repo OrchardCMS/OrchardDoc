@@ -18,7 +18,7 @@ To access general settings, click **Settings** in the **Settings** panel. This o
 In the general settings category, you can modify the following global and site-wide settings: 
 
 * **Site Name**. The name of your site, which is usually displayed by the applied theme. 
-* **Default Site Culture**. The default culture for the site.  You can also add culture codes here. For more information, see [Creating Global-Ready Applications](Creating-global-ready-applications).
+* **Default Site Culture**. The default culture for the site.  You can also add culture codes here. For more information, see [Creating Global-Ready Applications](Creating-global-ready-applications.html).
 * **Page title separator**. The character that is used to separate sections of a page title. For example, the default separator character for the `en-US` locale is a hyphen (-).
 * **Super user**. A user who has administrative capability on the site, regardless of configured roles. This is usually the user who ran the Orchard installation and setup. The default user is the admin account. 
 * **Resource Debug Mode**. The mode that determines whether scripts and style sheets are loaded in a "debuggable" form or in their minimal form.
@@ -38,7 +38,7 @@ In the gallery feed settings, you can add or delete a feed using the following s
 * **Add Feed**. Lets you specify the URL to a gallery feed.
 * **Delete**. Lets you remove an existing gallery feed.
 
-For more information about how to add feeds to the gallery, see [Registering Additional Gallery Feeds](Module-gallery-feeds).
+For more information about how to add feeds to the gallery, see [Registering Additional Gallery Feeds](Module-gallery-feeds.html).
 
 ## Comments Settings
 To access settings for comments, click **Comments** in the **Settings** panel. This opens the following screen: 
@@ -50,7 +50,7 @@ In the comments settings, you can enable or disable the following features:
 * **Comments must be approved before they appear**. Requires user comments to be approved by an administrator or moderator before they become visible on the site. 
 * **Automatically close comments after**. Number of days after comments are automatically closed. Leave to 0 to have them always available.
 
-For more information about how to work with comments, see [Moderating Comments](Moderating-comments).
+For more information about how to work with comments, see [Moderating Comments](Moderating-comments.html).
 
 ## User Settings
 To access user settings, click **Users** in the **Settings** panel. This opens the following screen:

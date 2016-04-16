@@ -4,7 +4,8 @@ Customizing Themes
 The default Orchard theme is called The Theme Machine. It is designed as a versatile starting point for customizing and developing themes. 
 
 This article introduces The Theme Machine and demonstrates how to create your own theme by customizing The Theme Machine style sheet (Site.css).
-Introducing the Theme Machine
+
+Introducing the Theme Machine
 -----------------------------
 
 The Theme Machine provides a flexible and powerful foundation for themes. The following image shows the file structure.
@@ -12,7 +13,8 @@ The Theme Machine provides a flexible and powerful foundation for themes. The fo
 ![](../Upload/screenshots/ThemeMachine_structure.PNG)
 
 The files at the heart of the Theme Machine are the layout page (Layout.cshtml) and style sheet (Site.css).
-Overview of the Layout Page
+
+Overview of the Layout Page
 ---------------------------
 
 The layout page defines multiple zones. Each zone has a conditional statements, so that it renders if and only if it has content. If you don't provide the content, the rendered page will not contain the zone. The following images show the zones.
@@ -27,7 +29,8 @@ The layout page defines multiple zones. Each zone has a conditional statements, 
 - You can click through the menu to view zones collapse when they lack content.
 
 You will typically provide content for zones by using the Admin Panel. 
-Overview of the CSS Styles
+
+Overview of the CSS Styles
 --------------------------
 
 The style sheet (Site.css) for the Theme Machine provides an extensive set of styles for fine-grained control of the look and feel of your website. The style sheet groups styles to make it easier for you to locate a style that you want to customize. The following table shows the groupings and describes the type of styles available to you.
@@ -42,7 +45,8 @@ Secondary | Contains additional layout styles for secondary content in aside zon
 Widgets   | Contains styles for selected widgets such as the search widget, edit-mode widgets, and content mode.
 Pager     | Contains styles related to a pager shape.
 Misc      | Contains styles for miscellaneous formatting, such as small, large, quiet, and highlight.
-Creating a Child Theme
+
+Creating a Child Theme
 ----------------------
 
 You can create your own theme by customizing the Theme Machine. However, you should not edit the Theme Machine files directly. Instead, you should create a child theme and copy any files that you intend to change into the child theme. You don't need to copy any files that you do not intend to change -- a child theme inherits from its parent theme, and overrides just the files from the parent theme that you have customized.  When your child theme is active as the current theme, Orchard first looks to that theme to resolve files, and if not found, it will look to the parent (BaseTheme) to find the files instead (and so on... even your parent theme can have it's own parent).
@@ -56,7 +60,7 @@ The process of creating a child theme is this:
 
 
 ## Generating the Theme Structure
-To generate the code structure for your new theme, we are going to use the **Code Generation** feature, which can be obtained from the **Gallery** > **Modules** page in the admin panel.  Once you have installed and activated the code generation feature, you will be able to generate a new theme from the Orchard command-line.  Refer to the [Using the command-line interface](Using-the-command-line-interface) topic if you need to know more about using commands in Orchard.
+To generate the code structure for your new theme, we are going to use the **Code Generation** feature, which can be obtained from the **Gallery** > **Modules** page in the admin panel.  Once you have installed and activated the code generation feature, you will be able to generate a new theme from the Orchard command-line.  Refer to the [Using the command-line interface](Using-the-command-line-interface.html) topic if you need to know more about using commands in Orchard.
 
 Open the Orchard command-line utility and enter the following command:
 
@@ -111,7 +115,8 @@ In the Admin Panel, under **Themes**, select **Installed**. The **Installed** ta
 Click **Set Current**. The **Installed** tab is redisplayed showing **MyTheme** as the current theme.
 
 You can now go to your website to see the new theme in action. 
-Change History
+
+Change History
 --------------
 
 * Updates for Orchard 1.8

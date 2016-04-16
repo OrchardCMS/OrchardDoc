@@ -7,7 +7,8 @@ You can create your own recipes and customize the process of setting a website a
 
 This article describes how to use recipes, how to create custom recipes, export or import recipes, and how to create a specialized distribution of Orchard using recipes. 
 
-Using a Recipe to Create a Website
+
+Using a Recipe to Create a Website
 ----------------------------------
 
 
@@ -22,7 +23,8 @@ The initial list contains the following recipes:
 * **Core**. A recipe that provides the Orchard framework with limited end-user functionality that can be used during development.
 
 After you choose a recipe and click **Finish Setup**, Orchard creates the website using the selected recipe and opens the home page.
-How Recipes Work
+
+How Recipes Work
 ----------------
 
 
@@ -97,9 +99,10 @@ The following sections of a recipe file are the elements that are most important
 * **Feature**. This section lists module features that Orchard will enable.
 * **Metadata**. This section provides configuration for the types, parts, and fields that Orchard contains.
 * **Settings**. This section provides a way to configure website settings.
-* **Command**. This section lists commands that Orchard will run against your website in order to complete the setup. For more information about Orchard commands, see [Using the Command-line Interface](Using-the-command-line-interface).
+* **Command**. This section lists commands that Orchard will run against your website in order to complete the setup. For more information about Orchard commands, see [Using the Command-line Interface](Using-the-command-line-interface.html).
 
-Creating a Custom Recipe
+
+Creating a Custom Recipe
 ------------------------
 
 
@@ -190,7 +193,8 @@ To add your custom recipe to the setup page use the `IsSetupRecipe` attribute in
 ![](../Upload/screenshots/recipes_new_custom.png)
 
 Note that recipes used for importing mustn't contain an `IsSetupRecipe` element or it should be set to `false`.
-Importing and Exporting a Recipe
+
+Importing and Exporting a Recipe
 --------------------------------
 
 Orchard enables you to import and export recipes from and to the web server. It uses the **Import Export** module, which is disabled by default. Therefore you must enable the module to use this feature.
@@ -206,7 +210,8 @@ To export a recipe, open the dashboard and click **Import/Export**. Click the **
 To import a recipe, click **Import/Export** and then click the **Import** tab. Browse to the recipe file and click **Import**.
 
 ![](../Upload/screenshots/recipe_import.png)
-Creating a Specialized Distribution of Orchard
+
+Creating a Specialized Distribution of Orchard
 ----------------------------------------------
 
 
@@ -214,7 +219,7 @@ Recipes simplify the process of creating a specialized distribution of Orchard. 
 
 **To create a specialized distribution of Orchard**
 
-1. Enlist in the Orchard source code. For information about how to enlist in Orchard, see [Setting Up a Source Enlistment](Setting-up-a-source-enlistment).
+1. Enlist in the Orchard source code. For information about how to enlist in Orchard, see [Setting Up a Source Enlistment](Setting-up-a-source-enlistment.html).
 2. Sync to the latest build.
 3. Create a custom recipe and add it to the _Orchard.Web/Modules/Orchard.Setup/Recipes_ folder. If you want your recipe to be the only option, you can remove the other recipe files.
 4. Add any custom modules to the _Orchard.Web/Modules_ folder.

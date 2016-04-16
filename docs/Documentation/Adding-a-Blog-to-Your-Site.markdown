@@ -47,7 +47,7 @@ Because comments were enabled for the post, a new comment can be entered.  The c
 
 ![](/Attachments/Adding-A-Blog-To-Your-Site/PostComment.png)
 
-Return to the Orchard dashboard and under **Settings**, click **Comments**. There are two options which effect how comments are handled. One to require administrator approval before a comment is published, and another option for enabling automatic closing of comments for old posts. For more details about these features, see the [Moderating Comments](Moderating-comments) topic.
+Return to the Orchard dashboard and under **Settings**, click **Comments**. There are two options which effect how comments are handled. One to require administrator approval before a comment is published, and another option for enabling automatic closing of comments for old posts. For more details about these features, see the [Moderating Comments](Moderating-comments.html) topic.
 > Note: There are several good modules in the [Orchard Gallery](http://gallery.orchardproject.net/) to enable spam protection in your blog.
 
 ![](/Attachments/Adding-A-Blog-To-Your-Site/CommentsSettings.png)

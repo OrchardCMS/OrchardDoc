@@ -33,7 +33,7 @@ If you get stuck or need some support at any point in the course there are sever
 
 Setting up
 ----------
-First things first, you need to follow the [setting up for a lesson](Setting-up-for-a-lesson) guide.
+First things first, you need to follow the [setting up for a lesson](Setting-up-for-a-lesson.html) guide.
 
 This will take you through the initial steps to set up your dev environment and pull a fresh copy of the source code down. When you've completed it please use your back button to come back to this course.
        
@@ -93,13 +93,13 @@ To scaffold a new module:
   
      ![](../Attachments/getting-started-with-modules-part-1/open-orchard-exe.png)
      
-     > **Note:** If you don't see `orchard.exe` in the `bin` folder then you didn't follow the steps in the [setting up for a lesson](Setting-up-for-a-lesson) guide. You need to have built the solution at least once for this file to exist. Press `Ctrl-Shift-B` within Visual Studio to build the solution.
+     > **Note:** If you don't see `orchard.exe` in the `bin` folder then you didn't follow the steps in the [setting up for a lesson](Setting-up-for-a-lesson.html) guide. You need to have built the solution at least once for this file to exist. Press `Ctrl-Shift-B` within Visual Studio to build the solution.
   
   1. After a short pause while it loads you will then be presented with the Orchard command line:
   
      ![](../Attachments/getting-started-with-modules-part-1/orchard-command-line.png)
       
-     > **Note:** There is a separate article where you can [learn more about orchard.exe and its features](Using-the-command-line-interface). You don't need to read it to understand this course but it will be useful to review in the future as part of your overall training.
+     > **Note:** There is a separate article where you can [learn more about orchard.exe and its features](Using-the-command-line-interface.html). You don't need to read it to understand this course but it will be useful to review in the future as part of your overall training.
   
   1. Type the following command: `feature enable Orchard.CodeGeneration` and press `enter`.
   
@@ -107,7 +107,7 @@ To scaffold a new module:
      
      This will activate the code generation features of `orchard.exe`. 
      
-     > **Note:** If you get an error saying `No command found matching arguments "feature enable Orchard.CodeGeneration"` then you didn't follow the steps in the [setting up for a lesson](Setting-up-for-a-lesson) guide. You need to run the solution and go through the Orchard Setup screens before this command is available.
+     > **Note:** If you get an error saying `No command found matching arguments "feature enable Orchard.CodeGeneration"` then you didn't follow the steps in the [setting up for a lesson](Setting-up-for-a-lesson.html) guide. You need to run the solution and go through the Orchard Setup screens before this command is available.
      
      The code generation command that we will be using is `codegen module`.
      
@@ -354,7 +354,7 @@ How is all this magic working?
 ------------------------------
 So far the `ContentPart` class has been magically detected as long as it uses the `.Model` namespace, now the data migration is automatically detected just for deriving from `DataMigrationImpl`. How is all of this happening?
 
-Under the hood Orchard uses [Autofac](http://autofac.org/), an Inversion of Control container. If you're interested you can learn about how it's integrated in the [how Orchard works](How-Orchard-works) guide. 
+Under the hood Orchard uses [Autofac](http://autofac.org/), an Inversion of Control container. If you're interested you can learn about how it's integrated in the [how Orchard works](How-Orchard-works.html) guide. 
 
 Don't worry though, you don't really need to know anything deeper about it other than it's in the background and it automatically scans & registers your components for you.
 
@@ -362,7 +362,7 @@ Later on we will use Autofac's dependency injection which let us automatically g
 
 Content part driver
 -------------------
-Everything you see in Orchard is composed from `Shapes`. If you don't know about shapes you can learn more about them in the [accessing and rendering shapes](Accessing-and-rendering-shapes) guide. 
+Everything you see in Orchard is composed from `Shapes`. If you don't know about shapes you can learn more about them in the [accessing and rendering shapes](Accessing-and-rendering-shapes.html) guide. 
 
 A content part driver is a class that composes the shapes that should be used to view and edit content parts. Drivers live in their own folder called `Drivers`. A basic driver class will contain three methods; a display driver for viewing a content part in the front end, an editor driver for presenting an editor form in the admin dashboard and an update method to handle changes submitted from the editor form.
 
@@ -437,7 +437,7 @@ For this first widget our needs are simple and we will only be putting plain HTM
 ## Placement
 Almost all of the key elements are in place now except for this last one. The configuration inside a driver class tells Orchard *how* to render that content part. Content parts always exist within a larger composite content item. Placement is used to tell Orchard *where* to render these components.
 
-The `placement.info` file goes in the root folder of the module. It is an XML file with a simple structure. You can learn more about the placement.info in [understanding placement.info](Understanding-placement-info) guide.
+The `placement.info` file goes in the root folder of the module. It is an XML file with a simple structure. You can learn more about the placement.info in [understanding placement.info](Understanding-placement-info.html) guide.
 
 Add the `placement.info` file to your module:
 
@@ -529,4 +529,4 @@ In the next part we will extend the module to add some interactivity to the modu
 
 In the final part of the course we will review the module and clean it up to ensure we follow development best practices that have been missed so far.
 
-This was a long guide. Take a break now and when you're refreshed come back and [read part two of the course](Getting-Started-with-Modules-Part-2).
+This was a long guide. Take a break now and when you're refreshed come back and [read part two of the course](Getting-Started-with-Modules-Part-2.html).

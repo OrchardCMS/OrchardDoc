@@ -2,18 +2,20 @@ Upgrading a Site to a New Version of Orchard
 ============================================
 A new version of a CMS is an important event in the life of a site, and transitioning to it should ideally be simple. Unfortunately, Orchard does not currently have an automated upgrade mechanism. This topic will show how to upgrade to a new version as painlessly as possible today while focusing on making your data safe.
 
-A Word of Warning
+
+A Word of Warning
 -----------------
 
 
 No matter which method you choose to use to upgrade your site, you are going to have to overwrite a lot of files in the process. This should emphasize the requirement to backup first, but it should also call your attention to any modifications you made to common files. For example, if you made any modifications to core modules and/or the framework (something you shouldn't do: custom modules and themes should be used instead), you will lose them, or you will need to re-apply your changes after the upgrade. Any modification you made to web.config or other common files will also need to be re-applied after the process.
 
 If you made modifications to permissions on the files and folders inside your site, they may also get reset in the upgrade and need to be re-applied.
-Upgrading a Running Instance of Orchard to a New Version
+
+Upgrading a Running Instance of Orchard to a New Version
 --------------------------------------------------------
 
 
-The instructions in this section only apply for a standalone Orchard web site. If you are working with the full source code of Orchard, please refer to [#enlistment](Upgrading-a-site-to-a-new-version-of-Orchard#IfYouHaveaSourceCodeEnlistment).
+The instructions in this section only apply for a standalone Orchard web site. If you are working with the full source code of Orchard, please refer to [#enlistment](Upgrading-a-site-to-a-new-version-of-Orchard.html#IfYouHaveaSourceCodeEnlistment).
 
 It is highly recommended that you work on a local copy of your site throughout the update process.
 
@@ -40,7 +42,8 @@ As you deploy, make sure that the target _settings.txt_ files aren't overwritten
 While you deploy, you might want to shut the site down by dropping an `app_offline.htm` file into the root. Remove that file once you're done.
 
 Once deployed, manual upgrade actions (for example, those from the "Upgrade" feature) need to be performed again on the deployed production site.
-Upgrading An Orchard Site In-Place
+
+Upgrading An Orchard Site In-Place
 ----------------------------------
 
 
@@ -59,7 +62,8 @@ It is possible to upgrade a site in-place, if you can't or don't want to work wi
 * Some versions of Orchard come with version-specific upgrade features. Go to Modules and locate the "Upgrade" feature. Enable it, then click on the new upgrade menu entry that was added to the admin menu. Visit all the relevant tabs and execute the required upgrade actions they present. Once you're done, the feature can be disabled, which will remove the menu entry.
 
 You are done.
-Upgrading an Azure Instance of Orchard
+
+Upgrading an Azure Instance of Orchard
 --------------------------------------
 
 
@@ -75,18 +79,21 @@ You are done.
 
 You're done.
 
-If You Have a Source Code Enlistment
+
+If You Have a Source Code Enlistment
 ------------------------------------
 
 
 If you are working with a source code enlistment, the update process is going to be extremely simple because you are already going through it every time you sync your source code directory with the repository. When the time comes to upgrade, just get the latest changes and sync to the latest in the default branch.
-Import/Export
+
+Import/Export
 -------------
 
 
 The [Import/Export](http://gallery.orchardproject.net/List/Modules/Orchard.Module.Orchard.ImportExport) module 
 can be used to do clean data migrations from one version to another.
-Applying a framework patch
+
+Applying a framework patch
 --------------------------
 
 

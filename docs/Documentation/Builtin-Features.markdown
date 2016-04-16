@@ -710,7 +710,7 @@ get displayed on what pages is determined by layer rules.
 ### See Also
 
 * [Managing widgets][26]
-* [Getting Started with Modules course](Getting-Started-with-Modules)
+* [Getting Started with Modules course](Getting-Started-with-Modules.html)
 * [Writing a widget][27]
 
 ## Orchard.Workflows 
@@ -742,31 +742,31 @@ to the new fields.
   [3]: http://www.google.com/recaptcha
   [4]: http://akismet.com/
   [5]: http://antispam.typepad.com/
-  [6]: http://docs.orchardproject.net/Documentation/Adding-a-Blog-to-Your-Site
-  [7]: http://docs.orchardproject.net/Documentation/Blogging-with-LiveWriter
-  [8]: http://docs.orchardproject.net/Documentation/Moderating-comments
-  [9]: http://docs.orchardproject.net/Documentation/Creating-custom-content-types
-  [10]: http://docs.orchardproject.net/Documentation/Adding-and-managing-media-content
-  [11]: http://docs.orchardproject.net/Documentation/Installing-and-upgrading-modules
-  [12]: http://docs.orchardproject.net/Documentation/Installing-modules-and-themes-from-the-gallery
-  [13]: http://docs.orchardproject.net/Documentation/Adding-Pages-to-Your-Site
+  [6]: Adding-a-Blog-to-Your-Site.html
+  [7]: Blogging-with-LiveWriter.html
+  [8]: Moderating-comments.html
+  [9]: Creating-custom-content-types.html
+  [10]: Adding-and-managing-media-content.html
+  [11]: Installing-and-upgrading-modules.html
+  [12]: Installing-modules-and-themes-from-the-gallery.html
+  [13]: Adding-Pages-to-Your-Site.html
   [14]: http://www.youtube.com/watch?feature=player_embedded&v=SP912eWoOoo
-  [15]: http://docs.orchardproject.net/Documentation/Saving-scheduling-and-publishing-drafts
-  [16]: http://docs.orchardproject.net/Documentation/Making-a-Web-Site-Recipe
-  [17]: http://docs.orchardproject.net/Documentation/Managing-users-and-roles
-  [18]: http://docs.orchardproject.net/Documentation/Understanding-permissions
-  [20]: http://docs.orchardproject.net/Documentation/Installing-Orchard
+  [15]: Saving-scheduling-and-publishing-drafts.html
+  [16]: Making-a-Web-Site-Recipe.html
+  [17]: Managing-users-and-roles.html
+  [18]: Understanding-permissions.html
+  [20]: Installing-Orchard.html
   [21]: http://gallery.orchardproject.net/List/Modules/Orchard.Module.Contrib.Taxonomies
-  [22]: http://docs.orchardproject.net/Documentation/Organizing-content-with-tags
-  [23]: http://docs.orchardproject.net/Documentation/Installing-themes
-  [24]: http://docs.orchardproject.net/Documentation/Previewing-and-applying-a-theme
-  [25]: http://docs.orchardproject.net/Documentation/Customizing-the-default-theme
-  [26]: http://docs.orchardproject.net/Documentation/Managing-widgets
-  [27]: http://docs.orchardproject.net/Documentation/Writing-a-widget
+  [22]: Organizing-content-with-tags.html
+  [23]: Installing-themes.html
+  [24]: Previewing-and-applying-a-theme.html
+  [25]: Customizing-the-default-theme.html
+  [26]: Managing-widgets.html
+  [27]: Writing-a-widget.html
   [28]: http://gallery.orchardproject.net/List/Modules/Orchard.Module.Orchard.ArchiveLater
   [29]: http://gallery.orchardproject.net/List/Modules/Orchard.Module.Orchard.CodeGeneration
   [30]: http://gallery.orchardproject.net
-  [31]: http://docs.orchardproject.net/Documentation/Customizing-Orchard-using-Designer-Helper-Tools
+  [31]: Customizing-Orchard-using-Designer-Helper-Tools.html
   [32]: http://gallery.orchardproject.net/List/Modules/Orchard.Module.Orchard.DesignerTools
   [33]: http://gallery.orchardproject.net/List/Modules/Orchard.Module.Orchard.ImportExport
   [34]: http://gallery.orchardproject.net/List/Modules/Orchard.Module.Orchard.Search
@@ -775,7 +775,7 @@ to the new fields.
   [37]: http://gallery.orchardproject.net/List/Modules/Orchard.Module.Orchard.Localization
   [38]: http://gallery.orchardproject.net/List/Modules/Orchard.Module.Orchard.Email
   [39]: http://gallery.orchardproject.net/List/Modules/Orchard.Module.Orchard.Messaging
-  [40]: http://docs.orchardproject.net/Documentation/Setting-up-a-multi-tenant-Orchard-site
+  [40]: Setting-up-a-multi-tenant-Orchard-site.html
   [41]: http://gallery.orchardproject.net/List/Modules/Orchard.Module.Orchard.MultiTenancy
   [42]: http://gallery.orchardproject.net/List/Modules/Orchard.Module.Orchard.TaskLease
 

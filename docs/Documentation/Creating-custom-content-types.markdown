@@ -21,7 +21,7 @@ You can also edit the definition of the Page type by clicking "Edit" for this ty
 
 ![](../Upload/screenshots_675/edit_content_type_page.png)
 
-A content type in Orchard is made up of fields and parts.  An good overview of these concepts is described in [Basic Orchard Concepts](Basic-Orchard-Concepts).  A field is something specific to the type; for example, a Product type might have SKU and Price fields.  A part, however, is a reusable component that can be attached to one or more types.  For example, the Autoroute part gives a type the ability to be addressed on the front-end via a route/url.  In some ways, you can think of a type as _having_ fields, and _being_ made up of one or more parts.  This is actually reflected in the underlying code in Orchard as well.  To treat a blog post as a AutoroutePart and access it's AutoroutePart.Slug property, you would write something like this: post.As&lt;AutoroutePart&gt;.Slug.  Fortunately you don't have to write code to have fun with types and parts.  We are going to look at this in more detail by way of example in the next section.
+A content type in Orchard is made up of fields and parts.  An good overview of these concepts is described in [Basic Orchard Concepts](Basic-Orchard-Concepts.html).  A field is something specific to the type; for example, a Product type might have SKU and Price fields.  A part, however, is a reusable component that can be attached to one or more types.  For example, the Autoroute part gives a type the ability to be addressed on the front-end via a route/url.  In some ways, you can think of a type as _having_ fields, and _being_ made up of one or more parts.  This is actually reflected in the underlying code in Orchard as well.  To treat a blog post as a AutoroutePart and access it's AutoroutePart.Slug property, you would write something like this: post.As&lt;AutoroutePart&gt;.Slug.  Fortunately you don't have to write code to have fun with types and parts.  We are going to look at this in more detail by way of example in the next section.
 
 ### Defining a New Content Type
 
@@ -35,7 +35,7 @@ Click **Add** to add a field.
 
 ![](../Upload/screenshots_675/ContentTypes_addfield.png)
 
-Currently Orchard only includes a single field type (TextField), but [more can be created](Creating-a-custom-field-type) as extensions to Orchard (for example, CheckBoxField, EmailField, TextAreaField, DateTimeField, etc), and a number of additional fields are available under **Gallery** > **Modules** as optional downloads.  Type "Location" for the name of the field, and click **Save**.  
+Currently Orchard only includes a single field type (TextField), but [more can be created](Creating-a-custom-field-type.html) as extensions to Orchard (for example, CheckBoxField, EmailField, TextAreaField, DateTimeField, etc), and a number of additional fields are available under **Gallery** > **Modules** as optional downloads.  Type "Location" for the name of the field, and click **Save**.  
 
 ![](../Upload/screenshots/ContentTypes_addfieldname.png)
 
@@ -81,7 +81,7 @@ Looking at the "Manage Content" screen in the Orchard admin panel, we can see ou
 
 On the site's front-end notice the event has been added to the main menu (as expected), and that our fields and parts are being displayed correctly here as well.
 
-It is possible to customize the way the event appears and template its rendering. See [Template File Syntax Guide](Template-file-syntax-guide) for more information on how to do that.
+It is possible to customize the way the event appears and template its rendering. See [Template File Syntax Guide](Template-file-syntax-guide.html) for more information on how to do that.
 
 ![](../Upload/screenshots/ContentTypes_displayevent.png)
 

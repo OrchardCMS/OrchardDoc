@@ -67,7 +67,7 @@ Where _services is the `IOrchardServices` object (eg. injected in the constructo
 
 ## Defining site scope settings (Pre-Orchard 1.8)
 
-Defining custom site scope settings for before Orchard 1.8 can be in [Adding Custom Settings pre Orchard 1.8](Adding-Custom-Settings-pre-1.8)
+Defining custom site scope settings for before Orchard 1.8 can be in [Adding Custom Settings pre Orchard 1.8](Adding-Custom-Settings-pre-1.8.html)
 
 
 ## Defining settings for Content Types

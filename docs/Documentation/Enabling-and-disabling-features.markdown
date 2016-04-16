@@ -37,8 +37,9 @@ Enable a feature from the command-line by `typing feature enable &lt;feature-nam
 
 ![](../Upload/screenshots_85/features_cmd2.png)
 
-For more information about the Orchard command-line interface, see [Using the command-line interface](Using-the-command-line-interface).
-Change History
+For more information about the Orchard command-line interface, see [Using the command-line interface](Using-the-command-line-interface.html).
+
+Change History
 --------------
 
 * Updates for Orchard 1.8

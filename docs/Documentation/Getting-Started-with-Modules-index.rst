@@ -1,6 +1,6 @@
 .. _getting-started-with-modules-index:
 
-Getting-Started-with-Modules
+Getting Started with Modules
 ---------------------------------
 
 .. toctree::

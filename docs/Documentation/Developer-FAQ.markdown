@@ -1,7 +1,7 @@
 Developer FAQ
 =============
 ## What are the dependencies?
-Orchard uses a number of external libraries. They can all be found under \lib directory in your enlistment. They are also enumerated in [Orchard dependencies and libraries](Orchard-dependencies-and-libraries).
+Orchard uses a number of external libraries. They can all be found under \lib directory in your enlistment. They are also enumerated in [Orchard dependencies and libraries](Orchard-dependencies-and-libraries.html).
 
 ## What framework versions does Orchard support?
 Orchard supports the following versions of .net:
@@ -13,7 +13,7 @@ Version 1.8       | Orchard runs on .NET 4.5 and IIS 7 (or newer)
 Version 1.9       | Orchard runs on .NET 4.5.1 and IIS 7 (or newer) 
 
 ## Which branch should I be using when working on the codebase?
-Branches are discussed on the [contributing patches](Contributing-patches#Branches) page.
+Branches are discussed on the [contributing patches](Contributing-patches.html#Branches) page.
 
 ## What types of extensions can I write?
 Orchard Modules and Themes are supported. There is extensive documentation covering these topics in the [main documentation index](/).
@@ -24,7 +24,7 @@ The projects in the "Modules" folder are physically located under the "src\Orcha
 The Core modules are physically located under the "\src\Orchard.Web\Core" folder. 
 
 ## What is a Module.txt file?
-This is the module manifest. It is a YAML-format file. You can learn more about module.txt in the [manifest files guide](manifest-files).
+This is the module manifest. It is a YAML-format file. You can learn more about module.txt in the [manifest files guide](manifest-files.html).
 
 ## What is the AdminMenu.cs file?
 This file has an implementation of the Orchard interface called `INavigationProvider`. It lets modules hook themselves into the admin menu in the backend. This is typically where you declare what links should your module inject into the Admin menu and what controller actions these links invoke.
@@ -82,11 +82,11 @@ Running the unit tests is a matter of right clicking the solution or appropriate
 
 > Note: this applies to writing tests for the modules that come with the standard source code distribution of Orchard. 
 
-> To write code for your own modules you should work in your own separate project. You can use the [orchard scaffolding command](Command-line-scaffolding) `codegen moduletests <module-name>` to set up test projects for your own modules.
+> To write code for your own modules you should work in your own separate project. You can use the [orchard scaffolding command](Command-line-scaffolding.html) `codegen moduletests <module-name>` to set up test projects for your own modules.
 
 ## How do I contribute my changes to Orchard?
 
-Contributing changes to Orchard are discussed on the [contributing patches](Contributing-patches#Branches) page.
+Contributing changes to Orchard are discussed on the [contributing patches](Contributing-patches.html#Branches) page.
 
 ## How to build a WCF service that exposes Orchard functionality?
 

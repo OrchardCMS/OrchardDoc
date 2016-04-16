@@ -1,3 +1,5 @@
+Orchard 1.7 Release Notes
+=========================
 Build: 1.7
 
 Published: 7/17/2013

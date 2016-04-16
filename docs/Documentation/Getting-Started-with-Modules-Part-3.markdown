@@ -5,7 +5,7 @@ This is part three of a four part course. It will get you started with a gentle 
 
 It will teach you some of the basic components of module development and also encourage you to use best-practices when developing for Orchard.
 
-If you haven't read the previous parts of this course then you can go back to the overview to [learn about the Getting Started with Modules course](Getting-Started-with-Modules).
+If you haven't read the previous parts of this course then you can go back to the overview to [learn about the Getting Started with Modules course](Getting-Started-with-Modules.html).
 
 Now that we have built the widget and expanded it to use database storage for it's configuration we will turn to the Orchard API to make some decisions via code.
 
@@ -157,7 +157,7 @@ All of this could also have been done through code. We developed this content ty
 
 > **Bonus Exercise:** Using the techniques learned in the first parts of this course, go back and create a clone of the `Product` content type but create it through code. Name the new content type `ProductViaCode` so that it doesn't clash with the `Product` we have just created.
 
-> Hint: The [creating types from code](Creating-types-from-code) documentation should point you in the right direction if you get stuck.  
+> Hint: The [creating types from code](Creating-types-from-code.html) documentation should point you in the right direction if you get stuck.  
 
 ## Writing code against the Orchard API
 At the moment the widget is displayed site-wide with a big green "Click here to view it" link. When the user is on the featured product page it doesn't make sense to show a link back to itself.
@@ -688,4 +688,4 @@ To use it in Orchard simply extract the archive into the modules directory at `.
 ## Conclusion
 In this part we have learned valuable skills that will allow us to create content types in the admin dashboard and add fields to them. We have learned about dependency injection, how to request access to Orchard's various service classes, how to examine the current content item and make decisions based on it. Finally we looked at how we can create and surface custom information from the code of the module up to the view.
 
-In the next and [final part of this getting started with modules course](Getting-Started-with-Modules-Part-4) we will refine the existing module and apply some development best-practices that haven't been covered yet.
+In the next and [final part of this getting started with modules course](Getting-Started-with-Modules-Part-4.html) we will refine the existing module and apply some development best-practices that haven't been covered yet.

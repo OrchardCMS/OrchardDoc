@@ -14,15 +14,15 @@ In this particular demo , we'll be creating a **Contact us Email Notification Wo
 
 ## Email.Messaging
 
-*Learn how to [Configuring Email](Configuring-Email)*
+*Learn how to [Configuring Email](Configuring-Email.html)*
 
 ![](/Upload/workflows/emailmodule.png)
 
 ## Custom Form
 
-*Learn how to [Creating Custom Content Types](Creating-custom-content-types)*
+*Learn how to [Creating Custom Content Types](Creating-custom-content-types.html)*
 
-*Learn how to [Create Custom Forms](Creating-Custom-Forms "Use Custom Form to create subscribe and contact us pages in Orchard")*
+*Learn how to [Create Custom Forms](Creating-Custom-Forms.html "Use Custom Form to create subscribe and contact us pages in Orchard")*
 
 ![](/Upload/workflows/contactform.png)
 
@@ -98,4 +98,4 @@ In this particular demo , we'll be creating a **Contact us Email Notification Wo
 
 ![](/Upload/workflows/emailsent1.png)
 
-*for more on Workflows browse to the [Orchard Tutorials Area](Orchard-TV)*
+*for more on Workflows browse to the [Orchard Tutorials Area](Orchard-TV.html)*

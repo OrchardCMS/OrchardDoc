@@ -2,12 +2,14 @@ The Anatomy of a Theme
 ======================
 Themes enable Orchard users to customize the rendering of the site and tailor it to their needs and design goals. Themes can perform targeted overrides of style sheets, images, layouts, or of any content template provided by any Orchard module.
 
-Where Themes Live
+
+Where Themes Live
 -----------------
 
 
 A theme is set of appropriately named files inside of a folder. That folder must be under the _Themes_ folder under your Orchard website's root folder.
-TheThemeMachine
+
+TheThemeMachine
 ---------------
 
 
@@ -16,7 +18,8 @@ The theme named **TheThemeMachine** is the theme that comes built into Orchard. 
 ![The contents of The Theme Machine](../Attachments/Anatomy-of-a-theme/TheThemeMachine.PNG)
 
 The **TheThemeMachine** theme has been designed to be a clean-looking, modern theme and to be a good starting point for customization and for the development of new themes. This article uses this theme as an illustration.
-Anatomy of a Theme
+
+Anatomy of a Theme
 ------------------
 
 This section describes required and optional elements of a theme.
@@ -98,7 +101,7 @@ For an example of how your own modules and themes can provide alternative layout
 
 ## Shape Templates
 
-In Orchard, before a web page is rendered into HTML, it is built as a tree of [shapes](Accessing-and-rendering-shapes). Shapes are flexible objects that represent the objects that will contribute to the rendering of the page. Examples include zones, menus, menu items, and widgets.
+In Orchard, before a web page is rendered into HTML, it is built as a tree of [shapes](Accessing-and-rendering-shapes.html). Shapes are flexible objects that represent the objects that will contribute to the rendering of the page. Examples include zones, menus, menu items, and widgets.
 
 Each shape can be rendered by a template, which can be overridden by a theme. Templates have the same name as the shape they are made to render. For example, if _Menu.cshtml_ exists, it is used to render a `Menu` shape.
 
@@ -129,7 +132,7 @@ Field rendering can be overridden as well, although not yet at the field instanc
 
 Alternates are a set of related shapes with corresponding templates or layout files that enable you to control how different types of content are rendered within a theme. For example, you can use alternates to apply one layout file for the home page but another layout file for subpages, or you can use alternates to render elements one way when the elements are in a page but a different way when they are in a blog post.
 
-For more information, see [Alternates](Alternates).
+For more information, see [Alternates](Alternates.html).
 
 ## Widget Overrides
 
@@ -164,20 +167,22 @@ A theme can modify where shapes are rendered by including a _placement.info_ fil
     </Placement>
 
 
-Markup
+
+Markup
 ------
 
-The markup in each file is constrained by the view engine that you choose. The default in Orchard is Razor (_.cshtml_ files), for which a quick guide can be found in [Template File Syntax Guide](Template-file-syntax-guide).
+The markup in each file is constrained by the view engine that you choose. The default in Orchard is Razor (_.cshtml_ files), for which a quick guide can be found in [Template File Syntax Guide](Template-file-syntax-guide.html).
 
 Within a template, the `Model` object represents the current shape being rendered. That means that if you are working with the message shape, which has a `Message` property, you can display that by writing `@Model.Message` from within the template markup.
 
 An important addition that Orchard provides is the `Display` method, which renders a shape. For example, if you look at the _layout.cshtml_ file, you can see how the zones are rendered, using calls such as `@Display(Model.Content)`.
 
 Finally, you can also see in various templates calls such as `@Html.RegisterScript("mystyle.css")` or `@Html.RegisterScript("myscript.js")`. These registration calls are necessary because the collections of scripts and stylesheets are a shared resource. The same `link` or `script` element should not be rendered twice even if multiple modules or multiple instances of the same widget require the same file.
-Themes with Code
+
+Themes with Code
 ----------------
 
 
 Most themes will consist only of a stylesheet, a few templates (usually layouts), and a few images. They will contain no code except for the simple code in the template files. For more advanced themes, you might want to provide settings, create custom shapes, or override shapes in code.
 
-To address these scenarios, it is possible to build a theme much like a module and include a _.csproj_ file that describes how to compile the code it contains. For information about module development, see [Walkthrough: Writing An Orchard Module](Walkthrough-Writing-An-Orchard-Module) and [Creating a Module with a Simple Text Editor](Creating-a-module-with-a-simple-text-editor).
+To address these scenarios, it is possible to build a theme much like a module and include a _.csproj_ file that describes how to compile the code it contains. For information about module development, see [Walkthrough: Writing An Orchard Module](Walkthrough-Writing-An-Orchard-Module.html) and [Creating a Module with a Simple Text Editor](Creating-a-module-with-a-simple-text-editor.html).

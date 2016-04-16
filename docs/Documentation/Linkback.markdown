@@ -45,7 +45,7 @@ The items in the list of linkback URLs have a URL, a title (the extracted title 
 
 ## Moderation and spam filtering
 
-Each linkback to a content item should be moderated and filtered for spam like comments are. See [comment specification](comments).
+Each linkback to a content item should be moderated and filtered for spam like comments are. See [comment specification](comments.html).
 
 ## Settings
 

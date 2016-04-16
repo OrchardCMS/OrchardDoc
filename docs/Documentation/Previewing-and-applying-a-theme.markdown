@@ -3,7 +3,8 @@ Previewing and Applying a Theme
 
 Orchard provides a powerful but simple theming system for customizing the look and feel of your site. Orchard includes one theme in the default installation to help you get started. 
 
-Managing Themes
+
+Managing Themes
 ---------------
 
 
@@ -11,7 +12,7 @@ To manage themes, click **Themes** in the dashboard.
 
 ![](../Upload/screenshots_675/themes_start_675.png)
 
-The main **Themes** screen defaults to the **Installed** tab, which displays the current theme, shows any other available themes, and lets you upload a new theme.  There are also tabs for the **Gallery** (which shows additional online themes you can install), **Updates** (which shows available updates for installed themes), and a link to **Install a theme from your computer** (use this to install a theme package from your local computer to your site). For more information on options for adding new themes, see [Installing Themes](Installing-themes).
+The main **Themes** screen defaults to the **Installed** tab, which displays the current theme, shows any other available themes, and lets you upload a new theme.  There are also tabs for the **Gallery** (which shows additional online themes you can install), **Updates** (which shows available updates for installed themes), and a link to **Install a theme from your computer** (use this to install a theme package from your local computer to your site). For more information on options for adding new themes, see [Installing Themes](Installing-themes.html).
 
 To download and install additional themes, click the **Gallery** tab. Click **Install** on a theme to install it in your site. To see how themes work, install the **Contoso** and the **Classic** themes. 
 
@@ -28,7 +29,8 @@ As you can see from the links and buttons on the available themes, you have the 
 * **Uninstall**.  Removes a theme from the **Available** themes section.
 * **Enable**.  Used for two cases:  dependent themes and multiple themes. For dependent themes, you can create a set of themes that depend on each other (by specifying a **BaseTheme** value in the _Theme.txt_ file), so that activating that theme automatically enables the others. For multiple themes, you can enable several themes at once (even though only one theme is set as the current theme), which lets you dynamically change the current theme based on an incoming request. These are advanced topics that aren't covered here.
 > **Note** You do not have to click the **Enable** link to carry out the other operations on themes, such as previewing a theme or setting the current theme.
-Previewing and Applying Themes
+
+Previewing and Applying Themes
 ------------------------------
 
 
@@ -48,7 +50,8 @@ When return to the home page for your site, the new theme is applied to your pag
   
   
   
-Change History
+
+Change History
 --------------
 
 * Updates for Orchard 1.1

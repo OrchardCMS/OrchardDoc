@@ -338,7 +338,7 @@ It's the editor that is responsible for translating the value of a setting back 
 
 The editor is also responsible for validation of setting values.
 
-Theme settings can be injected into a view using the Html.Theme helper (see [Theme Includes and Overrides](themes-includes)).
+Theme settings can be injected into a view using the Html.Theme helper (see [Theme Includes and Overrides](themes-includes.html)).
 
 There is a set of setting values per theme so that switching to a new theme switches to a new set of values, and going back to the original theme restores the corresponding values.
 
@@ -374,7 +374,7 @@ Themes can also be uninstalled. When the currently used theme is uninstalled, th
 
 The design of themes will be coupled to the widget infrastructure. The widgets specification can be found here:
 
-[Widgets](widgets)
+[Widgets](widgets.html)
 
 ## Permissions
 

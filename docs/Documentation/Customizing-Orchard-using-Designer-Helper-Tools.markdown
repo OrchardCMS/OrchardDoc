@@ -38,4 +38,4 @@ The **Shape Tracing** interface displays links that let you automatically create
 
 The **Create** option only creates the template in the specified directory. You must customize the template to render the shape as needed. If you are using Visual Studio, you must include the template in your project by selecting **Add** &gt; **Existing Item** in **Solution Explorer**. 
 
-For more information about how to create alternates, see [Alternates](Alternates).
+For more information about how to create alternates, see [Alternates](Alternates.html).

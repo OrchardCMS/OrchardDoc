@@ -24,7 +24,7 @@ For example, a `Parts_Tags_ShowTags` shape can have alternates with names such a
 `Parts_Tags_ShowTags__BlogPost` and `Parts_Tags_ShowTags__Page`.
 The part of the alternate name after the double underscore reflects when the shape is used,
 such as the current content type. (For more information about how shapes are named,
-see [Accessing and Rendering Shapes](Accessing-and-rendering-shapes).)
+see [Accessing and Rendering Shapes](Accessing-and-rendering-shapes.html).)
 
 ## Mapping a Template File to an Alternate
 
@@ -116,7 +116,7 @@ For content parts:
 * _\[ShapeType\]\_\_\[Id\]_. (Example template: `Parts\Common.Metadata-42`)
 * _\[ShapeType\]\_\_\[ContentType\]_. (Example template: `Parts\Common.Metadata-BlogPost`)
 
-You can use the **Shape Tracing** module to generate alternate templates through the **Shape Tracing** user interface. For more information, see [Customizing Orchard using Designer Helper Tools](Customizing-Orchard-using-Designer-Helper-Tools).
+You can use the **Shape Tracing** module to generate alternate templates through the **Shape Tracing** user interface. For more information, see [Customizing Orchard using Designer Helper Tools](Customizing-Orchard-using-Designer-Helper-Tools.html).
 
 ## URL and Widget Alternates
 
@@ -151,7 +151,7 @@ in the Orchard Modules Gallery:
 
 Similarly, widget alternates add new templates names that you can use to change the rendering
 of content parts when they are rendered as part of a specific widget type or inside of a
-specific zone. [Shape Tracing](Customizing-Orchard-using-Designer-Helper-Tools)
+specific zone. [Shape Tracing](Customizing-Orchard-using-Designer-Helper-Tools.html)
 (another feature of the [Orchard Designer Tools](http://gallery.orchardproject.net/List/Modules/Orchard.Module.Orchard.DesignerTools)
 module) is a great way to discover what alternates are available for any shape template on the page.
 
@@ -188,7 +188,7 @@ In the example, placing the element for `BlogPost` below `Detail` and `Summary` 
 that `ShowTags_BlogPost` will not be used, even for `BlogPost` items,
 because the earlier elements match the item.
 For more information about the _placement.info_ file, see
-[Understanding placement.info](Understanding-placement-info).
+[Understanding placement.info](Understanding-placement-info.html).
 
 ## Alternates for MVC views
 Some modules in Orchard use regular MVC views to render the results of an action that was invoked on a custom controller. To customize the look of the pages produced by custom MVC controllers in Orchard, you need to add a version of the view file in your theme's `Views` folder.

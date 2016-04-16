@@ -1,3 +1,5 @@
+Orchard 1.8 Release Notes
+=========================
 Build: 1.8
 
 Published: 03/28/2014

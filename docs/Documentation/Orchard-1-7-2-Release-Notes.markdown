@@ -1,3 +1,5 @@
+Orchard 1.7.2 Release Notes
+===========================
 Build: 1.7.2
 
 Published: 11/19/2013

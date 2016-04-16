@@ -36,8 +36,8 @@ This will return you to the web site, where you can now sign in.
 
 A package is just a zipped up file (in [.nupkg](http://nuget.org) format) containing your module or theme, and it is easy to create a package using the orchard command-line utility.  For instructions on how to create a package, refer to these topics:
 
-* [Packaging and sharing a module](Packaging-and-sharing-a-module)
-* [Packaging and sharing a theme](Packaging-and-sharing-themes)
+* [Packaging and sharing a module](Packaging-and-sharing-a-module.html)
+* [Packaging and sharing a theme](Packaging-and-sharing-themes.html)
 
 Once you have packaged your module or theme, visit the **Contribute** page on the gallery site and click the **Add a New Module or Theme** link.
 

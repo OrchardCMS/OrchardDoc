@@ -12,6 +12,7 @@ Getting Started
     Getting-around-the-dashboard
     Building-Orchard-Site
     Navigation-and-menus
+    Adding-Pages-to-Your-Site
     Adding-a-Blog-to-Your-Site
     Adding-and-managing-media-content
     Managing-widgets
