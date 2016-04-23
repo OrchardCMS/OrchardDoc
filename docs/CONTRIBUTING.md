@@ -18,9 +18,11 @@ Once you have cloned the Docs to your local machine, the following instructions 
 
     ```pip install -U sphinx_rtd_theme```
     
-5. Navigate to one of the main project subdirectories in the Docs repo - such as `mvc`, `aspnet`, or `webhooks`.
+5. Install Recommonmark:
 
-6. Run ``make`` (make.bat on Windows, Makefile on Mac/Linux)
+    ```pip install recommonmark```
+
+6. Go to the docs folder and run ``make`` (make.bat on Windows, Makefile on Mac/Linux)
 
     ```make html```
 
