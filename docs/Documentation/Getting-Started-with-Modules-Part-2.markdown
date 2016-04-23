@@ -285,20 +285,20 @@ The second is another `Editor()` overload which takes the submitted information 
   
   1. Below the `Display()` method, paste in this block of code:
   
-        protected override DriverResult Editor(FeaturedProductPart part, 
-          dynamic shapeHelper) {
-            return ContentShape("Parts_FeaturedProduct_Edit",
-              () => shapeHelper.EditorTemplate(
-                TemplateName: "Parts/FeaturedProduct",
-                Model: part,
-                Prefix: Prefix));
-        }
+         protected override DriverResult Editor(FeaturedProductPart part, 
+           dynamic shapeHelper) {
+             return ContentShape("Parts_FeaturedProduct_Edit",
+               () => shapeHelper.EditorTemplate(
+                 TemplateName: "Parts/FeaturedProduct",
+                 Model: part,
+                 Prefix: Prefix));
+         }
 
-        protected override DriverResult Editor(FeaturedProductPart part,
-          IUpdateModel updater, dynamic shapeHelper) {
-            updater.TryUpdateModel(part, Prefix, null, null);
-            return Editor(part, shapeHelper);
-        }
+         protected override DriverResult Editor(FeaturedProductPart part,
+           IUpdateModel updater, dynamic shapeHelper) {
+             updater.TryUpdateModel(part, Prefix, null, null);
+             return Editor(part, shapeHelper);
+         }
         
   1. Add the namespace for `IUpdateModel` using the `Ctrl-.` keyboard shortcut.
 
@@ -399,19 +399,19 @@ We will now update the module to show a red "ON SALE!" box in the widget when `I
   
   1. Copy this CSS snippet into the `<style>` block at the top of the view:
 
-        .sale-red {
-          background-color: #d44950;
-          color: #fff;
-          float: right;
-          padding: .25em 1em;
-          display: inline;
-        }
+         .sale-red {
+           background-color: #d44950;
+           color: #fff;
+           float: right;
+           padding: .25em 1em;
+           display: inline;
+         }
   
   1. Add this snippet in to the main body, above the first `<p>` tag:
   
-        @if (Model.ContentPart.IsOnSale) {
-          <p class="sale-red">ON SALE!</p>
-        }
+         @if (Model.ContentPart.IsOnSale) {
+           <p class="sale-red">ON SALE!</p>
+         }
 
 You will notice that this view doesn't feature an `@model` directive at the top. This is because the model is a dynamic class which contains the content part information and various other properties supplied by Orchard. This means that you can't define it in the view beforehand as the class isn't a named type and IntelliSense doesn't know what properties are going to be available at run-time. 
 
@@ -479,19 +479,19 @@ Great! You have completed another stage of the development. Now its time to load
   
   1. If you follow the guide correctly in part 1, you should see your `Featured Product Widget` in the list under `AsideFirst`. Click on the word `Featured Product` (this may vary depending the title you entered when you set the widget up):
   
-    ![](../Attachments/getting-started-with-modules-part-2/testing1-editwidget.png)
+     ![](../Attachments/getting-started-with-modules-part-2/testing1-editwidget.png)
     
   1. The `Edit Widget` page will be displayed. Scroll down to the bottom to find the setting we added:
   
-    ![](../Attachments/getting-started-with-modules-part-2/testing1-configure.png)
+     ![](../Attachments/getting-started-with-modules-part-2/testing1-configure.png)
   
-    Tick the checkbox. 
+     Tick the checkbox. 
     
   1. Click `Save`.
   
   1. Navigate back to the homepage of the website by clicking on the site title in the top corner of the admin dashboard:
   
-    ![](../Attachments/getting-started-with-modules-part-2/testing1-gotohomepage.png)
+     ![](../Attachments/getting-started-with-modules-part-2/testing1-gotohomepage.png)
    
 You should now see your product is marked as being on sale:
 

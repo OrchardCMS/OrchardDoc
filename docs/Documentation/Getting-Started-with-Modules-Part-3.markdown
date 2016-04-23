@@ -39,7 +39,7 @@ We are going to quickly build a `Product` content type which has some of the com
   
   1. Enter `Product` for the `Display Name`. This should automatically fill out the `Content Type Id` field for you. Make sure the `Content Type Id` is also set to `Product`:
   
-    ![](../Attachments/getting-started-with-modules-part-3/democontent-newtype.png)
+     ![](../Attachments/getting-started-with-modules-part-3/democontent-newtype.png)
   
   1. Click `Create`.
   
@@ -52,11 +52,11 @@ We are going to quickly build a `Product` content type which has some of the com
 
   1. Click `Save`. You will be taken to the `Edit Content Type` page and you should see several messages from the Orchard notifier system:
   
-    ![](../Attachments/getting-started-with-modules-part-3/democontent-partsadded.png)
+     ![](../Attachments/getting-started-with-modules-part-3/democontent-partsadded.png)
   
   1. Scroll down to the `Fields` section and then click the `Add Field` button:
   
-    ![](../Attachments/getting-started-with-modules-part-3/democontent-addfield.png)
+     ![](../Attachments/getting-started-with-modules-part-3/democontent-addfield.png)
     
   1. On the `Add New Field To "Product"` page fill the form out like this:
   
@@ -64,7 +64,7 @@ We are going to quickly build a `Product` content type which has some of the com
       * Technical Name: `ProductId`
       * Field Type: `Input Field`
 
-  ![](../Attachments/getting-started-with-modules-part-3/democontent-addnewfield.png) 
+     ![](../Attachments/getting-started-with-modules-part-3/democontent-addnewfield.png) 
      
   1. Click `Save`.
   
@@ -82,11 +82,11 @@ We are going to quickly build a `Product` content type which has some of the com
      
   1. To demonstrate the power of the configurable fields in Orchard we will also add a `Pattern` constraint. The `ProductId` should be in all caps, with only letters or numbers, no spaces or other punctuation. 
   
-    To describe this pattern to the system we will use something called a regular expression (often shortened to a regex). At first these patterns can seem complex but they offer a succinct way to describe text patterns.
+     To describe this pattern to the system we will use something called a regular expression (often shortened to a regex). At first these patterns can seem complex but they offer a succinct way to describe text patterns.
     
-    To meet the requirement described above the regex will be: `^[A-Z0-9]+$`
+     To meet the requirement described above the regex will be: `^[A-Z0-9]+$`
     
-    In the Pattern field enter the pattern `^[A-Z0-9]+$`.
+     In the Pattern field enter the pattern `^[A-Z0-9]+$`.
     
   1. Click `Save`.
 
@@ -123,13 +123,13 @@ For this to work we need to create a dummy product that will act as the featured
   
   1. The `Product Id` is the custom field we created for the content type. Notice the red `*` which indicates a required field. If you try to create the `Product` with a blank `Product Id` you will see a validation error:
   
-    ![](../Attachments/getting-started-with-modules-part-3/demoproduct-required.png)
+     ![](../Attachments/getting-started-with-modules-part-3/demoproduct-required.png)
     
-    If you try to enter an incorrect value that doesn't match the pattern we specified you will also see an error:
+     If you try to enter an incorrect value that doesn't match the pattern we specified you will also see an error:
     
-    ![](../Attachments/getting-started-with-modules-part-3/demoproduct-badpattern.png)
+     ![](../Attachments/getting-started-with-modules-part-3/demoproduct-badpattern.png)
   
-    Enter `SPROCKET9000` into the `Product Id`.
+     Enter `SPROCKET9000` into the `Product Id`.
     
   1. Tick the `Show on a menu` checkbox.
   
@@ -212,13 +212,13 @@ Let's implement what we have discussed so far:
   
   1. Replace the `Display()` method with the following:
   
-        protected override DriverResult Display(FeaturedProductPart part, 
-          string displayType, dynamic shapeHelper) {
-            return ContentShape("Parts_FeaturedProduct", () => {
-              // extra space to write additional lines of code here
-              return shapeHelper.Parts_FeaturedProduct();
-            });
-        }
+         protected override DriverResult Display(FeaturedProductPart part, 
+           string displayType, dynamic shapeHelper) {
+             return ContentShape("Parts_FeaturedProduct", () => {
+               // extra space to write additional lines of code here
+               return shapeHelper.Parts_FeaturedProduct();
+             });
+         }
 
 ## Getting the current ContentItem being displayed
 Getting the current `ContentItem` from within the widget driver means using some of the built-in Orchard classes.
@@ -281,13 +281,13 @@ Taking what we have learned about dependency injection and knowing our service r
   
   1. Add the following properties to the top of the `FeaturedProductDriver` class:
   
-        private readonly IContentManager _contentManager;
-        private readonly IWorkContextAccessor _workContextAccessor;
-        private readonly IAliasService _aliasService;
+         private readonly IContentManager _contentManager;
+         private readonly IWorkContextAccessor _workContextAccessor;
+         private readonly IAliasService _aliasService;
 
-    `IAliasService` will need it's namespace but when you try to add it via `Ctrl-.` you will see Visual Studio doesn't know where to find it.
+     `IAliasService` will need it's namespace but when you try to add it via `Ctrl-.` you will see Visual Studio doesn't know where to find it.
   
-     We need to add a reference and update the dependencies of our module.
+      We need to add a reference and update the dependencies of our module.
      
   1. `Right click` on the `References` entry in the module's project within the `Solution Explorer` window and choose `Add Reference...`.
   
@@ -299,40 +299,40 @@ Taking what we have learned about dependency injection and knowing our service r
   
   1. The last line of the file should contain the `Orchard.Widgets` dependency that we created in part one. This field will take a comma separated list detailing  each dependency a modules has.
   
-    Update the line to add `Orchard.Alias`, ensuring that the line keeps it's indentation, so that the line now looks like this:
+     Update the line to add `Orchard.Alias`, ensuring that the line keeps it's indentation, so that the line now looks like this:
     
-                Dependencies: Orchard.Widgets, Orchard.Alias
+                 Dependencies: Orchard.Widgets, Orchard.Alias
 
   1. Go back to the `FeaturedProductDriver.cs` file. You can now add the missing namespace via `Ctrl-.`.
   
   1. Below the private properties, add in a default constructor:
   
-        public FeaturedProductDriver(IContentManager contentManager,
-          IWorkContextAccessor workContextAccessor,
-          IAliasService aliasService) {
-            _contentManager = contentManager;
-            _workContextAccessor = workContextAccessor;
-            _aliasService = aliasService;
-        }
+         public FeaturedProductDriver(IContentManager contentManager,
+           IWorkContextAccessor workContextAccessor,
+           IAliasService aliasService) {
+             _contentManager = contentManager;
+             _workContextAccessor = workContextAccessor;
+             _aliasService = aliasService;
+         }
          
      You can see that we are following the standard pattern of defining a private property, adding an instance to the constructor parameters and then assigning the injected class to the private variable.
      
   1. The Driver now has all of the requirements implemented to support the `CurrentContent` property. 
   
-    Add this code in between the first batch of private properties and the constructor:
+     Add this code in between the first batch of private properties and the constructor:
   
-        private IContent _currentContent = null;
-        private IContent CurrentContent {
-          get {
-            if (_currentContent == null) {
-              var itemRoute = _aliasService.Get(_workContextAccessor.GetContext()
-                .HttpContext.Request.AppRelativeCurrentExecutionFilePath
-                .Substring(1).Trim('/'));                 
-              _currentContent = _contentManager.Get(Convert.ToInt32(itemRoute["Id"]));
-            }
-            return _currentContent;
-          }
-        }
+         private IContent _currentContent = null;
+         private IContent CurrentContent {
+           get {
+             if (_currentContent == null) {
+               var itemRoute = _aliasService.Get(_workContextAccessor.GetContext()
+                 .HttpContext.Request.AppRelativeCurrentExecutionFilePath
+                 .Substring(1).Trim('/'));                 
+               _currentContent = _contentManager.Get(Convert.ToInt32(itemRoute["Id"]));
+             }
+             return _currentContent;
+           }
+         }
   
   1. If you have cleaned up your `using` statements then you might need to add a namespace using `Ctrl-.` for the `Convert.ToInt32()`.
   
@@ -423,15 +423,15 @@ Modify the first `Display()` method by following these steps:
   
   1. Locate the `Display()` method and replace it with the following:
   
-        protected override DriverResult Display(FeaturedProductPart part, 
-          string displayType, dynamic shapeHelper) {
-            return ContentShape("Parts_FeaturedProduct", () => {
-              bool isOnFeaturedProductPage = false;
-              // detecting current product code will go here
-              return shapeHelper.Parts_FeaturedProduct(
-                IsOnFeaturedProductPage: isOnFeaturedProductPage);
-            });
-        }
+         protected override DriverResult Display(FeaturedProductPart part, 
+           string displayType, dynamic shapeHelper) {
+             return ContentShape("Parts_FeaturedProduct", () => {
+               bool isOnFeaturedProductPage = false;
+               // detecting current product code will go here
+               return shapeHelper.Parts_FeaturedProduct(
+                 IsOnFeaturedProductPage: isOnFeaturedProductPage);
+             });
+         }
 
 This has laid the groundwork for us. The next piece of code will detect the content type, read the product id and update `isOnFeaturedProductPage` if required.
 
@@ -452,23 +452,23 @@ Putting the code together is just a case of a standard .NET string comparison:
   
   1. Locate the `Display()` method and replace it with the following:
   
-        protected override DriverResult Display(FeaturedProductPart part, 
-          string displayType, dynamic shapeHelper) {
-            return ContentShape("Parts_FeaturedProduct", () => {
-              bool isOnFeaturedProductPage = false;
-              // new code
-              if(CurrentContent != null) {
-                var itemTypeName = CurrentContent.ContentItem.TypeDefinition.Name;
-                if (itemTypeName.Equals("Product",
-                  StringComparison.InvariantCultureIgnoreCase)) {
-                  // final product id check will go here
-                }				
-              }
-              // end of new code
-              return shapeHelper.Parts_FeaturedProduct(
-                IsOnFeaturedProductPage: isOnFeaturedProductPage);
-            });
-        }
+         protected override DriverResult Display(FeaturedProductPart part, 
+           string displayType, dynamic shapeHelper) {
+             return ContentShape("Parts_FeaturedProduct", () => {
+               bool isOnFeaturedProductPage = false;
+               // new code
+               if(CurrentContent != null) {
+                 var itemTypeName = CurrentContent.ContentItem.TypeDefinition.Name;
+                 if (itemTypeName.Equals("Product",
+                   StringComparison.InvariantCultureIgnoreCase)) {
+                   // final product id check will go here
+                 }				
+               }
+               // end of new code
+               return shapeHelper.Parts_FeaturedProduct(
+                 IsOnFeaturedProductPage: isOnFeaturedProductPage);
+             });
+         }
           
      You don't need to include the comments in your module, they are just for guidance.
 
@@ -512,26 +512,26 @@ Once you have the product id in a string it's just a case of comparing it agains
   
   1. Locate the `Display()` method and replace it with the following:
   
-        protected override DriverResult Display(FeaturedProductPart part, 
-          string displayType, dynamic shapeHelper) {
-            return ContentShape("Parts_FeaturedProduct", () => {
-              bool isOnFeaturedProductPage = false;
-              var itemTypeName = CurrentContent.ContentItem.TypeDefinition.Name;
-              if (itemTypeName.Equals("Product", 
-                StringComparison.InvariantCultureIgnoreCase)) {
-                  // new code
-                  var dynamicContentItem = (dynamic)CurrentContent.ContentItem;
-                  var itemProductId = dynamicContentItem.Product.ProductId.Value;
-                  if(itemProductId.Equals("SPROCKET9000",
-                    StringComparison.InvariantCulture)) {
-                      isOnFeaturedProductPage = true;
-                  }
-                  // end of new code
-              }
-              return shapeHelper.Parts_FeaturedProduct(
-                IsOnFeaturedProductPage: isOnFeaturedProductPage);
-            });
-        }
+         protected override DriverResult Display(FeaturedProductPart part, 
+           string displayType, dynamic shapeHelper) {
+             return ContentShape("Parts_FeaturedProduct", () => {
+               bool isOnFeaturedProductPage = false;
+               var itemTypeName = CurrentContent.ContentItem.TypeDefinition.Name;
+               if (itemTypeName.Equals("Product", 
+                 StringComparison.InvariantCultureIgnoreCase)) {
+                   // new code
+                   var dynamicContentItem = (dynamic)CurrentContent.ContentItem;
+                   var itemProductId = dynamicContentItem.Product.ProductId.Value;
+                   if(itemProductId.Equals("SPROCKET9000",
+                     StringComparison.InvariantCulture)) {
+                       isOnFeaturedProductPage = true;
+                   }
+                   // end of new code
+               }
+               return shapeHelper.Parts_FeaturedProduct(
+                 IsOnFeaturedProductPage: isOnFeaturedProductPage);
+             });
+         }
 
 That's all the code that's needed to detect the page content type and check the product id field.
 
@@ -550,28 +550,28 @@ Now we are going to re-use these skills:
   
   1. Copy this CSS snippet into the `<style>` block at the top of the view:
 
-        .box-purple {
-          padding: 1em;
-          text-align: center;
-          color: #fff;
-          background-color: #7b4f9d;
-          font-size: 2em;
-          display: block;
-        }
+         .box-purple {
+           padding: 1em;
+           text-align: center;
+           color: #fff;
+           background-color: #7b4f9d;
+           font-size: 2em;
+           display: block;
+         }
   
   1. Find this line of markup (it should be the last line in the view):
   
-        <p><a href="~/sprocket-9000" class="btn-green">Click here to view it</a></p>
+         <p><a href="~/sprocket-9000" class="btn-green">Click here to view it</a></p>
           
      And replace it with:
      
-        @if (!Model.IsOnFeaturedProductPage) {
-          <p>
-            <a href="~/sprocket-9000" class="btn-green">Click here to view it.</a>
-          </p>
-        } else {
-          <p class="box-purple">Read more about it on this page.</p>
-        }
+         @if (!Model.IsOnFeaturedProductPage) {
+           <p>
+             <a href="~/sprocket-9000" class="btn-green">Click here to view it.</a>
+           </p>
+         } else {
+           <p class="box-purple">Read more about it on this page.</p>
+         }
           
   1. Save and close the file.
 
@@ -664,17 +664,17 @@ This is the part where it all pays off. If you run Orchard in the browser you wi
   
   1. You will start off on the homepage. The widget should look the same as it did at the end of part two:
   
-    ![](../Attachments/getting-started-with-modules-part-3/testing-homepage.png)
+     ![](../Attachments/getting-started-with-modules-part-3/testing-homepage.png)
     
   1. Click on the `Sprocket 9000` menu item to go to your product page. You should see a purple notification box instead of a link:
   
-    ![](../Attachments/getting-started-with-modules-part-3/testing-sprocket.png)
+     ![](../Attachments/getting-started-with-modules-part-3/testing-sprocket.png)
     
   1. If you followed the **Bonus Exercise** section and created additional demo product pages you can also navigate to those and you will see the same view as the homepage:
   
-    ![](../Attachments/getting-started-with-modules-part-3/testing-testproduct.png)
+     ![](../Attachments/getting-started-with-modules-part-3/testing-testproduct.png)
     
-    This is because it matches the content type but not the product id. 
+     This is because it matches the content type but not the product id. 
 
 ## Download the code for this lesson
 You can download a copy of the module so far at this link:
