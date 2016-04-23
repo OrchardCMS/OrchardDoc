@@ -26,6 +26,7 @@ help:
 	@echo "  html       to make standalone HTML files"
 	@echo "  dirhtml    to make HTML files named index.html in directories"
 	@echo "  singlehtml to make a single large HTML file"
+	@echo "  livehtml   to rebuild the HTML files when a change is detected"
 	@echo "  pickle     to make pickle files"
 	@echo "  json       to make JSON files"
 	@echo "  htmlhelp   to make HTML files and a HTML help project"
@@ -64,6 +65,9 @@ singlehtml:
 	@echo
 	@echo "Build finished. The HTML page is in $(BUILDDIR)/singlehtml."
 
+livehtml:
+	sphinx-autobuild -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
+
 pickle:
 	$(SPHINXBUILD) -b pickle $(ALLSPHINXOPTS) $(BUILDDIR)/pickle
 	@echo
@@ -85,17 +89,17 @@ qthelp:
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
 	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
-	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/ReadtheDocsTemplate.qhcp"
+	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/aspnet.qhcp"
 	@echo "To view the help file:"
-	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/ReadtheDocsTemplate.qhc"
+	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/aspnet.qhc"
 
 devhelp:
 	$(SPHINXBUILD) -b devhelp $(ALLSPHINXOPTS) $(BUILDDIR)/devhelp
 	@echo
 	@echo "Build finished."
 	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/ReadtheDocsTemplate"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/ReadtheDocsTemplate"
+	@echo "# mkdir -p $$HOME/.local/share/devhelp/aspnet"
+	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/aspnet"
 	@echo "# devhelp"
 
 epub:
