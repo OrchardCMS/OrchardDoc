@@ -122,17 +122,17 @@ Let's update the front end view so that it follows the correct localized develop
   
   1. Wrap each of the four blocks of text in their own `@T()` calls:
   
-        @if (Model.ContentPart.IsOnSale) {
-          <p class="sale-red">@T("ON SALE!")</p>
-        }
-        <p>@T("Today's featured product is the Sprocket 9000.")</p>
-        @if (!Model.IsOnFeaturedProductPage) {
-          <p><a href="~/sprocket-9000" class="btn-green">
-            @T("Click here to view it.")
-          </a></p>
-        } else {
-          <p class="box-purple">@T("Read more about it on this page.")</p>
-        }
+         @if (Model.ContentPart.IsOnSale) {
+           <p class="sale-red">@T("ON SALE!")</p>
+         }
+         <p>@T("Today's featured product is the Sprocket 9000.")</p>
+         @if (!Model.IsOnFeaturedProductPage) {
+           <p><a href="~/sprocket-9000" class="btn-green">
+             @T("Click here to view it.")
+           </a></p>
+         } else {
+           <p class="box-purple">@T("Read more about it on this page.")</p>
+         }
 
 In the model class we used the `[DisplayName]` attribute on the `IsOnSale` property. The `[DisplayName]` is an ASP.NET MVC attribute which allows you to automatically inject a descriptive label into your UI.
 
@@ -150,12 +150,12 @@ However, this kind of duplication of the text is not a best practice. Instead th
   
   2. Find the call to `LabelFor`:
   
-        @Html.LabelFor(model => model.IsOnSale)
+         @Html.LabelFor(model => model.IsOnSale)
          
      And replace it with:
 
-        @Html.LabelFor(model => model.IsOnSale, 
-            T(Html.DisplayNameFor(model => model.IsOnSale).ToHtmlString()))
+         @Html.LabelFor(model => model.IsOnSale, 
+             T(Html.DisplayNameFor(model => model.IsOnSale).ToHtmlString()))
 
 Localization is an important topic in Orchard. Read the [using the localization helpers](Using-the-localization-helpers.html) and the [creating global ready applications](Creating-global-ready-applications.html) guides for more detailed information about supporting this feature.
 
@@ -182,9 +182,9 @@ The quick fix for this is to move the CSS into a `.css` file and then use `Scrip
   
   1. Go back to `FeaturedProduct.cshtml` and replace the now empty `<style></style>` with this code:
   
-        @{
-          Style.Include("FeaturedProduct.css");
-        }
+         @{
+           Style.Include("FeaturedProduct.css");
+         }
 
 If you don't specify a folder then Orchard will automatically check the `.\Styles` folder first.
 
@@ -244,8 +244,8 @@ Now that its clear what service the resource manifest provides, let's upgrade th
  
   1. Add the `IResourceManifestProvider` interface to the `ResourceManfiest` class:
  
-        public class ResourceManifest : IResourceManifestProvider {
-        }
+         public class ResourceManifest : IResourceManifestProvider {
+         }
         
   1. Use the `Ctrl-.` technique to add the `using Orchard.UI.Resources;` namespace.
   
@@ -259,8 +259,8 @@ Now that its clear what service the resource manifest provides, let's upgrade th
   
   1. In it's space add in the following code:
   
-        var manifest = builder.Add();
-        manifest.DefineStyle("FeaturedProduct").SetUrl("FeaturedProduct.css");
+         var manifest = builder.Add();
+         manifest.DefineStyle("FeaturedProduct").SetUrl("FeaturedProduct.css");
 
      Orchard knows to automatically check the `.\Styles\` folder for this style sheet.
      
@@ -270,11 +270,11 @@ Now that its clear what service the resource manifest provides, let's upgrade th
   
   1. Replace the `Style.Include()` call, which is used to directly reference style sheets, with a `Style.Require()` call. This is used to refer to resources defined in resource manifest files:
   
-        @{
-          Style.Require("FeaturedProduct");
-        }
+         @{
+           Style.Require("FeaturedProduct");
+         }
   
-    Don't forget that the resource doesn't need the `.css` extension on the end.
+     Don't forget that the resource doesn't need the `.css` extension on the end.
     
 If you run the module in Orchard now then it will look the same as it did before. While this is a simplistic application of a best practice, I think that from the explanation of it you will see how valuable it will be in more complex modules.
 
@@ -315,20 +315,20 @@ Apply these changes to the module:
   
   1. Update the view to reflect the new class names:
   
-        @{
-          Style.Require("FeaturedProduct");
-        }
-        @if (Model.ContentPart.IsOnSale) {
-          <p class="label-onsale">@T("ON SALE!")</p>
-        }
-        <p>@T("Today's featured product is the Sprocket 9000.")</p>
-        @if (!Model.IsOnFeaturedProductPage) {
-          <p><a href="~/sprocket-9000" class="btn-featuredproduct">
-            @T("Click here to view it.")</a>
-          </p>
-        } else {
-          <p class="box-moreinfoavailable">@T("Read more about it on this page.")</p>
-        }
+         @{
+           Style.Require("FeaturedProduct");
+         }
+         @if (Model.ContentPart.IsOnSale) {
+           <p class="label-onsale">@T("ON SALE!")</p>
+         }
+         <p>@T("Today's featured product is the Sprocket 9000.")</p>
+         @if (!Model.IsOnFeaturedProductPage) {
+           <p><a href="~/sprocket-9000" class="btn-featuredproduct">
+             @T("Click here to view it.")</a>
+           </p>
+         } else {
+           <p class="box-moreinfoavailable">@T("Read more about it on this page.")</p>
+         }
 
 ## Use services instead of making a mess in your driver
 In part three of this course we spent our time making a complete mess of the driver class.
@@ -363,19 +363,19 @@ Let's upgrade the module to use our own service:
   
   1. The interface should be public so add that keyword to the start of the interface declaration. It should also implement the `IDependency` interface:
   
-        public interface IFeaturedProductService : IDependency {
+         public interface IFeaturedProductService : IDependency {
   
   1. The purpose of the service is to answer a single question, so add a method declaration to the interface called `IsOnFeaturedProductPage` which returns `bool`. You don't need to specify the `public` modifier when working with an interface:
   
-        public interface IFeaturedProductService : IDependency {
-          bool IsOnFeaturedProductPage();
-        }
+         public interface IFeaturedProductService : IDependency {
+           bool IsOnFeaturedProductPage();
+         }
 
   1. Add a class to the services folder called `FeaturedProductService`. This will be the concrete implementation that we place the actual code into.
   
   1. Add the `IFeaturedProductService` interface to the class:
   
-        public class FeaturedProductService : IFeaturedProductService {
+         public class FeaturedProductService : IFeaturedProductService {
   
   1. Implement its interface using the `Ctrl-.` technique.
   
@@ -385,30 +385,29 @@ Let's upgrade the module to use our own service:
   
   1. Cut the following code from the driver and paste it into the service class:
   
-  
-        private readonly IContentManager _contentManager;
-        private readonly IWorkContextAccessor _workContextAccessor;
-        private readonly IAliasService _aliasService;
-        private IContent _currentContent = null;
-        private IContent CurrentContent {
-          get {
-            if (_currentContent == null) {
-              var itemRoute = _aliasService.Get(_workContextAccessor.GetContext()
-                .HttpContext.Request.AppRelativeCurrentExecutionFilePath
-                .Substring(1).Trim('/'));      
-              _currentContent = _contentManager
-                .Get(Convert.ToInt32(itemRoute["Id"]));
-            }
-            return _currentContent;
-          }
-        }
-        public FeaturedProductDriver(IContentManager contentManager,
-          IWorkContextAccessor workContextAccessor,
-          IAliasService aliasService) {
-          _contentManager = contentManager;
-          _workContextAccessor = workContextAccessor;
-          _aliasService = aliasService;
-        }
+         private readonly IContentManager _contentManager;
+         private readonly IWorkContextAccessor _workContextAccessor;
+         private readonly IAliasService _aliasService;
+         private IContent _currentContent = null;
+         private IContent CurrentContent {
+           get {
+             if (_currentContent == null) {
+               var itemRoute = _aliasService.Get(_workContextAccessor.GetContext()
+                 .HttpContext.Request.AppRelativeCurrentExecutionFilePath
+                 .Substring(1).Trim('/'));      
+               _currentContent = _contentManager
+                 .Get(Convert.ToInt32(itemRoute["Id"]));
+             }
+             return _currentContent;
+           }
+         }
+         public FeaturedProductDriver(IContentManager contentManager,
+           IWorkContextAccessor workContextAccessor,
+           IAliasService aliasService) {
+           _contentManager = contentManager;
+           _workContextAccessor = workContextAccessor;
+           _aliasService = aliasService;
+         }
 
   1. The private variables need several namespaces adding to be valid code. Use the `Ctrl-.` technique to add in the required `using` statements.
   
@@ -420,26 +419,26 @@ This means the code from the `bool isOnFeaturedProductPage` to the start of the 
   
   1. Cut the following code and paste it into the `IsOnFeaturedProductPage()` method of the service class:
     
-        bool isOnFeaturedProductPage = false;  
-        var itemTypeName = CurrentContent.ContentItem.TypeDefinition.Name;  
-        if (itemTypeName.Equals("Product", 
-          StringComparison.InvariantCultureIgnoreCase)) {
-            var dynamicContentItem = (dynamic)CurrentContent.ContentItem;
-            var itemProductId = dynamicContentItem.Product.ProductId.Value;  
-            if(itemProductId.Equals("SPROCKET9000", 
-              StringComparison.InvariantCulture)) {
-                isOnFeaturedProductPage = true;
-            }
-        }	
+         bool isOnFeaturedProductPage = false;  
+         var itemTypeName = CurrentContent.ContentItem.TypeDefinition.Name;  
+         if (itemTypeName.Equals("Product", 
+           StringComparison.InvariantCultureIgnoreCase)) {
+             var dynamicContentItem = (dynamic)CurrentContent.ContentItem;
+             var itemProductId = dynamicContentItem.Product.ProductId.Value;  
+             if(itemProductId.Equals("SPROCKET9000", 
+               StringComparison.InvariantCulture)) {
+                 isOnFeaturedProductPage = true;
+             }
+         }	
   
   1. Delete the `throw new NotImplementedException();` line if its still in there.
   
   1. The `IsOnFeaturedProductPage()` method should return a `bool` so add a return value to pass `isOnFeaturedProductPage` back:
   
-        public bool IsOnFeaturedProductPage() {
-          //..snip..
-          return isOnFeaturedProductPage;
-        }
+         public bool IsOnFeaturedProductPage() {
+           //..snip..
+           return isOnFeaturedProductPage;
+         }
 
 The service class is now complete. Your completed service class `FeaturedProductService.cs` should now look like this:
 
@@ -501,35 +500,35 @@ The driver class can now be modified so that the service is injected as a depend
   
   1. Switch to the driver class again. There should be a red squiggly underneath the usage of `isOnFeaturedProductPage` because it no longer exists. In order to pull this information from the service we need to inject it via the constructor.
   
-    Add a new private variable to hold the service reference. Don't forget we always work with the interface when using the dependency injection features:
+     Add a new private variable to hold the service reference. Don't forget we always work with the interface when using the dependency injection features:
     
-        private readonly IFeaturedProductService _featuredProductService;
+         private readonly IFeaturedProductService _featuredProductService;
         
   1. The `IFeaturedProductService` will need its namespace adding. Do it via the `Ctrl-.` shortcut.
   
   1. Create a default constructor which will request an instance of `IFeaturedProductService`:
   
-        public FeaturedProductDriver(IFeaturedProductService featuredProductService) {
-        }
+         public FeaturedProductDriver(IFeaturedProductService featuredProductService) {
+         }
      
      Make sure you add the `public` keyword at the start or `Autofac` will thrown an exception. 
     
   1. Assign the injected constructor parameter to the private variable:
   
-        public FeaturedProductDriver(IFeaturedProductService featuredProductService) {
-            _featuredProductService = featuredProductService;
-        }
+         public FeaturedProductDriver(IFeaturedProductService featuredProductService) {
+             _featuredProductService = featuredProductService;
+         }
 
   1. Update the `Display()` method so that it uses the new service:
   
-        protected override DriverResult Display(FeaturedProductPart part, 
-          string displayType, dynamic shapeHelper) {
-            return ContentShape("Parts_FeaturedProduct", () => {
-              return shapeHelper.Parts_FeaturedProduct(
-                IsOnFeaturedProductPage: _featuredProductService
-                  .IsOnFeaturedProductPage());
-            });
-        }
+         protected override DriverResult Display(FeaturedProductPart part, 
+           string displayType, dynamic shapeHelper) {
+             return ContentShape("Parts_FeaturedProduct", () => {
+               return shapeHelper.Parts_FeaturedProduct(
+                 IsOnFeaturedProductPage: _featuredProductService
+                   .IsOnFeaturedProductPage());
+             });
+         }
 
 Your `FeaturedProductDriver.cs` class should now look like this:
 
@@ -594,17 +593,17 @@ Let's add an update to the data migration class so that this is populated:
   
   1. Each time you want to add a new migration you add one to the number in your `UpdateFromN()` methods. Unless you have been experimenting with the code you should be on `UpdateFrom2()` now. Add this method to the class and set its return value to `3`:
   
-        public int UpdateFrom2() {
-          return 3;
-        }
+         public int UpdateFrom2() {
+           return 3;
+         }
 
   1. We want to edit the description by using `.WithDescription()` on the part. 
   
      Add this code into the method:
      
-        ContentDefinitionManager.AlterPartDefinition(
-          typeof(FeaturedProductPart).Name, part => part
-            .WithDescription("Renders information about the featured product."));
+         ContentDefinitionManager.AlterPartDefinition(
+           typeof(FeaturedProductPart).Name, part => part
+             .WithDescription("Renders information about the featured product."));
             
   1. The `.WithDescription` method is an extension method in it's own namespace. If you have cleaned up your using statements in one of the previous parts you will need to use `Ctrl-.` to add the `using` in.
 
@@ -684,48 +683,48 @@ This means the process will be as follows:
 
   1. **Copy** the `CreateTable()` call from `UpdateFrom1()` to the `Create()` method so that your `Create()` method now looks like this:
   
-        public int Create() {
-          // Featured Product Widget
-          ContentDefinitionManager.AlterTypeDefinition(
-            "FeaturedProductWidget", cfg => cfg
-            .WithSetting("Stereotype", "Widget")
-            .WithPart(typeof(FeaturedProductPart).Name)
-            .WithPart(typeof(CommonPart).Name)
-            .WithPart(typeof(WidgetPart).Name));
-            
-          // Featured Product Part Record
-          SchemaBuilder.CreateTable(typeof(FeaturedProductPartRecord).Name,
-            table => table
-              .ContentPartRecord()
-              .Column<bool>("IsOnSale"));
-          return 1;
-        }
+         public int Create() {
+           // Featured Product Widget
+           ContentDefinitionManager.AlterTypeDefinition(
+             "FeaturedProductWidget", cfg => cfg
+             .WithSetting("Stereotype", "Widget")
+             .WithPart(typeof(FeaturedProductPart).Name)
+             .WithPart(typeof(CommonPart).Name)
+             .WithPart(typeof(WidgetPart).Name));
+             
+           // Featured Product Part Record
+           SchemaBuilder.CreateTable(typeof(FeaturedProductPartRecord).Name,
+             table => table
+               .ContentPartRecord()
+               .Column<bool>("IsOnSale"));
+           return 1;
+         }
         
      Leave the original `UpdateFrom1()` method intact.
 
   1. **Copy** the `AlterPartDefinition()` call from `UpdateFrom2()` to the `Create()` method so that your `Create()` method now looks like this:
   
-        public int Create() {
-          // Featured Product Widget
-          ContentDefinitionManager.AlterTypeDefinition(
-            "FeaturedProductWidget", cfg => cfg
-              .WithSetting("Stereotype", "Widget")
-              .WithPart(typeof(FeaturedProductPart).Name)
-              .WithPart(typeof(CommonPart).Name)
-              .WithPart(typeof(WidgetPart).Name));
-              
-          // Featured Product Part
-          ContentDefinitionManager.AlterPartDefinition(
-            typeof(FeaturedProductPart).Name, part => part
-              .WithDescription("Renders information about the featured product."));
-
-          // Featured Product Part Record
-          SchemaBuilder.CreateTable(typeof(FeaturedProductPartRecord).Name,
-            table => table
-              .ContentPartRecord()
-              .Column<bool>("IsOnSale"));
-          return 1;
-        }
+         public int Create() {
+           // Featured Product Widget
+           ContentDefinitionManager.AlterTypeDefinition(
+             "FeaturedProductWidget", cfg => cfg
+               .WithSetting("Stereotype", "Widget")
+               .WithPart(typeof(FeaturedProductPart).Name)
+               .WithPart(typeof(CommonPart).Name)
+               .WithPart(typeof(WidgetPart).Name));
+               
+           // Featured Product Part
+           ContentDefinitionManager.AlterPartDefinition(
+             typeof(FeaturedProductPart).Name, part => part
+               .WithDescription("Renders information about the featured product."));
+ 
+           // Featured Product Part Record
+           SchemaBuilder.CreateTable(typeof(FeaturedProductPartRecord).Name,
+             table => table
+               .ContentPartRecord()
+               .Column<bool>("IsOnSale"));
+           return 1;
+         }
         
      Leave the original `UpdateFrom2()` method intact.
   
@@ -829,9 +828,6 @@ In this course we have looked at many of the core components that make up a modu
 This should have given you a solid grounding for extending Orchard via code. With this knowledge you can now build your own simple modules and you will also understand the documentation found elsewhere on this site and around the web.
 
 > **Bonus Exercise:** Using the skills you have now learned, research implement the following:
-
 > 1. Add a Content Picker Field to the `FeaturedProductWidget` part so that you can  select a `Product` to be featured.
-
-> 1. Implement the code so that the widget will work with the selected `Product` rather than using the hard-coded information we supplied throughout this course. 
-
+> 1. Implement the code so that the widget will work with the selected `Product` rather than using the hard-coded information we supplied throughout this course.
 > You can find the information to complete this exercise by using resources such as this documentation website, reading the Orchard source code and searching the World Wide Web.

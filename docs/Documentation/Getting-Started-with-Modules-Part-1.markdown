@@ -69,7 +69,7 @@ The first step to take is to collapse all of the projects down. Its a long list 
   
   1. Click the `Collapse All` icon in the toolbar along the top of the solution explorer. It looks like this:
      
-    ![](../Attachments/getting-started-with-modules-part-1/collapse-all.png)
+     ![](../Attachments/getting-started-with-modules-part-1/collapse-all.png)
 
 If you expand your `Modules` folder you will see a long list of the modules which come packaged with Orchard:
 
@@ -113,7 +113,7 @@ To scaffold a new module:
      
   1. Type `help codegen module` and press enter to see the syntax for this command. To see details about all of the commands available type `help commands`. 
   
-    Like the rest of Orchard CMS, the orchard.exe command shell is extendable. The total number of commands available can vary depending on what features / modules you have loaded. In a future tutorial we will look at extending orchard.exe with our own commands.
+     Like the rest of Orchard CMS, the orchard.exe command shell is extendable. The total number of commands available can vary depending on what features / modules you have loaded. In a future tutorial we will look at extending orchard.exe with our own commands.
     
   1. Scaffold the module by entering the following command: `codegen module Orchard.LearnOrchard.FeaturedProduct`. 
   
@@ -123,11 +123,11 @@ To scaffold a new module:
   
   1. This has now created a new, empty module in the file system. Switching back to Visual Studio should show you the `File Modification Detected` dialog:
     
-    ![](../Attachments/getting-started-with-modules-part-1/reload-solution.png)
+     ![](../Attachments/getting-started-with-modules-part-1/reload-solution.png)
     
-    Click `Reload`.
+     Click `Reload`.
     
-    > **Note:** If you had unsaved changes in your Solution file then click the `Dismiss` option and add the project manually. In the Solution Explorer, `Right click` on the `Modules` folder. Choose `Add`, `Existing Project`, then navigate to `.\src\Orchard.Web\Modules\Orchard.LearnOrchard.FeaturedProduct\`, select `Orchard.LearnOrchard.FeaturedProduct.csproj` and press `Open`.
+> **Note:** If you had unsaved changes in your Solution file then click the `Dismiss` option and add the project manually. In the Solution Explorer, `Right click` on the `Modules` folder. Choose `Add`, `Existing Project`, then navigate to `.\src\Orchard.Web\Modules\Orchard.LearnOrchard.FeaturedProduct\`, select `Orchard.LearnOrchard.FeaturedProduct.csproj` and press `Open`.
 
 The basic framework for a module now exists inside the modules section of your solution:
 
@@ -236,7 +236,7 @@ The data migration class can be created by hand, following a similar process as 
      
   1. Type `help codegen datamigration` and press enter to see the syntax for this command. To see details about all of the commands available type `help commands`. 
   
-    Like the rest of Orchard CMS, the orchard.exe command shell is extendable. The total number of commands available can vary depending on what features / modules you have loaded. In a future tutorial we will look at extending orchard.exe with our own commands.
+     Like the rest of Orchard CMS, the orchard.exe command shell is extendable. The total number of commands available can vary depending on what features / modules you have loaded. In a future tutorial we will look at extending orchard.exe with our own commands.
     
   1. Scaffold the data migration class by entering the following command: `codegen datamigration Orchard.LearnOrchard.FeaturedProduct`.
   
@@ -246,11 +246,11 @@ The data migration class can be created by hand, following a similar process as 
   
      Switching back to Visual Studio should show you the `File Modification Detected` dialog:
     
-    ![](../Attachments/getting-started-with-modules-part-1/reload-solution.png)
+     ![](../Attachments/getting-started-with-modules-part-1/reload-solution.png)
     
-    Click `Reload`.
+     Click `Reload`.
     
-    > **Note:** If you had unsaved changes in your Solution file then click the `Dismiss` option and add the class manually. In the Solution Explorer, `right click` on the `Orchard.LearnOrchard.FeaturedProduct` folder. Choose `Add`, `Existing Item`, then navigate to `.\src\Orchard.Web\Modules\Orchard.LearnOrchard.FeaturedProduct\`, select `Migrations.cs` and press `Add`.
+> **Note:** If you had unsaved changes in your Solution file then click the `Dismiss` option and add the class manually. In the Solution Explorer, `right click` on the `Orchard.LearnOrchard.FeaturedProduct` folder. Choose `Add`, `Existing Item`, then navigate to `.\src\Orchard.Web\Modules\Orchard.LearnOrchard.FeaturedProduct\`, select `Migrations.cs` and press `Add`.
 
 Now you have a `Migrations.cs` file in the root folder of your module's project. By default it has an empty method called `Create()` which returns an `int`. For the moment, returning a value of `1` is fine. It's the version number of your data migration and we will look into it in more detail later in this course.
 
@@ -278,7 +278,7 @@ Let's update the `Create()` method to implement these plans:
    
   1. Try the same under the `WidgetPart` - you will see Visual Studio doesn't understand where to point the `using` statement at and it only offers you options to generate stubs. We don't want this.
   
-    ![](../Attachments/getting-started-with-modules-part-1/datamigrations-unknownnamespace.png)
+     ![](../Attachments/getting-started-with-modules-part-1/datamigrations-unknownnamespace.png)
    
   1. `Right click` on your `References` and choose `Add Reference...`
    
@@ -421,7 +421,7 @@ For this first widget our needs are simple and we will only be putting plain HTM
   
   1. Within the `FeaturedProduct.cshtml` view file add the following HTML markup:
   
-        <style>
+         <style>
           .btn-green {
             padding: 1em;
             text-align: center;
@@ -430,9 +430,9 @@ For this first widget our needs are simple and we will only be putting plain HTM
             font-size: 2em;
             display: block;
           }
-        </style>
-        <p>Today's featured product is the Sprocket 9000.</p>
-        <p><a href="~/sprocket-9000" class="btn-green">Click here to view it.</a></p>
+         </style>
+         <p>Today's featured product is the Sprocket 9000.</p>
+         <p><a href="~/sprocket-9000" class="btn-green">Click here to view it.</a></p>
 
 ## Placement
 Almost all of the key elements are in place now except for this last one. The configuration inside a driver class tells Orchard *how* to render that content part. Content parts always exist within a larger composite content item. Placement is used to tell Orchard *where* to render these components.
