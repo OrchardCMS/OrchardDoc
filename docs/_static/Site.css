@@ -1,0 +1,19 @@
+table { border-collapse:collapse; border-spacing:0; }
+
+table {
+    border: 1px solid #CCC;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+table thead td {
+    background-color: #DDD;
+    white-space: nowrap;
+}
+
+table td {
+    vertical-align: top;
+    border: 1px solid #CCC;
+    padding: 3px;
+    margin: 0;
+}

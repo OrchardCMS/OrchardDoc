@@ -58,7 +58,31 @@ There should be a setting to enable or disable local/internal linkbacks.
 ## Permissions
 In this context, the owner is the owner of the content item being linked back to (the container of the linkbacks).
 
-Permission                                       | Anon. | Authentic. | Owner | Admin. | Author | Editor
------------------------------------------------- | ----- | ---------- | ----- | ------ | ------ | ------
-Moderate linkbacks (implies all others)          | No    | No         | Yes   | Yes    | Yes    | Yes
-Disable linkbacks                                | No    | No         | Yes   | Yes    | Yes    | Yes
+<table><thead><tr>
+    <td>Permission</td>
+    <td>Anon. </td>
+    <td>Authentic. </td>
+    <td>Owner </td>
+    <td>Admin. </td>
+    <td>Author </td>
+    <td>Editor</td>
+</tr></thead><tbody>
+    <tr>
+        <td>Moderate linkbacks (implies all others)</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <td>Disable linkbacks</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+    </tr>
+</tbody></table>

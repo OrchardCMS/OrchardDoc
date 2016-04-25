@@ -380,11 +380,43 @@ The design of themes will be coupled to the widget infrastructure. The widgets s
 
 Here, owner means the site owner.
 
-Permission                                 | Anon. | Authentic. | Owner | Admin. | Author | Editor
------------------------------------------- | ----- | ---------- | ----- | ------ | ------ | ------
-Change current theme                       | No    | No         | Yes   | Yes    | No     | No
-Edit theme                                 | No    | No         | Yes   | Yes    | No     | No
-Install and uninstall themes               | No    | No         | Yes   | Yes    | No     | No
+<table><thead><tr>
+    <td>Permission</td>
+    <td>Anon. </td>
+    <td>Authentic. </td>
+    <td>Owner </td>
+    <td>Admin. </td>
+    <td>Author </td>
+    <td>Editor</td>
+</tr></thead><tbody>
+    <tr>
+        <td>Change current theme</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>Edit theme</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>Install and uninstall themes</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>No</td>
+    </tr>
+</tbody></table>
 
 Additional permissions may apply to local themes when they get implemented.
 

@@ -59,10 +59,34 @@ In this context, owner means the media asset owner when acting on a specific ass
 
 Default permissions are:
 
-Permission                                       | Anon. | Authentic. | Owner | Admin. | Author | Editor
------------------------------------------------- | ----- | ---------- | ----- | ------ | ------ | ------
-Upload & manage media (modify/rename/delete)     | No    | No         | Yes   | Yes    | Yes    | Yes
-Create and manage media folders                  | No    | No         | Yes   | Yes    | Yes    | No
+<table><thead><tr>
+    <td>Permission</td>
+    <td>Anon. </td>
+    <td>Authentic. </td>
+    <td>Owner </td>
+    <td>Admin. </td>
+    <td>Author </td>
+    <td>Editor</td>
+</tr></thead><tbody>
+    <tr>
+        <td>Upload &amp; manage media (modify/rename/delete)</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <td>Create and manage media folders</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>No</td>
+    </tr>
+</tbody></table>
 
 ## Flows
 

@@ -35,16 +35,43 @@ Overview of the CSS Styles
 
 The style sheet (Site.css) for the Theme Machine provides an extensive set of styles for fine-grained control of the look and feel of your website. The style sheet groups styles to make it easier for you to locate a style that you want to customize. The following table shows the groupings and describes the type of styles available to you.
 
-Grouping  | Description
---------- | ------------------------------------------------------------------------------------------------------------
-General   | Contains the default styles for the body, headings, lists, and text elements.
-Forms     | Contains styles related to HTML forms, such as **form**, **legend**, **fieldset**, **label**, and **input**.
-Structure | Contains page layout styles for each of the zones defined in the Theme Machine.
-Main      | Contains styles defined for blog posts, comments, tagged search, and search results.
-Secondary | Contains additional layout styles for secondary content in aside zones, tripel zones, and footer quad zones.
-Widgets   | Contains styles for selected widgets such as the search widget, edit-mode widgets, and content mode.
-Pager     | Contains styles related to a pager shape.
-Misc      | Contains styles for miscellaneous formatting, such as small, large, quiet, and highlight.
+<table><thead><tr>
+    <td>Grouping  </td>
+    <td>Description</td>
+</tr></thead><tbody>
+    <tr>
+        <td>General</td>
+        <td>Contains the default styles for the body, headings, lists, and text elements.</td>
+    </tr>
+    <tr>
+        <td>Forms</td>
+        <td>Contains styles related to HTML forms, such as <strong>form</strong>, <strong>legend</strong>, <strong>fieldset</strong>, <strong>label</strong>, and <strong>input</strong>.</td>
+    </tr>
+    <tr>
+        <td>Structure</td>
+        <td>Contains page layout styles for each of the zones defined in the Theme Machine.</td>
+    </tr>
+    <tr>
+        <td>Main</td>
+        <td>Contains styles defined for blog posts, comments, tagged search, and search results.</td>
+    </tr>
+    <tr>
+        <td>Secondary</td>
+        <td>Contains additional layout styles for secondary content in aside zones, tripel zones, and footer quad zones.</td>
+    </tr>
+    <tr>
+        <td>Widgets</td>
+        <td>Contains styles for selected widgets such as the search widget, edit-mode widgets, and content mode.</td>
+    </tr>
+    <tr>
+        <td>Pager</td>
+        <td>Contains styles related to a pager shape.</td>
+    </tr>
+    <tr>
+        <td>Misc</td>
+        <td>Contains styles for miscellaneous formatting, such as small, large, quiet, and highlight.</td>
+    </tr>
+</tbody></table>
 
 Creating a Child Theme
 ----------------------

@@ -39,7 +39,31 @@ For the moment, and until we have widgets, we will hard-code the tag cloud into 
 
 The owner here is the owner of the content item being tagged for the tag content permission, and the site owner for the tag management right.
 
-Permission                                 | Anon. | Authentic. | Owner | Admin. | Author | Editor
------------------------------------------- | ----- | ---------- | ----- | ------ | ------ | ------
-Tag contents                               | No    | No         | Yes   | Yes    | Yes    | Yes
-Manage tags                                | No    | No         | Yes   | Yes    | No     | No
+<table><thead><tr>
+    <td>Permission</td>
+    <td>Anon. </td>
+    <td>Authentic. </td>
+    <td>Owner </td>
+    <td>Admin. </td>
+    <td>Author </td>
+    <td>Editor</td>
+</tr></thead><tbody>
+    <tr>
+        <td>Tag contents</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <td>Manage tags</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>No</td>
+    </tr>
+</tbody></table>

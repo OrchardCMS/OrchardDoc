@@ -97,11 +97,23 @@ Please make sure when working with _.po_ files that the files are saved in UTF-8
 
 The following illustration shows the format of a translation file. Each text string is represented by elements listed in the following table.
 
-A reference (see below) | `#: reference-string`
------------------------ | ---------------------
-An ID, which is often the original (untranslated) string. After the ID is set, this string should not be changed even if the English string changes, so that existing translations continue to work even if they're not immediately updated. | `#| msgid "id-string"`
-The current English string for reference. This helps the translator. | `msgid "English-string"`
-The translated string.  | `msgstr "translated-string"`
+<table><thead><tr>
+    <td>A reference (see below) </td>
+    <td><code>#: reference-string</code></td>
+</tr></thead><tbody>
+    <tr>
+        <td>An ID, which is often the original (untranslated) string. After the ID is set, this string should not be changed even if the English string changes, so that existing translations continue to work even if they're not immediately updated.</td>
+        <td><code>#| msgid "id-string"</code></td>
+    </tr>
+    <tr>
+        <td>The current English string for reference. This helps the translator.</td>
+        <td><code>msgid "English-string"</code></td>
+    </tr>
+    <tr>
+        <td>The translated string.</td>
+        <td><code>msgstr "translated-string"</code></td>
+    </tr>
+</tbody></table>
 
 ![](../Upload/screenshots_675/fr_po_file.png)
 

@@ -71,13 +71,69 @@ This will provide a migration path to and from Oxite and other blogging engines.
 ## Permissions
 Here, owner means the post owner if acting on a post, the blog owner if creating a post, and the site owner when creating a blog.
 
-Permission                                       | Anon. | Authentic. | Owner | Admin. | Author | Editor
------------------------------------------------- | ----- | ---------- | ----- | ------ | ------ | ------
-View Posts                                       | Yes   | Yes        | Yes   | Yes    | Yes    | Yes
-Create & Manage Blogs                            | No    | No         | Yes   | Yes    | No     | No
-Create & Manage Posts (implies all others)       | No    | No         | Yes   | Yes    | Yes    | No
-Create Drafts                                    | No    | No         | Yes   | Yes    | Yes    | No
-Modify/Delete posts                              | No    | No         | Yes   | Yes    | Yes    | Yes
-Publish/Unpublish/Schedule posts                 | No    | No         | Yes   | Yes    | Yes    | Yes
+<table><thead><tr>
+    <td>Permission </td>
+    <td>Anon. </td>
+    <td>Authentic. </td>
+    <td>Owner </td>
+    <td>Admin. </td>
+    <td>Author </td>
+    <td>Editor</td>
+</tr></thead><tbody>
+    <tr>
+        <td>View Posts</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <td>Create &amp; Manage Blogs</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>Create &amp; Manage Posts (implies all others)</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>Create Drafts</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>Modify/Delete posts</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <td>Publish/Unpublish/Schedule posts</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+    </tr>
+</tbody></table>
 
 Additional permissions may apply to aspects such as comments or tags.

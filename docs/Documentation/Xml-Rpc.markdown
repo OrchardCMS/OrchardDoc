@@ -45,34 +45,142 @@ The Live Writer manifest enables a very granular implementation of the various A
 
 Those capabilities are being provided by modules (blog, pages, tags), not by the core application. For that reason, we will eventually enable modules to participate in the creation of the manifest. As a first step though, we will implement the manifest as a static list of capabilities (see [the LiveWriter Manifest documentation](http://msdn.microsoft.com/en-us/library/bb463260.aspx)).
 
-API Capability                 | Orchard support | Expected behavior
------------------------------- | --------------- | -----------------------------------------------------------------------------
-supportsPostAsDraft            | ?               | Respects the publish flag on metaWeblog.newPost and metaWeblog.editPost calls
-supportsFileUpload             | ?               | Supports metaWeblog.newMediaObject
-supportsExtendedEntries        | -               | Supports mt_text_more field of post struct
-supportsCustomDate             | ?               | Supports explicit specification of dateCreated field of post struct
-supportsCategories             | ?               | Supports categorization of posts using either a category array within the post struct or mt.setPostCategories
-supportsCategoriesInline       | ?               | Supports categories field of post struct
-supportsMultipleCategories     | ?               | Allows specification of more than one category per post
-supportsHierarchicalCategories | -               | Supports wp.getCategories and wp.addCategory
-supportsNewCategories          | -               | Supports the addition of new categories from the client via either inline specification (see below) or via the wp.addCategory method
-supportsNewCategoriesInline    | ?               | Previously unused categories included within the categories field are automatically added
-supportsKeywords               | -               | Supports mt_keywords field of post struct
-supportsCommentPolicy          | ?               | Supports mt_allow_comments field of post struct
-supportsPingPolicy             | -               | Supports mt_allow_pings field of post struct
-supportsAuthor                 | ?               | Supports wp_author field of post struct
-supportsSlug                   | ?               | Supports either wp_slug or mt_basname field of post struct
-supportsPassword               | -               | Supports wp_password field of post struct
-supportsExcerpt                | ?               | Supports mt_excerpt field of post struct
-supportsTrackbacks             | -               | Supports mt_tb_ping_urls field of post struct
-supportsPages                  | ?               | Supports WordPress page editing API: wp.newPage, wp.editPage, wp.getPage, wp.getPages, wp.getPageList, andwp.deletePage
-supportsPageParent             | -               | Supports wp_page_parent_id field of page struct
-supportsPageOrder              | -               | Supports wp_page_order field of page struct
-supportsEmptyTitles            | -               | Allows empty string as a valid value for the title field of the post struct
-requiresHtmlTitles             | -               | Title field is interpreted as HTML content rather than plain text
-requiresXHTML                  | -               | Generate XHTML style markup by default
-supportsScripts                | ?               | Allows embedded script within post content
-supportsEmbeds                 | ?               | Allows object embeds within post content
+<table><thead><tr>
+    <td>API Capability</td>
+    <td>Orchard support </td>
+    <td>Expected behavior</td>
+</tr></thead><tbody>
+    <tr>
+        <td>supportsPostAsDraft</td>
+        <td>?</td>
+        <td>Respects the publish flag on metaWeblog.newPost and metaWeblog.editPost calls</td>
+    </tr>
+    <tr>
+        <td>supportsFileUpload</td>
+        <td>?</td>
+        <td>Supports metaWeblog.newMediaObject</td>
+    </tr>
+    <tr>
+        <td>supportsExtendedEntries</td>
+        <td>-</td>
+        <td>Supports mt<em>text</em>more field of post struct</td>
+    </tr>
+    <tr>
+        <td>supportsCustomDate</td>
+        <td>?</td>
+        <td>Supports explicit specification of dateCreated field of post struct</td>
+    </tr>
+    <tr>
+        <td>supportsCategories</td>
+        <td>?</td>
+        <td>Supports categorization of posts using either a category array within the post struct or mt.setPostCategories</td>
+    </tr>
+    <tr>
+        <td>supportsCategoriesInline</td>
+        <td>?</td>
+        <td>Supports categories field of post struct</td>
+    </tr>
+    <tr>
+        <td>supportsMultipleCategories</td>
+        <td>?</td>
+        <td>Allows specification of more than one category per post</td>
+    </tr>
+    <tr>
+        <td>supportsHierarchicalCategories</td>
+        <td>-</td>
+        <td>Supports wp.getCategories and wp.addCategory</td>
+    </tr>
+    <tr>
+        <td>supportsNewCategories</td>
+        <td>-</td>
+        <td>Supports the addition of new categories from the client via either inline specification (see below) or via the wp.addCategory method</td>
+    </tr>
+    <tr>
+        <td>supportsNewCategoriesInline</td>
+        <td>?</td>
+        <td>Previously unused categories included within the categories field are automatically added</td>
+    </tr>
+    <tr>
+        <td>supportsKeywords</td>
+        <td>-</td>
+        <td>Supports mt<em>keywords field of post struct</em></td>
+    </tr>
+    <tr>
+        <td>supportsCommentPolicy</td>
+        <td>?</td>
+        <td>Supports mtallow<em>comments field of post struct</em></td>
+    </tr>
+    <tr>
+        <td>supportsPingPolicy</td>
+        <td>-</td>
+        <td>Supports mtallow<em>pings field of post struct</em></td>
+    </tr>
+    <tr>
+        <td>supportsAuthor</td>
+        <td>?</td>
+        <td>Supports wpauthor field of post struct</td>
+    </tr>
+    <tr>
+        <td>supportsSlug</td>
+        <td>?</td>
+        <td>Supports either wp<em>slug or mt</em>basname field of post struct</td>
+    </tr>
+    <tr>
+        <td>supportsPassword</td>
+        <td>-</td>
+        <td>Supports wp<em>password field of post struct</em></td>
+    </tr>
+    <tr>
+        <td>supportsExcerpt</td>
+        <td>?</td>
+        <td>Supports mtexcerpt field of post struct</td>
+    </tr>
+    <tr>
+        <td>supportsTrackbacks</td>
+        <td>-</td>
+        <td>Supports mt<em>tb</em>ping<em>urls field of post struct</em></td>
+    </tr>
+    <tr>
+        <td>supportsPages</td>
+        <td>?</td>
+        <td>Supports WordPress page editing API: wp.newPage, wp.editPage, wp.getPage, wp.getPages, wp.getPageList, andwp.deletePage</td>
+    </tr>
+    <tr>
+        <td>supportsPageParent</td>
+        <td>-</td>
+        <td>Supports wppage<em>parent</em>id field of page struct</td>
+    </tr>
+    <tr>
+        <td>supportsPageOrder</td>
+        <td>-</td>
+        <td>Supports wp<em>page</em>order field of page struct</td>
+    </tr>
+    <tr>
+        <td>supportsEmptyTitles</td>
+        <td>-</td>
+        <td>Allows empty string as a valid value for the title field of the post struct</td>
+    </tr>
+    <tr>
+        <td>requiresHtmlTitles</td>
+        <td>-</td>
+        <td>Title field is interpreted as HTML content rather than plain text</td>
+    </tr>
+    <tr>
+        <td>requiresXHTML</td>
+        <td>-</td>
+        <td>Generate XHTML style markup by default</td>
+    </tr>
+    <tr>
+        <td>supportsScripts</td>
+        <td>?</td>
+        <td>Allows embedded script within post content</td>
+    </tr>
+    <tr>
+        <td>supportsEmbeds</td>
+        <td>?</td>
+        <td>Allows object embeds within post content</td>
+    </tr>
+</tbody></table>
 
 Categories in the Live Writer manifest correspond to tags in Orchard.
 
@@ -82,8 +190,24 @@ Supporting custom date will mean for Orchard that that date gets translated into
 
 Default permissions:
 
-Permission                                      | Anon. | Authentic. | Owner | Admin. | Author | Editor
------------------------------------------------ | ----- | ---------- | ----- | ------ | ------ | ------
-Create and manage contents through XML-RPC APIs | No    | No         | Yes   | Yes    | Yes    | Yes
+<table><thead><tr>
+    <td>Permission</td>
+    <td>Anon. </td>
+    <td>Authentic. </td>
+    <td>Owner </td>
+    <td>Admin. </td>
+    <td>Author </td>
+    <td>Editor</td>
+</tr></thead><tbody>
+    <tr>
+        <td>Create and manage contents through XML-RPC APIs</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+    </tr>
+</tbody></table>
 
 > **Note**: the specific rights for each content type and operation are also checked in addition to this right. If this right is not granted, none of the operations work

@@ -6,11 +6,27 @@ Orchard uses a number of external libraries. They can all be found under \lib di
 ## What framework versions does Orchard support?
 Orchard supports the following versions of .net:
 
-Orchard Version   | Framework Required
------------------ | ------------------
-Up to version 1.7 | Orchard supports .NET 4.0.
-Version 1.8       | Orchard runs on .NET 4.5 and IIS 7 (or newer)
-Version 1.9       | Orchard runs on .NET 4.5.1 and IIS 7 (or newer) 
+<table><thead><tr>
+    <td>Orchard Version   </td>
+    <td>Framework Required</td>
+</tr></thead><tbody>
+    <tr>
+        <td>Up to version 1.7</td>
+        <td>Orchard supports .NET 4.0.</td>
+    </tr>
+    <tr>
+        <td>Version 1.8</td>
+        <td>Orchard runs on .NET 4.5 and IIS 7 (or newer)</td>
+    </tr>
+    <tr>
+        <td>Version 1.9</td>
+        <td>Orchard runs on .NET 4.5.1 and IIS 7 (or newer)</td>
+    </tr>
+    <tr>
+        <td>Version 1.10</td>
+        <td>Orchard runs on .NET 4.5.2 and IIS 7 (or newer)</td>
+    </tr>
+</tbody></table>
 
 ## Which branch should I be using when working on the codebase?
 Branches are discussed on the [contributing patches](Contributing-patches.html#Branches) page.

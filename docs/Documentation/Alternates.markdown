@@ -41,13 +41,40 @@ All templates for alternates must reside in the _Views_ folder.
 The _Views_ folder can be located either in the theme or in the module.
 The following table shows which subfolders of _Views_ to use for different types of templates.
 
-Shape type     | Template Folder
--------------- | ----------------
-Content item   | _Views\\Items_
-Parts          | _Views\\Parts_
-Fields         | _Views\\Fields_
-EditorTemplate | _Views\\EditorTemplates\\[template type folder\]_ (For example, an **EditorTemplate** for a part is located at _Views\EditorTemplates\Parts_.)
-All other      | _Views_
+<table>
+  <thead>
+    <tr>
+      <td>
+Shape type
+      </td>
+      <td>Template Folder</td>
+  </thead>
+  <tr>
+    <td>
+Content item</td><td><em>Views\Items</em>
+    </td>
+  </tr>
+  <tr>
+    <td>
+Parts</td><td><em>Views\Parts</em>
+    </td>
+  </tr>
+  <tr>
+    <td>
+Fields</td><td><em>Views\Fields</em>
+    </td>
+  </tr>
+  <tr>
+    <td>
+EditorTemplate</td><td><em>Views\EditorTemplates\[template type folder\]</em> (For example, an <strong>EditorTemplate</strong> for a part is located at <em>Views\EditorTemplates\Parts</em>.)
+    </td>
+  </tr>
+  <tr>
+    <td>
+All other</td><td><em>Views</em>
+    </td>
+  </tr>
+</table>
 
 For example, to create an alternate template for the **Tags** part, you can add a template
 to the _MyTheme\Views\Parts_ folder.

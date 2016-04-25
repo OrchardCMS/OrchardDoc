@@ -141,31 +141,151 @@ _views/parts/Map.cshtml_
 
 The following table summarizes the conventions that are used to name shape types and templates.
 
-Applied To             | Shape Naming Convention                                           | Shape Type Example                                   | Template Example
----------------------- | ----------------------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------
-Content shapes         | Content\_\_\[ContentType\]                                        | Content\_\_BlogPost                                  | Content-BlogPost
-Content shapes         | Content\_\_\[Id\]                                                 | Content\_\_42                                        | Content-42
-Content shapes         | Content\_\_\[DisplayType\]                                        | Content\_\_Summary                                   | Content.Summary
-Content shapes         | Content\_\[DisplayType\]\_\_\[ContentType\]                       | Content\_Summary\_\_BlogPost                         | Content-BlogPost.Summary
-Content shapes         | Content\_\[DisplayType\]\_\_\[Id\]                                | Content\_Summary\_\_42                               | Content-42.Summary
-Content.Edit shapes    | Content\_Edit\_\_\[DisplayType\]                                  | Content\_Edit\_\_Page                                | Content-Page.Edit
-Content Part templates | \[ShapeType\]\_\_\[Id\]                                           | Parts\_Common\_Metadata\_\_42                        | Parts/Common.Metadata-42
-Content Part templates | \[ShapeType\]\_\_\[ContentType\]                                  | Parts\_Common\_Metadata\_\_BlogPost                  | Parts/Common.Metadata-BlogPost
-Field templates        | \[ShapeType\]\_\_\[FieldName\]                                    | Fields\_Common\_Text\_\_Teaser                       | Fields/Common.Text-Teaser
-Field templates        | \[ShapeType\]\_\_\[PartName\]                                     | Fields\_Common\_Text\_\_TeaserPart                   | Fileds/Common.Text-TeaserPart
-Field templates        | \[ShapeType\]\_\_\[ContentType\]\_\_\[PartName\]                  | Fields\_Common\_Text\_\_Blog\_\_TeaserPart           | Fields/Common.Text-Blog-TeaserPart
-Field templates        | \[ShapeType\]\_\_\[PartName\]\_\_\[FieldName\]                    | Fields\_Common\_Text\_\_TeaserPart\_\_Teaser         | Fields/Common.Text-TeaserPart-Teaser
-Field templates        | \[ShapeType\]\_\_\[ContentType\]\_\_\[FieldName\]                 | Fields\_Common\_Text\_\_Blog\_\_Teaser               | Fields/Common.Text-Blog-Teaser
-Field templates        | \[ShapeType\]\_\_\[ContentType\]\_\_\[PartName\]\_\_\[FieldName\] | Fields\_Common\_Text\_\_Blog\_\_TeaserPart\_\_Teaser | Fields/Common.Text-Blog-TeaserPart-Teaser
-LocalMenu              | LocalMenu\_\_\[MenuName\]                                         | LocalMenu\_\_main                                    | LocalMenu-main
-LocalMenuItem          | LocalMenuItem\_\_\[MenuName\]                                     | LocalMenuItem\_\_main                                | LocalMenuItem-main
-Menu                   | Menu\_\_\[MenuName\]                                              | Menu\_\_main                                         | Menu-main
-MenuItem               | MenuItem\_\_\[MenuName\]                                          | MenuItem\_\_main                                     | MenuItem-main
-Resource               | Resource\_\_\[FileName\]                                          | Resource\_\_flower\.gif                              | Resource-flower.gif
-Style                  | Style\_\_\[FileName\]                                             | Style\_\_site\.css                                   | Style-site.css
-Widget                 | Widget\_\_\[ContentType\]                                         | Widget\_\_HtmlWidget                                 | Widget-HtmlWidget
-Widget                 | Widget\_\_\[ZoneName\]                                            | Widget\_\_AsideSecond                                | Widget-AsideSecond
-Zone                   | Zone\_\_\[ZoneName\]                                              | Zone\_\_AsideSecond                                  | Zone-AsideSecond
+<table><thead><tr>
+    <td>Applied To</td>
+    <td>Shape Naming Convention</td>
+    <td>Shape Type Example</td>
+    <td>Template Example</td>
+</tr></thead><tbody>
+    <tr>
+        <td>Content shapes</td>
+        <td>Content__[ContentType]</td>
+        <td>Content__BlogPost</td>
+        <td>Content-BlogPost</td>
+    </tr>
+    <tr>
+        <td>Content shapes</td>
+        <td>Content__[Id]</td>
+        <td>Content__42</td>
+        <td>Content-42</td>
+    </tr>
+    <tr>
+        <td>Content shapes</td>
+        <td>Content__[DisplayType]</td>
+        <td>Content__Summary</td>
+        <td>Content.Summary</td>
+    </tr>
+    <tr>
+        <td>Content shapes</td>
+        <td>Content_[DisplayType]__[ContentType]</td>
+        <td>Content_Summary__BlogPost</td>
+        <td>Content-BlogPost.Summary</td>
+    </tr>
+    <tr>
+        <td>Content shapes</td>
+        <td>Content_[DisplayType]__[Id]</td>
+        <td>Content_Summary__42</td>
+        <td>Content-42.Summary</td>
+    </tr>
+    <tr>
+        <td>Content.Edit shapes</td>
+        <td>Content_Edit__[DisplayType]</td>
+        <td>Content_Edit__Page</td>
+        <td>Content-Page.Edit</td>
+    </tr>
+    <tr>
+        <td>Content Part templates</td>
+        <td>[ShapeType]__[Id]</td>
+        <td>Parts_Common_Metadata__42</td>
+        <td>Parts/Common.Metadata-42</td>
+    </tr>
+    <tr>
+        <td>Content Part templates</td>
+        <td>[ShapeType]__[ContentType]</td>
+        <td>Parts_Common_Metadata__BlogPost</td>
+        <td>Parts/Common.Metadata-BlogPost</td>
+    </tr>
+    <tr>
+        <td>Field templates</td>
+        <td>[ShapeType]__[FieldName]</td>
+        <td>Fields_Common_Text__Teaser</td>
+        <td>Fields/Common.Text-Teaser</td>
+    </tr>
+    <tr>
+        <td>Field templates</td>
+        <td>[ShapeType]__[PartName]</td>
+        <td>Fields_Common_Text__TeaserPart</td>
+        <td>Fileds/Common.Text-TeaserPart</td>
+    </tr>
+    <tr>
+        <td>Field templates</td>
+        <td>[ShapeType]__[ContentType]__[PartName]</td>
+        <td>Fields_Common_Text__Blog__TeaserPart</td>
+        <td>Fields/Common.Text-Blog-TeaserPart</td>
+    </tr>
+    <tr>
+        <td>Field templates</td>
+        <td>[ShapeType]__[PartName]__[FieldName]</td>
+        <td>Fields_Common_Text__TeaserPart__Teaser</td>
+        <td>Fields/Common.Text-TeaserPart-Teaser</td>
+    </tr>
+    <tr>
+        <td>Field templates</td>
+        <td>[ShapeType]__[ContentType]__[FieldName]</td>
+        <td>Fields_Common_Text__Blog__Teaser</td>
+        <td>Fields/Common.Text-Blog-Teaser</td>
+    </tr>
+    <tr>
+        <td>Field templates</td>
+        <td>[ShapeType]__[ContentType]__[PartName]__[FieldName]</td>
+        <td>Fields_Common_Text__Blog__TeaserPart__Teaser</td>
+        <td>Fields/Common.Text-Blog-TeaserPart-Teaser</td>
+    </tr>
+    <tr>
+        <td>LocalMenu</td>
+        <td>LocalMenu__[MenuName]</td>
+        <td>LocalMenu__main</td>
+        <td>LocalMenu-main</td>
+    </tr>
+    <tr>
+        <td>LocalMenuItem</td>
+        <td>LocalMenuItem__[MenuName]</td>
+        <td>LocalMenuItem__main</td>
+        <td>LocalMenuItem-main</td>
+    </tr>
+    <tr>
+        <td>Menu</td>
+        <td>Menu__[MenuName]</td>
+        <td>Menu__main</td>
+        <td>Menu-main</td>
+    </tr>
+    <tr>
+        <td>MenuItem</td>
+        <td>MenuItem__[MenuName]</td>
+        <td>MenuItem__main</td>
+        <td>MenuItem-main</td>
+    </tr>
+    <tr>
+        <td>Resource</td>
+        <td>Resource__[FileName]</td>
+        <td>Resource__flower.gif</td>
+        <td>Resource-flower.gif</td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Style__[FileName]</td>
+        <td>Style__site.css</td>
+        <td>Style-site.css</td>
+    </tr>
+    <tr>
+        <td>Widget</td>
+        <td>Widget__[ContentType]</td>
+        <td>Widget__HtmlWidget</td>
+        <td>Widget-HtmlWidget</td>
+    </tr>
+    <tr>
+        <td>Widget</td>
+        <td>Widget__[ZoneName]</td>
+        <td>Widget__AsideSecond</td>
+        <td>Widget-AsideSecond</td>
+    </tr>
+    <tr>
+        <td>Zone</td>
+        <td>Zone__[ZoneName]</td>
+        <td>Zone__AsideSecond</td>
+        <td>Zone-AsideSecond</td>
+    </tr>
+</tbody></table>
 
 You should put your templates in the project according to the following rules:
 

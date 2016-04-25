@@ -291,11 +291,23 @@ Instead you should describe the functionality that the class is styling.
 
 Let's take a look at the class names we have used so far and improve them based on this best practice:
 
-Current class name    | Improved class name
---------------------- | ----------------
-.btn-green            | .btn-featuredproduct
-.sale-red             | .label-onsale
-.box-purple           | .box-moreinfoavailable
+<table><thead><tr>
+    <td>Current class name    </td>
+    <td>Improved class name</td>
+</tr></thead><tbody>
+    <tr>
+        <td>.btn-green</td>
+        <td>.btn-featuredproduct</td>
+    </tr>
+    <tr>
+        <td>.sale-red</td>
+        <td>.label-onsale</td>
+    </tr>
+    <tr>
+        <td>.box-purple</td>
+        <td>.box-moreinfoavailable</td>
+    </tr>
+</tbody></table>
 
 You might have your own ideas for some improved class names. As long as they don't tie your functionality to a specific visual style you can use whatever you think is best.
 

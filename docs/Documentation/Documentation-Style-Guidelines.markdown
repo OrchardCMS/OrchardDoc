@@ -2,13 +2,15 @@ Documentation Style Guidelines
 ==============================
 The Orchard documentation is built in [Markdown](http://daringfireball.net/projects/markdown/).
 We use a few simple conventions to ensure a homogeneous style throughout the full set of documents.
-File Name And Title
+
+File Name And Title
 -------------------
 
 
 The document should not specify its own title as part of the document itself, but its file name should be the document title, with spaces replaced by dashes (-).
 The title will be added by the site dynamically, from the file name.
-Structure
+
+Structure
 ---------
 
 
@@ -40,7 +42,8 @@ If the anchor is in another document, use the file name and the anchor name like
 Please note that anchor names are case-sensitive.
 
 The text within a section should be structured in short paragraphs. Don't forget to include an empty line in wiki markup between paragraphs.
-Markup and Styles
+
+Markup and Styles
 -----------------
 
 
@@ -140,14 +143,31 @@ The markup to create a table is a common extension for Markdown:
 
 This markup will create the following table:
 
-Header A | Header B | Header C
--------- | -------- | --------
-Cell A.1 | Cell B.1 | Cell C.1
-Cell A.2 | Cell B.2 | Cell C.2
-Cell A.3 | Cell B.3 | Cell C.3
+<table><thead><tr>
+    <td>Header A </td>
+    <td>Header B </td>
+    <td>Header C</td>
+</tr></thead><tbody>
+    <tr>
+        <td>Cell A.1</td>
+        <td>Cell B.1</td>
+        <td>Cell C.1</td>
+    </tr>
+    <tr>
+        <td>Cell A.2</td>
+        <td>Cell B.2</td>
+        <td>Cell C.2</td>
+    </tr>
+    <tr>
+        <td>Cell A.3</td>
+        <td>Cell B.3</td>
+        <td>Cell C.3</td>
+    </tr>
+</tbody></table>
 
 For details of table syntax see [Markdown Extra Tables Reference](http://michelf.com/projects/php-markdown/extra/#table).
-Contributing Documentation
+
+Contributing Documentation
 --------------------------
 
 

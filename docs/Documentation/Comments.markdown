@@ -101,10 +101,49 @@ Administrators can mark comments as spam rather than delete them, which could re
 ## Permissions
 In this context, the owner is the owner of the content item being commented (the container of the comments).
 
-
-Permission                                       | Anon. | Authentic. | Owner | Admin. | Author | Editor
------------------------------------------------- | ----- | ---------- | ----- | ------ | ------ | ------
-Add Comments                                     | Yes   | Yes        | Yes   | Yes    | Yes    | Yes
-Manage Comments (implies all others)             | No    | No         | Yes   | Yes    | No     | Yes
-Close Comments                                   | No    | No         | Yes   | Yes    | Yes    | Yes
-Moderate comments                                | No    | No         | Yes   | Yes    | No     | Yes
+<table><thead><tr>
+    <td>Permission </td>
+    <td>Anon. </td>
+    <td>Authentic. </td>
+    <td>Owner </td>
+    <td>Admin. </td>
+    <td>Author </td>
+    <td>Editor</td>
+</tr></thead><tbody>
+    <tr>
+        <td>Add Comments</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <td>Manage Comments (implies all others)</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <td>Close Comments</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <td>Moderate comments</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>Yes</td>
+    </tr>
+</tbody></table>

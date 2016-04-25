@@ -76,6 +76,22 @@ The API that asks content providers to contribute menu hierarchies knowing the c
 ## Permissions
 The owner in this context is the site owner.
 
-Permission             | Anon. | Authentic. | Owner | Admin. | Author | Editor
----------------------- | ----- | ---------- | ----- | ------ | ------ | ------
-Manage navigation menu | No    | No         | Yes   | Yes    | No     | No
+<table><thead><tr>
+    <td>Permission</td>
+    <td>Anon. </td>
+    <td>Authentic. </td>
+    <td>Owner </td>
+    <td>Admin. </td>
+    <td>Author </td>
+    <td>Editor</td>
+</tr></thead><tbody>
+    <tr>
+        <td>Manage navigation menu</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>No</td>
+    </tr>
+</tbody></table>

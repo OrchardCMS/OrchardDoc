@@ -169,7 +169,31 @@ Community contributions could also provide some of these widgets.
 
 The owner in this context refers to the content item owner when assigning a widget group to a zone in the template, or to the site owner for other permissions.
 
-Permission                                 | Anon. | Authentic. | Owner | Admin. | Author | Editor
------------------------------------------- | ----- | ---------- | ----- | ------ | ------ | ------
-Create and manage widget groups            | No    | No         | Yes   | Yes    | No     | No
-Assign a widget group to a zone            | No    | No         | Yes   | Yes    | Yes     | No
+<table><thead><tr>
+    <td>Permission</td>
+    <td>Anon. </td>
+    <td>Authentic. </td>
+    <td>Owner </td>
+    <td>Admin. </td>
+    <td>Author </td>
+    <td>Editor</td>
+</tr></thead><tbody>
+    <tr>
+        <td>Create and manage widget groups</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>Assign a widget group to a zone</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>No</td>
+    </tr>
+</tbody></table>

@@ -24,25 +24,64 @@ For example, in the **Widgets** screen click **Add** for the **Header** zone. A 
 
 The following table describes the widgets that are available by default in Orchard: 
 
-Widget                | Description
---------------------- | ------------------------------------------------------------------
-**Blog Archives**     | Displays a list of archived entries for the specified blog.
-**Container Widget**  | Displays a "contained" content item, such as a list.
-**Html Widget**       | Displays HTML content, which is entered using the widget's editor.
-**Recent Blog Posts** | Displays a list of recent posts for the specified blog.
+<table><thead><tr>
+    <td>Widget</td>
+    <td>Description</td>
+</tr></thead><tbody>
+    <tr>
+        <td><strong>Blog Archives</strong></td>
+        <td>Displays a list of archived entries for the specified blog.</td>
+    </tr>
+    <tr>
+        <td><strong>Container Widget</strong></td>
+        <td>Displays a "contained" content item, such as a list.</td>
+    </tr>
+    <tr>
+        <td><strong>Html Widget</strong></td>
+        <td>Displays HTML content, which is entered using the widget's editor.</td>
+    </tr>
+    <tr>
+        <td><strong>Recent Blog Posts</strong></td>
+        <td>Displays a list of recent posts for the specified blog.</td>
+    </tr>
+</tbody></table>
 
 ## List of Layers
 Orchard comes with a number of layers already defined. You can define additional layers as needed, as discussed later in [Adding a Layer](Managing-widgets#AddingaLayer.html). In the **Widgets** screen, you can edit the existing layers by selecting a layer in the **Current Layer** drop-down list, or you can add new layers by clicking **Add a new layer**. 
 
 The following table lists the default layers, shows the rule that defines the layer, and describes the effect of the layer.
 
-Layer          | Rule              | Description
--------------- | ----------------- | ---------------------------------------
-Default        | true              | Always displayed on every page.
-Authenticated  | authenticated     | Displayed if the user is authenticated.
-Anonymous      | not authenticated | Displayed if the user is anonymous.
-Disabled       | false             | Not displayed. This layer is provided as way to save the configuration of widgets that are not currently displayed.
-TheHomepage    | url("~/")         | Displayed on the home page.
+<table><thead><tr>
+    <td>Layer</td>
+    <td>Rule</td>
+    <td>Description</td>
+</tr></thead><tbody>
+    <tr>
+        <td>Default</td>
+        <td>true</td>
+        <td>Always displayed on every page.</td>
+    </tr>
+    <tr>
+        <td>Authenticated</td>
+        <td>authenticated</td>
+        <td>Displayed if the user is authenticated.</td>
+    </tr>
+    <tr>
+        <td>Anonymous</td>
+        <td>not authenticated</td>
+        <td>Displayed if the user is anonymous.</td>
+    </tr>
+    <tr>
+        <td>Disabled</td>
+        <td>false</td>
+        <td>Not displayed. This layer is provided as way to save the configuration of widgets that are not currently displayed.</td>
+    </tr>
+    <tr>
+        <td>TheHomepage</td>
+        <td>url("~/")</td>
+        <td>Displayed on the home page.</td>
+    </tr>
+</tbody></table>
 
 ## List of Zones
 In Orchard, a web page is divided into zones (regions). The available zones are defined by the website's theme. In the **Widgets** screen, you can see the list of all zones available for the currently selected layer. The list also shows the widgets assigned to each zone for the selected layer.
@@ -63,14 +102,35 @@ The **Layer Rule** value is an expression that resolves to either **true** or **
 
 The following table summarizes the syntax for building layer rules.
 
-Rule Syntax                  | Description
----------------------------- | ------------------------------
-url("&lt;url&nbsp;path&gt;") | True if the current URL matches the specified path. If you add an asterisk (*) to the end of the path, all pages found in subfolders under that path will evaluate to true (for example, `url("~/home*")`).
-authenticated                | True if the user is logged in.
-ContentType("&lt;Type&gt;")  | True if the content type being view matches the content type specified e.g. ContentType("Page")
-not                          | Logical NOT.
-and                          | Logical AND.
-or                           | Logical OR.
+<table><thead><tr>
+    <td>Rule Syntax</td>
+    <td>Description</td>
+</tr></thead><tbody>
+    <tr>
+        <td>url("&lt;url&nbsp;path&gt;")</td>
+        <td>True if the current URL matches the specified path. If you add an asterisk (*) to the end of the path, all pages found in subfolders under that path will evaluate to true (for example, <code>url("~/home*")</code>).</td>
+    </tr>
+    <tr>
+        <td>authenticated</td>
+        <td>True if the user is logged in.</td>
+    </tr>
+    <tr>
+        <td>ContentType("&lt;Type&gt;")</td>
+        <td>True if the content type being view matches the content type specified e.g. ContentType("Page")</td>
+    </tr>
+    <tr>
+        <td>not</td>
+        <td>Logical NOT.</td>
+    </tr>
+    <tr>
+        <td>and</td>
+        <td>Logical AND.</td>
+    </tr>
+    <tr>
+        <td>or</td>
+        <td>Logical OR.</td>
+    </tr>
+</tbody></table>
 
 Your expression can use parentheses.
 

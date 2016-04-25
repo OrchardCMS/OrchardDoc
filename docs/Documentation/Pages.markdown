@@ -246,13 +246,61 @@ Design TBD.
 
 In this context, owner means the page owner when acting on a specific page, or the site owner otherwise.
 
-Permission                                 | Anon. | Authentic. | Owner | Admin. | Author | Editor
------------------------------------------- | ----- | ---------- | ----- | ------ | ------ | ------
-View pages                                 | Yes   | Yes        | Yes   | Yes    | Yes    | Yes
-Create & manage pages (implies all others) | No    | No         | Yes   | Yes    | Yes    | No
-Create draft pages                         | No    | No         | Yes   | Yes    | Yes    | No
-Modify/delete pages                        | No    | No         | Yes   | Yes    | Yes    | No
-Publish/unpublish/schedule pages           | No    | No         | Yes   | Yes    | Yes    | No
+<table><thead><tr>
+    <td>Permission</td>
+    <td>Anon. </td>
+    <td>Authentic. </td>
+    <td>Owner </td>
+    <td>Admin. </td>
+    <td>Author </td>
+    <td>Editor</td>
+</tr></thead><tbody>
+    <tr>
+        <td>View pages</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <td>Create &amp; manage pages (implies all others)</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>Create draft pages</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>Modify/delete pages</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>Publish/unpublish/schedule pages</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>No</td>
+    </tr>
+</tbody></table>
 
 ##  Flows 
 
@@ -268,14 +316,49 @@ Publish/unpublish/schedule pages           | No    | No         | Yes   | Yes   
 
 Workflow:
 
-Published | Draft | Timer | Save button defaults to...
---------- | ----- | ----- | --------------------------
-Yes       | No    | No    | Publish Now
-No        | Yes   | Yes   | Publish Later
-No        | Yes   | No    | Save Draft
-Yes       | Yes   | Yes   | Publish Later
-Yes       | Yes   | No    | Save Draft
-No        | No    | No    | Save Draft
+<table><thead><tr>
+    <td>Published </td>
+    <td>Draft </td>
+    <td>Timer </td>
+    <td>Save button defaults to...</td>
+</tr></thead><tbody>
+    <tr>
+        <td>Yes</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Publish Now</td>
+    </tr>
+    <tr>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Publish Later</td>
+    </tr>
+    <tr>
+        <td>No</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>Save Draft</td>
+    </tr>
+    <tr>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Publish Later</td>
+    </tr>
+    <tr>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>Save Draft</td>
+    </tr>
+    <tr>
+        <td>No</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Save Draft</td>
+    </tr>
+</tbody></table>
 
 ![](../Upload/cms-scenarios/6small.png)
 
