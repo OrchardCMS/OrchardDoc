@@ -44,7 +44,7 @@ This should create a new **CustomFields** folder under Modules, pre-populated wi
         DateTimeField:
             Description: A date and time field with a friendly UI.
             Category: Fields
-            Dependencies: CustomFields, Orchard.jQuery, Common, Settings
+            Dependencies: CustomFields, Orchard.Resources, Common, Settings
 
 
 We are defining two features here because this module will eventually contain more fields and we want to distinguish between the default feature of the module (which has the same name as the module itself and has to exist in any module) and the date field feature. This also demonstrates categories and dependencies.

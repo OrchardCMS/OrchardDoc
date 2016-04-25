@@ -216,7 +216,7 @@ The example code below is a shortened version of the Orchard.Layouts `ResourceMa
 
 You can see that a few of the features of the resource manifest are being used here. The first script, called `Layouts.Lib` uses `SetUrl()` to set up minified (live) and unminified (debug) filenames for the resource. 
 
-It also sets a dependency on a resource called `jQuery`. This is a common feature that you will see throughout many Orchard modules. The `jQuery` resource comes from the `Orchard.jQuery` module. If you looked in the `Orchard.Layouts` `module.txt` then you would find that it specifies a dependency on the `Orchard.jQuery` module.
+It also sets a dependency on a resource called `jQuery`. This is a common feature that you will see throughout many Orchard modules. The `jQuery` resource comes from the `Orchard.Resources` module. If you looked in the `Orchard.Layouts` `module.txt` then you would find that it specifies a dependency on the `Orchard.Resources` module.
 
 This kind of external dependency shows off some more of the resource manager features:
 
