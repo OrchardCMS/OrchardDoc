@@ -114,3 +114,31 @@ The next time you build Orchard (for example, by pressing `F5`) the asset pipeli
 ## Customising the asset pipeline
  - Duplicate the file so it doesnt get overwritten during upgrade
  - Unbind existing if set up
+
+## Custom theme and module folders are currently not automatically included
+
+If your project is using the custom modules and theme folders feature introduced in v1.10 the `gulpfile.js` will not automatically pick up your custom folder locations.
+
+By default it only checks for `Assets.json` files in folders under these locations:
+
+    ~/Orchard.Web/Core/
+    ~/Orchard.Web/Modules/
+    ~/Orchard.Web/Themes/
+
+To add your this just follow the customising the asset pipeline tutorial above to create a clone of the `gulpfile.js` and then follow these steps:
+
+  1. In `Solution Explorer`, expand the `Solution Items` folder, then `Gulp`  and open whatever you called your new copy of `Gulpfile.js`
+   
+  2. Find the `getAssetGroups()` function (it should be around line 73)
+  
+  3. The first line declares an `assetManifestPaths` array. You need to add your own `glob.sync` in and then merge the resulting arrays. For example:
+  
+         var assetManifestPaths = glob.sync("Orchard.Web/{Core,Modules,Themes}/*/Assets.json");
+         var customThemePaths = glob.sync("Orchard.Web/MyCompanyThemes/*/Assets.json");
+         assetManifestPaths = assetManifestPaths.concat(customThemePaths);
+      
+  4. Save and close the file.
+  
+The example above focuses on themes but your custom module folders can use the same technique.
+   
+The Orchard Team are currently looking in to ways to automate this process.
