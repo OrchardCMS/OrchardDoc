@@ -95,8 +95,72 @@ The tasks and bindings are explained in more detail in the `Task Runner Explorer
 The next time you build Orchard (for example, by pressing `F5`) the asset pipeline will be executed at the start of the build process.
 
 ## Assets.json file format
- - Format
- - Globbing
+The `Assets.json` file is simple json manifest file which lists the inputs, what they should be combined to for output and other configuration options.
+
+Each output file is grouped into its own configuration section.
+
+Glob format pattern matching is supported for the paths.
+
+The basic format is as follows:
+
+    [
+        {
+            "inputs": [
+                // array of paths
+            ],
+            "output": // output path
+            // configuration items
+        },
+        {
+            // repeat as needed
+        }
+    ]            
+
+### Format
+
+<table>
+<tr>
+   <th>Element</th>
+   <th>Type</th>
+   <th>Usage</th>
+</tr>
+<tr>
+   <td>`inputs`</td>
+   <td>Array</td>
+   <td>A list of files to include in this group. Supports glob format paths. If you just have one path you still need to wrap it in an array.</td>
+</tr>
+<tr>
+   <td>`output`</td>
+   <td>String</td>
+   <td>An output file that you want to generate. Supports a glob form path. You can use `@` to generate one file for each input eg `@.css`.</td>
+</tr>
+<tr>
+   <td>`generateSourceMaps`</td>
+   <td>Boolean</td>
+   <td>*optional* defaults to false. Use this if you want an configuration group to opt-out of generating the source maps.
+   </td>
+</tr>
+</table>
+
+### Globbing
+
+The asset pipeline uses the npm package [glob](https://www.npmjs.com/package/glob) to provide glob pattern matching.
+
+Glob format is a bit different if you have previously only been familiar with DOS style wildcards and the like. You have probably used them before but perhaps without realising such as when you put `build/*` into a `.gitignore` file.
+
+The glob NPM package has great introduction to the glob specification [on its download page](https://www.npmjs.com/package/glob#glob-primer). 
+
+### Examples
+
+TODO: Write examples for:
+
+  * single input file (still needs array)
+  * simple input file array
+  * glob format input array 
+  * `@` in output
+  * sourcemaps
+
+Add comments to json but add note that they aren't supported.
 
 ## Task Runner Explorer
  - Brief overview
@@ -115,9 +179,12 @@ The next time you build Orchard (for example, by pressing `F5`) the asset pipeli
  - Duplicate the file so it doesnt get overwritten during upgrade
  - Unbind existing if set up
 
-## Custom theme and module folders are currently not automatically included
+## Module / Theme developers
+ - explain agreed format is to ship with compiled copy so end users don't need to have node/npm installed to use your project
 
-If your project is using the custom modules and theme folders feature introduced in v1.10 the `gulpfile.js` will not automatically pick up your custom folder locations.
+## Custom theme and module folders are not automatically included
+
+If your project is using the custom modules and theme folders feature introduced in v1.10 the `gulpfile.js` will not automatically pick up these custom folder locations.
 
 By default it only checks for `Assets.json` files in folders under these locations:
 
@@ -141,4 +208,4 @@ To add your this just follow the customising the asset pipeline tutorial above t
   
 The example above focuses on themes but your custom module folders can use the same technique.
    
-The Orchard Team are currently looking in to ways to automate this process.
+The Orchard Team are currently looking into a way to automate this process.
