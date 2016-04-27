@@ -1,5 +1,6 @@
 Tutorial Videos About Orchard
-=============================Introduction Training Videos
+=============================
+Introduction Training Videos
 ----------------------------
 
 
@@ -9,16 +10,6 @@ Pluralsight has an introductory training course available here:
 <http://pluralsight.com/training/courses/tableofcontents?courseName=orchard-fundamentals>
 
 The first part of the Pluralsight video course is free, and subsequent episodes require a subscription.
-
-### Orchard CMS Theme Development For Beginners
-
-[Orchard CMS Theme Development for Beginners](https://www.udemy.com/orchard-cms-theme-development-for-beginners) by Abhishek Luv
-
-### Orchard CMS Tutorial : Workflows in Orchard CMS
-
-[Orchard CMS Tutorial : Workflows in Orchard CMS](https://www.udemy.com/orchard-cms-tutorial-workflows-in-orchard-cms/) by Abhishek Luv
-
-
 
 ## Free
 
@@ -35,6 +26,20 @@ Course for beginners interested in developing on Orchard, starting with how to u
 ### Orchard CMS Tutorial : Recipes in Orchard CMS
 
 [Orchard CMS Tutorial : Recipes in Orchard CMS](https://www.udemy.com/orchard-cms-tutorial-recipes-in-orchard-cms/) by Abhishek Luv
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL8AwaH3ssiASskvNYC69I-FKr3kjcBo8X" frameborder="0" allowfullscreen></iframe>
+
+### Orchard CMS Theme Development For Beginners
+
+[Orchard CMS Theme Development for Beginners](https://www.udemy.com/orchard-cms-theme-development-for-beginners) by Abhishek Luv
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL8AwaH3ssiARImeICwvOavU_Gna-Xza_7" frameborder="0" allowfullscreen></iframe>
+
+### Orchard CMS Tutorial : Workflows in Orchard CMS
+
+[Orchard CMS Tutorial : Workflows in Orchard CMS](https://www.udemy.com/orchard-cms-tutorial-workflows-in-orchard-cms/) by Abhishek Luv
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL8AwaH3ssiASR5GeZtPvKnyOAGogyMnjt" frameborder="0" allowfullscreen></iframe>
 
 ### Introduction to Orchard 1.5 by Sébastien Ros
 
@@ -58,7 +63,8 @@ Course for beginners interested in developing on Orchard, starting with how to u
 
 Kris van der Mast made his hands-on lab material available to anyone for free:
 <http://www.krisvandermast.com/downloads.html>
-Conferences
+
+Conferences
 -----------
 
 
@@ -77,14 +83,16 @@ Kris van der Mast made his hands-on lab material available to anyone for free:
 ## Mix11
 
 [Deconstructing Orchard: Build, Customize, Extend, Ship](http://channel9.msdn.com/events/mix/mix11/FRM06) by Brad Millington
-Themes
+
+Themes
 ------
 
 
 ## Getting Started With Custom Theme Development
 
 <iframe width="500" height="314" src="http://www.youtube.com/embed/rk1iJJJ9Itg?hd=1" frameborder="0" allowfullscreen></iframe>
-Deployment
+
+Deployment
 ----------
 
 
@@ -95,28 +103,32 @@ Kris van der Mast made his hands-on lab material available to anyone for free:
 ## Migrating from SqlCe to SQL Express
 
 <iframe title="YouTube video player" height="311" src="http://www.youtube.com/embed/YM35lnaI1sA?hd=1" frameBorder="0" width="500" allowfullscreen="allowfullscreen" mce_src="http://www.youtube.com/embed/YM35lnaI1sA?hd=1"></iframe>
-Taxonomies
+
+Taxonomies
 ----------
 
 
 ## Getting Started With Taxonomies
 
 <iframe height="314" src="http://www.youtube.com/embed/B3jhgTeiEtw?hd=1" frameborder="0" width="500" allowfullscreen="allowfullscreen"></iframe>
-Projector
+
+Projector
 ---------
 
 
 ## Live demo of Projector by Sébastien Ros
 
 <iframe width="500" height="369" src="http://www.youtube.com/embed/SP912eWoOoo" frameborder="0" allowfullscreen></iframe>
-Development
+
+Development
 -----------
 
 
 ## Setting up a source code environment
 
 <iframe height="314" src="http://www.youtube.com/embed/fb2Ywf-2e3Q?hd=1" frameborder="0" width="500" allowfullscreen="allowfullscreen"></iframe>
-Localization
+
+Localization
 ------------
 
 

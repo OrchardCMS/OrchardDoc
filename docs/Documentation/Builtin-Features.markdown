@@ -374,6 +374,8 @@ This module provides a jobs queue to process jobs asynchronously.
 
 Used as a dependency by other modules, this provides jQuery and jQueryUI scripts.
 
+This module is deprecated as of Orchard v1.10, you should use Orchard.Resources now instead.
+
 ## Orchard.Layouts
 
 Orchard.Layouts module in Orchard provides tools to create layouts. In Orchard v.1.9 by default the Page content type has a LayoutPart instead of the BodyPart. 
@@ -537,6 +539,12 @@ Provides Redis integration with Orchard.
 - Orchard.Redis.MessageBus : A message bus implementation using Redis pub/sub.
 - Orchard.Redis.OutputCache : An output cache storage provider using Redis.
 - Orchard.Redis.Caching : Business data cache using Redis.
+
+## Orchard.Resources
+
+Provides a variety of third-party client-side libraries (stylesheets and scripts) used by other modules.
+
+Added in Orchard v1.10, replaces the deprecated Orchard.jQuery module.
 
 ## Orchard.Roles 
 

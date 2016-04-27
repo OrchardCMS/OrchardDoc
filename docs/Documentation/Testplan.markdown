@@ -5,7 +5,7 @@
 
 # Component Overview
 The component overview and specs are listed on:
-http://www.orchardproject.net/docs/?AspxAutoDetectCookieSupport=1
+http://docs.orchardproject.net/Documentation/Source-code-organization
 
 # Test Methodology
 We'll use Visual Studio Team Test edition as the major platform for testing. We try to automate as much test cases as possible, so VSTT is used to support the following test:
