@@ -142,7 +142,7 @@ Adding the new files to the project
 
 We're almost done. The only task remaining is to declare to the system the set of files in the module for dynamic compilation.
 
-Open the HelloWorld.csproj file in a text editor and add the following lines after one of the &lt;/ItemGroup&gt; tags:
+Open the HelloWorld.csproj file in a text editor and add the following lines after one of the `</ItemGroup>` tags:
 
     
     <ItemGroup>
@@ -175,7 +175,7 @@ Use the Module
 
 You may now add /HelloWorld to the URL of your Orchard site in your favorite web browser and obtain a nice Hello World message:
 
-![The UI for our completed module](../Attachments/Building-a-hello-world-module/HelloWorld.png)
+![The UI for our completed module](../Attachments/Building-a-hello-world-module/HelloWorld.PNG)
 
 Conclusion
 ----------
