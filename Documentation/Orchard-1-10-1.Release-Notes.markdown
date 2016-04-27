@@ -55,7 +55,7 @@ This includes commercial derivative work.
 Breaking Changes
 -----------
 
-There are no known breaking changes as part of this release compared to 1.10.
+There are no known breaking changes as part of this release [compared to 1.10](Orchard-1-10.Release-Notes).
 
 What's new?
 -----------
@@ -63,14 +63,14 @@ What's new?
 Orchard 1.10.1 fixes bugs and introduces the following notable changes and features:
 
 * [Feature] Loading tenants retries configuration
-* [Feature] Double clicking submit buttons is prevented by javascript
+* [Feature] Double clicking submit buttons is prevented by JavaScript
 * [Feature] Configurable Snippets
 * [Improvement] Using MarkdownSharp Nuget package
 * [Improvement] AliasUpdater was refreshed twice
 * [Improvement] AssemblyInfo files are correctly built now
 * [Bug] Unable to generate routes for Web APIs
 * [Bug] jQuery and other resources were incorrect
-* [Bug] Azure App Service crash when an exception is thrown from a [Shape] methof
+* [Bug] Azure App Service crash when an exception is thrown from a [Shape] method
 * [Bug] Layout editing not working in Edge
 * [Bug] Azure Media Storage would not recognize its own urls
 
