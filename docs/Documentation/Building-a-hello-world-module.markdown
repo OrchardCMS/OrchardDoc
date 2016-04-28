@@ -175,7 +175,7 @@ Use the Module
 
 You may now add /HelloWorld to the URL of your Orchard site in your favorite web browser and obtain a nice Hello World message:
 
-![The UI for our completed module](../Attachments/Building-a-hello-world-module/HelloWorld.png)
+![The UI for our completed module](../Attachments/Building-a-hello-world-module/HelloWorld.PNG)
 
 Conclusion
 ----------
