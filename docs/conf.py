@@ -34,6 +34,7 @@ extensions = []
 templates_path = ['_templates']
 
 from recommonmark.parser import CommonMarkParser
+from recommonmark.transform import AutoStructify
 
 source_parsers = {
     '.markdown': CommonMarkParser,
@@ -52,6 +53,8 @@ master_doc = 'index'
 project = u'Orchard'
 copyright = u'2016, Orchard Project'
 author = 'Orchard Project'
+
+github_doc_root = 'https://github.com/OrchardCMS/OrchardDoc/tree/rtd/docs/'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -281,3 +284,11 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+# app setup hook
+def setup(app):
+    app.add_config_value('recommonmark_config', {
+            'url_resolver': lambda url: github_doc_root + url,
+            'auto_toc_tree_section': 'Contents',
+            }, True)
+    app.add_transform(AutoStructify)
