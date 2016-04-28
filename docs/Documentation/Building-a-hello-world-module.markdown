@@ -185,4 +185,4 @@ In this tutorial, we have built a very simple module that handles a route (/Hell
 
 Hopefully this will get you started with Orchard and prepare you to build more elaborate modules.
 
-The code for this topic can be downloaded from here: [HelloWorld.zip](../Attachments/Building-a-hello-world-module/HelloWorld.zip)
+The code for this topic can be downloaded from here: [HelloWorld.zip](../HelloWorld.zip)
