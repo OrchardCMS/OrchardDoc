@@ -42,7 +42,7 @@ The easiest way to get started with GitHub is to use [Github Desktop](https://de
 
 You can also create a fork via the GitHub website. GitHub have provided a guide explaining [how to fork a repo](https://help.github.com/articles/fork-a-repo/).
 
-GitHub is powered by [Git](http://git-scm.com/). If you're an advanced user with experience of using Git on the command line then you can interact with GitHub hosted repositories as you normally would. If you're interested in learning then GitHub have their own [interactive code school](https://try.github.io/) and the entire [Pro Git book is available](http://git-scm.com/book/en/v2) has also been made available by it's authors and is endorsed by the official Git website.
+GitHub is powered by [Git](http://git-scm.com/). If you're an advanced user with experience of using Git on the command line then you can interact with GitHub hosted repositories as you normally would. If you're interested in learning then GitHub have their own [interactive code school](https://try.github.io/) and the entire [Pro Git book is available](http://git-scm.com/book/en/v2) has also been made available by its authors and is endorsed by the official Git website.
 
 ## Working on an issue
 
