@@ -23,7 +23,7 @@ import os
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
-needs_sphinx = '1.3'
+#needs_sphinx = '1.0'
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
@@ -32,9 +32,8 @@ extensions = []
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
-import recommonmark
+
 from recommonmark.parser import CommonMarkParser
-from recommonmark.transform import AutoStructify
 
 source_parsers = {
     '.markdown': CommonMarkParser,
@@ -53,8 +52,6 @@ master_doc = 'index'
 project = u'Orchard'
 copyright = u'2016, Orchard Project'
 author = 'Orchard Project'
-
-github_doc_root = 'https://github.com/OrchardCMS/OrchardDoc/tree/rtd/docs/'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -284,11 +281,3 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
-
-# app setup hook
-def setup(app):
-    app.add_config_value('recommonmark_config', {
-            'url_resolver': lambda url: github_doc_root + url,
-            'auto_toc_tree_section': 'Contents',
-            }, True)
-    app.add_transform(AutoStructify)
