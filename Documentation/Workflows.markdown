@@ -4,7 +4,7 @@
 
 The **Orchard.Workflows Module** in Orchard provides us tools to create custom workflows for events or activities like **Content Created, Content Published, Content Removed, Send Email, Timer** and many more.  
 
-*Dependencies : Orchard.Tokens, Orchard.Forms, Orchard.jQuery*
+*Dependencies : Orchard.Tokens, Orchard.Forms, Orchard.Resources*
 
 ![](/Upload/Workflows/workflowsmodule.png)
 
