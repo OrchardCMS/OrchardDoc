@@ -24,7 +24,7 @@ The `1.9.x` branch is the short-cycle dev branch. This is where features and bug
 
 The `dev` branch is the long-cycle dev branch. This is where bigger features are being worked on that won't make it into the next version of Orchard CMS.
 
-There is also a separate repository called [Brochard](https://github.com/OrchardCMS/Brochard) which is the implementation of Orchard CMS in Asp.Net vNext (also known as DNX).
+There is also a separate repository called [Orchard2](https://github.com/OrchardCMS/Orchard2) which is the implementation of Orchard CMS in Asp.Net vNext (also known as DNX).
 
 ## Milestones and labels
 
