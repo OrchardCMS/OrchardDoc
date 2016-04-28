@@ -32,7 +32,7 @@ extensions = []
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
-
+import recommonmark
 from recommonmark.parser import CommonMarkParser
 from recommonmark.transform import AutoStructify
 
