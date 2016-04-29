@@ -10,7 +10,7 @@ This topic shows you how to install or download modules from the online gallery,
 
 To view the modules that have been installed for your site, click **Modules** on the dashboard, and then in the **Modules** screen, click the **Installed** tab.
 
-![](../Upload/screenshots_675/modules_installedTab_upload_675.png)
+![](../Upload/screenshots_675/modules_installedtab_upload_675.png)
 
 The **Installed** tab displays a list of the modules that are included with Orchard, along with properties of each module such as version, author, a description, and a list of features. It also provides a link that you can use to upload and install a module package.
 

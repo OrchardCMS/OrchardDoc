@@ -6,7 +6,7 @@ The **Orchard.Workflows Module** in Orchard provides us tools to create custom w
 
 *Dependencies : Orchard.Tokens, Orchard.Forms, Orchard.jQuery*
 
-![](/Upload/Workflows/workflowsmodule.png)
+![](/Upload/workflows/workflowsmodule.PNG)
 
 In this particular demo , we'll be creating a **Contact us Email Notification Workflow**. The **Orchard.EmailMessaging** Module needs to be enabled in order to send email notifications using the **Orchard.Workflows** Module.
 
@@ -14,7 +14,7 @@ In this particular demo , we'll be creating a **Contact us Email Notification Wo
 
 *Learn how to [Configuring Email](/Documentation/Configuring-Email)*
 
-![](/Upload/Workflows/emailmodule.png)
+![](/Upload/workflows/emailmodule.PNG)
 
 ## Custom Form
 
@@ -22,45 +22,45 @@ In this particular demo , we'll be creating a **Contact us Email Notification Wo
 
 *Learn how to [Create Custom Forms](/Documentation/Creating-Custom-Forms "Use Custom Form to create subscribe and contact us pages in Orchard")*
 
-![](/Upload/Workflows/contactform.png)
+![](/Upload/workflows/contactform.PNG)
 
 ## Workflows Demo
 
 **1.** **Creating Workflow**
 
-![](/Upload/Workflows/createnewworkflow.png)
+![](/Upload/workflows/createnewworkflow.PNG)
 
 **2.** **Contact Us Email Notification Workflow**
 
-![](/Upload/Workflows/contactnotification.png)
+![](/Upload/workflows/contactnotification.PNG)
 
 **3.** **Editing Contact Us Email Notification Workflow**
 
-![](/Upload/Workflows/workflowcreated.png)
+![](/Upload/workflows/workflowcreated.PNG)
 
 **4.** **Workflow Starting State**
 
 *The workflow needs at least one activity to be set as a starting state.*
 
-![](/Upload/Workflows/workflowstartingstate.png)
+![](/Upload/workflows/workflowstartingstate.PNG)
 
 **5.** **Editing Workflow Activity (Form Submitted)**
 
-![](/Upload/Workflows/editingworkflowactivity.png)
+![](/Upload/workflows/editingworkflowactivity.PNG)
 
 **6.** **Adding a Timer Activity**
 
 *The Timer Activity adds a delay so that the processing thread doesn't get blocked*
 
-![](/Upload/Workflows/addingtimer.png)
+![](/Upload/workflows/addingtimer.PNG)
 
 **7.** **Editing Timer Activity**
 
-![](/Upload/Workflows/editingtimer.png)
+![](/Upload/workflows/editingtimer.PNG)
 
 **8.** **Adding Send Email Activity**
 
-![](/Upload/Workflows/addingsendemail.png)
+![](/Upload/workflows/addingsendemail.PNG)
 
 **9.** **Editing Send Email Activity**
 
@@ -74,26 +74,26 @@ In this particular demo , we'll be creating a **Contact us Email Notification Wo
 
 	<p>Message : {Content.Fields.ContactUs.Message}</p>
 
-![](/Upload/Workflows/editingsendemail.png)
+![](/Upload/workflows/editingsendemail.PNG)
 
 **10.** **Submitting Form**
 
-![](/Upload/Workflows/submittingform.png)
+![](/Upload/workflows/submittingform.PNG)
 
 **11.** **Workflow Running**
 
-![](/Upload/Workflows/workflowrunning.png)
+![](/Upload/workflows/workflowrunning.PNG)
 
 **12.** **Blocking Activity**
 
 *The timer (Blocking Activity) has a delay period of 2 mins*
 
-![](/Upload/Workflows/blockingactivity.png)
+![](/Upload/workflows/blockingactivity.PNG)
 
 **13.** **Contact Us Email Notification Sent**
 
-![](/Upload/Workflows/emailsent.png)
+![](/Upload/workflows/emailsent.PNG)
 
-![](/Upload/Workflows/emailsent1.png)
+![](/Upload/workflows/emailsent1.PNG)
 
 *for more on Workflows browse to the [Orchard Tutorials Area](/Documentation/Orchard-TV)*

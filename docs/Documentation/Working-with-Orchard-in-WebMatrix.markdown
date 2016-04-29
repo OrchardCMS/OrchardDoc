@@ -6,7 +6,7 @@ WebMatrix instead of IIS.
 
 Download and launch the Microsoft [Web Platform Installer](http://www.microsoft.com/web/downloads/platform.aspx)  Then click the **Add** button for **Microsoft WebMatrix** and click **Install**.
 
-![](../Upload/screenshots/Install_selectorWebMatrix.png)
+![](../Upload/screenshots/install_selectorWebMatrix.png)
 
 Accept the license terms and launch WebMatrix when the installation finishes.
 

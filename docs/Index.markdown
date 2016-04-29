@@ -8,16 +8,16 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
 * [Getting Around the Dashboard](Documentation/Getting-around-the-dashboard)
 * [Building Your First Orchard Site](Documentation/Getting-Started)
 * [Navigation and Menus](Documentation/Navigation-and-menus)
-* [Adding a Blog to Your Site](Documentation/Adding-a-blog-to-your-site)
+* [Adding a Blog to Your Site](Documentation/Adding-a-Blog-to-Your-Site)
 * [Adding and Managing Media Content](Documentation/Adding-and-managing-media-content)
 * [Managing Widgets](Documentation/Managing-widgets)
 * [Organizing Content Using Tags](Documentation/Organizing-content-with-tags)
 
 ## About the Project ##
 * [Orchard Concept Definitions](Documentation/Basic-Orchard-Concepts)
-* [A Guide to All the Built-in Modules and Features of Orchard](Documentation/Builtin-features)
-* [What's Happening Now?](Documentation/feature-roadmap)
-* [Frequently Asked Questions](Documentation/frequently-asked-questions)
+* [A Guide to All the Built-in Modules and Features of Orchard](Documentation/Builtin-Features)
+* [What's Happening Now?](Documentation/Feature-roadmap)
+* [Frequently Asked Questions](Documentation/Frequently-asked-questions)
 
 ## Tutorial Videos ##
 
@@ -70,7 +70,7 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
 	* [Using Windows Azure Blob Storage](Documentation/Using-Windows-Azure-Blob-Storage)
 	* [Using Windows Azure Cache](Documentation/Using-Windows-Azure-Cache)
     * [Running Orchard on Mono](Documentation/Running-Orchard-on-Mono)
-    * [Setting Up a Multi-Tenant Orchard Site](Documentation/Setting-up-a-multi-tenant-orchard-site)
+    * [Setting Up a Multi-Tenant Orchard Site](Documentation/Setting-up-a-multi-tenant-Orchard-site)
     * [Setting Up a Machine Key](Documentation/Setting-up-a-machine-key)
 
 
@@ -90,7 +90,7 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
     * [Packaging and Sharing a Module](Documentation/Packaging-and-sharing-a-module)
     * [Writing a Widget](Documentation/Writing-a-widget)
     * [Creating _1-N_ and _N-N_ Relations](Documentation/Creating-1-n-and-n-n-relations)
-    * [Manifest Files for Modules and Themes](Documentation/manifest-files)
+    * [Manifest Files for Modules and Themes](Documentation/Manifest-files)
     * [Caching](Documentation/Caching)
     * [Custom Site Settings](Documentation/Adding-custom-settings)
     * [Web Api in Orchard](Documentation/WebApi-In-Orchard)
@@ -124,17 +124,17 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
 
 * **Additional Topics**
     * [Orchard Dynamic Compilation](Documentation/Orchard-module-loader-and-dynamic-compilation)
-    * [Configuring Email](Documentation/Configuring-Email)
+    * [Configuring Email](Documentation/Configuring-email)
 
 
 * **Getting Involved**
     * [Contributing Documentation](Documentation/Contributing-documentation)
-    * [Documentation Style Guidelines](Documentation/Documentation-style-guidelines)
+    * [Documentation Style Guidelines](Documentation/Documentation-Style-Guidelines)
     * [Contributing Patches](Documentation/Contributing-patches)
 
 ## User Experiences ##
-* [Walkthroughs and UI Mockups](Documentation/walkthroughs)
+* [Walkthroughs and UI Mockups](Documentation/Walkthroughs)
 
 ## Archived Specs ##
 
-* [Archived Specs](Documentation/archived-specs)
+* [Archived Specs](Documentation/Archived-specs)

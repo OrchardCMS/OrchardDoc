@@ -94,13 +94,13 @@ This will change the background color to cornsilk, which is a light yellow.
 You can also provide a thumbnail image of your new theme in the theme's root folder. The image file must be named Theme.png. The image will be displayed in the Admin Panel to help users select a theme.
 
 The following image was copied from TheThemeMachine and changed to show the light-yellow background color. 
-![](../Upload/screenshots/NewTheme_thumbnail.PNG)
+![](../Upload/screenshots/NewTheme_thumbnail.png)
 
 ## Applying Your New Theme
 In the Admin Panel, under **Themes**, select **Installed**. The **Installed** tab will display the new theme under the **Available Themes**:
 
 
-![](../Upload/screenshots/themes_available.png) 
+![](../Upload/screenshots/themes_available.PNG) 
 
 Click **Set Current**. The **Installed** tab is redisplayed showing **MyTheme** as the current theme.
 

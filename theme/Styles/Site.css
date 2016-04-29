@@ -259,7 +259,7 @@ div.box {
 	margin:0 auto;
 	padding: 0px;
 	height:134px;
-	background:url(images/background_header.jpg) no-repeat top center;
+	background:url(Images/background_header.jpg) no-repeat top center;
 }
 
 #branding {
@@ -277,7 +277,7 @@ div.box {
 }
 
 #branding h1 a {
-	background:url(images/orchardLogo.jpg) no-repeat scroll 0 0;
+	background:url(Images/OrchardLogo.jpg) no-repeat scroll 0 0;
 	float:left;
 	display:block;
 	width:216px;
@@ -325,7 +325,7 @@ div.box {
 }
 
 #navMain ul li.On {
-	background:url(images/tabOn.gif) no-repeat bottom center;
+	background:url(Images/tabOn.gif) no-repeat bottom center;
 	line-height: 22px;
 }
 
@@ -423,7 +423,7 @@ p.editlink {font-size: 75%;}
 #FooterDiv {
         margin:0 auto;
         padding:0px;
-        background:url(Images/background_footer.jpg) no-repeat scroll center top;
+        background:url(Images/background_Footer.jpg) no-repeat scroll center top;
         height:120px;
         width:960px;
         vertical-align:bottom;
@@ -607,7 +607,7 @@ span.signature {
 
 #siteInfoContent {
       margin:0 auto;
-      background:url(images/background_footer.jpg) no-repeat center top;
+      background:url(Images/background_footer.jpg) no-repeat center top;
       height:120px;
       width:960px;
       vertical-align:bottom;

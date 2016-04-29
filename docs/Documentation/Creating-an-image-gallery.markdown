@@ -10,7 +10,7 @@ This document targets Orchard developers. Using only the admin dashboard, you wi
 - Give the new type a Display Name (e.g. *My Image Gallery*).
 - Click **Create**.
 
-![New content type](/Attachments/Creating-an-image-gallery/new-content-type.jpg)
+![New content type](/Attachments/Creating-an-image-gallery/new-content-type.JPG)
 
 - When you click create, Orchard will open the Add Parts page.
 - Check **Widget**, then click **Save**.
@@ -22,7 +22,7 @@ This document targets Orchard developers. Using only the admin dashboard, you wi
 - Name the field (e.g. *My Media Library Picker Field*.)
 - Click **Save**.
 
-![Add a new field](/Attachments/Creating-an-image-gallery/add-new-field.jpg)
+![Add a new field](/Attachments/Creating-an-image-gallery/add-new-field.JPG)
 
 - After you click save, click on the down carat beside the new field.
 - Check "**Allow multiple content items**."
