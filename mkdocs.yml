@@ -113,7 +113,7 @@ pages:
     - User Experiences:
         - Walkthroughs and UI Mockups: Documentation/Walkthroughs.markdown
     - Archived Specs:
-        - Archived Specs: Documentation/archived-specs.markdown
+        - Archived Specs: Documentation/Archived-specs.markdown
     - Release notes:
         - Orchard 1.4: Documentation/Orchard-1-4-Release-Notes.markdown
         - Orchard 1.5: Documentation/Orchard-1-5-Release-Notes.markdown
