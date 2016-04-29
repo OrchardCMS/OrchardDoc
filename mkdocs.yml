@@ -105,7 +105,7 @@ pages:
             - Merging Pull Requests: Documentation/Merging-Pull-Requests.markdown
     - Additional Topics:
             - Orchard Dynamic Compilation: Documentation/Orchard-module-loader-and-dynamic-compilation.markdown
-            - Configuring Email: Documentation/Configuring-Email.markdown
+            - Configuring Email: Documentation/Configuring-email.markdown
     - Getting Involved:
             - Contributing Documentation: Documentation/Contributing-documentation.markdown
             - Documentation Style Guidelines: Documentation/Documentation-style-guidelines.markdown
