@@ -111,7 +111,7 @@ pages:
             - Documentation Style Guidelines: Documentation/Documentation-Style-Guidelines.markdown
             - Contributing Patches: Documentation/Contributing-patches.markdown
     - User Experiences:
-        - Walkthroughs and UI Mockups: Documentation/walkthroughs.markdown
+        - Walkthroughs and UI Mockups: Documentation/Walkthroughs.markdown
     - Archived Specs:
         - Archived Specs: Documentation/archived-specs.markdown
     - Release notes:
