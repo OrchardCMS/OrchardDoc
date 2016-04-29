@@ -108,7 +108,7 @@ pages:
             - Configuring Email: Documentation/Configuring-email.markdown
     - Getting Involved:
             - Contributing Documentation: Documentation/Contributing-documentation.markdown
-            - Documentation Style Guidelines: Documentation/Documentation-style-guidelines.markdown
+            - Documentation Style Guidelines: Documentation/Documentation-Style-Guidelines.markdown
             - Contributing Patches: Documentation/Contributing-patches.markdown
     - User Experiences:
         - Walkthroughs and UI Mockups: Documentation/walkthroughs.markdown
