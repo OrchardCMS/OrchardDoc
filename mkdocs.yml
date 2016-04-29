@@ -59,7 +59,7 @@ pages:
             - Using Windows Azure Blob Storage: Documentation/Using-Windows-Azure-Blob-Storage.markdown
             - Using Windows Azure Cache: Documentation/Using-Windows-Azure-Cache.markdown
             - Running Orchard on Mono: Documentation/Running-Orchard-on-Mono.markdown
-            - Setting Up a Multi-Tenant Orchard Site: Documentation/Setting-up-a-multi-tenant-orchard-site.markdown
+            - Setting Up a Multi-Tenant Orchard Site: Documentation/Setting-up-a-multi-tenant-Orchard-site.markdown
             - Setting Up a Machine Key: Documentation/Setting-up-a-machine-key.markdown
 - Developer Guide:
     - Extending Orchard:
