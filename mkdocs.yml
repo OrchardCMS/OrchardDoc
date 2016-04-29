@@ -3,7 +3,7 @@ theme_dir: theme
 repo_url: https://github.com/OrchardCMS/OrchardDoc/tree/mkdocs/docs
 google_analytics: ['UA-20757794-1', 'orchardproject.net']
 pages:
-- Home: index.markdown
+- Home: Index.markdown
 - User Guide:
     - Getting Started:
         - Installing Orchard: Documentation/Installing-Orchard.markdown
