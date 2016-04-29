@@ -1,9 +1,9 @@
 site_name: Orchard Documentation
-theme_dir: theme
+theme: readthedocs
 repo_url: https://github.com/OrchardCMS/OrchardDoc
 google_analytics: ['UA-20757794-1', 'orchardproject.net']
 pages:
-- Home: Index.markdown
+- Home: index.markdown
 - User Guide:
     - Getting Started:
         - Installing Orchard: Documentation/Installing-Orchard.markdown
