@@ -142,7 +142,7 @@ Adding the new files to the project
 
 We're almost done. The only task remaining is to declare to the system the set of files in the module for dynamic compilation.
 
-Open the HelloWorld.csproj file in a text editor and add the following lines after one of the &lt;/ItemGroup&gt; tags:
+Open the HelloWorld.csproj file in a text editor and add the following lines after one of the `</ItemGroup>` tags:
 
     
     <ItemGroup>
