@@ -1,5 +1,6 @@
 Orchard ships with providers for Microsoft Azure Blob Storage, allowing Orchard to use Microsoft Azure Blob Storage as the underlying file system implementation for shell settings (`Settings.txt`) and/or media storage. This topic describes how to configure and enable this functionality.
-Using shell settings storage
+
+Using shell settings storage
 ----------------------------
 
 
@@ -14,9 +15,9 @@ The only thing you need to change before deploying is the connection string of t
 3. Set the `Orchard.Azure.Settings.StorageConnectionString` setting to be the connection string of the storage account you want to use.
 4. Deploy the cloud service.
 
-> NOTE: It is **not** necessary to use this feature when running Orchard in a Microsoft Azure Web Site, because in this environment the file system is shared among instances.
+> NOTE: It is **not** necessary to use this feature when running Orchard in a Microsoft Azure App Service Web App because in this environment the file system is shared among instances, however it is supported if you want to.
 
-It is also possible to use this feature is any other hosting environment where you have a server farm with multiple nodes but no shared file system. To do this you need to do the following:
+It is also possible to use this feature in any other hosting environment where you have a server farm with multiple nodes but no shared file system. To do this you need to do the following:
 
 * Add the `Orchard.Azure.Settings.StorageConnectionString` setting in the `<appSettings>` element of your `Web.config` file and set it to the connection string of the storage account you want to use.
 * Configure Autofac to load the `AzureBlobShellSettingsManager` implementation in your `Config\Host.config` file.
@@ -30,11 +31,11 @@ Here's an example `Config\Host.config` configuration:
 			<component instance-scope="single-instance" type="Orchard.Azure.Services.Environment.Configuration.AzureBlobShellSettingsManager, Orchard.Azure" service="Orchard.Environment.Configuration.IShellSettingsManager"></component>
 		</components>
 	</autofac>
-Using Microsoft Azure Media Storage
+
+Using Microsoft Azure Media Storage
 -----------------------------------
 
-
-The *Microsoft Azure Media Storage* feature in the `Orchard.Azure` module configures Orchard to use Microsoft Azure Blob Storage is the underlying file system implementation for storing media:
+The *Microsoft Azure Media Storage* feature in the `Orchard.Azure` module configures Orchard to use Microsoft Azure Blob Storage as the underlying file system implementation for storing media:
 
 	Orchard.Azure:
 		Name: Microsoft Azure Media Storage
@@ -69,9 +70,9 @@ You can now enable the feature *Microsoft Azure Media Storage* in the admin dash
 
 > NOTE: For multi-tenancy scenarios the `Orchard.Azure.Media.StorageConnectionString` setting can optionally be prefixed with a tenant name. 
 
-### Enabling for Microsoft Azure Web Sites
+### Enabling for a Microsoft Azure App Service Web App
 
-Before the feature can be enabled you must configure the connection string to the storage account you want to use. When running Orchard in a Microsoft Azure Web Site this can be done either before deploying (in Web.config) or after deploying (in the Microsoft Azure management portal).
+Before the feature can be enabled you must configure the connection string to the storage account you want to use. When running Orchard in a Microsoft Azure App Service Web App this can be done either before deploying (in Web.config) or after deploying (in the Microsoft Azure management portal).
 
 To configure the connection string *before* deploying:
 
@@ -126,7 +127,7 @@ Here's an example connection string using a custom domain name:
 
 For multi-tenancy scenarios each setting can optionally be prefixed with a tenant name followed by colon, such as `SomeTenant:Orchard.Azure.Media.StorageConnectionString`. Whenever the media storage provider reads configuration settings it will always first look for a setting specific for the current tenant, and if no such setting exists, fallback to the default non-prefixed setting.
 
-Here's an example Azure Web Site configuration with two tenants, both using Microsoft Azure Blob Storage is the underlying file system implementation for storing media, but each using its own separate storage account:
+Here's an example configuration with two tenants. Each tenant is using Microsoft Azure Blob Storage as the underlying file system implementation for storing media, but each is using its own separate blob storage account:
 
 	<appSettings>
 		<!-- Setting for Tenant1 -->

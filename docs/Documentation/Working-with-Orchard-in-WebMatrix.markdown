@@ -124,7 +124,7 @@ You can use these settings by selecting **Import publish profile** and then sele
  ![](../Upload/screenshots_675/webmatrix_import_settings_675.png)  
  
 After you've published your site, you might want to make changes to it and republish it.  When you subsequently select **Publish**, WebMatrix will list the local files that have been changed since the last time the local site was published.
-At this point you can select which files you want to upload to the remote stie and select **Continue** or cancel.
+At this point you can select which files you want to upload to the remote site and select **Continue** or cancel.
  ![](../Upload/screenshots_675/webmatrix_publish_preview_675.png) 
 
  

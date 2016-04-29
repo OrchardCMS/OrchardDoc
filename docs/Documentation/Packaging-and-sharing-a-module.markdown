@@ -48,7 +48,8 @@ Orchard uses the [NuGet](http://nuget.org) packaging format to create module pac
 
 Once you've created a module package, you can share it easily with others.  Orchard provides the ability to browse and install a module from the "Modules" section of the Orchard admin panel.  Refer to the [Installing and upgrading modules](Installing-and-upgrading-modules.html) topic for more details.
 
-Additionally, Orchard provides a Gallery feature that can register one or more gallery feeds of module extensions (OData format).  Users can easily install modules from any registered feed.  A default gallery feed is exposed from this website, at [http://packages.orchardproject.net/FeedService.svc](http://packages.orchardproject.net/FeedService.svc).  For more information, refer to the [Module gallery feeds](Module gallery feeds.html) topic.
+Additionally, Orchard provides a Gallery feature that can register one or more gallery feeds of module extensions (OData format).  Users can easily install modules from any registered feed.  A default gallery feed is exposed from this website, at [http://packages.orchardproject.net/FeedService.svc](http://packages.orchardproject.net/FeedService.svc). 
+For more information, refer to the [Module gallery feeds](Module-gallery-feeds.html) topic.
 
 You can visit the Gallery admin panel menu to browse and install available modules and themes online.  The [http://gallery.orchardproject.net/](http://gallery.orchardproject.net/) website provides a browsable front-end for finding and downloading available modules and themes too.
 
