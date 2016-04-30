@@ -1,0 +1,1901 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Built-in modules and features - Orchard Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../Styles/Site.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Built-in modules and features";
+    var mkdocs_page_input_path = "Documentation\Builtin-Features.markdown";
+    var mkdocs_page_url = "/Documentation/Builtin-Features/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-20757794-1', 'orchardproject.net');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Orchard Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-Orchard/">Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manually-installing-Orchard-zip-file/">Manually Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Working-with-Orchard-in-WebMatrix/">Working with Orchard in WebMatrix</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-around-the-dashboard/">Getting Around the Dashboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started/">Building Your First Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation-and-menus/">Navigation and Menus</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-a-Blog-to-Your-Site/">Adding a Blog to Your Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-and-managing-media-content/">Adding and Managing Media Content</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-widgets/">Managing Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Organizing-content-with-tags/">Organizing Content Using Tags</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>About the Project</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Basic-Orchard-Concepts/">Orchard Concept Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Built-in modules and features</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#core-modules">Core modules</a></li>
+                
+                    <li><a class="toctree-l4" href="#common">Common</a></li>
+                
+                    <li><a class="toctree-l4" href="#containers">Containers</a></li>
+                
+                    <li><a class="toctree-l4" href="#contents">Contents</a></li>
+                
+                    <li><a class="toctree-l4" href="#dashboard">Dashboard</a></li>
+                
+                    <li><a class="toctree-l4" href="#feeds">Feeds</a></li>
+                
+                    <li><a class="toctree-l4" href="#navigation">Navigation</a></li>
+                
+                    <li><a class="toctree-l4" href="#reports">Reports</a></li>
+                
+                    <li><a class="toctree-l4" href="#scheduling">Scheduling</a></li>
+                
+                    <li><a class="toctree-l4" href="#settings">Settings</a></li>
+                
+                    <li><a class="toctree-l4" href="#shapes">Shapes</a></li>
+                
+                    <li><a class="toctree-l4" href="#title">Title</a></li>
+                
+                    <li><a class="toctree-l4" href="#xmlrpc">XmlRpc</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#non-core-modules">Non-core modules</a></li>
+                
+                    <li><a class="toctree-l4" href="#markdown-off-by-default">Markdown (off by default)</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardalias">Orchard.Alias</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardantispam-off-by-default">Orchard.AntiSpam (off by default)</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardarchivelater">Orchard.ArchiveLater</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardaudittrail-off-by-default">Orchard.AuditTrail (off by default)</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardautoroute">Orchard.Autoroute</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardazure-off-by-default">Orchard.Azure (Off by default)</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardazuremediaservices-off-by-default">Orchard.Azure.MediaServices (Off by default)</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardblogs">Orchard.Blogs</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardcaching">Orchard.Caching</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardcodegeneration">Orchard.CodeGeneration</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardcomments">Orchard.Comments</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardcontentpermissions-off-by-default">Orchard.ContentPermissions (off by default)</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardcontentpicker">Orchard.ContentPicker</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardcontenttypes-off-by-default">Orchard.ContentTypes (off by default)</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardcustomforms-off-by-default-deprecated-in-19">Orchard.CustomForms (off by default) (Deprecated in 1.9)</a></li>
+                
+                    <li><a class="toctree-l4" href="#orcharddesignertools">Orchard.DesignerTools</a></li>
+                
+                    <li><a class="toctree-l4" href="#orcharddynamicforms-off-by-default">Orchard.DynamicForms (off by default)</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardemail">Orchard.Email</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardfields">Orchard.Fields</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardforms">Orchard.Forms</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardimportexport">Orchard.ImportExport</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardimageeditor">Orchard.ImageEditor</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardindexing-orchardsearch-and-lucene">Orchard.Indexing, Orchard.Search and Lucene</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardjobsqueue">Orchard.JobsQueue</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardjquery-deprecated">Orchard.jQuery (deprecated)</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardlayouts">Orchard.Layouts</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardlists">Orchard.Lists</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardlocalization">Orchard.Localization</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardmedialibrary">Orchard.MediaLibrary</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardmediaprocessing">Orchard.MediaProcessing</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardmessagebus">Orchard.MessageBus</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardmigrations">Orchard.Migrations</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardmodules">Orchard.Modules</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardmultitenancy">Orchard.MultiTenancy</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardoutputcache">Orchard.OutputCache</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardpackaging">Orchard.Packaging</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardpages">Orchard.Pages</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardprojections">Orchard.Projections</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardpublishlater-off-by-default">Orchard.PublishLater (off by default)</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardrecipes">Orchard.Recipes</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardredis">Orchard.Redis</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardresources">Orchard.Resources</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardroles">Orchard.Roles</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardrules-deprecated-off-by-default">Orchard.Rules (deprecated) (off by default)</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardscripting">Orchard.Scripting</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardscriptingcsharp">Orchard.Scripting.CSharp</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardscriptingdlr">Orchard.Scripting.DLR</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardsetup-off-after-setup">Orchard.Setup (off after setup)</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardsearch">Orchard.Search</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardsecuresocketslayer">Orchard.SecureSocketsLayer</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardtags">Orchard.Tags</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardtasklease">Orchard.TaskLease</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardtaxonomies">Orchard.Taxonomies</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardthemes">Orchard.Themes</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardtemplates">Orchard.Templates</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardtokens-off-by-default">Orchard.Tokens (off by default)</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardusers">Orchard.Users</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardwarmup-off-by-default">Orchard.Warmup (off by default)</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardwidgets">Orchard.Widgets</a></li>
+                
+                    <li><a class="toctree-l4" href="#orchardworkflows">Orchard.Workflows</a></li>
+                
+                    <li><a class="toctree-l4" href="#syscache">SysCache</a></li>
+                
+                    <li><a class="toctree-l4" href="#tinymce">TinyMCE</a></li>
+                
+                    <li><a class="toctree-l4" href="#upgrade-upgradeto16-upgradeto15-upgradeto14-off-by-default">Upgrade / UpgradeTo16 /UpgradeTo15 / UpgradeTo14 (off by default)</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Feature-roadmap/">Feature roadmap</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Frequently-asked-questions/">Frequently Asked Questions</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-TV/">Tutorial Videos</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Authoring Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogging-with-LiveWriter/">Blogging with LiveWriter</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-global-ready-applications/">Creating Global-Ready Applications</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Search-and-indexing/">Search and Indexing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Saving-scheduling-and-publishing-drafts/">Publishing Drafts</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-custom-content-types/">Creating Custom Content Types</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Customizing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Previewing-and-applying-a-theme/">Previewing and Applying a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-themes/">Installing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-the-default-theme/">Customizing Themes</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using the Orchard Gallery</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Gallery-overview/">Gallery Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-modules-and-themes-from-the-gallery/">Installing Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Browsing-the-gallery-web-site/">Browsing the Gallery Web Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-a-module-or-theme-to-the-gallery/">Contributing to the Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Module-gallery-feeds/">Registering Additional Gallery Feeds</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Managing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Enabling-and-disabling-features/">Enabling and Disabling Features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-the-command-line-interface/">Using the Command-Line Interface</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-and-upgrading-modules/">Installing and Upgrading Modules</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Modifying-site-settings/">Modifying Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Moderating-comments/">Moderating Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-users-and-roles/">Managing Users and Roles</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-permissions/">Understanding Permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Making-a-Web-Site-Recipe/">Making a Website Recipe</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-an-image-gallery/">Creating an Image Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Workflows/">Workflows</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Projection/">Projection</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-Dynamic-Forms/">Create Dynamic Forms</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Hosting and Deploying Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Upgrading-a-site-to-a-new-version-of-Orchard/">Upgrading a Site to a New Version</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Optimizing-Performance-of-Orchard-with-Shared-Hosting/">Optimizing Server Performance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Whats-new-for-Windows-Azure-in-Orchard-1-7-1/">What's New for Windows Azure in Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Deploying-Orchard-to-Windows-Azure/">Deploying Orchard to Windows Azure</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Blob-Storage/">Using Windows Azure Blob Storage</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Cache/">Using Windows Azure Cache</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Running-Orchard-on-Mono/">Running Orchard on Mono</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-multi-tenant-Orchard-site/">Setting Up a Multi-Tenant Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-machine-key/">Setting Up a Machine Key</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Orchard</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../First-steps-into-Orchard/">First Steps into Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../How-Orchard-works/">How Orchard Works</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Command-line-scaffolding/">Command-Line Code Generation</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Getting Started with Modules Course</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-1/">Part 1: Build a Static Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-2/">Part 2: Make the Widget Dynamic</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-3/">Part 3: Using the Orchard API</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-4/">Part 4: Applying Best Practices</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Building-a-hello-world-module/">Building a Hello World Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-a-module-with-a-simple-text-editor/">Creating a Module with a Simple Text Editor</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-content-part/">Writing a Content Part</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-a-custom-field-type/">Writing a Content Field</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-a-module/">Packaging and Sharing a Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-widget/">Writing a Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-1-n-and-n-n-relations/">Creating _1-N_ and _N-N_ Relations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manifest-files/">Manifest Files for Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Caching/">Caching</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-custom-settings/">Custom Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../WebApi-In-Orchard/">Web Api in Orchard</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Working with Data</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-data-access/">Understanding Data Access</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-content-handlers/">Understanding Content Handlers</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Creating Themes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-new-theme/">Writing a New Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Anatomy-of-a-theme/">The Anatomy of a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-placement-info/">Understanding the placement.info File</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Accessing-and-rendering-shapes/">Accessing and Rendering Shapes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Alternates/">Alternates</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Template-file-syntax-guide/">Template File Syntax Guide</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-themes/">Packaging and Sharing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../UI-guidelines-for-theme-authors/">UI Guidelines for Theme Authors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-Orchard-using-Designer-Helper-Tools/">Customizing Orchard Using Designer Helper Tools</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Developer Tools and Guidelines</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Developer-FAQ/">Developer FAQ</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-source-enlistment/">Setting Up a Source Enlistment</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Source-code-organization/">Source Code Organization</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-dependencies-and-libraries/">Dependencies and Libraries</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code-conventions/">Code Conventions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Continuous-integration/">Continuous Integration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Merging-Pull-Requests/">Merging Pull Requests</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Additional Topics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-module-loader-and-dynamic-compilation/">Orchard Dynamic Compilation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Configuring-email/">Configuring Email</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Involved</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-documentation/">Contributing Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Documentation-Style-Guidelines/">Documentation Style Guidelines</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-patches/">Contributing Patches</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10-1.Release-Notes/">Orchard 1.10.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10.Release-Notes/">Orchard 1.10</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-3.Release-Notes/">Orchard 1.9.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-2.Release-Notes/">Orchard 1.9.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-1.Release-Notes/">Orchard 1.9.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9.Release-Notes/">Orchard 1.9</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-2.release-notes/">Orchard 1.8.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-1.Release-Notes/">Orchard 1.8.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-Release-Notes/">Orchard 1.8</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-2-Release-Notes/">Orchard 1.7.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-1-Release-Notes/">Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-Release-Notes/">Orchard 1.7</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-6-Release-Notes/">Orchard 1.6</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-5-Release-Notes/">Orchard 1.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-4-Release-Notes/">Orchard 1.4</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>User Experiences</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Walkthroughs/">Walkthroughs and UI Mockups</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Archived Specs</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogs/">Blogs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Comments/">Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Content-types/">Content types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Definitions/">Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Fundamentals-doctype/">HTML doctype</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Linkback/">Linkbacks: Pingbacks, Refbacks and Trackbacks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Media-management/">Media management</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation/">Navigation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-editing/">Page editing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages/">Page management and publishing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-publishing/">Page publishing workflow</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Rss-atom/">RSS and Atom feeds</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Slugs/">Slugs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Templates/">Page templates and syntax</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Tags/">Tags</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes/">Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes-includes/">Theme includes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Users/">Users, roles and permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Widgets/">Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Xml-Rpc/">XML-RPC and Live Writer</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-lists/">Creating lists of content items</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Orchard Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>About the Project &raquo;</li>
+        
+      
+    
+    <li>Built-in modules and features</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>There are lots of features available in Orchard out of the box, and many times more from
+the <a href="http://gallery.orchardproject.net">gallery</a>. This topic gives a brief description of each of Orchard's first-party
+features.</p>
+<p>The list is organized alphabetically by module name, within two main sections separating
+core modules from non core modules. Core features cannot be disabled and are all enabled
+at all times, but there are features that are implemented in core modules that can be
+enabled and disabled. Those features are simply not in the "Core" category.</p>
+<p>Each module details its features, whether it's available from the gallery or the source code releases.</p>
+<h1 id="core-modules">Core modules</h1>
+<h2 id="common">Common</h2>
+<p>The three core content parts Body, Common, and Identity, as well as the Text field, are
+implemented by this core module.</p>
+<p>The Body part represents a block of rich text. It is
+configured by default to use HTML through TinyMCE, but can be adjusted to use plain text,
+Markdown or any custom flavor.</p>
+<p>The Common part captures the creation, modification and publication dates, as well as the
+owner of the content item. The container item can also be found on this part, in order
+to implement parent / child metaphors of hierarchies such as blog / post or folder / file.</p>
+<p>The Identity part is useful to provide a unique identity to a content item that doesn't
+have a natural one. For example, pages are naturally identified by their relative URL
+within the site, or users by their user name, but widgets have no such natural identity.
+In order to enable importing and exporting of those items, the identity part can be added.
+It creates GUIDs that are used as a unique identity that can reliably be exchanged between
+instances of Orchard.</p>
+<p>The Text field is very similar to the Body part, except that it is a field rather than a part,
+enabling the use of multiple instances on a single item. It also has some shorter flavors
+such as a single-line box of unformatted text.</p>
+<h2 id="containers">Containers</h2>
+<p>This module introduces four parts that are useful to create simple hierarchies of contents.
+It is the basis for the Orchard.Lists module, but you may want to also consider other content
+classification models such as taxonomies and better querying mechanisms such as projections.</p>
+<p>The Container part can be added to a type to mark its ability to contain certain types of
+content items. It also has properties specifying sort order and pagination.</p>
+<p>The Containable part specifies that a type can be contained. It works hand-in-hand with the
+Container part and enables the content editor to choose a container for the item.</p>
+<p>The Container Widget part is similar to the Container part, except that it is made to be used
+in the container widget, and it has additional filtering capabilities in order to be able to
+display only a selected subset of the contained items. It is also not a container in itself,
+but rather references and re-uses an existing container item.</p>
+<p>The custom properties part exposes three custom text properties that were useful to implement custom
+filtering and ordering. This part is deprecated as projections now enable filtering and sorting
+on fields.</p>
+<h2 id="contents">Contents</h2>
+<p>This core module creates the infrastructure for custom content types.</p>
+<h3 id="features">Features</h3>
+<ul>
+<li>Contents (Core): the infrastructure for custom types.</li>
+<li>Content Control Wrapper (off by default): adds en edit button on the front-end.</li>
+</ul>
+<h2 id="dashboard">Dashboard</h2>
+<p>Implements the administration dashboard as an extensible shell.</p>
+<h2 id="feeds">Feeds</h2>
+<p>The Feeds core module provides the infrastructure that modules can use to expose RSS,
+Atom or other types of feeds.</p>
+<h2 id="navigation">Navigation</h2>
+<p>Since Orchard 1.5, the application ships with a hierarchical and extensible navigation menu.
+More than one named menu can be built using this core module. Menu items can be provided
+by any number of providers. The module ships with custom items that can point to any URL,
+and content menu items that point to a specific content item.
+Other modules, such as taxonomies or projections, can provide their own dynamic menu item providers.
+Menus can be rendered as full hierarchical menu widgets, or as breadcrumb or local menus.
+A content item can be added to menus using the Navigation part. The Menu part, that was
+fulfilling this role before Orchard 1.5, is deprecated but still provided for back-compatibility
+with the data from previous versions of Orchard.
+This core module also provides the administration menu.</p>
+<h2 id="reports">Reports</h2>
+<p>The Reports core module sets-up the infrastructure to generate and display basic reports.
+It is used during setup to log the various setup operations, including database operations.</p>
+<h2 id="scheduling">Scheduling</h2>
+<p>The APIs from this core module can be used by other modules such as Publish Later to schedule
+operations to be executed in the future.</p>
+<h2 id="settings">Settings</h2>
+<p>Site-wide settings in Orchard are stored in a content item. The Site content type is what is used
+for this, and as any content type in Orchard, it can be extended. This enables modules to contribute
+their own settings. This module is what enables that scenario.</p>
+<h2 id="shapes">Shapes</h2>
+<p>Shapes in Orchard are the basic units of UI from which all HTML is built. New shapes can of course
+be added by modules dynamically, but this module provides some basic and standard shapes.</p>
+<p>Core shapes are defined in code in CoreShapes.cs. Other shapes are defined in Views as cshtml files.
+Any shape, core or otherwise, can be overridden by templates in a theme.</p>
+<h3 id="core-shapes">Core shapes</h3>
+<ul>
+<li>ActionLink: uses route values to construct a HTML link.</li>
+<li>DisplayTemplate, EditorTemplate: internally used to build the display and editor views of content items.</li>
+<li>Layout: this is the outermost shape, that together with its wrapper, Document, defines the basic HTML structure to be rendered. It also defines top-level zones.</li>
+<li>List: a standard shape to render lists of shapes.</li>
+<li>Menu, MenuItem, LocalMenu, LocalMenuItem and MenuItemLink: the shapes that navigation renders.</li>
+<li>Pager and associated shapes and alternates: the shapes used to render pagination.</li>
+<li>Partial: a shape that can be used to render a template as a partial view, using the specified model. Creating a dynamic shape is often a preferable technique.</li>
+<li>Resource, HeadScripts, FootScripts, Metas, HeadLinks, StyleSheetLinks, Style: shapes used to render resources such as script tags or stylesheets.</li>
+<li>Zone: a special shape that is made to contain other shapes, typically but not always limited to widgets.</li>
+</ul>
+<h3 id="templated-shapes">Templated shapes</h3>
+<ul>
+<li>Breadcrumb: a breadcrumb representation of a list of menu item links.</li>
+<li>ErrorPage and NotFound: the pages that are rendered in case of server error or 404 not found resource. These are fun ones to override in a theme.</li>
+<li>Header: the header of the page (not the head tag).</li>
+<li>Message: this shape is used to render information, warning or error messages.</li>
+<li>User: displays login, logout, dashboard and change password links.</li>
+</ul>
+<h2 id="title">Title</h2>
+<p>This simple module introduces the Title part that is used by most content types.</p>
+<h2 id="xmlrpc">XmlRpc</h2>
+<p>The APIs necessary to create content such as pages and blog posts from applications such as
+Windows Live Writer are implemented in this core module. The Orchard.Blogs module builds
+on this module to enable specifically blog post creation.</p>
+<h1 id="non-core-modules">Non-core modules</h1>
+<h2 id="markdown-off-by-default">Markdown (off by default)</h2>
+<p><a href="http://daringfireball.net/projects/markdown/">Markdown</a> is a human-readable text format used to describe rich text without the
+complexity of HTML. Some people prefer to write in Markdown rather than in a WYSYWYG
+text editor such as the default TinyMCE editor that comes with Orchard.</p>
+<p>Once you've enabled the Markdown feature, you can create new content types or edit
+the existing ones to use the Markdown format instead of HTML by opening the settings
+for the Body part and changing the flavor setting from "html" to "markdown". The
+Markdown editor will then be shown instead of TinyMCE in the content item editor.</p>
+<h2 id="orchardalias">Orchard.Alias</h2>
+<p>The Alias module sets up the infrastructure to map friendly URLs to content items
+and custom routes. It is the foundation on which Autoroute is built.</p>
+<h3 id="features_1">Features</h3>
+<ul>
+<li>Alias: this is the core infrastructure piece for aliases to work.</li>
+<li>Alias UI (off by default): provides admin UI to modify, create or remove aliases.</li>
+</ul>
+<h2 id="orchardantispam-off-by-default">Orchard.AntiSpam (off by default)</h2>
+<p>The AntiSpam module provides various spam-fighting features and infrastructure
+pieces. It makes it possible to prevent spam on arbitrary contents (previous
+versions of Orchard only had anti-spam services on comments). With this module,
+you can add captcha, external spam-filtering or submission limits simply by adding
+a few parts to your types, including custom forms.</p>
+<h3 id="features_2">Features</h3>
+<ul>
+<li>Anti-Spam: the core infrastructure pieces for anti-spam. Also provides the <a href="http://www.google.com/recaptcha">ReCaptcha</a> part that can be added to content types to add CAPTCHA to its edit form.</li>
+<li>Akismet Anti-Spam Filter: enables the use of the third-party <a href="http://akismet.com/">Akismet</a> service with Orchard content types.</li>
+<li>TypePad Anti-Spam Filter: enables the use of the third-party <a href="http://antispam.typepad.com/">TypePad</a> service with Orchard content types.</li>
+</ul>
+<h2 id="orchardarchivelater">Orchard.ArchiveLater</h2>
+<p>Using the part provided by this module, you can schedule a content item to be archived.</p>
+<p>This module is available from source code packages or <a href="http://gallery.orchardproject.net/List/Modules/Orchard.Module.Orchard.ArchiveLater">from the gallery</a>.</p>
+<h2 id="orchardaudittrail-off-by-default">Orchard.AuditTrail (off by default)</h2>
+<p>Audit Trail module in Orchard provides a log records for creation, deletion of any Content Type and events like user events, role events and it even provides a recycle bin.</p>
+<h3 id="features_3">Features</h3>
+<ul>
+<li>Orchard.AuditTrail : Provides a log for recording and viewing back-end changes.</li>
+<li>Orchard.AudiTrail.ImportExport : Provides import/export functionality for the Audit Trail feature.</li>
+<li>Orchard.AuditTrail.Trimming : Provides a background task that regularly deletes old audit trail records.</li>
+<li>Orchard.AuditTrail.Users : Provides audit trail support for user related events.</li>
+<li>Orchard.AuditTrail.Roles : Provides audit trail support for role related events.</li>
+<li>Orchard.AuditTrail.ContentDefinition : Provides audit trail support for content definition related events.</li>
+<li>Orchard.AuditTrail.RecycleBin : Adds a Recycle Bin menu item to the Audit Trail menu, enabling you to recycle removed content items.</li>
+</ul>
+<h2 id="orchardautoroute">Orchard.Autoroute</h2>
+<p>This very powerful feature makes it possible for content type creators to specify a
+token-based URL blueprint. For example, if you want the URL of your blog posts
+to be of the form posts/2012/7/the-best-post-you-ll-ever-read, you can go to the
+content type editor for blog posts, deploy the settings for the Autoroute part and
+set the pattern to "posts/{Content.Date.Format:yyyy}/{Content.Date.Format:MM}/{Content.Slug}".</p>
+<p>Autoroute is built on top of the Alias feature.</p>
+<h2 id="orchardazure-off-by-default">Orchard.Azure (Off by default)</h2>
+<p>Orchard.Azure provides a set of Orchard service implementations targeting Microsoft Azure services.</p>
+<h3 id="features_4">Features</h3>
+<ul>
+<li>Orchard.Azure.Media : Activates an Orchard media storage provider that targets Microsoft Azure Blob Storage.</li>
+<li>Orchard.Azure.OutputCache : Activates an Orchard output cache provider that targets Windows Azure Cache.</li>
+<li>Orchard.Azure.DatabaseCache : Activates an NHibernate second-level cache provider that targets Microsoft Azure Cache.</li>
+</ul>
+<h2 id="orchardazuremediaservices-off-by-default">Orchard.Azure.MediaServices (Off by default)</h2>
+<p>Provides integration of Microsoft Azure Media Services functionality into Orchard.</p>
+<h2 id="orchardblogs">Orchard.Blogs</h2>
+<p>The blogs module provides Orchard's blogging features. It relies heavily on Orchard's
+content type composition and other features such as comments.</p>
+<h3 id="see-also">See Also</h3>
+<ul>
+<li><a href="http://docs.orchardproject.net/Documentation/Adding-a-Blog-to-Your-Site">Adding a blog to your site</a></li>
+<li><a href="http://docs.orchardproject.net/Documentation/Blogging-with-LiveWriter">Blogging with Live Writer</a></li>
+</ul>
+<h2 id="orchardcaching">Orchard.Caching</h2>
+<p>Orchard.Caching provides an API to cache business data.</p>
+<h2 id="orchardcodegeneration">Orchard.CodeGeneration</h2>
+<p>This module provides developers with scaffolding commands that help with the creation
+of new modules and themes.</p>
+<p>This module is available from source code packages or <a href="http://gallery.orchardproject.net/List/Modules/Orchard.Module.Orchard.CodeGeneration">from the gallery</a>.</p>
+<h2 id="orchardcomments">Orchard.Comments</h2>
+<p>You can use the Comments part provided by this module on any content type, in order
+to enable users of your site to provide feedback.</p>
+<h3 id="see-also_1">See Also</h3>
+<ul>
+<li><a href="http://docs.orchardproject.net/Documentation/Moderating-comments">Moderating comments</a></li>
+</ul>
+<h2 id="orchardcontentpermissions-off-by-default">Orchard.ContentPermissions (off by default)</h2>
+<p>Without this module, Orchard only provides configurable permissions for whole content types.
+This module provides a part that can be added to any content type to restrict viewing
+permissions per content item instead of per content type.</p>
+<h2 id="orchardcontentpicker">Orchard.ContentPicker</h2>
+<p>This module provides an extensible content item picker that can be used to build
+relationships between content items. The content picker module provides a content picker field which can be attached to any Content Type.</p>
+<p>This module is available from source code packages or <a href="http://gallery.orchardproject.net">from the gallery</a>.</p>
+<h2 id="orchardcontenttypes-off-by-default">Orchard.ContentTypes (off by default)</h2>
+<p>Enable this module to enable the creation and modification of content types from the admin UI.</p>
+<h3 id="see-also_2">See Also</h3>
+<ul>
+<li><a href="http://docs.orchardproject.net/Documentation/Creating-custom-content-types">Creating custom content types</a></li>
+</ul>
+<h2 id="orchardcustomforms-off-by-default-deprecated-in-19">Orchard.CustomForms (off by default) (Deprecated in 1.9)</h2>
+<p>Custom forms are built as content types, typically using fields. Once you've built the content
+type for your custom form, you can enable its instances to be created from the front-end by
+anonymous users.</p>
+<p>This is useful, for example, to create contact forms: enable the feature, create a "Contact Form"
+content type, add name, e-mail and message text fields (select TextArea as the display option in the
+field's settings), click on "Forms" in the admin menu, click "Add a new  Custom Form", 
+select "Contact Us" as the content type for the form and publish. If you enable the Rules feature,
+you can then create a rule that sends an e-mail when an item of the "Contact Us" type is
+published. You should also grant the "Submit Contact Form" permission to the anonymous role
+from the Users/Roles admin screen under "Custom Forms" in order to allow anonymous users to post contact forms.</p>
+<h2 id="orcharddesignertools">Orchard.DesignerTools</h2>
+<p>This module contains a few features that help with the development of themes.</p>
+<h3 id="features_5">Features</h3>
+<ul>
+<li>Shape Tracing: provides a Firebug-like tool that can be used to explore the server-side shape structure of the page, generate alternates, and inspect the model, placement and templates for any shape.</li>
+<li>URL Alternates: adds alternates for all shapes based on the current URL, of the form "someshape-url-thecurrenturl" or "someshape-url-homepage".</li>
+<li>Widget Alternates: adds alternates for specific widgets and layers.</li>
+</ul>
+<h3 id="see-also_3">See Also:</h3>
+<ul>
+<li><a href="http://docs.orchardproject.net/Documentation/Customizing-Orchard-using-Designer-Helper-Tools">Customizing Orchard using designer helper tools</a></li>
+</ul>
+<p>This module is available from source code packages or <a href="http://gallery.orchardproject.net/List/Modules/Orchard.Module.Orchard.DesignerTools">from the gallery</a>.</p>
+<h2 id="orcharddynamicforms-off-by-default">Orchard.DynamicForms (off by default)</h2>
+<p>DynamicForms module in Orchard allows to create custom forms like contact forms using layouts.</p>
+<p>After enabling the DynamicForms module -&gt; click on Form in the dashboard area. The DynamicForms module is built using the DynamicLayouts module which allows us to place or drag-n-drop elements like a forms, checkboxes, buttons, labels, text areas, radio buttons, validation messages and many more on the Layout canvas.</p>
+<h3 id="features_6">Features</h3>
+<ul>
+<li>Orchard.DynamicForms : Create custom forms like contact forms using layouts.</li>
+<li>Orchard.DynamicForms.AntiSpam : Provides anti-spam elements to protect your content from malicious submissions.</li>
+<li>Orchard.DynamicForms.Taxonomies : Adds a Taxonomy form element to the system.</li>
+<li>Orchard.DynamicForms.Projections : Adds a Query form element to the system.</li>
+<li>Orchard.DynamicForms.ImportExport : Enables the import and export of form submissions.</li>
+</ul>
+<h2 id="orchardemail">Orchard.Email</h2>
+<p>This module implements an email messaging channel that can be used for example to send
+email notifications from rules.</p>
+<p>This module is available from source code packages or <a href="http://gallery.orchardproject.net/List/Modules/Orchard.Module.Orchard.Email">from the gallery</a>.</p>
+<h2 id="orchardfields">Orchard.Fields</h2>
+<p>Orchard.Fields provides Input, Boolean, DateTime, Numeric, Link, Enumeration, and Media Picker fields
+that can be used in custom content types.</p>
+<h2 id="orchardforms">Orchard.Forms</h2>
+<p>This developer-targeted module provides shapes that are useful to dynamically build forms from code.</p>
+<p>This module is used as a dependency by Projector and Rules.</p>
+<h2 id="orchardimportexport">Orchard.ImportExport</h2>
+<p>The definition for content types, as well as the content itself, can be exported from one Orchard
+instance, and imported into another using this module. The format that is used for the transfer
+is the same XML format that is used in recipes.</p>
+<p>This module is available from source code packages or <a href="http://gallery.orchardproject.net/List/Modules/Orchard.Module.Orchard.ImportExport">from the gallery</a>.</p>
+<h2 id="orchardimageeditor">Orchard.ImageEditor</h2>
+<p>Orchard.ImageEditor adds a client side image editor for Media Library</p>
+<h2 id="orchardindexing-orchardsearch-and-lucene">Orchard.Indexing, Orchard.Search and Lucene</h2>
+<p>Those three modules constitute the default full-text search infrastructure for Orchard.
+The indexing module populates the index from content items. The Lucene module provides
+the specific index implementation that indexing populates and that search queries.
+The search index queries the index and formats results.</p>
+<p>This module is available from source code packages or from the gallery: <a href="http://gallery.orchardproject.net/List/Modules/Orchard.Module.Orchard.Search">search</a>,
+<a href="http://gallery.orchardproject.net/List/Modules/Orchard.Module.Orchard.Indexing">indexing</a> and <a href="http://gallery.orchardproject.net/List/Modules/Orchard.Module.Lucene">Lucene</a>.</p>
+<h2 id="orchardjobsqueue">Orchard.JobsQueue</h2>
+<p>This module provides a jobs queue to process jobs asynchronously.</p>
+<h3 id="features_7">Features</h3>
+<ul>
+<li>Orchard.JobsQueue : Provides a jobs queue to process jobs asynchronously.</li>
+<li>Orchard.JobsQueue.UI : Provides a UI to manage queued jobs.</li>
+</ul>
+<h2 id="orchardjquery-deprecated">Orchard.jQuery (deprecated)</h2>
+<p>Used as a dependency by other modules, this provides jQuery and jQueryUI scripts.</p>
+<p>This module is deprecated as of Orchard v1.10, you should use Orchard.Resources now instead.</p>
+<h2 id="orchardlayouts">Orchard.Layouts</h2>
+<p>Orchard.Layouts module in Orchard provides tools to create layouts. In Orchard v.1.9 by default the Page content type has a LayoutPart instead of the BodyPart. </p>
+<p>A LayoutPart is a layout canvas which is empty by default. The Layouts module consists of Elements like Grids, Rows, Columns and Content Item elements, Media elements and Part elements like Title, Common and Tags part.</p>
+<p>Layout elements can be dragged-n-dropped on the Layout canvas to form a layout for a Page or a master layout for other pages.</p>
+<p>The Layouts module has a feature called Snippets which allows you to use a shape from within your current theme as an element. Quite handy auh.</p>
+<h3 id="features_8">Features</h3>
+<ul>
+<li>Orchard.Layouts : Provides tools to create layouts.</li>
+<li>Orchard.Layouts.Snippets : Enables support for adding elements based on shapes in the current theme.</li>
+<li>Orchard.Layouts.Markdown : Adds a Markdown element to the system.</li>
+<li>Orchard.Layouts.Projections : Adds a Projection element to the system.</li>
+<li>Orchard.Layouts.Tokens : Provides an element token provider that enables elements to be rendered using a token and enables tokens to be used inside of various elements such as Html, Text and Paragraph.</li>
+</ul>
+<h2 id="orchardlists">Orchard.Lists</h2>
+<p>This module provides a simple implementation for lists of content items, following
+a folder/file metaphor where a content item can belong to only one list.</p>
+<h2 id="orchardlocalization">Orchard.Localization</h2>
+<p>The localization module enables the localization of content items. This module provides a part that can be added to a content type to make it localizable. The items of the modified types can have several versions that differ by culture.</p>
+<h3 id="features_9">Features</h3>
+<ul>
+<li>Orchard.Localization : Enables localization of content items.</li>
+<li>Orchard.Localization.DateTimeFormat : Enables PO-based translation of date/time formats and names of days and months.</li>
+<li>Orchard.Localization.CultureSelector : Enables culture picker services, and also the admin culture picker.</li>
+<li>Orchard.Localization.Transliteration : Enables transliteration of content.</li>
+<li>Orchard.Localization.Transliteration.SlugGeneration : Enables transliteration of the autoroute slug when creating a piece of content.</li>
+</ul>
+<h2 id="orchardmedialibrary">Orchard.MediaLibrary</h2>
+<p>Orchard.MediaLibrary Provides enhanced Media management tools</p>
+<h3 id="see-also_4">See Also</h3>
+<ul>
+<li><a href="http://docs.orchardproject.net/Documentation/Adding-and-managing-media-content">Adding and managing media content</a></li>
+</ul>
+<h2 id="orchardmediaprocessing">Orchard.MediaProcessing</h2>
+<p>Module for processing Media e.g. image resizing</p>
+<h2 id="orchardmessagebus">Orchard.MessageBus</h2>
+<p>Provides communication APIs for server farms.</p>
+<h3 id="features_10">Features</h3>
+<ul>
+<li>Orchard.MessageBus : Reusable API abstractions to communicate in a server farm.</li>
+<li>Orchard.MessageBus.DistributedSignals : Distribute signals cache invalidation calls.</li>
+<li>Orchard.MessageBus.SqlServerServiceBroker : A message bus implementation using SQL Server Service Broker.</li>
+<li>Orchard.MessageBus.DistributedShellRestart : Distribute shell restarts.</li>
+</ul>
+<h2 id="orchardmigrations">Orchard.Migrations</h2>
+<p>Data migration commands.</p>
+<h3 id="features_11">Features</h3>
+<ul>
+<li>DatabaseUpdate : Commands for updating the database schema according to the definition of the "Record" classes in code.</li>
+</ul>
+<h2 id="orchardmodules">Orchard.Modules</h2>
+<p>This is the module that provides the admin UI to enable and disable features.</p>
+<h3 id="see-also_5">See Also</h3>
+<ul>
+<li><a href="http://docs.orchardproject.net/Documentation/Installing-and-upgrading-modules">Installing and upgrading modules</a></li>
+</ul>
+<h2 id="orchardmultitenancy">Orchard.MultiTenancy</h2>
+<p>Hosting multiple Orchard sites on separate applications means duplicating everything
+for each site. The multi-tenancy module enables the hosting of multiple Orchard sites
+within a single IIS application, thus saving a lot of resources, and reducing maintenance
+costs. Each site's data is strictly segregated from the others through a table prefix
+or complete database separation.</p>
+<h3 id="see-also_6">See Also</h3>
+<ul>
+<li><a href="http://docs.orchardproject.net/Documentation/Setting-up-a-multi-tenant-Orchard-site">Setting up a multi-tenant Orchard site</a></li>
+</ul>
+<p>This module is available from source code packages or <a href="http://gallery.orchardproject.net/List/Modules/Orchard.Module.Orchard.MultiTenancy">from the gallery</a>.</p>
+<h2 id="orchardoutputcache">Orchard.OutputCache</h2>
+<p>Adds Output Caching functionality.</p>
+<h3 id="features_12">Features</h3>
+<ul>
+<li>Orchard.OutputCache : Adds output caching functionality.</li>
+<li>Orchard.OutputCache.Database : Activates a provider that stores output cache data in the database.</li>
+</ul>
+<h2 id="orchardpackaging">Orchard.Packaging</h2>
+<p>This module handles the packaging of themes and modules.</p>
+<h3 id="features_13">Features</h3>
+<ul>
+<li>Packaging commands: core services and command-line commands to package and install modules.</li>
+<li>Gallery: integrates the <a href="http://gallery.orchardproject.net">gallery</a> into Orchard.</li>
+<li>Package Updates: enables module updates from the admin dashboard.</li>
+</ul>
+<h3 id="see-also_7">See Also</h3>
+<ul>
+<li><a href="http://docs.orchardproject.net/Documentation/Installing-modules-and-themes-from-the-gallery">Installing modules and themes from the gallery</a></li>
+</ul>
+<h2 id="orchardpages">Orchard.Pages</h2>
+<p>The Pages modules adds the Page content type, and associated commands.</p>
+<h3 id="see-also_8">See Also</h3>
+<ul>
+<li><a href="http://docs.orchardproject.net/Documentation/Adding-Pages-to-Your-Site">Adding pages to your site</a></li>
+</ul>
+<h2 id="orchardprojections">Orchard.Projections</h2>
+<p>This tremendously useful module enables the creation of arbitrary queries over
+the contents of the site, and then to present the results in flexible layouts,
+without leaving the admin dashboard.</p>
+<h3 id="see-also_9">See Also</h3>
+<ul>
+<li><a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=SP912eWoOoo">Presentation video on Projections</a></li>
+</ul>
+<h2 id="orchardpublishlater-off-by-default">Orchard.PublishLater (off by default)</h2>
+<p>The PublishLater part can be added to draftable content types and allows scheduled
+publication of contents.</p>
+<h3 id="see-also_10">See Also</h3>
+<ul>
+<li><a href="http://docs.orchardproject.net/Documentation/Saving-scheduling-and-publishing-drafts">Saving, scheduling and publishing drafts</a></li>
+</ul>
+<h2 id="orchardrecipes">Orchard.Recipes</h2>
+<p>Recipes are XML files that describe a set of operations on the contents and configuration
+of the site. Recipes are used at setup to describe predefined initial configurations
+(Orchard comes with default, blog and core recipes). They can also be included with
+modules to specify additional operations that get executed after installation.
+Finally, the import/export feature uses this same recipe format to transfer contents.</p>
+<h3 id="see-also_11">See Also</h3>
+<ul>
+<li><a href="http://docs.orchardproject.net/Documentation/Making-a-Web-Site-Recipe">Making a web site recipe</a></li>
+</ul>
+<h2 id="orchardredis">Orchard.Redis</h2>
+<p>Provides Redis integration with Orchard.</p>
+<h3 id="features_14">Features</h3>
+<ul>
+<li>Orchard.Redis : Provides Redis integration with Orchard.</li>
+<li>Orchard.Redis.MessageBus : A message bus implementation using Redis pub/sub.</li>
+<li>Orchard.Redis.OutputCache : An output cache storage provider using Redis.</li>
+<li>Orchard.Redis.Caching : Business data cache using Redis.</li>
+</ul>
+<h2 id="orchardresources">Orchard.Resources</h2>
+<p>Provides a variety of third-party client-side libraries (stylesheets and scripts) used by other modules.</p>
+<p>Added in Orchard v1.10, replaces the deprecated Orchard.jQuery module.</p>
+<h2 id="orchardroles">Orchard.Roles</h2>
+<p>The roles module is adding the ability to assign roles to users. It's also providing a set of default roles for which other modules can define default permissions.</p>
+<h3 id="features_15">Features</h3>
+<ul>
+<li>Orchard.Roles : Standard user roles.</li>
+<li>Orchard.Roles.Workflows : Provides a role based activities.</li>
+</ul>
+<h3 id="see-also_12">See Also</h3>
+<ul>
+<li><a href="http://docs.orchardproject.net/Documentation/Managing-users-and-roles">Managing users and roles</a></li>
+<li><a href="http://docs.orchardproject.net/Documentation/Understanding-permissions">Understanding permissions</a></li>
+</ul>
+<h2 id="orchardrules-deprecated-off-by-default">Orchard.Rules (deprecated) (off by default)</h2>
+<p>Orchard events can be picked up by rules and trigger actions. For example, the publication
+event on the comment content type can be picked-up by a user-defined rule and trigger
+the action of sending an e-mail to the owner of the blog.
+The Rules module provides simple admin UI to create and manage rules. This module is deprecated. 
+We recommend users switch to Orchard.Workflows Module.</p>
+<h2 id="orchardscripting">Orchard.Scripting</h2>
+<p>In order to enable simple programmability of the application without requiring the
+development of a whole module, certain key areas of Orchard expose extensibility through
+scripting. For example, widget layer visibility is defined by rules that are written
+as simple script expressions. The scripting infrastructure is language-agnostic, and
+new languages could be added by a module. Orchard comes with one implementation that
+is a simple expression language whose syntax is a subset of Ruby.</p>
+<h3 id="features_16">Features</h3>
+<ul>
+<li>Scripting: the scripting infrastructure.</li>
+<li>Lightweight Scripting: a simple expression language that is a subset of Ruby.</li>
+<li>Scripting Rules: makes it possible for rules to be triggered by arbitrary scripted expressions.</li>
+</ul>
+<h2 id="orchardscriptingcsharp">Orchard.Scripting.CSharp</h2>
+<p>Provides C# compiler services.</p>
+<h3 id="features_17">Features</h3>
+<ul>
+<li>Orchard.Scripting.CSharp : Provides C# compiler services.</li>
+<li>Orchard.Scripting.CSharp.Validation : Provides a Script Validation part.</li>
+</ul>
+<h2 id="orchardscriptingdlr">Orchard.Scripting.DLR</h2>
+<p>This module, built on Orchard.Scripting, enables the possibility to use DLR languages
+such as Ruby and Python as scripting languages.</p>
+<h2 id="orchardsetup-off-after-setup">Orchard.Setup (off after setup)</h2>
+<p>This module is always disabled except before the application has been setup. It is responsible
+for implementing the setup mechanism. It contains the original recipes in its Recipes subfolder.</p>
+<h3 id="see-also_13">See Also</h3>
+<ul>
+<li><a href="http://docs.orchardproject.net/Documentation/Installing-Orchard">Installing Orchard</a></li>
+<li><a href="http://docs.orchardproject.net/Documentation/Making-a-Web-Site-Recipe">Making a web site recipe</a></li>
+</ul>
+<h2 id="orchardsearch">Orchard.Search</h2>
+<p>Standard interface to Orchard's built-in search.</p>
+<h3 id="features_18">Features</h3>
+<ul>
+<li>Orchard.Search : Standard interface to Orchard's built-in search.</li>
+<li>Orchard.Search.Content : Provides a Content Search tab in Admin.</li>
+<li>Orchard.Search.ContentPicker : Provides a search tab in Content Picker.</li>
+<li>Orchard.Search.MediaLibrary : Provides search menu item in the Media Library explorer.</li>
+</ul>
+<h2 id="orchardsecuresocketslayer">Orchard.SecureSocketsLayer</h2>
+<p>This module will ensure SSL is used when accessing specific parts of the website like the dashboard, authentication pages or custom pages.</p>
+<h2 id="orchardtags">Orchard.Tags</h2>
+<p>Tags are a very simple way to categorize contents. It is a flat and easily extensible structure.</p>
+<h3 id="features_19">Features</h3>
+<ul>
+<li>Orchard.Tags : The tags module is providing basic tagging for arbitrary content types.</li>
+<li>Orchard.Tags.Feeds : Adds tags to the RSS feeds. </li>
+<li>Orchard.Tags.TagCloud : Adds a tag cloud widget. </li>
+</ul>
+<h3 id="see-also_14">See Also</h3>
+<ul>
+<li><a href="http://docs.orchardproject.net/Documentation/Organizing-content-with-tags">Organizing content with tags</a></li>
+</ul>
+<h2 id="orchardtasklease">Orchard.TaskLease</h2>
+<p>In web farm environments, it's often useful to send messages across all servers in the farm. This
+module implements a way for code to communicate tasks to the whole server farm.</p>
+<p>This module is available from source code packages or <a href="http://gallery.orchardproject.net/List/Modules/Orchard.Module.Orchard.TaskLease">from the gallery</a>.</p>
+<h2 id="orchardtaxonomies">Orchard.Taxonomies</h2>
+<p>The taxonomy module is providing custom categorization of arbitrary content types. The taxonomy module provides a taxonomy field which can be attached to any Content Type.</p>
+<h2 id="orchardthemes">Orchard.Themes</h2>
+<p>This module provides the infrastructure for easy customization of the look and feel of the site
+through the definition of themes, which are a set of scripts, stylesheets and template overrides.</p>
+<h3 id="see-also_15">See Also</h3>
+<ul>
+<li><a href="http://docs.orchardproject.net/Documentation/Installing-themes">Installing themes</a></li>
+<li><a href="http://docs.orchardproject.net/Documentation/Previewing-and-applying-a-theme">Previewing and applying a theme</a></li>
+<li><a href="http://docs.orchardproject.net/Documentation/Customizing-the-default-theme">Customizing the default theme</a></li>
+</ul>
+<h2 id="orchardtemplates">Orchard.Templates</h2>
+<p>Provides a Template type that can be used to store template code and used as a shape.</p>
+<h3 id="features_20">Features</h3>
+<ul>
+<li>Orchard.Templates : Provides a Template type that represents a shape template, stored as a content item.</li>
+<li>Orchard.Templates.Razor : Extends Templates with Razor templates.</li>
+</ul>
+<h2 id="orchardtokens-off-by-default">Orchard.Tokens (off by default)</h2>
+<p>Provides a system for performing string replacements with common site values. Tokens are contextual environment variables that are used in dynamic expressions. For example,
+the Autoroute feature makes it possible to define URL patterns for content items of a given
+type. Those patterns rely on tokens that will be dynamically evaluated in a specific context.
+The "{Content.Date.Format:yyyy}/{Content.Slug}" would be evaluated for the specific content item
+it applies to and would be resolved to something like "2012/the-title".</p>
+<h3 id="features_21">Features</h3>
+<ul>
+<li>Orchard.Tokens : Provides a system for performing string replacements with common site values.</li>
+<li>Orchard.Tokens.Feeds : Provides a content part to customize RSS fields based on tokens.</li>
+<li>Orchard.Tokens.HtmlFilter : Evaluates tokens in a body.</li>
+</ul>
+<h2 id="orchardusers">Orchard.Users</h2>
+<p>This is the module that implements the default user management in Orchard.</p>
+<h3 id="features_22">Features</h3>
+<ul>
+<li>Orchard.Users : default user management in Orchard.</li>
+<li>Orchard.Users.Workflows : Provides User based Workflow Activites.</li>
+<li>Orchard.Users.PasswordEditor : Adds the ability for admins to edit users' passwords.</li>
+</ul>
+<h3 id="see-also_16">See Also</h3>
+<ul>
+<li><a href="http://docs.orchardproject.net/Documentation/Managing-users-and-roles">Managing users and roles</a></li>
+</ul>
+<h2 id="orchardwarmup-off-by-default">Orchard.Warmup (off by default)</h2>
+<p>Cold starts in ASP.NET applications can be slow, and shared hosting environments create the
+conditions for frequent such cold starts. In order to mitigate this situation, the warmup
+feature can prepare static versions of the most common pages of the site so those can be served
+as soon as possible even if the application is not entirely done warming up.</p>
+<h2 id="orchardwidgets">Orchard.Widgets</h2>
+<p>Widgets are reusable pieces of UI that can be positioned on any page of the site. Which widgets
+get displayed on what pages is determined by layer rules.</p>
+<h3 id="features_23">Features</h3>
+<ul>
+<li>Widgets: the core widget feature and admin UI.</li>
+<li>Page Layer Hinting: adds a message when publishing a new page that prompts the user to create a new layer for that page.</li>
+<li>Widget Control Wrapper: Adds an edit button on the front-end for easier modification.</li>
+</ul>
+<h3 id="see-also_17">See Also</h3>
+<ul>
+<li><a href="http://docs.orchardproject.net/Documentation/Managing-widgets">Managing widgets</a></li>
+<li><a href="../Getting-Started-with-Modules">Getting Started with Modules course</a></li>
+<li><a href="http://docs.orchardproject.net/Documentation/Writing-a-widget">Writing a widget</a></li>
+</ul>
+<h2 id="orchardworkflows">Orchard.Workflows</h2>
+<p>Orchard.Workflows module provides tools to create custom workflows. </p>
+<h2 id="syscache">SysCache</h2>
+<p>Enables database caching using the SysCache provider.</p>
+<h2 id="tinymce">TinyMCE</h2>
+<p>Used as a dependency by other features, this provides the scripts necessary to implement the TinyMCE WYSYWYG HTML editor.</p>
+<h2 id="upgrade-upgradeto16-upgradeto15-upgradeto14-off-by-default">Upgrade / UpgradeTo16 /UpgradeTo15 / UpgradeTo14 (off by default)</h2>
+<p>Provides actions for upgrading Orchard instances.</p>
+<p>Orchard 1.4 brought breaking changes in the way URLs and titles are managed. 1.3 and previous versions
+were using the Route part to handle a static URL and title. 1.4 deprecated this in favor of the new
+alias, autoroute and title part. The upgrade module contains special scripts that upgrade old content
+to the new way of doing things.
+Orchard 1.4 also introduced new field types (see Orchard.Fields), and because some users may have
+used equivalent Contrib.* fields from gallery modules, the upgrade module provides an upgrade path
+to the new fields.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Feature-roadmap/" class="btn btn-neutral float-right" title="Feature roadmap">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Basic-Orchard-Concepts/" class="btn btn-neutral" title="Orchard Concept Definitions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Basic-Orchard-Concepts/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Feature-roadmap/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

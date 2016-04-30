@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Part 1: Build a Static Widget - Orchard Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../Styles/Site.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Part 1: Build a Static Widget";
+    var mkdocs_page_input_path = "Documentation\Getting-Started-with-Modules-Part-1.markdown";
+    var mkdocs_page_url = "/Documentation/Getting-Started-with-Modules-Part-1/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-20757794-1', 'orchardproject.net');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Orchard Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-Orchard/">Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manually-installing-Orchard-zip-file/">Manually Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Working-with-Orchard-in-WebMatrix/">Working with Orchard in WebMatrix</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-around-the-dashboard/">Getting Around the Dashboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started/">Building Your First Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation-and-menus/">Navigation and Menus</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-a-Blog-to-Your-Site/">Adding a Blog to Your Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-and-managing-media-content/">Adding and Managing Media Content</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-widgets/">Managing Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Organizing-content-with-tags/">Organizing Content Using Tags</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>About the Project</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Basic-Orchard-Concepts/">Orchard Concept Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Builtin-Features/">Built-in modules and features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Feature-roadmap/">Feature roadmap</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Frequently-asked-questions/">Frequently Asked Questions</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-TV/">Tutorial Videos</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Authoring Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogging-with-LiveWriter/">Blogging with LiveWriter</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-global-ready-applications/">Creating Global-Ready Applications</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Search-and-indexing/">Search and Indexing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Saving-scheduling-and-publishing-drafts/">Publishing Drafts</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-custom-content-types/">Creating Custom Content Types</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Customizing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Previewing-and-applying-a-theme/">Previewing and Applying a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-themes/">Installing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-the-default-theme/">Customizing Themes</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using the Orchard Gallery</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Gallery-overview/">Gallery Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-modules-and-themes-from-the-gallery/">Installing Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Browsing-the-gallery-web-site/">Browsing the Gallery Web Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-a-module-or-theme-to-the-gallery/">Contributing to the Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Module-gallery-feeds/">Registering Additional Gallery Feeds</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Managing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Enabling-and-disabling-features/">Enabling and Disabling Features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-the-command-line-interface/">Using the Command-Line Interface</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-and-upgrading-modules/">Installing and Upgrading Modules</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Modifying-site-settings/">Modifying Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Moderating-comments/">Moderating Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-users-and-roles/">Managing Users and Roles</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-permissions/">Understanding Permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Making-a-Web-Site-Recipe/">Making a Website Recipe</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-an-image-gallery/">Creating an Image Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Workflows/">Workflows</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Projection/">Projection</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-Dynamic-Forms/">Create Dynamic Forms</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Hosting and Deploying Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Upgrading-a-site-to-a-new-version-of-Orchard/">Upgrading a Site to a New Version</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Optimizing-Performance-of-Orchard-with-Shared-Hosting/">Optimizing Server Performance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Whats-new-for-Windows-Azure-in-Orchard-1-7-1/">What's New for Windows Azure in Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Deploying-Orchard-to-Windows-Azure/">Deploying Orchard to Windows Azure</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Blob-Storage/">Using Windows Azure Blob Storage</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Cache/">Using Windows Azure Cache</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Running-Orchard-on-Mono/">Running Orchard on Mono</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-multi-tenant-Orchard-site/">Setting Up a Multi-Tenant Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-machine-key/">Setting Up a Machine Key</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Orchard</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../First-steps-into-Orchard/">First Steps into Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../How-Orchard-works/">How Orchard Works</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Command-line-scaffolding/">Command-Line Code Generation</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Getting Started with Modules Course</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Part 1: Build a Static Widget</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#introduction">Introduction</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#prerequisites">Prerequisites</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#getting-help">Getting help</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#setting-up">Setting up</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#getting-the-most-out-of-this-course">Getting the most out of this course</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#course-structure">Course structure</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#getting-started">Getting started</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#command-line-scaffolding-with-orchardexe">Command line scaffolding with Orchard.exe</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#core-concepts-refresher">Core concepts refresher</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#what-we-will-be-building">What we will be building</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#content-part">Content part</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#data-migrations">Data migrations</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#update-dependencies-as-you-go-along">Update dependencies as you go along</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#how-is-all-this-magic-working">How is all this magic working?</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#content-part-driver">Content part driver</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#view">View</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#placement">Placement</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#trying-the-module-out-in-orchard">Trying the module out in Orchard</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#download-the-code-for-this-lesson">Download the code for this lesson</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#conclusion">Conclusion</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-2/">Part 2: Make the Widget Dynamic</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-3/">Part 3: Using the Orchard API</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-4/">Part 4: Applying Best Practices</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Building-a-hello-world-module/">Building a Hello World Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-a-module-with-a-simple-text-editor/">Creating a Module with a Simple Text Editor</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-content-part/">Writing a Content Part</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-a-custom-field-type/">Writing a Content Field</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-a-module/">Packaging and Sharing a Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-widget/">Writing a Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-1-n-and-n-n-relations/">Creating _1-N_ and _N-N_ Relations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manifest-files/">Manifest Files for Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Caching/">Caching</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-custom-settings/">Custom Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../WebApi-In-Orchard/">Web Api in Orchard</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Working with Data</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-data-access/">Understanding Data Access</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-content-handlers/">Understanding Content Handlers</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Creating Themes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-new-theme/">Writing a New Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Anatomy-of-a-theme/">The Anatomy of a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-placement-info/">Understanding the placement.info File</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Accessing-and-rendering-shapes/">Accessing and Rendering Shapes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Alternates/">Alternates</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Template-file-syntax-guide/">Template File Syntax Guide</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-themes/">Packaging and Sharing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../UI-guidelines-for-theme-authors/">UI Guidelines for Theme Authors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-Orchard-using-Designer-Helper-Tools/">Customizing Orchard Using Designer Helper Tools</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Developer Tools and Guidelines</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Developer-FAQ/">Developer FAQ</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-source-enlistment/">Setting Up a Source Enlistment</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Source-code-organization/">Source Code Organization</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-dependencies-and-libraries/">Dependencies and Libraries</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code-conventions/">Code Conventions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Continuous-integration/">Continuous Integration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Merging-Pull-Requests/">Merging Pull Requests</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Additional Topics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-module-loader-and-dynamic-compilation/">Orchard Dynamic Compilation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Configuring-email/">Configuring Email</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Involved</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-documentation/">Contributing Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Documentation-Style-Guidelines/">Documentation Style Guidelines</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-patches/">Contributing Patches</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10-1.Release-Notes/">Orchard 1.10.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10.Release-Notes/">Orchard 1.10</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-3.Release-Notes/">Orchard 1.9.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-2.Release-Notes/">Orchard 1.9.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-1.Release-Notes/">Orchard 1.9.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9.Release-Notes/">Orchard 1.9</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-2.release-notes/">Orchard 1.8.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-1.Release-Notes/">Orchard 1.8.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-Release-Notes/">Orchard 1.8</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-2-Release-Notes/">Orchard 1.7.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-1-Release-Notes/">Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-Release-Notes/">Orchard 1.7</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-6-Release-Notes/">Orchard 1.6</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-5-Release-Notes/">Orchard 1.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-4-Release-Notes/">Orchard 1.4</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>User Experiences</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Walkthroughs/">Walkthroughs and UI Mockups</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Archived Specs</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogs/">Blogs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Comments/">Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Content-types/">Content types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Definitions/">Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Fundamentals-doctype/">HTML doctype</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Linkback/">Linkbacks: Pingbacks, Refbacks and Trackbacks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Media-management/">Media management</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation/">Navigation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-editing/">Page editing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages/">Page management and publishing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-publishing/">Page publishing workflow</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Rss-atom/">RSS and Atom feeds</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Slugs/">Slugs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Templates/">Page templates and syntax</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Tags/">Tags</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes/">Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes-includes/">Theme includes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Users/">Users, roles and permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Widgets/">Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Xml-Rpc/">XML-RPC and Live Writer</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-lists/">Creating lists of content items</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Orchard Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Extending Orchard &raquo;</li>
+        
+      
+        
+          <li>Getting Started with Modules Course &raquo;</li>
+        
+      
+    
+    <li>Part 1: Build a Static Widget</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="introduction">Introduction</h2>
+<p>This four part course will get you started with a gentle introduction to extending Orchard at the code level. You will build a very simple module which contains a widget that shows an imaginary featured product. </p>
+<p>It will teach you some of the basic components of module development and also encourage you to use best-practices when developing for Orchard.</p>
+<p>In this first part we are going to set up our dev environment, scaffold a module and then build a simple <code>Widget</code> inside it. </p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This course assumes the following:</p>
+<ul>
+<li>
+<p>You have some experience using Orchard and understand its core concepts. Refreshers and links to related guides will be provided.</p>
+</li>
+<li>
+<p>You can read and write C# code.</p>
+</li>
+<li>
+<p>You have <em>some</em> experience with ASP.NET MVC. This doesn't need to be deep but you should be aware of Razor templates, views, strongly-typed models and similar basics.</p>
+</li>
+</ul>
+<p>The course was written and tested against Orchard v1.9.2. It should work in new 1.x branch releases as they come out.</p>
+<h2 id="getting-help">Getting help</h2>
+<p>If you get stuck or need some support at any point in the course there are several places you can turn:</p>
+<ol>
+<li>
+<p>Post a question in the <a href="http://orchard.codeplex.com/discussions">official support forums on CodePlex</a>.</p>
+</li>
+<li>
+<p>Post a question on <a href="http://stackoverflow.com/questions/tagged/orchardcms">Stack Overflow tagged with OrchardCMS</a>.</p>
+</li>
+<li>
+<p>Open an issue on the <a href="https://github.com/OrchardCMS/OrchardDoc/issues">Orchard Doc GitHub repo</a>.</p>
+</li>
+</ol>
+<h2 id="setting-up">Setting up</h2>
+<p>First things first, you need to follow the <a href="../Setting-up-for-a-lesson">setting up for a lesson</a> guide.</p>
+<p>This will take you through the initial steps to set up your dev environment and pull a fresh copy of the source code down. When you've completed it please use your back button to come back to this course.</p>
+<h2 id="getting-the-most-out-of-this-course">Getting the most out of this course</h2>
+<p>Writing an Orchard module that actually does something is going to contain a <em>minimum</em> of 9 different files. You will need to do a lot of development before you can run your module code and see it working in Orchard.</p>
+<p>At first you might be overwhelmed by this, but here is a little tip; don't be. Just forge ahead with the tutorial and don't worry if terms like drivers, content parts, or placements seem unfamiliar at the moment. As you continue with your module development you will come across these files many times over. Before long you will start recognizing these core files and you will see how it all fits together.</p>
+<h2 id="course-structure">Course structure</h2>
+<p>Throughout the course we will alternate between discussing topics and implementing them. The discussion may contain example code or other example scenarios. </p>
+<p>So that there is no confusion for you as to what you should be doing, when it comes to implementing these lessons into the module it will be explained step-by-step via numbered lists.</p>
+<p>Later on in the course, as the topics become more advanced, we may go through several sections of discussion before wrapping up the lessons into changes to the codebase.</p>
+<p>You will also occasionally come across <strong>Bonus Exercise</strong> sections. These are completely optional. You can skip them, complete them at the time, or come back after completing the course to complete them. They are suggested when there is an extra feature you could implement using the skills you have just learned.</p>
+<h2 id="getting-started">Getting started</h2>
+<p>Now that you've completed all of the setup tasks you will have a fresh copy of Orchard configured and ready to go.</p>
+<p>The rest of this part of the course will walk you through the process required to scaffold an empty module and then build a simple <code>Widget</code> inside of it.</p>
+<h2 id="command-line-scaffolding-with-orchardexe">Command line scaffolding with Orchard.exe</h2>
+<p>You should now be looking at Visual Studio. Down the side, in your Solution Explorer window you will see many files and folders. </p>
+<p>The first step to take is to collapse all of the projects down. Its a long list and we need to be able to see an overview of the solution so we can start working with it. You don't need to collapse these individually by hand however:</p>
+<ol>
+<li>
+<p>If your Solution Explorer window is not visible click <code>View</code>, <code>Solution Explorer</code>. </p>
+</li>
+<li>
+<p>Click the <code>Collapse All</code> icon in the toolbar along the top of the solution explorer. It looks like this:</p>
+<p><img alt="" src="../../Attachments/getting-started-with-modules-part-1/collapse-all.png" /></p>
+</li>
+</ol>
+<p>If you expand your <code>Modules</code> folder you will see a long list of the modules which come packaged with Orchard:</p>
+<p><img alt="" src="../../Attachments/getting-started-with-modules-part-1/modules-list.png" /></p>
+<p>There is a utility that is packaged with each copy of Orchard which will let us add our own module into this list. It is called <code>orchard.exe</code>. This is a command line utility which will scaffold up a new empty module and add it to the main solution. There are also other commands you can use with this utility. </p>
+<p>To scaffold a new module:</p>
+<ol>
+<li>
+<p>Press the <code>Save All</code> button (or press <code>Ctrl-Shift-S</code>). Its a good practice to always save before using the command line utility. Many of its commands will make changes to your solution and if you have unsaved changes you will get merge conflicts.</p>
+</li>
+<li>
+<p>In the Solution Explorer, scroll down to the <code>Orchard.Web</code> project. It should be the very last project in the solution.</p>
+</li>
+<li>
+<p>Right click on the <code>Orchard.Web</code> project and choose <code>Open Folder in File Explorer</code>:</p>
+<p><img alt="" src="../../Attachments/getting-started-with-modules-part-1/open-orchard-web.png" /></p>
+</li>
+<li>
+<p>Open the <code>bin</code> folder</p>
+</li>
+<li>
+<p>Locate <code>orchard.exe</code> in the list and double click it to open.</p>
+<p><img alt="" src="../../Attachments/getting-started-with-modules-part-1/open-orchard-exe.png" /></p>
+<blockquote>
+<p><strong>Note:</strong> If you don't see <code>orchard.exe</code> in the <code>bin</code> folder then you didn't follow the steps in the <a href="../Setting-up-for-a-lesson">setting up for a lesson</a> guide. You need to have built the solution at least once for this file to exist. Press <code>Ctrl-Shift-B</code> within Visual Studio to build the solution.</p>
+</blockquote>
+</li>
+<li>
+<p>After a short pause while it loads you will then be presented with the Orchard command line:</p>
+<p><img alt="" src="../../Attachments/getting-started-with-modules-part-1/orchard-command-line.png" /></p>
+<blockquote>
+<p><strong>Note:</strong> There is a separate article where you can <a href="../Using-the-command-line-interface">learn more about orchard.exe and its features</a>. You don't need to read it to understand this course but it will be useful to review in the future as part of your overall training.</p>
+</blockquote>
+</li>
+<li>
+<p>Type the following command: <code>feature enable Orchard.CodeGeneration</code> and press <code>enter</code>.</p>
+<p><img alt="" src="../../Attachments/getting-started-with-modules-part-1/enable-codegeneration.png" /></p>
+<p>This will activate the code generation features of <code>orchard.exe</code>. </p>
+<blockquote>
+<p><strong>Note:</strong> If you get an error saying <code>No command found matching arguments "feature enable Orchard.CodeGeneration"</code> then you didn't follow the steps in the <a href="../Setting-up-for-a-lesson">setting up for a lesson</a> guide. You need to run the solution and go through the Orchard Setup screens before this command is available.</p>
+</blockquote>
+<p>The code generation command that we will be using is <code>codegen module</code>.</p>
+</li>
+<li>
+<p>Type <code>help codegen module</code> and press enter to see the syntax for this command. To see details about all of the commands available type <code>help commands</code>. </p>
+<p>Like the rest of Orchard CMS, the orchard.exe command shell is extendable. The total number of commands available can vary depending on what features / modules you have loaded. In a future tutorial we will look at extending orchard.exe with our own commands.</p>
+</li>
+<li>
+<p>Scaffold the module by entering the following command: <code>codegen module Orchard.LearnOrchard.FeaturedProduct</code>. </p>
+<p>If you read the help in the last step you might be wondering why we didn't include the <code>/IncludeInSolution:true</code> argument. This defaults to true so you don't need to add it.</p>
+</li>
+<li>
+<p>Close the Orchard command-line window.</p>
+</li>
+<li>
+<p>This has now created a new, empty module in the file system. Switching back to Visual Studio should show you the <code>File Modification Detected</code> dialog:</p>
+<p><img alt="" src="../../Attachments/getting-started-with-modules-part-1/reload-solution.png" /></p>
+<p>Click <code>Reload</code>.</p>
+<blockquote>
+<p><strong>Note:</strong> If you had unsaved changes in your Solution file then click the <code>Dismiss</code> option and add the project manually. In the Solution Explorer, <code>Right click</code> on the <code>Modules</code> folder. Choose <code>Add</code>, <code>Existing Project</code>, then navigate to <code>.\src\Orchard.Web\Modules\Orchard.LearnOrchard.FeaturedProduct\</code>, select <code>Orchard.LearnOrchard.FeaturedProduct.csproj</code> and press <code>Open</code>.</p>
+</blockquote>
+</li>
+</ol>
+<p>The basic framework for a module now exists inside the modules section of your solution:</p>
+<p><img alt="" src="../../Attachments/getting-started-with-modules-part-1/scaffold-complete.png" /></p>
+<h2 id="core-concepts-refresher">Core concepts refresher</h2>
+<p>If you are at the stage of wanting to build modules for Orchard then you should already be familiar with the concept of Content Types, Widgets, Content Items and Content Parts. These are all things that you can manage via the admin dashboard and you will have worked with them if you have built any kind of site in Orchard. To refresh your memory:</p>
+<ul>
+<li>
+<p><strong>Content Type</strong>: The template for a type of content in Orchard. The most common example is the <code>Page</code> content type which provides the structure for a page of content in an Orchard site. </p>
+</li>
+<li>
+<p><strong>Widgets</strong>: You can also make a content type that works as a <code>Widget</code>. The <code>Widget</code> is a special variation of content type which can be placed into one of the many <code>Zones</code> a template defines. It's manageable via the admin dashboard at run-time. Content types can opt-in to this system by configuring their <code>Stereotype</code> setting to <code>Widget</code>.  </p>
+</li>
+<li>
+<p><strong>Content Item</strong>: This is an instance of a specific content type. When you create a new <code>Page</code> in Orchard and fill it with content that is a <code>Content Item</code> with a <code>Content Type</code> of <code>Page</code>.</p>
+</li>
+<li>
+<p><strong>Content Part</strong>: A small module providing some specific functionality. The <code>Content Type</code> is made up by attaching various <code>Content Parts</code> to it. For example you could have a comments content part. It just manages a block of comments for whatever it is attached to. The same comments content part could be attached to a <code>Page</code> content type, a <code>Blog</code> content type, or within a <code>Widget</code>.</p>
+</li>
+</ul>
+<h2 id="what-we-will-be-building">What we will be building</h2>
+<p>As you might have guessed from the module name, we are going to build a very simple featured product module. This first step into extending Orchard will be a small one. </p>
+<p>The featured product module will be a <code>Widget</code> which shows a static message listing the featured product with a link to that page. It's not going to have any configurable settings behind it so we won't need to look at the database side of things yet. It's not going to be powered by an actual product system. A <code>Widget</code> is a great starting pointing point because it doesn't need to worry about menu settings, titles, URLs or integration into the admin dashboard.</p>
+<p>It will be a simple banner which you can display on your site by adding a widget via the admin dashboard. This will be enough to show the core concepts of a module. We will come back and make improvements in the next three parts of this course.</p>
+<p>Let's get started with some development by adding classes and other files to our module.</p>
+<h2 id="content-part">Content part</h2>
+<p>The content part class is the core data structure. When you scaffolded the module it automatically made you a <code>Models</code> folder. Now we need to add the <code>FeaturedProductPart</code> class to this folder:</p>
+<p><img alt="" src="../../Attachments/getting-started-with-modules-part-1/add-contentpart-class.png" /></p>
+<ol>
+<li>
+<p><code>Right click</code> on the <code>Models</code> folder.</p>
+</li>
+<li>
+<p>Choose <code>Add</code></p>
+</li>
+<li>
+<p>Choose <code>Class...</code></p>
+</li>
+<li>
+<p>In the <code>Name:</code> field type <code>FeaturedProductPart</code></p>
+</li>
+<li>
+<p>Click <code>Add</code></p>
+</li>
+</ol>
+<p>Your new class will be created and opened up in the Visual Studio editor.</p>
+<blockquote>
+<p><strong>Important note:</strong> In order for Orchard to recognize Content Part classes they must be in a namespace ending <code>.Models</code>. </p>
+<p>Because you already added this class within the <code>Models</code> folder the namespace is automatically wrapped around your class. In the future, when you're making your own classes don't forget to ensure that you follow this namespace structure.</p>
+</blockquote>
+<p>Your content part class will need to derive from the <code>ContentPart</code> class.</p>
+<p>Normally we would add public properties to store all the related data but as we are keeping it simple this first example won't have any.</p>
+<p><img alt="" src="../../Attachments/getting-started-with-modules-part-1/contentpart-add-inheritance.png" /></p>
+<p>Add the <code>ContentPart</code> inheritance by following these steps:</p>
+<ol>
+<li>
+<p>Type <code>: ContentPart</code> after your <code>FeaturedProductPart</code> class definition to inherit from the <code>ContentPart</code> class.</p>
+</li>
+<li>
+<p>Wait a second and the red squiggles will appear underneath the class. Add the namespace by pressing <code>Ctrl-.</code> on your keyboard to bring up the Quick Actions menu.</p>
+</li>
+<li>
+<p>Select the <code>using Orchard.ContentManagement;</code> option and press <code>enter</code>.</p>
+</li>
+</ol>
+<p>That's all you need to do for your first <code>ContentPart</code> class. Your <code>FeaturedProductPart.cs</code> file should now look like this:</p>
+<pre><code>using Orchard.ContentManagement;
+
+namespace Orchard.LearnOrchard.FeaturedProduct.Models {
+    public class FeaturedProductPart : ContentPart {
+    }
+}
+</code></pre>
+<h2 id="data-migrations">Data migrations</h2>
+<p>When your module is enabled in the admin dashboard Orchard will execute a data migration process. The purpose of the data migration is to register a list of the features contained in the module and any data it uses.</p>
+<p>We aren't going to use this yet, but the migration is also used for upgrades. As you work on your modules you will want to add and remove bits. The data migration class can make changes and you can transform your existing data to meet your new requirements.</p>
+<p>The data migration class can be created by hand, following a similar process as the last section but we can also scaffold it with the <code>orchard.exe</code> command line. Let's dive back in to the command line and add a data migration class to the module.</p>
+<ol>
+<li>
+<p>Press the <code>Save All</code> button (or press <code>Ctrl-Shift-S</code>). Its a good practice to always save before using the command line utility. Many of its commands will make changes to your solution and if you have unsaved changes you will get merge conflicts.</p>
+</li>
+<li>
+<p>In the Solution Explorer, scroll down to the <code>Orchard.Web</code> project. It should be the very last project in the solution.</p>
+</li>
+<li>
+<p>Right click on the <code>Orchard.Web</code> project and choose <code>Open Folder in File Explorer</code>:</p>
+<p><img alt="" src="../../Attachments/getting-started-with-modules-part-1/open-orchard-web.png" /></p>
+</li>
+<li>
+<p>Open the <code>bin</code> folder.</p>
+</li>
+<li>
+<p>Locate <code>orchard.exe</code> in the list and double click it to open.</p>
+<p><img alt="" src="../../Attachments/getting-started-with-modules-part-1/open-orchard-exe.png" /></p>
+</li>
+<li>
+<p>After a short pause while it loads you will then be presented with the Orchard command line:</p>
+<p><img alt="" src="../../Attachments/getting-started-with-modules-part-1/orchard-command-line.png" /></p>
+</li>
+<li>
+<p>We enabled the code generation feature when scaffolding the module but if you have been playing with Orchard or are just using this guide as a reference it can't hurt to run the command a second time to make sure. </p>
+<p>Type the following command: <code>feature enable Orchard.CodeGeneration</code> and press <code>enter</code>.</p>
+<p><img alt="" src="../../Attachments/getting-started-with-modules-part-1/enable-codegeneration.png" /></p>
+<p>This will activate the code generation features of <code>orchard.exe</code>. The command that we will be using is <code>codegen datamigration</code>. </p>
+</li>
+<li>
+<p>Type <code>help codegen datamigration</code> and press enter to see the syntax for this command. To see details about all of the commands available type <code>help commands</code>. </p>
+<p>Like the rest of Orchard CMS, the orchard.exe command shell is extendable. The total number of commands available can vary depending on what features / modules you have loaded. In a future tutorial we will look at extending orchard.exe with our own commands.</p>
+</li>
+<li>
+<p>Scaffold the data migration class by entering the following command: <code>codegen datamigration Orchard.LearnOrchard.FeaturedProduct</code>.</p>
+</li>
+<li>
+<p>Close the Orchard command-line window.</p>
+</li>
+<li>
+<p>This has now created a new data migration the file system called <code>Migrations.cs</code>. It will be in the root folder of your module. </p>
+<p>Switching back to Visual Studio should show you the <code>File Modification Detected</code> dialog:</p>
+<p><img alt="" src="../../Attachments/getting-started-with-modules-part-1/reload-solution.png" /></p>
+<p>Click <code>Reload</code>.</p>
+<blockquote>
+<p><strong>Note:</strong> If you had unsaved changes in your Solution file then click the <code>Dismiss</code> option and add the class manually. In the Solution Explorer, <code>right click</code> on the <code>Orchard.LearnOrchard.FeaturedProduct</code> folder. Choose <code>Add</code>, <code>Existing Item</code>, then navigate to <code>.\src\Orchard.Web\Modules\Orchard.LearnOrchard.FeaturedProduct\</code>, select <code>Migrations.cs</code> and press <code>Add</code>.</p>
+</blockquote>
+</li>
+</ol>
+<p>Now you have a <code>Migrations.cs</code> file in the root folder of your module's project. By default it has an empty method called <code>Create()</code> which returns an <code>int</code>. For the moment, returning a value of <code>1</code> is fine. It's the version number of your data migration and we will look into it in more detail later in this course.</p>
+<p>As discussed earlier the <code>Widget</code> is just a <code>ContentType</code> with a <code>Stereotype</code> of <code>Widget</code>. A <code>ContentType</code> is basically just a collection of <code>ContentPart</code>s. Every <code>ContentType</code> should contain the <code>CommonPart</code> which gives you the basics like the owner and date created fields. We will also add the <code>WidgetPart</code> so it knows how to widget. Finally we also include the content part we are building, <code>FeaturedProductPart</code>.</p>
+<p>Let's update the <code>Create()</code> method to implement these plans:</p>
+<ol>
+<li>
+<p>Open <code>Migrations.cs</code> from within your module project if you don't already have it open.</p>
+</li>
+<li>
+<p>Replace the <code>Create()</code> method with the following:</p>
+<pre><code>public int Create() {
+  ContentDefinitionManager.AlterTypeDefinition(
+    "FeaturedProductWidget", cfg =&gt; cfg
+      .WithSetting("Stereotype", "Widget")
+      .WithPart(typeof(FeaturedProductPart).Name)
+      .WithPart(typeof(CommonPart).Name)
+      .WithPart(typeof(WidgetPart).Name));
+  return 1;
+}
+</code></pre>
+<p>Orchard doesn't have a <code>CreateTypeDefinition</code> method so even within the create we still used <code>AlterTypeDefinition</code>. If it doesn't find an existing definition then it will create a new content type.</p>
+</li>
+<li>
+<p>Press <code>Ctrl-.</code> on the red squiggles under <code>FeaturedProductPart</code> and <code>CommonPart</code> then let Visual Studio add the required <code>using</code> statements.</p>
+</li>
+<li>
+<p>Try the same under the <code>WidgetPart</code> - you will see Visual Studio doesn't understand where to point the <code>using</code> statement at and it only offers you options to generate stubs. We don't want this.</p>
+<p><img alt="" src="../../Attachments/getting-started-with-modules-part-1/datamigrations-unknownnamespace.png" /></p>
+</li>
+<li>
+<p><code>Right click</code> on your <code>References</code> and choose <code>Add Reference...</code></p>
+<p><img alt="" src="../../Attachments/getting-started-with-modules-part-1/datamigrations-addreference.png" /></p>
+</li>
+<li>
+<p>Click the <code>Projects</code> tab on the left. Scroll down until you can see <code>Orchard.Widgets</code> in the list. <code>Hover</code> your mouse over it and a checkbox will appear. Click the checkbox for  <code>Orchard.Widgets</code>. Click <code>OK</code>.</p>
+<p><img alt="" src="../../Attachments/getting-started-with-modules-part-1/datamigrations-orchardwidgets.png" /></p>
+</li>
+<li>
+<p>Now you can try resolving the red squiggly lines under <code>WidgetPart</code> again:</p>
+<p><img alt="" src="../../Attachments/getting-started-with-modules-part-1/datamigrations-widgetusing.png" /></p>
+<p>You will now have the correct <code>using Orchard.Widgets.Models</code> option presented to you. Select it.</p>
+</li>
+<li>
+<p>Save your progress so far by clicking the <code>Save all</code> button (or press <code>Ctrl-Shift-S</code>).</p>
+</li>
+</ol>
+<p>That's all for the data migration, your <code>Migrations.cs</code> should now look like this:</p>
+<pre><code>using Orchard.ContentManagement.MetaData;
+using Orchard.Core.Common.Models;
+using Orchard.Data.Migration;
+using Orchard.LearnOrchard.FeaturedProduct.Models;
+using Orchard.Widgets.Models;
+
+namespace Orchard.LearnOrchard.FeaturedProduct {
+    public class Migrations : DataMigrationImpl {
+
+        public int Create() {
+            ContentDefinitionManager.AlterTypeDefinition(
+              "FeaturedProductWidget", cfg =&gt; cfg
+                .WithSetting("Stereotype", "Widget")
+                .WithPart(typeof(FeaturedProductPart).Name)
+                .WithPart(typeof(CommonPart).Name)
+                .WithPart(typeof(WidgetPart).Name));
+            return 1;
+        }
+    }
+}
+</code></pre>
+<h2 id="update-dependencies-as-you-go-along">Update dependencies as you go along</h2>
+<p>In the <code>Create()</code> method of the data migration we introduced a dependency on <code>WidgetPart</code>.</p>
+<p>This means that our module won't run without the <code>Orchard.Widgets</code> module being installed and enabled within the system.</p>
+<p>In order to let Orchard know that we have this dependency we need to record it in a manifest file called <code>Module.txt</code>. This is a text file written in YAML format which stores meta information about the module like the name, author, description and dependencies on other modules. If you haven't heard of YAML before don't worry, it is a simple format to understand.</p>
+<p>We will look at the <code>Module.txt</code> manifest file again in more detail in part 4 of this course, for now we just need to go in and record the dependency we have created with <code>Orchard.Widgets</code>. </p>
+<p>It is important to record this information as soon as we make a dependency on a module. If we don't record the information then your module can cause exceptions for your users at run-time. You really need to get into the habit of doing it straight away because not only are they are easy to forget but if you have the module that you depend on already enabled you won't see any errors but your users will.</p>
+<p>Lets update the manifest now to include the <code>Orchard.Widgets</code> dependency:</p>
+<ol>
+<li>
+<p>In the solution explorer, open up <code>Module.txt</code> which will be located in the root folder of the module.</p>
+</li>
+<li>
+<p>The last three lines describe the main feature of the module (we have only one feature in this module): </p>
+<pre><code> Features:
+     Orchard.LearnOrchard.FeaturedProduct:
+         Description: Description for feature Orchard.LearnOrchard.FeaturedProduct.
+</code></pre>
+<p>Add an extra row underneath <code>Description:</code> and add a <code>Dependencies:</code> entry like this:</p>
+<pre><code> Features:
+     Orchard.LearnOrchard.FeaturedProduct:
+         Description: Description for feature Orchard.LearnOrchard.FeaturedProduct.
+         Dependencies: Orchard.Widgets
+</code></pre>
+<p>The indentation is important as creates hierarchy within a YAML document. Indent the line with 8 spaces.</p>
+</li>
+</ol>
+<h2 id="how-is-all-this-magic-working">How is all this magic working?</h2>
+<p>So far the <code>ContentPart</code> class has been magically detected as long as it uses the <code>.Model</code> namespace, now the data migration is automatically detected just for deriving from <code>DataMigrationImpl</code>. How is all of this happening?</p>
+<p>Under the hood Orchard uses <a href="http://autofac.org/">Autofac</a>, an Inversion of Control container. If you're interested you can learn about how it's integrated in the <a href="../How-Orchard-works">how Orchard works</a> guide. </p>
+<p>Don't worry though, you don't really need to know anything deeper about it other than it's in the background and it automatically scans &amp; registers your components for you.</p>
+<p>Later on we will use Autofac's dependency injection which let us automatically get instances of things we need supplied directly into our classes.</p>
+<h2 id="content-part-driver">Content part driver</h2>
+<p>Everything you see in Orchard is composed from <code>Shapes</code>. If you don't know about shapes you can learn more about them in the <a href="../Accessing-and-rendering-shapes">accessing and rendering shapes</a> guide. </p>
+<p>A content part driver is a class that composes the shapes that should be used to view and edit content parts. Drivers live in their own folder called <code>Drivers</code>. A basic driver class will contain three methods; a display driver for viewing a content part in the front end, an editor driver for presenting an editor form in the admin dashboard and an update method to handle changes submitted from the editor form.</p>
+<p>As the shapes are created in the driver you can also pass data through to a view. Views are discussed in the next section but first we need to wire in the plumbing.</p>
+<p>The widget that we are building has no configuration, so all this driver will need is the <code>Display</code> method configuring. The other methods will be added in when we revisit the widget it part two.</p>
+<p>There aren't any command line scaffolding commands for setting up new drivers so you will need to create it manually:</p>
+<ol>
+<li>
+<p>Make a new <code>Drivers</code> folder (<code>Right click</code> on the module project in the solution explorer, click <code>Add</code>, <code>New Folder</code>)</p>
+</li>
+<li>
+<p>Add a new class called <code>FeaturedProductDriver</code> by right clicking the <code>Drivers</code> folder, clicking <code>Add</code>, <code>Class...</code> and typing <code>FeaturedProductDriver</code> for the name (Visual Studio will automatically add the <code>.cs</code> on to the end for you) </p>
+<p><img alt="" src="../../Attachments/getting-started-with-modules-part-1/driver-addclass.png" /></p>
+</li>
+<li>
+<p>Extend the class so it derives from <code>ContentPartDriver&lt;FeaturedProductPart&gt;</code> (note that the generic type class ends in Part not Driver).</p>
+</li>
+<li>
+<p>Add the missing namespaces using the <code>Ctrl-.</code> shortcut.</p>
+</li>
+</ol>
+<p>In the future we will do a lot with the driver class and the way that it builds its display but for this simple example all we need is a simple class to wire the shape to a view.</p>
+<ol>
+<li>Inside your <code>FeaturedProductDriver</code> class add this single method:<pre><code>protected override DriverResult Display(FeaturedProductPart part, 
+  string displayType, dynamic shapeHelper) {
+  return ContentShape("Parts_FeaturedProduct", () =&gt; 
+    shapeHelper.Parts_FeaturedProduct());
+}
+</code></pre>
+</li>
+</ol>
+<p>This says that when displaying the <code>FeaturedProductPart</code> return a shape called <code>Parts_FeaturedProduct</code>. By default Orchard will look for this shape in  <code>Views\Parts\FeaturedProduct.cshtml</code> which is what we will build next.</p>
+<p>Your <code>FeaturedProductDriver.cs</code> file should now look like this:</p>
+<pre><code>using Orchard.ContentManagement.Drivers;
+using Orchard.LearnOrchard.FeaturedProduct.Models;
+
+namespace Orchard.LearnOrchard.FeaturedProduct.Drivers {
+    public class FeaturedProductDriver : ContentPartDriver&lt;FeaturedProductPart&gt; {
+        protected override DriverResult Display(FeaturedProductPart part,
+          string displayType, dynamic shapeHelper) {
+            return ContentShape("Parts_FeaturedProduct", () =&gt;
+              shapeHelper.Parts_FeaturedProduct());
+        }
+    }
+}
+</code></pre>
+<h2 id="view">View</h2>
+<p>Orchard uses Razor template views to display it's shapes. You can supply strongly-typed data models and use many of the normal ASP.NET MVC Razor view features within Orchard.</p>
+<p>For this first widget our needs are simple and we will only be putting plain HTML markup inside the <code>.cshtml</code> file:</p>
+<ol>
+<li>
+<p>Add a new folder inside the <code>Views</code> folder called <code>Parts</code> (<code>Right click</code> on the <code>View</code> folder in the solution explorer, click <code>Add</code>, <code>New Folder</code> and type <code>Parts</code>).</p>
+</li>
+<li>
+<p>Add a new <code>.cshtml</code> Razor view within the <code>Parts</code> folder called <code>FeaturedProduct.cshtml</code></p>
+</li>
+<li>
+<p>Within the <code>FeaturedProduct.cshtml</code> view file add the following HTML markup:</p>
+<pre><code>&lt;style&gt;
+  .btn-green {
+    padding: 1em;
+    text-align: center;
+    color: #fff;
+    background-color: #34A853;
+    font-size: 2em;
+    display: block;
+  }
+&lt;/style&gt;
+&lt;p&gt;Today's featured product is the Sprocket 9000.&lt;/p&gt;
+&lt;p&gt;&lt;a href="~/sprocket-9000" class="btn-green"&gt;Click here to view it.&lt;/a&gt;&lt;/p&gt;
+</code></pre>
+</li>
+</ol>
+<h2 id="placement">Placement</h2>
+<p>Almost all of the key elements are in place now except for this last one. The configuration inside a driver class tells Orchard <em>how</em> to render that content part. Content parts always exist within a larger composite content item. Placement is used to tell Orchard <em>where</em> to render these components.</p>
+<p>The <code>placement.info</code> file goes in the root folder of the module. It is an XML file with a simple structure. You can learn more about the placement.info in <a href="../Understanding-placement-info">understanding placement.info</a> guide.</p>
+<p>Add the <code>placement.info</code> file to your module:</p>
+<ol>
+<li>
+<p><code>Right click</code> on the module project in the solution explorer.</p>
+</li>
+<li>
+<p>Choose <code>Add</code>, <code>New Item</code> to get to the add item screen:</p>
+<p><img alt="" src="../../Attachments/getting-started-with-modules-part-1/placement-addfile.png" /></p>
+</li>
+<li>
+<p>From the templates categories in the left hand side, choose <code>General</code></p>
+</li>
+<li>
+<p>Find <code>Text File</code> in the list</p>
+</li>
+<li>
+<p>Enter <code>placement.info</code> in the <strong>Name:</strong> field.</p>
+</li>
+<li>
+<p>Click <code>OK</code></p>
+</li>
+</ol>
+<p>This module has a single shape so we need to set up a <code>&lt;Place&gt;</code> for that shape. </p>
+<ol>
+<li>Add this snippet to the empty placement.info file:<pre><code>&lt;Placement&gt;
+  &lt;Place Parts_FeaturedProduct="Content:1"/&gt;
+&lt;/Placement&gt;
+</code></pre>
+</li>
+</ol>
+<p>The <code>Content:1</code> is the zone and priority of that shape. A shape will have several zones defined for it. Typically these include the header, content, meta and footer but they can have any combination of zones defined. In this case the <code>Content</code> is the main content area.</p>
+<p>The priority means that it will be near the top of the content zone. In more complicated modules there could be several shapes. Setting different priorities will let you organize their display order when you want them to be in the same zone. For example, if another shape had a place of <code>Content:0.5</code> it would go before it, <code>Content:15</code> and it would go after it.</p>
+<p>Theme developers can customize these layout preferences by providing their own placement.info and overriding your initial configuration. This lets theme authors customize your module without having to make changes to the actual code. This means when the module is upgraded to a new version the theme developers changes will not be overwritten.</p>
+<h2 id="trying-the-module-out-in-orchard">Trying the module out in Orchard</h2>
+<p>Congratulations, you've made it to the pay off, using the module in Orchard!</p>
+<p>The last few steps will enable the module in Orchard and assign the widget to a zone in the active template:</p>
+<ol>
+<li>
+<p>In Visual Studio, press <code>Ctrl-F5</code> to start the dev server without debugging mode enabled. </p>
+</li>
+<li>
+<p>Log in to the admin dashboard. The login link will be in the footer of the site.</p>
+</li>
+<li>
+<p>Click <code>Modules</code> in the navigation menu.</p>
+</li>
+<li>
+<p>The first item in the list should be our module, <code>Orchard.LearnOrchard.FeaturedProduct</code>:</p>
+<p><img alt="" src="../../Attachments/getting-started-with-modules-part-1/enable-module.png" /></p>
+<p>Click <code>Enable</code> to activate the plugin:</p>
+<p><img alt="" src="../../Attachments/getting-started-with-modules-part-1/enabled-module.png" /></p>
+</li>
+<li>
+<p>You can now add the Widget to a layer in the site. Click <code>Widgets</code> from the navigation menu.</p>
+</li>
+<li>
+<p>In the <code>AsideFirst</code> section of the Widgets page click the <code>Add</code> button:</p>
+<p><img alt="" src="../../Attachments/getting-started-with-modules-part-1/activate-addtolayer.png" /></p>
+</li>
+<li>
+<p>The <code>Featured Product Widget</code> will be in the list, click the item to select it:</p>
+<p><img alt="" src="../../Attachments/getting-started-with-modules-part-1/activate-featuredproductwidget.png" /></p>
+</li>
+<li>
+<p>You can leave most of the <code>Widget</code> settings on their defaults. Just set the <code>Title</code> to <code>Featured Product</code>:</p>
+<p><img alt="" src="../../Attachments/getting-started-with-modules-part-1/activate-widgettitle.png" /></p>
+</li>
+<li>
+<p>Click <code>Save</code> at the bottom of the page.</p>
+</li>
+</ol>
+<p>If you go back to the main site now you will see the module in the site:</p>
+<p><img alt="" src="../../Attachments/getting-started-with-modules-part-1/enable-viewmodule.png" /></p>
+<p>We haven't created a page for the Sprocket 9000 so clicking the button will give a 404 at the moment.</p>
+<h2 id="download-the-code-for-this-lesson">Download the code for this lesson</h2>
+<p>You can download a copy of the module so far at this link:</p>
+<ul>
+<li><a href="../../Attachments/getting-started-with-modules-part-1/Orchard.LearnOrchard.FeaturedProduct-Part1-v1.0.zip">Download Orchard.LearnOrchard.FeaturedProduct-Part1-v1.0.zip</a></li>
+</ul>
+<p>To use it in Orchard simply extract the archive into the modules directory at <code>.\src\Orchard.Web\Modules\</code>.</p>
+<blockquote>
+<p>For Orchard to recognize it the folder name should match the name of the module. Make sure that the folder name is <code>Orchard.LearnOrchard.FeaturedProduct</code> and then the modules files are located directly under that. </p>
+</blockquote>
+<h2 id="conclusion">Conclusion</h2>
+<p>This first guide in the module introduction course has shown the main components of a module.</p>
+<p>In the next part we will extend the module to add some interactivity to the module. This means adding database backing, an editor view, configuration settings and we will dip our toes in with some of the Orchard API features.</p>
+<p>In the final part of the course we will review the module and clean it up to ensure we follow development best practices that have been missed so far.</p>
+<p>This was a long guide. Take a break now and when you're refreshed come back and <a href="../Getting-Started-with-Modules-Part-2">read part two of the course</a>.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Getting-Started-with-Modules-Part-2/" class="btn btn-neutral float-right" title="Part 2: Make the Widget Dynamic">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Command-line-scaffolding/" class="btn btn-neutral" title="Command-Line Code Generation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Command-line-scaffolding/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Getting-Started-with-Modules-Part-2/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

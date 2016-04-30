@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Running Orchard on Mono - Orchard Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../Styles/Site.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Running Orchard on Mono";
+    var mkdocs_page_input_path = "Documentation\Running-Orchard-on-Mono.markdown";
+    var mkdocs_page_url = "/Documentation/Running-Orchard-on-Mono/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-20757794-1', 'orchardproject.net');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Orchard Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-Orchard/">Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manually-installing-Orchard-zip-file/">Manually Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Working-with-Orchard-in-WebMatrix/">Working with Orchard in WebMatrix</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-around-the-dashboard/">Getting Around the Dashboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started/">Building Your First Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation-and-menus/">Navigation and Menus</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-a-Blog-to-Your-Site/">Adding a Blog to Your Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-and-managing-media-content/">Adding and Managing Media Content</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-widgets/">Managing Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Organizing-content-with-tags/">Organizing Content Using Tags</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>About the Project</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Basic-Orchard-Concepts/">Orchard Concept Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Builtin-Features/">Built-in modules and features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Feature-roadmap/">Feature roadmap</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Frequently-asked-questions/">Frequently Asked Questions</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-TV/">Tutorial Videos</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Authoring Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogging-with-LiveWriter/">Blogging with LiveWriter</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-global-ready-applications/">Creating Global-Ready Applications</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Search-and-indexing/">Search and Indexing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Saving-scheduling-and-publishing-drafts/">Publishing Drafts</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-custom-content-types/">Creating Custom Content Types</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Customizing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Previewing-and-applying-a-theme/">Previewing and Applying a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-themes/">Installing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-the-default-theme/">Customizing Themes</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using the Orchard Gallery</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Gallery-overview/">Gallery Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-modules-and-themes-from-the-gallery/">Installing Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Browsing-the-gallery-web-site/">Browsing the Gallery Web Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-a-module-or-theme-to-the-gallery/">Contributing to the Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Module-gallery-feeds/">Registering Additional Gallery Feeds</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Managing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Enabling-and-disabling-features/">Enabling and Disabling Features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-the-command-line-interface/">Using the Command-Line Interface</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-and-upgrading-modules/">Installing and Upgrading Modules</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Modifying-site-settings/">Modifying Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Moderating-comments/">Moderating Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-users-and-roles/">Managing Users and Roles</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-permissions/">Understanding Permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Making-a-Web-Site-Recipe/">Making a Website Recipe</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-an-image-gallery/">Creating an Image Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Workflows/">Workflows</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Projection/">Projection</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-Dynamic-Forms/">Create Dynamic Forms</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Hosting and Deploying Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Upgrading-a-site-to-a-new-version-of-Orchard/">Upgrading a Site to a New Version</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Optimizing-Performance-of-Orchard-with-Shared-Hosting/">Optimizing Server Performance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Whats-new-for-Windows-Azure-in-Orchard-1-7-1/">What's New for Windows Azure in Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Deploying-Orchard-to-Windows-Azure/">Deploying Orchard to Windows Azure</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Blob-Storage/">Using Windows Azure Blob Storage</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Cache/">Using Windows Azure Cache</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Running Orchard on Mono</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#prerequisites">Prerequisites</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#common-setup-steps">Common Setup Steps</a></li>
+                
+                    <li><a class="toctree-l4" href="#add-a-host-name-alias-for-the-demo">Add a Host Name Alias for the Demo</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#database-setup">Database Setup</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#configuring-with-apache-2-and-mod_mono">Configuring with Apache 2 and mod_mono</a></li>
+                
+                    <li><a class="toctree-l4" href="#create-apache-virtual-host-configuration-file">Create Apache Virtual Host Configuration File</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#configuring-for-xsp">Configuring for XSP</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#using-binary-version-of-orchard">Using Binary Version of Orchard</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#compiling-orchard-from-source">Compiling Orchard from Source</a></li>
+                
+                    <li><a class="toctree-l4" href="#patching-the-source">Patching the Source</a></li>
+                
+                    <li><a class="toctree-l4" href="#overlaying-mono-versions-of-some-assemblies">Overlaying Mono Versions of Some Assemblies</a></li>
+                
+                    <li><a class="toctree-l4" href="#compiling">Compiling</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#resources">Resources</a></li>
+                
+                    <li><a class="toctree-l4" href="#suse-studio-appliance-with-orchard-and-mono">SuSE Studio Appliance with Orchard and Mono</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#known-issues">Known Issues</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-multi-tenant-Orchard-site/">Setting Up a Multi-Tenant Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-machine-key/">Setting Up a Machine Key</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Orchard</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../First-steps-into-Orchard/">First Steps into Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../How-Orchard-works/">How Orchard Works</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Command-line-scaffolding/">Command-Line Code Generation</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Getting Started with Modules Course</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-1/">Part 1: Build a Static Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-2/">Part 2: Make the Widget Dynamic</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-3/">Part 3: Using the Orchard API</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-4/">Part 4: Applying Best Practices</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Building-a-hello-world-module/">Building a Hello World Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-a-module-with-a-simple-text-editor/">Creating a Module with a Simple Text Editor</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-content-part/">Writing a Content Part</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-a-custom-field-type/">Writing a Content Field</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-a-module/">Packaging and Sharing a Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-widget/">Writing a Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-1-n-and-n-n-relations/">Creating _1-N_ and _N-N_ Relations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manifest-files/">Manifest Files for Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Caching/">Caching</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-custom-settings/">Custom Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../WebApi-In-Orchard/">Web Api in Orchard</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Working with Data</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-data-access/">Understanding Data Access</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-content-handlers/">Understanding Content Handlers</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Creating Themes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-new-theme/">Writing a New Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Anatomy-of-a-theme/">The Anatomy of a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-placement-info/">Understanding the placement.info File</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Accessing-and-rendering-shapes/">Accessing and Rendering Shapes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Alternates/">Alternates</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Template-file-syntax-guide/">Template File Syntax Guide</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-themes/">Packaging and Sharing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../UI-guidelines-for-theme-authors/">UI Guidelines for Theme Authors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-Orchard-using-Designer-Helper-Tools/">Customizing Orchard Using Designer Helper Tools</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Developer Tools and Guidelines</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Developer-FAQ/">Developer FAQ</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-source-enlistment/">Setting Up a Source Enlistment</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Source-code-organization/">Source Code Organization</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-dependencies-and-libraries/">Dependencies and Libraries</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code-conventions/">Code Conventions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Continuous-integration/">Continuous Integration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Merging-Pull-Requests/">Merging Pull Requests</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Additional Topics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-module-loader-and-dynamic-compilation/">Orchard Dynamic Compilation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Configuring-email/">Configuring Email</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Involved</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-documentation/">Contributing Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Documentation-Style-Guidelines/">Documentation Style Guidelines</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-patches/">Contributing Patches</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10-1.Release-Notes/">Orchard 1.10.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10.Release-Notes/">Orchard 1.10</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-3.Release-Notes/">Orchard 1.9.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-2.Release-Notes/">Orchard 1.9.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-1.Release-Notes/">Orchard 1.9.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9.Release-Notes/">Orchard 1.9</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-2.release-notes/">Orchard 1.8.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-1.Release-Notes/">Orchard 1.8.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-Release-Notes/">Orchard 1.8</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-2-Release-Notes/">Orchard 1.7.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-1-Release-Notes/">Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-Release-Notes/">Orchard 1.7</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-6-Release-Notes/">Orchard 1.6</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-5-Release-Notes/">Orchard 1.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-4-Release-Notes/">Orchard 1.4</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>User Experiences</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Walkthroughs/">Walkthroughs and UI Mockups</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Archived Specs</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogs/">Blogs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Comments/">Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Content-types/">Content types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Definitions/">Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Fundamentals-doctype/">HTML doctype</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Linkback/">Linkbacks: Pingbacks, Refbacks and Trackbacks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Media-management/">Media management</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation/">Navigation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-editing/">Page editing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages/">Page management and publishing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-publishing/">Page publishing workflow</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Rss-atom/">RSS and Atom feeds</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Slugs/">Slugs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Templates/">Page templates and syntax</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Tags/">Tags</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes/">Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes-includes/">Theme includes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Users/">Users, roles and permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Widgets/">Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Xml-Rpc/">XML-RPC and Live Writer</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-lists/">Creating lists of content items</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Orchard Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Hosting and Deploying Websites &raquo;</li>
+        
+      
+    
+    <li>Running Orchard on Mono</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <blockquote>
+<p>Orchard doesn't currently run on Mono, and hence can't run on Linux.</p>
+</blockquote>
+<p>All command line examples in this article assume you are using a Linux machine.</p>
+<p>You can test the CMS using our <a href="http://susegallery.com/a/n1C2rA/orchard-cms-mono-demo">virtual machine and/or Live CD</a> SuSE Studio appliance.</p>
+<h1 id="prerequisites">Prerequisites</h1>
+<p>You will need the following software in order to <b>run</b> Orchard on your Linux distribution of choice:</p>
+<ul>
+<li>PostgreSQL RDBMS version 8.2 or newer (8.4 recommended) installed, with rights to create databases</li>
+<li><a href="http://www.go-mono.com/mono-downloads/download.html">Mono 2.10.1</a> or newer</li>
+<li>Apache 2 (optional, you can use <a href="http://mono-project.com/">Mono's</a> XSP development server for testing)</li>
+<li>A set of Linux utilities installed on your machine: wget, patch, unzip and sudo (for root access - you must have administrative/root rights on the machine)</li>
+</ul>
+<p>If you want to compile Orchard from source on Linux (compiling with VisualStudio is, of course, also supported), you will also need:</p>
+<ul>
+<li><a href="http://monodevelop.com/Download">MonoDevelop 2.6 Beta 1</a> or newer</li>
+<li><a href="http://dl.dropbox.com/u/22037511/orchard/orchard-mono-sources-overlay-current.zip">Mono versions of certain assemblies</a> used by Orchard</li>
+</ul>
+<h1 id="common-setup-steps">Common Setup Steps</h1>
+<h2 id="add-a-host-name-alias-for-the-demo">Add a Host Name Alias for the Demo</h2>
+<p>Since you are using a non-existing DNS name for this demo, you need to let the system know how to find the server. To do so, execute the following sequence of commands:</p>
+<pre><code>sudo -i
+echo "127.0.0.1 orchard-demo" &gt;&gt; /etc/hosts
+</code></pre>
+<p>If you want to visit the Orchard demo from another machine, you will need to modify the machine's <tt>/etc/hosts</tt> file in the similar way, replacing <tt>127.0.0.1</tt> with your server's IP address.</p>
+<h1 id="database-setup">Database Setup</h1>
+<p>First, make sure you have PostgreSQL installed and running:</p>
+<pre><code>ps ax|grep postgres
+</code></pre>
+<p>Output of the command should be similar to:</p>
+<pre><code> 1275 ?        Ss     0:00 postgres: logger process                  
+ 1277 ?        Ss     0:00 postgres: writer process                  
+ 1278 ?        Ss     0:00 postgres: wal writer process              
+ 1279 ?        Ss     0:00 postgres: autovacuum launcher process     
+ 1280 ?        Ss     0:00 postgres: stats collector process
+</code></pre>
+<p>When PostgreSQL is running and ready, type the commands below to create the database and the user:</p>
+<pre><code>sudo -i
+su - postgres
+createuser -l -D -R -S -P orchard
+</code></pre>
+<p>Type the password when prompted and then create the database (it will be named <b>orchard</b>):</p>
+<pre><code>createdb -E UTF8 -O orchard orchard
+</code></pre>
+<p>At this point you must make sure the new <b>orchard</b> user has access rights to the database. In order to do it, you need to find the <tt>pg_hba.conf</tt> file and open it in the editor (you must be doing that with administrator/root rights). The file is located in <tt>/var/lib/pgsql/data/</tt> on SuSE and in <tt>/etc/postgresql/X.Y/main/</tt> on distributions derived from Debian (X.Y is the major.minor version number of your PostgreSQL server). After the file is found and opened, make sure it contains a line similar to this:</p>
+<pre><code>host    all             all             127.0.0.1/32            md5
+</code></pre>
+<p>It is <b>extremely</b> important that the last item in the line above is <b>not</b> <tt>indent</tt> - it should be <tt>md5</tt>, <tt>password</tt> or <tt>trust</tt> (for other authentication methods please refer to the PostgreSQL documentation). After the line is in the file, restart PostgreSQL and you're ready to use the new database from Orchard.</p>
+<h1 id="configuring-with-apache-2-and-mod_mono">Configuring with Apache 2 and mod_mono</h1>
+<p>Make sure you have Apache 2 (the Worker MPM is recommended) and mod-mono 2.10.1 (or newer) installed. Configuration paths given below are specific to OpenSuSE 11.4, you will need to adjust them for your distribution. Contents of the created files does not change (save for the filesystem paths, of course).</p>
+<h2 id="create-apache-virtual-host-configuration-file">Create Apache Virtual Host Configuration File</h2>
+<pre><code>sudo -i
+cd /etc/apache2/vhosts.d
+</code></pre>
+<p>At this point you will need a working text editor. You can try typing any of the following commands to launch one: gedit, mcedit, joe, vi. <tt>editor</tt> below is used as a placeholder:</p>
+<pre><code>editor /etc/apache2/vhosts.d/orchard-demo.conf
+</code></pre>
+<p>One of them should result in the editor starting. If you don't know how to use the started editor, refer to its online help. After the editor is started, paste the following code in it:</p>
+<pre><code>&lt;VirtualHost *:80&gt;
+    ServerAdmin webmaster@orchard-demo
+    ServerName orchard-demo
+
+    # Change the path below to suit your configuration
+    DocumentRoot /srv/www/vhosts/orchard-demo
+
+    # The paths used here should be common for all Linux distributions
+    ErrorLog /var/log/apache2/orchard-demo_error.log
+    CustomLog /var/log/apache2/orchard-demo_access.log combined
+
+    HostnameLookups Off
+    UseCanonicalName Off
+    ServerSignature On
+
+    # Make ABSOLUTELY sure that the path in double quotes ends with a slash!
+    Alias / "/srv/www/vhosts/orchard-demo/"
+
+    AddMonoApplications OrchardDemo "/:/srv/www/vhosts/orchard-demo"
+
+    # Orchard is a .NET 4.0 application. If your Mono was installed in a different prefix, replace /usr/bin/ with that prefix below.
+    MonoServerPath OrchardDemo /usr/bin/mod-mono-server4
+
+    # Helps when you get stack traces
+    MonoDebug OrchardDemo True
+
+    # Orchard assumes a case-insensitive filesystem
+    MonoIOMAP OrchardDemo all
+
+    &lt;Directory "/srv/www/vhosts/orchard-demo"&gt;
+    SetHandler mono
+    MonoSetServerAlias OrchardDemo
+    &lt;/Directory&gt;
+&lt;/VirtualHost&gt;
+</code></pre>
+<p>Save the file, close the editor and type one the following commands to restart Apache (use only one of those):</p>
+<pre><code>service apache2 restart
+
+
+
+/etc/init.d/apache2 restart
+</code></pre>
+<p>To make sure Mono backend has been started correctly, type:</p>
+<pre><code>ps ax|grep OrchardDemo
+</code></pre>
+<p>As the result you should see output similar to:</p>
+<pre><code>2252 ?        Ssl    0:00 /usr/bin/mono --debug /usr/lib/mono/4.0/mod-mono-server4.exe --filename /tmp/mod_mono_server_OrchardDemo --applications /:/srv/www/vhosts/orchard-demo --nonstop
+</code></pre>
+<p>Now you are ready to start your favorite web browser and point it to <tt>http://orchard-demo/</tt>!</p>
+<h1 id="configuring-for-xsp">Configuring for XSP</h1>
+<p>No extra steps are necessary. You need to run <tt>xsp4</tt> in the <tt>Orchard.Web</tt> directory using the following command line:</p>
+<pre><code>MONO_IOMAP=all xsp4
+</code></pre>
+<h1 id="using-binary-version-of-orchard">Using Binary Version of Orchard</h1>
+<p>Currently Orchard needs to be patched in order to run on Mono with PostgreSQL database, so for your convenience a <a href="http://dl.dropbox.com/u/22037511/orchard/orchard-1.0.20-mono_bin.zip">precompiled version is available</a>. All you need to do is to download the archive, create a directory on your server in which you want to put the application and unzip the archive in that directory (locations used here are samples which would work without changing on a machine running <a href="http://software.opensuse.org">OpenSuSE 11.4</a>):</p>
+<pre><code>sudo -i
+mkdir -p /srv/www/vhosts/orchard-demo
+cd /tmp
+wget http://dl.dropbox.com/u/22037511/orchard/orchard-1.0.20-mono_bin.zip
+cd /srv/www/vhosts/orchard-demo
+unzip /tmp/orchard-1.0.20-mono_bin.zip
+</code></pre>
+<h1 id="compiling-orchard-from-source">Compiling Orchard from Source</h1>
+<p>We will use the current (as of March 11 2011) version of Orchard sources - <a href="http://orchard.codeplex.com/releases/view/50197#DownloadId=197217">1.0.20</a>. After downloading and unzipping them in a directory of your choice, you need to perform the steps outlined below in before compiling the application.</p>
+<h2 id="patching-the-source">Patching the Source</h2>
+<p>Ideally, in the future Orchard will not need to be patched in order to work under Mono, but for the moment you need to <a href="http://dl.dropbox.com/u/22037511/orchard/orchard-mono-patches-current.zip">download two little patches</a> and apply them to the source. Unzip the archive in the directory where you unpacked the Orchard sources and issue the following commands:</p>
+<pre><code>patch -p1 &lt; 01.\ orchard-1.0-mono-support.patch
+patch -p1 &lt; 02.\ orchard-1.0-postgresql-support.patch
+</code></pre>
+<p>And Orchard is patched!</p>
+<h2 id="overlaying-mono-versions-of-some-assemblies">Overlaying Mono Versions of Some Assemblies</h2>
+<p>Orchard comes with a host of assemblies it depends upon both during compilation and the execution. Two of those assemblies (<tt>Microsoft.Web.Infrastructure.dll</tt> and <tt>NHibernate.dll</tt>) have to be replaced because the versions shipped with Orchard will work only in the Microsoft .NET environment. The assemblies can be found in <a href="http://dl.dropbox.com/u/22037511/orchard/orchard-mono-sources-overlay-current.zip">this archive</a> which has to be unzipped in the directory where you unpacked your Orchard sources.</p>
+<h2 id="compiling">Compiling</h2>
+<p>You <b>must</b> use MonoDevelop 2.6 or newer to compile on Orchard on Linux (you can also use VisualStudio after performing the steps above) since its earlier versions had a bug which would require you to edit assembly references in all of the Orchard projects. Compilation using Mono's xbuild is also currently not possible because of missing features (but we're working on it and soon you should be able to compile Orchard from command line).</p>
+<p>You must make absolutely sure that the full Mono 2.10.1 (or newer) stack is installed - all of the development files, assemblies, compilers have to be present on your system.</p>
+<p>After opening the solution in MonoDevelop just type <tt>F8</tt> (or use the <tt>Build -&gt; Build All</tt> menu option) and after a while you should have Orchard compiled and ready to run.</p>
+<h3 id="deploying">Deploying</h3>
+<p>Unfortunately at the time of this writing MonoDevelop will not deploy Orchard properly, so you need to do it manually. To do so, copy contents of the <tt>src/Orchard.Web/</tt> directory to your website root. If you want to remove the source and binary files which aren't necessary for the CMS to run, please consult the <a href="http://orchard.codeplex.com/releases/view/50197#DownloadId=197216">binary release of Orchard</a> and use it as a template of what has to remain and what can be removed safely.</p>
+<h1 id="resources">Resources</h1>
+<h2 id="suse-studio-appliance-with-orchard-and-mono">SuSE Studio Appliance with Orchard and Mono</h2>
+<p>We have prepared a <a href="http://susegallery.com/a/n1C2rA/orchard-cms-mono-demo">virtual machine and a Live CD</a> based on OpenSuSE 11.4 with Orchard 1.0.20 and Mono 2.10.1 preinstalled so that you can test the CMS without having to go through any of the steps above.</p>
+<p>The Virtual Machine can be loaded both in Virtual Box (recommended, tested with version 4.0.4) and VMware.</p>
+<p>After starting the VM/Live CD, type <tt>http://orchard-demo/</tt> in the browser (FireFox will auto-start) and watch it work!</p>
+<p>The first time you browse the above URL you will be greeted with Orchard setup screen and prompted for database connection string. You need to use the following:</p>
+<pre><code>Server=localhost;Database=orchard;User ID=orchard;Password=orchard
+</code></pre>
+<h1 id="known-issues">Known Issues</h1>
+<ul>
+<li>Orchard requires <a href="http://mono-project.com/IOMap">Mono IOMAP</a> to be active since there are a few files and directories that use inconsistent name case.</li>
+<li>After a few requests you might get <tt>npgsql</tt> (PostgreSQL ADO.NET provider) connection errors. Only restarting the application will cure it.</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Setting-up-a-multi-tenant-Orchard-site/" class="btn btn-neutral float-right" title="Setting Up a Multi-Tenant Orchard Site">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Using-Windows-Azure-Cache/" class="btn btn-neutral" title="Using Windows Azure Cache"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Using-Windows-Azure-Cache/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Setting-up-a-multi-tenant-Orchard-site/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

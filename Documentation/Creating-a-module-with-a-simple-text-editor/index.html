@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Creating a Module with a Simple Text Editor - Orchard Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../Styles/Site.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Creating a Module with a Simple Text Editor";
+    var mkdocs_page_input_path = "Documentation\Creating-a-module-with-a-simple-text-editor.markdown";
+    var mkdocs_page_url = "/Documentation/Creating-a-module-with-a-simple-text-editor/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-20757794-1', 'orchardproject.net');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Orchard Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-Orchard/">Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manually-installing-Orchard-zip-file/">Manually Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Working-with-Orchard-in-WebMatrix/">Working with Orchard in WebMatrix</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-around-the-dashboard/">Getting Around the Dashboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started/">Building Your First Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation-and-menus/">Navigation and Menus</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-a-Blog-to-Your-Site/">Adding a Blog to Your Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-and-managing-media-content/">Adding and Managing Media Content</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-widgets/">Managing Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Organizing-content-with-tags/">Organizing Content Using Tags</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>About the Project</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Basic-Orchard-Concepts/">Orchard Concept Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Builtin-Features/">Built-in modules and features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Feature-roadmap/">Feature roadmap</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Frequently-asked-questions/">Frequently Asked Questions</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-TV/">Tutorial Videos</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Authoring Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogging-with-LiveWriter/">Blogging with LiveWriter</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-global-ready-applications/">Creating Global-Ready Applications</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Search-and-indexing/">Search and Indexing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Saving-scheduling-and-publishing-drafts/">Publishing Drafts</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-custom-content-types/">Creating Custom Content Types</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Customizing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Previewing-and-applying-a-theme/">Previewing and Applying a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-themes/">Installing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-the-default-theme/">Customizing Themes</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using the Orchard Gallery</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Gallery-overview/">Gallery Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-modules-and-themes-from-the-gallery/">Installing Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Browsing-the-gallery-web-site/">Browsing the Gallery Web Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-a-module-or-theme-to-the-gallery/">Contributing to the Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Module-gallery-feeds/">Registering Additional Gallery Feeds</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Managing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Enabling-and-disabling-features/">Enabling and Disabling Features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-the-command-line-interface/">Using the Command-Line Interface</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-and-upgrading-modules/">Installing and Upgrading Modules</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Modifying-site-settings/">Modifying Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Moderating-comments/">Moderating Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-users-and-roles/">Managing Users and Roles</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-permissions/">Understanding Permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Making-a-Web-Site-Recipe/">Making a Website Recipe</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-an-image-gallery/">Creating an Image Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Workflows/">Workflows</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Projection/">Projection</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-Dynamic-Forms/">Create Dynamic Forms</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Hosting and Deploying Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Upgrading-a-site-to-a-new-version-of-Orchard/">Upgrading a Site to a New Version</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Optimizing-Performance-of-Orchard-with-Shared-Hosting/">Optimizing Server Performance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Whats-new-for-Windows-Azure-in-Orchard-1-7-1/">What's New for Windows Azure in Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Deploying-Orchard-to-Windows-Azure/">Deploying Orchard to Windows Azure</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Blob-Storage/">Using Windows Azure Blob Storage</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Cache/">Using Windows Azure Cache</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Running-Orchard-on-Mono/">Running Orchard on Mono</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-multi-tenant-Orchard-site/">Setting Up a Multi-Tenant Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-machine-key/">Setting Up a Machine Key</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Orchard</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../First-steps-into-Orchard/">First Steps into Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../How-Orchard-works/">How Orchard Works</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Command-line-scaffolding/">Command-Line Code Generation</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Getting Started with Modules Course</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-1/">Part 1: Build a Static Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-2/">Part 2: Make the Widget Dynamic</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-3/">Part 3: Using the Orchard API</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-4/">Part 4: Applying Best Practices</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Building-a-hello-world-module/">Building a Hello World Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Creating a Module with a Simple Text Editor</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#setting-up-the-orchard-site">Setting Up the Orchard Site</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#generating-code-for-the-module">Generating Code for the Module</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#creating-the-model-for-the-part">Creating the Model for the Part</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#creating-the-initial-data-migration-file">Creating the Initial Data Migration File</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#adding-a-handler">Adding a Handler</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#adding-a-driver">Adding a Driver</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#building-the-templates">Building the Templates</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#putting-it-all-together-into-a-content-type">Putting it All Together into a Content Type</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-content-part/">Writing a Content Part</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-a-custom-field-type/">Writing a Content Field</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-a-module/">Packaging and Sharing a Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-widget/">Writing a Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-1-n-and-n-n-relations/">Creating _1-N_ and _N-N_ Relations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manifest-files/">Manifest Files for Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Caching/">Caching</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-custom-settings/">Custom Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../WebApi-In-Orchard/">Web Api in Orchard</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Working with Data</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-data-access/">Understanding Data Access</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-content-handlers/">Understanding Content Handlers</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Creating Themes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-new-theme/">Writing a New Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Anatomy-of-a-theme/">The Anatomy of a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-placement-info/">Understanding the placement.info File</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Accessing-and-rendering-shapes/">Accessing and Rendering Shapes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Alternates/">Alternates</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Template-file-syntax-guide/">Template File Syntax Guide</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-themes/">Packaging and Sharing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../UI-guidelines-for-theme-authors/">UI Guidelines for Theme Authors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-Orchard-using-Designer-Helper-Tools/">Customizing Orchard Using Designer Helper Tools</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Developer Tools and Guidelines</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Developer-FAQ/">Developer FAQ</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-source-enlistment/">Setting Up a Source Enlistment</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Source-code-organization/">Source Code Organization</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-dependencies-and-libraries/">Dependencies and Libraries</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code-conventions/">Code Conventions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Continuous-integration/">Continuous Integration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Merging-Pull-Requests/">Merging Pull Requests</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Additional Topics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-module-loader-and-dynamic-compilation/">Orchard Dynamic Compilation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Configuring-email/">Configuring Email</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Involved</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-documentation/">Contributing Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Documentation-Style-Guidelines/">Documentation Style Guidelines</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-patches/">Contributing Patches</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10-1.Release-Notes/">Orchard 1.10.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10.Release-Notes/">Orchard 1.10</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-3.Release-Notes/">Orchard 1.9.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-2.Release-Notes/">Orchard 1.9.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-1.Release-Notes/">Orchard 1.9.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9.Release-Notes/">Orchard 1.9</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-2.release-notes/">Orchard 1.8.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-1.Release-Notes/">Orchard 1.8.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-Release-Notes/">Orchard 1.8</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-2-Release-Notes/">Orchard 1.7.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-1-Release-Notes/">Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-Release-Notes/">Orchard 1.7</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-6-Release-Notes/">Orchard 1.6</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-5-Release-Notes/">Orchard 1.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-4-Release-Notes/">Orchard 1.4</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>User Experiences</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Walkthroughs/">Walkthroughs and UI Mockups</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Archived Specs</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogs/">Blogs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Comments/">Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Content-types/">Content types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Definitions/">Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Fundamentals-doctype/">HTML doctype</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Linkback/">Linkbacks: Pingbacks, Refbacks and Trackbacks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Media-management/">Media management</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation/">Navigation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-editing/">Page editing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages/">Page management and publishing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-publishing/">Page publishing workflow</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Rss-atom/">RSS and Atom feeds</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Slugs/">Slugs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Templates/">Page templates and syntax</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Tags/">Tags</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes/">Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes-includes/">Theme includes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Users/">Users, roles and permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Widgets/">Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Xml-Rpc/">XML-RPC and Live Writer</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-lists/">Creating lists of content items</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Orchard Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Extending Orchard &raquo;</li>
+        
+      
+    
+    <li>Creating a Module with a Simple Text Editor</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>In this tutorial, you will learn how to develop a simple commerce module using only a text editor.</p>
+<p>If you do not have the <a href="http://www.microsoft.com/web/downloads/platform.aspx">Web Platform Installer</a> on your computer, download it before beginning this tutorial.</p>
+<blockquote>
+<p><strong>This guide has been marked for review.</strong> If you are just getting started with Orchard module development you should read the <a href="../Getting-Started-with-Modules">Getting Started with Modules course</a> first. It will introduce you to building modules with Orchard using Visual Studio Community, a free edition of Visual Studio. </p>
+</blockquote>
+<h1 id="setting-up-the-orchard-site">Setting Up the Orchard Site</h1>
+<p>First, you will set up a new Orchard website. If you already have a site set up, you can skip this section and jump directly to <a href="../../Documentation/Creating-a-module-with-a-simple-text-editor#GeneratingCodefortheModule">the code generation section</a>. To start the setup, open <strong>IIS Manager</strong>, right-click <strong>Sites</strong>, and click <strong>Add Web Site</strong>.</p>
+<p><img alt="Figure 1. Creating the Orchard site" src="../../Attachments/Creating-a-module-with-a-simple-text-editor/01_NewWebSite.PNG" /></p>
+<p>In the <strong>Add Web Site</strong> dialog box, fill in the fields to point the new website to a folder, such as <em>\inetpub\wwwroot\Orchard</em>. Name the new site <strong>Orchard</strong> and give it an unused port, such as 90. Use the default application pool (.NET 4.0 integrated pipeline). Click <strong>OK</strong>.</p>
+<p><img alt="Figure 2. Configuring the site" src="../../Attachments/Creating-a-module-with-a-simple-text-editor/s_02_NewSiteSettings.png" /></p>
+<p>From the Windows <strong>Start</strong> menu, launch <strong>Web Platform Installer</strong>, select <strong>Orchard CMS</strong>, click <strong>Add</strong>, and then click <strong>Install</strong>.</p>
+<p><img alt="" src="../../Upload/screenshots/orchard_install.png" /></p>
+<p>After you accept the license terms, Orchard is installed.</p>
+<p>Open a command window and change the current directory to point to the root of the site. Then run <code>bin\orchard.exe</code>.</p>
+<p><a href="../../Attachments/Creating-a-module-with-a-simple-text-editor/07_OrchardCLI.png"><img alt="Figure 6. The Orchard command line" src="../../Attachments/Creating-a-module-with-a-simple-text-editor/s_07_OrchardCLI.png" /></a></p>
+<p>Type <code>help commands</code> to get the list of available commands. For now, only the <code>help</code> and <code>setup</code> commands are available. However, as Orchard is developed and modules are activated, new commands will become available. (The Orchard command-line executable actually discovers the commands from the modules inside of the application.)</p>
+<p>To set up the site, enter the following command: </p>
+<pre><code>setup /SiteName:Orchard /AdminUsername:admin /AdminPassword:123456
+      /DatabaseProvider:SqlCe
+</code></pre>
+<p>This is equivalent to setting up the site from the web interface.</p>
+<p>Leave the command window open. (In fact, don't close it until you have finished this tutorial.)</p>
+<h1 id="generating-code-for-the-module">Generating Code for the Module</h1>
+<p>Now you are ready to start developing the commerce module.
+Orchard provides a code generation feature that sets up the structure of an empty module to help you get started.
+By default, code generation is disabled. So you must first install and enable the feature.
+The easiest way to do this is to go to Modules in the admin UI and then click the "Gallery" tab.
+Do a search for "code generation" and then install the module.</p>
+<p>To enable code generation, if you didn't do so right after install, you may enter the following command in the command window:</p>
+<pre><code>feature enable Orchard.CodeGeneration
+</code></pre>
+<p>You will use a code-generation command to create a commerce module. Enter the following command:</p>
+<pre><code>codegen module SimpleCommerce
+</code></pre>
+<p>Open a Windows Explorer window and browse to the newly created <em>\inetpub\wwwroot\Orchard\Modules\SimpleCommerce</em> folder. Open the <em>module.txt</em> file using a text editor.</p>
+<p>Change the description to "A simple commerce module". Change the description of the feature to be "A simple product part". Save the file and close it. The following example shows the complete <em>module.txt</em> file after the changes.</p>
+<pre><code>Name: SimpleCommerce
+AntiForgery: enabled
+Author: The Orchard Team
+Website: http://orchardproject.net
+Version: 0.5.0
+OrchardVersion: 0.5.0
+Description: A simple commerce module
+Features:
+    SimpleCommerce:
+        Name: Simple Commerce
+        Description: A simple product part.
+        Category: Commerce
+</code></pre>
+<h1 id="creating-the-model-for-the-part">Creating the Model for the Part</h1>
+<p>Next, you will create a data model that is a representation of what will be stored in the database.</p>
+<p>In <em>Modules/SimpleCommerce/Models</em>, create a <em>Product.cs</em> file and add the following content:</p>
+<pre><code>using System.ComponentModel.DataAnnotations;
+using Orchard.ContentManagement;
+using Orchard.ContentManagement.Records;
+
+namespace SimpleCommerce.Models {
+  public class ProductPartRecord : ContentPartRecord {
+    public virtual string Sku { get; set; }
+    public virtual float Price { get; set; }
+  }
+
+  public class ProductPart : ContentPart&lt;ProductPartRecord&gt; {
+    [Required]
+    public string Sku {
+      get { return Retrieve(r =&gt; r.Sku); }
+      set { Store(r =&gt; r.Sku, value); }
+    }
+
+    [Required]
+    public float Price {
+      get { return Retrieve(r =&gt; r.Price); }
+      set { Store(r =&gt; r.Price, value); }
+    }
+  }
+}
+</code></pre>
+<p>This code has two properties, <code>Sku</code> and <code>Price</code>, that are virtual in order to enable the creation of a dynamic proxy that will handle persistence transparently.</p>
+<p>The code also defines a content part that derives from <code>ContentPart&lt;ProductPartRecord&gt;</code> and that exposes the SKU and price from the record as public properties and infoset. <a href="http://weblogs.asp.net/bleroy/the-shift-how-orchard-painlessly-shifted-to-document-storage-and-how-it-ll-affect-you">You can find more info about infoset here</a>. The properties have attributes that will surface in the UI as validation tests.</p>
+<p>In order for the application to pick up the new file, you need to add it to the module's project file. Open the <em>SimpleCommerce.csproj</em> file and look for "assemblyinfo.cs". After that line, add the following:</p>
+<pre><code>&lt;Compile Include="Models\Product.cs" /&gt;
+</code></pre>
+<p>Save the file, but leave it open, because you will make additional changes to it throughout the tutorial.</p>
+<p>Navigate to the site in your browser to make sure the application's dynamic compilation feature picks up the new part and record. You will know that everything is working if you go to the <strong>Features</strong> administration screen and see the new <strong>SimpleCommerce</strong> feature.</p>
+<p>In the command window, enable the new feature using the following command: </p>
+<pre><code>feature enable SimpleCommerce
+</code></pre>
+<h1 id="creating-the-initial-data-migration-file">Creating the Initial Data Migration File</h1>
+<p>Data migration is a pattern that enables an application or component to handle new versions gracefully, without any data loss. The main idea is that the system keeps track of the current version installed and each data migration describes the changes to go from one version to the next. If the system detects that there is a new version installed and the current data is from a previous version, the administrator of the site is prompted to upgrade. The system then runs all necessary migration methods until the data version and the code version are in sync.</p>
+<p>Start by creating the initial migration for the new module, which will just create the data tables that are needed. In the command window, enter the following command:</p>
+<pre><code>codegen datamigration SimpleCommerce
+</code></pre>
+<p>This creates the following <em>Migrations.cs</em> file:</p>
+<pre><code>using System;
+using System.Collections.Generic;
+using System.Data;
+using Orchard.ContentManagement.Drivers;
+using Orchard.ContentManagement.MetaData;
+using Orchard.ContentManagement.MetaData.Builders;
+using Orchard.Core.Contents.Extensions;
+using Orchard.Data.Migration;
+
+namespace SimpleCommerce.DataMigrations {
+    public class Migrations : DataMigrationImpl {
+
+        public int Create() {
+            // Creating table ProductPartRecord
+            SchemaBuilder.CreateTable("ProductPartRecord", table =&gt; table
+                .ContentPartRecord()
+                .Column("Sku", DbType.String)
+                .Column("Price", DbType.Single)
+            );
+
+
+
+            return 1;
+        }
+    }
+}
+</code></pre>
+<p>The method name <code>Create</code> is the convention for the initial data migration. It calls the <code>SchemaBuilder.CreateTable</code> method that creates a <em>ProductPartRecord</em> table that has <em>Sku</em> and <em>Price</em> columns in addition to the columns from the basic <em>ContentPartRecord</em> table.</p>
+<p>Notice that the method returns 1, which is the version number for the migration.</p>
+<p>Add another migration step to this in order to illustrate how you can later alter the existing schema and type metadata as the module evolves. In this case, you will take this opportunity to add a feature that will enable the part to be attached to any content type. Add the following method to the data migration class:</p>
+<pre><code>public int UpdateFrom1() {
+  ContentDefinitionManager.AlterPartDefinition("ProductPart",
+    builder =&gt; builder.Attachable());
+  return 2;
+}
+</code></pre>
+<p>This new migration is named <code>UpdateFrom1</code>, which is the convention for upgrading from version 1. Your next migration should be called <code>UpdateFrom2</code> and return 3, and so on.</p>
+<p>Make sure the following line is present in the <em>.csproj</em> file. (It should already have been added by the code generation command.)</p>
+<pre><code>&lt;Compile Include="Migrations.cs" /&gt;
+</code></pre>
+<p>Navigate to the <strong>Features</strong> screen in the dashboard. You see a warning that indicates that one of the features needs to be updated, and the <strong>Simple Commerce</strong> module is displayed in red. Click <strong>Update</strong> to ensure that the migrations are run and that the module is up to date.</p>
+<h1 id="adding-a-handler">Adding a Handler</h1>
+<p>A handler in Orchard is analogous to a filter in ASP.NET MVC. It's a piece of code that is meant to run when specific events happen in the application, but that are not specific to a given content type. For example, you could build an analytics module that listens to the <code>Loaded</code> event in order to log usage statistics. To see what event handlers you can override in your own handlers, examine the source code for <code>ContentHandlerBase</code>. </p>
+<p>The handler you need in the module is not going to be very complex, but it will implement some plumbing that is necessary to set up the persistence of the part. We hope that this kind of plumbing will disappear in a future version of Orchard, possibly in favor of a more declarative approach such as using attributes.</p>
+<p>Create a <em>Handlers</em> folder and add a <em>ProductHandler.cs</em> file to it that contains the following code:</p>
+<pre><code>using Orchard.ContentManagement.Handlers;
+using SimpleCommerce.Models;
+using Orchard.Data;
+
+namespace SimpleCommerce.Handlers {
+  public class ProductHandler : ContentHandler {
+    public ProductHandler(IRepository&lt;ProductPartRecord&gt; repository) {
+      Filters.Add(StorageFilter.For(repository));
+    }
+  }
+}
+</code></pre>
+<p>Add the file to the <em>.csproj</em> file so that dynamic compilation can pick it up, using the following line:</p>
+<pre><code>&lt;Compile Include="Handlers\ProductHandler.cs" /&gt;
+</code></pre>
+<h1 id="adding-a-driver">Adding a Driver</h1>
+<p>A driver in Orchard is analogous to a controller in ASP.NET MVC, but is well adapted to the composition aspect that is necessary in web content management systems. It is specialized for a specific content part and can specify custom behavior for well-known actions such as displaying an item in the front end or editing it in the administration UI.</p>
+<p>A driver typically has overrides for the display and editor actions. For the product part, create a new <em>Drivers</em> folder and in that folder create a <em>ProductDriver.cs</em> file that contains the following code:</p>
+<pre><code>using SimpleCommerce.Models;
+using Orchard.ContentManagement.Drivers;
+using Orchard.ContentManagement;
+
+namespace SimpleCommerce.Drivers {
+  public class ProductDriver : ContentPartDriver&lt;ProductPart&gt; {
+    protected override DriverResult Display(
+        ProductPart part, string displayType, dynamic shapeHelper)
+    {
+      return ContentShape("Parts_Product",
+          () =&gt; shapeHelper.Parts_Product(
+              Sku: part.Sku,
+              Price: part.Price));
+    }
+
+    //GET
+    protected override DriverResult Editor(ProductPart part, dynamic shapeHelper)
+    {
+      return ContentShape("Parts_Product_Edit",
+          () =&gt; shapeHelper.EditorTemplate(
+              TemplateName: "Parts/Product",
+              Model: part,
+              Prefix: Prefix));
+    }
+
+    //POST
+    protected override DriverResult Editor(
+        ProductPart part, IUpdateModel updater, dynamic shapeHelper)
+    {
+      updater.TryUpdateModel(part, Prefix, null, null);
+      return Editor(part, shapeHelper);
+    }
+  }
+}
+</code></pre>
+<p>The code in the <code>Display</code> method creates a shape to use when rendering the item in the front end. That shape has <code>Sku</code> and <code>Price</code> properties copied from the part.</p>
+<p>Update the <em>.csproj</em> file to include the following line:</p>
+<pre><code>&lt;Compile Include="Drivers\ProductDriver.cs" /&gt;
+</code></pre>
+<p>The <code>Editor</code> method also creates a shape named <code>EditorTemplate</code>. The shape has a <code>TemplateName</code> property that instructs Orchard where to look for the rendering template. The code also specifies that the model for that template will be the part, not the shape (which would be the default).</p>
+<p>The placement of those parts within the larger front end or dashboard must be specified using a <em>placement.info</em> file that is located at the root of the module. That file, like a view, can be overridden from a theme. Create the <em>placement.info</em> file with the following contents:</p>
+<pre><code>&lt;Placement&gt;
+    &lt;Place Parts_Product_Edit="Content:3"/&gt;
+    &lt;Place Parts_Product="Content:3"/&gt;
+&lt;/Placement&gt;
+</code></pre>
+<p>Add the <em>placement.info</em> file to the <em>.csproj</em> file using the following line:</p>
+<pre><code>&lt;Content Include="placement.info" /&gt;
+</code></pre>
+<h1 id="building-the-templates">Building the Templates</h1>
+<p>The last thing to do in order for the new content part to work is to write the two templates (front end and admin) that are configured in the driver.</p>
+<p>Create the front-end template first. Create a <em>Parts</em> folder under <em>Views</em> and add a <em>Product.cshtml</em> file that contains the following code:</p>
+<pre><code>&lt;br/&gt;
+@T("Price"): &lt;b&gt;$@Model.Price&lt;/b&gt;&lt;br /&gt;
+@Model.Sku&lt;br/&gt;
+</code></pre>
+<p>This is very plain rendering of the shape. Notice the use of the <code>T</code> method call to wrap the "Price" string literal. This enables <a href="../Creating-global-ready-applications">localization</a> of that text.</p>
+<p>The administration view is a little heavier on HTML helper calls. Create an <em>EditorTemplates</em> folder under <em>Views</em> and a <em>Parts</em> folder under that. Add a <em>Product.cshtml</em> to the <em>Parts</em> folder that contains the following code:</p>
+<pre><code>@model SimpleCommerce.Models.ProductPart
+&lt;fieldset&gt;
+    &lt;label class="sub" for="Sku"&gt;@T("Sku")&lt;/label&gt;&lt;br /&gt;
+    @Html.TextBoxFor(m =&gt; m.Sku, new { @class = "text" })&lt;br /&gt;
+    &lt;label class="sub" for="Price"&gt;@T("Price")&lt;/label&gt;&lt;br /&gt;
+    @Html.TextBoxFor(m =&gt; m.Price, new { @class = "text" })
+&lt;/fieldset&gt;
+</code></pre>
+<p>Add those two templates to the <em>.csproj</em> file using the following lines:</p>
+<pre><code>&lt;Content Include="Views\Parts\Product.cshtml" /&gt;
+&lt;Content Include="Views\EditorTemplates\Parts\Product.cshtml" /&gt;
+</code></pre>
+<h1 id="putting-it-all-together-into-a-content-type">Putting it All Together into a Content Type</h1>
+<p>The content part that you've put together could already be composed from the administration UI into a content type (see <a href="../Creating-custom-content-types">Creating Custom Content Types</a>), but per the goal of this topic, you will continue by writing code using a text editor.</p>
+<p>You will now build a new <code>Product</code> content type that will include the <code>Product</code> part and a number of parts that you can get from Orchard. So far, you have been focused on your specific domain. This will now change and you will start integrating into Orchard.</p>
+<p>To build the content type from a new migration, open the <em>Migrations.cs</em> file and add the following method to the class:</p>
+<pre><code>public int UpdateFrom2() {
+  ContentDefinitionManager.AlterTypeDefinition("Product", cfg =&gt; cfg
+    .WithPart("CommonPart")
+    .WithPart("RoutePart")
+    .WithPart("BodyPart")
+    .WithPart("ProductPart")
+    .WithPart("CommentsPart")
+    .WithPart("TagsPart")
+    .WithPart("LocalizationPart")
+    .Creatable()
+    .Indexed());
+  return 3;
+}
+</code></pre>
+<p>Also add <code>using Orchard.Indexing;</code> to the top of the file.</p>
+<p>What you are doing is creating (or updating) the <code>Product</code> content type and adding to it the ability to have its own URL and title (<code>RoutePart</code>), to have a rich text description (<code>BodyPart</code>), to be a product, to be commented on (<code>CommentsPart</code>), to be tagged (<code>TagsPart</code>) and to be localizable (<code>LocalizationPart</code>). It can also be created, which will add a <strong>Create Product</strong> menu entry, and it will also enter the search index (<code>Indexed</code>).</p>
+<p>To enable your new module, open the Orchard dashboard and click <strong>Modules</strong>. Select the <strong>Features</strong> tab, find the <strong>SimpleCommerce</strong> module, and click <strong>Enable</strong>.</p>
+<p><img alt="" src="../../Upload/screenshots/simpleCommerce_enable.png" /></p>
+<p>To add a new <strong>Product</strong> content type, click <strong>Content</strong> on the dashboard, select the <strong>Content Types</strong> tab, find <strong>Product</strong>, and click <strong>Create New Product</strong>. </p>
+<p><img alt="" src="../../Upload/screenshots_675/simpleCommerce_product_675.png" /></p>
+<p>You now have a product editor that features your <code>Sku</code> and <code>Price</code> fields.</p>
+<p>The code for this module can be downloaded from the following page: <a href="../../Attachments/Creating-a-module-with-a-simple-text-editor/Orchard.Module.SimpleCommerce.0.5.0.zip">Orchard.Module.SimpleCommerce.0.5.0.zip</a></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Writing-a-content-part/" class="btn btn-neutral float-right" title="Writing a Content Part">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Building-a-hello-world-module/" class="btn btn-neutral" title="Building a Hello World Module"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Building-a-hello-world-module/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Writing-a-content-part/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

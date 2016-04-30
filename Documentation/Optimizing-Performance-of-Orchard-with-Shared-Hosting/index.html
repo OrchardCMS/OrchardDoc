@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Optimizing Server Performance - Orchard Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../Styles/Site.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Optimizing Server Performance";
+    var mkdocs_page_input_path = "Documentation\Optimizing-Performance-of-Orchard-with-Shared-Hosting.markdown";
+    var mkdocs_page_url = "/Documentation/Optimizing-Performance-of-Orchard-with-Shared-Hosting/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-20757794-1', 'orchardproject.net');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Orchard Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-Orchard/">Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manually-installing-Orchard-zip-file/">Manually Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Working-with-Orchard-in-WebMatrix/">Working with Orchard in WebMatrix</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-around-the-dashboard/">Getting Around the Dashboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started/">Building Your First Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation-and-menus/">Navigation and Menus</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-a-Blog-to-Your-Site/">Adding a Blog to Your Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-and-managing-media-content/">Adding and Managing Media Content</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-widgets/">Managing Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Organizing-content-with-tags/">Organizing Content Using Tags</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>About the Project</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Basic-Orchard-Concepts/">Orchard Concept Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Builtin-Features/">Built-in modules and features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Feature-roadmap/">Feature roadmap</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Frequently-asked-questions/">Frequently Asked Questions</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-TV/">Tutorial Videos</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Authoring Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogging-with-LiveWriter/">Blogging with LiveWriter</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-global-ready-applications/">Creating Global-Ready Applications</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Search-and-indexing/">Search and Indexing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Saving-scheduling-and-publishing-drafts/">Publishing Drafts</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-custom-content-types/">Creating Custom Content Types</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Customizing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Previewing-and-applying-a-theme/">Previewing and Applying a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-themes/">Installing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-the-default-theme/">Customizing Themes</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using the Orchard Gallery</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Gallery-overview/">Gallery Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-modules-and-themes-from-the-gallery/">Installing Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Browsing-the-gallery-web-site/">Browsing the Gallery Web Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-a-module-or-theme-to-the-gallery/">Contributing to the Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Module-gallery-feeds/">Registering Additional Gallery Feeds</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Managing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Enabling-and-disabling-features/">Enabling and Disabling Features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-the-command-line-interface/">Using the Command-Line Interface</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-and-upgrading-modules/">Installing and Upgrading Modules</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Modifying-site-settings/">Modifying Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Moderating-comments/">Moderating Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-users-and-roles/">Managing Users and Roles</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-permissions/">Understanding Permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Making-a-Web-Site-Recipe/">Making a Website Recipe</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-an-image-gallery/">Creating an Image Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Workflows/">Workflows</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Projection/">Projection</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-Dynamic-Forms/">Create Dynamic Forms</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Hosting and Deploying Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Upgrading-a-site-to-a-new-version-of-Orchard/">Upgrading a Site to a New Version</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Optimizing Server Performance</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#trust-level">Trust Level</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#debugrelease">Debug/Release</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#shared-versus-dedicated-versus-cloud-hosting">Shared Versus Dedicated Versus Cloud Hosting</a></li>
+                
+                    <li><a class="toctree-l4" href="#shared-hosting">Shared Hosting</a></li>
+                
+                    <li><a class="toctree-l4" href="#dedicated-hosting">Dedicated Hosting</a></li>
+                
+                    <li><a class="toctree-l4" href="#cloud-hosting">Cloud Hosting</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#sql-server-compact-versus-sql-server">SQL Server Compact Versus SQL Server</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#file-system">File System</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#memory">Memory</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#app-pool-recycling">App Pool Recycling</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#multi-tenancy">Multi-Tenancy</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#installed-modules">Installed Modules</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#depth-of-the-views-folders">Depth of the Views Folders</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#ipv6-development-servers-and-modern-browsers">IPv6, Development Servers, and Modern Browsers</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#future-perspectives">Future Perspectives</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Whats-new-for-Windows-Azure-in-Orchard-1-7-1/">What's New for Windows Azure in Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Deploying-Orchard-to-Windows-Azure/">Deploying Orchard to Windows Azure</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Blob-Storage/">Using Windows Azure Blob Storage</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Cache/">Using Windows Azure Cache</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Running-Orchard-on-Mono/">Running Orchard on Mono</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-multi-tenant-Orchard-site/">Setting Up a Multi-Tenant Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-machine-key/">Setting Up a Machine Key</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Orchard</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../First-steps-into-Orchard/">First Steps into Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../How-Orchard-works/">How Orchard Works</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Command-line-scaffolding/">Command-Line Code Generation</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Getting Started with Modules Course</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-1/">Part 1: Build a Static Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-2/">Part 2: Make the Widget Dynamic</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-3/">Part 3: Using the Orchard API</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-4/">Part 4: Applying Best Practices</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Building-a-hello-world-module/">Building a Hello World Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-a-module-with-a-simple-text-editor/">Creating a Module with a Simple Text Editor</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-content-part/">Writing a Content Part</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-a-custom-field-type/">Writing a Content Field</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-a-module/">Packaging and Sharing a Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-widget/">Writing a Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-1-n-and-n-n-relations/">Creating _1-N_ and _N-N_ Relations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manifest-files/">Manifest Files for Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Caching/">Caching</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-custom-settings/">Custom Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../WebApi-In-Orchard/">Web Api in Orchard</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Working with Data</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-data-access/">Understanding Data Access</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-content-handlers/">Understanding Content Handlers</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Creating Themes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-new-theme/">Writing a New Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Anatomy-of-a-theme/">The Anatomy of a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-placement-info/">Understanding the placement.info File</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Accessing-and-rendering-shapes/">Accessing and Rendering Shapes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Alternates/">Alternates</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Template-file-syntax-guide/">Template File Syntax Guide</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-themes/">Packaging and Sharing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../UI-guidelines-for-theme-authors/">UI Guidelines for Theme Authors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-Orchard-using-Designer-Helper-Tools/">Customizing Orchard Using Designer Helper Tools</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Developer Tools and Guidelines</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Developer-FAQ/">Developer FAQ</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-source-enlistment/">Setting Up a Source Enlistment</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Source-code-organization/">Source Code Organization</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-dependencies-and-libraries/">Dependencies and Libraries</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code-conventions/">Code Conventions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Continuous-integration/">Continuous Integration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Merging-Pull-Requests/">Merging Pull Requests</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Additional Topics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-module-loader-and-dynamic-compilation/">Orchard Dynamic Compilation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Configuring-email/">Configuring Email</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Involved</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-documentation/">Contributing Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Documentation-Style-Guidelines/">Documentation Style Guidelines</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-patches/">Contributing Patches</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10-1.Release-Notes/">Orchard 1.10.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10.Release-Notes/">Orchard 1.10</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-3.Release-Notes/">Orchard 1.9.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-2.Release-Notes/">Orchard 1.9.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-1.Release-Notes/">Orchard 1.9.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9.Release-Notes/">Orchard 1.9</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-2.release-notes/">Orchard 1.8.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-1.Release-Notes/">Orchard 1.8.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-Release-Notes/">Orchard 1.8</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-2-Release-Notes/">Orchard 1.7.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-1-Release-Notes/">Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-Release-Notes/">Orchard 1.7</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-6-Release-Notes/">Orchard 1.6</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-5-Release-Notes/">Orchard 1.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-4-Release-Notes/">Orchard 1.4</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>User Experiences</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Walkthroughs/">Walkthroughs and UI Mockups</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Archived Specs</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogs/">Blogs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Comments/">Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Content-types/">Content types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Definitions/">Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Fundamentals-doctype/">HTML doctype</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Linkback/">Linkbacks: Pingbacks, Refbacks and Trackbacks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Media-management/">Media management</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation/">Navigation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-editing/">Page editing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages/">Page management and publishing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-publishing/">Page publishing workflow</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Rss-atom/">RSS and Atom feeds</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Slugs/">Slugs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Templates/">Page templates and syntax</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Tags/">Tags</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes/">Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes-includes/">Theme includes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Users/">Users, roles and permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Widgets/">Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Xml-Rpc/">XML-RPC and Live Writer</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-lists/">Creating lists of content items</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Orchard Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Hosting and Deploying Websites &raquo;</li>
+        
+      
+    
+    <li>Optimizing Server Performance</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>This topic discusses various techniques for tuning a server environment to run Orchard efficiently. The optimal configuration depends on the type of site you're running and on usage patterns, so site administrators should pick from this list what applies best to their particular scenario. As always, improving performance should involve measuring and analyzing performance data so that changes you propose are demonstrably beneficial.</p>
+<h1 id="trust-level">Trust Level</h1>
+<p>Orchard is configured out of the box to run in Full trust.
+Medium trust is no longer supported.</p>
+<pre><code>&lt;trust level="Full" originUrl="" /&gt;
+</code></pre>
+<h1 id="debugrelease">Debug/Release</h1>
+<p>On your production server, there is no reason to run in debug mode. Make sure that the application you deployed was compiled in release mode and that the <em>web.config</em> file in <em>Orchard.Web</em> specifies release mode:</p>
+<pre><code>&lt;compilation debug="false" targetFramework="4.0"
+  batch="true" numRecompilesBeforeAppRestart="250"&gt;
+</code></pre>
+<h1 id="shared-versus-dedicated-versus-cloud-hosting">Shared Versus Dedicated Versus Cloud Hosting</h1>
+<h2 id="shared-hosting">Shared Hosting</h2>
+<p>Shared hosting environments usually consist of web farms with load-balancing. The way this is implemented varies greatly between hosting companies and it is usually difficult for customers to get information on the specific configuration being used. How well these configurations perform depends on the load on hosted applications and on the architecture of the application itself.</p>
+<p>Shared hosting is a nice solution for Orchard users on a budget, but there can be tradeoffs. There is a natural contention between the customer who wants his or her site to be immediately available and to run as fast as possible, and the hosting company that wants to support as many sites as possible on a single computer. In order improve site density, hosting companies can be very aggressive about app domain recycling, causing sites to shut down often if they are not accessed frequently or if they consume too much memory.</p>
+<p>There are mitigations for these situations, such as using a pinging service or a module that accesses the site on a fixed interval to prevent the app domain from shutting down due to a timeout. A mitigation like this might seem like a good idea, but ultimately it ruins the site density objective and penalizes everyone.</p>
+<p>Another mitigation is to improve the perceived startup time of the application so that a shutdown ceases to be a significant problem. The <code>Orchard.Warmup</code> module (new in Orchard 1.1) is a good way to make the most commonly accessed pages of your site immediately accessible even while the app domain is restarting.</p>
+<p>Hosting companies can optimize for Orchard by setting up machine affinity so that a given instance always runs on the same server. This can in turn enable the local file system to be used rather than a network appliance. This can make a real difference, because Orchard can make a heavy use of the file system, such as when performing dynamic compilation or when using SQL Server Compact databases.</p>
+<h2 id="dedicated-hosting">Dedicated Hosting</h2>
+<p>A dedicated hosting environment is typically more expensive than a shared hosting account, but it might be worth the investment if your business depends on your application responding immediately to any request. A dedicated computer or a dedicated virtual machine offers the advantage of being configurable in exactly the way you want. You get guaranteed processing and bandwidth instead of sharing it with a varying load on other applications running on the same computer, and you get the opportunity to fine-tune all the parameters for the application.</p>
+<h2 id="cloud-hosting">Cloud Hosting</h2>
+<p>Cloud hosting such as Microsoft Azure offers most of the advantages of dedicated hosting plus the ability to scale to increased loads with the flip of a switch. If you are building a business that is expected to grow considerably, this might be the most secure way of ensuring the scalability that you need.</p>
+<h1 id="sql-server-compact-versus-sql-server">SQL Server Compact Versus SQL Server</h1>
+<p>An Orchard instance can either run on SQL Server Compact or on full versions of SQL Server or SQL Server Express. SQL Server Compact is an embedded version of SQL Server that has the advantage of being deployable by simply copying its DLLs and database files.</p>
+<p>While SQL Server Compact is extremely lightweight and easy to use and deploy, full versions of SQL Server offer the guaranteed performance that you might need on your site. It might therefore be worth the cost of investing in a hosting solution that gives you access to a full edition of SQL Server.</p>
+<h1 id="file-system">File System</h1>
+<p>The file system itself can be a drag on application performance. Possible bottlenecks can include a fragmented file system or a congested network connection to a NAS. Checking the speed of the file system and then optimizing it can be a way to get better performance.</p>
+<h1 id="memory">Memory</h1>
+<p>The more memory is available on a server, the better it will perform. If you can afford it, increasing memory might be among the most efficient ways of improving performance (assuming it's properly configured). Increasing processing power is more expensive and often has a lower return on investment.</p>
+<h1 id="app-pool-recycling">App Pool Recycling</h1>
+<p>If you have access to IIS settings and if your site has few hits over extended periods of time, consider increasing the default value for app pool recycling. This can be done by going into IIS Manager, going to <strong>Application Pools</strong>, selecting the app pool for your application, and clicking <strong>Recycling</strong>:</p>
+<p><img alt="" src="../../Attachments/Optimizing-Performance-of-Orchard-with-Shared-Hosting/AppPoolRecycle.PNG" /></p>
+<p>Removing the timeout is generally a good idea if it is replaced by a limit on memory usage; recycling at an arbitrary interval has little benefit, whereas recycling if the application uses all available memory is a good practice.</p>
+<h1 id="multi-tenancy">Multi-Tenancy</h1>
+<p>Orchard has an optional module called <strong>Multi Tenancy</strong> that enables more than one site to exist on the same Orchard instance. The data for the sites is separated, and for all practical purposes they are distinct sites. There are a few limitations on what each tenant can do, such as installing new modules and themes.</p>
+<p>The advantage of a multi-tenant installation over multiple instances of Orchard is that there is only one app domain, which hosting companies favor because it improves site density considerably. It also has advantages for each of the multi-tenant sites, because a hit on any of the tenants keeps the app domain alive. Therefore, even sites that receive very few hits will remain responsive if they share the app domain with enough other sites.</p>
+<p>This results in the seemingly paradoxical notion that more sites on a single app domain might perform better in some cases than a single site per app domain. In shared hosting scenarios in particular, this configuration is optimal if it is an option.</p>
+<h1 id="installed-modules">Installed Modules</h1>
+<p>For both security and performance reasons, it's a good idea to keep the number of modules installed on your production server as low as compatible with your application. There's a cost to anything you add to the system, in particular in terms of dynamic compilation and loading additional assemblies.</p>
+<p>If you are not using a module, it should be removed. Some modules, such as the gallery, will be useful on your development server but probably not on your production server and should be removed.</p>
+<p>Going even further, some modules are a convenience that you might want to do without. For example, many modules do nothing more than render a pre-formatted bit of HTML to include some external script or embedded object. If so, it's a good to determine whether you couldn't achieve the same thing with an HTML widget or the body of content items by going into the HTML source and directly injecting HTML there.</p>
+<h1 id="depth-of-the-views-folders">Depth of the Views Folders</h1>
+<p>The contents of <em>Views</em> folders are dynamically compiled and there is some overhead associated with each subfolder. This, combined with the multiplication of modules in a typical Orchard instance, means that it can have an impact on startup performance to flatten <em>Views</em> directories. Orchard gives a choice to module and theme authors to use subfolders or equivalent dotted names for templates (see <a href="../Accessing-and-rendering-shapes">Accessing and Rendering Shapes</a>). It is generally preferable to use the dotted notation.</p>
+<h1 id="ipv6-development-servers-and-modern-browsers">IPv6, Development Servers, and Modern Browsers</h1>
+<p>If you are in an IPv6 environment and using a local development server such as the Visual Studio Development Server or IIS Express in WebMatrix, some browsers may have trouble handling more than one request at once. This results in slower performance because resources are fetched one after the other. If you are testing locally and see images appearing one by one, you are probably hitting this bug.</p>
+<p>An easy workaround is to use <code>127.0.0.1</code> instead of <code>localhost</code> as the domain for the development server. Another is to disable IPv6 in the browser, although this change can have side effects. A third workaround is to make sure there's an explicit entry for <code>localhost</code> in your HOSTS file.</p>
+<h1 id="future-perspectives">Future Perspectives</h1>
+<p>The Orchard team is planning more work for performance in the future. This might include versions of the core assemblies and main dependencies that can be put into the GAC as well as NGen optimizations.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Whats-new-for-Windows-Azure-in-Orchard-1-7-1/" class="btn btn-neutral float-right" title="What's New for Windows Azure in Orchard 1.7.1">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Upgrading-a-site-to-a-new-version-of-Orchard/" class="btn btn-neutral" title="Upgrading a Site to a New Version"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Upgrading-a-site-to-a-new-version-of-Orchard/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Whats-new-for-Windows-Azure-in-Orchard-1-7-1/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

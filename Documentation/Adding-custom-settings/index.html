@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Custom Site Settings - Orchard Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../Styles/Site.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Custom Site Settings";
+    var mkdocs_page_input_path = "Documentation\Adding-custom-settings.markdown";
+    var mkdocs_page_url = "/Documentation/Adding-custom-settings/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-20757794-1', 'orchardproject.net');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Orchard Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-Orchard/">Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manually-installing-Orchard-zip-file/">Manually Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Working-with-Orchard-in-WebMatrix/">Working with Orchard in WebMatrix</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-around-the-dashboard/">Getting Around the Dashboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started/">Building Your First Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation-and-menus/">Navigation and Menus</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-a-Blog-to-Your-Site/">Adding a Blog to Your Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-and-managing-media-content/">Adding and Managing Media Content</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-widgets/">Managing Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Organizing-content-with-tags/">Organizing Content Using Tags</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>About the Project</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Basic-Orchard-Concepts/">Orchard Concept Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Builtin-Features/">Built-in modules and features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Feature-roadmap/">Feature roadmap</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Frequently-asked-questions/">Frequently Asked Questions</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-TV/">Tutorial Videos</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Authoring Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogging-with-LiveWriter/">Blogging with LiveWriter</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-global-ready-applications/">Creating Global-Ready Applications</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Search-and-indexing/">Search and Indexing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Saving-scheduling-and-publishing-drafts/">Publishing Drafts</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-custom-content-types/">Creating Custom Content Types</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Customizing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Previewing-and-applying-a-theme/">Previewing and Applying a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-themes/">Installing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-the-default-theme/">Customizing Themes</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using the Orchard Gallery</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Gallery-overview/">Gallery Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-modules-and-themes-from-the-gallery/">Installing Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Browsing-the-gallery-web-site/">Browsing the Gallery Web Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-a-module-or-theme-to-the-gallery/">Contributing to the Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Module-gallery-feeds/">Registering Additional Gallery Feeds</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Managing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Enabling-and-disabling-features/">Enabling and Disabling Features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-the-command-line-interface/">Using the Command-Line Interface</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-and-upgrading-modules/">Installing and Upgrading Modules</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Modifying-site-settings/">Modifying Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Moderating-comments/">Moderating Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-users-and-roles/">Managing Users and Roles</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-permissions/">Understanding Permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Making-a-Web-Site-Recipe/">Making a Website Recipe</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-an-image-gallery/">Creating an Image Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Workflows/">Workflows</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Projection/">Projection</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-Dynamic-Forms/">Create Dynamic Forms</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Hosting and Deploying Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Upgrading-a-site-to-a-new-version-of-Orchard/">Upgrading a Site to a New Version</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Optimizing-Performance-of-Orchard-with-Shared-Hosting/">Optimizing Server Performance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Whats-new-for-Windows-Azure-in-Orchard-1-7-1/">What's New for Windows Azure in Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Deploying-Orchard-to-Windows-Azure/">Deploying Orchard to Windows Azure</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Blob-Storage/">Using Windows Azure Blob Storage</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Cache/">Using Windows Azure Cache</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Running-Orchard-on-Mono/">Running Orchard on Mono</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-multi-tenant-Orchard-site/">Setting Up a Multi-Tenant Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-machine-key/">Setting Up a Machine Key</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Orchard</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../First-steps-into-Orchard/">First Steps into Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../How-Orchard-works/">How Orchard Works</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Command-line-scaffolding/">Command-Line Code Generation</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Getting Started with Modules Course</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-1/">Part 1: Build a Static Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-2/">Part 2: Make the Widget Dynamic</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-3/">Part 3: Using the Orchard API</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-4/">Part 4: Applying Best Practices</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Building-a-hello-world-module/">Building a Hello World Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-a-module-with-a-simple-text-editor/">Creating a Module with a Simple Text Editor</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-content-part/">Writing a Content Part</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-a-custom-field-type/">Writing a Content Field</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-a-module/">Packaging and Sharing a Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-widget/">Writing a Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-1-n-and-n-n-relations/">Creating _1-N_ and _N-N_ Relations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manifest-files/">Manifest Files for Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Caching/">Caching</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Custom Site Settings</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#defining-site-scope-settings-orchard-18-onwards">Defining site scope settings (Orchard 1.8 Onwards)</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-content-part">The Content Part</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-handler">The Handler</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-view">The View</a></li>
+                
+                    <li><a class="toctree-l4" href="#using-site-scope-settings">Using site scope settings</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#defining-site-scope-settings-pre-orchard-18">Defining site scope settings (Pre-Orchard 1.8)</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#defining-settings-for-content-types">Defining settings for Content Types</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#using-settings-for-content-type">Using settings for content type</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../WebApi-In-Orchard/">Web Api in Orchard</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Working with Data</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-data-access/">Understanding Data Access</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-content-handlers/">Understanding Content Handlers</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Creating Themes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-new-theme/">Writing a New Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Anatomy-of-a-theme/">The Anatomy of a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-placement-info/">Understanding the placement.info File</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Accessing-and-rendering-shapes/">Accessing and Rendering Shapes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Alternates/">Alternates</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Template-file-syntax-guide/">Template File Syntax Guide</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-themes/">Packaging and Sharing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../UI-guidelines-for-theme-authors/">UI Guidelines for Theme Authors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-Orchard-using-Designer-Helper-Tools/">Customizing Orchard Using Designer Helper Tools</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Developer Tools and Guidelines</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Developer-FAQ/">Developer FAQ</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-source-enlistment/">Setting Up a Source Enlistment</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Source-code-organization/">Source Code Organization</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-dependencies-and-libraries/">Dependencies and Libraries</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code-conventions/">Code Conventions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Continuous-integration/">Continuous Integration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Merging-Pull-Requests/">Merging Pull Requests</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Additional Topics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-module-loader-and-dynamic-compilation/">Orchard Dynamic Compilation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Configuring-email/">Configuring Email</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Involved</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-documentation/">Contributing Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Documentation-Style-Guidelines/">Documentation Style Guidelines</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-patches/">Contributing Patches</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10-1.Release-Notes/">Orchard 1.10.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10.Release-Notes/">Orchard 1.10</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-3.Release-Notes/">Orchard 1.9.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-2.Release-Notes/">Orchard 1.9.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-1.Release-Notes/">Orchard 1.9.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9.Release-Notes/">Orchard 1.9</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-2.release-notes/">Orchard 1.8.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-1.Release-Notes/">Orchard 1.8.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-Release-Notes/">Orchard 1.8</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-2-Release-Notes/">Orchard 1.7.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-1-Release-Notes/">Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-Release-Notes/">Orchard 1.7</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-6-Release-Notes/">Orchard 1.6</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-5-Release-Notes/">Orchard 1.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-4-Release-Notes/">Orchard 1.4</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>User Experiences</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Walkthroughs/">Walkthroughs and UI Mockups</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Archived Specs</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogs/">Blogs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Comments/">Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Content-types/">Content types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Definitions/">Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Fundamentals-doctype/">HTML doctype</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Linkback/">Linkbacks: Pingbacks, Refbacks and Trackbacks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Media-management/">Media management</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation/">Navigation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-editing/">Page editing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages/">Page management and publishing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-publishing/">Page publishing workflow</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Rss-atom/">RSS and Atom feeds</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Slugs/">Slugs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Templates/">Page templates and syntax</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Tags/">Tags</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes/">Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes-includes/">Theme includes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Users/">Users, roles and permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Widgets/">Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Xml-Rpc/">XML-RPC and Live Writer</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-lists/">Creating lists of content items</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Orchard Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Extending Orchard &raquo;</li>
+        
+      
+    
+    <li>Custom Site Settings</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>Sometimes you may need to persist some global settings 
+(eg. license code, service login, default width etc.)
+to be reused across your module. Orchard makes it really 
+simple and I'll show you how to do it.</p>
+<p>Basically, there are two scopes you can define your settings in:</p>
+<ol>
+<li><strong>Site scope</strong> - for global site settings.</li>
+<li><strong>Content type scope</strong> - for settings common to all items of a given type
+(eg. a Page, a Blog, a BlogPost and so on).</li>
+</ol>
+<h2 id="defining-site-scope-settings-orchard-18-onwards">Defining site scope settings (Orchard 1.8 Onwards)</h2>
+<p>Orchard 1.8 drastically simplifies creation of site settings, removing the previous need for "Part Records" and migration files. To create new site settings for your module you now only need three classes; A <code>ContentPart</code>, a <code>Handler</code> and potentially a view file if you want the settings to be edited via the "Site Settings" area of Admin. For a real world example look for the <code>RegistrationSettingsPart</code>, <code>RegistrationSetttingsPartHandler</code> and <code>Users.RegistrationSettings.cshtml</code> files in the <code>Orchard.Users</code> module.</p>
+<h3 id="the-content-part">The Content Part</h3>
+<pre><code>public class ShareBarSettingsPart : ContentPart {
+    public string AddThisAccount {
+        get { return this.Retrieve(x=&gt; x.AddThisAccount); }
+        set { this.Store(x=&gt; x.AddThisAccount, value); }
+        }
+    }
+</code></pre>
+<h3 id="the-handler">The Handler</h3>
+<pre><code>[UsedImplicitly]
+public class ShareBarSettingsPartHandler : ContentHandler {
+    public ShareBarSettingsPartHandler() {
+        T = NullLocalizer.Instance;
+        Filters.Add(new ActivatingFilter&lt;ShareBarSettingsPart&gt;("Site"));
+        Filters.Add(new TemplateFilterForPart&lt;ShareBarSettingsPart&gt;("ShareBarSettings", "Parts/ShareBar.ShareBarSettings", "Modules"));
+    }
+
+    public Localizer T { get; set; }
+
+    protected override void GetItemMetadata(GetContentItemMetadataContext context)
+    {
+        if (context.ContentItem.ContentType != "Site")
+            return;
+        base.GetItemMetadata(context);
+        context.Metadata.EditorGroupInfo.Add(new GroupInfo(T("Modules")));
+    }
+}
+</code></pre>
+<h3 id="the-view">The View</h3>
+<pre><code>@model Szmyd.Orchard.Modules.Sharing.Models.ShareBarSettingsPart
+&lt;fieldset&gt;
+    &lt;legend&gt;@T("Content sharing settigs")&lt;/legend&gt;
+    &lt;div&gt;
+        @Html.LabelFor(m =&gt; m.AddThisAccount, @T("AddThis service account"))
+        @Html.EditorFor(m =&gt; m.AddThisAccount)
+        @Html.ValidationMessageFor(m =&gt; m.AddThisAccount, "*")
+    &lt;/div&gt;
+&lt;/fieldset&gt;
+</code></pre>
+<h3 id="using-site-scope-settings">Using site scope settings</h3>
+<p>Accessing your site setting is a simple one liner:</p>
+<pre><code>var shareSettings = _services.WorkContext.CurrentSite.As&lt;ShareBarSettingsPart&gt;();
+</code></pre>
+<p>Where _services is the <code>IOrchardServices</code> object (eg. injected in the constructor).</p>
+<h2 id="defining-site-scope-settings-pre-orchard-18">Defining site scope settings (Pre-Orchard 1.8)</h2>
+<p>Defining custom site scope settings for before Orchard 1.8 can be in <a href="../Adding-Custom-Settings-pre-1.8">Adding Custom Settings pre Orchard 1.8</a></p>
+<h2 id="defining-settings-for-content-types">Defining settings for Content Types</h2>
+<p>We're now going to create settings and defaults wired with specific content type (like Page, User, Blog etc.).</p>
+<p>This looks much different comparing to the previous one, but also requires less coding.
+There are just two classes and one shape involved and that's all.
+As before, we'll use the simplified examples taken from the
+<a href="http://orchardsharing.codeplex.com/">Orchard Sharing</a> project.</p>
+<p>The goal:</p>
+<blockquote>
+<p>"I want all of my Blog Posts to have ShareBar with the same look."</p>
+</blockquote>
+<p>Imagine that you're writing posts via LiveWriter (like me).
+Do you want to log in and edit every post after publishing just to change the share bar?
+I don't. I want to have it defined upfront.</p>
+<p>The first thing you have to do is to create a class holding your settings:</p>
+<pre><code>public class ShareBarTypePartSettings {
+    public ShareBarMode Mode { get; set; }
+    public IEnumerable&lt;dynamic&gt; AvailableModes { get; set; }
+}
+</code></pre>
+<p>This class has one property - <code>Mode</code>, which holds the default mode for all ShareBarParts
+attached to some content items of a given type.
+<code>ShareBarMode</code> is just an enum type defining the display modes.
+For the sake of brevity, I won't paste the code here.
+This could be any type you want.
+The second property is just used for the display purposes (holds items for display in drop-down list),
+as this class is also used as a ViewModel. It is not being persisted.</p>
+<p>The second class can be thought of as a kind of a driver for the settings.
+It's not the Orchard ContentDriver we wrote previously, but also it's responsible
+for rendering the edit form and saving the posted data:</p>
+<pre><code>public class ShareBarSettingsHooks : ContentDefinitionEditorEventsBase {
+    public override IEnumerable&lt;TemplateViewModel&gt; TypePartEditor(
+        ContentTypePartDefinition definition) {
+
+        if (definition.PartDefinition.Name != "ShareBarPart") yield break;
+        var model = definition.Settings.GetModel&lt;ShareBarTypePartSettings&gt;();
+
+        model.AvailableModes = Enum.GetValues(typeof(ShareBarMode))
+            .Cast&lt;int&gt;()
+            .Select(i =&gt;
+                new {
+                    Text = Enum.GetName(typeof(ShareBarMode), i),
+                    Value = i
+                });
+
+        yield return DefinitionTemplate(model);
+    }
+
+    public override IEnumerable&lt;TemplateViewModel&gt; TypePartEditorUpdate(
+        ContentTypePartDefinitionBuilder builder,
+        IUpdateModel updateModel) {
+
+        if (builder.Name != "ShareBarPart") yield break;
+
+        var model = new ShareBarTypePartSettings();
+        updateModel.TryUpdateModel(model, "ShareBarTypePartSettings", null, null);
+        builder.WithSetting("ShareBarTypePartSettings.Mode",
+            ((int)model.Mode).ToString());
+        yield return DefinitionTemplate(model);
+    }
+}
+</code></pre>
+<p>This class overrides the <code>ContentDefinitionEditorEventsBase</code> which defines two overridable methods:
+<code>TypePartEditor</code> and <code>TypePartEditorUpdate</code>.
+The first one gets called when the edit form is being rendered (GET) and the second one
+when the edit form data gets posted (POST).
+Unlike the generic content part drivers, this class is not bound to the specific content type
+(as the content types are just a list of names for a collection of parts),
+so each of the methods we just defined will be called for every content type and for every part.
+This is why the <code>yield break</code> statement is used - to filter only the ones containing the part we need, <code>ShareBarPart</code>.</p>
+<p>By convention, as shown in the TypePartEditorUpdate method, settings should be named as
+<code>&lt;prefix&gt;.&lt;propertyName&gt;</code> when passing to <code>builder.WithSetting(...)</code>,
+where <code>prefix</code> is the string passed to the updateModel.TryUpdateModel.
+<code>Prefix</code> can be anything, but has to be unique. Remember though,
+when you use string other than your settings class name,
+you cannot use <code>Settings.GetModel&lt;Your_Settings_Type&gt;()</code>
+(as shown in the TypePartEditor method above).
+In this case you have to use <code>Settings.GetModel&lt;Your_Settings_Type&gt;(prefix)</code> instead.</p>
+<ol>
+<li>It should be considered best practice to use your settings class name as a <code>prefix</code> (as in the code above).</li>
+<li>Settings are persisted within the content type definition in the db in the string form.
+You have to be sure that the properties you define are convertible to and from the string representation.</li>
+</ol>
+<blockquote>
+<p>Notice the usage of <code>Enum.GetValues(typeof(someEnum)), Enum.GetNames(typeof(someEnum))</code>
+and <code>Enum.GetName(typeof(someEnum), i)</code>.
+This methods get very useful when you want to iterate over the names/values of an enum.</p>
+</blockquote>
+<p>If you're done with the code above, there's only one thing left:
+creating a .cshtml view (shape) to render our form.</p>
+<p><img alt="" src="http://www.szmyd.com.pl/Media/BlogPs/Windows-Live-Writer/Using-custom-settings-in-Orchard-Part-2-_AE9C/image_thumb.png" /></p>
+<p>Shapes defining edit forms for content type settings has to be placed under
+<code>/Views/DefinitionTemplates/</code> with the name <code>&lt;settingsClassName&gt;.cshtml</code>.
+So in our case it'll look like on the picture above.
+Inside, it's just like any other Razor view file:</p>
+<pre><code>@model Szmyd.Orchard.Modules.Sharing.Settings.ShareBarTypePartSettings
+&lt;fieldset&gt;
+    &lt;div&gt;
+        @Html.LabelFor(m =&gt; m.Mode, T("Share bar display style"))
+        @Html.DropDownListFor(m =&gt; m.Mode,
+            new System.Web.Mvc.SelectList(
+                Model.AvailableModes, "Value", "Text", (int)Model.Mode))
+    &lt;/div&gt;
+&lt;/fieldset&gt;
+</code></pre>
+<p>This renders the dropdown list so user can choose one of the predefined Modes.
+<code>Model.AvailableModes</code> contains the available ones: we populated the property with appropriate
+data in <code>TypePartEditor</code> method above.</p>
+<p>Hooray, we're done!</p>
+<p>Now you possibly wonder, where will this edit form be shown?
+Orchard will render settings form when you'll try to edit the content type containing your part.
+The steps are like this: <code>Content Types -&gt; Edit the type you want -&gt; Add your part -&gt; Voila!</code>
+There is a nice arrow image next to your part. If you click it - the form shows.</p>
+<p><img alt="" src="http://www.szmyd.com.pl/Media/BlogPs/Windows-Live-Writer/Using-custom-settings-in-Orchard-Part-2-_AE9C/image_thumb_4.png" /></p>
+<h2 id="using-settings-for-content-type">Using settings for content type</h2>
+<p>As for site-scoped settings, this section is also a one-liner.
+The part below is some content part (in this case a ShareBarPart from the
+<a href="http://orchardsharing.codeplex.com/">Orchard Sharing</a> project).</p>
+<pre><code>var typeSettings = part.Settings.GetModel&lt;ShareBarTypePartSettings&gt;();
+</code></pre>
+<p>You can retrieve and use the settings wherever you have access to your part
+(particularly in the driver Display/Editor methods, but also shapes, handlers and so on).
+I used it in the ShareBarPart driver Display method to change the look of a share bar part.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../WebApi-In-Orchard/" class="btn btn-neutral float-right" title="Web Api in Orchard">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Caching/" class="btn btn-neutral" title="Caching"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Caching/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../WebApi-In-Orchard/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

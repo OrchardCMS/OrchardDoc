@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Creating lists of content items - Orchard Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../Styles/Site.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Creating lists of content items";
+    var mkdocs_page_input_path = "Documentation\Creating-lists.markdown";
+    var mkdocs_page_url = "/Documentation/Creating-lists/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-20757794-1', 'orchardproject.net');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Orchard Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-Orchard/">Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manually-installing-Orchard-zip-file/">Manually Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Working-with-Orchard-in-WebMatrix/">Working with Orchard in WebMatrix</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-around-the-dashboard/">Getting Around the Dashboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started/">Building Your First Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation-and-menus/">Navigation and Menus</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-a-Blog-to-Your-Site/">Adding a Blog to Your Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-and-managing-media-content/">Adding and Managing Media Content</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-widgets/">Managing Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Organizing-content-with-tags/">Organizing Content Using Tags</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>About the Project</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Basic-Orchard-Concepts/">Orchard Concept Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Builtin-Features/">Built-in modules and features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Feature-roadmap/">Feature roadmap</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Frequently-asked-questions/">Frequently Asked Questions</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-TV/">Tutorial Videos</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Authoring Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogging-with-LiveWriter/">Blogging with LiveWriter</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-global-ready-applications/">Creating Global-Ready Applications</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Search-and-indexing/">Search and Indexing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Saving-scheduling-and-publishing-drafts/">Publishing Drafts</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-custom-content-types/">Creating Custom Content Types</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Customizing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Previewing-and-applying-a-theme/">Previewing and Applying a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-themes/">Installing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-the-default-theme/">Customizing Themes</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using the Orchard Gallery</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Gallery-overview/">Gallery Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-modules-and-themes-from-the-gallery/">Installing Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Browsing-the-gallery-web-site/">Browsing the Gallery Web Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-a-module-or-theme-to-the-gallery/">Contributing to the Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Module-gallery-feeds/">Registering Additional Gallery Feeds</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Managing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Enabling-and-disabling-features/">Enabling and Disabling Features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-the-command-line-interface/">Using the Command-Line Interface</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-and-upgrading-modules/">Installing and Upgrading Modules</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Modifying-site-settings/">Modifying Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Moderating-comments/">Moderating Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-users-and-roles/">Managing Users and Roles</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-permissions/">Understanding Permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Making-a-Web-Site-Recipe/">Making a Website Recipe</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-an-image-gallery/">Creating an Image Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Workflows/">Workflows</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Projection/">Projection</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-Dynamic-Forms/">Create Dynamic Forms</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Hosting and Deploying Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Upgrading-a-site-to-a-new-version-of-Orchard/">Upgrading a Site to a New Version</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Optimizing-Performance-of-Orchard-with-Shared-Hosting/">Optimizing Server Performance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Whats-new-for-Windows-Azure-in-Orchard-1-7-1/">What's New for Windows Azure in Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Deploying-Orchard-to-Windows-Azure/">Deploying Orchard to Windows Azure</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Blob-Storage/">Using Windows Azure Blob Storage</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Cache/">Using Windows Azure Cache</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Running-Orchard-on-Mono/">Running Orchard on Mono</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-multi-tenant-Orchard-site/">Setting Up a Multi-Tenant Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-machine-key/">Setting Up a Machine Key</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Orchard</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../First-steps-into-Orchard/">First Steps into Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../How-Orchard-works/">How Orchard Works</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Command-line-scaffolding/">Command-Line Code Generation</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Getting Started with Modules Course</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-1/">Part 1: Build a Static Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-2/">Part 2: Make the Widget Dynamic</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-3/">Part 3: Using the Orchard API</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-4/">Part 4: Applying Best Practices</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Building-a-hello-world-module/">Building a Hello World Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-a-module-with-a-simple-text-editor/">Creating a Module with a Simple Text Editor</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-content-part/">Writing a Content Part</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-a-custom-field-type/">Writing a Content Field</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-a-module/">Packaging and Sharing a Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-widget/">Writing a Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-1-n-and-n-n-relations/">Creating _1-N_ and _N-N_ Relations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manifest-files/">Manifest Files for Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Caching/">Caching</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-custom-settings/">Custom Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../WebApi-In-Orchard/">Web Api in Orchard</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Working with Data</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-data-access/">Understanding Data Access</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-content-handlers/">Understanding Content Handlers</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Creating Themes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-new-theme/">Writing a New Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Anatomy-of-a-theme/">The Anatomy of a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-placement-info/">Understanding the placement.info File</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Accessing-and-rendering-shapes/">Accessing and Rendering Shapes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Alternates/">Alternates</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Template-file-syntax-guide/">Template File Syntax Guide</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-themes/">Packaging and Sharing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../UI-guidelines-for-theme-authors/">UI Guidelines for Theme Authors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-Orchard-using-Designer-Helper-Tools/">Customizing Orchard Using Designer Helper Tools</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Developer Tools and Guidelines</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Developer-FAQ/">Developer FAQ</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-source-enlistment/">Setting Up a Source Enlistment</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Source-code-organization/">Source Code Organization</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-dependencies-and-libraries/">Dependencies and Libraries</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code-conventions/">Code Conventions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Continuous-integration/">Continuous Integration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Merging-Pull-Requests/">Merging Pull Requests</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Additional Topics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-module-loader-and-dynamic-compilation/">Orchard Dynamic Compilation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Configuring-email/">Configuring Email</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Involved</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-documentation/">Contributing Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Documentation-Style-Guidelines/">Documentation Style Guidelines</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-patches/">Contributing Patches</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10-1.Release-Notes/">Orchard 1.10.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10.Release-Notes/">Orchard 1.10</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-3.Release-Notes/">Orchard 1.9.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-2.Release-Notes/">Orchard 1.9.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-1.Release-Notes/">Orchard 1.9.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9.Release-Notes/">Orchard 1.9</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-2.release-notes/">Orchard 1.8.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-1.Release-Notes/">Orchard 1.8.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-Release-Notes/">Orchard 1.8</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-2-Release-Notes/">Orchard 1.7.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-1-Release-Notes/">Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-Release-Notes/">Orchard 1.7</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-6-Release-Notes/">Orchard 1.6</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-5-Release-Notes/">Orchard 1.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-4-Release-Notes/">Orchard 1.4</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>User Experiences</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Walkthroughs/">Walkthroughs and UI Mockups</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Archived Specs</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogs/">Blogs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Comments/">Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Content-types/">Content types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Definitions/">Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Fundamentals-doctype/">HTML doctype</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Linkback/">Linkbacks: Pingbacks, Refbacks and Trackbacks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Media-management/">Media management</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation/">Navigation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-editing/">Page editing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages/">Page management and publishing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-publishing/">Page publishing workflow</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Rss-atom/">RSS and Atom feeds</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Slugs/">Slugs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Templates/">Page templates and syntax</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Tags/">Tags</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes/">Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes-includes/">Theme includes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Users/">Users, roles and permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Widgets/">Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Xml-Rpc/">XML-RPC and Live Writer</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Creating lists of content items</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#creating-a-custom-containable-content-type">Creating a Custom Containable Content Type</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#creating-a-list-of-books">Creating a List of Books</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#creating-book-content-items">Creating Book Content Items</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#displaying-the-list">Displaying the List</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#customizing-how-the-list-is-rendered">Customizing How the List is Rendered</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#displaying-book-lists-as-widgets">Displaying Book Lists as Widgets</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#creating-a-custom-list-widget">Creating a Custom List Widget</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#pagination">Pagination</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#change-history">Change History</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Orchard Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Archived Specs &raquo;</li>
+        
+      
+    
+    <li>Creating lists of content items</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <blockquote>
+<p>The List feature has been rebuilt from the ground up. This topic may contain inaccuracies with regards to the current
+  implementation.</p>
+</blockquote>
+<p>In Orchard, you can create custom content items and assign them as navigation menu entries. If you have more than a few custom content items, you'll probably want to organize them in lists. This topic walks you through this process. In the walkthrough, you'll create a custom content type and display its items in lists. (For information about how to create a custom content type, see <a href="../Creating-custom-content-types">Creating Custom Content Types</a>.) </p>
+<h1 id="creating-a-custom-containable-content-type">Creating a Custom Containable Content Type</h1>
+<p>To begin, you will create a custom content type that represents a book review. </p>
+<p>On the dashboard, click <strong>Content</strong>, and then click the <strong>Content Types</strong> tab. Click <strong>Create New Type</strong>, and then in the <strong>Display Name</strong> field, enter the name "Book Review". (The <strong>Content Type ID</strong> field automatically generates an ID value that is based on what you entered for the display name, but without spaces.) Click <strong>Create</strong> to finish creating the new type.  </p>
+<p><img alt="" src="../../Upload/screenshots_675/create_newcustom_contentType_675.png" /></p>
+<p>A screen displays in which you can add content parts to the newly created content type. Select the check box for all of the following content parts to add them to your newly created content type.  </p>
+<ul>
+<li><strong>Body</strong>. Adds a body section with a rich-text editor that you can use to enter reviews.</li>
+<li><strong>Comments</strong>. Enables users to comment on the reviews.</li>
+<li><strong>Common</strong>. Gives each review a base set of properties, including an owner, a container, versions, a creation date, a publication date, and a modification date. </li>
+<li><strong>Containable</strong>. This part tells Orchard that the items of this type can be attached to a list and enables dashboard options to manage the relationship between the items and lists. This is the most important part for the purpose of this walkthrough.   <blockquote>
+<p><strong>Important</strong> Always add the <strong>Common</strong> part when you add the <strong>Containable</strong> part. Otherwise you will not be able to add your items to a list.</p>
+</blockquote>
+</li>
+<li><strong>Route</strong>. Provides friendly URLs for book reviews.</li>
+<li><strong>Tags</strong>. Lets you add tags to book reviews.</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong> You can modify an existing content type to add the <strong>Containable</strong> part, which will allow the site administrator to attach items of that type to lists.</p>
+</blockquote>
+<p>The following illustration shows the new <strong>Book Review</strong> content type with all the parts selected:</p>
+<p><img alt="" src="../../Upload/screenshots_675/add_parts_bookreviewtype_675.png" /></p>
+<p>Click <strong>Save</strong> to finish adding the content parts to the type. An edit screen displays the parts you just added to the type, and provides controls to add fields as well. </p>
+<p>In the <strong>Edit Content Type</strong> screen, click <strong>Add</strong> next to <strong>Fields</strong>. </p>
+<p><img alt="" src="../../Upload/screenshots_675/add_fields_bookreviewtype_675.png" /></p>
+<p>Add each of the following fields by entering the field name in the <strong>Add New Field</strong> screen (no spaces allowed), and then click <strong>Save</strong>. </p>
+<ul>
+<li><strong>Buy</strong>.  This field points to a commerce site where the book can be bought.</li>
+<li><strong>Verdict</strong>. This field indicates a recommendation for the book, such as "Buy", "Read", or "Skip".</li>
+</ul>
+<p><img alt="" src="../../Upload/screenshots_675/add_fields_bookreviewtype_1_675.png" /></p>
+<p>After you have added the fields, your custom type looks like the following illustration.  Click <strong>Save</strong> to save the custom content type. </p>
+<p><img alt="" src="../../Upload/screenshots_675/completed_bookreview_contenttype_675.png" /></p>
+<p>On the dashboard, expand the <strong>New</strong> menu. You see the <strong>Book Review</strong> content type. Don't click the new type on the dashboard yet. First you will create a book container to display book reviews in a list rather than as individual items. </p>
+<p><img alt="" src="../../Upload/screenshots/dashboard_bookreview_contenttype.png" /></p>
+<h1 id="creating-a-list-of-books">Creating a List of Books</h1>
+<p>To create the <strong>Book Review</strong> list, in the <strong>New</strong> menu of the dashboard, click <strong>List</strong>. </p>
+<blockquote>
+<p><strong>Note:</strong> The <strong>List</strong> module (that enables the New List link) may not be installed or active if you created your site using WebMatrix.  </p>
+</blockquote>
+<p>Name the new list "Book Reviews" and in the <strong>Contains</strong> field, select "Book Review" from the drop-down list. Select the <strong>Show on main menu</strong> option, and enter "Book Reviews" in the <strong>Menu Text</strong> field. When you're finished, save the new list.</p>
+<p><img alt="" src="../../Upload/screenshots_675/create_bookreview_list_675.png" /></p>
+<h1 id="creating-book-content-items">Creating Book Content Items</h1>
+<p>Now you can start creating book reviews.</p>
+<p>In the dashboard, click the new <strong>Book Review</strong> menu item. Create a few book reviews to populate the list. For each review you create, add values to the following fields, and then click <strong>Publish Now</strong>. </p>
+<ul>
+<li><strong>Add To</strong>. Select <strong>List: Book Reviews</strong> from the drop-down list, so that the review is added to this list.</li>
+<li><strong>Title</strong>. Enter the book title. A URL is generated based on the title.</li>
+<li><strong>Body</strong>. Enter review comments. </li>
+<li><strong>Buy</strong>. Add a URL to a site where the book can be purchased.</li>
+<li><strong>Verdict</strong>. Add a value indicating your recommendation (buy, read, skip).</li>
+<li><strong>Tags</strong>. Optionally, enter tags so that the list of reviews can be filtered.</li>
+</ul>
+<p><img alt="" src="../../Upload/screenshots_675/completed_bookreview_csnutshell_675.png" /></p>
+<h1 id="displaying-the-list">Displaying the List</h1>
+<p>To see the list of book reviews, return to the home page, and then click the new <strong>Book Reviews</strong> menu item.</p>
+<p><img alt="" src="../../Upload/screenshots_675/completed_bookreview_list_675.png" /></p>
+<h1 id="customizing-how-the-list-is-rendered">Customizing How the List is Rendered</h1>
+<p>The <strong>Book Review</strong> content type uses a text field for the <strong>Buy</strong> field, because that's the default option in Orchard. However, because this field is intended to contain URLs, a URL field would work better. No specialized URL field available, but you can modify the rendering of the text field to make it better suited for URLs. Create the following new text file in your Orchard site:</p>
+<p><em>~/Themes/<a href="../Current theme for your site">Current theme for your site</a>/Views/Fields/Common.Text.cshtml</em></p>
+<p>Copy and paste the following code into the new file:</p>
+<pre><code>@using Orchard.Utility.Extensions;
+@{
+    string name = Model.Name;
+    string value = Model.Value;
+}
+@if (HasText(name) &amp;&amp; HasText(value)) {
+&lt;p class="text-field"&gt;
+  @if (name == "Buy") {
+    &lt;a href="@value" class="value"&gt;Buy this book&lt;/a&gt;
+  }
+  else {
+    &lt;span class="name"&gt;@name.CamelFriendly():&lt;/span&gt;
+    &lt;span class="value"&gt;@value&lt;/span&gt;
+  }
+&lt;/p&gt;
+}
+</code></pre>
+<p>This template looks at the name of the field, and if the name is "Buy", the template changes the rendering to be a link to the value of the field.</p>
+<p>In addition to customizing how fields render in a custom content type, you can change what's displayed and where it's displayed by using a <em>placement.info</em> file. If you already have a <em>placement.info</em> file at the root of your site's current theme folder, edit it and add the <strong>Match</strong> element shown in the following example before the <code>&amp;lt;/Placement&amp;gt;</code> closing tag. If you don't already have a <em>placement.info</em> file, create a new file and add the following content:</p>
+<pre><code>&lt;Placement&gt;
+    &lt;Match ContentType="BookReview"&gt;
+        &lt;Match DisplayType="Detail"&gt;
+            &lt;Place Parts_Common_Body="Content:before"
+                   Parts_Tags_ShowTags="Content:after"
+                   Parts_Comments="Footer"/&gt;
+        &lt;/Match&gt;
+        &lt;Match DisplayType="Summary"&gt;
+            &lt;Place Parts_Common_Body_Summary="Content"
+                   Parts_Comments_Count="Nowhere"
+                   Parts_Tags_ShowTags="Nowhere"
+                   Parts_Common_Metadata_Summary="Nowhere"
+                   Fields_Common_Text="Nowhere"/&gt;
+        &lt;/Match&gt;
+    &lt;/Match&gt;
+&lt;/Placement&gt;
+</code></pre>
+<p>This placement file affects only the <strong>Book Review</strong> content type, as specified in the first <strong>Match</strong> element. Inside the first <strong>Match</strong> element there are two child <strong>Match</strong> elements that match the <strong>Detail</strong> and <strong>Summary</strong> display types. Those matches specify how book reviews are rendered in two cases: the details view and the list view.  </p>
+<p>When the details are displayed, the placement file specifies that the body of the review should appear at the beginning of the <strong>Content</strong> zone, the tags at the end of the same zone, and the comments in the <strong>Footer</strong> zone. If you are currently signed in as an admin user, temporarily sign out so that you can see the book reviews as a user would. Click one of the book reviews to see how the module that you added changes the rendering. </p>
+<p><img alt="" src="../../Upload/screenshots_675/bookreview_details_customrender_675.png" /></p>
+<p>When the whole list of books is displayed, you want to display a more abbreviated view, such as the title and summary only for each book. To suppress the display of the comment count, the tags, the metadata and the fields, the <em>placement.info</em> file sends those shapes to the "Nowhere" zone. The "Nowhere" zone is not actually a defined Orchard zone, it is simply a standard way in <strong>.info</strong> files of suppressing elements you want to hide by sending them to an undefined zone. The summary is sent to the <strong>Content</strong> zone. Click the <strong>Book Reviews</strong> menu entry to view the updated rendering of your list of reviews. </p>
+<p><img alt="" src="../../Upload/screenshots_675/bookreview_list_placementinfo_675.png" /></p>
+<blockquote>
+<p><strong>Note</strong> The zones referred to in this section of the topic are not layout-level widget zones, but rather local zones. As an example of how these are defined, check out the <em>/Core/Contents/Views/Items/Content.Summary.cshtml</em> file.</p>
+</blockquote>
+<h1 id="displaying-book-lists-as-widgets">Displaying Book Lists as Widgets</h1>
+<p>The next task is to display the latest book review in a right-hand sidebar on the home page of the site. You will use a container widget object to do that.</p>
+<p>Sign back into your site, and on the dashboard click <strong>Widgets</strong>. On the <strong>Widgets</strong> screen, in the drop-down list under <strong>Current Layer</strong>, select the <strong>TheHomePage</strong> layer.  In the list of zones, find the zone named <strong>Aside Second</strong> and click <strong>Add</strong> next to the zone. In the <strong>Choose a Widget</strong> screen, click <strong>Container Widget</strong>. The <strong>Add Widget</strong> screen is displayed. </p>
+<p><img alt="" src="../../Upload/screenshots_675/bookreview_sidebar_addwidget_675.png" /></p>
+<p>In the <strong>Title</strong> field, enter "Latest Book Review". Under <strong>Show items from</strong>, make sure that <strong>List: Book Reviews</strong> is selected. Then save the widget. </p>
+<p>Return to the home page, and notice that the latest reviews from your book reviews list are now displayed in the sidebar.</p>
+<p><img alt="" src="../../Upload/screenshots_675/bookreview_list_rightsidebar_675.png" /></p>
+<h1 id="creating-a-custom-list-widget">Creating a Custom List Widget</h1>
+<p>Using the filter feature, you can filter the values of custom properties named <strong>Custom1</strong>, <strong>Custom2</strong>, and <strong>Custom3</strong>. This in turn lets you filter what items from a list are displayed in a page. Now you will add some custom properties that will let you filter the display of your reviews.</p>
+<p>In the dashboard, click <strong>Content</strong>, and then click the <strong>Content Types</strong> tab. Click <strong>Edit</strong> next to <strong>Book Review</strong>. On the <strong>Edit Content Type</strong> screen, click <strong>Add Parts</strong>.  </p>
+<p><img alt="" src="../../Upload/screenshots/bookreview_contenttype_addCustomProperties.png" /></p>
+<p>Select the <strong>Custom Properties</strong> part, and click <strong>Save</strong>.</p>
+<p>Now return to the <strong>Book Reviews</strong> page in your site and edit one of your book reviews. You will see text fields for the three new properties. Enter "Featured" into <strong>Custom One</strong>, and then save the updated review.</p>
+<p><img alt="" src="../../Upload/screenshots/bookreview_contenttype_editCustomProperties.png" /></p>
+<p>You can repeat the last step for any other reviews you'd like to feature on the home page.</p>
+<p>To filter the reviews so that only featured reviews are displayed on the home page, click <strong>Widgets</strong> on the dashboard, and in the <strong>Widgets</strong> screen, select the <strong>TheHomePage</strong> layer from the <strong>Current Layer</strong> drop-down list. Then click the <strong>Latest Book Review</strong> widget that you created earlier. </p>
+<p>In the <strong>Edit Widget</strong> screen, select the <strong>Filter items</strong> option, select the <strong>Custom 1</strong> property from the first drop-down list, select <strong>is equal to</strong> from the second drop-down list, and enter "Featured" in the third drop-down list.  This filters reviews so that only featured reviews are displayed on the home page. When you're finished, save the updated widget.</p>
+<p><img alt="" src="../../Upload/screenshots/bookreview_featuredsidebar_filter.png" /></p>
+<p>Browse to your home page. Notice that only the book reviews for which you entered "Featured" in the <strong>Custom 1</strong> field are displayed.</p>
+<p><img alt="" src="../../Upload/screenshots_675/bookreview_homepagesidebar_featuredfilter_675.png" /></p>
+<p>Now click <strong>Widgets</strong> on the dashboard, return to the <strong>Widgets</strong> screen, and again select the <strong>TheHomePage</strong> layer from the <strong>Current Layer</strong> drop-down list. Add another widget to the <strong>TheHomePage</strong> layer as you did previously by clicking <strong>Add</strong> next to the <strong>AsideSecond</strong> zone, and then click <strong>Container Widget</strong> to add it. This time in the <strong>Add Widget</strong> screen, set the <strong>Position</strong> value to 6 so that the new list appears below the first one. Set the <strong>Title</strong> property to "Featured Reviews", set the <strong>Maximum number of items to display</strong> value to 2, and select the <strong>Filter items</strong> option. Set the filter criterion to "Custom 1 is equal to Featured". Save your changes.</p>
+<p><img alt="" src="../../Upload/screenshots/bookreview_homepagesidebar2_addwidget.png" /></p>
+<p>On the <strong>Widgets</strong> screen, click the <strong>Latest Book Review</strong> widget to edit it. Clear the <strong>Filter items</strong> check box, which means that it no longer filters reviews. Save the widget. </p>
+<p>The following illustration shows what the home page looks like with the two widgets that you configured. It displays both the latest reviews ordered by date, and the featured review in which you added the value "Featured" to the Custom 1 property field for a specific book, and filtered for that property. </p>
+<p><img alt="" src="../../Upload/screenshots/bookreview_homepagesidebar_bothwidgets.png" /></p>
+<h1 id="pagination">Pagination</h1>
+<p>The list feature has built-in support for pagination on list pages. </p>
+<p>On the dashboard, click <strong>Content</strong>, and then click <strong>Edit</strong> next to <strong>Book Reviews</strong>. In the <strong>Edit list</strong> screen, change the page size to a number that is smaller than the number of reviews you've added to the system. Leave <strong>Show paging controls</strong> selected. Save the changes.</p>
+<p><img alt="" src="../../Upload/screenshots/bookreview_editList_paging.png" /></p>
+<p>Go back to the <strong>Book Reviews</strong> page. Notice that there is an <strong>Older</strong> button that you can click to see older book reviews.</p>
+<p><img alt="" src="../../Upload/screenshots_675/bookreview_editList_paging_bookreviews_675.png" /></p>
+<blockquote>
+<p><strong>Note</strong> Pagination is available only on list pages and not on list widgets. This is by design, because pagination within a widget would allow multiple pagers on the same page, which could be confusing.</p>
+</blockquote>
+<h1 id="change-history">Change History</h1>
+<ul>
+<li>Updated for Orchard 1.1<ul>
+<li>3-18-11:  Updated all screens, menu options, and procedures for working with lists.</li>
+</ul>
+</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../Xml-Rpc/" class="btn btn-neutral" title="XML-RPC and Live Writer"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Xml-Rpc/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+
+</body>
+</html>

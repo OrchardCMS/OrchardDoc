@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Understanding the placement.info File - Orchard Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../Styles/Site.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Understanding the placement.info File";
+    var mkdocs_page_input_path = "Documentation\Understanding-placement-info.markdown";
+    var mkdocs_page_url = "/Documentation/Understanding-placement-info/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-20757794-1', 'orchardproject.net');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Orchard Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-Orchard/">Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manually-installing-Orchard-zip-file/">Manually Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Working-with-Orchard-in-WebMatrix/">Working with Orchard in WebMatrix</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-around-the-dashboard/">Getting Around the Dashboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started/">Building Your First Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation-and-menus/">Navigation and Menus</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-a-Blog-to-Your-Site/">Adding a Blog to Your Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-and-managing-media-content/">Adding and Managing Media Content</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-widgets/">Managing Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Organizing-content-with-tags/">Organizing Content Using Tags</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>About the Project</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Basic-Orchard-Concepts/">Orchard Concept Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Builtin-Features/">Built-in modules and features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Feature-roadmap/">Feature roadmap</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Frequently-asked-questions/">Frequently Asked Questions</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-TV/">Tutorial Videos</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Authoring Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogging-with-LiveWriter/">Blogging with LiveWriter</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-global-ready-applications/">Creating Global-Ready Applications</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Search-and-indexing/">Search and Indexing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Saving-scheduling-and-publishing-drafts/">Publishing Drafts</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-custom-content-types/">Creating Custom Content Types</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Customizing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Previewing-and-applying-a-theme/">Previewing and Applying a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-themes/">Installing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-the-default-theme/">Customizing Themes</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using the Orchard Gallery</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Gallery-overview/">Gallery Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-modules-and-themes-from-the-gallery/">Installing Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Browsing-the-gallery-web-site/">Browsing the Gallery Web Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-a-module-or-theme-to-the-gallery/">Contributing to the Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Module-gallery-feeds/">Registering Additional Gallery Feeds</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Managing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Enabling-and-disabling-features/">Enabling and Disabling Features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-the-command-line-interface/">Using the Command-Line Interface</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-and-upgrading-modules/">Installing and Upgrading Modules</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Modifying-site-settings/">Modifying Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Moderating-comments/">Moderating Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-users-and-roles/">Managing Users and Roles</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-permissions/">Understanding Permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Making-a-Web-Site-Recipe/">Making a Website Recipe</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-an-image-gallery/">Creating an Image Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Workflows/">Workflows</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Projection/">Projection</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-Dynamic-Forms/">Create Dynamic Forms</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Hosting and Deploying Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Upgrading-a-site-to-a-new-version-of-Orchard/">Upgrading a Site to a New Version</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Optimizing-Performance-of-Orchard-with-Shared-Hosting/">Optimizing Server Performance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Whats-new-for-Windows-Azure-in-Orchard-1-7-1/">What's New for Windows Azure in Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Deploying-Orchard-to-Windows-Azure/">Deploying Orchard to Windows Azure</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Blob-Storage/">Using Windows Azure Blob Storage</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Cache/">Using Windows Azure Cache</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Running-Orchard-on-Mono/">Running Orchard on Mono</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-multi-tenant-Orchard-site/">Setting Up a Multi-Tenant Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-machine-key/">Setting Up a Machine Key</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Orchard</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../First-steps-into-Orchard/">First Steps into Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../How-Orchard-works/">How Orchard Works</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Command-line-scaffolding/">Command-Line Code Generation</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Getting Started with Modules Course</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-1/">Part 1: Build a Static Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-2/">Part 2: Make the Widget Dynamic</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-3/">Part 3: Using the Orchard API</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-4/">Part 4: Applying Best Practices</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Building-a-hello-world-module/">Building a Hello World Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-a-module-with-a-simple-text-editor/">Creating a Module with a Simple Text Editor</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-content-part/">Writing a Content Part</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-a-custom-field-type/">Writing a Content Field</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-a-module/">Packaging and Sharing a Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-widget/">Writing a Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-1-n-and-n-n-relations/">Creating _1-N_ and _N-N_ Relations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manifest-files/">Manifest Files for Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Caching/">Caching</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-custom-settings/">Custom Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../WebApi-In-Orchard/">Web Api in Orchard</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Working with Data</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-data-access/">Understanding Data Access</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-content-handlers/">Understanding Content Handlers</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Creating Themes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-new-theme/">Writing a New Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Anatomy-of-a-theme/">The Anatomy of a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Understanding the placement.info File</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#summary">Summary</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#syntax-overview">Syntax Overview</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#the-placementinfo-file">The placement.info File</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#placement-scope">Placement Scope</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#comments">Comments</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#the-placement-element">The "Placement" Element</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#place-element">"Place" Element</a></li>
+                
+                    <li><a class="toctree-l4" href="#shape-name-attribute">Shape Name Attribute</a></li>
+                
+                    <li><a class="toctree-l4" href="#local-zone-placement">Local Zone Placement</a></li>
+                
+                    <li><a class="toctree-l4" href="#top-level-zone-placement">Top-Level Zone Placement</a></li>
+                
+                    <li><a class="toctree-l4" href="#placement-order">Placement Order</a></li>
+                
+                    <li><a class="toctree-l4" href="#suppression">Suppression</a></li>
+                
+                    <li><a class="toctree-l4" href="#alternate">Alternate</a></li>
+                
+                    <li><a class="toctree-l4" href="#wrapper">Wrapper</a></li>
+                
+                    <li><a class="toctree-l4" href="#shape">Shape</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#match-element">"Match" Element</a></li>
+                
+                    <li><a class="toctree-l4" href="#displaytype">DisplayType</a></li>
+                
+                    <li><a class="toctree-l4" href="#contenttype">ContentType</a></li>
+                
+                    <li><a class="toctree-l4" href="#path">Path</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#overriding-placement">Overriding Placement</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Accessing-and-rendering-shapes/">Accessing and Rendering Shapes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Alternates/">Alternates</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Template-file-syntax-guide/">Template File Syntax Guide</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-themes/">Packaging and Sharing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../UI-guidelines-for-theme-authors/">UI Guidelines for Theme Authors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-Orchard-using-Designer-Helper-Tools/">Customizing Orchard Using Designer Helper Tools</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Developer Tools and Guidelines</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Developer-FAQ/">Developer FAQ</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-source-enlistment/">Setting Up a Source Enlistment</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Source-code-organization/">Source Code Organization</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-dependencies-and-libraries/">Dependencies and Libraries</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code-conventions/">Code Conventions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Continuous-integration/">Continuous Integration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Merging-Pull-Requests/">Merging Pull Requests</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Additional Topics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-module-loader-and-dynamic-compilation/">Orchard Dynamic Compilation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Configuring-email/">Configuring Email</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Involved</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-documentation/">Contributing Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Documentation-Style-Guidelines/">Documentation Style Guidelines</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-patches/">Contributing Patches</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10-1.Release-Notes/">Orchard 1.10.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10.Release-Notes/">Orchard 1.10</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-3.Release-Notes/">Orchard 1.9.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-2.Release-Notes/">Orchard 1.9.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-1.Release-Notes/">Orchard 1.9.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9.Release-Notes/">Orchard 1.9</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-2.release-notes/">Orchard 1.8.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-1.Release-Notes/">Orchard 1.8.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-Release-Notes/">Orchard 1.8</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-2-Release-Notes/">Orchard 1.7.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-1-Release-Notes/">Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-Release-Notes/">Orchard 1.7</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-6-Release-Notes/">Orchard 1.6</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-5-Release-Notes/">Orchard 1.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-4-Release-Notes/">Orchard 1.4</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>User Experiences</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Walkthroughs/">Walkthroughs and UI Mockups</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Archived Specs</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogs/">Blogs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Comments/">Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Content-types/">Content types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Definitions/">Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Fundamentals-doctype/">HTML doctype</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Linkback/">Linkbacks: Pingbacks, Refbacks and Trackbacks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Media-management/">Media management</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation/">Navigation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-editing/">Page editing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages/">Page management and publishing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-publishing/">Page publishing workflow</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Rss-atom/">RSS and Atom feeds</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Slugs/">Slugs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Templates/">Page templates and syntax</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Tags/">Tags</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes/">Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes-includes/">Theme includes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Users/">Users, roles and permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Widgets/">Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Xml-Rpc/">XML-RPC and Live Writer</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-lists/">Creating lists of content items</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Orchard Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Creating Themes &raquo;</li>
+        
+      
+    
+    <li>Understanding the placement.info File</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>In a CMS such as Orchard, content is built as a composition of arbitrary parts. For example, a blog post is an assemblage of a route (<code>Autoroute</code> Part), title (<code>Title</code> part), contents (<code>Body</code> part), tags (<code>Tags</code> part), comments (<code>Comment</code> part), and a few additional technical parts (<code>Common</code> and <code>PublishLater</code>). </p>
+<p>To get a template to render an object like this, you could access each of these parts explicitly and render them; that's a scenario that would work in Orchard. But that would not handle well the unpredictable changes in the definition of the content types that are the essence of a CMS. For example, what if the administrator of the site downloaded a star rating module and added the rating part to posts? If the layout for the whole item were explicitly defined, you would have to explicitly modify the template. </p>
+<p>In Orchard, this isn't necessary, and adding a new part and displaying it can be done without touching the templates. This is possible because Orchard separates layout into two stages:</p>
+<ul>
+<li>Rendering (performed by generating HTML from templates or shape methods) and</li>
+<li>Placement (done through the <code>placement.info</code> file).</li>
+</ul>
+<p>This way, parts can not only specify their default rendering, which can be overridden by themes, they can also specify where they prefer to be rendered relative to other parts (which can also be overridden by themes).</p>
+<blockquote>
+<p><strong>Best Practice:</strong> Avoid creating templates for high level Content Types.</p>
+<p>Instead, create templates for Content Parts and Content Fields then change their order with placement.</p>
+</blockquote>
+<p>Specifying placement using the <code>placement.info</code> file is the subject of this article.</p>
+<h2 id="summary">Summary</h2>
+<ul>
+<li>Placement works only on parts (and some fields) of content items. </li>
+<li>Place element attributes are shape names (not alternate names).</li>
+<li>Find shape names via shape tracing or in driver code.</li>
+<li>Match element attributes include <code>ContentType</code>, <code>DisplayType</code>, and <code>Path</code>.</li>
+<li>Path can include a <code>*</code> to represent all child paths.</li>
+<li>Override module placements in the theme</li>
+</ul>
+<h2 id="syntax-overview">Syntax Overview</h2>
+<pre><code>&lt;placement&gt;
+    [ &lt;match scope&gt; ]
+        &lt;place Shape_Name="order[;alternate][;wrapper][;shape]" /&gt;
+    [ &lt;/match&gt; ]
+&lt;/placement&gt;
+</code></pre>
+<table>
+<tr><th>Scope<td colspan="2">ContentType="value" | DisplayType="value" | Path="value"
+<tr><th rowspan="3">Order<td colspan="2">position | suppress
+<tr><th>Position<td>zone_name[ : { int | after | before } ][ .int ][ ...n ]
+<tr><th>Suppress<td> - 
+<tr><th>Alternate<td colspan="2">;Alternate=alternate_name
+<tr><th>Wrapper<td colspan="2">;Wrapper=wrapper_name
+<tr><th>Shape<td colspan="2">;Shape=new_shape_name
+</table>
+
+<h2 id="the-placementinfo-file">The placement.info File</h2>
+<p>If you look at the files in your Orchard website, you'll see that most modules and themes have a <code>placement.info</code> file at their root. This is an XML file that specifies the placement of each part of a content item.</p>
+<p>The following example shows an example of a placement file. (It's based on the <code>placement.info</code> file that comes with <code>Orchard.Tags</code>.)</p>
+<pre><code>&lt;Placement&gt;
+    &lt;Place Parts_Tags_Edit="Content:7"/&gt;
+    &lt;Match DisplayType="Detail"&gt;
+        &lt;Place Parts_Tags_ShowTags="Header:after.7"/&gt;
+    &lt;/Match&gt;
+    &lt;Match DisplayType="Summary"&gt;
+        &lt;Place Parts_Tags_ShowTags="Header:after.7"/&gt;
+    &lt;/Match&gt;
+    &lt;Match DisplayType="SummaryAdmin"&gt;
+        &lt;Place Parts_Tags_ShowTags="-"/&gt;
+    &lt;/Match&gt;        
+&lt;/Placement&gt;
+</code></pre>
+<h2 id="placement-scope">Placement Scope</h2>
+<p>A placement file acts at the Content Item level. This means that you can use it to reorder the display of the parts of anything that is a content item (blog posts, pages, comments, custom items, widgets, elements, etc.), but not necessarily arbitrary shapes. If a shape that is not representing a content part needs placement, it is up to you to provide a placement mechanism for that shape.</p>
+<h2 id="comments">Comments</h2>
+<p>Comments can be included in the <code>placement.info</code> using normal <code>&lt;!-- comment --&gt;</code> syntax.</p>
+<h2 id="the-placement-element">The "Placement" Element</h2>
+<p>The <code>Placement</code> element must be present at the root of the <code>placement.info</code> document. It is a simple container.</p>
+<h2 id="place-element">"Place" Element</h2>
+<p>The <code>Place</code> element is the main entity in a <code>placement.info</code> file. It can have any number of attributes, although it's recommended for readability to have only one shape place defined per <code>Place</code> element. For additional shapes, you can add more <code>Place</code> tags, one per line.</p>
+<p>Single shape per line example:</p>
+<pre><code>&lt;Place Parts_TagCloud="Content:5"/&gt;
+&lt;Place Parts_TagCloud_Edit="Content:7"/&gt;
+</code></pre>
+<p>Multiple shapes per line example:</p>
+<pre><code>&lt;Place Parts_TagCloud="Content:5" Parts_TagCloud_Edit="Content:7"/&gt;
+</code></pre>
+<h3 id="shape-name-attribute">Shape Name Attribute</h3>
+<p>Each attribute of a <code>Place</code> element is the name of a shape (such as <code>Parts_Tags_ShowTags</code>), as defined from the relevant part driver, and has the placement as the value. To determine the shapes that are part of the display of a given content item, you can read the code for the part drivers. Or a simpler method might be to enable the Shape Tracing module and use the shape debugging tools to examine the model.</p>
+<p>The name of the attribute can be any shape name (but not an alternate name; use Match to specialize placement instead). </p>
+<p>There are also special extensions for certain fields so that placement can be targeted at specific field instances. </p>
+<p>For example, the following placement will display text fields named "Occupation" at the start of the <strong>local</strong> content zone:</p>
+<pre><code>&lt;Place Fields_Common_Text-Occupation="Content:before"/&gt;
+</code></pre>
+<blockquote>
+<p><strong>Note for field developers:</strong> you may give your own fields this capability by using a special override of ContentShape in your driver that provides the differentiator (the part after the dash in the attribute name). See the Text Field driver for example, or read <a href="../Creating-a-custom-field-type">Creating a Custom Field Type</a>.</p>
+</blockquote>
+<p>You can learn more about shapes and alternates in these topics: <a href="../Accessing-and-rendering-shapes">Accessing and Rendering Shapes</a> and <a href="../Alternates">Alternates</a>.</p>
+<p>The value itself is split into a zone name, a colon, and then a position. </p>
+<h3 id="local-zone-placement">Local Zone Placement</h3>
+<p>By default the zone name will specify a <strong>local</strong> zone. </p>
+<p>If you look inside that shape template you will see that there are several locally defined zones. Razor templates would use <code>@Display(Model.Content)</code> to display the content zone for example.  </p>
+<p>Usually you will find a zones like <code>Header</code>, <code>Meta</code>, <code>Content</code>, or <code>Footer</code> available for placement.</p>
+<p>Example local zone placement:</p>
+<pre><code>&lt;Place Parts_TagCloud="Content:5"/&gt;
+</code></pre>
+<h3 id="top-level-zone-placement">Top-Level Zone Placement</h3>
+<p>The zone name can also specify a top-level zone. Top level zones are defined in the <em>Layout.cshtml</em> view. </p>
+<p>In the case of a top-level zone, the zone name must begin with a slash, e.g. <code>/AsideFirst</code></p>
+<p>Example top-level zone placement:</p>
+<pre><code>&lt;Place Parts_TagCloud="/AsideFirst:5"/&gt;
+</code></pre>
+<h3 id="placement-order">Placement Order</h3>
+<p>The position is defined using a dotted notation. It can be a single number (1, 5, 10, 42) or it can be a succession of numbers separated by a dot (1.2, 1.52.3, etc.). The order will be determined starting from the first number, and if multiple positions have the same first number, using the subsequent numbers. This way, 1 comes before 2.4.5, and 2.4.5 comes before 2.10.</p>
+<p>You can also use <code>before</code> and <code>after</code> qualifiers to position shapes before or after a certain position. For example, <code>Header:after</code> positions the shape at the next available position following everything that's defined using numeric positions.</p>
+<p>Placement order examples:</p>
+<pre><code>&lt;!-- A weight of 5 in local content zone --&gt;
+&lt;Place Parts_TagCloud="Content:5"/&gt;
+
+&lt;!-- Before the top-level header zone --&gt;
+&lt;Place Parts_TagCloud="/Header:Before"/&gt;
+
+&lt;!-- After the top-level asidefirst zone with a weight of .5 --&gt;
+&lt;Place Parts_TagCloud="/AsideFirst:After.5"/&gt;
+</code></pre>
+<h3 id="suppression">Suppression</h3>
+<p>There is a special value, "-", that suppresses the shape rendering instead of sending it to a zone.</p>
+<p>Suppression examples:</p>
+<pre><code>&lt;!-- Suppress Parts_TagCloud everywhere --&gt;
+&lt;Place Parts_TagCloud="-"/&gt;
+
+&lt;!-- Suppress Parts_TagCloud in views using SummaryAdmin --&gt;
+&lt;Match DisplayType="SummaryAdmin"&gt;
+  &lt;Place Parts_TagCloud="-"/&gt;
+&lt;/Match&gt;
+</code></pre>
+<h3 id="alternate">Alternate</h3>
+<p><em>Added in v1.1</em></p>
+<p>Use <code>alternate</code> to specify shape alternates from <code>Place</code> elements.</p>
+<p>For example, if you want to enable a theme author to specify a different template for rendering the tags for blog posts, you can do the following:</p>
+<pre><code>&lt;Match ContentType="BlogPost"&gt;
+  &lt;Place
+    Parts_Tags_ShowTags="Header:1;Alternate=Parts_Tags_ShowTags_BlogPost"/&gt;
+&lt;/Match&gt;
+</code></pre>
+<p>A theme author can then provide a <em>Parts/Tags.ShowTags.BlogPost.cshtml</em> file that customizes the display of tags for blog posts.</p>
+<h3 id="wrapper">Wrapper</h3>
+<p><em>Added in v1.1</em></p>
+<p>Use 'wrapper' from <code>Place</code> elements to wrap an extra shape around the original shape.</p>
+<p>Similarly, you can provide a wrapper as part of the placement (<code>Header:after;Wrapper=Wrapper_GreenDiv</code>).</p>
+<p>Using a wrapper enables wrapping content with a cshtml markup. Here is a 3 step example showing how to add a div around the Html Widget to enable css styling of the widget.</p>
+<p>In placement.info : </p>
+<pre><code>&lt;Match ContentType="Widget"&gt;
+    &lt;Place Parts_Common_Body="Content:5;Wrapper=Wrapper_HtmlContent" /&gt;
+&lt;/Match&gt;
+</code></pre>
+<p>If you just put the wrapper without specifying 'Content:5' the body part will not show up. By adding <code>Content:5</code> it specifies which zone to render the part in.</p>
+<p>After modifying your placement.info the Shape Tracing module Shape tab will show your wrapper location at the bottom. It will be: <code>~/Themes/{yourTheme}/Views/Wrapper.HtmlContent.cshtml</code>. </p>
+<p>Create this file and put the following text in it:</p>
+<pre><code>&lt;div class="htmlWrapperContent"&gt;
+    @Model.Html
+&lt;/div&gt;
+</code></pre>
+<p>This will enable you to target the wrapper from <code>site.css</code> like this:</p>
+<pre><code>.htmlWrapperContent {
+    background-color: #94CCE7;
+}
+</code></pre>
+<h3 id="shape">Shape</h3>
+<p><em>Added in v1.1</em></p>
+<p>Use 'shape' from <code>Place</code> elements to rename the shape.</p>
+<p>For example:</p>
+<pre><code>&lt;Place Parts_Common_Body="Content:5;Header:after;
+Shape=IPreferToCallThoseStickersForSomeReason" /&gt;
+</code></pre>
+<h2 id="match-element">"Match" Element</h2>
+<p><code>Match</code> elements let you scope a particular set of <code>Place</code> tags. <code>Match</code> elements can have the following scope attributes:</p>
+<ul>
+<li><code>DisplayType</code></li>
+<li><code>ContentType</code></li>
+<li><code>Path</code></li>
+</ul>
+<p><code>Match</code> elements can be nested.</p>
+<h3 id="displaytype">DisplayType</h3>
+<p>Scopes the contained <code>Place</code> tags to a specific display type. </p>
+<p>You can define your own custom display types when developing content parts or fields, but Orchard uses standard ones:</p>
+<ul>
+<li>Detail - Used when rendering a single item, e.g. a blog post</li>
+<li>Summary - Used when rendering a list of items</li>
+<li>SummaryAdmin - Used when rending a list of items in the admin panel</li>
+</ul>
+<p>Some modules have registered their own such as:</p>
+<ul>
+<li>Layout - <em>Added in v1.9</em> - Used by the Orchard.Layouts module when an element is rendering a shape like a ContentField or ContentItem</li>
+<li>Design - <em>Added in v1.9</em> - Used by the Orchard.Layouts module when showing an element in the admin panel</li>
+</ul>
+<h3 id="contenttype">ContentType</h3>
+<p>Scopes the contained <code>Place</code> tags to a specific content type or stereotype.</p>
+<ul>
+<li>Content Type - Such as <code>BlogPost</code> or <code>Page</code></li>
+<li>Stereotype - <em>Added in v1.1</em> - Such as <code>Widget</code></li>
+</ul>
+<h3 id="path">Path</h3>
+<p><em>The <code>Path</code> attribute was added in v1.1</em>.</p>
+<p>Scopes the contained <code>Place</code> tags to a specific path or to a path and its children. </p>
+<ul>
+<li>Specific Path - For example, <code>Path="/About"</code> enables changes that only affect the About page (assuming you have one)</li>
+<li>Path and it's Children - For example, <code>Path="/MyBlog/*"</code> affects everything that is under the path <em>MyBlog</em>, such as <em>Myblog</em> or <em>MyBlog/FirstPost</em>. </li>
+</ul>
+<h2 id="overriding-placement">Overriding Placement</h2>
+<p>A module should define default placements for the parts and fields it provides by having a <code>placement.info</code> file at the root of the module's directory.</p>
+<p>Without a placement your parts and fields will not appear on the page. By supplying a default you take the burden away from theme developers to configure your module and you make it easy for them to copy sections over to customise them. Consider the various DisplayTypes your parts and fields may be viewed and provide sensible defaults.  </p>
+<p>That default placement can be overridden by any theme by placing a <code>placement.info</code> file in the root of the theme directory.</p>
+<p>The current theme's placement will win over that of any module.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Accessing-and-rendering-shapes/" class="btn btn-neutral float-right" title="Accessing and Rendering Shapes">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Anatomy-of-a-theme/" class="btn btn-neutral" title="The Anatomy of a Theme"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Anatomy-of-a-theme/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Accessing-and-rendering-shapes/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

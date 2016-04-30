@@ -1,0 +1,2299 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Creating _1-N_ and _N-N_ Relations - Orchard Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../Styles/Site.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Creating _1-N_ and _N-N_ Relations";
+    var mkdocs_page_input_path = "Documentation\Creating-1-n-and-n-n-relations.markdown";
+    var mkdocs_page_url = "/Documentation/Creating-1-n-and-n-n-relations/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-20757794-1', 'orchardproject.net');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Orchard Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-Orchard/">Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manually-installing-Orchard-zip-file/">Manually Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Working-with-Orchard-in-WebMatrix/">Working with Orchard in WebMatrix</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-around-the-dashboard/">Getting Around the Dashboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started/">Building Your First Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation-and-menus/">Navigation and Menus</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-a-Blog-to-Your-Site/">Adding a Blog to Your Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-and-managing-media-content/">Adding and Managing Media Content</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-widgets/">Managing Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Organizing-content-with-tags/">Organizing Content Using Tags</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>About the Project</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Basic-Orchard-Concepts/">Orchard Concept Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Builtin-Features/">Built-in modules and features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Feature-roadmap/">Feature roadmap</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Frequently-asked-questions/">Frequently Asked Questions</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-TV/">Tutorial Videos</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Authoring Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogging-with-LiveWriter/">Blogging with LiveWriter</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-global-ready-applications/">Creating Global-Ready Applications</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Search-and-indexing/">Search and Indexing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Saving-scheduling-and-publishing-drafts/">Publishing Drafts</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-custom-content-types/">Creating Custom Content Types</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Customizing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Previewing-and-applying-a-theme/">Previewing and Applying a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-themes/">Installing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-the-default-theme/">Customizing Themes</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using the Orchard Gallery</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Gallery-overview/">Gallery Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-modules-and-themes-from-the-gallery/">Installing Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Browsing-the-gallery-web-site/">Browsing the Gallery Web Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-a-module-or-theme-to-the-gallery/">Contributing to the Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Module-gallery-feeds/">Registering Additional Gallery Feeds</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Managing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Enabling-and-disabling-features/">Enabling and Disabling Features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-the-command-line-interface/">Using the Command-Line Interface</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-and-upgrading-modules/">Installing and Upgrading Modules</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Modifying-site-settings/">Modifying Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Moderating-comments/">Moderating Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-users-and-roles/">Managing Users and Roles</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-permissions/">Understanding Permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Making-a-Web-Site-Recipe/">Making a Website Recipe</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-an-image-gallery/">Creating an Image Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Workflows/">Workflows</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Projection/">Projection</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-Dynamic-Forms/">Create Dynamic Forms</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Hosting and Deploying Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Upgrading-a-site-to-a-new-version-of-Orchard/">Upgrading a Site to a New Version</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Optimizing-Performance-of-Orchard-with-Shared-Hosting/">Optimizing Server Performance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Whats-new-for-Windows-Azure-in-Orchard-1-7-1/">What's New for Windows Azure in Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Deploying-Orchard-to-Windows-Azure/">Deploying Orchard to Windows Azure</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Blob-Storage/">Using Windows Azure Blob Storage</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Cache/">Using Windows Azure Cache</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Running-Orchard-on-Mono/">Running Orchard on Mono</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-multi-tenant-Orchard-site/">Setting Up a Multi-Tenant Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-machine-key/">Setting Up a Machine Key</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Orchard</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../First-steps-into-Orchard/">First Steps into Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../How-Orchard-works/">How Orchard Works</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Command-line-scaffolding/">Command-Line Code Generation</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Getting Started with Modules Course</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-1/">Part 1: Build a Static Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-2/">Part 2: Make the Widget Dynamic</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-3/">Part 3: Using the Orchard API</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-4/">Part 4: Applying Best Practices</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Building-a-hello-world-module/">Building a Hello World Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-a-module-with-a-simple-text-editor/">Creating a Module with a Simple Text Editor</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-content-part/">Writing a Content Part</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-a-custom-field-type/">Writing a Content Field</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-a-module/">Packaging and Sharing a Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-widget/">Writing a Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Creating _1-N_ and _N-N_ Relations</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#building-a-1-n-relationship">Building a 1-N Relationship</a></li>
+                
+                    <li><a class="toctree-l4" href="#modeling-the-address-part">Modeling the Address Part</a></li>
+                
+                    <li><a class="toctree-l4" href="#creating-the-database-tables-and-part">Creating the Database Tables and Part</a></li>
+                
+                    <li><a class="toctree-l4" href="#populating-the-state-table">Populating the State Table</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-address-part-handler">The Address Part Handler</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-address-part-driver">The Address Part Driver</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-address-service-class">The Address Service Class</a></li>
+                
+                    <li><a class="toctree-l4" href="#building-the-views">Building the Views</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-placement-file">The Placement File</a></li>
+                
+                    <li><a class="toctree-l4" href="#using-the-address-part">Using the Address Part</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#building-an-n-n-relationship">Building an N-N Relationship</a></li>
+                
+                    <li><a class="toctree-l4" href="#modeling-the-rewards-part">Modeling the Rewards Part</a></li>
+                
+                    <li><a class="toctree-l4" href="#creating-the-database-tables-and-record">Creating the Database Tables and Record</a></li>
+                
+                    <li><a class="toctree-l4" href="#populating-the-reward-program-table">Populating the Reward Program Table</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-reward-handler">The Reward Handler</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-reward-driver">The Reward Driver</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-rewards-service">The Rewards Service</a></li>
+                
+                    <li><a class="toctree-l4" href="#building-the-views_1">Building the Views</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-placement-file_1">The Placement File</a></li>
+                
+                    <li><a class="toctree-l4" href="#using-the-rewards-part">Using the Rewards Part</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#building-a-relation-between-content-items">Building a Relation Between Content Items</a></li>
+                
+                    <li><a class="toctree-l4" href="#modeling-the-sponsor-part">Modeling the Sponsor Part</a></li>
+                
+                    <li><a class="toctree-l4" href="#building-the-database-table-and-part">Building the Database Table and Part</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-sponsor-handler">The Sponsor Handler</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-driver">The Driver</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-service-class">The Service Class</a></li>
+                
+                    <li><a class="toctree-l4" href="#building-the-views_2">Building the Views</a></li>
+                
+                    <li><a class="toctree-l4" href="#using-the-sponsor-part">Using the Sponsor Part</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#accessing-nhibernate-configuration-directly">Accessing NHibernate Configuration directly</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#conclusion">Conclusion</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manifest-files/">Manifest Files for Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Caching/">Caching</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-custom-settings/">Custom Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../WebApi-In-Orchard/">Web Api in Orchard</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Working with Data</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-data-access/">Understanding Data Access</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-content-handlers/">Understanding Content Handlers</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Creating Themes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-new-theme/">Writing a New Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Anatomy-of-a-theme/">The Anatomy of a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-placement-info/">Understanding the placement.info File</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Accessing-and-rendering-shapes/">Accessing and Rendering Shapes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Alternates/">Alternates</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Template-file-syntax-guide/">Template File Syntax Guide</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-themes/">Packaging and Sharing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../UI-guidelines-for-theme-authors/">UI Guidelines for Theme Authors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-Orchard-using-Designer-Helper-Tools/">Customizing Orchard Using Designer Helper Tools</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Developer Tools and Guidelines</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Developer-FAQ/">Developer FAQ</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-source-enlistment/">Setting Up a Source Enlistment</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Source-code-organization/">Source Code Organization</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-dependencies-and-libraries/">Dependencies and Libraries</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code-conventions/">Code Conventions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Continuous-integration/">Continuous Integration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Merging-Pull-Requests/">Merging Pull Requests</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Additional Topics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-module-loader-and-dynamic-compilation/">Orchard Dynamic Compilation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Configuring-email/">Configuring Email</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Involved</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-documentation/">Contributing Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Documentation-Style-Guidelines/">Documentation Style Guidelines</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-patches/">Contributing Patches</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10-1.Release-Notes/">Orchard 1.10.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10.Release-Notes/">Orchard 1.10</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-3.Release-Notes/">Orchard 1.9.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-2.Release-Notes/">Orchard 1.9.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-1.Release-Notes/">Orchard 1.9.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9.Release-Notes/">Orchard 1.9</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-2.release-notes/">Orchard 1.8.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-1.Release-Notes/">Orchard 1.8.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-Release-Notes/">Orchard 1.8</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-2-Release-Notes/">Orchard 1.7.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-1-Release-Notes/">Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-Release-Notes/">Orchard 1.7</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-6-Release-Notes/">Orchard 1.6</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-5-Release-Notes/">Orchard 1.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-4-Release-Notes/">Orchard 1.4</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>User Experiences</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Walkthroughs/">Walkthroughs and UI Mockups</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Archived Specs</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogs/">Blogs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Comments/">Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Content-types/">Content types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Definitions/">Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Fundamentals-doctype/">HTML doctype</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Linkback/">Linkbacks: Pingbacks, Refbacks and Trackbacks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Media-management/">Media management</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation/">Navigation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-editing/">Page editing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages/">Page management and publishing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-publishing/">Page publishing workflow</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Rss-atom/">RSS and Atom feeds</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Slugs/">Slugs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Templates/">Page templates and syntax</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Tags/">Tags</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes/">Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes-includes/">Theme includes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Users/">Users, roles and permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Widgets/">Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Xml-Rpc/">XML-RPC and Live Writer</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-lists/">Creating lists of content items</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Orchard Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Extending Orchard &raquo;</li>
+        
+      
+    
+    <li>Creating _1-N_ and _N-N_ Relations</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>It is very common for contents to consist in part of lists or choices in lists. For example, an address can have a state or region property where the value is one in a predefined list of choices. That is a 1-n relationship. A n-n relationship could be for example a list of commercial rewards that a customer can benefit from. Orchard does of course provide support for those scenarios. This topic is going to walk you through the creation of such contents.</p>
+<h1 id="building-a-1-n-relationship">Building a <em>1-N</em> Relationship</h1>
+<p>The model that we're going to build here consists of an Address part that can be attached for example to a Customer content type. The address part has a street address, a zip code, a city name and a state. The state is what we are going to model as a 1-n relationship to a table of states.</p>
+<blockquote>
+<p>Note: this is clearly over-normalized, as a state in an address would usually be sufficiently well represented by a simple two-letter state code. The UI can then take care of representing the choice of that code as a constrained choice in a list of states. We are not claiming what we are building here is the correct way to represent a state in an address, but that the process exposed here is representative of what you'd follow to build a real-world 1-n association in Orchard.</p>
+</blockquote>
+<h2 id="modeling-the-address-part">Modeling the Address Part</h2>
+<p>Here is the code for the <code>Address</code> part:</p>
+<pre><code>using Orchard.ContentManagement;
+
+namespace RelationSample.Models {
+    public class AddressPart : ContentPart&lt;AddressPartRecord&gt; {
+        public string Address {
+            get { return Retrieve(r =&gt; r.Address); }
+            set { Store(r =&gt; r.Address, value); }
+        }
+
+        public string City {
+            get { return Retrieve(r =&gt; r.City); }
+            set { Store(r =&gt; r.City, value); }
+        }
+
+        public StateRecord State {
+            get {
+                var rawStateRecord = Retrieve&lt;string&gt;("StateRecord");
+                return StateRecord.DeserializeStateRecord(rawStateRecord);
+            }
+            set {
+                var serializedStateRecord = StateRecord.SerializeStateRecord(value);
+                Store("StateRecord", serializedStateRecord);
+            }
+        }
+
+        public string Zip {
+            get { return Retrieve(r =&gt; r.Zip); }
+            set { Store(r =&gt; r.Zip, value); }
+        }
+    }
+}
+</code></pre>
+<p>This uses stores the data in the infoset and in a database record. However you can only store simple datatypes in the infoset so you can see that <code>State</code> field runs some extra code to encode the class into a string. </p>
+<p>All properties in the <code>AddressPart</code> are proxies to the record properties:</p>
+<pre><code>using Orchard.ContentManagement.Records;
+
+namespace RelationSample.Models {
+    public class AddressPartRecord : ContentPartRecord {
+        public virtual string Address { get; set; }
+        public virtual string City { get; set; }
+        public virtual StateRecord StateRecord { get; set; }
+        public virtual string Zip { get; set; }
+    }
+}
+</code></pre>
+<p>The state record class itself has a two-letter code and a name. It also has methods to serialize and deserialize its data into a string so that the <code>AddressPart</code> above can store its data in the infoset.</p>
+<pre><code>namespace RelationSample.Models {
+    public class StateRecord {
+        public virtual int Id { get; set; }
+        public virtual string Code { get; set; }
+        public virtual string Name { get; set; }
+
+        public static StateRecord DeserializeStateRecord(string rawStateRecord) {
+            if (rawStateRecord == null) {
+                return new StateRecord();
+            }
+
+            var stateRecordArray = rawStateRecord.Split(new[] { ',' });
+
+            return new StateRecord() {
+                Id = String.IsNullOrEmpty(stateRecordArray[0]) ? 0 : Int32.Parse(stateRecordArray[0]),
+                Code = stateRecordArray[1],
+                Name = stateRecordArray[2]
+            };
+        }
+
+        public static string SerializeStateRecord(StateRecord stateRecord) {
+            if(stateRecord == null) {
+                return "";
+            }
+
+            return String.Join(",", stateRecord.Id, stateRecord.Code, stateRecord.Name);
+        }            
+    }
+}
+</code></pre>
+<p>Here is a representation of what we just showed in code:
+<img alt="Modeling the address part" src="../../Attachments/Creating-1-n-and-n-n-relations/AddressDiagram.PNG" /></p>
+<h2 id="creating-the-database-tables-and-part">Creating the Database Tables and Part</h2>
+<p>The database structure for the model we just built can be created from a migration:</p>
+<pre><code>public int Create() {
+    SchemaBuilder.CreateTable("AddressPartRecord",
+        table =&gt; table
+            .ContentPartRecord()
+            .Column&lt;string&gt;("Address")
+            .Column&lt;string&gt;("City")
+            .Column&lt;int&gt;("StateRecord_Id")
+            .Column&lt;string&gt;("Zip")
+        );
+
+    SchemaBuilder.CreateTable("StateRecord",
+        table =&gt; table
+            .Column&lt;int&gt;("Id", column =&gt; column.PrimaryKey().Identity())
+            .Column&lt;string&gt;("Code", column =&gt; column.WithLength(2))
+            .Column&lt;string&gt;("Name")
+        );
+
+    ContentDefinitionManager.AlterPartDefinition("AddressPart",
+        builder =&gt; builder.Attachable());
+
+    return 1;
+}
+</code></pre>
+<p>This migration creates an AddressPartRecord table that is a content part record (this gets us the default fields that a content part needs). It adds columns for address, city and zip that are going to be auto-mapped to our record's properties.</p>
+<p>The interesting column here is StateRecord_Id. As you can see, its type is the same as the type of the Id column of the StateRecord class, because the system will be able to recognize this as a foreign key and to map that integer value to a StateRecord property by just following the relation. It is important here that the name of the column that will represent the relation is the name of the column on the "1" end of the relation, followed by an underscore and the name of the column of the "n" end of the relation.</p>
+<p>There is nothing remarkable on the StateRecord table: it's just mapping Id to be the primary key and constraining the Code column to be 2 characters long.</p>
+<p>The last statement before the return in the migration is declaring the AddressPart and making it attachable. That will enable us to attach it to any content type.</p>
+<h2 id="populating-the-state-table">Populating the State Table</h2>
+<blockquote>
+<p>Note: this section is included for completeness of the sample code but is far from essential to understanding how to implement relationships in Orchard. Please consider it as sample data generation. If you're following along and want to import this data you can find code in the <code>migrations.cs</code> file. This is included in the downloadable source code example link at the end of this guide.</p>
+</blockquote>
+<p>Because the list of states is going to be relatively stable, I did not make them content items (although that would be entirely possible with just a little more work). Instead, I'm populating the table with a list of states right in the migration code. The migration class has a reference to the state repository:</p>
+<pre><code>private readonly IRepository&lt;StateRecord&gt; _stateRepository;
+[...]
+public RelationSampleDataMigration(IRepository&lt;StateRecord&gt; stateRepository) {
+    _stateRepository = stateRepository;
+}
+</code></pre>
+<p>It also has the list of states to add to the database:</p>
+<pre><code>private readonly IEnumerable&lt;StateRecord&gt; _states =
+new List&lt;StateRecord&gt; {
+    new StateRecord {Code = "AL", Name = "Alabama"},
+    new StateRecord {Code = "AK", Name = "Alaska"},
+[...]
+    new StateRecord {Code = "WS", Name = "Western Australia"},
+};
+</code></pre>
+<p>The population of the table is done by the following code:</p>
+<pre><code>public int UpdateFrom1() {
+    if (_stateRepository == null)
+        throw new InvalidOperationException("Couldn't find state repository.");
+    foreach (var state in _states) {
+        _stateRepository.Create(state);
+    }
+    return 2;
+}
+</code></pre>
+<h2 id="the-address-part-handler">The Address Part Handler</h2>
+<p>The handler for the address part is rather uninteresting and just wires up the repository:</p>
+<pre><code>using Orchard.Data;
+using Orchard.ContentManagement.Handlers;
+using RelationSample.Models;
+
+namespace RelationSample.Handlers {
+    public class AddressPartHandler : ContentHandler {
+        public AddressPartHandler(IRepository&lt;AddressPartRecord&gt; repository) {
+            Filters.Add(StorageFilter.For(repository));
+        }
+    }
+}
+</code></pre>
+<h2 id="the-address-part-driver">The Address Part Driver</h2>
+<p>The driver is more interesting as it prepares the shapes for rendering and handles posted back admin forms.</p>
+<pre><code>using JetBrains.Annotations;
+using Orchard.ContentManagement;
+using Orchard.ContentManagement.Drivers;
+using RelationSample.Models;
+using RelationSample.Services;
+using RelationSample.ViewModels;
+
+namespace RelationSample.Drivers {
+    [UsedImplicitly]
+    public class AddressPartDriver : ContentPartDriver&lt;AddressPart&gt; {
+        private readonly IAddressService _addressService;
+
+        private const string TemplateName = "Parts/Address";
+
+        public AddressPartDriver(IAddressService addressService) {
+            _addressService = addressService;
+        }
+
+        protected override string Prefix {
+            get { return "Address"; }
+        }
+
+        protected override DriverResult Display(
+            AddressPart part,
+            string displayType,
+            dynamic shapeHelper) {
+
+            return ContentShape("Parts_Address",
+                            () =&gt; shapeHelper.Parts_Address(
+                                ContentPart: part,
+                                Address: part.Address,
+                                City: part.City,
+                                Zip: part.Zip,
+                                StateCode: part.State.Code,
+                                StateName: part.State.Name));
+        }
+
+        protected override DriverResult Editor(
+            AddressPart part,
+            dynamic shapeHelper) {
+
+            return ContentShape("Parts_Address_Edit",
+                    () =&gt; shapeHelper.EditorTemplate(
+                        TemplateName: TemplateName,
+                        Model: BuildEditorViewModel(part),
+                        Prefix: Prefix));
+        }
+
+        protected override DriverResult Editor(
+            AddressPart part,
+            IUpdateModel updater,
+            dynamic shapeHelper) {
+
+            var model = new EditAddressViewModel();
+            if (updater.TryUpdateModel(model, Prefix, null, null))
+            {
+                if (part.ContentItem.Id != 0)
+                {
+                    _addressService.UpdateAddressForContentItem(
+                        part.ContentItem, model);
+                }
+            }
+
+            return Editor(part, shapeHelper);
+        }
+
+        private EditAddressViewModel BuildEditorViewModel(AddressPart part) {
+            var avm = new EditAddressViewModel {
+                Address = part.Address,
+                City = part.City,
+                Zip = part.Zip,
+                States = _addressService.GetStates()
+            };
+            if (part.State != null) {
+                avm.StateCode = part.State.Code;
+                avm.StateName = part.State.Name;
+            }
+            return avm;
+        }
+    }
+}
+</code></pre>
+<p>When displaying on the front-end, we prepare a Parts_Address shape that has a reference to the original part (although that is not necessary), all the part properties flattened out and the state is available as both a code and a name.</p>
+<p>When in the admin UI, we build shapes with a statically-typed view model because these are still easier to use when using form fields and MVC model binding. That view model, like the shape used on the front-end, has a flattened view of the data that we need to display, but it also has a full list of all the available states, that the view will use to render the state drop-down list:</p>
+<pre><code>using System.Collections.Generic;
+using RelationSample.Models;
+
+namespace RelationSample.ViewModels {
+    public class EditAddressViewModel {
+        public string Address { get; set; }
+        public string City { get; set; }
+        public string StateCode { get; set; }
+        public string StateName { get; set; }
+        public string Zip { get; set; }
+        public IEnumerable&lt;StateRecord&gt; States { get; set; }
+    }
+}
+</code></pre>
+<p>The last thing to notice in the driver is that the Editor override that handles postbacks is just using <code>updater.TryUpdateModel()</code>, which is enough to incorporate the submitted form values onto the view model. This is followed by a call into the address service class which will update the actual content part data with the updated model.</p>
+<h2 id="the-address-service-class">The Address Service Class</h2>
+<p>The address service class takes a dependency on the state repository in order to be able to query for the full list of states. Its other method, <code>UpdateAddressForContentItem</code>, copies an EditAddressViewModel onto the address content part of a content item. It does so by looking up a state record from the state repository using the state code from the model.</p>
+<pre><code>using System.Collections.Generic;
+using System.Linq;
+using Orchard;
+using Orchard.ContentManagement;
+using Orchard.Data;
+using RelationSample.Models;
+using RelationSample.ViewModels;
+
+namespace RelationSample.Services {
+    public interface IAddressService : IDependency {
+        void UpdateAddressForContentItem(
+            ContentItem item, EditAddressViewModel model);
+        IEnumerable&lt;StateRecord&gt; GetStates();
+    }
+
+    public class AddressService : IAddressService {
+        private readonly IRepository&lt;StateRecord&gt; _stateRepository;
+
+        public AddressService(IRepository&lt;StateRecord&gt; stateRepository) {
+            _stateRepository = stateRepository;
+        }
+
+        public void UpdateAddressForContentItem(
+            ContentItem item,
+            EditAddressViewModel model) {
+
+            var addressPart = item.As&lt;AddressPart&gt;();
+            addressPart.Address = model.Address;
+            addressPart.City = model.City;
+            addressPart.Zip = model.Zip;
+            addressPart.State = _stateRepository.Get(
+                s =&gt; s.Code == model.StateCode);
+        }
+
+        public IEnumerable&lt;StateRecord&gt; GetStates() {
+            return _stateRepository.Table.ToList();
+        }
+    }
+}
+</code></pre>
+<h2 id="building-the-views">Building the Views</h2>
+<h3 id="the-front-end-view">The Front-End View</h3>
+<p>The front-end view for the part is straightforward as it's just displaying the properties of the shape:</p>
+<pre><code>&lt;p class="adr"&gt;
+    &lt;div class="street-address"&gt;@Model.Address&lt;/div&gt;
+    &lt;span class="locality"&gt;@Model.City&lt;/span&gt;,
+    &lt;span class="region"&gt;@Model.StateCode&lt;/span&gt;
+    &lt;span class="postal-code"&gt;@Model.Zip&lt;/span&gt;
+&lt;/p&gt;
+</code></pre>
+<p>We are using the vcard microformat in this template so the address can get picked-up by consumers that understand this format.</p>
+<h3 id="the-editor-view">The Editor View</h3>
+<p>The editor view is also relatively straightforward, with just the editor for the state being of a little more interest:</p>
+<pre><code>@model RelationSample.ViewModels.EditAddressViewModel
+&lt;fieldset&gt;
+  &lt;legend&gt;Address&lt;/legend&gt;
+
+  &lt;div class="editor-label"&gt;
+    @Html.LabelFor(model =&gt; model.Address, T("Street Address"))
+  &lt;/div&gt;
+  &lt;div class="editor-field"&gt;
+    @Html.TextAreaFor(model =&gt; model.Address)
+    @Html.ValidationMessageFor(model =&gt; model.Address)
+  &lt;/div&gt;
+
+  &lt;div class="editor-label"&gt;
+    @Html.LabelFor(model =&gt; model.City, T("City"))
+  &lt;/div&gt;
+  &lt;div class="editor-field"&gt;
+    @Html.TextBoxFor(model =&gt; model.City)
+    @Html.ValidationMessageFor(model =&gt; model.City)
+  &lt;/div&gt;
+
+  &lt;div class="editor-label"&gt;
+    @Html.LabelFor(model =&gt; model.StateCode, T("State"))
+  &lt;/div&gt;
+  &lt;div class="editor-field"&gt;
+    @Html.DropDownListFor(model =&gt; model.StateCode,
+                      Model.States.Select(s =&gt; new SelectListItem {
+                          Selected = s.Code == Model.StateCode,
+                          Text = s.Code + " " + s.Name,
+                          Value = s.Code
+                      }),
+                      "Choose a state...")
+    @Html.ValidationMessageFor(model =&gt; model.StateCode)
+  &lt;/div&gt;
+
+  &lt;div class="editor-label"&gt;
+    @Html.LabelFor(model =&gt; model.Zip, T("Zip"))
+  &lt;/div&gt;
+  &lt;div class="editor-field"&gt;
+    @Html.TextBoxFor(model =&gt; model.Zip)
+    @Html.ValidationMessageFor(model =&gt; model.Zip)
+  &lt;/div&gt;
+&lt;/fieldset&gt;
+</code></pre>
+<p>The DropDownListFor method takes an expression for the property to represent, and a list of SelectListItems that we build on the fly from the complete list of states and what we know of the current state for that address (notice the expression for Selected).</p>
+<h2 id="the-placement-file">The Placement File</h2>
+<p>Finally, we need a placement file to determine the default position of our part within a larger content type:</p>
+<pre><code>&lt;Placement&gt;
+    &lt;Place Parts_Address_Edit="Content:10"/&gt;
+    &lt;Place Parts_Address="Content:10"/&gt;
+&lt;/Placement&gt;
+</code></pre>
+<h2 id="using-the-address-part">Using the Address Part</h2>
+<p>We can now go into the "Features" admin page and enable the RelationSample feature under the Sample category. Once this is done we can go to "Content Types" and create a new "Customer" content type. Add the Common and Address parts, as well as a text field named "Name".</p>
+<p><img alt="" src="../../Attachments/Creating-1-n-and-n-n-relations/CustomerTypeAddress.PNG" /></p>
+<p>We now have a new "Customer" menu entry under "New", enabling us to create a new customer:</p>
+<p><img alt="" src="../../Attachments/Creating-1-n-and-n-n-relations/CreateCustomer.PNG" /></p>
+<p>The customer can be displayed on the front-end as well.</p>
+<p><img alt="" src="../../Attachments/Creating-1-n-and-n-n-relations/CustomerFrontEnd.PNG" /></p>
+<h1 id="building-an-n-n-relationship">Building an <em>N-N</em> Relationship</h1>
+<p>Building a n-n relationship in Orchard relies on the same principles as what we did for the 1-n relationship. The main difference is that instead of having one foreign key on the part record, we have an intermediary object for the relationship that has two foreign keys to the records. This is of course close to the way this is done in relational databases.</p>
+<p>In this section, we are going to build a part that can record an arbitrary number of associations with reward programs for our customers.</p>
+<h2 id="modeling-the-rewards-part">Modeling the Rewards Part</h2>
+<p>The rewards part and its association with reward programs are modeled as follows:</p>
+<p><img alt="" src="../../Attachments/Creating-1-n-and-n-n-relations/RewardDiagram.PNG" /></p>
+<h3 id="the-rewards-part-record">The Rewards Part Record</h3>
+<p>The part record has just one property, the collection of rewards:</p>
+<pre><code>using System.Collections.Generic;
+using Orchard.ContentManagement.Records;
+
+namespace RelationSample.Models {
+    public class RewardsPartRecord : ContentPartRecord {
+        public RewardsPartRecord() {
+            Rewards = new List&lt;ContentRewardProgramsRecord&gt;();
+        }
+        public virtual IList&lt;ContentRewardProgramsRecord&gt; Rewards { get; set; }
+    }
+}
+</code></pre>
+<h3 id="the-rewards-part">The Rewards Part</h3>
+<p>The rewards part itself proxies the Rewards property to the record:</p>
+<pre><code>using System.Collections.Generic;
+using System.Linq;
+using Orchard.ContentManagement;
+
+namespace RelationSample.Models {
+    public class RewardsPart : ContentPart&lt;RewardsPartRecord&gt; {
+        public IEnumerable&lt;RewardProgramRecord&gt; Rewards {
+            get {
+                return Record.Rewards.Select(r =&gt; r.RewardProgramRecord);
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="the-reward-program-record">The Reward Program Record</h3>
+<p>Reward programs have a name and a discount rate:</p>
+<pre><code>namespace RelationSample.Models {
+    public class RewardProgramRecord {
+        public virtual int Id { get; set; }
+        public virtual string Name { get; set; }
+        public virtual double Discount { get; set; }
+    }
+}
+</code></pre>
+<h3 id="the-association-record">The Association Record</h3>
+<p>Finally, the association record has a reference to a reward part record and a reference to a reward program:</p>
+<pre><code>namespace RelationSample.Models {
+    public class ContentRewardProgramsRecord {
+        public virtual int Id { get; set; }
+        public virtual RewardsPartRecord RewardsPartRecord { get; set; }
+        public virtual RewardProgramRecord RewardProgramRecord { get; set; }
+    }
+}
+</code></pre>
+<h2 id="creating-the-database-tables-and-record">Creating the Database Tables and Record</h2>
+<p>Here is the migration:</p>
+<pre><code>public int UpdateFrom2() {
+    SchemaBuilder.CreateTable("RewardsPartRecord",
+        table =&gt; table
+            .ContentPartRecord()
+        );
+
+    SchemaBuilder.CreateTable("RewardProgramRecord",
+        table =&gt; table
+            .Column&lt;int&gt;("Id", column =&gt; column.PrimaryKey().Identity())
+            .Column&lt;string&gt;("Name")
+            .Column&lt;double&gt;("Discount")
+        );
+
+    SchemaBuilder.CreateTable("ContentRewardProgramsRecord",
+        table =&gt; table
+            .Column&lt;int&gt;("Id", column =&gt; column.PrimaryKey().Identity())
+            .Column&lt;int&gt;("RewardsPartRecord_Id")
+            .Column&lt;int&gt;("RewardProgramRecord_Id")
+        );
+
+    ContentDefinitionManager.AlterPartDefinition(
+        "RewardsPart",
+        builder =&gt; builder.Attachable());
+
+    return 3;
+}
+</code></pre>
+<p>This code creates the three tables we need to persist the three records that we just modeled. It also declares the RewardsPart and makes it attachable.</p>
+<p>As with addresses and states, you can see the convention for relations in action here: the columns for the association record table are of type integer (the type of the id of each of the associated tables) and bears the name of the linked table, an underscore and the name of the key column of the associated table.</p>
+<h2 id="populating-the-reward-program-table">Populating the Reward Program Table</h2>
+<p>Like we did with states, we pre-populate the reward program table from the migration class. In a real world scenario, the rewards could be content items and you could have a specific management screen for them. There would be nothing specific about that coming from the fact that these items happen to be at one end of a n-n relation.</p>
+<pre><code>private readonly IRepository&lt;RewardProgramRecord&gt; _rewardProgramRepository;
+[...]
+private readonly IEnumerable&lt;RewardProgramRecord&gt; _rewardPrograms =
+    new List&lt;RewardProgramRecord&gt; {
+        new RewardProgramRecord {Name = "Senior", Discount = 0.05},
+        new RewardProgramRecord {Name = "Family", Discount = 0.10},
+        new RewardProgramRecord {Name = "Member", Discount = 0.15},
+    };
+[...]
+public int UpdateFrom3() {
+    if (_rewardProgramRepository == null)
+        throw new InvalidOperationException(
+            "Couldn't find reward program repository.");
+    foreach (var rewardProgram in _rewardPrograms) {
+        _rewardProgramRepository.Create(rewardProgram);
+    }
+    return 4;
+}
+</code></pre>
+<h2 id="the-reward-handler">The Reward Handler</h2>
+<p>There is nothing remarkable with the driver for this part, which is just wiring the repository:</p>
+<pre><code>using Orchard.Data;
+using Orchard.ContentManagement.Handlers;
+using RelationSample.Models;
+
+namespace RelationSample.Handlers {
+    public class RewardsPartHandler : ContentHandler {
+        public RewardsPartHandler(IRepository&lt;RewardsPartRecord&gt; repository) {
+            Filters.Add(StorageFilter.For(repository));
+        }
+    }
+}
+</code></pre>
+<h2 id="the-reward-driver">The Reward Driver</h2>
+<p>The driver is also surprisingly unsurprising given the requirement to persist the n-n relationship:</p>
+<pre><code>using System.Linq;
+using JetBrains.Annotations;
+using Orchard.ContentManagement;
+using Orchard.ContentManagement.Drivers;
+using RelationSample.Models;
+using RelationSample.Services;
+using RelationSample.ViewModels;
+
+namespace RelationSample.Drivers {
+    [UsedImplicitly]
+    public class RewardsPartDriver : ContentPartDriver&lt;RewardsPart&gt; {
+        private readonly IRewardService _rewardService;
+
+        private const string TemplateName = "Parts/Rewards";
+
+        public RewardsPartDriver(IRewardService rewardService) {
+            _rewardService = rewardService;
+        }
+
+        protected override string Prefix {
+            get { return "Rewards"; }
+        }
+
+        protected override DriverResult Display(
+            RewardsPart part,
+            string displayType,
+            dynamic shapeHelper) {
+
+            return ContentShape("Parts_Rewards",
+                            () =&gt; shapeHelper.Parts_Rewards(
+                                ContentPart: part,
+                                Rewards: part.Rewards));
+        }
+
+        protected override DriverResult Editor(
+            RewardsPart part,
+            dynamic shapeHelper) {
+
+            return ContentShape("Parts_Rewards_Edit",
+                    () =&gt; shapeHelper.EditorTemplate(
+                        TemplateName: TemplateName,
+                        Model: BuildEditorViewModel(part),
+                        Prefix: Prefix));
+        }
+
+        protected override DriverResult Editor(
+            RewardsPart part,
+            IUpdateModel updater,
+            dynamic shapeHelper) {
+
+            var model = new EditRewardsViewModel();
+            updater.TryUpdateModel(model, Prefix, null, null);
+
+            if (part.ContentItem.Id != 0) {
+                _rewardService.UpdateRewardsForContentItem(
+                    part.ContentItem, model.Rewards);
+            }
+
+            return Editor(part, shapeHelper);
+        }
+
+        private EditRewardsViewModel BuildEditorViewModel(RewardsPart part) {
+            var itemRewards = part.Rewards.ToLookup(r =&gt; r.Id);
+            return new EditRewardsViewModel {
+                Rewards = _rewardService.GetRewards().Select(
+                    r =&gt; new RewardProgramEntry {
+                        RewardProgram = r,
+                        IsChecked = itemRewards.Contains(r.Id)
+                    }).ToList()
+            };
+        }
+    }
+}
+</code></pre>
+<p>Like with the address part, we are fetching all the reward programs and putting them on the editor view model for the template to display as checkboxes. In BuildEditorViewModel, you can see that we build the current rewards as a lookup and then use that to determine the checked state of each reward program.</p>
+<p>Here is the editor view model:</p>
+<pre><code>using System.Collections.Generic;
+using RelationSample.Models;
+
+namespace RelationSample.ViewModels {
+    public class EditRewardsViewModel {
+        public IList&lt;RewardProgramEntry&gt; Rewards { get; set; }
+    }
+
+    public class RewardProgramEntry {
+        public RewardProgramRecord RewardProgram { get; set; }
+        public bool IsChecked { get; set; }
+    }
+}
+</code></pre>
+<blockquote>
+<p>Note: we are making the assumption here that there are only a few reward programs. If you are modeling a relationship with a large number of records on both sides of the relationship, the basic principles and models exposed here still stand but you'll have to adapt and optimize the code. In particular, using checkboxes to select the associated records is the best UI solution for small numbers of records but it won't scale well to more than a few dozens of records. Instead, you'd probably need to use a search UI of sorts and an Add/Remove pattern.</p>
+</blockquote>
+<h2 id="the-rewards-service">The Rewards Service</h2>
+<p>The rewards service is responsible for driving the relatively complex task of updating the database for the new values for the relation:</p>
+<pre><code>using System.Collections.Generic;
+using System.Linq;
+using Orchard;
+using Orchard.ContentManagement;
+using Orchard.Data;
+using RelationSample.Models;
+using RelationSample.ViewModels;
+
+namespace RelationSample.Services {
+    public interface IRewardService : IDependency {
+        void UpdateRewardsForContentItem(
+            ContentItem item,
+            IEnumerable&lt;RewardProgramEntry&gt; rewards);
+        IEnumerable&lt;RewardProgramRecord&gt; GetRewards();
+    }
+
+    public class RewardService : IRewardService {
+        private readonly IRepository&lt;RewardProgramRecord&gt;
+            _rewardProgramRepository;
+        private readonly IRepository&lt;ContentRewardProgramsRecord&gt;
+            _contentRewardRepository;
+
+        public RewardService(
+            IRepository&lt;RewardProgramRecord&gt; rewardProgramRepository,
+            IRepository&lt;ContentRewardProgramsRecord&gt; contentRewardRepository) {
+
+            _rewardProgramRepository = rewardProgramRepository;
+            _contentRewardRepository = contentRewardRepository;
+        }
+
+        public void UpdateRewardsForContentItem(
+            ContentItem item,
+            IEnumerable&lt;RewardProgramEntry&gt; rewards) {
+
+            var record = item.As&lt;RewardsPart&gt;().Record;
+            var oldRewards = _contentRewardRepository.Fetch(
+                r =&gt; r.RewardsPartRecord == record);
+            var lookupNew = rewards
+                .Where(e =&gt; e.IsChecked)
+                .Select(e =&gt; e.RewardProgram)
+                .ToDictionary(r =&gt; r, r =&gt; false);
+            // Delete the rewards that are no longer there
+            // and mark the ones that should stay
+            foreach(var contentRewardProgramsRecord in oldRewards) {
+                if (lookupNew.ContainsKey(
+                    contentRewardProgramsRecord.RewardProgramRecord)) {
+
+                    lookupNew[contentRewardProgramsRecord.RewardProgramRecord]
+                        = true;
+                }
+                else {
+                    _contentRewardRepository.Delete(contentRewardProgramsRecord);
+                }
+            }
+            // Add the new rewards
+            foreach(var reward in lookupNew.Where(kvp =&gt; !kvp.Value)
+                                           .Select(kvp =&gt; kvp.Key)) {
+                _contentRewardRepository.Create(new ContentRewardProgramsRecord {
+                    RewardsPartRecord = record,
+                    RewardProgramRecord = reward
+                });
+            }
+        }
+
+        public IEnumerable&lt;RewardProgramRecord&gt; GetRewards() {
+            return _rewardProgramRepository.Table.ToList();
+        }
+    }
+}
+</code></pre>
+<blockquote>
+<p>Note: again, this is designed for small numbers of reward programs. If you have larger models and have adopted an Add/Remove pattern talked about in the previous note, the code for the service actually becomes simpler as it executes lower-level operations that affect one program at a time rather than try to synchronize the whole collection at once.</p>
+</blockquote>
+<h2 id="building-the-views_1">Building the Views</h2>
+<h3 id="the-front-end-view_1">The Front-End View</h3>
+<p>The front-end view is just displaying the list of rewards as an unordered list:</p>
+<pre><code>&lt;h4&gt;@T("Rewards"):&lt;/h4&gt;
+&lt;ul&gt;
+@foreach (var reward in Model.Rewards) {
+    &lt;li&gt;@string.Format("{0} ({1:P1})", reward.Name,  -reward.Discount)&lt;/li&gt;
+}
+&lt;/ul&gt;
+</code></pre>
+<h3 id="the-editor-view_1">The Editor View</h3>
+<p>The editor view is a little more remarkable:</p>
+<pre><code>@model RelationSample.ViewModels.EditRewardsViewModel
+&lt;fieldset&gt;&lt;legend&gt;@T("Rewards")&lt;/legend&gt;
+&lt;ul&gt;
+@{
+ var rewardIndex = 0;
+}
+@foreach (var reward in Model.Rewards) {
+    &lt;li&gt;&lt;input type="hidden" value="@reward.RewardProgram.Id"
+        name="@Html.FieldNameFor(m =&gt; m.Rewards[rewardIndex].RewardProgram.Id)"/&gt;
+        &lt;label for="@Html.FieldNameFor(m =&gt; m.Rewards[rewardIndex].IsChecked)"&gt;
+            &lt;input type="checkbox" value="true"
+                name="@Html.FieldNameFor(m =&gt; m.Rewards[rewardIndex].IsChecked)"
+                id="@Html.FieldNameFor(m =&gt; m.Rewards[rewardIndex].IsChecked)"
+                @if (reward.IsChecked) {&lt;text&gt;checked="checked"&lt;/text&gt;}/&gt;
+            @string.Format("{0} ({1:P1})",
+                reward.RewardProgram.Name,
+                -reward.RewardProgram.Discount))
+        &lt;/label&gt;
+        @{rewardIndex++;}
+    &lt;/li&gt;
+}
+&lt;/ul&gt;
+&lt;/fieldset&gt;
+</code></pre>
+<p>Notice how the check-boxes use Html.FieldNameFor. This will ensure that they will have a name that the model binder will be able to understand and correctly bind when it is posted back.</p>
+<p>Also noticeable is the hidden input, which is a standard workaround for the peculiar way in which HTML check-boxes don't post anything when not checked. The model binder knows how to use the information for both the hidden input and the check-box to determine the Boolean values to set.</p>
+<p>Of course, any variation from that naming scheme would make the binding fail.</p>
+<h2 id="the-placement-file_1">The Placement File</h2>
+<p>For the parts to appear at all in the UI, we need to update our placement.info file:</p>
+<pre><code>&lt;Placement&gt;
+    &lt;Place Parts_Address_Edit="Content:10"/&gt;
+    &lt;Place Parts_Address="Content:10"/&gt;
+    &lt;Place Parts_Rewards_Edit="Content:11"/&gt;
+    &lt;Place Parts_Rewards="Content:11"/&gt;
+&lt;/Placement&gt;
+</code></pre>
+<h2 id="using-the-rewards-part">Using the Rewards Part</h2>
+<p>If you haven't used the application's admin UI since you wrote the migration, it should now warn you that a feature needs to be upgraded. That is our sample feature, as the system noticed the latest executed migration does not match the highest available. Go to the features screen, locate the RelationSample and click "Update".</p>
+<p>In order to use the new part on our customer content items, we need to add it to the type. Go to the "Content Types" screen and click "Edit" next to "Customer". Click "Add" next to "Parts", check the Rewards part and save.</p>
+<p><img alt="The customer type with the address and rewards parts." src="../../Attachments/Creating-1-n-and-n-n-relations/CustomerType.PNG" /></p>
+<p>If you go back to an existing customer's edit screen or create a new one, you'll see a screen such as this:</p>
+<p><img alt="" src="../../Attachments/Creating-1-n-and-n-n-relations/EditCustomerRewards.PNG" /></p>
+<p>On the front-end, the customer now looks like this:</p>
+<p><img alt="" src="../../Attachments/Creating-1-n-and-n-n-relations/CustomerWithRewards.PNG" /></p>
+<h1 id="building-a-relation-between-content-items">Building a Relation Between Content Items</h1>
+<p>Our third example will establish a relation between content items, which is a step up from our previous examples which were establishing relations between records. Doing the same thing with items is not fundamentally very different, but there are a couple of caveats that justify a specific example.</p>
+<p>The example that we will build is a Sponsor part that records that a specific customer was sponsored by another.</p>
+<h2 id="modeling-the-sponsor-part">Modeling the Sponsor Part</h2>
+<p>The Sponsor part will consist of a single Sponsor property. This time, we will use a lazy field so that its content only gets fetched when it is needed.</p>
+<pre><code>using Orchard.ContentManagement;
+using Orchard.Core.Common.Utilities;
+
+namespace RelationSample.Models {
+    public class SponsorPart : ContentPart&lt;SponsorPartRecord&gt; {
+        private readonly LazyField&lt;IContent&gt; _sponsor = new LazyField&lt;IContent&gt;();
+
+        public LazyField&lt;IContent&gt; SponsorField { get { return _sponsor; } }
+
+        public IContent Sponsor {
+            get { return _sponsor.Value; }
+            set { _sponsor.Value = value; }
+        }
+    }
+}
+</code></pre>
+<p>We will see how the lazy field gets set and populated when we look at the code for the handler.</p>
+<p>The corresponding record is extremely simple:</p>
+<pre><code>using Orchard.ContentManagement;
+using Orchard.ContentManagement.Records;
+
+namespace RelationSample.Models {
+    public class SponsorPartRecord : ContentPartRecord {
+        public virtual ContentItemRecord Sponsor { get; set; }
+    }
+}
+</code></pre>
+<h2 id="building-the-database-table-and-part">Building the Database Table and Part</h2>
+<p>The migration for this part is as follows:</p>
+<pre><code>public int UpdateFrom4() {
+
+    SchemaBuilder.CreateTable("SponsorPartRecord",
+        table =&gt; table
+            .ContentPartRecord()
+            .Column&lt;int&gt;("Sponsor_Id")
+        );
+
+    ContentDefinitionManager.AlterPartDefinition(
+        "SponsorPart", builder =&gt; builder.Attachable());
+
+    return 5;
+}
+</code></pre>
+<p>We are in known territory here: the table uses the convention that we have already applied twice in the previous examples, where the name of the column establishing the relation is the concatenation of the column names in both records.</p>
+<p>We also make the new SponsorPart attachable, as usual.</p>
+<h2 id="the-sponsor-handler">The Sponsor Handler</h2>
+<p>The handler is going to be a little more elaborate than usual, because of the use of lazy fields:</p>
+<pre><code>using Orchard.ContentManagement;
+using Orchard.Data;
+using Orchard.ContentManagement.Handlers;
+using RelationSample.Models;
+
+namespace RelationSample.Handlers {
+    public class SponsorPartHandler : ContentHandler {
+        private readonly IContentManager _contentManager;
+
+        public SponsorPartHandler(
+            IRepository&lt;SponsorPartRecord&gt; repository,
+            IContentManager contentManager) {
+
+            Filters.Add(StorageFilter.For(repository));
+            _contentManager = contentManager;
+
+            OnInitializing&lt;SponsorPart&gt;(PropertySetHandlers);
+            OnLoaded&lt;SponsorPart&gt;(LazyLoadHandlers);
+        }
+
+        void LazyLoadHandlers(LoadContentContext context, SponsorPart part) {
+            // add handlers that will load content just-in-time
+            part.SponsorField.Loader(() =&gt;
+                part.Record.Sponsor == null ?
+                null : _contentManager.Get(part.Record.Sponsor.Id));
+        }
+
+        static void PropertySetHandlers(
+            InitializingContentContext context, SponsorPart part) {
+            // add handlers that will update records when part properties are set
+            part.SponsorField.Setter(sponsor =&gt; {
+                part.Record.Sponsor = sponsor == null
+                    ? null
+                    : sponsor.ContentItem.Record;
+                return sponsor;
+            });
+
+            // Force call to setter if we had already set a value
+            if (part.SponsorField.Value != null)
+                part.SponsorField.Value = part.SponsorField.Value;
+        }
+    }
+}
+</code></pre>
+<p>The storage filter is as usual setting up the repository of sponsor part records, but we also have OnInitializing and OnLoaded event handlers that will respectively set-up the setter for the lazy field and the loader of the value that will be executed the first time the field is accessed.</p>
+<p>At loading time, we look at the record, and if there is a sponsor we get the full content item from the content manager using the record's id.</p>
+<p>The lazy field setter just sets the underlying record's Sponsor property.</p>
+<h2 id="the-driver">The Driver</h2>
+<p>The driver is relying on the following view model:</p>
+<pre><code>using System.Collections.Generic;
+using Orchard.ContentManagement;
+using RelationSample.Models;
+
+namespace RelationSample.ViewModels {
+    public class EditSponsorViewModel {
+        public int CustomerId { get; set; }
+        public int SponsorId { get; set; }
+        public IEnumerable&lt;CustomerViewModel&gt; Customers { get; set; }
+    }
+
+    public class CustomerViewModel {
+        public int Id { get; set;}
+        public string Name { get; set;}
+    }
+}
+</code></pre>
+<p>Here is the code for the driver itself, which should by now seem very familiar:</p>
+<pre><code>using System.Linq;
+using JetBrains.Annotations;
+using Orchard.ContentManagement;
+using Orchard.ContentManagement.Drivers;
+using RelationSample.Models;
+using RelationSample.Services;
+using RelationSample.ViewModels;
+
+namespace RelationSample.Drivers {
+    [UsedImplicitly]
+    public class SponsorPartDriver : ContentPartDriver&lt;SponsorPart&gt; {
+        private readonly ICustomerService _customerService;
+
+        private const string TemplateName = "Parts/Sponsor";
+
+        public SponsorPartDriver(ICustomerService customerService) {
+            _customerService = customerService;
+        }
+
+        protected override string Prefix {
+            get { return "Sponsor"; }
+        }
+
+        protected override DriverResult Display(
+            SponsorPart part, string displayType, dynamic shapeHelper) {
+
+            return ContentShape("Parts_Sponsor",
+                () =&gt; shapeHelper.Parts_Sponsor(
+                    ContentPart: part,
+                    Sponsor: part.Sponsor,
+                    SponsorName: _customerService.GetCustomerName(part.Sponsor)
+                    ));
+        }
+
+        protected override DriverResult Editor(
+            SponsorPart part, dynamic shapeHelper) {
+
+            return ContentShape("Parts_Sponsor_Edit",
+                    () =&gt; shapeHelper.EditorTemplate(
+                        TemplateName: TemplateName,
+                        Model: BuildEditorViewModel(part),
+                        Prefix: Prefix));
+        }
+
+        protected override DriverResult Editor(
+            SponsorPart part, IUpdateModel updater, dynamic shapeHelper) {
+
+            var model = new EditSponsorViewModel();
+            updater.TryUpdateModel(model, Prefix, null, null);
+
+            if (part.ContentItem.Id != 0) {
+                _customerService.UpdateSponsorForContentItem(
+                    part.ContentItem, model);
+            }
+
+            return Editor(part, shapeHelper);
+        }
+
+        private EditSponsorViewModel BuildEditorViewModel(SponsorPart part) {
+            var itemSponsor = new EditSponsorViewModel {
+                CustomerId = part.ContentItem.Id,
+                Customers = _customerService.GetCustomers()
+            };
+            if (part.Sponsor != null) {
+                itemSponsor.SponsorId = part.Sponsor.Id;
+            }
+            return itemSponsor;
+        }
+    }
+}
+</code></pre>
+<h2 id="the-service-class">The Service Class</h2>
+<p>The driver is also using the following helper service:</p>
+<pre><code>using System;
+using System.Collections.Generic;
+using System.Linq;
+using Orchard;
+using Orchard.ContentManagement;
+using Orchard.Data;
+using RelationSample.Models;
+using RelationSample.ViewModels;
+
+namespace RelationSample.Services {
+    public interface ICustomerService : IDependency {
+        void UpdateSponsorForContentItem(
+            ContentItem item, EditSponsorViewModel model);
+        string GetCustomerName(IContent customer);
+        IEnumerable&lt;CustomerViewModel&gt; GetCustomers();
+    }
+
+    public class CustomerService : ICustomerService {
+        private readonly IContentManager _contentManager;
+
+        public CustomerService(IContentManager contentManager) {
+            _contentManager = contentManager;
+        }
+
+        public void UpdateSponsorForContentItem(
+            ContentItem item, EditSponsorViewModel model) {
+
+            var sponsorPart = item.As&lt;SponsorPart&gt;();
+            sponsorPart.Sponsor = _contentManager.Get(model.SponsorId);
+        }
+
+        public string GetCustomerName(IContent customer) {
+            return customer.ContentItem.Parts
+                .SelectMany(p =&gt; p.Fields)
+                .Where(f =&gt; f.Name == "Name")
+                .First()
+                .Storage.Get&lt;string&gt;(null);
+        }
+
+        public IEnumerable&lt;CustomerViewModel&gt; GetCustomers() {
+            return _contentManager
+                .Query("Customer")
+                .List()
+                .Select(ci =&gt; new CustomerViewModel {
+                    Id = ci.Id,
+                    Name = GetCustomerName(ci)
+                });
+        }
+    }
+}
+</code></pre>
+<p>The only notable thing here is the way we are assuming the content type has a "Name" field that we'll use to build the list of customers that will be used to build the UI to select the sponsor. The GetCustomerName is implementing this assumption. Of course, you could also have a Customer part that has a Name property, or you could use Routable and its Title.</p>
+<h2 id="building-the-views_2">Building the Views</h2>
+<p>The editor and front-end views should by now look fairly familiar:</p>
+<pre><code>@model RelationSample.ViewModels.EditSponsorViewModel
+&lt;fieldset&gt;
+  &lt;legend&gt;Sponsor&lt;/legend&gt;
+  &lt;div class="editor-field"&gt;
+    @Html.DropDownListFor(model =&gt; model.SponsorId,
+        Model.Customers
+            .Where(c =&gt; c.Id != Model.CustomerId)
+            .Select(c =&gt; new SelectListItem {
+                Selected = c.Id == Model.SponsorId,
+                Text = c.Name,
+                Value = c.Id.ToString()
+            }),
+        "Choose a customer...")
+    @Html.ValidationMessageFor(model =&gt; model.SponsorId)
+  &lt;/div&gt;
+&lt;/fieldset&gt;
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> Again, we are assuming a small number of customers. In a real scenario where there are too many customers to be handled in a drop-down-list, it would be possible to adapt the code in this sample by changing among other things the kind of UI that is used to select the sponsor customer.</p>
+</blockquote>
+<p>The front-end view is as follows:</p>
+<pre><code>@if (Model.Sponsor != null) {
+  &lt;text&gt;Customer sponsored by @Model.SponsorName.&lt;/text&gt;
+}
+</code></pre>
+<p>Of course, the placement file also needs to be updated:</p>
+<pre><code>&lt;Placement&gt;
+    &lt;Place Parts_Address_Edit="Content:10"/&gt;
+    &lt;Place Parts_Address="Content:10"/&gt;
+    &lt;Place Parts_Rewards_Edit="Content:11"/&gt;
+    &lt;Place Parts_Rewards="Content:11"/&gt;
+    &lt;Place Parts_Sponsor_Edit="Content:12"/&gt;
+    &lt;Place Parts_Sponsor="Content:12"/&gt;
+&lt;/Placement&gt;
+</code></pre>
+<h2 id="using-the-sponsor-part">Using the Sponsor Part</h2>
+<p>We can now go back to the Customer type definition and add our new part. Now when we create a new customer, we can choose his sponsor:</p>
+<p><img alt="" src="../../Attachments/Creating-1-n-and-n-n-relations/EditCustomerWithSponsor.PNG" /></p>
+<p>On the front-end, the sponsor now also appears:</p>
+<p><img alt="" src="../../Attachments/Creating-1-n-and-n-n-relations/CustomerWithSponsor.PNG" /></p>
+<h1 id="accessing-nhibernate-configuration-directly">Accessing NHibernate Configuration directly</h1>
+<p>For most relationships these conventions should create and auto-map your data model appropriately. However, for more complex data models you may find that it's necessary to access the NHibernate configuration directly in order to appropriately map classes. You can do this by implementing the ISessionConfigurationEvents interface like so:</p>
+<pre><code>using FluentNHibernate.Automapping;
+using FluentNHibernate.Cfg;
+using NHibernate.Cfg;
+using Orchard.Data;
+using Orchard.Utility;
+
+namespace DataMapping.Example
+{
+    public class Mappings : ISessionConfigurationEvents
+    {
+        public void Created(FluentConfiguration cfg, AutoPersistenceModel defaultModel)
+        {
+            //Many-to-many mapping example
+            defaultModel.Override&lt;ClassA&gt;(x =&gt; x.HasManyToMany(y =&gt; y.ClassB).Cascade.All()
+                .Table("DataMapping_Example_ClassAClassBCrossReferenceTable"));
+
+            //One-to-One example
+            defaultModel.Override&lt;ClassA&gt;(x =&gt; x.HasOne(y =&gt; y.ClassB));
+
+        }
+
+        public void Prepared(FluentConfiguration cfg) {}
+
+        public void Building(Configuration cfg) {}
+
+        public void Finished(Configuration cfg) {}
+
+        public void ComputingHash(Hash hash) {}
+    }
+}
+</code></pre>
+<h1 id="conclusion">Conclusion</h1>
+<p>This topic should show the way for the creation of complex content parts involving arbitrary data relations. There is actually not much to it, as the system already knows how to persist and bind such complex objects. Rather, it's a matter of building the model according to the conventions in place.</p>
+<p>You may download the code for this topic from this link: <a href="../../Attachments/Creating-1-n-and-n-n-relations/Orchard.Module.RelationSample.0.5.0.zip">Orchard.Module.RelationSample.0.5.0.zip</a></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Manifest-files/" class="btn btn-neutral float-right" title="Manifest Files for Modules and Themes">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Writing-a-widget/" class="btn btn-neutral" title="Writing a Widget"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Writing-a-widget/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Manifest-files/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

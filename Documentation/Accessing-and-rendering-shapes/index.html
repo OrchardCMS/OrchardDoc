@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Accessing and Rendering Shapes - Orchard Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../Styles/Site.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Accessing and Rendering Shapes";
+    var mkdocs_page_input_path = "Documentation\Accessing-and-rendering-shapes.markdown";
+    var mkdocs_page_url = "/Documentation/Accessing-and-rendering-shapes/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-20757794-1', 'orchardproject.net');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Orchard Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-Orchard/">Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manually-installing-Orchard-zip-file/">Manually Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Working-with-Orchard-in-WebMatrix/">Working with Orchard in WebMatrix</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-around-the-dashboard/">Getting Around the Dashboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started/">Building Your First Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation-and-menus/">Navigation and Menus</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-a-Blog-to-Your-Site/">Adding a Blog to Your Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-and-managing-media-content/">Adding and Managing Media Content</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-widgets/">Managing Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Organizing-content-with-tags/">Organizing Content Using Tags</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>About the Project</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Basic-Orchard-Concepts/">Orchard Concept Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Builtin-Features/">Built-in modules and features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Feature-roadmap/">Feature roadmap</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Frequently-asked-questions/">Frequently Asked Questions</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-TV/">Tutorial Videos</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Authoring Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogging-with-LiveWriter/">Blogging with LiveWriter</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-global-ready-applications/">Creating Global-Ready Applications</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Search-and-indexing/">Search and Indexing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Saving-scheduling-and-publishing-drafts/">Publishing Drafts</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-custom-content-types/">Creating Custom Content Types</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Customizing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Previewing-and-applying-a-theme/">Previewing and Applying a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-themes/">Installing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-the-default-theme/">Customizing Themes</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using the Orchard Gallery</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Gallery-overview/">Gallery Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-modules-and-themes-from-the-gallery/">Installing Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Browsing-the-gallery-web-site/">Browsing the Gallery Web Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-a-module-or-theme-to-the-gallery/">Contributing to the Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Module-gallery-feeds/">Registering Additional Gallery Feeds</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Managing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Enabling-and-disabling-features/">Enabling and Disabling Features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-the-command-line-interface/">Using the Command-Line Interface</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-and-upgrading-modules/">Installing and Upgrading Modules</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Modifying-site-settings/">Modifying Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Moderating-comments/">Moderating Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-users-and-roles/">Managing Users and Roles</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-permissions/">Understanding Permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Making-a-Web-Site-Recipe/">Making a Website Recipe</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-an-image-gallery/">Creating an Image Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Workflows/">Workflows</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Projection/">Projection</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-Dynamic-Forms/">Create Dynamic Forms</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Hosting and Deploying Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Upgrading-a-site-to-a-new-version-of-Orchard/">Upgrading a Site to a New Version</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Optimizing-Performance-of-Orchard-with-Shared-Hosting/">Optimizing Server Performance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Whats-new-for-Windows-Azure-in-Orchard-1-7-1/">What's New for Windows Azure in Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Deploying-Orchard-to-Windows-Azure/">Deploying Orchard to Windows Azure</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Blob-Storage/">Using Windows Azure Blob Storage</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Cache/">Using Windows Azure Cache</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Running-Orchard-on-Mono/">Running Orchard on Mono</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-multi-tenant-Orchard-site/">Setting Up a Multi-Tenant Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-machine-key/">Setting Up a Machine Key</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Orchard</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../First-steps-into-Orchard/">First Steps into Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../How-Orchard-works/">How Orchard Works</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Command-line-scaffolding/">Command-Line Code Generation</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Getting Started with Modules Course</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-1/">Part 1: Build a Static Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-2/">Part 2: Make the Widget Dynamic</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-3/">Part 3: Using the Orchard API</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-4/">Part 4: Applying Best Practices</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Building-a-hello-world-module/">Building a Hello World Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-a-module-with-a-simple-text-editor/">Creating a Module with a Simple Text Editor</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-content-part/">Writing a Content Part</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-a-custom-field-type/">Writing a Content Field</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-a-module/">Packaging and Sharing a Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-widget/">Writing a Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-1-n-and-n-n-relations/">Creating _1-N_ and _N-N_ Relations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manifest-files/">Manifest Files for Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Caching/">Caching</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-custom-settings/">Custom Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../WebApi-In-Orchard/">Web Api in Orchard</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Working with Data</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-data-access/">Understanding Data Access</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-content-handlers/">Understanding Content Handlers</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Creating Themes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-new-theme/">Writing a New Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Anatomy-of-a-theme/">The Anatomy of a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-placement-info/">Understanding the placement.info File</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Accessing and Rendering Shapes</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#introducing-shapes">Introducing Shapes</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#creating-shapes">Creating Shapes</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#naming-shapes-and-templates">Naming Shapes and Templates</a></li>
+                
+                    <li><a class="toctree-l4" href="#from-template-file-name-to-shape-name">From Template File Name to Shape Name</a></li>
+                
+                    <li><a class="toctree-l4" href="#alternate-shape-rendering">Alternate Shape Rendering</a></li>
+                
+                    <li><a class="toctree-l4" href="#which-alternate-will-be-rendered">Which Alternate Will Be Rendered?</a></li>
+                
+                    <li><a class="toctree-l4" href="#built-in-content-item-alternates">Built-In Content Item Alternates</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#rendering-shapes-using-templates">Rendering Shapes Using Templates</a></li>
+                
+                    <li><a class="toctree-l4" href="#wrappers">Wrappers</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#creating-a-shape-method">Creating a Shape Method</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Alternates/">Alternates</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Template-file-syntax-guide/">Template File Syntax Guide</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-themes/">Packaging and Sharing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../UI-guidelines-for-theme-authors/">UI Guidelines for Theme Authors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-Orchard-using-Designer-Helper-Tools/">Customizing Orchard Using Designer Helper Tools</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Developer Tools and Guidelines</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Developer-FAQ/">Developer FAQ</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-source-enlistment/">Setting Up a Source Enlistment</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Source-code-organization/">Source Code Organization</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-dependencies-and-libraries/">Dependencies and Libraries</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code-conventions/">Code Conventions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Continuous-integration/">Continuous Integration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Merging-Pull-Requests/">Merging Pull Requests</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Additional Topics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-module-loader-and-dynamic-compilation/">Orchard Dynamic Compilation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Configuring-email/">Configuring Email</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Involved</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-documentation/">Contributing Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Documentation-Style-Guidelines/">Documentation Style Guidelines</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-patches/">Contributing Patches</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10-1.Release-Notes/">Orchard 1.10.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10.Release-Notes/">Orchard 1.10</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-3.Release-Notes/">Orchard 1.9.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-2.Release-Notes/">Orchard 1.9.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-1.Release-Notes/">Orchard 1.9.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9.Release-Notes/">Orchard 1.9</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-2.release-notes/">Orchard 1.8.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-1.Release-Notes/">Orchard 1.8.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-Release-Notes/">Orchard 1.8</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-2-Release-Notes/">Orchard 1.7.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-1-Release-Notes/">Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-Release-Notes/">Orchard 1.7</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-6-Release-Notes/">Orchard 1.6</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-5-Release-Notes/">Orchard 1.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-4-Release-Notes/">Orchard 1.4</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>User Experiences</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Walkthroughs/">Walkthroughs and UI Mockups</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Archived Specs</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogs/">Blogs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Comments/">Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Content-types/">Content types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Definitions/">Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Fundamentals-doctype/">HTML doctype</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Linkback/">Linkbacks: Pingbacks, Refbacks and Trackbacks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Media-management/">Media management</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation/">Navigation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-editing/">Page editing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages/">Page management and publishing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-publishing/">Page publishing workflow</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Rss-atom/">RSS and Atom feeds</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Slugs/">Slugs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Templates/">Page templates and syntax</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Tags/">Tags</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes/">Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes-includes/">Theme includes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Users/">Users, roles and permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Widgets/">Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Xml-Rpc/">XML-RPC and Live Writer</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-lists/">Creating lists of content items</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Orchard Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Creating Themes &raquo;</li>
+        
+      
+    
+    <li>Accessing and Rendering Shapes</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>A <em>shape</em> is a dynamic data model.
+The purpose of a shape is to replace the static view model of ASP.NET MVC by using a model
+that can be updated at run time&#151;that is, by using a dynamic shape.
+You can think of shapes as the blobs of data that get handed to templates for rendering.</p>
+<p>This article introduces the concept of shapes and explains how to work with them.
+It's intended for module and theme developers who have at least a basic understanding of Orchard modules.
+For information about creating modules, see the <a href="../Getting-Started-with-Modules">Getting Started with Modules course</a>.
+For information about dynamic objects, see <a href="http://msdn.microsoft.com/en-us/library/ee461504.aspx">Creating and Using Dynamic Objects</a>.</p>
+<h1 id="introducing-shapes">Introducing Shapes</h1>
+<p>Shapes are dynamic data models that use shape templates to make the data visible to the user in the way you want.
+Shape templates are fragments of markup for rendering shapes.
+Examples of shapes include menus, menu items, content items, documents, and messages.</p>
+<p>A shape is a data model object that derives from the <code>Orchard.DisplayManagement.Shapes.Shape</code> class.
+The <code>Shape</code> class is never instantiated. Instead, shapes are created at run time by a shape factory.
+The default shape factory is <code>Orchard.DisplayManagement.Implementation.DefaultShapeFactory</code>.
+The shapes created by the shape factory are dynamic objects.</p>
+<blockquote>
+<p><strong>Note</strong><code></code>Dynamic objects are new to the .NET Framework 4.
+As a dynamic object, a shape exposes its members at run time instead of at compile time.
+By contrast, an ASP.NET MVC model object is a static object that's defined at compile time.</p>
+</blockquote>
+<p>Information about the shape is contained in the <code>ShapeMetadata</code> property of the shape itself.
+This information includes the shape's type, display type, position, prefix, wrappers, alternates,
+child content, and a <code>WasExecuted</code> Boolean value.</p>
+<p>You can access the shape's metadata as shown in the following example:</p>
+<pre><code>var shapeType = shapeName.Metadata.Type;
+</code></pre>
+<p>After the shape object is created, the shape is rendered with the help of a shape template.
+A shape template is a piece of HTML markup (partial view) that is responsible for displaying the shape.
+Alternatively, you can use a shape attribute (<code>Orchard.DisplayManagement.ShapeAttribute</code>)
+that enables you to write code that creates and displays the shape without using a template.</p>
+<h1 id="creating-shapes">Creating Shapes</h1>
+<p>For module developers, the most common need for shapes is to transport data from a driver to a template for rendering.
+A driver derives from the <code>Orchard.ContentManagement.Drivers.ContentPartDriver</code> class
+and typically overrides that class's <code>Display</code> and <code>Editor</code> methods.
+The <code>Display</code> and <code>Editor</code> methods return a <code>ContentShapeResult</code> object, which is analogous to
+the <code>ActionResult</code> object returned by action methods in ASP.NET MVC.
+The <code>ContentShape</code> method helps you create the shape and return it in a <code>ContentShapeResult</code> object.</p>
+<p>Although the <code>ContentShape</code> method is overloaded, the most typical use is to pass it two
+parameters&#151;the shape type and a dynamic function expression that defines the shape.
+The shape type names the shape and binds the shape to the template that will be used to render it.
+The naming conventions for shape types are discussed later in
+<a href="../Accessing-and-rendering-shapes#NamingShapesandTemplates">Naming Shapes and Templates</a>.</p>
+<p>The function expression can be described best by using an example.
+The following example shows a driver's <code>Display</code> method that returns a shape result,
+which will be used to display a <code>Map</code> part.</p>
+<pre><code>protected override DriverResult Display(
+    MapPart part, string displayType, dynamic shapeHelper)
+{
+return ContentShape("Parts_Map",
+                     () =&gt; shapeHelper.Parts_Map(
+                           Longitude: part.Longitude, 
+                           Latitude: part.Latitude));
+}
+</code></pre>
+<p>The expression uses a dynamic object (<code>shapeHelper</code>) to define a <code>Parts_Map</code> shape and its attributes.
+The expression adds a <code>Longitude</code> property to the shape and sets it equal to the part's <code>Longitude</code> property.
+The expression also adds a <code>Latitude</code> property to the shape and sets it equal to the part's <code>Latitude</code> property.
+The <code>ContentShape</code> method creates the results object that is returned by the <code>Display</code> method.</p>
+<p>The following example shows the entire driver class that sends a shape result to a template either
+to be displayed or edited in a <code>Map</code> part. The <code>Display</code> method is used to display the map.
+The <code>Editor</code> method marked "GET" is used to display the shape result in editing view for user input.
+The <code>Editor</code> method marked "POST" is used to redisplay the editor view using the values provided by the user.
+These methods use different overloads of the <code>Editor</code> method.</p>
+<pre><code>using Maps.Models;
+using Orchard.ContentManagement;
+using Orchard.ContentManagement.Drivers;
+
+namespace Maps.Drivers
+{
+    public class MapPartDriver : ContentPartDriver&lt;MapPart&gt;
+    {
+        protected override DriverResult Display(
+            MapPart part, string displayType, dynamic shapeHelper)
+        {
+            return ContentShape("Parts_Map",
+                                () =&gt; shapeHelper.Parts_Map(
+                                      Longitude: part.Longitude, 
+                                      Latitude: part.Latitude));
+        }
+
+        //GET
+        protected override DriverResult Editor(
+            MapPart part, dynamic shapeHelper)
+        {
+            return ContentShape("Parts_Map_Edit",
+                                () =&gt; shapeHelper.EditorTemplate(
+                                      TemplateName: "Parts/Map", 
+                                      Model: part));
+        }
+
+        //POST
+        protected override DriverResult Editor(
+            MapPart part, IUpdateModel updater, dynamic shapeHelper)
+        {
+            updater.TryUpdateModel(part, Prefix, null, null);
+            return Editor(part, shapeHelper);
+        }
+    }
+}
+</code></pre>
+<p>The <code>Editor</code> method marked "GET" uses the <code>ContentShape</code> method to create a shape for an editor template.
+In this case, the type name is <code>Parts_Map_Edit</code> and the <code>shapeHelper</code> object creates an <code>EditorTemplate</code> shape.
+This is a special shape that has a <code>TemplateName</code> property and a <code>Model</code> property.
+The <code>TemplateName</code> property takes a partial path to the template.
+In this case, <code>"Parts/Map"</code> causes Orchard to look for a template in your module at the following path: </p>
+<p><em>Views/EditorTemplates/Parts/Map.cshtml</em></p>
+<p>The <code>Model</code> property takes the name of the part's model file, but without the file-name extension.</p>
+<h1 id="naming-shapes-and-templates">Naming Shapes and Templates</h1>
+<p>As noted, the name given to a shape type binds the shape to the template that will be used to render the shape.
+For example, suppose you create a part named <code>Map</code> that displays a map for the specified longitude and latitude.
+The name of the shape type might be <code>Parts_Map</code>. By convention, all part shapes begin with <code>Parts_</code> followed by the name of the part (in this case <code>Map</code>). Given this name (<code>Parts_Map</code>), Orchard looks for a template in your module at the following path: </p>
+<p><em>views/parts/Map.cshtml</em></p>
+<p>The following table summarizes the conventions that are used to name shape types and templates.</p>
+<table>
+<thead>
+<tr>
+<th>Applied To</th>
+<th>Shape Naming Convention</th>
+<th>Shape Type Example</th>
+<th>Template Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content shapes</td>
+<td>Content__[ContentType]</td>
+<td>Content__BlogPost</td>
+<td>Content-BlogPost</td>
+</tr>
+<tr>
+<td>Content shapes</td>
+<td>Content__[Id]</td>
+<td>Content__42</td>
+<td>Content-42</td>
+</tr>
+<tr>
+<td>Content shapes</td>
+<td>Content__[DisplayType]</td>
+<td>Content__Summary</td>
+<td>Content.Summary</td>
+</tr>
+<tr>
+<td>Content shapes</td>
+<td>Content_[DisplayType]__[ContentType]</td>
+<td>Content_Summary__BlogPost</td>
+<td>Content-BlogPost.Summary</td>
+</tr>
+<tr>
+<td>Content shapes</td>
+<td>Content_[DisplayType]__[Id]</td>
+<td>Content_Summary__42</td>
+<td>Content-42.Summary</td>
+</tr>
+<tr>
+<td>Content.Edit shapes</td>
+<td>Content_Edit__[DisplayType]</td>
+<td>Content_Edit__Page</td>
+<td>Content-Page.Edit</td>
+</tr>
+<tr>
+<td>Content Part templates</td>
+<td>[ShapeType]__[Id]</td>
+<td>Parts_Common_Metadata__42</td>
+<td>Parts/Common.Metadata-42</td>
+</tr>
+<tr>
+<td>Content Part templates</td>
+<td>[ShapeType]__[ContentType]</td>
+<td>Parts_Common_Metadata__BlogPost</td>
+<td>Parts/Common.Metadata-BlogPost</td>
+</tr>
+<tr>
+<td>Field templates</td>
+<td>[ShapeType]__[FieldName]</td>
+<td>Fields_Common_Text__Teaser</td>
+<td>Fields/Common.Text-Teaser</td>
+</tr>
+<tr>
+<td>Field templates</td>
+<td>[ShapeType]__[PartName]</td>
+<td>Fields_Common_Text__TeaserPart</td>
+<td>Fileds/Common.Text-TeaserPart</td>
+</tr>
+<tr>
+<td>Field templates</td>
+<td>[ShapeType]__[ContentType]__[PartName]</td>
+<td>Fields_Common_Text__Blog__TeaserPart</td>
+<td>Fields/Common.Text-Blog-TeaserPart</td>
+</tr>
+<tr>
+<td>Field templates</td>
+<td>[ShapeType]__[PartName]__[FieldName]</td>
+<td>Fields_Common_Text__TeaserPart__Teaser</td>
+<td>Fields/Common.Text-TeaserPart-Teaser</td>
+</tr>
+<tr>
+<td>Field templates</td>
+<td>[ShapeType]__[ContentType]__[FieldName]</td>
+<td>Fields_Common_Text__Blog__Teaser</td>
+<td>Fields/Common.Text-Blog-Teaser</td>
+</tr>
+<tr>
+<td>Field templates</td>
+<td>[ShapeType]__[ContentType]__[PartName]__[FieldName]</td>
+<td>Fields_Common_Text__Blog__TeaserPart__Teaser</td>
+<td>Fields/Common.Text-Blog-TeaserPart-Teaser</td>
+</tr>
+<tr>
+<td>LocalMenu</td>
+<td>LocalMenu__[MenuName]</td>
+<td>LocalMenu__main</td>
+<td>LocalMenu-main</td>
+</tr>
+<tr>
+<td>LocalMenuItem</td>
+<td>LocalMenuItem__[MenuName]</td>
+<td>LocalMenuItem__main</td>
+<td>LocalMenuItem-main</td>
+</tr>
+<tr>
+<td>Menu</td>
+<td>Menu__[MenuName]</td>
+<td>Menu__main</td>
+<td>Menu-main</td>
+</tr>
+<tr>
+<td>MenuItem</td>
+<td>MenuItem__[MenuName]</td>
+<td>MenuItem__main</td>
+<td>MenuItem-main</td>
+</tr>
+<tr>
+<td>Resource</td>
+<td>Resource__[FileName]</td>
+<td>Resource__flower.gif</td>
+<td>Resource-flower.gif</td>
+</tr>
+<tr>
+<td>Style</td>
+<td>Style__[FileName]</td>
+<td>Style__site.css</td>
+<td>Style-site.css</td>
+</tr>
+<tr>
+<td>Widget</td>
+<td>Widget__[ContentType]</td>
+<td>Widget__HtmlWidget</td>
+<td>Widget-HtmlWidget</td>
+</tr>
+<tr>
+<td>Widget</td>
+<td>Widget__[ZoneName]</td>
+<td>Widget__AsideSecond</td>
+<td>Widget-AsideSecond</td>
+</tr>
+<tr>
+<td>Zone</td>
+<td>Zone__[ZoneName]</td>
+<td>Zone__AsideSecond</td>
+<td>Zone-AsideSecond</td>
+</tr>
+</tbody>
+</table>
+<p>You should put your templates in the project according to the following rules:</p>
+<ul>
+<li>Content item shape templates are in the <em>views/items</em> folder.</li>
+<li><code>Parts_</code> shape templates are in the <em>views/parts</em> folder.</li>
+<li><code>Fields_</code> shape templates are in the <em>views/fields</em> folder.</li>
+<li>The <code>EditorTemplate</code> shape templates are in the <em>views/EditorTemplates/</em><code>template</code> name folder.<br />
+For example, an <code>EditorTemplate</code> with a template name of <em>Parts/Routable.RoutePart</em> has its template
+at <em>views/EditorTemplates/Parts/Routable.RoutePart.cshtml</em>.</li>
+<li>All other shape templates are in the <em>views</em> folder.</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong><code></code>The template extension can be any extension supported by an active view engine, such as <em>.cshtml</em>, <em>.vbhtml</em>, or <em>.ascx</em>.</p>
+</blockquote>
+<h2 id="from-template-file-name-to-shape-name">From Template File Name to Shape Name</h2>
+<p>More generally, the rules to map from a template file name to the corresponding shape name are the following:</p>
+<ul>
+<li>Dot (.) and backslash () change to underscore (<em>).
+Note that this does not mean that an _example.cshtml</em> file in a <em>myviews</em> subdirectory of <em>Views</em>
+is equivalent to a <em>myviews_example.chtml</em> file in <em>Views</em>.
+The shape templates must still be in the expected directory (see above).</li>
+<li>Hyphen (-) changes to a double underscore (__).</li>
+</ul>
+<p>For example, <em>Views/Hello.World.cshtml</em> will be used to render a shape named <code>Hello_World</code>,
+and <em>Views/Hello.World-85.cshtml</em> will be used to render a shape named <code>Hello_World__85</code>.</p>
+<h2 id="alternate-shape-rendering">Alternate Shape Rendering</h2>
+<p>As noted, an HTML widget in the <code>AsideSecond</code> zone (for example) could be rendered
+by a <em>widget.cshtml</em> template, by a <em>widget-htmlwidget.cshtml</em> template,
+or by a <em>widget-asidesecond.cshtml</em> if they exist in the current theme.
+When various possibilities exist to render the same content,
+these are referred to as <em>alternates</em> of the shape,
+and they enable rich template overriding scenarios.</p>
+<p>Alternates form a group that corresponds to the same shape if they differ only by a double-underscore suffix.
+For example, <code>Hello_World</code>, <code>Hello_World__85</code>, and <code>Hello_World__DarkBlue</code> are an alternate group
+for a <code>Hello_World</code> shape. <code>Hello_World_Summary</code>, conversely, does not belong to that group
+and would correspond to a <code>Hello_World_Shape</code> shape, not to a <code>Hello_World</code> shape.
+(Notice the difference between "__" and "_".)</p>
+<h2 id="which-alternate-will-be-rendered">Which Alternate Will Be Rendered?</h2>
+<p>Even if it has alternates, a shape is always created with the base name, such as <code>Hello_World</code>.
+Alternates give additional template name options to the theme developer beyond the default
+(such as <em>hello.world.cshtml</em>).
+The system will choose the most specialized template available among the alternates,
+so <em>hello.world-orange.cshtml</em> will be preferred to <em>hello.world.cshtml</em> if it exists.</p>
+<h2 id="built-in-content-item-alternates">Built-In Content Item Alternates</h2>
+<p>The table above shows possible template names for content items.
+It should now be clear that the shape name is built from <code>Content</code>
+and the display type (for example <code>Content_Summary</code>).</p>
+<p>The system also automatically adds the content type and the content ID as alternates
+(for example <code>Content_Summary__Page</code> and <code>Content_Summary__42</code>).</p>
+<p>For more information about how to use alternates, see <a href="../Alternates">Alternates</a>.</p>
+<h1 id="rendering-shapes-using-templates">Rendering Shapes Using Templates</h1>
+<p>A shape template is a fragment of markup that is used to render the shape.
+The default view engine in Orchard is the Razor view engine.
+Therefore, shape templates use Razor syntax by default.
+For an introduction to Razor syntax, see <a href="../Template-file-syntax-guide">Template File Syntax Guide</a>.</p>
+<p>The following example shows a template for displaying a <code>Map</code> part as an image. </p>
+<pre><code>&lt;img alt="Location" border="1" src="http://maps.google.com/maps/api/staticmap? 
+     &amp;zoom=14
+     &amp;size=256x256
+     &amp;maptype=satellite&amp;markers=color:blue|@Model.Latitude,@Model.Longitude
+     &amp;sensor=false" /&gt;
+</code></pre>
+<p>This example shows an <code>img</code> element in which the <code>src</code> attribute contains a URL
+and a set of parameters passed as query-string values.
+In this query string, <code>@Model</code> represents the shape that was passed into the template.
+Therefore, <code>@Model.Latitude</code> is the <code>Latitude</code> property of the shape,
+and <code>@Model.Longitude</code> is the <code>Longitude</code> property of the shape.</p>
+<p>The following example shows the template for the editor.
+This template enables the user to enter values for the latitude and longitude.</p>
+<pre><code>@model Maps.Models.MapPart
+
+&lt;fieldset&gt;
+    &lt;legend&gt;Map Fields&lt;/legend&gt;
+
+    &lt;div class="editor-label"&gt;
+        @Html.LabelFor(model =&gt; model.Longitude)
+    &lt;/div&gt;
+    &lt;div class="editor-field"&gt;
+        @Html.TextBoxFor(model =&gt; model.Latitude)
+        @Html.ValidationMessageFor(model =&gt; model.Latitude)
+    &lt;/div&gt;
+
+    &lt;div class="editor-label"&gt;
+        @Html.LabelFor(model =&gt; model.Longitude)
+    &lt;/div&gt;
+    &lt;div class="editor-field"&gt;
+        @Html.TextBoxFor(model =&gt; model.Longitude)
+        @Html.ValidationMessageFor(model =&gt; model.Longitude)
+    &lt;/div&gt;
+&lt;/fieldset&gt;
+</code></pre>
+<p>The <code>@Html.LabelFor</code> expressions create labels using the name of the shape properties.
+The <code>@Html.TextBoxFor</code> expressions create text boxes where users enter values for the shape properties.
+The <code>@Html.ValidationMessageFor</code> expressions create messages that are displayed if users enter an invalid value.</p>
+<h2 id="wrappers">Wrappers</h2>
+<p>Wrappers let you customize the rendering of a shape by adding markup around the shape.
+For example, <em>Document.cshtml</em> is a wrapper for the <code>Layout</code> shape, because it specifies
+the markup code that  surrounds the <code>Layout</code> shape.
+For more information about the relationship between <code>Document</code> and <code>Layout</code>,
+see <a href="../Template-file-syntax-guide">Template File Syntax Guide</a>.</p>
+<p>Typically, you add a wrapper file to the <em>Views</em> folder of  your theme.
+For example, to add a wrapper for <code>Widget</code>, you add a <em>Widget.Wrapper.cshtml</em> file to
+the <em>Views</em> folder of your theme.
+If you enable the <strong>Shape Tracing</strong> feature, you'll see the available wrapper names for a shape.
+You can also specify a wrapper in the <em>placement.info</em> file.
+For more information about how to specify  a wrapper,
+see <a href="../Understanding-placement-info">Understanding the placement.info File</a>.</p>
+<h1 id="creating-a-shape-method">Creating a Shape Method</h1>
+<p>Another way to create and render a shape is to create a method that both defines and renders the shape.
+The method must be marked with the <code>Shape</code> attribute (the <code>Orchard.DisplayManagement.ShapeAttribute</code> class).
+The method returns an <code>IHtmlString</code> object instead of using a template;
+the returned object contains the markup that renders the shape. </p>
+<p>The following example shows the <code>DateTimeRelative</code> shape.
+This shape takes a <code>DateTime</code> value in the past and returns a string that relates the value to the current time.</p>
+<pre><code>public class DateTimeShapes : IDependency {
+    private readonly IClock _clock;
+
+    public DateTimeShapes(IClock clock) {
+        _clock = clock;
+        T = NullLocalizer.Instance;
+    }
+
+    public Localizer T { get; set; }
+
+    [Shape]
+    public IHtmlString DateTimeRelative(HtmlHelper Html, DateTime dateTimeUtc) {
+        var time = _clock.UtcNow - dateTimeUtc;
+
+        if (time.TotalDays &gt; 7)
+            return Html.DateTime(dateTimeUtc, T("'on' MMM d yyyy 'at' h:mm tt"));
+        if (time.TotalHours &gt; 24)
+            return T.Plural("1 day ago", "{0} days ago", time.Days);
+        if (time.TotalMinutes &gt; 60)
+            return T.Plural("1 hour ago", "{0} hours ago", time.Hours);
+        if (time.TotalSeconds &gt; 60)
+            return T.Plural("1 minute ago", "{0} minutes ago", time.Minutes);
+        if (time.TotalSeconds &gt; 10)
+            return T.Plural("1 second ago", "{0} seconds ago", time.Seconds);
+
+        return T("a moment ago");
+    }
+}
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Alternates/" class="btn btn-neutral float-right" title="Alternates">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Understanding-placement-info/" class="btn btn-neutral" title="Understanding the placement.info File"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Understanding-placement-info/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Alternates/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

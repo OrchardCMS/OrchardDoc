@@ -1,0 +1,1658 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Writing a Content Field - Orchard Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../Styles/Site.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Writing a Content Field";
+    var mkdocs_page_input_path = "Documentation\Creating-a-custom-field-type.markdown";
+    var mkdocs_page_url = "/Documentation/Creating-a-custom-field-type/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-20757794-1', 'orchardproject.net');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Orchard Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-Orchard/">Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manually-installing-Orchard-zip-file/">Manually Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Working-with-Orchard-in-WebMatrix/">Working with Orchard in WebMatrix</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-around-the-dashboard/">Getting Around the Dashboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started/">Building Your First Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation-and-menus/">Navigation and Menus</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-a-Blog-to-Your-Site/">Adding a Blog to Your Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-and-managing-media-content/">Adding and Managing Media Content</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-widgets/">Managing Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Organizing-content-with-tags/">Organizing Content Using Tags</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>About the Project</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Basic-Orchard-Concepts/">Orchard Concept Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Builtin-Features/">Built-in modules and features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Feature-roadmap/">Feature roadmap</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Frequently-asked-questions/">Frequently Asked Questions</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-TV/">Tutorial Videos</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Authoring Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogging-with-LiveWriter/">Blogging with LiveWriter</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-global-ready-applications/">Creating Global-Ready Applications</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Search-and-indexing/">Search and Indexing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Saving-scheduling-and-publishing-drafts/">Publishing Drafts</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-custom-content-types/">Creating Custom Content Types</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Customizing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Previewing-and-applying-a-theme/">Previewing and Applying a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-themes/">Installing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-the-default-theme/">Customizing Themes</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using the Orchard Gallery</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Gallery-overview/">Gallery Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-modules-and-themes-from-the-gallery/">Installing Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Browsing-the-gallery-web-site/">Browsing the Gallery Web Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-a-module-or-theme-to-the-gallery/">Contributing to the Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Module-gallery-feeds/">Registering Additional Gallery Feeds</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Managing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Enabling-and-disabling-features/">Enabling and Disabling Features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-the-command-line-interface/">Using the Command-Line Interface</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-and-upgrading-modules/">Installing and Upgrading Modules</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Modifying-site-settings/">Modifying Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Moderating-comments/">Moderating Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-users-and-roles/">Managing Users and Roles</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-permissions/">Understanding Permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Making-a-Web-Site-Recipe/">Making a Website Recipe</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-an-image-gallery/">Creating an Image Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Workflows/">Workflows</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Projection/">Projection</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-Dynamic-Forms/">Create Dynamic Forms</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Hosting and Deploying Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Upgrading-a-site-to-a-new-version-of-Orchard/">Upgrading a Site to a New Version</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Optimizing-Performance-of-Orchard-with-Shared-Hosting/">Optimizing Server Performance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Whats-new-for-Windows-Azure-in-Orchard-1-7-1/">What's New for Windows Azure in Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Deploying-Orchard-to-Windows-Azure/">Deploying Orchard to Windows Azure</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Blob-Storage/">Using Windows Azure Blob Storage</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Cache/">Using Windows Azure Cache</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Running-Orchard-on-Mono/">Running Orchard on Mono</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-multi-tenant-Orchard-site/">Setting Up a Multi-Tenant Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-machine-key/">Setting Up a Machine Key</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Orchard</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../First-steps-into-Orchard/">First Steps into Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../How-Orchard-works/">How Orchard Works</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Command-line-scaffolding/">Command-Line Code Generation</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Getting Started with Modules Course</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-1/">Part 1: Build a Static Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-2/">Part 2: Make the Widget Dynamic</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-3/">Part 3: Using the Orchard API</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-4/">Part 4: Applying Best Practices</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Building-a-hello-world-module/">Building a Hello World Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-a-module-with-a-simple-text-editor/">Creating a Module with a Simple Text Editor</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-content-part/">Writing a Content Part</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Writing a Content Field</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#objectives">Objectives</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#creating-a-module">Creating a Module</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#modeling-the-field">Modeling the Field</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#creating-a-view-model">Creating a View Model</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#creating-settings-for-the-field">Creating Settings for the Field</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#writing-the-driver">Writing the Driver</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#writing-the-templates">Writing the Templates</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#managing-the-field-settings">Managing the Field Settings</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#updating-the-project-file">Updating the Project File</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#adding-the-style-sheet">Adding the Style Sheet</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#using-the-field">Using the Field</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#getting-the-code">Getting the Code</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-a-module/">Packaging and Sharing a Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-widget/">Writing a Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-1-n-and-n-n-relations/">Creating _1-N_ and _N-N_ Relations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manifest-files/">Manifest Files for Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Caching/">Caching</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-custom-settings/">Custom Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../WebApi-In-Orchard/">Web Api in Orchard</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Working with Data</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-data-access/">Understanding Data Access</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-content-handlers/">Understanding Content Handlers</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Creating Themes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-new-theme/">Writing a New Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Anatomy-of-a-theme/">The Anatomy of a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-placement-info/">Understanding the placement.info File</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Accessing-and-rendering-shapes/">Accessing and Rendering Shapes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Alternates/">Alternates</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Template-file-syntax-guide/">Template File Syntax Guide</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-themes/">Packaging and Sharing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../UI-guidelines-for-theme-authors/">UI Guidelines for Theme Authors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-Orchard-using-Designer-Helper-Tools/">Customizing Orchard Using Designer Helper Tools</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Developer Tools and Guidelines</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Developer-FAQ/">Developer FAQ</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-source-enlistment/">Setting Up a Source Enlistment</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Source-code-organization/">Source Code Organization</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-dependencies-and-libraries/">Dependencies and Libraries</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code-conventions/">Code Conventions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Continuous-integration/">Continuous Integration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Merging-Pull-Requests/">Merging Pull Requests</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Additional Topics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-module-loader-and-dynamic-compilation/">Orchard Dynamic Compilation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Configuring-email/">Configuring Email</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Involved</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-documentation/">Contributing Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Documentation-Style-Guidelines/">Documentation Style Guidelines</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-patches/">Contributing Patches</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10-1.Release-Notes/">Orchard 1.10.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10.Release-Notes/">Orchard 1.10</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-3.Release-Notes/">Orchard 1.9.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-2.Release-Notes/">Orchard 1.9.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-1.Release-Notes/">Orchard 1.9.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9.Release-Notes/">Orchard 1.9</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-2.release-notes/">Orchard 1.8.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-1.Release-Notes/">Orchard 1.8.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-Release-Notes/">Orchard 1.8</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-2-Release-Notes/">Orchard 1.7.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-1-Release-Notes/">Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-Release-Notes/">Orchard 1.7</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-6-Release-Notes/">Orchard 1.6</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-5-Release-Notes/">Orchard 1.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-4-Release-Notes/">Orchard 1.4</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>User Experiences</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Walkthroughs/">Walkthroughs and UI Mockups</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Archived Specs</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogs/">Blogs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Comments/">Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Content-types/">Content types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Definitions/">Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Fundamentals-doctype/">HTML doctype</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Linkback/">Linkbacks: Pingbacks, Refbacks and Trackbacks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Media-management/">Media management</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation/">Navigation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-editing/">Page editing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages/">Page management and publishing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-publishing/">Page publishing workflow</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Rss-atom/">RSS and Atom feeds</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Slugs/">Slugs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Templates/">Page templates and syntax</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Tags/">Tags</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes/">Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes-includes/">Theme includes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Users/">Users, roles and permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Widgets/">Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Xml-Rpc/">XML-RPC and Live Writer</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-lists/">Creating lists of content items</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Orchard Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Extending Orchard &raquo;</li>
+        
+      
+    
+    <li>Writing a Content Field</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <blockquote>
+<p><strong>This guide has been marked for review.</strong> If you are just getting started with Orchard module development you should read the <a href="../Getting-Started-with-Modules">Getting Started with Modules course</a> first. It will introduce you to building modules with Orchard using Visual Studio Community, a free edition of Visual Studio. </p>
+</blockquote>
+<p>Fields can be used in Orchard to <a href="../Creating-custom-content-types">build new content types</a>.
+Orchard comes with a few built-in field types such as text, date or enumeration,
+but it is possible to build your own field types that can then be used to build new content types.</p>
+<p>This topic will teach you how to add such a new field type. You can find the source code for this tutorial here: <a href="http://orcharddatetimefield.codeplex.com/">http://orcharddatetimefield.codeplex.com/</a>.</p>
+<p>We will assume Visual Studio and a full source code enlistment are being used in this topic. It is possible to build this module without it by simply manipulating the csproj file and adding the relevant files in there. Please consult <a href="../Creating-a-module-with-a-simple-text-editor">Creating a module with a simple text editor</a> for an example of module building without Visual Studio.</p>
+<h1 id="objectives">Objectives</h1>
+<p>Learn the steps to add a new field type to Orchard. The goal is to have a Date and Time editor so that any existing or new Content Type can let the user select a Date or a Time very easily.</p>
+<p><img alt="The date time field in the event editor" src="../../Attachments/Creating-a-custom-field-type/EventEditor.PNG" /></p>
+<h1 id="creating-a-module">Creating a Module</h1>
+<p>We will create the new field type inside a new Orchard module so that it can be easily distributed. We will use Code Generation feature for that. </p>
+<blockquote>
+<p><strong>Important:</strong> Before you can generate the file structure for your module, you need to download, install, and enable the <strong>Code Generation</strong> feature for Orchard. For more information, see <a href="../Command-line-scaffolding">Command-line Code Generation</a>.</p>
+</blockquote>
+<p>Once the <strong>Code Generation</strong> feature has been enabled, you can type the following <code>codegen</code> command on the Orchard command-line.</p>
+<pre><code>codegen module CustomFields /IncludeInSolution:true
+</code></pre>
+<p>This should create a new <strong>CustomFields</strong> folder under Modules, pre-populated with a few folders and files. For example, you may open the <strong>module.txt</strong> manifest file and modify it:</p>
+<pre><code>Name: CustomFields
+AntiForgery: enabled
+Author: Me
+Website: http://orcharddatetimefield.codeplex.com
+Version: 0.6.1
+OrchardVersion: 0.8.0
+Description: A bunch of custom fields for use in your custom content types.
+Features:
+    CustomFields:
+        Description: Custom fields for Orchard.
+        Category: Fields
+    DateTimeField:
+        Description: A date and time field with a friendly UI.
+        Category: Fields
+        Dependencies: CustomFields, Orchard.jQuery, Common, Settings
+</code></pre>
+<p>We are defining two features here because this module will eventually contain more fields and we want to distinguish between the default feature of the module (which has the same name as the module itself and has to exist in any module) and the date field feature. This also demonstrates categories and dependencies.</p>
+<h1 id="modeling-the-field">Modeling the Field</h1>
+<p>Let's now create a <strong>Fields</strong> folder inside of our <strong>CustomFields</strong> folder and create the following <strong>DateTimeField.cs</strong> file in there:</p>
+<pre><code>using System;
+using System.Globalization;
+using Orchard.ContentManagement;
+using Orchard.ContentManagement.FieldStorage;
+using Orchard.Environment.Extensions;
+
+namespace CustomFields.DateTimeField.Fields {
+    [OrchardFeature("DateTimeField")]
+    public class DateTimeField : ContentField {
+
+        public DateTime? DateTime {
+            get {
+                var value = Storage.Get&lt;string&gt;();
+                DateTime parsedDateTime;
+
+                if (System.DateTime.TryParse(value, CultureInfo.InvariantCulture,
+                    DateTimeStyles.AdjustToUniversal, out parsedDateTime)) {
+
+                    return parsedDateTime;
+                }
+
+                return null;
+            }
+
+            set {
+                Storage.Set(value == null ?
+                    String.Empty :
+                    value.Value.ToString(CultureInfo.InvariantCulture));
+            }
+        }
+    }
+}
+</code></pre>
+<p>The field is defined as a class that derives from <code>ContentField</code>, which gives us a few services for free, such as the storage of the value of the field. The fields will be stored as strings. The conversion of dates to and from strings could be handled automatically, but we are doing it explicitly here to give a good idea of how you would do things for more complex field types.</p>
+<h1 id="creating-a-view-model">Creating a View Model</h1>
+<p>It is good practice (although not mandatory) to create one or several view models that will be used as the model in the admin template that we will use to render instances of our field. Let's create the following <strong>DateTimeFieldViewModel.cs</strong> file in a new <strong>ViewModels</strong> folder:</p>
+<pre><code>namespace CustomFields.DateTimeField.ViewModels {
+
+    public class DateTimeFieldViewModel {
+
+        public string Name { get; set; }
+
+        public string Date { get; set; }
+        public string Time { get; set; }
+
+        public bool ShowDate { get; set; }
+        public bool ShowTime { get; set; }
+    }
+}
+</code></pre>
+<p>This not only exposes the date and time as separate properties, it also has some parameters that can be passed into the view to customize the rendering.</p>
+<h1 id="creating-settings-for-the-field">Creating Settings for the Field</h1>
+<p>This flexibility in rendering that we just introduced in the view model can be exposed as settings for the field. This way, administrators can configure fields on the content types they create in order to adapt them to their exact needs.</p>
+<p>Create a <strong>Settings</strong> folder and add the following <strong>DateTimeFieldSettings.cs</strong> file to it:</p>
+<pre><code>namespace CustomFields.DateTimeField.Settings {
+
+    public enum DateTimeFieldDisplays {
+        DateAndTime,
+        DateOnly,
+        TimeOnly
+    }
+
+    public class DateTimeFieldSettings {
+        public DateTimeFieldDisplays Display { get; set; }
+    }
+}
+</code></pre>
+<p>We have defined here an enumeration describing the possible values of our display setting, which is the only setting for the field. The settings class itself is just an ordinary class with one property typed with that enumeration.</p>
+<h1 id="writing-the-driver">Writing the Driver</h1>
+<p>Exactly like a part, a field has a driver that will be responsible for handling display and editing actions on the field when it's been added to a content type.</p>
+<p>Create a <strong>Drivers</strong> folder and add the following <strong>DateTimeFieldDriver.cs</strong>:</p>
+<pre><code>using System;
+using JetBrains.Annotations;
+using Orchard;
+using Orchard.ContentManagement;
+using Orchard.ContentManagement.Drivers;
+using CustomFields.DateTimeField.Settings;
+using CustomFields.DateTimeField.ViewModels;
+using Orchard.ContentManagement.Handlers;
+using Orchard.Localization;
+
+namespace CustomFields.DateTimeField.Drivers {
+    [UsedImplicitly]
+    public class DateTimeFieldDriver : ContentFieldDriver&lt;Fields.DateTimeField&gt; {
+        public IOrchardServices Services { get; set; }
+
+        // EditorTemplates/Fields/Custom.DateTime.cshtml
+        private const string TemplateName = "Fields/Custom.DateTime";
+
+        public DateTimeFieldDriver(IOrchardServices services) {
+            Services = services;
+            T = NullLocalizer.Instance;
+        }
+
+        public Localizer T { get; set; }
+
+        private static string GetPrefix(ContentField field, ContentPart part) {
+            // handles spaces in field names
+            return (part.PartDefinition.Name + "." + field.Name)
+                   .Replace(" ", "_");
+        }
+
+        protected override DriverResult Display(
+            ContentPart part, Fields.DateTimeField field,
+            string displayType, dynamic shapeHelper) {
+
+            var settings = field.PartFieldDefinition.Settings
+                                .GetModel&lt;DateTimeFieldSettings&gt;();
+            var value = field.DateTime;
+
+            return ContentShape("Fields_Custom_DateTime", // key in Shape Table
+                    field.Name, // used to differentiate shapes in placement.info overrides, e.g. Fields_Common_Text-DIFFERENTIATOR
+                    // this is the actual Shape which will be resolved
+                    // (Fields/Custom.DateTime.cshtml)
+                    s =&gt;
+                    s.Name(field.Name)
+                     .Date(value.HasValue ?
+                         value.Value.ToLocalTime().ToShortDateString() :
+                         String.Empty)
+                     .Time(value.HasValue ?
+                         value.Value.ToLocalTime().ToShortTimeString() :
+                         String.Empty)
+                     .ShowDate(
+                         settings.Display == DateTimeFieldDisplays.DateAndTime ||
+                         settings.Display == DateTimeFieldDisplays.DateOnly)
+                     .ShowTime(
+                         settings.Display == DateTimeFieldDisplays.DateAndTime ||
+                         settings.Display == DateTimeFieldDisplays.TimeOnly)
+                );
+        }
+
+        protected override DriverResult Editor(ContentPart part,
+                                               Fields.DateTimeField field,
+                                               dynamic shapeHelper) {
+
+            var settings = field.PartFieldDefinition.Settings
+                                .GetModel&lt;DateTimeFieldSettings&gt;();
+            var value = field.DateTime;
+
+            if (value.HasValue) {
+                value = value.Value.ToLocalTime();
+            }
+
+            var viewModel = new DateTimeFieldViewModel {
+                Name = field.Name,
+                Date = value.HasValue ?
+                       value.Value.ToLocalTime().ToShortDateString() : "",
+                Time = value.HasValue ?
+                       value.Value.ToLocalTime().ToShortTimeString() : "",
+                ShowDate =
+                    settings.Display == DateTimeFieldDisplays.DateAndTime ||
+                    settings.Display == DateTimeFieldDisplays.DateOnly,
+                ShowTime =
+                    settings.Display == DateTimeFieldDisplays.DateAndTime ||
+                    settings.Display == DateTimeFieldDisplays.TimeOnly
+
+            };
+
+            return ContentShape("Fields_Custom_DateTime_Edit",
+                () =&gt; shapeHelper.EditorTemplate(
+                          TemplateName: TemplateName,
+                          Model: viewModel,
+                          Prefix: GetPrefix(field, part)));
+        }
+
+        protected override DriverResult Editor(ContentPart part,
+                                               Fields.DateTimeField field,
+                                               IUpdateModel updater,
+                                               dynamic shapeHelper) {
+
+            var viewModel = new DateTimeFieldViewModel();
+
+            if (updater.TryUpdateModel(viewModel,
+                                       GetPrefix(field, part), null, null)) {
+                DateTime value;
+
+                var settings = field.PartFieldDefinition.Settings
+                                    .GetModel&lt;DateTimeFieldSettings&gt;();
+                if (settings.Display == DateTimeFieldDisplays.DateOnly) {
+                    viewModel.Time = DateTime.Now.ToShortTimeString();
+                }
+
+                if (settings.Display == DateTimeFieldDisplays.TimeOnly) {
+                    viewModel.Date = DateTime.Now.ToShortDateString();
+                }
+
+                if (DateTime.TryParse(
+                        viewModel.Date + " " + viewModel.Time, out value)) {
+                    field.DateTime = value.ToUniversalTime();
+                }
+                else {
+                    updater.AddModelError(GetPrefix(field, part),
+                                          T("{0} is an invalid date and time",
+                                          field.Name));
+                    field.DateTime = null;
+                }
+            }
+
+            return Editor(part, field, shapeHelper);
+        }
+
+        protected override void Importing(ContentPart part, Fields.DateTimeField field, 
+            ImportContentContext context) {
+
+            var importedText = context.Attribute(GetPrefix(field, part), "DateTime");
+            if (importedText != null) {
+                field.Storage.Set(null, importedText);
+            }
+        }
+
+        protected override void Exporting(ContentPart part, Fields.DateTimeField field, 
+            ExportContentContext context) {
+            context.Element(GetPrefix(field, part))
+                .SetAttributeValue("DateTime", field.Storage.Get&lt;string&gt;(null));
+        }
+    }
+}
+</code></pre>
+<p>Let's enumerate a few things we're doing in this code in order to explain how it works.</p>
+<p>The driver derives from <code>ContentFieldDriver&lt;DateTimeField&gt;</code> in order to be recognized by Orchard and to give strongly-typed access to the field value from the driver's code.</p>
+<p>We start by injecting the localizer dependency (the <code>T</code> property) so that we can create localizable strings throughout the code.</p>
+<p>The static <code>GetPrefix</code> method is a conventionally defined method that is used to create unique column names in the database for instances of the field type.</p>
+<p>We then have two actions, <code>Display</code> and <code>Editor</code>, which start by fetching the <code>settings</code> and <code>value</code> for the field and build shapes out of them.</p>
+<blockquote>
+<p>Note: The <code>UsedImplicitly</code> attribute is only here to suppress a warning from Resharper. It could be removed without much harm.</p>
+</blockquote>
+<p>The <code>shapeHelper</code> object provides some helper methods to create shapes, two of which can be seen in action here.</p>
+<p>The second <code>Editor</code> method is the one that is called when the admin form is submitted. Its job is to map the submitted data back into the field and then to call the first <code>Editor</code> method to render the editor on the screen again.</p>
+<h1 id="writing-the-templates">Writing the Templates</h1>
+<p>We need to write the views that will determine how our field is represented in admin and front-end UI.</p>
+<p>Create a <strong>Fields</strong> and an <strong>EditorTemplates</strong> directory under <strong>Views</strong>. Then create another <strong>Fields</strong> directory under EditorTemplates. In <strong>Views/Fields</strong>, create the following <strong>Custom.DateTime.cshtml</strong>:</p>
+<pre><code>&lt;p class="text-field"&gt;&lt;span class="name"&gt;@Model.Name:&lt;/span&gt; 
+    @if(Model.ShowDate) { &lt;text&gt;@Model.Date&lt;/text&gt; } 
+    @if(Model.ShowTime) { &lt;text&gt;@Model.Time&lt;/text&gt; }
+&lt;/p&gt;
+</code></pre>
+<p>This code renders the name of the field, a colon and then the date and time according to the field's configuration.</p>
+<p>Now create a file of the same name under <strong>Views/EditorTemplates/Fields</strong> with the following contents:</p>
+<pre><code>@model CustomFields.DateTimeField.ViewModels.DateTimeFieldViewModel
+
+@{
+Style.Include("datetime.css");
+Style.Require("jQueryUI_DatePicker");
+Style.Require("jQueryUtils_TimePicker");
+Style.Require("jQueryUI_Orchard");
+
+Script.Require("jQuery");
+Script.Require("jQueryUtils");
+Script.Require("jQueryUI_Core");
+Script.Require("jQueryUI_Widget");
+Script.Require("jQueryUI_DatePicker");
+Script.Require("jQueryUtils_TimePicker");
+}
+
+&lt;fieldset&gt;
+  &lt;label for="@Html.FieldIdFor(m =&gt; Model.Date)"&gt;@Model.Name&lt;/label&gt;
+
+  @if ( Model.ShowDate ) {
+  &lt;label class="forpicker"
+    for="@Html.FieldIdFor(m =&gt; Model.Date)"&gt;@T("Date")&lt;/label&gt;
+  &lt;span class="date"&gt;@Html.EditorFor(m =&gt; m.Date)&lt;/span&gt;
+  }
+
+  @if ( Model.ShowTime ) {
+  &lt;label class="forpicker"
+    for="@Html.FieldIdFor(m =&gt; Model.Time)"&gt;@T("Time")&lt;/label&gt;
+  &lt;span class="time"&gt;@Html.EditorFor(m =&gt; m.Time)&lt;/span&gt;
+  }
+  @if(Model.ShowDate) { &lt;text&gt;@Html.ValidationMessageFor(m=&gt;m.Date)&lt;/text&gt; }
+  @if(Model.ShowTime) { &lt;text&gt;@Html.ValidationMessageFor(m=&gt;m.Time)&lt;/text&gt; }
+&lt;/fieldset&gt;
+
+@using(Script.Foot()) {
+&lt;script type="text/javascript"&gt;
+$(function () {
+  $("#@Html.FieldIdFor(m =&gt; Model.Date)").datepicker();
+  $("#@Html.FieldIdFor(m =&gt; Model.Time)").timepickr();
+});
+&lt;/script&gt;
+}
+</code></pre>
+<p>This template is registering a few styles and scripts (note that if other parts register the same files, they will still be rendered only once). Then, it defines the editor as a date picker and a time picker according to the field's configuration. The fields are regular text boxes that are unobtrusively enriched by date and time pickers using jQuery UI plug-ins.</p>
+<p>To specify the order and location where these templates will be rendered within the composed page, we need to add a placement.info file into the root of the module's directory:</p>
+<pre><code>&lt;Placement&gt;
+    &lt;Place Fields_Custom_DateTime_Edit="Content:2.5"/&gt;
+    &lt;Place Fields_Custom_DateTime="Content:2.5"/&gt;
+&lt;/Placement&gt;
+</code></pre>
+<h1 id="managing-the-field-settings">Managing the Field Settings</h1>
+<p>We are not quite done yet. We still need to take care of managing and persisting the settings for the field.</p>
+<p>Add the following <strong>DateTimeFieldEditorEvents.cs</strong> file to the <strong>Settings</strong> folder:</p>
+<pre><code>using System.Collections.Generic;
+using Orchard.ContentManagement;
+using Orchard.ContentManagement.MetaData;
+using Orchard.ContentManagement.MetaData.Builders;
+using Orchard.ContentManagement.MetaData.Models;
+using Orchard.ContentManagement.ViewModels;
+
+namespace CustomFields.DateTimeField.Settings {
+    public class DateTimeFieldEditorEvents : ContentDefinitionEditorEventsBase {
+
+        public override IEnumerable&lt;TemplateViewModel&gt;
+          PartFieldEditor(ContentPartFieldDefinition definition) {
+            if (definition.FieldDefinition.Name == "DateTimeField") {
+                var model = definition.Settings.GetModel&lt;DateTimeFieldSettings&gt;();
+                yield return DefinitionTemplate(model);
+            }
+        }
+
+        public override IEnumerable&lt;TemplateViewModel&gt; PartFieldEditorUpdate(
+          ContentPartFieldDefinitionBuilder builder, IUpdateModel updateModel) {
+            var model = new DateTimeFieldSettings();
+            if (builder.FieldType != "DateTimeField") {
+              yield break;
+            }
+
+            if (updateModel.TryUpdateModel(
+              model, "DateTimeFieldSettings", null, null)) {
+                builder.WithSetting("DateTimeFieldSettings.Display",
+                                    model.Display.ToString());
+            }
+
+            yield return DefinitionTemplate(model);
+        }
+    }
+}
+</code></pre>
+<p>This is the equivalent of a driver, but for field settings. The first method gets the settings and determines the template to render, and the second updates the model with the values from the submitted form and then calls the first.</p>
+<p>The editor template for the field is defined by the following <strong>DateTimeFieldSettings.cshtml</strong> that you should create in a new <strong>DefinitionTemplates</strong> folder under <strong>Views</strong>:</p>
+<pre><code>@model CustomFields.DateTimeField.Settings.DateTimeFieldSettings
+@using CustomFields.DateTimeField.Settings;
+
+&lt;fieldset&gt;
+    &lt;label for="@Html.FieldIdFor(m =&gt; m.Display)"
+      class="forcheckbox"&gt;@T("Display options")&lt;/label&gt;  
+    &lt;select id="@Html.FieldIdFor(m =&gt; m.Display)"
+      name="@Html.FieldNameFor(m =&gt; m.Display)"&gt;
+        @Html.SelectOption(DateTimeFieldDisplays.DateAndTime, 
+          Model.Display == DateTimeFieldDisplays.DateAndTime,
+          T("Date and time").ToString())
+        @Html.SelectOption(DateTimeFieldDisplays.DateOnly,
+          Model.Display == DateTimeFieldDisplays.DateOnly,
+          T("Date only").ToString())
+        @Html.SelectOption(DateTimeFieldDisplays.TimeOnly,
+          Model.Display == DateTimeFieldDisplays.TimeOnly,
+          T("Time only").ToString())
+    &lt;/select&gt;
+
+    @Html.ValidationMessageFor(m =&gt; m.Display)
+
+&lt;/fieldset&gt;
+</code></pre>
+<p>This template creates a label for the setting and then a drop-down that enables the site administrator to pick one of the options for the setting.</p>
+<h1 id="updating-the-project-file">Updating the Project File</h1>
+<p>If you are using Visual Studio, you should skip this section as your project file has already been updated, provided you saved all (CTRL+SHIFT+S). Otherwise, in order for the Orchard dynamic compilation engine to be able to pick up our new module's cs files, we need to add them to the <strong>CustomFields.csproj</strong> file. </p>
+<p>Find the <code>&lt;Content Include="Properties\AssemblyInfo.cs"/&gt;</code> line in <strong>CustomFields.csproj</strong>. If you look at it then you will see that this is inside an <code>&lt;ItemGroup&gt;</code> element. After that end <code>&lt;/ItemGroup&gt;</code> for that section add in this code:</p>
+<pre><code>&lt;ItemGroup&gt;
+  &lt;Compile Include="Drivers\DateTimeFieldDriver.cs" /&gt;
+  &lt;Compile Include="Fields\DateTimeField.cs" /&gt;
+  &lt;Compile Include="Settings\DateTimeFieldEditorEvents.cs" /&gt;
+  &lt;Compile Include="Settings\DateTimeFieldSettings.cs" /&gt;
+  &lt;Compile Include="ViewModels\DateTimeFieldViewModel.cs" /&gt;
+&lt;/ItemGroup&gt;
+</code></pre>
+<h1 id="adding-the-style-sheet">Adding the Style Sheet</h1>
+<p>Create a <strong>Styles</strong> directory and create the following <strong>datetime.css</strong>:</p>
+<pre><code>html.dyn label.forpicker {
+    display:none;
+}
+
+html.dyn input.hinted {
+    color:#ccc;
+    font-style:italic;
+}
+.date input{
+    width:10em;
+}
+.time input {
+    width:6em;
+}
+</code></pre>
+<h1 id="using-the-field">Using the Field</h1>
+<p>In order to be able to use the new field, you must first make sure that the <strong>Orchard.ContentTypes</strong> feature is enabled. Also enable our new <strong>DateTimeField</strong> feature under <strong>Fields</strong>. Once it is, you can click on <strong>Manage content types</strong> in the admin menu. Click <strong>Create new type</strong> and give it the name "Event". Click <strong>Add</strong> next to fields and type in "When" as the name of the field. Select our new <strong>DateTime</strong> field type as the type of the field.</p>
+<p>Now in the type editor, you should see our new <strong>When</strong> field, and you should be able to deploy its settings section by clicking the "<strong>&gt;</strong>" on its left:</p>
+<p><img alt="Configuring the field" src="../../Attachments/Creating-a-custom-field-type/ConfiguringTheField.PNG" />
+We chose to keep both date and time displayed. The settings for the field are also the opportunity to determine where the field will appear on the front end if you want to override the defaults. Let's skip that for now. Add the <strong>Route</strong> part so that our events can have a title, then hit Save.</p>
+<p>We can now add a new event by clicking <strong>Create Event</strong> in the admin menu. The editor that gets created for us has a when field with nice date and time pickers:</p>
+<p><img alt="The date time field in the event editor" src="../../Attachments/Creating-a-custom-field-type/EventEditor.PNG" />
+Create an event and save it. You can now view it on the site:</p>
+<p><img alt="The event as displayed on the front end" src="../../Attachments/Creating-a-custom-field-type/Dinner.PNG" /></p>
+<h1 id="getting-the-code">Getting the Code</h1>
+<p>Download the code here: <a href="../../Attachments/Creating-a-custom-field-type/CustomFields.zip">CustomFields.zip</a>. The code is also hosted on <a href="http://orcharddatetimefield.codeplex.com/">http://orcharddatetimefield.codeplex.com/</a>.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Packaging-and-sharing-a-module/" class="btn btn-neutral float-right" title="Packaging and Sharing a Module">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Writing-a-content-part/" class="btn btn-neutral" title="Writing a Content Part"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Writing-a-content-part/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Packaging-and-sharing-a-module/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

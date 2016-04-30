@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Creating Global-Ready Applications - Orchard Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../Styles/Site.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Creating Global-Ready Applications";
+    var mkdocs_page_input_path = "Documentation\Creating-global-ready-applications.markdown";
+    var mkdocs_page_url = "/Documentation/Creating-global-ready-applications/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-20757794-1', 'orchardproject.net');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Orchard Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-Orchard/">Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manually-installing-Orchard-zip-file/">Manually Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Working-with-Orchard-in-WebMatrix/">Working with Orchard in WebMatrix</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-around-the-dashboard/">Getting Around the Dashboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started/">Building Your First Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation-and-menus/">Navigation and Menus</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-a-Blog-to-Your-Site/">Adding a Blog to Your Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-and-managing-media-content/">Adding and Managing Media Content</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-widgets/">Managing Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Organizing-content-with-tags/">Organizing Content Using Tags</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>About the Project</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Basic-Orchard-Concepts/">Orchard Concept Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Builtin-Features/">Built-in modules and features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Feature-roadmap/">Feature roadmap</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Frequently-asked-questions/">Frequently Asked Questions</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-TV/">Tutorial Videos</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Authoring Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogging-with-LiveWriter/">Blogging with LiveWriter</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Creating Global-Ready Applications</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#localizing-the-orchard-application-and-orchard-modules">Localizing the Orchard Application and Orchard Modules</a></li>
+                
+                    <li><a class="toctree-l4" href="#installing-translation-files">Installing translation files</a></li>
+                
+                    <li><a class="toctree-l4" href="#switching-the-site-to-another-culture">Switching the site to another culture</a></li>
+                
+                    <li><a class="toctree-l4" href="#translation-availability">Translation availability</a></li>
+                
+                    <li><a class="toctree-l4" href="#contributing-new-translations">Contributing new translations</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#localizing-database-driven-content-items">Localizing Database-Driven Content Items</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#translating-an-html-widget">Translating an Html Widget</a></li>
+                
+                    <li><a class="toctree-l4" href="#change-history">Change History</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Search-and-indexing/">Search and Indexing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Saving-scheduling-and-publishing-drafts/">Publishing Drafts</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-custom-content-types/">Creating Custom Content Types</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Customizing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Previewing-and-applying-a-theme/">Previewing and Applying a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-themes/">Installing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-the-default-theme/">Customizing Themes</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using the Orchard Gallery</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Gallery-overview/">Gallery Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-modules-and-themes-from-the-gallery/">Installing Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Browsing-the-gallery-web-site/">Browsing the Gallery Web Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-a-module-or-theme-to-the-gallery/">Contributing to the Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Module-gallery-feeds/">Registering Additional Gallery Feeds</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Managing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Enabling-and-disabling-features/">Enabling and Disabling Features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-the-command-line-interface/">Using the Command-Line Interface</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-and-upgrading-modules/">Installing and Upgrading Modules</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Modifying-site-settings/">Modifying Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Moderating-comments/">Moderating Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-users-and-roles/">Managing Users and Roles</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-permissions/">Understanding Permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Making-a-Web-Site-Recipe/">Making a Website Recipe</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-an-image-gallery/">Creating an Image Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Workflows/">Workflows</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Projection/">Projection</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-Dynamic-Forms/">Create Dynamic Forms</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Hosting and Deploying Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Upgrading-a-site-to-a-new-version-of-Orchard/">Upgrading a Site to a New Version</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Optimizing-Performance-of-Orchard-with-Shared-Hosting/">Optimizing Server Performance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Whats-new-for-Windows-Azure-in-Orchard-1-7-1/">What's New for Windows Azure in Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Deploying-Orchard-to-Windows-Azure/">Deploying Orchard to Windows Azure</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Blob-Storage/">Using Windows Azure Blob Storage</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Cache/">Using Windows Azure Cache</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Running-Orchard-on-Mono/">Running Orchard on Mono</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-multi-tenant-Orchard-site/">Setting Up a Multi-Tenant Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-machine-key/">Setting Up a Machine Key</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Orchard</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../First-steps-into-Orchard/">First Steps into Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../How-Orchard-works/">How Orchard Works</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Command-line-scaffolding/">Command-Line Code Generation</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Getting Started with Modules Course</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-1/">Part 1: Build a Static Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-2/">Part 2: Make the Widget Dynamic</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-3/">Part 3: Using the Orchard API</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-4/">Part 4: Applying Best Practices</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Building-a-hello-world-module/">Building a Hello World Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-a-module-with-a-simple-text-editor/">Creating a Module with a Simple Text Editor</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-content-part/">Writing a Content Part</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-a-custom-field-type/">Writing a Content Field</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-a-module/">Packaging and Sharing a Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-widget/">Writing a Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-1-n-and-n-n-relations/">Creating _1-N_ and _N-N_ Relations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manifest-files/">Manifest Files for Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Caching/">Caching</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-custom-settings/">Custom Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../WebApi-In-Orchard/">Web Api in Orchard</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Working with Data</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-data-access/">Understanding Data Access</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-content-handlers/">Understanding Content Handlers</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Creating Themes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-new-theme/">Writing a New Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Anatomy-of-a-theme/">The Anatomy of a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-placement-info/">Understanding the placement.info File</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Accessing-and-rendering-shapes/">Accessing and Rendering Shapes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Alternates/">Alternates</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Template-file-syntax-guide/">Template File Syntax Guide</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-themes/">Packaging and Sharing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../UI-guidelines-for-theme-authors/">UI Guidelines for Theme Authors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-Orchard-using-Designer-Helper-Tools/">Customizing Orchard Using Designer Helper Tools</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Developer Tools and Guidelines</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Developer-FAQ/">Developer FAQ</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-source-enlistment/">Setting Up a Source Enlistment</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Source-code-organization/">Source Code Organization</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-dependencies-and-libraries/">Dependencies and Libraries</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code-conventions/">Code Conventions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Continuous-integration/">Continuous Integration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Merging-Pull-Requests/">Merging Pull Requests</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Additional Topics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-module-loader-and-dynamic-compilation/">Orchard Dynamic Compilation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Configuring-email/">Configuring Email</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Involved</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-documentation/">Contributing Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Documentation-Style-Guidelines/">Documentation Style Guidelines</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-patches/">Contributing Patches</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10-1.Release-Notes/">Orchard 1.10.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10.Release-Notes/">Orchard 1.10</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-3.Release-Notes/">Orchard 1.9.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-2.Release-Notes/">Orchard 1.9.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-1.Release-Notes/">Orchard 1.9.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9.Release-Notes/">Orchard 1.9</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-2.release-notes/">Orchard 1.8.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-1.Release-Notes/">Orchard 1.8.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-Release-Notes/">Orchard 1.8</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-2-Release-Notes/">Orchard 1.7.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-1-Release-Notes/">Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-Release-Notes/">Orchard 1.7</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-6-Release-Notes/">Orchard 1.6</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-5-Release-Notes/">Orchard 1.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-4-Release-Notes/">Orchard 1.4</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>User Experiences</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Walkthroughs/">Walkthroughs and UI Mockups</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Archived Specs</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogs/">Blogs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Comments/">Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Content-types/">Content types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Definitions/">Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Fundamentals-doctype/">HTML doctype</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Linkback/">Linkbacks: Pingbacks, Refbacks and Trackbacks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Media-management/">Media management</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation/">Navigation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-editing/">Page editing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages/">Page management and publishing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-publishing/">Page publishing workflow</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Rss-atom/">RSS and Atom feeds</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Slugs/">Slugs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Templates/">Page templates and syntax</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Tags/">Tags</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes/">Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes-includes/">Theme includes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Users/">Users, roles and permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Widgets/">Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Xml-Rpc/">XML-RPC and Live Writer</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-lists/">Creating lists of content items</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Orchard Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Authoring Websites &raquo;</li>
+        
+      
+    
+    <li>Creating Global-Ready Applications</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>Orchard's localization management is hosted on an external service <a href="https://crowdin.net/">(Crowdin)</a>, <a href="https://crowdin.net/project/orchard-cms">the project is available for the public</a> and contributions are welcome!</p>
+<p>Orchard supports two kinds of localization: </p>
+<ul>
+<li>Localization of text strings in the Orchard application and in installed modules.</li>
+<li>Localization of database-driven content items.</li>
+</ul>
+<p>This topic describes both of these features. </p>
+<h1 id="localizing-the-orchard-application-and-orchard-modules">Localizing the Orchard Application and Orchard Modules</h1>
+<p>All strings in the Orchard application are output through a single <code>T()</code> method that can look up a translated string based on the default site culture. By default, Orchard includes strings for  English (en-US), but you can add support for additional cultures. Translations for the dashboard UI and all static strings in the front end can also be added to the application through translation files in <em>.po</em> format. To localize a site for a culture, you download and install the appropriate set of <em>.po</em> files, and then you update your site settings as shown in this section.</p>
+<blockquote>
+<p><strong>Note</strong> In .NET Framework applications, localization is usually done using <em>.resx</em> files and satellite assemblies. Orchard takes a more lightweight approach that uses <em>.po</em> files. In Orchard, the number of translation files is the number of modules multiplied by the number of supported cultures. That number could rapidly grow, and the satellite-assembly design wasn't built for that kind of usage. On the other hand, <em>.po</em> files can be loaded and unloaded on demand. Like <em>.resx</em> files, <em>.po</em> files are a standard format for which many tools exist.</p>
+</blockquote>
+<h2 id="installing-translation-files">Installing translation files</h2>
+<p>As an example, download a set of <em>.po</em> translation files for French (fr-FR). Browse to the page for the files at the following URL:</p>
+<p><a href="https://crowdin.net/download/project/orchard-cms/fr.zip">https://crowdin.net/download/project/orchard-cms/fr.zip</a>. </p>
+<p>Click the link to download the <em>.po</em> files and save the <em>.zip</em> file to your computer.</p>
+<h3 id="method-1-extracting-the-zip">Method 1: Extracting the zip</h3>
+<p>Extract the downloaded <em>.zip</em> file into the root folder of your website. Make sure you extract the contents to the actual Orchard root folder, and not to a subfolder named for the <em>.zip</em> file. When Windows opens a <strong>Confirm Folder Replace</strong> window and asks whether you want to merge the extracted contents into the Orchard folders of the same names in your website, select <strong>Do this for all current items</strong> and then click <strong>Yes</strong> to merge in the translation files.</p>
+<p>This method of extracting the po files by expanding the zip file into your site's directory is very simple but if your site does not have all the translated modules that are in the file, you may end up with some additional directories that you don't need. In order to avoid that, you can use the following alternative method.</p>
+<h3 id="method-2-using-translation-manager">Method 2: Using Translation Manager</h3>
+<p>The Translation Manager Feature in <a href="http://gallery.orchardproject.net/List/Modules/Orchard.Module.Vandelay.Industries">Vandelay Industries</a> module, available from the gallery, adds commands to install translation files more parsimoniously.</p>
+<p>Once you have the module installed and the po file that you want to install downloaded, enter the following command, replacing the path to the po file as necessary:</p>
+<pre><code>install translation c:\temp\fr.zip
+</code></pre>
+<p>This should have only extracted those resources for the modules that are actually installed that it has translations for. If a module is not found, running the command won't create unnecessary directories and your Orchard site will remain clean.</p>
+<p>If you later install additional modules for which a translation exists, it is possible to re-run the command.</p>
+<h2 id="switching-the-site-to-another-culture">Switching the site to another culture</h2>
+<p>To change the default culture for the application, go to the <strong>Settings =&gt; General</strong> screen in the Orchard dashboard. Under <strong>Default Site Culture</strong>, click <strong>Add or remove supported cultures for the site</strong>. </p>
+<p><img alt="" src="../../Upload/screenshots/add_cultures_settings.png" /></p>
+<p>In the <strong>Cultures</strong> screen, select a culture from the <strong>Add a culture</strong> list (for example, <strong>fr-FR</strong>) and then click <strong>Add</strong>. The culture code is added under <strong>Cultures this site supports</strong>. To remove a culture, click the <strong>x</strong> button next to it. </p>
+<p><img alt="" src="../../Upload/screenshots/Culture_available_fr.png" /></p>
+<p>After you've added one or more cultures, click <strong>General</strong> on the dashboard to return to the <strong>Manage Settings</strong> screen.</p>
+<p>In the <strong>Default Site Culture</strong> list, select the culture to set as the default. When you're done, click <strong>Save</strong>.</p>
+<p><img alt="" src="../../Upload/screenshots/Culture_newdefault_fr.png" /></p>
+<p>Assuming that you have the appropriate set of <em>.po</em> files installed, applying a new culture has the effect of translating the text in the dashboard menu and UI text. The following illustration shows the effect of changing the culture to <strong>fr-FR</strong>.  </p>
+<blockquote>
+<p>Note: The translation files might not be complete.</p>
+</blockquote>
+<p><img alt="" src="../../Upload/screenshots_675/default_site_culture_fr_675.png" /></p>
+<p>Setting the default site culture to a specific culture won't have any effect unless you have a corresponding translation file installed.  Orchard searches the following paths to find translation files, from most to least specific:</p>
+<ul>
+<li><strong>Core localization file path</strong> <em>~/Core/App_Data/Localization/&lt;culture-code&gt;/orchard.core.po</em></li>
+<li><strong>Modules localization file path</strong> <em>~/Modules/&lt;module-name&gt;/App_Data/Localization/&lt;culture-code&gt;/orchard.module.po</em></li>
+<li><strong>Theme localization file path</strong> <em>~/Themes/&lt;theme-name&gt;/App_Data/Localization/&lt;culture-code&gt;/orchard.theme.po</em></li>
+<li><strong>Root localization file path</strong> <em>~/App_Data/Localization/&lt;culture-code&gt;/orchard.root.po</em></li>
+<li><strong>Tenant localization file path</strong> <em>~/App_Data/Sites/&lt;tenant name&gt;/Localization/&lt;culture-code&gt;/orchard.po</em></li>
+</ul>
+<h2 id="translation-availability">Translation availability</h2>
+<p>You can download additional <em>.po</em> files for other cultures from <a href="http://orchardproject.net/localization">http://orchardproject.net/localization</a>. Translations are provided by the community. If you don't find the culture you're looking for, please consider contributing it. It's a few hours of work and it will benefit the whole community.</p>
+<h2 id="contributing-new-translations">Contributing new translations</h2>
+<h3 id="working-with-a-plain-text-editor">Working with a plain text editor</h3>
+<p>The localization tool available at <a href="https://crowdin.net/project/orchard-cms">https://crowdin.net/project/orchard-cms</a> can prepare stub files for a specific language. Orchard's translations are stored in the form of PO-files in packages, that you can add to your own Orchard instance. These packages are regenerated at the beginning of every hour (the process takes 2-3 minutes). Please visit the project home page on Crowdin to see the progress of the translations for each language.</p>
+<p>You can download all the translations for each language for both projects: <a href="https://crowdin.net/download/project/orchard-cms.zip">Orchard CMS</a>, <a href="https://crowdin.net/download/project/orchard-cms-gallery.zip">Orchard CMS Gallery</a>.</p>
+<p>The downloaded <em>.zip</em> file contains the set of <em>.po</em> files that you can edit using a text editor. When you're done, please subscribe to our localization mailing list by sending email to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#111;&#105;&#110;&#45;&#111;&#114;&#99;&#104;&#97;&#114;&#100;&#45;&#108;&#111;&#99;&#97;&#108;&#105;&#122;&#97;&#116;&#105;&#111;&#110;&#64;&#108;&#105;&#115;&#116;&#115;&#46;&#111;&#117;&#116;&#101;&#114;&#99;&#117;&#114;&#118;&#101;&#46;&#111;&#114;&#103;">&#106;&#111;&#105;&#110;&#45;&#111;&#114;&#99;&#104;&#97;&#114;&#100;&#45;&#108;&#111;&#99;&#97;&#108;&#105;&#122;&#97;&#116;&#105;&#111;&#110;&#64;&#108;&#105;&#115;&#116;&#115;&#46;&#111;&#117;&#116;&#101;&#114;&#99;&#117;&#114;&#118;&#101;&#46;&#111;&#114;&#103;</a>, and then <a href="../join-orchard-localization@lists.outercurve.org">send the zipped package of <em>.po</em> files to the list</a>.</p>
+<p>Please make sure when working with <em>.po</em> files that the files are saved in UTF-8 with Byte Order Mark. This is usually a setting in your text editor (in Notepad it is under the Encoding drop-down in the "Save As" dialog).</p>
+<h4 id="translation-file-format">Translation File Format</h4>
+<p>The following illustration shows the format of a translation file. Each text string is represented by elements listed in the following table.</p>
+<table>
+<thead>
+<tr>
+<th>A reference (see below)</th>
+<th><code>#: reference-string</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>An ID, which is often the original (untranslated) string. After the ID is set, this string should not be changed even if the English string changes, so that existing translations continue to work even if they're not immediately updated.</td>
+<td><code>#| msgid "id-string"</code></td>
+</tr>
+<tr>
+<td>The current English string for reference. This helps the translator.</td>
+<td><code>msgid "English-string"</code></td>
+</tr>
+<tr>
+<td>The translated string.</td>
+<td><code>msgstr "translated-string"</code></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="" src="../../Upload/screenshots_675/fr_po_file.png" /></p>
+<h3 id="how-to-contribute">How to contribute</h3>
+<ul>
+<li>Register on <a href="https://crowdin.com/">Crowdin</a>.</li>
+<li>Go to the project page of <a href="https://crowdin.net/project/orchard-cms">Orchard CMS</a> and <a href="https://crowdin.net/download/project/orchard-cms-gallery.zip">Orchard CMS Gallery</a> and apply to join the project.</li>
+<li>Your application will be accepted shortly and you'll be added to the project as "Proofreader" for the selected languages. This means that you'll be able to edit and approve translations (which is necessary for the translated strings to be included in the downloadable packages).</li>
+<li>If you are new to the Orchard translations, please consult with other translators of the same language and make sure you follow the same conventions.</li>
+</ul>
+<h4 id="resource-string-reference">Resource String Reference</h4>
+<p>The reference for a resource string in a <em>.po</em> file (the <code>reference-string</code> value described in the previous section) is optional. If no reference is specified, the resource string will be used as a fallback whenever a resource with the same ID is queried with a reference that can't be found. This is a useful way to create generic resource strings that are used in multiple places in the application and are not context-sensitive. You can always override a generic fallback like this as needed.</p>
+<p>The reference strings can be stored in different locations, depending on how the string is used in the application:</p>
+<ul>
+<li><strong>Strings from views</strong>:  Use the virtual path of the view from the root of the application (for example, <em>~/Themes/TheThemeMachine/Views/User.cshtml</em>).</li>
+<li><strong>Strings from <em>.cs</em> files</strong>:  Use the fully qualified type name of the class where the string is being used (for example, <code>Orchard.Packaging.AdminMenu</code>).</li>
+<li><strong>Strings from module manifests or theme manifests</strong>:  Use the virtual path of the manifest from the root of the application (for example, <em>~Themes/TheThemeMachine/Theme.txt</em>). Note that module and theme manifest localization uses a path for fields as the key. For example, the Author field uses the key "Author" and the Description field of the Gallery feature would be under the key "Gallery Description".</li>
+</ul>
+<h3 id="contributing-files-for-third-party-modules">Contributing files for third party modules</h3>
+<p>Our localization infrastructure is built to host translations for third party modules. If you are the author of a module or want to contribute translations for a module, you can generate po files for it using the <a href="http://gallery.orchardproject.net/List/Modules/Orchard.Module.Vandelay.Industries">Translation Manager</a> module.</p>
+<p>From an Orchard command line, type the following command (for the example of the Bing.Maps module):</p>
+<pre><code>extract default translation /Extensions:Bing.Maps /Output:\temp
+</code></pre>
+<p>This will create a new Orchard.en-us.po.zip file with the strings for the module. The command looks at the source code for the module and creates entries for T-wrapped strings, manifest strings and everything that should be localizable.</p>
+<p>Please send this file to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#111;&#105;&#110;&#45;&#111;&#114;&#99;&#104;&#97;&#114;&#100;&#45;&#108;&#111;&#99;&#97;&#108;&#105;&#122;&#97;&#116;&#105;&#111;&#110;&#64;&#108;&#105;&#115;&#116;&#115;&#46;&#111;&#117;&#116;&#101;&#114;&#99;&#117;&#114;&#118;&#101;&#46;&#111;&#114;&#103;">&#106;&#111;&#105;&#110;&#45;&#111;&#114;&#99;&#104;&#97;&#114;&#100;&#45;&#108;&#111;&#99;&#97;&#108;&#105;&#122;&#97;&#116;&#105;&#111;&#110;&#64;&#108;&#105;&#115;&#116;&#115;&#46;&#111;&#117;&#116;&#101;&#114;&#99;&#117;&#114;&#118;&#101;&#46;&#111;&#114;&#103;</a> so that we can add it to the online localization database.</p>
+<h1 id="localizing-database-driven-content-items">Localizing Database-Driven Content Items</h1>
+<p>In addition to application and module localization, Orchard provides the ability to translate content items that are stored in the database. To localize content items, you must enable the <strong>Localization</strong> feature. In the dashboard, click <strong>Modules</strong>, and then on the <strong>Features</strong> tab you will see <strong>Localization</strong>. Click the <strong>Enable</strong> link. </p>
+<p><img alt="" src="../../Upload/screenshots_675/Localize_enable_675.png" /></p>
+<p>By default, both the <strong>Page</strong> and <strong>Blog Post</strong> content types are localizable, because they both contain the <strong>Localization</strong> part. You can add the <strong>Localization</strong> part to other content types that need translation. Click <strong>Content</strong> on the dashboard, and then view the items in the <strong>Manage Content</strong> screen. Notice the <strong>+ New Translation</strong> link for each content item.</p>
+<p><img alt="" src="../../Upload/screenshots_675/new_translation_675.png" /></p>
+<blockquote>
+<p><strong>Note</strong> This link appears only if you have more than one culture enabled on the site (see previous section), and if you have enabled the <strong>Localization</strong> feature.</p>
+</blockquote>
+<p>Clicking the <strong>+ New Translation</strong> link allows you to define a translated version of the content item to be associated with the "parent" content item (in the site's default culture). Each translated content item is treated as a unique content item in the system. On the <strong>Translate Content</strong> editor screen, you can define the culture code for the content item.  The permalink will change accordingly in order to ensure that URLs are unqiue for each translation. You can then translate the content item from the default site culture to the selected culture.</p>
+<p><img alt="" src="../../Upload/screenshots_675/Localize_content_675.png" /></p>
+<p>Add some translation text in the body of the page, and then click <strong>Save</strong>. After the content item is saved, the current culture code is indicated, along with links to any related content items in different cultures.</p>
+<p>When you browse content items on the site, if there are translations available for a content item, links to those content items will be displayed. This makes it easy for your site visitors to switch between translations of the item.  This is what the site looks like when you view the English (en-US) item:</p>
+<p><img alt="" src="../../Upload/screenshots_675/Localize_en_downloadpg_675.png" /></p>
+<p>Click the culture code link to see translated version of the page. When you do, the original cultural code (en-US) appears as a link to the original page.</p>
+<p><img alt="" src="../../Upload/screenshots_675/Localize_fr_downloadpg_675.png" /></p>
+<p>To enable localization for custom content types, add the <strong>Localization</strong> part to the content type. For example, to add localization to a custom content type named <strong>MyEvent</strong>, click <strong>Content</strong> on the dashboard, and then click the <strong>Content Types</strong> tab.  Click <strong>Edit</strong> on the <strong>MyEvent</strong> type (this example assumes the custom type already exists).  Click <strong>Add</strong> in the <strong>Parts</strong> section of the type.  The <strong>Add</strong> screen is displayed, and you can select <strong>Localization</strong> or other parts to add.</p>
+<p><img alt="" src="../../Upload/screenshots/add_localization_part_MyEvent.png" /></p>
+<p>For more information about creating and working with custom content types, refer to the <a href="../Creating-custom-content-types">Creating Custom Content Types</a> topic.</p>
+<blockquote>
+<p><strong>Note</strong> The localization feature is a work in progress, and not all parts of the Orchard application are yet localizable. For example, Orchard does not yet provide an automatic way to filter and display only content items in a given culture (one instance of this is the browser's default culture). We will address this in a future release. In the meantime you can provide your own implementation of <code>ICultureSelector</code> in a module. If you want to give us feedback on localization support in Orchard (for example, to help us understand the scenarios that are important for your site), please contact at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#111;&#105;&#110;&#45;&#111;&#114;&#99;&#104;&#97;&#114;&#100;&#45;&#108;&#111;&#99;&#97;&#108;&#105;&#122;&#97;&#116;&#105;&#111;&#110;&#64;&#108;&#105;&#115;&#116;&#115;&#46;&#111;&#117;&#116;&#101;&#114;&#99;&#117;&#114;&#118;&#101;&#46;&#111;&#114;&#103;">&#106;&#111;&#105;&#110;&#45;&#111;&#114;&#99;&#104;&#97;&#114;&#100;&#45;&#108;&#111;&#99;&#97;&#108;&#105;&#122;&#97;&#116;&#105;&#111;&#110;&#64;&#108;&#105;&#115;&#116;&#115;&#46;&#111;&#117;&#116;&#101;&#114;&#99;&#117;&#114;&#118;&#101;&#46;&#111;&#114;&#103;</a> and drop us a line!</p>
+</blockquote>
+<h1 id="translating-an-html-widget">Translating an Html Widget</h1>
+<blockquote>
+<p><strong>Note</strong> these steps apply to a clean installation using the default theme 'The Theme Machine'</p>
+</blockquote>
+<p>In the admin panel, navigate to <strong>Modules</strong> and verify that you have the <strong>Localization</strong> module installed and enabled. The next step is to navigate to <strong>Content</strong> in the admin panel. Select the <strong>Content Types</strong> tab page on top and click <strong>Edit</strong> to adjust the <strong>Html Widget</strong>. Our goal is to translate a Html Widget. Click <strong>Add Parts</strong> in the Parts section. Here we select the <strong>Localization</strong> part and click <strong>Save</strong> to add this part. At the bottom of the page click <strong>Save</strong> again to save your Content Item adjustments.</p>
+<p>Now we need to navigate to the <strong>Settings</strong> menu item in the admin panel. Under the section <strong>Default Site Culture</strong> you can add the cultures that you want to support. In our case we have nl-BE and en-US. Click <strong>Save</strong> to apply your culture settings.</p>
+<p>Navigate to the <strong>Widgets</strong> menu item.
+On the <strong>Default</strong> layer find for example the <strong>FooterQuadThrid</strong> section and click <strong>Add</strong> to add a Widget.
+Now you need to <strong>Choose A Widget</strong>, select the <strong>Html Widget</strong>, because this is the one that we adjust.
+Now fill in the needed information (Title and Content) and click <strong>Save</strong>. 
+Your Html Widget is now added to the FooterQuadThird section.
+Now we are ready to translate the item. Select you newly added widget to edit it. On top of the <strong>Edit Widget</strong> page you will find the following text: <strong>+ New translation</strong>. Click this to add the translation for another culture.</p>
+<h3 id="change-history">Change History</h3>
+<ul>
+<li>Updates for Orchard 1.8<ul>
+<li>11-03-14: Updated Localization steps and procedure (aka Crowdin)</li>
+<li>3-17-11:  Updated for references to dashboard.</li>
+<li>3-17-11:  Updated screens and procedures in section on localizing database-driven content items.</li>
+<li>3-18-11:  Updated screens and procedures in section on localizing the Orchard application and modules.</li>
+<li>4-12-11:  Structure of the document modified. Added online tool tutorial.</li>
+</ul>
+</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Search-and-indexing/" class="btn btn-neutral float-right" title="Search and Indexing">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Blogging-with-LiveWriter/" class="btn btn-neutral" title="Blogging with LiveWriter"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Blogging-with-LiveWriter/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Search-and-indexing/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

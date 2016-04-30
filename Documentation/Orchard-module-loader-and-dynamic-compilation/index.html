@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Orchard Dynamic Compilation - Orchard Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../Styles/Site.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Orchard Dynamic Compilation";
+    var mkdocs_page_input_path = "Documentation\Orchard-module-loader-and-dynamic-compilation.markdown";
+    var mkdocs_page_url = "/Documentation/Orchard-module-loader-and-dynamic-compilation/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-20757794-1', 'orchardproject.net');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Orchard Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-Orchard/">Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manually-installing-Orchard-zip-file/">Manually Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Working-with-Orchard-in-WebMatrix/">Working with Orchard in WebMatrix</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-around-the-dashboard/">Getting Around the Dashboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started/">Building Your First Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation-and-menus/">Navigation and Menus</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-a-Blog-to-Your-Site/">Adding a Blog to Your Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-and-managing-media-content/">Adding and Managing Media Content</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-widgets/">Managing Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Organizing-content-with-tags/">Organizing Content Using Tags</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>About the Project</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Basic-Orchard-Concepts/">Orchard Concept Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Builtin-Features/">Built-in modules and features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Feature-roadmap/">Feature roadmap</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Frequently-asked-questions/">Frequently Asked Questions</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-TV/">Tutorial Videos</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Authoring Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogging-with-LiveWriter/">Blogging with LiveWriter</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-global-ready-applications/">Creating Global-Ready Applications</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Search-and-indexing/">Search and Indexing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Saving-scheduling-and-publishing-drafts/">Publishing Drafts</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-custom-content-types/">Creating Custom Content Types</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Customizing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Previewing-and-applying-a-theme/">Previewing and Applying a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-themes/">Installing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-the-default-theme/">Customizing Themes</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using the Orchard Gallery</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Gallery-overview/">Gallery Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-modules-and-themes-from-the-gallery/">Installing Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Browsing-the-gallery-web-site/">Browsing the Gallery Web Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-a-module-or-theme-to-the-gallery/">Contributing to the Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Module-gallery-feeds/">Registering Additional Gallery Feeds</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Managing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Enabling-and-disabling-features/">Enabling and Disabling Features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-the-command-line-interface/">Using the Command-Line Interface</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-and-upgrading-modules/">Installing and Upgrading Modules</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Modifying-site-settings/">Modifying Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Moderating-comments/">Moderating Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-users-and-roles/">Managing Users and Roles</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-permissions/">Understanding Permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Making-a-Web-Site-Recipe/">Making a Website Recipe</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-an-image-gallery/">Creating an Image Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Workflows/">Workflows</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Projection/">Projection</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-Dynamic-Forms/">Create Dynamic Forms</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Hosting and Deploying Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Upgrading-a-site-to-a-new-version-of-Orchard/">Upgrading a Site to a New Version</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Optimizing-Performance-of-Orchard-with-Shared-Hosting/">Optimizing Server Performance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Whats-new-for-Windows-Azure-in-Orchard-1-7-1/">What's New for Windows Azure in Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Deploying-Orchard-to-Windows-Azure/">Deploying Orchard to Windows Azure</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Blob-Storage/">Using Windows Azure Blob Storage</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Cache/">Using Windows Azure Cache</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Running-Orchard-on-Mono/">Running Orchard on Mono</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-multi-tenant-Orchard-site/">Setting Up a Multi-Tenant Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-machine-key/">Setting Up a Machine Key</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Orchard</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../First-steps-into-Orchard/">First Steps into Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../How-Orchard-works/">How Orchard Works</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Command-line-scaffolding/">Command-Line Code Generation</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Getting Started with Modules Course</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-1/">Part 1: Build a Static Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-2/">Part 2: Make the Widget Dynamic</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-3/">Part 3: Using the Orchard API</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-4/">Part 4: Applying Best Practices</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Building-a-hello-world-module/">Building a Hello World Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-a-module-with-a-simple-text-editor/">Creating a Module with a Simple Text Editor</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-content-part/">Writing a Content Part</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-a-custom-field-type/">Writing a Content Field</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-a-module/">Packaging and Sharing a Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-widget/">Writing a Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-1-n-and-n-n-relations/">Creating _1-N_ and _N-N_ Relations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manifest-files/">Manifest Files for Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Caching/">Caching</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-custom-settings/">Custom Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../WebApi-In-Orchard/">Web Api in Orchard</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Working with Data</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-data-access/">Understanding Data Access</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-content-handlers/">Understanding Content Handlers</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Creating Themes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-new-theme/">Writing a New Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Anatomy-of-a-theme/">The Anatomy of a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-placement-info/">Understanding the placement.info File</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Accessing-and-rendering-shapes/">Accessing and Rendering Shapes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Alternates/">Alternates</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Template-file-syntax-guide/">Template File Syntax Guide</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-themes/">Packaging and Sharing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../UI-guidelines-for-theme-authors/">UI Guidelines for Theme Authors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-Orchard-using-Designer-Helper-Tools/">Customizing Orchard Using Designer Helper Tools</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Developer Tools and Guidelines</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Developer-FAQ/">Developer FAQ</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-source-enlistment/">Setting Up a Source Enlistment</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Source-code-organization/">Source Code Organization</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-dependencies-and-libraries/">Dependencies and Libraries</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code-conventions/">Code Conventions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Continuous-integration/">Continuous Integration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Merging-Pull-Requests/">Merging Pull Requests</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Additional Topics</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Orchard Dynamic Compilation</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#introduction">Introduction</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#high-level-overview">High Level Overview</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#discovery">Discovery</a></li>
+                
+                    <li><a class="toctree-l4" href="#modules-folder">"~/Modules" Folder</a></li>
+                
+                    <li><a class="toctree-l4" href="#core-folder">"~/Core" Folder</a></li>
+                
+                    <li><a class="toctree-l4" href="#themes-folder">"~/Themes" Folder</a></li>
+                
+                    <li><a class="toctree-l4" href="#custom-folders">Custom Folders</a></li>
+                
+                    <li><a class="toctree-l4" href="#example">Example</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#activation">Activation</a></li>
+                
+                    <li><a class="toctree-l4" href="#referenced-module-loader">"Referenced Module" Loader</a></li>
+                
+                    <li><a class="toctree-l4" href="#core-module-loader">"Core Module" Loader</a></li>
+                
+                    <li><a class="toctree-l4" href="#precompiled-module-loader">"Precompiled Module" Loader</a></li>
+                
+                    <li><a class="toctree-l4" href="#dynamic-module-loader">"Dynamic Module" Loader</a></li>
+                
+                    <li><a class="toctree-l4" href="#loader-disambiguation">Loader Disambiguation</a></li>
+                
+                    <li><a class="toctree-l4" href="#example_1">Example</a></li>
+                
+                    <li><a class="toctree-l4" href="#disabling-the-dynamic-module-loader">Disabling the "Dynamic Module" loader</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#references-resolution">References Resolution</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#change-of-configuration-detection">Change of Configuration Detection</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#rendering-web-forms-views">Rendering Web Forms Views</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#rendering-razor-views">Rendering Razor Views</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#the-app_datadependenciesdependenciesxml-file">The ~/App_Data/Dependencies/Dependencies.xml File</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Configuring-email/">Configuring Email</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Involved</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-documentation/">Contributing Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Documentation-Style-Guidelines/">Documentation Style Guidelines</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-patches/">Contributing Patches</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10-1.Release-Notes/">Orchard 1.10.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10.Release-Notes/">Orchard 1.10</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-3.Release-Notes/">Orchard 1.9.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-2.Release-Notes/">Orchard 1.9.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-1.Release-Notes/">Orchard 1.9.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9.Release-Notes/">Orchard 1.9</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-2.release-notes/">Orchard 1.8.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-1.Release-Notes/">Orchard 1.8.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-Release-Notes/">Orchard 1.8</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-2-Release-Notes/">Orchard 1.7.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-1-Release-Notes/">Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-Release-Notes/">Orchard 1.7</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-6-Release-Notes/">Orchard 1.6</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-5-Release-Notes/">Orchard 1.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-4-Release-Notes/">Orchard 1.4</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>User Experiences</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Walkthroughs/">Walkthroughs and UI Mockups</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Archived Specs</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogs/">Blogs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Comments/">Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Content-types/">Content types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Definitions/">Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Fundamentals-doctype/">HTML doctype</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Linkback/">Linkbacks: Pingbacks, Refbacks and Trackbacks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Media-management/">Media management</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation/">Navigation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-editing/">Page editing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages/">Page management and publishing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-publishing/">Page publishing workflow</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Rss-atom/">RSS and Atom feeds</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Slugs/">Slugs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Templates/">Page templates and syntax</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Tags/">Tags</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes/">Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes-includes/">Theme includes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Users/">Users, roles and permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Widgets/">Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Xml-Rpc/">XML-RPC and Live Writer</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-lists/">Creating lists of content items</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Orchard Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Additional Topics &raquo;</li>
+        
+      
+    
+    <li>Orchard Dynamic Compilation</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="introduction">Introduction</h1>
+<p>As a composable CMS, Orchard has the ability to load an arbitrary set of modules (also known as "extensions") at run-time. One of the goals of the 0.5 release was to make the process of installing and updating modules as easy as possible. </p>
+<p>Orchard, as any ASP.NET MVC application, supports loading module compiled as assemblies using Visual Studio. Orchard also offers a customized module loading strategy which, for example, allows loading assemblies for modules without having to deploy them in the "~/bin" folder.</p>
+<p>In addition to that, Orchard supports (this is still somewhat experimental) the ability to dynamically compile modules deployed as source code only.  This is more flexible than deploying binaries, and enables some interesting scenarios such as "in place" code customization without having to use Visual Studio. This is somewhat similar to the ASP.NET "App_Code" directory, except Orchard supports multiple "logical folder" (typically one per module) independently.</p>
+<p>The goal of this section is to describe at a technical level how Orchard load modules in the 0.5 release. This feature is often referred to as "Orchard Dynamic Compilation", even though technically dynamic compilation is only involved in very specific cases.</p>
+<h1 id="high-level-overview">High Level Overview</h1>
+<p>When an Orchard application starts, the Orchard Framework (the ExtensionLoaderCoordinator class to be precise) needs to figure out what are the modules installed in the Web Site and activate them (typically by loading their assembly).</p>
+<p>At a high level, this process can be divided in 3 distinct phases:</p>
+<ul>
+<li>Discovery: figure out what are the modules present in the web site</li>
+<li>Activation: figure out what strategy to use to "activate" (or load) each module</li>
+<li>References Resolution: figure out what are the assembly references needed to be activated for each module. This phase is technically part of the "Activation" phase, but it is easier to think about the problem of reference resolution as a separate concern.</li>
+</ul>
+<p>Once modules are properly activated, they are further examined to detect and enable individual <em>features</em>, but this is a topic for another section.</p>
+<h1 id="discovery">Discovery</h1>
+<p>The list of available extensions in an Orchard installation is built by searching various folders of the file system for "<strong>module.txt</strong>" and "<strong>theme.txt</strong>" files. The folders looked at by default are listed in the following sections.</p>
+<h2 id="modules-folder">"~/Modules" Folder</h2>
+<p>The "~/Modules" folder is intended to contain the vast majority of Orchard modules. The convention is that each module is stored in a sub-folder named "&lt;ModuleName&gt;" containing a single "module.txt" file.  Packaging, distribution and sharing of modules is only supported for modules in the "~/Modules" folder.</p>
+<h2 id="core-folder">"~/Core" Folder</h2>
+<p>The "~/Core" folder contains, by convention, modules defined in the "Orchard.Core" assembly. These modules are part of the "Core" Orchard system and are not intended to be modified as freely as modules in the "~/Modules" folder.</p>
+<h2 id="themes-folder">"~/Themes" Folder</h2>
+<p>The "~/Themes" folder is intended to contain Orchard Themes. Wrt to dynamic compilation, Themes are treated almost exactly the same as Modules, except that Themes don't have to have code (assembly in bin or .csproj file). For the rest of this page, when we refer to "Module", it should be understand that the concept applies to "Theme" the same way.</p>
+<h2 id="custom-folders">Custom Folders</h2>
+<p>Orchard 1.10 introduced a new feature that allows the loading of extensions from custom-defined folders outside of the ones listed above by adding the <code>ExtensionLocations</code> service that is utilised by each extension loader (see the Loaders in the Activation section below).</p>
+<p>Additional extension folders can be configured by defining an AppSetting (e.g. by adding it to the root web.config file, which contains appropriate examples) with the <code>key</code> "Modules" and/or "Themes" with their respective <code>value</code> being e.g. "~/Modules.Custom" and/or "~/Themes.Custom".</p>
+<h2 id="example">Example</h2>
+<p>Here is an example of an Orchard installation which contains the following extensions: Common and Localization (Core modules), Orchard.Azure and Orchard.Caching (built-in modules), SafeMode and TheAdmin (built-in themes), MyModule1 and MyModule2 (custom modules), MyBaseTheme and MyTheme (custom themes).</p>
+<pre><code>Root (Orchard.Web)
+  Core
+    Common
+      module.txt  &lt;= "Common" module from "Core"
+    Localization
+      module.txt  &lt;= "Localization" module from "Core"
+  Modules
+    Orchard.Azure
+      module.txt  &lt;= "Orchard.Azure" module
+    Orchard.Caching
+      module.txt  &lt;= "Orchard.Caching" module
+  Modules.Custom
+    MyModule1
+      module.txt  &lt;= "MyModule1" module
+    MyModule2
+      module.txt  &lt;= "MyModule2" module
+  Themes
+    SafeMode
+      theme.txt  &lt;= "SafeMode" theme
+    TheAdmin
+      theme.txt  &lt;= "TheAdmin" theme
+  Themes.Custom
+    MyBaseTheme
+      theme.txt  &lt;= "MyBaseTheme" theme
+    MyTheme
+      theme.txt  &lt;= "MyTheme" theme
+</code></pre>
+<h1 id="activation">Activation</h1>
+<p>Once Orchard has collected all the "Module.txt" files from the discovery phase, Orchard uses distinct strategies (or "Module Loaders") to load these modules in memory. Internally, the act of "loading a module" is an activity that takes a "module.txt" file as input and returns a list of "System.Type" as output. Note that this is slightly more generic than simply returning a "System.Assembly", as it allows Orchard to support multiple modules per assembly. For example, the "Orchard.Core.dll" assembly currently contains about 10 modules.</p>
+<p>The Orchard framework currently implements the following loaders:</p>
+<h2 id="referenced-module-loader">"Referenced Module" Loader</h2>
+<p>This loader looks in in "~/bin" directory for a assembly name corresponding to the module name specified in "module.txt". If the assembly exists, it is loaded and all its types are returned. This loader is useful when someone wants to deploy an Orchard web site where all modules are pre-compiled and stored in "~/bin", in a typical "asp.net web application" way.</p>
+<h2 id="core-module-loader">"Core Module" Loader</h2>
+<p>If "module.txt" indicates a module from the "~/Core" folder, the CoreExtensionLoader returns the types from the "Orchard.Core.&lt;moduleMame&gt;" namespace of the "Orchard.Core" assembly. "Orchard.Core" is a special assembly containing modules that are "core" to the system, i.e. offering basic functionality on top of the Orchard Framework.</p>
+<h2 id="precompiled-module-loader">"Precompiled Module" Loader</h2>
+<p>If "module.txt" indicates a module from the "~/Modules" folder, the PrecompiledExtensionLoader looks for an assembly named "&lt;ModuleName&gt;" in the "~/Modules/&lt;ModuleName&gt;/bin" folder. If the file exists, it's is copied to the <code>~/App_Data/Dependencies</code> folder, which is a special folder used by ASP.NET to look for additional assemblies outside of the traditional "~/bin" folder.</p>
+<h2 id="dynamic-module-loader">"Dynamic Module" Loader</h2>
+<p>If "module.txt" indicates a module from the "~/Modules" folder, the "Dynamic Module" loader looks for a file named "<ModuleName>.csproj" in the "~/Modules/&lt;ModuleName&gt;" folder. If the file exists, the loader will use the Orchard build manager for .csproj files to compile the file into an assembly and return all the types from that assembly.</p>
+<p>Note: This loader is the only one in the system performing what is often referred to as "dynamic compilation", and is indeed optional if modules have been pre-compiled.</p>
+<h2 id="loader-disambiguation">Loader Disambiguation</h2>
+<p>Since there is potentially more than one loader able to load a given module, Orchard has to have a way to resolve the ambiguity, i.e. pick the "right" loader.  Each loader has the ability to return a "date of last modification" for each module they can load.  For a given module, if there are multiple candidate loaders, Orchard will pick the loader which returns the most "recent" date of last modification.</p>
+<p>For example, a given module can be distributed with both full source code (including .csproj file) <strong>and</strong> compiled into an assembly in its "bin" directory.  The first time the module is loaded, Orchard will pick the loader for the assembly in "bin" since it's very likely the assembly was compiled after the last source code change was made.  However, if any change was made to the source code afterward, the "Dynamic Module" loader will return the date of the most recently modified file (either the source file or csproj), and Orchard will pick that loader for the given module.  </p>
+<p>Note that the "Core Module" loader is never ambiguous, because there is only one way to load these modules. The ambiguity can only arise for modules in the "~/Modules" directory.</p>
+<h2 id="example_1">Example</h2>
+<pre><code>RootFolder
+  Bin
+    Orchard.Web.dll
+    Orchard.Core.dll
+    Foo.dll
+  Core           
+    Common        &lt;= "Core Module" loader
+      module.txt
+    Localization  &lt;= "Core Module" loader
+      module.txt
+  Modules
+    Foo           &lt;= "Reference Module" loader (because a "~/bin/Foo.dll" file exists)
+      module.txt
+    Bar           &lt;= "Precompiled Module" loader (because a "~/Modules/Bar/bin/Bar.dll" file exists)
+      bin
+        Bar.dll
+      module.txt
+    Baz           &lt;= "Dynamic Module" loader (because a "~/Modules/Baz/Baz.csproj" file exists)
+      Controller
+         BazControler.cs
+      Baz.csproj
+      module.txt
+</code></pre>
+<h2 id="disabling-the-dynamic-module-loader">Disabling the "Dynamic Module" loader</h2>
+<p>The dynamic module loader should be useless when deploying a website in production, as a production enviroment it
+should not be able to install and load module dynamically. But another important reason why it should be disabled
+is that it creates a lot of <code>FileSystemWatcher</code> instances to detect changes on the modules.</p>
+<p>To disable the module, rename the file <code>\Config\Sample.HostComponents.config</code> to <code>\Config\HostComponents.config</code>, 
+then check the content is:</p>
+<pre><code>&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;HostComponents&gt;
+  &lt;Components&gt;
+    &lt;Component Type="Orchard.Environment.Extensions.ExtensionMonitoringCoordinator"&gt;
+      &lt;Properties&gt;
+        &lt;Property Name="Disabled" Value="true"/&gt;
+      &lt;/Properties&gt;
+    &lt;/Component&gt;
+  &lt;/Components&gt;
+&lt;/HostComponents&gt;
+</code></pre>
+<p>Deploy this file and restart the App Pool.</p>
+<p>NB: You will have to ensure that the binaries for every modules are available in the <code>/bin</code> folder of each module, 
+such that the Precompiled Module loader can use them directly. When using Visual Studio this should be the case. 
+Otherwise use the command line tool to build the website, which will have the same effect.</p>
+<h1 id="references-resolution">References Resolution</h1>
+<p>(TODO: Explain how Orchard figures out references by looking at the "References" section of the csproj file as well as looking at additional assembly binaries dropped in each module "bin" directory)</p>
+<h1 id="change-of-configuration-detection">Change of Configuration Detection</h1>
+<p>As explained above, modules are loaded at application startup. However, once the application is started up, changes can happen: a new module might be installed, the source code of a module might be manually updated, a module might be removed from the site, etc.  To detect these changes, Orchard asks each module loader in the system to "monitor" potential changes, and notify when a change happens.</p>
+<p>When a change is detected, the current module configuration is discarded and modules are re-examined, loaded and activated as if the application was starting up again.  In some cases, these changes require an ASP.NET AppDomain restart (e.g. a new version of a module assembly needs to be loaded). Orchard detects these situations and forces an ASP.NET AppDomain restart.</p>
+<h1 id="rendering-web-forms-views">Rendering Web Forms Views</h1>
+<p>(TODO: Explain that Orchard uses a custom virtual path provider to insert custom "Assembly Src=xx" and "Assembly Name=xxx" directive when reading .ascx and .aspx files)</p>
+<h1 id="rendering-razor-views">Rendering Razor Views</h1>
+<p>(TODO: Explain that Orchard uses a Razor custom API to add Module dependencies to Views)</p>
+<h1 id="the-app_datadependenciesdependenciesxml-file">The <code>~/App_Data/Dependencies/Dependencies.xml</code> File</h1>
+<p>This file contains the list of modules, their loader and their resolved references of the "last known good" configuration of module, i.e. the last time Orchard successfully loaded all modules of the application.  Examining the content of this file can be useful for debugging purposes, i.e. if a the latest version of a module doesn't seem to be loaded, for example.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Configuring-email/" class="btn btn-neutral float-right" title="Configuring Email">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Merging-Pull-Requests/" class="btn btn-neutral" title="Merging Pull Requests"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Merging-Pull-Requests/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Configuring-email/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

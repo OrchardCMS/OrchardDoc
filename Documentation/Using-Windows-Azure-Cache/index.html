@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Using Windows Azure Cache - Orchard Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../Styles/Site.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Using Windows Azure Cache";
+    var mkdocs_page_input_path = "Documentation\Using-Windows-Azure-Cache.markdown";
+    var mkdocs_page_url = "/Documentation/Using-Windows-Azure-Cache/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-20757794-1', 'orchardproject.net');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Orchard Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-Orchard/">Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manually-installing-Orchard-zip-file/">Manually Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Working-with-Orchard-in-WebMatrix/">Working with Orchard in WebMatrix</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-around-the-dashboard/">Getting Around the Dashboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started/">Building Your First Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation-and-menus/">Navigation and Menus</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-a-Blog-to-Your-Site/">Adding a Blog to Your Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-and-managing-media-content/">Adding and Managing Media Content</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-widgets/">Managing Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Organizing-content-with-tags/">Organizing Content Using Tags</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>About the Project</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Basic-Orchard-Concepts/">Orchard Concept Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Builtin-Features/">Built-in modules and features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Feature-roadmap/">Feature roadmap</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Frequently-asked-questions/">Frequently Asked Questions</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-TV/">Tutorial Videos</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Authoring Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogging-with-LiveWriter/">Blogging with LiveWriter</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-global-ready-applications/">Creating Global-Ready Applications</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Search-and-indexing/">Search and Indexing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Saving-scheduling-and-publishing-drafts/">Publishing Drafts</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-custom-content-types/">Creating Custom Content Types</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Customizing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Previewing-and-applying-a-theme/">Previewing and Applying a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-themes/">Installing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-the-default-theme/">Customizing Themes</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using the Orchard Gallery</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Gallery-overview/">Gallery Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-modules-and-themes-from-the-gallery/">Installing Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Browsing-the-gallery-web-site/">Browsing the Gallery Web Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-a-module-or-theme-to-the-gallery/">Contributing to the Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Module-gallery-feeds/">Registering Additional Gallery Feeds</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Managing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Enabling-and-disabling-features/">Enabling and Disabling Features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-the-command-line-interface/">Using the Command-Line Interface</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-and-upgrading-modules/">Installing and Upgrading Modules</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Modifying-site-settings/">Modifying Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Moderating-comments/">Moderating Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-users-and-roles/">Managing Users and Roles</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-permissions/">Understanding Permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Making-a-Web-Site-Recipe/">Making a Website Recipe</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-an-image-gallery/">Creating an Image Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Workflows/">Workflows</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Projection/">Projection</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-Dynamic-Forms/">Create Dynamic Forms</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Hosting and Deploying Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Upgrading-a-site-to-a-new-version-of-Orchard/">Upgrading a Site to a New Version</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Optimizing-Performance-of-Orchard-with-Shared-Hosting/">Optimizing Server Performance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Whats-new-for-Windows-Azure-in-Orchard-1-7-1/">What's New for Windows Azure in Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Deploying-Orchard-to-Windows-Azure/">Deploying Orchard to Windows Azure</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Blob-Storage/">Using Windows Azure Blob Storage</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Using Windows Azure Cache</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#overview">Overview</a></li>
+                
+                    <li><a class="toctree-l4" href="#role-based-cache-vs-cache-service">Role-based Cache vs Cache Service</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#enabling-for-windows-azure-cloud-services">Enabling for Windows Azure Cloud Services</a></li>
+                
+                    <li><a class="toctree-l4" href="#customizing-the-configuration">Customizing the configuration</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#enabling-for-windows-azure-web-sites">Enabling for Windows Azure Web Sites</a></li>
+                
+                    <li><a class="toctree-l4" href="#configuring-cache-cluster-settings-before-deploying">Configuring cache cluster settings before deploying:</a></li>
+                
+                    <li><a class="toctree-l4" href="#configuring-cache-cluster-settings-after-deploying">Configuring cache cluster settings after deploying:</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#enabling-for-any-other-hosting">Enabling for any other hosting</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#configuration-reference">Configuration reference</a></li>
+                
+                    <li><a class="toctree-l4" href="#multi-tenancy-configuration">Multi-tenancy configuration</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#session-state-caching">Session state caching</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Running-Orchard-on-Mono/">Running Orchard on Mono</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-multi-tenant-Orchard-site/">Setting Up a Multi-Tenant Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-machine-key/">Setting Up a Machine Key</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Orchard</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../First-steps-into-Orchard/">First Steps into Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../How-Orchard-works/">How Orchard Works</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Command-line-scaffolding/">Command-Line Code Generation</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Getting Started with Modules Course</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-1/">Part 1: Build a Static Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-2/">Part 2: Make the Widget Dynamic</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-3/">Part 3: Using the Orchard API</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-4/">Part 4: Applying Best Practices</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Building-a-hello-world-module/">Building a Hello World Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-a-module-with-a-simple-text-editor/">Creating a Module with a Simple Text Editor</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-content-part/">Writing a Content Part</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-a-custom-field-type/">Writing a Content Field</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-a-module/">Packaging and Sharing a Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-widget/">Writing a Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-1-n-and-n-n-relations/">Creating _1-N_ and _N-N_ Relations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manifest-files/">Manifest Files for Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Caching/">Caching</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-custom-settings/">Custom Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../WebApi-In-Orchard/">Web Api in Orchard</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Working with Data</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-data-access/">Understanding Data Access</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-content-handlers/">Understanding Content Handlers</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Creating Themes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-new-theme/">Writing a New Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Anatomy-of-a-theme/">The Anatomy of a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-placement-info/">Understanding the placement.info File</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Accessing-and-rendering-shapes/">Accessing and Rendering Shapes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Alternates/">Alternates</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Template-file-syntax-guide/">Template File Syntax Guide</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-themes/">Packaging and Sharing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../UI-guidelines-for-theme-authors/">UI Guidelines for Theme Authors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-Orchard-using-Designer-Helper-Tools/">Customizing Orchard Using Designer Helper Tools</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Developer Tools and Guidelines</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Developer-FAQ/">Developer FAQ</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-source-enlistment/">Setting Up a Source Enlistment</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Source-code-organization/">Source Code Organization</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-dependencies-and-libraries/">Dependencies and Libraries</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code-conventions/">Code Conventions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Continuous-integration/">Continuous Integration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Merging-Pull-Requests/">Merging Pull Requests</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Additional Topics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-module-loader-and-dynamic-compilation/">Orchard Dynamic Compilation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Configuring-email/">Configuring Email</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Involved</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-documentation/">Contributing Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Documentation-Style-Guidelines/">Documentation Style Guidelines</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-patches/">Contributing Patches</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10-1.Release-Notes/">Orchard 1.10.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10.Release-Notes/">Orchard 1.10</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-3.Release-Notes/">Orchard 1.9.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-2.Release-Notes/">Orchard 1.9.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-1.Release-Notes/">Orchard 1.9.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9.Release-Notes/">Orchard 1.9</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-2.release-notes/">Orchard 1.8.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-1.Release-Notes/">Orchard 1.8.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-Release-Notes/">Orchard 1.8</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-2-Release-Notes/">Orchard 1.7.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-1-Release-Notes/">Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-Release-Notes/">Orchard 1.7</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-6-Release-Notes/">Orchard 1.6</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-5-Release-Notes/">Orchard 1.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-4-Release-Notes/">Orchard 1.4</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>User Experiences</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Walkthroughs/">Walkthroughs and UI Mockups</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Archived Specs</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogs/">Blogs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Comments/">Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Content-types/">Content types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Definitions/">Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Fundamentals-doctype/">HTML doctype</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Linkback/">Linkbacks: Pingbacks, Refbacks and Trackbacks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Media-management/">Media management</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation/">Navigation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-editing/">Page editing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages/">Page management and publishing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-publishing/">Page publishing workflow</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Rss-atom/">RSS and Atom feeds</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Slugs/">Slugs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Templates/">Page templates and syntax</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Tags/">Tags</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes/">Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes-includes/">Theme includes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Users/">Users, roles and permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Widgets/">Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Xml-Rpc/">XML-RPC and Live Writer</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-lists/">Creating lists of content items</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Orchard Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Hosting and Deploying Websites &raquo;</li>
+        
+      
+    
+    <li>Using Windows Azure Cache</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>Windows Azure Caching is a distributed memory-based cache service that is part of Windows Azure. Orchard ships with two native providers for Windows Azure Caching, allowing Orchard to use Windows Azure Caching as the cache implementation for both output caching and database caching (NHibernate second-level caching). This topic describes how to configure and enable this functionality.</p>
+<h1 id="overview">Overview</h1>
+<p>Support for Windows Azure Caching comes in the form of two features in the <code>Orchard.Azure</code> module:</p>
+<pre><code>Orchard.Azure.OutputCache:
+    Name: Windows Azure Output Cache
+    Description: Activates an Orchard output cache provider that targets Windows Azure Cache.
+    Dependencies: Orchard.OutputCache
+    Category: Performance
+Orchard.Azure.DatabaseCache:
+    Name: Windows Azure Database Cache
+    Description: Activates an NHibernate second-level cache provider that targets Windows Azure Cache.
+    Category: Performance
+</code></pre>
+<p>These two features can be enabled separately or in combination.</p>
+<p>They both configure Orchard to use Windows Azure Caching as the cache implementation. This is primarily useful when running Orchard in a server farm configuration. As mentioned above, Windows Azure Caching is a distributed memory-based cache service. Without using some form of distributed cache, caches will become out of sync between the different nodes in your farm.</p>
+<h2 id="role-based-cache-vs-cache-service">Role-based Cache vs Cache Service</h2>
+<p>Both features have been designed to work with both <a href="http://msdn.microsoft.com/en-us/library/windowsazure/dn386103.aspx">Windows Azure Role-based Caching</a> and <a href="http://msdn.microsoft.com/en-us/library/windowsazure/dn386094.aspx">Windows Azure Cache Service</a>. Role-based Caching can be used only from within a Windows Azure Cloud Service. Cache Service is called via public HTTP endpoints and can be used from anywhere, irrespective of hosting environment.</p>
+<p>The caching providers are configured slightly differently depending on which flavor to use. See the <a href="#ConfigurationReference">Configuration reference section</a> for more information.</p>
+<h1 id="enabling-for-windows-azure-cloud-services">Enabling for Windows Azure Cloud Services</h1>
+<p>When deploying Orchard to a Windows Azure Cloud Service using the <code>Orchard.Azure.sln</code> solution, the resulting package is already preconfigured with everything required to enable the caching features. By default the cloud service project is configured for co-located role-based caching with 30% of the role instance memory allowed for cache usage.</p>
+<p>The only thing you need to change before deploying is the connection string of the storage account you want to use to maintain the cache cluster's runtime state:</p>
+<p><img alt="" src="../../Attachments/Using-Windows-Azure-Cache/storage-account.png" /></p>
+<ol>
+<li>Open <code>Orchard.Azure.sln</code>.</li>
+<li>Navigate to <code>Orchard.Azure.CloudService</code>, double click the role <code>Orchard.Azure.Web</code> to bring up its property page, and navigate to the <em>Caching</em> tab.</li>
+<li>Configure the connection string of the storage account you want to use.</li>
+<li>Deploy the cloud service.</li>
+</ol>
+<p>After deploying you can simply enable the features <em>Windows Azure Output Cache</em> and/or <em>Windows Azure Database Cache</em> in the admin dashboard.</p>
+<h2 id="customizing-the-configuration">Customizing the configuration</h2>
+<p>You can customize any of the preconfigured settings according to your requirements. For example you might want to:</p>
+<ul>
+<li>Change the configuration from co-located to dedicated role-based caching by adding a dedicated caching role to the cloud service.</li>
+<li>Change the expiration settings of the preconfigured named caches.</li>
+<li>Use a different set of named caches.</li>
+<li>Use Cache Service instead of role-based cache (even if you're running in a cloud service).</li>
+</ul>
+<p>This can all be done by reconfiguring the cloud service project.</p>
+<p>To reconfigure the expiration settings or set of named caches, use the <em>Caching</em> tab of the cloud service project:</p>
+<p><img alt="" src="../../Attachments/Using-Windows-Azure-Cache/named-caches.png" /></p>
+<p>Just remember that you must also reconfigure the provider settings to match whatever cache configuration you create, using the <em>Settings</em> tab of the cloud service project:</p>
+<p><img alt="" src="../../Attachments/Using-Windows-Azure-Cache/role-configuration.png" /></p>
+<h1 id="enabling-for-windows-azure-web-sites">Enabling for Windows Azure Web Sites</h1>
+<blockquote>
+<p>NOTE: When running Orchard in a Windows Azure Web Site only Cache Service can be used - using Role-based Cache is not possible.</p>
+</blockquote>
+<p>Before the caching features can be enabled you must configure the URL and credentials of the cache clusters you want to use. This can be done either before deploying (in Web.config) or after deploying (in the Windows Azure management portal).</p>
+<h2 id="configuring-cache-cluster-settings-before-deploying">Configuring cache cluster settings <em>before</em> deploying:</h2>
+<ol>
+<li>Open <code>Orchard.sln</code>.</li>
+<li>Navigate to <code>Orchard.Web</code> and open the <code>Web.config</code> file.</li>
+<li>For output caching, in the <code>&lt;appSettings&gt;</code> element add the following settings:<ul>
+<li><code>Orchard.Azure.OutputCache.HostIdentifier</code></li>
+<li><code>Orchard.Azure.OutputCache.CacheName</code></li>
+<li><code>Orchard.Azure.OutputCache.AuthorizationToken</code></li>
+</ul>
+</li>
+<li>For database caching, in the <code>&lt;appSettings&gt;</code> element add the following settings:<ul>
+<li><code>Orchard.Azure.DatabaseCache.HostIdentifier</code></li>
+<li><code>Orchard.Azure.DatabaseCache.CacheName</code></li>
+<li><code>Orchard.Azure.DatabaseCache.AuthorizationToken</code></li>
+</ul>
+</li>
+<li>Deploy the web site.</li>
+</ol>
+<p>Here's an example configuration:</p>
+<pre><code>&lt;appSettings&gt;
+    &lt;!-- Output caching --&gt;
+    &lt;add key="Orchard.Azure.OutputCache.HostIdentifier" value="mycache.cache.windows.net" /&gt;
+    &lt;add key="Orchard.Azure.OutputCache.CacheName" value="MyOutputCache" /&gt;
+    &lt;add key="Orchard.Azure.OutputCache.AuthorizationToken" value="YWNzO...ZXNzY29u" /&gt;
+    &lt;!-- Database caching --&gt;
+    &lt;add key="Orchard.Azure.DatabaseCache.HostIdentifier" value="mycache.cache.windows.net" /&gt;
+    &lt;add key="Orchard.Azure.DatabaseCache.CacheName" value="MyDatabaseCache" /&gt;
+    &lt;add key="Orchard.Azure.DatabaseCache.AuthorizationToken" value="YWNzO...ZXNzY29u" /&gt;
+&lt;/appSettings&gt;
+</code></pre>
+<p>In the above example, the same cache service is used for both types of caching, but different named caches (<code>MyOutputCache</code> and <code>MyDatabaseCache</code>, respectively). Of course you are also free to use completely different cache services if you like. Note that if you want to use the <code>default</code> cache instead of a custom named cache, the setting for <code>CacheName</code> is optional and can be omitted.</p>
+<p>Refer to the <a href="#ConfigurationReference">Configuration reference section</a> for more details on how to configure each setting.</p>
+<p>You can now enable the features <em>Windows Azure Output Cache</em> and/or <em>Windows Azure Database Cache</em> in the admin dashboard.</p>
+<h2 id="configuring-cache-cluster-settings-after-deploying">Configuring cache cluster settings <em>after</em> deploying:</h2>
+<ol>
+<li>Deploy the web site.</li>
+<li>In the management portal, navigate to your web site and select the <em>Configure</em> tab.</li>
+<li>For output caching, under <em>App settings</em> add the following settings:<ul>
+<li><code>Orchard.Azure.OutputCache.HostIdentifier</code></li>
+<li><code>Orchard.Azure.OutputCache.CacheName</code></li>
+<li><code>Orchard.Azure.OutputCache.AuthorizationToken</code></li>
+</ul>
+</li>
+<li>For database caching, under <em>App settings</em> element add the following settings:<ul>
+<li><code>Orchard.Azure.DatabaseCache.HostIdentifier</code></li>
+<li><code>Orchard.Azure.DatabaseCache.CacheName</code></li>
+<li><code>Orchard.Azure.DatabaseCache.AuthorizationToken</code></li>
+</ul>
+</li>
+<li>Click <em>Save</em>.</li>
+</ol>
+<p>Here's an example configuration:</p>
+<p><img alt="" src="../../Attachments/Using-Windows-Azure-Cache/website-configuration.png" /></p>
+<p>Refer to the <a href="#ConfigurationReference">Configuration reference section</a> for more details on how to configure each setting.</p>
+<p>You can now enable the features <em>Windows Azure Output Cache</em> and/or <em>Windows Azure Database Cache</em> in the admin dashboard.</p>
+<h1 id="enabling-for-any-other-hosting">Enabling for any other hosting</h1>
+<p>To enable the features when running Orchard in any other hosting environment, use the <code>Web.config</code> method described above. Once the appropriate settings have been added to the <code>&lt;appSettings&gt;</code> element, can enable the features <em>Windows Azure Output Cache</em> and/or <em>Windows Azure Database Cache</em> in the admin dashboard.</p>
+<h1 id="configuration-reference">Configuration reference</h1>
+<p>Both Windows Azure Output Cache and Windows Azure Database Cache share the same configuration structure, differing only by a prefix added to each setting. The prefix is <code>Orchard.Azure.OutputCache.</code> or <code>Orchard.Azure.DatabaseCache.</code> respectively.</p>
+<p>These settings are read from platform configuration using the <a href="http://msdn.microsoft.com/en-us/library/microsoft.windowsazure.cloudconfigurationmanager.aspx">CloudConfigurationManager</a> class, which means they can be configured either in cloud service role configuration settings, web site configuration settings or the <code>&lt;appSettings&gt;</code> element in Web.config.</p>
+<table>
+<thead>
+<tr>
+    <th>Setting</th>
+    <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>HostIdentifier</code></td>
+    <td>When using role-based caching, set this to the name of the cloud service role hosting the cache cluster.  Auto discover will be used to resolve the cache cluster hostname at runtime. When using Windows Azure Cache Service, set this to the endpoint hostname of your cache service, e.g. <code>fabrikam.cache.windows.net</code>.</td>
+</tr>
+<tr>
+    <td><code>CacheName</code></td>
+    <td>Set this to the name of a named cache, or leave blank to use the <code>default</code> cache.</td>
+</tr>
+<tr>
+    <td><code>AuthorizationToken</code></td>
+    <td>When using Windows Azure Cache Service, set this to the authorization token used to connect to the cache service endpoint.</td>
+</tr>
+</tbody>
+</table>
+
+<p>Here's an example configuration using <code>Web.config</code>. This configures Windows Azure Output Cache to use the <code>default</code> cache on a Windows Azure Cache Service endpoint:</p>
+<pre><code>&lt;appSettings&gt;
+    &lt;add key="Orchard.Azure.OutputCache.HostIdentifier" value="mycache.cache.windows.net" /&gt;
+    &lt;add key="Orchard.Azure.OutputCache.CacheName" value="" /&gt;
+    &lt;add key="Orchard.Azure.OutputCache.AuthorizationToken" value="YWNzO...ZXNzY29u" /&gt;
+&lt;/appSettings&gt;
+</code></pre>
+<p>Here's the default role configuration when deploying to a cloud service:</p>
+<p><img alt="" src="../../Attachments/Using-Windows-Azure-Cache/default-configuration.png" /></p>
+<h2 id="multi-tenancy-configuration">Multi-tenancy configuration</h2>
+<p>For multi-tenancy scenarios each setting can optionally be prefixed with a tenant name followed by colon, such as <code>SomeTenant:Orchard.Azure.OutputCache.HostIdentifier</code>. Whenever the caching providers read configuration settings they will always first look for a setting specific for the current tenant, and if no such setting exists, fallback to the default non-prefixed setting.</p>
+<p>Here's an example Azure Web Site configuration with two tenants, both using output caching with a named cache <code>OutputCache</code> on the Windows Azure Cache Service, but each using its own cache service instance:</p>
+<pre><code>&lt;appSettings&gt;
+    &lt;!-- Settings for Tenant1 --&gt;
+    &lt;add key="Tenant1:Orchard.Azure.OutputCache.HostIdentifier" value="mycache1.cache.windows.net" /&gt;
+    &lt;add key="Tenant1:Orchard.Azure.OutputCache.AuthorizationToken" value="YWNzO...ZXNzY29u" /&gt;
+    &lt;!-- Settings for Tenant2 --&gt;
+    &lt;add key="Tenant2:Orchard.Azure.OutputCache.HostIdentifier" value="mycache2.cache.windows.net" /&gt;
+    &lt;add key="Tenant2:Orchard.Azure.OutputCache.AuthorizationToken" value="FQdOS...ImNXFtSJ" /&gt;
+    &lt;!-- Common settings --&gt;
+    &lt;add key="Orchard.Azure.OutputCache.CacheName" value="OutputCache" /&gt;
+&lt;/appSettings&gt;
+</code></pre>
+<h1 id="session-state-caching">Session state caching</h1>
+<p>In addition to output caching and database caching, session state storage is also sensitive to server farm scenarios, primarily in solutions where there is no session affinity in the load balancer. The load balancer used in Windows Azure Cloud Services is one example of this.</p>
+<p>For this reason the web role in the cloud service project (<code>Orchard.Azure.Web</code>) is preconfigured through <code>Web.config</code> to use an ASP.NET session state provider that targets Windows Azure Cache. While this provider is enabled, all session state is stored in the distributed cache. This means it is safe for the same user to end up at one farm node in one request and another farm node in the next request, without running the risk of losing her state.</p>
+<blockquote>
+<p>NOTE: This is not necessary when running Orchard in a Windows Azure Web Site as the load balancer here maintains session affinity using cookies.</p>
+</blockquote>
+<p>The preconfigured settings in <code>Web.config</code> when deploying to a cloud service is described below. To configure session state caching in any other hosting scenarios, you can modify your <code>Web.config</code> file accordingly before deploying.</p>
+<p>First, a configuration section is added:</p>
+<pre><code>&lt;configSections&gt;
+    ...
+    &lt;section name="dataCacheClients" type="Microsoft.ApplicationServer.Caching.DataCacheClientsSection, Microsoft.ApplicationServer.Caching.Core" allowLocation="true" allowDefinition="Everywhere" /&gt;
+&lt;/configSections&gt;
+</code></pre>
+<p>Next, a cache client is configured:</p>
+<pre><code>&lt;dataCacheClients&gt;
+    &lt;dataCacheClient name="DefaultCacheClient" useLegacyProtocol="false" connectionPool="true" maxConnectionsToServer="20"&gt;
+        &lt;autoDiscover isEnabled="true" identifier="Orchard.Azure.Web" /&gt;
+    &lt;/dataCacheClient&gt;
+&lt;/dataCacheClients&gt;
+</code></pre>
+<p>Finally, session state is configured to use the Azure Cache provider and the cache client defined above:</p>
+<pre><code>&lt;sessionState mode="Custom" timeout="60" customProvider="CacheSessionStateProvider"&gt;
+    &lt;providers&gt;
+        &lt;!-- Set the cacheName attribute to be the name of the configured logical cache to use for session state storage. --&gt;
+        &lt;add name="CacheSessionStateProvider" type="Microsoft.Web.DistributedCache.DistributedCacheSessionStateStoreProvider, Microsoft.Web.DistributedCache" cacheName="SessionStateCache" dataCacheClientName="DefaultCacheClient" applicationName="Orchard" /&gt;
+    &lt;/providers&gt;
+&lt;/sessionState&gt;
+</code></pre>
+<p>The configuration of the session state provider can be customized by editing <code>Web.config</code> before deploying the cloud service. To disable the session state provider, simply comment out the above sections from <code>Web.config</code> before deploying the cloud service.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Running-Orchard-on-Mono/" class="btn btn-neutral float-right" title="Running Orchard on Mono">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Using-Windows-Azure-Blob-Storage/" class="btn btn-neutral" title="Using Windows Azure Blob Storage"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Using-Windows-Azure-Blob-Storage/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Running-Orchard-on-Mono/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

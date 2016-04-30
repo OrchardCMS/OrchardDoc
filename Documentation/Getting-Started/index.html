@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Building Your First Orchard Site - Orchard Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../Styles/Site.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Building Your First Orchard Site";
+    var mkdocs_page_input_path = "Documentation\Getting-Started.markdown";
+    var mkdocs_page_url = "/Documentation/Getting-Started/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-20757794-1', 'orchardproject.net');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Orchard Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Started</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-Orchard/">Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manually-installing-Orchard-zip-file/">Manually Installing Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Working-with-Orchard-in-WebMatrix/">Working with Orchard in WebMatrix</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-around-the-dashboard/">Getting Around the Dashboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Building Your First Orchard Site</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#getting-started-with-orchard">Getting Started with Orchard</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#try-orchard">Try Orchard</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#dotnest-orchard-saas-provider">DotNest : Orchard SaaS provider</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#orchard-on-azure-websites">Orchard on Azure Websites</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#changing-the-layout-of-the-home-page">Changing The Layout Of The Home Page</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#editing-the-content-of-the-home-page">Editing The Content Of The Home Page</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#inserting-a-media-item">Inserting a Media Item</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#adding-a-new-page-to-your-site">Adding a New Page to Your Site</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#adding-new-layer-for-a-page">Adding New Layer for a Page</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#adding-a-new-html-widget">Adding a New HTML Widget</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#selecting-a-theme">Selecting A Theme</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#extending-orchard-with-modules-and-features">Extending Orchard With Modules And Features</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#change-history">Change History</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation-and-menus/">Navigation and Menus</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-a-Blog-to-Your-Site/">Adding a Blog to Your Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-and-managing-media-content/">Adding and Managing Media Content</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-widgets/">Managing Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Organizing-content-with-tags/">Organizing Content Using Tags</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>About the Project</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Basic-Orchard-Concepts/">Orchard Concept Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Builtin-Features/">Built-in modules and features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Feature-roadmap/">Feature roadmap</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Frequently-asked-questions/">Frequently Asked Questions</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-TV/">Tutorial Videos</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Authoring Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogging-with-LiveWriter/">Blogging with LiveWriter</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-global-ready-applications/">Creating Global-Ready Applications</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Search-and-indexing/">Search and Indexing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Saving-scheduling-and-publishing-drafts/">Publishing Drafts</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-custom-content-types/">Creating Custom Content Types</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Customizing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Previewing-and-applying-a-theme/">Previewing and Applying a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-themes/">Installing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-the-default-theme/">Customizing Themes</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Using the Orchard Gallery</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Gallery-overview/">Gallery Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-modules-and-themes-from-the-gallery/">Installing Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Browsing-the-gallery-web-site/">Browsing the Gallery Web Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-a-module-or-theme-to-the-gallery/">Contributing to the Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Module-gallery-feeds/">Registering Additional Gallery Feeds</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Managing Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Enabling-and-disabling-features/">Enabling and Disabling Features</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-the-command-line-interface/">Using the Command-Line Interface</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Installing-and-upgrading-modules/">Installing and Upgrading Modules</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Modifying-site-settings/">Modifying Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Moderating-comments/">Moderating Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Managing-users-and-roles/">Managing Users and Roles</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-permissions/">Understanding Permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Making-a-Web-Site-Recipe/">Making a Website Recipe</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-an-image-gallery/">Creating an Image Gallery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Workflows/">Workflows</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Projection/">Projection</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-Dynamic-Forms/">Create Dynamic Forms</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Hosting and Deploying Websites</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Upgrading-a-site-to-a-new-version-of-Orchard/">Upgrading a Site to a New Version</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Optimizing-Performance-of-Orchard-with-Shared-Hosting/">Optimizing Server Performance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Whats-new-for-Windows-Azure-in-Orchard-1-7-1/">What's New for Windows Azure in Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Deploying-Orchard-to-Windows-Azure/">Deploying Orchard to Windows Azure</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Blob-Storage/">Using Windows Azure Blob Storage</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Using-Windows-Azure-Cache/">Using Windows Azure Cache</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Running-Orchard-on-Mono/">Running Orchard on Mono</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-multi-tenant-Orchard-site/">Setting Up a Multi-Tenant Orchard Site</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-machine-key/">Setting Up a Machine Key</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Extending Orchard</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../First-steps-into-Orchard/">First Steps into Orchard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../How-Orchard-works/">How Orchard Works</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Command-line-scaffolding/">Command-Line Code Generation</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Getting Started with Modules Course</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-1/">Part 1: Build a Static Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-2/">Part 2: Make the Widget Dynamic</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-3/">Part 3: Using the Orchard API</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Getting-Started-with-Modules-Part-4/">Part 4: Applying Best Practices</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Building-a-hello-world-module/">Building a Hello World Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-a-module-with-a-simple-text-editor/">Creating a Module with a Simple Text Editor</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-content-part/">Writing a Content Part</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-a-custom-field-type/">Writing a Content Field</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-a-module/">Packaging and Sharing a Module</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-widget/">Writing a Widget</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-1-n-and-n-n-relations/">Creating _1-N_ and _N-N_ Relations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Manifest-files/">Manifest Files for Modules and Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Caching/">Caching</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Adding-custom-settings/">Custom Site Settings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../WebApi-In-Orchard/">Web Api in Orchard</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Working with Data</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-data-access/">Understanding Data Access</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-content-handlers/">Understanding Content Handlers</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Creating Themes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing-a-new-theme/">Writing a New Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Anatomy-of-a-theme/">The Anatomy of a Theme</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding-placement-info/">Understanding the placement.info File</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Accessing-and-rendering-shapes/">Accessing and Rendering Shapes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Alternates/">Alternates</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Template-file-syntax-guide/">Template File Syntax Guide</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Packaging-and-sharing-themes/">Packaging and Sharing Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../UI-guidelines-for-theme-authors/">UI Guidelines for Theme Authors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Customizing-Orchard-using-Designer-Helper-Tools/">Customizing Orchard Using Designer Helper Tools</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Developer Tools and Guidelines</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Developer-FAQ/">Developer FAQ</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Setting-up-a-source-enlistment/">Setting Up a Source Enlistment</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Source-code-organization/">Source Code Organization</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-dependencies-and-libraries/">Dependencies and Libraries</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code-conventions/">Code Conventions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Continuous-integration/">Continuous Integration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Merging-Pull-Requests/">Merging Pull Requests</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Additional Topics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-module-loader-and-dynamic-compilation/">Orchard Dynamic Compilation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Configuring-email/">Configuring Email</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Getting Involved</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-documentation/">Contributing Documentation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Documentation-Style-Guidelines/">Documentation Style Guidelines</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing-patches/">Contributing Patches</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Release notes</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10-1.Release-Notes/">Orchard 1.10.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-10.Release-Notes/">Orchard 1.10</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-3.Release-Notes/">Orchard 1.9.3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-2.Release-Notes/">Orchard 1.9.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9-1.Release-Notes/">Orchard 1.9.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-9.Release-Notes/">Orchard 1.9</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-2.release-notes/">Orchard 1.8.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-1.Release-Notes/">Orchard 1.8.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-8-Release-Notes/">Orchard 1.8</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-2-Release-Notes/">Orchard 1.7.2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-1-Release-Notes/">Orchard 1.7.1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-7-Release-Notes/">Orchard 1.7</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-6-Release-Notes/">Orchard 1.6</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-5-Release-Notes/">Orchard 1.5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Orchard-1-4-Release-Notes/">Orchard 1.4</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>User Experiences</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Walkthroughs/">Walkthroughs and UI Mockups</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Archived Specs</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Blogs/">Blogs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Comments/">Comments</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Content-types/">Content types</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Definitions/">Definitions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Fundamentals-doctype/">HTML doctype</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Linkback/">Linkbacks: Pingbacks, Refbacks and Trackbacks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Media-management/">Media management</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Navigation/">Navigation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-editing/">Page editing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages/">Page management and publishing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Pages-publishing/">Page publishing workflow</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Rss-atom/">RSS and Atom feeds</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Slugs/">Slugs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Templates/">Page templates and syntax</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Tags/">Tags</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes/">Themes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Themes-includes/">Theme includes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Users/">Users, roles and permissions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Widgets/">Widgets</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Xml-Rpc/">XML-RPC and Live Writer</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Creating-lists/">Creating lists of content items</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Orchard Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Getting Started &raquo;</li>
+        
+      
+    
+    <li>Building Your First Orchard Site</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p><em>This topic targets, and was tested with, the Orchard 1.8 release.</em></p>
+<p>This walkthrough provides a glimpse of the features that Orchard has to offer, provided as a step-by-step guide. If this is your first time using Orchard, this document is for you!</p>
+<h3 id="getting-started-with-orchard">Getting Started with Orchard</h3>
+<p>Being new to Orchard, you should know the right place where you can find the resources and latest information about Orchard.</p>
+<ol>
+<li><a href="http://orchardbeginner.com">Orchard Beginner</a></li>
+<li><a href="https://github.com/OrchardCMS/Orchard">Orchard in GitHub - Orchard Code Repository</a></li>
+<li><a href="http://orchard.codeplex.com/discussions">Orchard Discussion Forum - Discussion area for Orchard</a></li>
+<li><a href="http://docs.orchardproject.net/">Orchard Documentation - Documentation area for Orchard</a></li>
+<li><a href="http://orchardproject.net/">Orchard Community Websites - Community sites on Orchard from all over the world</a></li>
+<li><a href="http://orchardproject.net/discussions">Orchard CMS Weekly Meeting</a></li>
+</ol>
+<p>This topic assumes that you have already installed Orchard and set up your website. If you haven't, follow the instructions in <a href="../Installing-Orchard">Installing Orchard</a>.</p>
+<p>There are plenty of options to get up and running with Orchard without installing Orchard on your local machine or local IIS Server.</p>
+<h3 id="try-orchard">Try Orchard</h3>
+<p><a href="http://tryorchard.net/">Try Orchard!</a> is a showcase for the Orchard content management framework: you can try how Orchard feels by checking out an already running demo site where you can play with Orchard as you wish.</p>
+<p>No registration, no setup, nothing required, you can just go to <a href="http://tryorchard.net/">Try Orchard!</a>, open one of the continuously re-installed demo sites and play with it. This is the simplest way of taking the first steps with Orchard.</p>
+<p>Be aware though that Try Orchard! is really just for testing: since the demo sites are wiped out hourly you don't try to publish your blog there!</p>
+<p><img alt="Try Orchard" src="../../Upload/getting-started/1.png" /></p>
+<p><img alt="Try Orchard" src="../../Upload/getting-started/2.png" /></p>
+<h3 id="dotnest-orchard-saas-provider">DotNest : Orchard SaaS provider</h3>
+<p><a href="http://dotnest.com/">DotNest</a> is the Orchard SaaS provider: this means that you can simply register and create Orchard websites that run in the cloud without any hassle. Your website will just work: you don't have to deploy and later upgrade it, you can just use it.</p>
+<p>With DotNest you can try out Orchard very simply, very quickly and since your website is already hosted for you you can also show it to everybody. Apart from getting used to the user interface and features of Orchard you can also get into the <a href="http://dotnest.com/knowledge-base/topics/theming">basics of Orchard theme development</a> with it and style and customize your Orchard website in a lot of ways.</p>
+<p>Convenience does come with disadvantages: due to the architecture of DotNest you can't install custom modules, so you have to use what is already available (that however should be enough for a big part of websites).</p>
+<p><strong>1)</strong> What is <strong>DotNest</strong> 
+<img alt="" src="../../Upload/getting-started/3.png" /></p>
+<p><strong>2)</strong> Click <strong>New Tenant</strong> to create a new tenant on DotNest</p>
+<p><img alt="" src="../../Upload/getting-started/4.png" /></p>
+<p><strong>3)</strong> Fill in the required details to create a <strong>New Tenant</strong></p>
+<p><img alt="" src="../../Upload/getting-started/5.png" /></p>
+<p><strong>3)</strong> <strong>New Tenant</strong> successfully created
+<img alt="" src="../../Upload/getting-started/6.png" /></p>
+<h3 id="orchard-on-azure-websites">Orchard on Azure Websites</h3>
+<p>After a <a href="http://azure.microsoft.com/en-us/services/websites/">free registration</a> you can create websites from the Azure Gallery where you can select Orchard to deploy in one click too.</p>
+<p>Your Orchard site on Azure Websites will be completely under your control: you can install any module and theme you want too. However this also comes with responsibilities: you have to maintain your website yourself, upgrade and fix it as necessary.</p>
+<p><img alt="" src="../../Upload/getting-started/7.png" /></p>
+<p><img alt="" src="../../Upload/getting-started/8.png" /></p>
+<p><img alt="" src="../../Upload/getting-started/15.png" /></p>
+<p><img alt="" src="../../Upload/getting-started/14.png" /></p>
+<h3 id="changing-the-layout-of-the-home-page">Changing The Layout Of The Home Page</h3>
+<p>Out of the box, Orchard applies a theme to your website known as the "Theme Machine".  The Theme Machine includes CSS styles and a layout. Orchard allows you to selectively include or exclude portions (zones) of the layout on each page of your website. </p>
+<p><img alt="" src="../../Upload/screenshots_675/ThemeZonePreview_homepage_675.png" /></p>
+<p>The <strong>Navigation</strong> zone contains a menu with a single tab, <em>Home</em>. The <strong>TripelFirst, TripleSecond</strong> and <strong>TripleThird</strong> zones at the bottom of the page are populated with dummy text in the <em>First Leader Aside</em>, <em>Second Leader Aside</em> and <em>Third Leader Aside</em> paragraphs.  </p>
+<p>In addition to zones, every page has a central region (In this case, the text from <em>"Welcome to Orchard"</em> to <em>"Thank you for using Orchard"</em>) which, for this tutorial, will be referred to as the <strong>Body</strong> of the page. </p>
+<p><img alt="" src="../../Upload/screenshots_675/homepage_before_contextual_edits_675.png" /></p>
+<p>Although the Theme Machine has many possible zones defined, on a given page the only zones visible will be zones that have had widgets added to them (you can learn more about widgets <a href="../Managing-Widgets">here</a>). The Navigation, TripelFirst, TripelSecond and TripelThird zones are visible on the home page because they contain widgets.</p>
+<p><strong>1)</strong> Select <strong>Widgets</strong> from the Dashboard.  </p>
+<p>The Widgets management page opens with the <em>Default</em> layer selected.  Any zone that is visible in the Default layer will appear on all pages. Therefore, the <em>Navigation</em> zone is visible on
+all web pages and has a <strong>Main Menu</strong> widget.  The Main Menu widget is annotated in green because it has been added to a zone in the <strong>current layer</strong>.  </p>
+<p><img alt="" src="../../Upload/screenshots_675/widgets_default_layer_675.png" /></p>
+<p><strong>2)</strong> Select the <strong>HomePage</strong> layer to see which zones are visible for the home page.  </p>
+<p>Widgets which have been added to zones in the selected layer will be annotated in green (FirstLeaderAside, SecondLeaderAside and ThirdLeaderAside).  Widgets which have been added to zones in other layers will be annotated in gray (Main Menu).</p>
+<p><img alt="" src="../../Upload/screenshots_675/homepage_layer_selection_675.png" /></p>
+<p><img alt="" src="../../Upload/screenshots_675/homepage_layer_675.png" /></p>
+<p>The TripelFirst, TripelSecond, and TripelThird zones on the home page have widgets in them and are visible. Removing all of the widgets in a zone will make the zone invisible.  </p>
+<p><strong>3)</strong> Select <strong>Remove</strong> for the <strong>Third Leader Aside</strong> widget.</p>
+<p><img alt="" src="../../Upload/screenshots_675/homepage_tripelthird_675.png" /></p>
+<p>The TripelThird zone will no longer be visible on the home page.</p>
+<p><img alt="" src="../../Upload/screenshots_675/homepage_remove_tripelthird_675.png" /></p>
+<p><strong>4)</strong> Select <strong>Add</strong> for the TripelThird zone to add a widget to the zone.
+<img alt="" src="../../Upload/screenshots_675/homepage_add_tripelthird_675.png" /></p>
+<p><strong>5)</strong> Select the <strong>HTML Widget</strong> to add this type of widget to the TripelThird zone.
+<img alt="" src="../../Upload/screenshots_675/homepage_choose_widget_675.png" /></p>
+<p><strong>6)</strong> Enter a title for your widget and some content.</p>
+<p><img alt="" src="../../Upload/screenshots_675/homepage_new_thirdleaderaside_675.png" /></p>
+<p><strong>7)</strong> <strong>Save</strong> the new widget.</p>
+<p><strong>8)</strong> Select <strong>Your Site</strong> in the upper-left side of the Dashboard to view the modified home page with the new TripelThird zone.
+<img alt="" src="../../Upload/screenshots_675/homepage_modified_thirdleaderaside_675.png" /></p>
+<h3 id="editing-the-content-of-the-home-page">Editing The Content Of The Home Page</h3>
+<p>Orchard provides a feature that makes it easy for you to edit the content in a zone or the page body.  To turn on this feature you must enable the <strong>Content Control Wrapper</strong> and <strong>Widget Control Wrapper</strong> modules </p>
+<p><strong>1)</strong> Select <strong>Modules</strong> on the Dashboard.</p>
+<p><strong>2)</strong> Enable <strong>Content Control Wrapper</strong></p>
+<p><strong>3)</strong> Enable <strong>Widget Control Wrapper</strong></p>
+<p><img alt="" src="../../Upload/getting-started/9.png" /></p>
+<p>Once these modules are enabled, you can edit the contents of an individual zone by clicking the <strong>Edit</strong> link (at the top right) in the zone.  </p>
+<p><img alt="" src="../../Upload/screenshots_675/home_page_675.png" /></p>
+<p><strong>4)</strong> Select the <strong>Edit</strong> link for the <em>TripelFirst</em> zone of the home page. </p>
+<p><strong>5)</strong> Change the title, and optionally, change or remove the existing body text for the zone.  </p>
+<h3 id="inserting-a-media-item">Inserting a Media Item</h3>
+<p><strong>6)</strong> Select <strong>Insert Media Item</strong>. </p>
+<p><img alt="" src="../../Upload/screenshots_675/edit_widget_media_1_675.png" /></p>
+<p><strong>7)</strong> Click <strong>Create Folder</strong>. </p>
+<p><img alt="" src="../../Attachments/Getting-Started/MedLibCreateFolder.png" /></p>
+<p><strong>8)</strong> Name the folder <em>myImages</em> and click <strong>Save</strong>. </p>
+<p><img alt="" src="../../Attachments/Getting-Started/MedLibSaveFolderName.png" /></p>
+<p><strong>9)</strong> Click the folder <em>myImages</em>, and then click <strong>Import</strong> </p>
+<p><img alt="" src="../../Attachments/Getting-Started/MedLibImport.png" /></p>
+<p><strong>10)</strong> Click <em>My Computer</em> and then click in the central zone to browse for an image. If you prefer you can drop your image into the central zone.</p>
+<p><img alt="" src="../../Attachments/Getting-Started/MedLibUpload.png" /></p>
+<p><strong>11)</strong> Close the dialog.</p>
+<p><img alt="" src="../../Attachments/Getting-Started/MedLibClose.png" /></p>
+<p><strong>12)</strong> Click the image and click <strong>Select</strong>.</p>
+<p><img alt="" src="../../Attachments/Getting-Started/MedLibSelectImage.png" /></p>
+<p><strong>13)</strong> If needed, resize the image using the handlers so that later it fits nicely into the zone. Then click <strong>Save</strong> to save the changes to the widget. </p>
+<p><img alt="" src="../../Attachments/Getting-Started/MedLibSaveContent.png" /></p>
+<p>The home page is automatically displayed with the updated zone.</p>
+<p><img alt="" src="../../Attachments/Getting-Started/FirstLeaderAside.png" /></p>
+<p><strong>14)</strong> Select the <strong>Edit</strong> link for the <strong>Body</strong> of the page.</p>
+<p><img alt="" src="../../Upload/screenshots_675/edit_body_675.png" /></p>
+<p>Orchard will display the <strong>Edit Page</strong> screen.</p>
+<blockquote>
+<p><strong>Note:</strong> The Edit Page screen can also be reached from the Dashboard by selecting <strong>Content</strong> on the Dashboard and then selecting <strong>Edit</strong> for the page you are interested in.</p>
+</blockquote>
+<p><strong>15)</strong> Enter some text for the content. </p>
+<p><img alt="" src="../../Upload/screenshots_675/edit_homepage_675.png" /></p>
+<p><strong>16)</strong> Select <strong>Publish Now</strong> at the bottom of the page to make the updates to the page visible immediately.</p>
+<p><img alt="" src="../../Attachments/Getting-Started/PagePublishNow.png" /></p>
+<h3 id="adding-a-new-page-to-your-site">Adding a New Page to Your Site</h3>
+<p><strong>1)</strong> In the Orchard Dashboard, under <strong>New</strong>, select <strong>Page</strong>.</p>
+<p><strong>2)</strong> Enter a title for the page.  When you enter a title for the page and save it (for example, "Download"), the permalink (URL) for the page will be filled in automatically ("download").  You can edit this link if you prefer a different URL.</p>
+<p><strong>3)</strong> Enter some text for the content page body.</p>
+<p><img alt="" src="../../Upload/screenshots_675/create_new_page_0_1_675.png" /></p>
+<p><strong>4)</strong>  In the <strong>Tags</strong> field, add comma-separated tags such as "download" and "Orchard" so that you can search and filter using those tags later. </p>
+<p><strong>5)</strong> Check <strong>Show on main menu</strong> and enter the menu text ("Downloads") to use in the site's main menu.</p>
+<p><strong>6)</strong> Select <strong>Publish Now</strong> to make the updates to the page visible immediately. You can also save the page as a draft (to edit later before publishing), or you can choose to publish the page at a specific date and time.</p>
+<p><img alt="" src="../../Attachments/Getting-Started/CreateNewPage.png" /></p>
+<p><strong>7)</strong> Select <strong>Your Site</strong> in the upper-left side of the Dashboard to view the modified home page with the new menu. Clik <strong>Downloads</strong> and you will see your new page.</p>
+<h3 id="adding-new-layer-for-a-page">Adding New Layer for a Page</h3>
+<p>To change the layout of your new page without affecting the rest of the site you can create a new layer, that will be applied only to the <em>Downloads</em> page. Then you can place some widgets on that layer and they will be visible only in the <em>Downloads</em> page.</p>
+<p><strong>1)</strong> Go to the Dashboard and select <strong>Widgets</strong>. Then click <strong>add a new layer</strong> to add a new layer for this page which will allow you to customize the layout for the new page at a later point in time.</p>
+<p><img alt="" src="../../Attachments/Getting-Started/AddNewLayer.png" /></p>
+<p><strong>2)</strong> Write a name for the layer, a description, and a layer rule: url"~/download". This will instruct the Orchard System to show the widgets in this layer only when the url of the browser is pointing to "download". Select <strong>Save</strong>.</p>
+<p><img alt="" src="../../Upload/screenshots_675/create_new_page_2_2_675.png" /></p>
+<h3 id="adding-a-new-html-widget">Adding a New HTML Widget</h3>
+<p><strong>3)</strong> To check that your layer rule is working you can add a widget to it. Ensure that <strong>Current Layer</strong> is <strong>Download</strong>. Click <strong>Add</strong> in <em>AsideFirst</em>.</p>
+<p><img alt="" src="../../Attachments/Getting-Started/AddNewWidget.png" /></p>
+<p><strong>4)</strong> Add a new <strong>Html Widget</strong>.</p>
+<p><img alt="" src="../../Attachments/Getting-Started/AddHtmlWidget.png" /></p>
+<p><strong>5)</strong> Write a title and a body for it. Save it.</p>
+<p><img alt="" src="../../Attachments/Getting-Started/EditHtmlWidget.png" /></p>
+<p><strong>6)</strong> Select <strong>Your Site</strong> in the upper-left side of the Dashboard. Navigate to <em>Downloads</em>. You should see the custom layout.</p>
+<p><img alt="" src="../../Attachments/Getting-Started/CustomLayoutResult.png" /></p>
+<h3 id="selecting-a-theme">Selecting A Theme</h3>
+<p>To customize the look and feel of the Orchard website you change the theme. </p>
+<p><strong>1)</strong> On the Orchard Dashboard, select <strong>Themes</strong>.  The currently installed themes are listed. </p>
+<p><strong>2)</strong> To download new themes, select the <strong>Gallery</strong> tab.</p>
+<p><strong>3)</strong> Search for <strong>PJS.Bootstrap</strong> to find the PJS.Bootstrap Theme. Install the <strong>PJS.Bootstrap</strong> theme.</p>
+<p><strong>4)</strong> Select the <strong>Installed</strong> tab. </p>
+<p>After a theme has been installed it appears as an option in the <strong>Available</strong> section on the <strong>Installed</strong> tab. In the following illustration, the <strong>PJS.Bootstrap</strong> theme has been installed so it appears in the <strong>Available</strong> section. (The current theme for the site is <strong>PJS.Bootstrap</strong>.) </p>
+<p><strong>5)</strong> To see how your site will look with an available them,  select <strong>Preview</strong> for the theme.  To apply an available theme to your site select <strong>Set Current</strong> for the theme. For more details, see <a href="../Previewing-and-applying-a-theme">Previewing and Applying a Theme</a> and <a href="../Installing-themes">Installing Themes</a>.</p>
+<p><img alt="" src="../../Upload/getting-started/10.png" /></p>
+<p><img alt="" src="../../Upload/getting-started/11.png" /></p>
+<h3 id="extending-orchard-with-modules-and-features">Extending Orchard With Modules And Features</h3>
+<p>A key feature of Orchard is the ability to add new features in order to extend the functionality of your site. The primary way to do this is by installing modules. You can think of a module as a package of files (in a .zip folder) that can be installed on your site. To view the modules that are included with Orchard, in the Orchard Dashboard, click <strong>Modules</strong> and then click the <strong>Installed</strong> tab in the <strong>Modules</strong> screen.</p>
+<p><img alt="" src="../../Upload/getting-started/12.png" /></p>
+<p>Orchard provides some built-in modules, and you can install new modules. For details, see <a href="../Installing-and-upgrading-modules">Installing and Upgrading Modules</a> and <a href="../Module-gallery-feeds">Registering additional gallery feeds</a>.</p>
+<p>Individual modules can expose features that can be independently enabled or disabled. To view the features exposed by the built-in modules in Orchard, click the <strong>Features</strong> tab in the <strong>Modules</strong> screen.  </p>
+<p><img alt="" src="../../Upload/getting-started/13.png" /></p>
+<p>Each feature has an <strong>Enable</strong> or <strong>Disable</strong> link (depending on its current state), as well as an optional list of dependencies that must also be enabled for a specific feature. The documentation throughout this site describes the variety of features in Orchard and how you can use them to customize your site's user interface and behavior.</p>
+<h3 id="change-history">Change History</h3>
+<ul>
+<li>Updates for Orchard 1.8<ul>
+<li>9-04-14: Added new sections for how to get started with Orchard and how to get up and running with Orchard : Try Orchard, DotNest, Azure Websites. Updated screen shots for themes (PJS.Bootstrap Theme), modules and control wrappers. </li>
+<li>4-22-14:  Media selection is different now, updated that part. Adding a widget layer is not suggested anymore when adding a new page, updated that part. Link to registering additional gallery feeds was not working. Updated several screenshots. Added capitalization to section headers.</li>
+</ul>
+</li>
+<li>Updates for Orchard 1.6<ul>
+<li>11-25-12:  Added section describing how to change the layout for a page by enabling/disabling zones.  Removed section on Creating a Blog (which already has it's own topic).</li>
+</ul>
+</li>
+<li>Updates for Orchard 1.1<ul>
+<li>3-14-11:  Updated screen shots showing updated menus, and updated dashboard and settings options. </li>
+</ul>
+</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Navigation-and-menus/" class="btn btn-neutral float-right" title="Navigation and Menus">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Getting-around-the-dashboard/" class="btn btn-neutral" title="Getting Around the Dashboard"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/OrchardCMS/OrchardDoc" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Getting-around-the-dashboard/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Navigation-and-menus/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

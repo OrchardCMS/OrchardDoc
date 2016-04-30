@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    <url>
+     <loc>None/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>None/Documentation/Installing-Orchard/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Manually-installing-Orchard-zip-file/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Working-with-Orchard-in-WebMatrix/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Getting-around-the-dashboard/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Getting-Started/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Navigation-and-menus/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Adding-a-Blog-to-Your-Site/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Adding-and-managing-media-content/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Managing-widgets/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Organizing-content-with-tags/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>None/Documentation/Basic-Orchard-Concepts/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Builtin-Features/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Feature-roadmap/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Frequently-asked-questions/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+    <url>
+     <loc>None/Documentation/Orchard-TV/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>None/Documentation/Blogging-with-LiveWriter/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Creating-global-ready-applications/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Search-and-indexing/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Saving-scheduling-and-publishing-drafts/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Creating-custom-content-types/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>None/Documentation/Previewing-and-applying-a-theme/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Installing-themes/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Customizing-the-default-theme/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>None/Documentation/Gallery-overview/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Installing-modules-and-themes-from-the-gallery/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Browsing-the-gallery-web-site/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Contributing-a-module-or-theme-to-the-gallery/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Module-gallery-feeds/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>None/Documentation/Enabling-and-disabling-features/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Using-the-command-line-interface/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Installing-and-upgrading-modules/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Modifying-site-settings/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Moderating-comments/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Managing-users-and-roles/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Understanding-permissions/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Making-a-Web-Site-Recipe/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Creating-an-image-gallery/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Workflows/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Projection/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Creating-Dynamic-Forms/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>None/Documentation/Upgrading-a-site-to-a-new-version-of-Orchard/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Optimizing-Performance-of-Orchard-with-Shared-Hosting/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Whats-new-for-Windows-Azure-in-Orchard-1-7-1/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Deploying-Orchard-to-Windows-Azure/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Using-Windows-Azure-Blob-Storage/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Using-Windows-Azure-Cache/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Running-Orchard-on-Mono/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Setting-up-a-multi-tenant-Orchard-site/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Setting-up-a-machine-key/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>None/Documentation/First-steps-into-Orchard/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/How-Orchard-works/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Command-line-scaffolding/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None</loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Building-a-hello-world-module/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Creating-a-module-with-a-simple-text-editor/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Writing-a-content-part/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Creating-a-custom-field-type/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Packaging-and-sharing-a-module/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Writing-a-widget/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Creating-1-n-and-n-n-relations/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Manifest-files/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Caching/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Adding-custom-settings/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/WebApi-In-Orchard/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>None/Documentation/Understanding-data-access/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Understanding-content-handlers/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>None/Documentation/Writing-a-new-theme/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Anatomy-of-a-theme/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Understanding-placement-info/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Accessing-and-rendering-shapes/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Alternates/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Template-file-syntax-guide/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Packaging-and-sharing-themes/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/UI-guidelines-for-theme-authors/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Customizing-Orchard-using-Designer-Helper-Tools/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>None/Documentation/Developer-FAQ/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Setting-up-a-source-enlistment/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Source-code-organization/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Orchard-dependencies-and-libraries/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Code-conventions/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Continuous-integration/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Merging-Pull-Requests/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>None/Documentation/Orchard-module-loader-and-dynamic-compilation/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Configuring-email/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>None/Documentation/Contributing-documentation/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Documentation-Style-Guidelines/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Contributing-patches/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>None/Documentation/Orchard-1-10-1.Release-Notes/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Orchard-1-10.Release-Notes/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Orchard-1-9-3.Release-Notes/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Orchard-1-9-2.Release-Notes/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Orchard-1-9-1.Release-Notes/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Orchard-1-9.Release-Notes/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Orchard-1-8-2.release-notes/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Orchard-1-8-1.Release-Notes/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Orchard-1-8-Release-Notes/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Orchard-1-7-2-Release-Notes/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Orchard-1-7-1-Release-Notes/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Orchard-1-7-Release-Notes/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Orchard-1-6-Release-Notes/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Orchard-1-5-Release-Notes/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Orchard-1-4-Release-Notes/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>None/Documentation/Walkthroughs/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>None/Documentation/Blogs/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Comments/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Content-types/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Definitions/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Fundamentals-doctype/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Linkback/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Media-management/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Navigation/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Pages-editing/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Pages/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Pages-publishing/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Rss-atom/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Slugs/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Templates/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Tags/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Themes/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Themes-includes/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Users/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Widgets/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Xml-Rpc/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/Documentation/Creating-lists/</loc>
+     <lastmod>2016-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+</urlset>
