@@ -33,7 +33,7 @@ The package feature creates a _.nupkg_ file. (For more information, see [NuGet.o
 Uploading Your Theme to Gallery
 -------------------------------
 
-After creating your package, you can share your theme by giving someone the package file. You can also contribute your theme to the Orchard Gallery. For information about how to contribute your theme, see [Contributing a Module or Theme to the Gallery](Contributing-a-module-or-theme-to-the-gallery.html).
+After creating your package, you can share your theme by giving someone the package file. You can also contribute your theme to the Orchard Gallery. For information about how to contribute your theme, see [Contributing a Module or Theme to the Gallery](Contributing-a-module-or-theme-to-the-gallery).
 
 Installing a Packaged Theme
 ---------------------------

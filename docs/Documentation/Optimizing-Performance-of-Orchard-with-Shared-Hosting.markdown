@@ -102,7 +102,7 @@ Depth of the Views Folders
 --------------------------
 
 
-The contents of _Views_ folders are dynamically compiled and there is some overhead associated with each subfolder. This, combined with the multiplication of modules in a typical Orchard instance, means that it can have an impact on startup performance to flatten _Views_ directories. Orchard gives a choice to module and theme authors to use subfolders or equivalent dotted names for templates (see [Accessing and Rendering Shapes](Accessing-and-rendering-shapes.html)). It is generally preferable to use the dotted notation.
+The contents of _Views_ folders are dynamically compiled and there is some overhead associated with each subfolder. This, combined with the multiplication of modules in a typical Orchard instance, means that it can have an impact on startup performance to flatten _Views_ directories. Orchard gives a choice to module and theme authors to use subfolders or equivalent dotted names for templates (see [Accessing and Rendering Shapes](Accessing-and-rendering-shapes)). It is generally preferable to use the dotted notation.
 
 IPv6, Development Servers, and Modern Browsers
 ----------------------------------------------

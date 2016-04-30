@@ -54,7 +54,7 @@ When working on an issue you should create a branch in your local clone per-issu
 
 Please work on only one issue per branch / pull request.
 
-Please follow the [code conventions document](Code-conventions.html) when writing new code for Orchard.
+Please follow the [code conventions document](Code-conventions) when writing new code for Orchard.
 
 Once you've made your changes you need to publish your local commits back to the remote fork in your GitHub account. The basic Git concept behind this process is to `commit` your local changes and then `push` the branch to your remote copy on GitHub.
 
@@ -164,7 +164,7 @@ Once your contribution has been accepted and integrated into the official Orchar
 
 ![](../Upload/submitting-patches/pull-complete-can-delete.png)
 
-If your feature was accepted please consider contributing some documentation to the [OrchardDoc](https://github.com/OrchardCMS/OrchardDoc) repo. Just as this article has helped you out today, by documenting your new feature you can help other Orchard users to get the most out of Orchard CMS. You can read more about [the documentation process here](Contributing-documentation.html).
+If your feature was accepted please consider contributing some documentation to the [OrchardDoc](https://github.com/OrchardCMS/OrchardDoc) repo. Just as this article has helped you out today, by documenting your new feature you can help other Orchard users to get the most out of Orchard CMS. You can read more about [the documentation process here](Contributing-documentation).
 
 The fork that you made can be re-used for as many contributions as you like. Just remember to keep making a new branch each time you start work on a new issue. There is one thing to consider though: While you've been working on this there has probably been other commits and pull requests on whichever branch you're working on. You can bring your branch back in line with the main repo by [syncing your fork](https://help.github.com/articles/syncing-a-fork/).
 

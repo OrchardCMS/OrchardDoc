@@ -6,7 +6,7 @@ Every developer should have [Git Extensions](https://github.com/gitextensions/gi
 
 This is the easiest way to quickly clone the Orchard source code onto your dev machine. Its the easiest way to keep up to date when new code is released. As a bonus, if you haven't got to grips with Git and GitHub this will gently introduce you to the whole process.
 
-> If you need detailed help installing Git Extensions and cloning the repository this process is described in the [setting up a source enlistment](Setting-up-a-source-enlistment.html) tutorial in step-by-step detail.
+> If you need detailed help installing Git Extensions and cloning the repository this process is described in the [setting up a source enlistment](Setting-up-a-source-enlistment) tutorial in step-by-step detail.
 
 ## Step 3 - Set up a braces management extension
 This step is optional but recommended.
@@ -27,7 +27,7 @@ Instead of what you normally see with .NET code where the opening curly brace is
         }
     }
 
-The placement of the opening curly braces on the same line is a requirement listed in the [code conventions](Code-conventions.html) document for Orchard CMS.
+The placement of the opening curly braces on the same line is a requirement listed in the [code conventions](Code-conventions) document for Orchard CMS.
 
 You [can do it by editing the Visual Studio settings manually](http://articles.runtings.co.uk/2015/09/orchard-cms-quick-tipcurling-up-with.html) but this will apply it to all of your solutions whether they are Orchard-based or not.
 

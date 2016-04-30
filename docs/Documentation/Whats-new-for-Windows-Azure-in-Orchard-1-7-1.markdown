@@ -15,7 +15,7 @@ Prior to version 1.7.1, packaging and deploying to Windows Azure had to be done 
 
 Additionally, when building and publishing using `Release` build configuration, **configuration file transformations are now used** instead of custom MSBuild logic. Configuration transform files are visible and editable directly in Solution Explorer (visualized as child items of the `Web.config`, `Host.config` and `Log4net.config` files) and therefore much more discoverable and maintainable.
 
-See the topic [Deploying Orchard to Windows Azure](Deploying-Orchard-to-Windows-Azure.html) topic for more information.
+See the topic [Deploying Orchard to Windows Azure](Deploying-Orchard-to-Windows-Azure) topic for more information.
 
 ### Windows Azure SDK 2.1
 
@@ -43,8 +43,8 @@ As you might guess from above, as part of this work two new **native providers f
 
 See the following topics for more information:
 
-* [Using Windows Azure Blob Storage](Using-Windows-Azure-Blob-Storage.html)
-* [Using Windows Azure Cache](Using-Windows-Azure-Cache.html)
+* [Using Windows Azure Blob Storage](Using-Windows-Azure-Blob-Storage)
+* [Using Windows Azure Cache](Using-Windows-Azure-Cache)
 
 ### Cloud services and web sites
 

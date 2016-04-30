@@ -12,7 +12,7 @@ To manage themes, click **Themes** in the dashboard.
 
 ![](../Upload/screenshots_675/themes_start_675.png)
 
-The main **Themes** screen defaults to the **Installed** tab, which displays the current theme, shows any other available themes, and lets you upload a new theme.  There are also tabs for the **Gallery** (which shows additional online themes you can install), **Updates** (which shows available updates for installed themes), and a link to **Install a theme from your computer** (use this to install a theme package from your local computer to your site). For more information on options for adding new themes, see [Installing Themes](Installing-themes.html).
+The main **Themes** screen defaults to the **Installed** tab, which displays the current theme, shows any other available themes, and lets you upload a new theme.  There are also tabs for the **Gallery** (which shows additional online themes you can install), **Updates** (which shows available updates for installed themes), and a link to **Install a theme from your computer** (use this to install a theme package from your local computer to your site). For more information on options for adding new themes, see [Installing Themes](Installing-themes).
 
 To download and install additional themes, click the **Gallery** tab. Click **Install** on a theme to install it in your site. To see how themes work, install the **Contoso** and the **Classic** themes. 
 

@@ -10,7 +10,7 @@ Links
 
 Download and launch the Microsoft [Web Platform Installer](http://www.microsoft.com/web/downloads/platform.aspx)  Then click the **Add** button for **Microsoft WebMatrix** and click **Install**.
 
-![](../Upload/screenshots/Install_selectorWebMatrix.png)
+![](../Upload/screenshots/install_selectorWebMatrix.png)
 
 Accept the license terms and launch WebMatrix when the installation finishes.
 
@@ -41,7 +41,7 @@ If you are just starting out using Orchard, we recommend that you select **SQL C
 ![](../Upload/screenshots_675/webmatrix_finish_setup_675.png) 
 
 Orchard sets up your initial site and then opens a browser window with the site's home page.  You will automatically be logged in with the user name you specified in setup (in this case, *admin*).  At this point, clicking on **Dashboard** 
-will take you to the [Orchard Dashboard](Getting-around-the-dashboard.html) where website changes can be made.
+will take you to the [Orchard Dashboard](Getting-around-the-dashboard) where website changes can be made.
 
 ![](../Upload/screenshots_675/new_default_site_675.png) 
 
@@ -55,7 +55,7 @@ At any point in time, you can run your website from WebMatrix by selecting the p
 
 You can use WebMatrix to edit the files in your Orchard installation. WebMatrix provides a simple editor that includes colorization for HTML, CSS, JavaScript, and code files. 
 
-Although WebMatrix does not provide a build system for compiling code files, Orchard itself provides dynamic compilation for code files when they are edited. For more information, see [Orchard Dynamic Compilation](Orchard-module-loader-and-dynamic-compilation.html).
+Although WebMatrix does not provide a build system for compiling code files, Orchard itself provides dynamic compilation for code files when they are edited. For more information, see [Orchard Dynamic Compilation](Orchard-module-loader-and-dynamic-compilation).
 
 ![](../Upload/screenshots_675/webmatrix_files_675.png)
 

@@ -15,7 +15,7 @@ Upgrading a Running Instance of Orchard to a New Version
 --------------------------------------------------------
 
 
-The instructions in this section only apply for a standalone Orchard web site. If you are working with the full source code of Orchard, please refer to [#enlistment](Upgrading-a-site-to-a-new-version-of-Orchard.html#IfYouHaveaSourceCodeEnlistment).
+The instructions in this section only apply for a standalone Orchard web site. If you are working with the full source code of Orchard, please refer to [#enlistment](Upgrading-a-site-to-a-new-version-of-Orchard#IfYouHaveaSourceCodeEnlistment).
 
 It is highly recommended that you work on a local copy of your site throughout the update process.
 
@@ -55,7 +55,7 @@ It is possible to upgrade a site in-place, if you can't or don't want to work wi
 * Delete what's in bin. This ensures that old versions of binaries that won't get replaced will not continue to be picked up by the application.
 * Delete the `App_Data\Dependencies` folder. Orchard will rebuild this folder on startup. This ensures that old versions of module assemblies will not be picked up by the application.
 * Extract the new version's zip file and copy what's in its Orchard folder over the server's Orchard web directory (answer yes to all prompts to overwrite).
-* Remove the `app_offline.html` file.
+* Remove the `app_offline.htm` file.
 * The site should be running now. Log-in and go into admin.
 * Go into the dashboard. Modules should have already upgraded themselves automatically. In rare cases, you may be prompted to upgrade features. Click **Modules** and upgrade each of the modules one by one until they are all up to date. If this doesn't work, it means that something is wrong with your install and/or one of the modules you're using, and you should investigate further in `App_Data\logs`.
 * Go to the Orchard Gallery and get the latest version of all the modules you have on your site.

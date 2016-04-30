@@ -87,7 +87,7 @@ The process of creating a child theme is this:
 
 
 ## Generating the Theme Structure
-To generate the code structure for your new theme, we are going to use the **Code Generation** feature, which can be obtained from the **Gallery** > **Modules** page in the admin panel.  Once you have installed and activated the code generation feature, you will be able to generate a new theme from the Orchard command-line.  Refer to the [Using the command-line interface](Using-the-command-line-interface.html) topic if you need to know more about using commands in Orchard.
+To generate the code structure for your new theme, we are going to use the **Code Generation** feature, which can be obtained from the **Gallery** > **Modules** page in the admin panel.  Once you have installed and activated the code generation feature, you will be able to generate a new theme from the Orchard command-line.  Refer to the [Using the command-line interface](Using-the-command-line-interface) topic if you need to know more about using commands in Orchard.
 
 Open the Orchard command-line utility and enter the following command:
 

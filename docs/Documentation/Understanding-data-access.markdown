@@ -50,7 +50,7 @@ When you define a content part, you use the record as shown below:
 
 Notice that only data that's relevant to the part is defined in the `MapPart` class. You do not define any properties that are needed to maintain the data relationships between `MapPart` and other content.
 
-For a complete example of the MapPart, see [Writing a Content Part](Writing-a-content-part.html). You can also read the [Getting Started with Modules course](Getting-Started-with-Modules.html) to familiarize yourself with the overall concepts of module development.
+For a complete example of the MapPart, see [Writing a Content Part](Writing-a-content-part). You can also read the [Getting Started with Modules course](Getting-Started-with-Modules) to familiarize yourself with the overall concepts of module development.
 
 ## Data Migrations
 Creating the record class does not create the database table; it only creates a model of the schema. To create the database table, you must write a data migration class.
@@ -148,9 +148,9 @@ A content handler is similar to a filter in ASP.NET MVC. In the handler, you def
     }
 
 
-In more advanced content handlers, you define actions that are performed when an event occurs, such as when the feature is published or activated. For more information about content handlers, see [Understanding Content Handlers](Understanding-content-handlers.html).
+In more advanced content handlers, you define actions that are performed when an event occurs, such as when the feature is published or activated. For more information about content handlers, see [Understanding Content Handlers](Understanding-content-handlers).
 
 ## Content Drivers
 A content driver is similar to a controller in ASP.NET MVC. It contains code that is specific to a content part type and is usually involved in creating data shapes for different conditions, such as display or edit modes. Typically, you override the **Display** and **Editor** methods to return the **ContentShapeResult** object for your scenario.
 
-For an example of using a content driver, see [Accessing and Rendering Shapes](Accessing-and-rendering-shapes.html).
+For an example of using a content driver, see [Accessing and Rendering Shapes](Accessing-and-rendering-shapes).

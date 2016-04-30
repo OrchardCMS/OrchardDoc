@@ -7,7 +7,7 @@ You can think of shapes as the blobs of data that get handed to templates for re
 
 This article introduces the concept of shapes and explains how to work with them.
 It's intended for module and theme developers who have at least a basic understanding of Orchard modules.
-For information about creating modules, see the [Getting Started with Modules course](Getting-Started-with-Modules.html).
+For information about creating modules, see the [Getting Started with Modules course](Getting-Started-with-Modules).
 For information about dynamic objects, see [Creating and Using Dynamic Objects](http://msdn.microsoft.com/en-us/library/ee461504.aspx).
 
 Introducing Shapes
@@ -56,7 +56,7 @@ Although the `ContentShape` method is overloaded, the most typical use is to pas
 parameters&#151;the shape type and a dynamic function expression that defines the shape.
 The shape type names the shape and binds the shape to the template that will be used to render it.
 The naming conventions for shape types are discussed later in
-[Naming Shapes and Templates](Accessing-and-rendering-shapes#NamingShapesandTemplates.html).
+[Naming Shapes and Templates](Accessing-and-rendering-shapes#NamingShapesandTemplates).
 
 The function expression can be described best by using an example.
 The following example shows a driver's `Display` method that returns a shape result,
@@ -344,7 +344,7 @@ and the display type (for example `Content_Summary`).
 The system also automatically adds the content type and the content ID as alternates
 (for example `Content_Summary__Page` and `Content_Summary__42`).
 
-For more information about how to use alternates, see [Alternates](Alternates.html).
+For more information about how to use alternates, see [Alternates](Alternates).
 
 Rendering Shapes Using Templates
 --------------------------------
@@ -405,7 +405,7 @@ Wrappers let you customize the rendering of a shape by adding markup around the 
 For example, _Document.cshtml_ is a wrapper for the `Layout` shape, because it specifies
 the markup code that  surrounds the `Layout` shape.
 For more information about the relationship between `Document` and `Layout`,
-see [Template File Syntax Guide](Template-file-syntax-guide.html).
+see [Template File Syntax Guide](Template-file-syntax-guide).
 
 Typically, you add a wrapper file to the _Views_ folder of  your theme.
 For example, to add a wrapper for `Widget`, you add a _Widget.Wrapper.cshtml_ file to
@@ -413,7 +413,7 @@ the _Views_ folder of your theme.
 If you enable the **Shape Tracing** feature, you'll see the available wrapper names for a shape.
 You can also specify a wrapper in the _placement.info_ file.
 For more information about how to specify  a wrapper,
-see [Understanding the placement.info File](Understanding-placement-info.html).
+see [Understanding the placement.info File](Understanding-placement-info).
 
 Creating a Shape Method
 -----------------------

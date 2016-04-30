@@ -99,7 +99,7 @@ The following sections of a recipe file are the elements that are most important
 * **Feature**. This section lists module features that Orchard will enable.
 * **Metadata**. This section provides configuration for the types, parts, and fields that Orchard contains.
 * **Settings**. This section provides a way to configure website settings.
-* **Command**. This section lists commands that Orchard will run against your website in order to complete the setup. For more information about Orchard commands, see [Using the Command-line Interface](Using-the-command-line-interface.html).
+* **Command**. This section lists commands that Orchard will run against your website in order to complete the setup. For more information about Orchard commands, see [Using the Command-line Interface](Using-the-command-line-interface).
 
 
 Creating a Custom Recipe
@@ -219,7 +219,7 @@ Recipes simplify the process of creating a specialized distribution of Orchard. 
 
 **To create a specialized distribution of Orchard**
 
-1. Enlist in the Orchard source code. For information about how to enlist in Orchard, see [Setting Up a Source Enlistment](Setting-up-a-source-enlistment.html).
+1. Enlist in the Orchard source code. For information about how to enlist in Orchard, see [Setting Up a Source Enlistment](Setting-up-a-source-enlistment).
 2. Sync to the latest build.
 3. Create a custom recipe and add it to the _Orchard.Web/Modules/Orchard.Setup/Recipes_ folder. If you want your recipe to be the only option, you can remove the other recipe files.
 4. Add any custom modules to the _Orchard.Web/Modules_ folder.

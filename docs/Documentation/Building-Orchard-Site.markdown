@@ -24,7 +24,7 @@ Being new to Orchard, you should know the right place where you can find the res
   [5]: http://orchardproject.net/
   [6]: http://orchardproject.net/meeting
 
-This topic assumes that you have already installed Orchard and set up your website. If you haven't, follow the instructions in [Installing Orchard](Installing-Orchard.html).
+This topic assumes that you have already installed Orchard and set up your website. If you haven't, follow the instructions in [Installing Orchard](Installing-Orchard).
 
 There are plenty of options to get up and running with Orchard without installing Orchard on your local machine or local IIS Server.
 
@@ -93,7 +93,7 @@ In addition to zones, every page has a central region (In this case, the text fr
 
 ![](../Upload/screenshots_675/homepage_before_contextual_edits_675.png)
 
-Although the Theme Machine has many possible zones defined, on a given page the only zones visible will be zones that have had widgets added to them (you can learn more about widgets [here](Managing-Widgets.html)). The Navigation, TripelFirst, TripelSecond and TripelThird zones are visible on the home page because they contain widgets.
+Although the Theme Machine has many possible zones defined, on a given page the only zones visible will be zones that have had widgets added to them (you can learn more about widgets [here](Managing-Widgets)). The Navigation, TripelFirst, TripelSecond and TripelThird zones are visible on the home page because they contain widgets.
 
 **1)** Select **Widgets** from the Dashboard.  
 
@@ -288,7 +288,7 @@ To customize the look and feel of the Orchard website you change the theme.
 
 After a theme has been installed it appears as an option in the **Available** section on the **Installed** tab. In the following illustration, the **PJS.Bootstrap** theme has been installed so it appears in the **Available** section. (The current theme for the site is **PJS.Bootstrap**.) 
 
-**5)** To see how your site will look with an available them,  select **Preview** for the theme.  To apply an available theme to your site select **Set Current** for the theme. For more details, see [Previewing and Applying a Theme](Previewing-and-applying-a-theme.html) and [Installing Themes](Installing-themes.html).
+**5)** To see how your site will look with an available them,  select **Preview** for the theme.  To apply an available theme to your site select **Set Current** for the theme. For more details, see [Previewing and Applying a Theme](Previewing-and-applying-a-theme) and [Installing Themes](Installing-themes).
 
 ![](../Upload/getting-started/10.png)
 
@@ -302,7 +302,7 @@ A key feature of Orchard is the ability to add new features in order to extend t
 
 ![](../Upload/getting-started/12.png)
 
-Orchard provides some built-in modules, and you can install new modules. For details, see [Installing and Upgrading Modules](Installing-and-upgrading-modules.html) and [Registering additional gallery feeds](Module-gallery-feeds.html).
+Orchard provides some built-in modules, and you can install new modules. For details, see [Installing and Upgrading Modules](Installing-and-upgrading-modules) and [Registering additional gallery feeds](Module-gallery-feeds).
 
 Individual modules can expose features that can be independently enabled or disabled. To view the features exposed by the built-in modules in Orchard, click the **Features** tab in the **Modules** screen.  
 

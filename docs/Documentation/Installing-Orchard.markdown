@@ -8,8 +8,8 @@ Different Ways To Install Orchard
 There are four ways you can install Orchard. You can:
 
 * Install it using the Microsoft Web Platform Installer.
-* Install it from Microsoft WebMatrix as shown in [Working with Orchard in WebMatrix](Working-with-Orchard-in-WebMatrix.html).
-* Download the Orchard [.zip file](https://github.com/OrchardCMS/Orchard/releases) and install it as described in [Manually Installing Orchard Using a zip File](Manually-installing-Orchard-zip-file.html).
+* Install it from Microsoft WebMatrix as shown in [Working with Orchard in WebMatrix](Working-with-Orchard-in-WebMatrix).
+* Download the Orchard [.zip file](https://github.com/OrchardCMS/Orchard/releases) and install it as described in [Manually Installing Orchard Using a zip File](Manually-installing-Orchard-zip-file).
 * [Enlist](Setting-up-a-source-enlistment) in the Orchard source code and build Orchard from the command line or in Visual Studio.
 
 This topic shows how to install Orchard using the Microsoft Web Platform Installer.
@@ -71,7 +71,7 @@ The setup screen also includes a section where you can choose an Orchard recipe 
 
 ![](../Upload/screenshots/get_started_recipe.png)
 
-For information about recipes and how to make a custom recipe, see [Making a Web Site Recipe](Making-a-Web-Site-Recipe.html). 
+For information about recipes and how to make a custom recipe, see [Making a Web Site Recipe](Making-a-Web-Site-Recipe). 
 
 After you've entered the required information on the setup  screen, click **Finish Setup**. When the setup process is complete, your new site's home page is displayed.
 

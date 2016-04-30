@@ -99,9 +99,9 @@ For example, the following placement will display text fields named "Occupation"
     
     <Place Fields_Common_Text-Occupation="Content:before"/>
 
-> **Note for field developers:** you may give your own fields this capability by using a special override of ContentShape in your driver that provides the differentiator (the part after the dash in the attribute name). See the Text Field driver for example, or read [Creating a Custom Field Type](Creating-a-custom-field-type.html).
+> **Note for field developers:** you may give your own fields this capability by using a special override of ContentShape in your driver that provides the differentiator (the part after the dash in the attribute name). See the Text Field driver for example, or read [Creating a Custom Field Type](Creating-a-custom-field-type).
 
-You can learn more about shapes and alternates in these topics: [Accessing and Rendering Shapes](Accessing-and-rendering-shapes.html) and [Alternates](Alternates.html).
+You can learn more about shapes and alternates in these topics: [Accessing and Rendering Shapes](Accessing-and-rendering-shapes) and [Alternates](Alternates).
 
 The value itself is split into a zone name, a colon, and then a position. 
 
@@ -185,17 +185,17 @@ In placement.info :
 
 If you just put the wrapper without specifying 'Content:5' the body part will not show up. By adding `Content:5` it specifies which zone to render the part in.
 
-After modifying your placement.info the Shape Tracing module Shape tab will show your wrapper location at the bottom. It will be: `~/Themes/{yourTheme}/Views/Wrapper.HtmlContent.cshtml`. 
+After modifying your placement.info the Shape Tracing module Shape tab will show your wrapper location at the bottom. It will be: `~/Themes/{yourTheme}/Views/WrapperContent.cshtml`. 
 
 Create this file and put the following text in it:
 
     <div class="htmlWrapperContent">
-        @Model.Html
+        @Model
     </div>
 
 This will enable you to target the wrapper from `site.css` like this:
 
-    .htmlWrapperContent {
+    WrapperContent {
         background-color: #94CCE7;
     }
 

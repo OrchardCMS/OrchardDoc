@@ -6,12 +6,12 @@ An Orchard theme defines an application's appearance and is used to customize th
 
 This article shows how to create a theme from scratch. It is intended to be an introduction to theme development and has been kept simple by design. 
 
-Instead of starting from scratch, you can create a theme by customizing an existing theme (a parent theme). Orchard provides a theme named "TheThemeMachine" that is designed as an easy-to-use parent for custom themes. For more information about using a parent theme, see [Customizing the Default Theme](Customizing-the-default-theme.html).
+Instead of starting from scratch, you can create a theme by customizing an existing theme (a parent theme). Orchard provides a theme named "TheThemeMachine" that is designed as an easy-to-use parent for custom themes. For more information about using a parent theme, see [Customizing the Default Theme](Customizing-the-default-theme).
 
 Generating a New Theme
 ----------------------
 
-Before you can use the command-line command _codegen_ to generate the code structure for you new theme, you must download and enable the **Code Generation** feature. This feature is not installed to Orchard by default. For more information, see [Command-line code generation](Command-line-scaffolding.html).
+Before you can use the command-line command _codegen_ to generate the code structure for you new theme, you must download and enable the **Code Generation** feature. This feature is not installed to Orchard by default. For more information, see [Command-line code generation](Command-line-scaffolding).
 
 To generate the code structure for a new theme, open the Orchard command-line utility and enter the following command:
 
@@ -30,7 +30,7 @@ Creating Styles for Your Theme
 
 In the _Styles_ folder, create a file named _Site.css_. (You can name the file anything you want as long as it has a _.css_ extension.)
 
-The following example shows a stylesheet. (It has been kept simple for this example.) For information about the structure of this stylesheet and other CSS recommendations, see [UI Guidelines for Theme Authors](UI-guidelines-for-theme-authors.html). 
+The following example shows a stylesheet. (It has been kept simple for this example.) For information about the structure of this stylesheet and other CSS recommendations, see [UI Guidelines for Theme Authors](UI-guidelines-for-theme-authors). 
 
     
     /*
@@ -204,7 +204,7 @@ In the _Views_ folder, add a layout file (_Layout.cshtml_) and add the following
     </div>
 
 
-This file defines the basic structure of the rendered web page. For more information about layout pages, see [Template Files and their Locations](Template-files-and-their-locations.html). 
+This file defines the basic structure of the rendered web page. For more information about layout pages, see [Template Files and their Locations](Template-files-and-their-locations). 
 
 Adding a Theme Image
 --------------------

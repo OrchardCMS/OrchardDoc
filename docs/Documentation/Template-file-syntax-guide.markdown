@@ -1,6 +1,6 @@
 Template File Syntax Guide
 ==========================
-Orchard uses templates and shapes to build views. Templates are conceptually similar to partial views in ASP.NET MVC, and they provide the basic structure for rendering shape data in a page. A template can contain web page content such as HTML markup, CSS styles, and JavaScript code to help render shape data. In addition, a template can contain server-code blocks so that you can access and render shape data in a web page. Shapes are dynamic data models that represent content structures such as menus, menu items, content items, documents, and messages. Shapes provide the data for dynamic views (as opposed to the static ASP.NET views in MVC) that templates render at run time. For more information about working with shapes, see [Accessing and Rendering Shapes](Accessing-and-rendering-shapes.html). 
+Orchard uses templates and shapes to build views. Templates are conceptually similar to partial views in ASP.NET MVC, and they provide the basic structure for rendering shape data in a page. A template can contain web page content such as HTML markup, CSS styles, and JavaScript code to help render shape data. In addition, a template can contain server-code blocks so that you can access and render shape data in a web page. Shapes are dynamic data models that represent content structures such as menus, menu items, content items, documents, and messages. Shapes provide the data for dynamic views (as opposed to the static ASP.NET views in MVC) that templates render at run time. For more information about working with shapes, see [Accessing and Rendering Shapes](Accessing-and-rendering-shapes). 
 
 The view engine is responsible for parsing the template and rendering the shape data into a web page. The default view engine for Orchard is the Razor view engine, which is installed with [ASP.NET MVC 3](http://www.asp.net/mvc/mvc3). In order for the Razor view engine to correctly parse a template, you must write the template using the Razor syntax, which defines a small set of rules for writing web page templates that contain a mixture of static web page content (such as HTML markup) and programming code. 
 
@@ -139,7 +139,7 @@ Shape templates are fragments of HTML markup for rendering shapes. To demonstrat
 
 The `Display` method is used to display the map. The `Editor` method marked `//GET` is used to display the shape result in editing view for user input. The `Editor` method marked `//POST` is used to redisplay the editor view using the values provided by the user. These methods use different overloads of the `Editor` method.
 
-For more information about how to define shapes, see [Accessing and Rendering Shapes](Accessing-and-rendering-shapes.html).
+For more information about how to define shapes, see [Accessing and Rendering Shapes](Accessing-and-rendering-shapes).
 
 The following example shows a simple template that is used to display the map. 
 

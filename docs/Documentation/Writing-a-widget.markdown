@@ -1,6 +1,6 @@
 Writing a Widget
 ================
-> **This guide has been marked for review.** If you are just getting started with Orchard module development you should read the [Getting Started with Modules course](Getting-Started-with-Modules.html) first. It will introduce you to building modules with Orchard using Visual Studio Community, a free edition of Visual Studio. 
+> **This guide has been marked for review.** If you are just getting started with Orchard module development you should read the [Getting Started with Modules course](Getting-Started-with-Modules) first. It will introduce you to building modules with Orchard using Visual Studio Community, a free edition of Visual Studio. 
 
 In Orchard, a _widget_ is a piece of reusable UI that can be arbitrarily positioned on the pages of a web site. Examples of widgets could include a tag cloud, a search form, or a Twitter feed. A widget is a content type, which enables you to reuse existing code and UI.
 
@@ -9,7 +9,7 @@ This article describes how to write a widget by first creating a content part an
 Creating a Content Part
 -----------------------
 
-For this example, you will use the `Map` part that is described in [Writing a content part](Writing-a-content-part.html). If you did not create the `Map` part, do so now. 
+For this example, you will use the `Map` part that is described in [Writing a content part](Writing-a-content-part). If you did not create the `Map` part, do so now. 
 
 Turning a Part into a Widget
 ----------------------------
@@ -69,9 +69,9 @@ After you create the new widget, open the Orchard **Dashboard** and click **Widg
 
 ![](../Upload/screenshots_675/manage_widgets_675.png)
 
-For information about how to display your widget, see [Managing Widgets](Managing-widgets.html).
+For information about how to display your widget, see [Managing Widgets](Managing-widgets).
 
 Sharing Your Widget
 -------------------
 
-To share the widget with others or to upload it to the widget gallery, you first need to package you widget to a module _.zip_ file. This is done the same way any module is packaged in Orchard. For information, see [Packaging and sharing a module](Packaging-and-sharing-a-module.html).
+To share the widget with others or to upload it to the widget gallery, you first need to package you widget to a module _.zip_ file. This is done the same way any module is packaged in Orchard. For information, see [Packaging and sharing a module](Packaging-and-sharing-a-module).

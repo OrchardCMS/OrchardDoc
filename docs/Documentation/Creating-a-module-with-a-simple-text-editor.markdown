@@ -4,13 +4,13 @@ In this tutorial, you will learn how to develop a simple commerce module using o
 
 If you do not have the [Web Platform Installer](http://www.microsoft.com/web/downloads/platform.aspx) on your computer, download it before beginning this tutorial.
 
-> **This guide has been marked for review.** If you are just getting started with Orchard module development you should read the [Getting Started with Modules course](Getting-Started-with-Modules.html) first. It will introduce you to building modules with Orchard using Visual Studio Community, a free edition of Visual Studio. 
+> **This guide has been marked for review.** If you are just getting started with Orchard module development you should read the [Getting Started with Modules course](Getting-Started-with-Modules) first. It will introduce you to building modules with Orchard using Visual Studio Community, a free edition of Visual Studio. 
 
 Setting Up the Orchard Site
 ---------------------------
 
 
-First, you will set up a new Orchard website. If you already have a site set up, you can skip this section and jump directly to [the code generation section](Creating-a-module-with-a-simple-text-editor#GeneratingCodefortheModule.html). To start the setup, open **IIS Manager**, right-click **Sites**, and click **Add Web Site**.
+First, you will set up a new Orchard website. If you already have a site set up, you can skip this section and jump directly to [the code generation section](Creating-a-module-with-a-simple-text-editor#GeneratingCodefortheModule). To start the setup, open **IIS Manager**, right-click **Sites**, and click **Add Web Site**.
 
 ![Figure 1. Creating the Orchard site](../Attachments/Creating-a-module-with-a-simple-text-editor/01_NewWebSite.PNG)
 
@@ -314,7 +314,7 @@ Create the front-end template first. Create a _Parts_ folder under _Views_ and a
     @Model.Sku<br/>
 
 
-This is very plain rendering of the shape. Notice the use of the `T` method call to wrap the "Price" string literal. This enables [localization](Creating-global-ready-applications.html) of that text.
+This is very plain rendering of the shape. Notice the use of the `T` method call to wrap the "Price" string literal. This enables [localization](Creating-global-ready-applications) of that text.
 
 The administration view is a little heavier on HTML helper calls. Create an _EditorTemplates_ folder under _Views_ and a _Parts_ folder under that. Add a _Product.cshtml_ to the _Parts_ folder that contains the following code:
 
@@ -339,7 +339,7 @@ Putting it All Together into a Content Type
 -------------------------------------------
 
 
-The content part that you've put together could already be composed from the administration UI into a content type (see [Creating Custom Content Types](Creating-custom-content-types.html)), but per the goal of this topic, you will continue by writing code using a text editor.
+The content part that you've put together could already be composed from the administration UI into a content type (see [Creating Custom Content Types](Creating-custom-content-types)), but per the goal of this topic, you will continue by writing code using a text editor.
 
 You will now build a new `Product` content type that will include the `Product` part and a number of parts that you can get from Orchard. So far, you have been focused on your specific domain. This will now change and you will start integrating into Orchard.
 

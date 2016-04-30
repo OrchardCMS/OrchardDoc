@@ -1,14 +1,14 @@
 Writing a Content Field
 =======================
-> **This guide has been marked for review.** If you are just getting started with Orchard module development you should read the [Getting Started with Modules course](Getting-Started-with-Modules.html) first. It will introduce you to building modules with Orchard using Visual Studio Community, a free edition of Visual Studio. 
+> **This guide has been marked for review.** If you are just getting started with Orchard module development you should read the [Getting Started with Modules course](Getting-Started-with-Modules) first. It will introduce you to building modules with Orchard using Visual Studio Community, a free edition of Visual Studio. 
 
-Fields can be used in Orchard to [build new content types](Creating-custom-content-types.html).
+Fields can be used in Orchard to [build new content types](Creating-custom-content-types).
 Orchard comes with a few built-in field types such as text, date or enumeration,
 but it is possible to build your own field types that can then be used to build new content types.
 
 This topic will teach you how to add such a new field type. You can find the source code for this tutorial here: [http://orcharddatetimefield.codeplex.com/](http://orcharddatetimefield.codeplex.com/).
 
-We will assume Visual Studio and a full source code enlistment are being used in this topic. It is possible to build this module without it by simply manipulating the csproj file and adding the relevant files in there. Please consult [Creating a module with a simple text editor](Creating-a-module-with-a-simple-text-editor.html) for an example of module building without Visual Studio.
+We will assume Visual Studio and a full source code enlistment are being used in this topic. It is possible to build this module without it by simply manipulating the csproj file and adding the relevant files in there. Please consult [Creating a module with a simple text editor](Creating-a-module-with-a-simple-text-editor) for an example of module building without Visual Studio.
 
 
 Objectives
@@ -25,7 +25,7 @@ Creating a Module
 
 We will create the new field type inside a new Orchard module so that it can be easily distributed. We will use Code Generation feature for that. 
 
-> **Important:** Before you can generate the file structure for your module, you need to download, install, and enable the **Code Generation** feature for Orchard. For more information, see [Command-line Code Generation](Command-line-scaffolding.html).
+> **Important:** Before you can generate the file structure for your module, you need to download, install, and enable the **Code Generation** feature for Orchard. For more information, see [Command-line Code Generation](Command-line-scaffolding).
 
 Once the **Code Generation** feature has been enabled, you can type the following `codegen` command on the Orchard command-line.
 

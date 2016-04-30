@@ -5,7 +5,7 @@ This is part two of a four part course. It will get you started with a gentle in
 
 It will teach you some of the basic components of module development and also encourage you to use best-practices when developing for Orchard.
 
-If you haven't read the previous part of this course then you can go back to the overview to [learn about the Getting Started with Modules course](Getting-Started-with-Modules.html).
+If you haven't read the previous part of this course then you can go back to the overview to [learn about the Getting Started with Modules course](Getting-Started-with-Modules).
 
 ## Expanding the widget to make it more dynamic
 In the first version of the widget we took the bare minimum of steps that we could in order to get something up and running.
@@ -31,7 +31,7 @@ If you have the original Solution and module files available then:
   
 If for some reason you don't have these files you can play catch-up by following these steps:
 
-  1. Follow the [setting up for a lesson](Setting-up-for-a-lesson.html) guide.
+  1. Follow the [setting up for a lesson](Setting-up-for-a-lesson) guide.
 
   1. Download the [completed module source code from part 1](../Attachments/getting-started-with-modules-part-1/Orchard.LearnOrchard.FeaturedProduct-Part1-v1.0.zip).
   
@@ -232,7 +232,7 @@ You do this registration inside the `Handler` class, although that's not it's on
 
 For example, you could build an analytics module that listens to the `Loaded` event in order to log usage statistics. 
 
-> If you're curious, you can see what event handlers you can override in your own handlers by examining the source code for `ContentHandlerBase` and reading the [understanding content handlers](Understanding-content-handlers.html) guide.
+> If you're curious, you can see what event handlers you can override in your own handlers by examining the source code for `ContentHandlerBase` and reading the [understanding content handlers](Understanding-content-handlers) guide.
 
 The handler you need in this module is not going to be very complex, but it will implement some plumbing that is necessary to set up the persistence of the part:
 
@@ -515,4 +515,4 @@ You have added in the common module development classes that we didn't cover in 
 
 You can now see the core process of adding a variable to your module and then implementing it, working successively up the layers to surface it in the admin dashboard and the front-end view.  
 
-In the next part of the getting started with modules course we will look at [working with content items at the code level](Getting-Started-with-Modules-Part-3.html).
+In the next part of the getting started with modules course we will look at [working with content items at the code level](Getting-Started-with-Modules-Part-3).

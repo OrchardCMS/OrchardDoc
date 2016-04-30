@@ -4,7 +4,7 @@ This article describes how to build a very small module for Orchard that will ju
 
 Another simple example of a module can be found here: [Quick Start - Get module blueprint](http://orchardjumpstart.codeplex.com/)
 
-> **This guide has been marked for review.** If you are just getting started with Orchard module development you should read the [Getting Started with Modules course](Getting-Started-with-Modules.html) first. It will introduce you to building modules with Orchard using Visual Studio Community, a free edition of Visual Studio. 
+> **This guide has been marked for review.** If you are just getting started with Orchard module development you should read the [Getting Started with Modules course](Getting-Started-with-Modules) first. It will introduce you to building modules with Orchard using Visual Studio Community, a free edition of Visual Studio. 
 
 Introduction
 ------------
@@ -22,7 +22,7 @@ Generating the Module Structure
 -------------------------------
 
 
-Before you can generate the file structure for your module, you need to download, install, and enable the **Code Generation** feature for Orchard. For more information, see [Command-line Code Generation](Command-line-scaffolding.html).
+Before you can generate the file structure for your module, you need to download, install, and enable the **Code Generation** feature for Orchard. For more information, see [Command-line Code Generation](Command-line-scaffolding).
 
 Once you have code generation enabled, open the Orchard command-line, and create the `HelloWorld` module with the following command:
 

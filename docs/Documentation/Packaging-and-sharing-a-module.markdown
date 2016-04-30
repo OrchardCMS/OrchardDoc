@@ -5,7 +5,7 @@ After developing a module extension to Orchard, you probably want to share it wi
 
 ![](../Upload/screenshots_675/enable_packaging.png)
 
-Alternatively, you can enable the Orchard.Packaging feature from the Orchard command-line. To do this, run bin\orchard.exe from the root of your Orchard installation, or the root of the Orchard.Web project if you are running against a [source enlistment](Setting-up-a-source-enlistment.html).
+Alternatively, you can enable the Orchard.Packaging feature from the Orchard command-line. To do this, run bin\orchard.exe from the root of your Orchard installation, or the root of the Orchard.Web project if you are running against a [source enlistment](Setting-up-a-source-enlistment).
 
     
     orchard> feature enable Orchard.Packaging
@@ -46,10 +46,10 @@ By running the "package create" command, you can create a zip file of a module.
 
 Orchard uses the [NuGet](http://nuget.org) packaging format to create module packages (basically .zip files with extra metadata information about your package).  NuGet is based on the OPC packaging format, which you can learn more about at [http://en.wikipedia.org/wiki/Open_Packaging_Conventions](http://en.wikipedia.org/wiki/Open_Packaging_Conventions).
 
-Once you've created a module package, you can share it easily with others.  Orchard provides the ability to browse and install a module from the "Modules" section of the Orchard admin panel.  Refer to the [Installing and upgrading modules](Installing-and-upgrading-modules.html) topic for more details.
+Once you've created a module package, you can share it easily with others.  Orchard provides the ability to browse and install a module from the "Modules" section of the Orchard admin panel.  Refer to the [Installing and upgrading modules](Installing-and-upgrading-modules) topic for more details.
 
 Additionally, Orchard provides a Gallery feature that can register one or more gallery feeds of module extensions (OData format).  Users can easily install modules from any registered feed.  A default gallery feed is exposed from this website, at [http://packages.orchardproject.net/FeedService.svc](http://packages.orchardproject.net/FeedService.svc). 
-For more information, refer to the [Module gallery feeds](Module-gallery-feeds.html) topic.
+For more information, refer to the [Module gallery feeds](Module-gallery-feeds) topic.
 
 You can visit the Gallery admin panel menu to browse and install available modules and themes online.  The [http://gallery.orchardproject.net/](http://gallery.orchardproject.net/) website provides a browsable front-end for finding and downloading available modules and themes too.
 

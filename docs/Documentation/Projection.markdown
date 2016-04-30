@@ -10,7 +10,7 @@ In this particular demo, we'll create an **External Post** functionality using *
 
 ## Creating External Post Content Type
 
-*Learn how to [Create Custom Content Types](Creating-custom-content-types.html)*
+*Learn how to [Create Custom Content Types](Creating-custom-content-types)*
 
 1.**External Post** *Content Type*
 

@@ -30,7 +30,7 @@ To install a module from the gallery, click **Modules** on the dashboard, then c
 
 ![](../Upload/screenshots_675/browse_modules_gallery_675.png)
 
-The gallery displays the aggregated list of modules exposed by all [registered feeds](Module-gallery-feeds.html). You can also use the **Feed** drop-down list in the **Gallery** tab to display all feeds or to filter and display only the modules from a particular feed.
+The gallery displays the aggregated list of modules exposed by all [registered feeds](Module-gallery-feeds). You can also use the **Feed** drop-down list in the **Gallery** tab to display all feeds or to filter and display only the modules from a particular feed.
 
 To install a module, click the **Install** link for the module. This topic uses the **Bing.Maps** module as an example. 
 

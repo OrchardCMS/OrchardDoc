@@ -97,10 +97,10 @@ folder of a theme or module.
 ## Building a new content type
 
 New content types, and even new content parts, can be built from the admin UI. For more details about
-this scenario, please read [creating custom content types](Creating-custom-content-types.html).
+this scenario, please read [creating custom content types](Creating-custom-content-types).
 
 Of course, content parts and types can also be built from code.
-Read the [Getting Started with Modules course](Getting-Started-with-Modules.html) or the [writing a content part](Writing-a-content-part.html) guide for examples.
+Read the [Getting Started with Modules course](Getting-Started-with-Modules) or the [writing a content part](Writing-a-content-part) guide for examples.
 
 ### Composing types from parts
 

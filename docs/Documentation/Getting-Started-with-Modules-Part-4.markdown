@@ -5,7 +5,7 @@ This is part four of a four part course. It will get you started with a gentle i
 
 It will teach you some of the basic components of module development and also encourage you to use best-practices when developing for Orchard.
 
-If you haven't read the previous parts of this course then you can go back to the overview to [learn about the Getting Started with Modules course](Getting-Started-with-Modules.html).
+If you haven't read the previous parts of this course then you can go back to the overview to [learn about the Getting Started with Modules course](Getting-Started-with-Modules).
 
 This final part will look at applying some best practices to improve the quality of the module's codebase.
 
@@ -46,13 +46,13 @@ The file format is quite straightforward. The fields mean what you would expect 
 
 `Features` is the only complicated one. We didn't look at it in this course, but you can include several features within a single module. This means you can enable or disable individual parts of the module. The description field and features section work together and can be displayed in several different formats. 
 
-For a detailed explanation of the `Features` section and the other fields [read the manifest files guide](Manifest-files.html).
+For a detailed explanation of the `Features` section and the other fields [read the manifest files guide](Manifest-files).
 
 Time to make some changes:
 
   1. Open `module.txt`.
   
-  1. Edit the `module.txt` to your liking while staying [within the spec](Manifest-files.html). Go ahead and put your name and details into it. It feels good to see your name in lights!
+  1. Edit the `module.txt` to your liking while staying [within the spec](Manifest-files). Go ahead and put your name and details into it. It feels good to see your name in lights!
   
   1. Save the file.
   
@@ -157,7 +157,7 @@ However, this kind of duplication of the text is not a best practice. Instead th
          @Html.LabelFor(model => model.IsOnSale, 
              T(Html.DisplayNameFor(model => model.IsOnSale).ToHtmlString()))
 
-Localization is an important topic in Orchard. Read the [using the localization helpers](Using-the-localization-helpers.html) and the [creating global ready applications](Creating-global-ready-applications.html) guides for more detailed information about supporting this feature.
+Localization is an important topic in Orchard. Read the [using the localization helpers](Using-the-localization-helpers) and the [creating global ready applications](Creating-global-ready-applications) guides for more detailed information about supporting this feature.
 
 ## Your styles shouldn't be inline
 Hopefully this one should have raised some alarm bells as you were doing this - having a `<style>` tag in the view is not a good HTML practice. You should always put your CSS into an external `.css` file. This allows the browser to download the file once for each the sites and keep it cached for subsequent requests.

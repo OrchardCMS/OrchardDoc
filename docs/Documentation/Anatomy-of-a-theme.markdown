@@ -101,7 +101,7 @@ For an example of how your own modules and themes can provide alternative layout
 
 ## Shape Templates
 
-In Orchard, before a web page is rendered into HTML, it is built as a tree of [shapes](Accessing-and-rendering-shapes.html). Shapes are flexible objects that represent the objects that will contribute to the rendering of the page. Examples include zones, menus, menu items, and widgets.
+In Orchard, before a web page is rendered into HTML, it is built as a tree of [shapes](Accessing-and-rendering-shapes). Shapes are flexible objects that represent the objects that will contribute to the rendering of the page. Examples include zones, menus, menu items, and widgets.
 
 Each shape can be rendered by a template, which can be overridden by a theme. Templates have the same name as the shape they are made to render. For example, if _Menu.cshtml_ exists, it is used to render a `Menu` shape.
 
@@ -132,7 +132,7 @@ Field rendering can be overridden as well, although not yet at the field instanc
 
 Alternates are a set of related shapes with corresponding templates or layout files that enable you to control how different types of content are rendered within a theme. For example, you can use alternates to apply one layout file for the home page but another layout file for subpages, or you can use alternates to render elements one way when the elements are in a page but a different way when they are in a blog post.
 
-For more information, see [Alternates](Alternates.html).
+For more information, see [Alternates](Alternates).
 
 ## Widget Overrides
 
@@ -171,7 +171,7 @@ A theme can modify where shapes are rendered by including a _placement.info_ fil
 Markup
 ------
 
-The markup in each file is constrained by the view engine that you choose. The default in Orchard is Razor (_.cshtml_ files), for which a quick guide can be found in [Template File Syntax Guide](Template-file-syntax-guide.html).
+The markup in each file is constrained by the view engine that you choose. The default in Orchard is Razor (_.cshtml_ files), for which a quick guide can be found in [Template File Syntax Guide](Template-file-syntax-guide).
 
 Within a template, the `Model` object represents the current shape being rendered. That means that if you are working with the message shape, which has a `Message` property, you can display that by writing `@Model.Message` from within the template markup.
 
@@ -185,4 +185,4 @@ Themes with Code
 
 Most themes will consist only of a stylesheet, a few templates (usually layouts), and a few images. They will contain no code except for the simple code in the template files. For more advanced themes, you might want to provide settings, create custom shapes, or override shapes in code.
 
-To address these scenarios, it is possible to build a theme much like a module and include a _.csproj_ file that describes how to compile the code it contains. For information about module development, see [Walkthrough: Writing An Orchard Module](Walkthrough-Writing-An-Orchard-Module.html) and [Creating a Module with a Simple Text Editor](Creating-a-module-with-a-simple-text-editor.html).
+To address these scenarios, it is possible to build a theme much like a module and include a _.csproj_ file that describes how to compile the code it contains. For information about module development, see [Walkthrough: Writing An Orchard Module](Walkthrough-Writing-An-Orchard-Module) and [Creating a Module with a Simple Text Editor](Creating-a-module-with-a-simple-text-editor).

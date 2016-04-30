@@ -49,7 +49,7 @@ Orchard 1.8 drastically simplifies creation of site settings, removing the previ
 
     @model Szmyd.Orchard.Modules.Sharing.Models.ShareBarSettingsPart
     <fieldset>
-        <legend>@T("Content sharing settigs")</legend>
+        <legend>@T("Content sharing settings")</legend>
         <div>
             @Html.LabelFor(m => m.AddThisAccount, @T("AddThis service account"))
             @Html.EditorFor(m => m.AddThisAccount)
@@ -67,7 +67,7 @@ Where _services is the `IOrchardServices` object (eg. injected in the constructo
 
 ## Defining site scope settings (Pre-Orchard 1.8)
 
-Defining custom site scope settings for before Orchard 1.8 can be in [Adding Custom Settings pre Orchard 1.8](Adding-Custom-Settings-pre-1.8.html)
+Defining custom site scope settings for before Orchard 1.8 can be in [Adding Custom Settings pre Orchard 1.8](Adding-Custom-Settings-pre-1.8)
 
 
 ## Defining settings for Content Types

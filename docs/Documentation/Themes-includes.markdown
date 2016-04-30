@@ -207,7 +207,7 @@ We'll have a special provider that recognizes the "Head" zone and generates the 
 
 This special provider is also the one that will inject style overrides.
 
-The widgets can also participate in what gets rendered by this API by exposing their list of scripts and stylesheets (see [Widgets](widgets.html)).
+The widgets can also participate in what gets rendered by this API by exposing their list of scripts and stylesheets (see [Widgets](Widgets)).
 
 The list of stylesheets and scripts to be included is first processed to remove duplicates, and then the helpers proceeds to rendering the relevant tags.
 

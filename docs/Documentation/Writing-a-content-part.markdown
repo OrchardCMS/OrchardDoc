@@ -1,6 +1,6 @@
 Writing a Content Part
 ======================
-> **This guide has been marked for review.** If you are just getting started with Orchard module development you should read the [Getting Started with Modules course](Getting-Started-with-Modules.html) first. It will introduce you to building modules with Orchard using Visual Studio Community, a free edition of Visual Studio. 
+> **This guide has been marked for review.** If you are just getting started with Orchard module development you should read the [Getting Started with Modules course](Getting-Started-with-Modules) first. It will introduce you to building modules with Orchard using Visual Studio Community, a free edition of Visual Studio. 
 
 
 This tutorial walks through the process of creating a new content part from scratch, using the scaffolding feature in Orchard as a productivity tool.  Although this tutorial assumes development in Visual Studio, it is not strictly necessary to have Visual Studio to develop a content part - feel free to use your editor of choice.  
@@ -8,7 +8,7 @@ This tutorial walks through the process of creating a new content part from scra
 In this tutorial, we are going to build a custom Map part, that can be configured with latitude and longitude values in order to display a map image for a content item.
 
 
-> **Important:** Before you can generate the file structure for your module, you need to download, install, and enable the **Code Generation** feature for Orchard. For more information, see [Command-line Code Generation](Command-line-scaffolding.html).
+> **Important:** Before you can generate the file structure for your module, you need to download, install, and enable the **Code Generation** feature for Orchard. For more information, see [Command-line Code Generation](Command-line-scaffolding).
 
 We are going to add a new "Maps" module to contain our Map part implementation, as a new project in the Orchard solution.  Assuming you have enlisted in the Orchard source tree, launch Visual Studio 2010 and open the Orchard.sln file under the "src" folder of your enlistment.
 
@@ -243,7 +243,7 @@ To activate the Map part, go to the "Features" section of the Orchard admin pane
 
 ![](../Upload/screenshots/enable_maps.png)
 
-You can try out the Map part by attaching it to any content type in the system, using the "Content Types" section of the Orchard admin panel.  Let's add it to an existing content type, namely, the custom "Event" content type that we built in the [Creating custom content types](Creating-custom-content-types.html) topic.  If you haven't read that topic yet or don't have the "Event" type, go ahead and add the Map to the Page content type instead (following the same steps below).
+You can try out the Map part by attaching it to any content type in the system, using the "Content Types" section of the Orchard admin panel.  Let's add it to an existing content type, namely, the custom "Event" content type that we built in the [Creating custom content types](Creating-custom-content-types) topic.  If you haven't read that topic yet or don't have the "Event" type, go ahead and add the Map to the Page content type instead (following the same steps below).
 
 On the "Manage Content Types" admin screen, click on "Edit" to edit the definition of this type (you may need to enable the Orchard.ContentTypes feature first).
 

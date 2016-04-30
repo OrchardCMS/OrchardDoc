@@ -17,7 +17,7 @@ The module can be comprised of a default single feature or a group of individual
 
 ### Main module.txt fields
 
-Some of the fields may be overridden if a module defines multiple features. These are detailed in the [`Features:` sub-section fields](manifest-files.html#ModuletxtFeaturessubsectionfields) table below.
+Some of the fields may be overridden if a module defines multiple features. These are detailed in the [`Features:` sub-section fields](manifest-files#ModuletxtFeaturessubsectionfields) table below.
 
 <table><thead><tr>
     <td>Field Name</td>
@@ -191,10 +191,10 @@ Notice the structure that is used for each feature described in the `Features` f
 
 For more information about how to create a module, including how to generate a manifest file and how to modify the manifest, see these guides:
 
-  * [Getting Started with Modules course](Getting-Started-with-Modules.html)
-  * [Writing a Content Part](Writing-a-content-part.html)
-  * [Writing a Content Field](Creating-a-custom-field-type.html)
-  * [Building a Hello World Module](Building-a-hello-world-module.html).
+  * [Getting Started with Modules course](Getting-Started-with-Modules)
+  * [Writing a Content Part](Writing-a-content-part)
+  * [Writing a Content Field](Creating-a-custom-field-type)
+  * [Building a Hello World Module](Building-a-hello-world-module).
 
 ## Theme manifest fields
 
@@ -248,4 +248,4 @@ The following example shows the manifest for **The Theme Machine** theme, which 
 	Website: http://orchardproject.net
 	Zones: Header, Navigation, Featured, BeforeMain, AsideFirst, Messages, BeforeContent, Content, AfterContent, AsideSecond, AfterMain, TripelFirst, TripelSecond, TripelThird, FooterQuadFirst, FooterQuadSecond, FooterQuadThird, FooterQuadFourth, Footer
 
-For more information about how to write a theme, including how to generate and modify a manifest, see [Writing a New Theme](Writing-a-new-theme.html). For information about how to customize an existing theme and then generate a manifest for it, see [Customizing Themes](Customizing-the-default-theme.html).
+For more information about how to write a theme, including how to generate and modify a manifest, see [Writing a New Theme](Writing-a-new-theme). For information about how to customize an existing theme and then generate a manifest for it, see [Customizing Themes](Customizing-the-default-theme).

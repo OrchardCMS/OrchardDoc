@@ -182,7 +182,7 @@ To enable localization for custom content types, add the **Localization** part t
 
 ![](../Upload/screenshots/add_localization_part_MyEvent.png)
 
-For more information about creating and working with custom content types, refer to the [Creating Custom Content Types](Creating-custom-content-types.html) topic.
+For more information about creating and working with custom content types, refer to the [Creating Custom Content Types](Creating-custom-content-types) topic.
 
 > **Note** The localization feature is a work in progress, and not all parts of the Orchard application are yet localizable. For example, Orchard does not yet provide an automatic way to filter and display only content items in a given culture (one instance of this is the browser's default culture). We will address this in a future release. In the meantime you can provide your own implementation of `ICultureSelector` in a module. If you want to give us feedback on localization support in Orchard (for example, to help us understand the scenarios that are important for your site), please contact at <join-orchard-localization@lists.outercurve.org> and drop us a line!
 

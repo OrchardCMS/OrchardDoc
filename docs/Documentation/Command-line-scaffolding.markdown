@@ -12,7 +12,7 @@ To enable code generation, click **Features** under **Modules**, find the **Code
 ![](../Upload/screenshots_675/codegenenable.png)
 
 
-To enable the feature from the Orchard command-line, open the orchard command-line, and enter the following command. For more information about the Orchard command-line, see [Using the command-line interface](Using-the-command-line-interface.html).
+To enable the feature from the Orchard command-line, open the orchard command-line, and enter the following command. For more information about the Orchard command-line, see [Using the command-line interface](Using-the-command-line-interface).
 
     
     orchard> feature enable Orchard.CodeGeneration
@@ -38,7 +38,7 @@ Once the code generation feature is enabled, new commmands are available for cre
     codegen moduletests <module-name> 
             Create a new test for a module
             
-For a walkthrough of using the code generation feature to create a new module and data migration, read the [Getting Started with Modules course](Getting-Started-with-Modules.html).
+For a walkthrough of using the code generation feature to create a new module and data migration, read the [Getting Started with Modules course](Getting-Started-with-Modules).
 
 Change History
 --------------

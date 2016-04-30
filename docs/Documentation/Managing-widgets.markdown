@@ -47,7 +47,7 @@ The following table describes the widgets that are available by default in Orcha
 </tbody></table>
 
 ## List of Layers
-Orchard comes with a number of layers already defined. You can define additional layers as needed, as discussed later in [Adding a Layer](Managing-widgets#AddingaLayer.html). In the **Widgets** screen, you can edit the existing layers by selecting a layer in the **Current Layer** drop-down list, or you can add new layers by clicking **Add a new layer**. 
+Orchard comes with a number of layers already defined. You can define additional layers as needed, as discussed later in [Adding a Layer](Managing-widgets#AddingaLayer). In the **Widgets** screen, you can edit the existing layers by selecting a layer in the **Current Layer** drop-down list, or you can add new layers by clicking **Add a new layer**. 
 
 The following table lists the default layers, shows the rule that defines the layer, and describes the effect of the layer.
 
@@ -86,7 +86,7 @@ The following table lists the default layers, shows the rule that defines the la
 ## List of Zones
 In Orchard, a web page is divided into zones (regions). The available zones are defined by the website's theme. In the **Widgets** screen, you can see the list of all zones available for the currently selected layer. The list also shows the widgets assigned to each zone for the selected layer.
 
-For information about the zones that are available in the default theme (TheThemeMachine), see [Customizing the Default Theme](Customizing-the-default-theme.html).
+For information about the zones that are available in the default theme (TheThemeMachine), see [Customizing the Default Theme](Customizing-the-default-theme).
 
 
 Adding a Layer
