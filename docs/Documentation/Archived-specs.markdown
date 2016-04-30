@@ -1,6 +1,6 @@
 
 * [Blogs](Blogs)
-* [Comments]Ccomments)
+* [Comments](Comments)
 * [Content types](Content-types)
 * [Definitions](Definitions)
 * [HTML doctype](Fundamentals-doctype)
