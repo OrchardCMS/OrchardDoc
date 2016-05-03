@@ -1,4 +1,4 @@
-Orchard includes an asset pipeline which builds the scripts and styles for each module. You can opt-in to it by using a manifest file called `assets.json` which lives in the root folder of each module. This manifest file lists groups of assets such as `.css`, `.js`, `.less`, `.ts` etc. Each group within the manifest file will output a single compiled and minified file.
+Orchard includes an asset pipeline which builds the scripts and styles for each module. You can opt-in to it by using a manifest file called `Assets.json` which lives in the root folder of each module. This manifest file lists groups of assets such as `.css`, `.js`, `.less` and `.ts`. Each asset group within the manifest file will output a single compiled file.
 
 ## Overview
 
@@ -14,7 +14,7 @@ In the Visual Studio Solution Explorer you will find a folder called Solution It
 
 ![](../Attachments/asset-pipeline/solution-items.png)
 
-The `Gulpfile.js` is the JavaScript code that is executed during the build. It will scan all the modules folders for `assets.json` manifests and process them. The assets manifest is a simple JSON format file which groups together files by inputs and outputs. This is what the Orchard.DynamicForms asset.json looks like:
+The `Gulpfile.js` is the JavaScript code that is executed during the build. It will scan all the modules folders for `Assets.json` manifests and process them. The assets manifest is a simple JSON format file which groups together files by inputs and outputs. This is what the Orchard.DynamicForms asset.json looks like:
 
     [
         {
