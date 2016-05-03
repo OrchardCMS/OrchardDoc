@@ -348,3 +348,11 @@ To add your this just follow the customising the asset pipeline tutorial above t
 The example above focuses on themes but your custom module folders can use the same technique.
    
 The Orchard Team are currently looking into a way to automate this process.
+
+
+# EXTRA NOTES TO INCORPORATE
+
+  1. don't assign watch, it will halt build, just manually run it
+  1. how to use bower (link to my blog?)
+  1. recommended directory structure for developers
+  1. include all assets even if you have an index sass, it will sort itself out with the redundant includes but you will then get support for watch when you change any nested file
