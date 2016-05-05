@@ -1,0 +1,9 @@
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">	
+		{% if repo_url %}
+			  {% if current_page %}
+		<a href="{{ repo_url }}/blob/master{{ current_page.abs_url.rstrip('/') }}.markdown" target="_blank">Edit on GitHub</a>
+			  {% endif %}
+		{% endif %}
+    </span>
+</div>

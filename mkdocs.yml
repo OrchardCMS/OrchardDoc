@@ -1,7 +1,5 @@
 site_name: Orchard Documentation
-theme: readthedocs
-extra_css:
-    - Styles/Site.css
+theme_dir: rtd
 repo_url: https://github.com/OrchardCMS/OrchardDoc
 google_analytics: ['UA-20757794-1', 'orchardproject.net']
 pages:
@@ -22,7 +20,6 @@ pages:
     - 'Built-in modules and features': 'Documentation/Builtin-Features.markdown'
     - Feature roadmap: Documentation/Feature-roadmap.markdown
     - Frequently Asked Questions: Documentation/Frequently-asked-questions.markdown
-- Tutorial Videos: Documentation/Orchard-TV.markdown
 - Authoring Websites:
     - Blogging with LiveWriter: Documentation/Blogging-with-LiveWriter.markdown
     - Creating Global-Ready Applications: Documentation/Creating-global-ready-applications.markdown
@@ -125,7 +122,8 @@ pages:
     - Orchard 1.7: Documentation/Orchard-1-7-Release-Notes.markdown
     - Orchard 1.6: Documentation/Orchard-1-6-Release-Notes.markdown
     - Orchard 1.5: Documentation/Orchard-1-5-Release-Notes.markdown
-    - Orchard 1.4: Documentation/Orchard-1-4-Release-Notes.markdown
+    - Orchard 1.4: Documentation/Orchard-1-4-Release-Notes.markdown    
+- Tutorial Videos: Documentation/Orchard-TV.markdown
 - User Experiences:
     - Walkthroughs and UI Mockups: Documentation/Walkthroughs.markdown
 - Archived Specs:
