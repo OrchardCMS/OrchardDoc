@@ -89,6 +89,9 @@
         <div class="rst-content">
           {% include "breadcrumbs.html" %}
           <div role="main">
+            <header>
+              <h1 class="pagetitle">{% if current_page %}{{ current_page.title }}{% endif %}</h1>
+            </header>
             <div class="section">
               {% block content %}
                 {{ content }}
