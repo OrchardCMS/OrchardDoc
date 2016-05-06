@@ -32,7 +32,7 @@ $( document ).ready(function() {
 
     $('table').addClass('docutils');
     
-    $(".rst-versions").removeClass("rst-badge");
+    $(".rst-versions .rst-badge").removeClass("rst-badge");
 });
 
 window.SphinxRtdTheme = (function (jquery) {
