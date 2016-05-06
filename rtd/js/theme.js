@@ -4,9 +4,9 @@ $( document ).ready(function() {
     // show current menu
     $('.current').closest('.subnav').children('.toctree-l1').show();
 
-    // toggle submenu on click of parent menu
-    $('.subnav').click(function(){
-       $(this).children('.toctree-l1').toggle();
+    // toggle submenu on click on first span menu
+    $('.subnav').find('span').click(function(){
+       $(this).closest('.subnav').children('.toctree-l1').toggle();
     });
     
     // Shift nav in mobile when clicking the menu.
@@ -31,6 +31,8 @@ $( document ).ready(function() {
     hljs.initHighlightingOnLoad();
 
     $('table').addClass('docutils');
+    
+    $(".rst-versions").removeClass("rst-badge");
 });
 
 window.SphinxRtdTheme = (function (jquery) {

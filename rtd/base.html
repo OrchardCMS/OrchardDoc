@@ -8,7 +8,7 @@
   {% if page and page.is_homepage %}<meta name="description" content="{{ page_description }}">{% endif %}
   {% if site_author %}<meta name="author" content="{{ site_author }}">{% endif %}
   {% block htmltitle %}
-  <title>{% if page and page.title and not page.is_hompage %}{{ page.title }} - {% endif %}{{ site_name }}</title>
+	<title>{% if page_title %}{{ page_title }} - {% endif %}{{ site_name }}</title>
   {% endblock %}
 
   {% if favicon %}<link rel="shortcut icon" href="{{ favicon }}">
@@ -28,7 +28,7 @@
     // Current page data
     var mkdocs_page_name = '{{ current_page.title|safe }}';
     var mkdocs_page_input_path = '{{ current_page.input_path|safe }}';
-    var mkdocs_page_url = 's{{ current_page.abs_url|safe }}';
+    var mkdocs_page_url = '{{ current_page.abs_url|safe }}';
   </script>
   {% endif %}
   <script src="{{ base_url }}/js/jquery-2.1.1.min.js"></script>
