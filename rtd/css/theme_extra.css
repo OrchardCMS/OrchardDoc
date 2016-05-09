@@ -4,6 +4,19 @@
  *
  * https://github.com/mkdocs/mkdocs/issues/175
  */
+.rst-versions.rst-badge {
+    left: 0;
+    width: 300px;
+    bottom: 0;
+}
+.rst-versions.rst-badge .rst-current-version {
+	text-align: left;
+}
+.rst-current-version .fa-caret-down
+{
+	float: right;
+    padding: 8px;
+}
 .wy-menu-vertical span {
     line-height: 18px;
     padding: 0.4045em 1.618em;

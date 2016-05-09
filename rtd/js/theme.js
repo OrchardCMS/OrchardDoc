@@ -31,8 +31,6 @@ $( document ).ready(function() {
     hljs.initHighlightingOnLoad();
 
     $('table').addClass('docutils');
-    
-    $("[data-toggle='rst-versions']").removeClass("rst-badge");
 });
 
 window.SphinxRtdTheme = (function (jquery) {

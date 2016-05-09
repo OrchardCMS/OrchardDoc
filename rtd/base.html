@@ -8,7 +8,7 @@
   {% if page and page.is_homepage %}<meta name="description" content="{{ page_description }}">{% endif %}
   {% if site_author %}<meta name="author" content="{{ site_author }}">{% endif %}
   {% block htmltitle %}
-	<title>{% if page_title %}{{ page_title }} - {% endif %}{{ site_name }}</title>
+  <title>{% if current_page and current_page.title and not current_page.is_homepage %}{{ current_page.title }} - {% endif %}{{ site_name }}</title>
   {% endblock %}
 
   {% if favicon %}<link rel="shortcut icon" href="{{ favicon }}">
@@ -23,6 +23,7 @@
   {%- for path in extra_css %}
   <link href="{{ path }}" rel="stylesheet">
   {%- endfor %}
+
   {% if current_page %}
   <script>
     // Current page data
@@ -34,13 +35,13 @@
   <script src="{{ base_url }}/js/jquery-2.1.1.min.js"></script>
   <script src="{{ base_url }}/js/modernizr-2.8.3.min.js"></script>
   <script type="text/javascript" src="{{ base_url }}/js/highlight.pack.js"></script>
+  <script src="{{ base_url }}/js/theme.js"></script>
 
   {%- block extrahead %} {% endblock %}
 
   {%- for path in extra_javascript %}
   <script src="{{ path }}"></script>
   {%- endfor %}
-  <script src="{{ base_url }}/js/theme.js"></script>
 
   {% if google_analytics %}
   <script>
@@ -89,9 +90,6 @@
         <div class="rst-content">
           {% include "breadcrumbs.html" %}
           <div role="main">
-            <header>
-              <h1 class="pagetitle">{% if current_page %}{{ current_page.title }}{% endif %}</h1>
-            </header>
             <div class="section">
               {% block content %}
                 {{ content }}
@@ -107,9 +105,10 @@
     </section>
 
   </div>
+
 </body>
 </html>
-{% if page and page.is_homepage %}
+{% if current_page and current_page.is_homepage %}
 <!--
 MkDocs version : {{ mkdocs_version }}
 Build Date UTC : {{ build_date_utc }}
