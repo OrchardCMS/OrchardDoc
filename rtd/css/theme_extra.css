@@ -5,12 +5,12 @@
  * https://github.com/mkdocs/mkdocs/issues/175
  */
 .rst-versions.rst-badge {
-    left: 0;
-    width: 300px;
-    bottom: 0;
+    left: 0 !important;
+    width: 300px !important;
+    bottom: 0 !important;
 }
 .rst-versions.rst-badge .rst-current-version {
-	text-align: left;
+	text-align: left !important;
 }
 .rst-current-version .fa-caret-down
 {
