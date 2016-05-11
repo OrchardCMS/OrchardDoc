@@ -1,8 +1,6 @@
-## DRAFT
-
 Build: 1.10.1
 
-Published: 4/26/2016
+Published: 5/11/2016
 
 This release contains bug fixes and new features.
 
