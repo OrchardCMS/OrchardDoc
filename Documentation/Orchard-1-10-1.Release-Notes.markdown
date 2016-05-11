@@ -27,6 +27,8 @@ or you may experience frequent disconnections.
 What file to download?
 ----------------------
 
+You will find the files to download on our Github release page: https://github.com/OrchardCMS/Orchard/releases/tag/1.10.1
+
 If you just want to use Orchard and don't care about the source code, Orchard.Web.1.10.1.zip
 is what you want to use, preferably through the WebPI instructions.
 Do not attempt to build the WebPI version in VS. Use the full source if you want to use VS.
