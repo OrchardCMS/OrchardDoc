@@ -13,7 +13,7 @@
     <li class="wy-breadcrumbs-aside">
       {% if repo_url %}
 			  {% if current_page %}
-		  <a href="{{ repo_url }}/blob/master/docs{% if current_page.is_homepage %}/index{% else %}{{ current_page.abs_url.rstrip('/') }}{% endif %}.markdown" target="_blank">Edit on GitHub</a>
+		  <a href="{{ repo_url }}/blob/master/docs{% if current_page.is_homepage %}/index{% else %}{{ current_page.abs_url.rstrip('/') }}{% endif %}.markdown" target="_blank" class="fa fa-github"> Edit on GitHub</a>
 			  {% endif %}
 		{% endif %}
     </li>
