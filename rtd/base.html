@@ -62,19 +62,20 @@
 
     {# SIDE NAV, TOGGLES ON MOBILE #}
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-      <div class="wy-side-nav-search">
-        <a href="{{ homepage_url }}" class="icon icon-home"> {{ site_name }}</a>
-        {% include "searchbox.html" %}
-      </div>
+      <div class="wy-side-scroll">         
+        <div class="wy-side-nav-search">
+          <a href="{{ homepage_url }}" class="icon icon-home"> {{ site_name }}</a>
+          {% include "searchbox.html" %}
+        </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        <ul class="current">
-          {% for nav_item in nav %}
-            <li>{% include "toc.html" %}<li>
-          {% endfor %}
-        </ul>
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          <ul class="current">
+            {% for nav_item in nav %}
+              <li>{% include "toc.html" %}<li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">

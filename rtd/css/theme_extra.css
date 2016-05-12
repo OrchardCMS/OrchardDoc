@@ -155,6 +155,13 @@ code.cs, code.c {
     padding-left: 1em;
 }
 
+.wy-side-scroll {
+    width: 320px;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%;
+}
 
 /*
  * Improve inline code blocks within admonitions.
