@@ -10,7 +10,7 @@ This document targets Orchard developers. Using only the admin dashboard, you wi
 - Give the new type a Display Name (e.g. *My Image Gallery*).
 - Click **Create**.
 
-![New content type](/Attachments/Creating-an-image-gallery/new-content-type.JPG)
+![New content type](../Attachments/Creating-an-image-gallery/new-content-type.JPG)
 
 - When you click create, Orchard will open the Add Parts page.
 - Check **Widget**, then click **Save**.
@@ -22,14 +22,14 @@ This document targets Orchard developers. Using only the admin dashboard, you wi
 - Name the field (e.g. *My Media Library Picker Field*.)
 - Click **Save**.
 
-![Add a new field](/Attachments/Creating-an-image-gallery/add-new-field.JPG)
+![Add a new field](../Attachments/Creating-an-image-gallery/add-new-field.JPG)
 
 - After you click save, click on the down carat beside the new field.
 - Check "**Allow multiple content items**."
 - Click **Save** at the bottom of the page.
 - You will now have the following Content Type. It has both a Widget Part and a Media Library Picker Field.
 
-![Finished content type](/Attachments/Creating-an-image-gallery/finished-content-type.jpg)
+![Finished content type](../Attachments/Creating-an-image-gallery/finished-content-type.jpg)
 
 # Add the Widget a Zone
 
@@ -44,7 +44,7 @@ This document targets Orchard developers. Using only the admin dashboard, you wi
 
 In this screen shot, we have already imported some images and created some folders. You can create folders using the **Create Folder** button. You can import images by opening a folder and clicking the **Import** button. This tutorial assumes you know how to do that.
 
- ![Finished content type](/Attachments/Creating-an-image-gallery/modal-popup.jpg)
+ ![Finished content type](../Attachments/Creating-an-image-gallery/modal-popup.jpg)
 
 - Select the images that you want to display.
 	- Tip: Use ctrl + click to select multiple images at once.

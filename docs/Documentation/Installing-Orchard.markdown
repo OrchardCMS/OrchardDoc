@@ -31,22 +31,22 @@ To begin, download and install the [Web Platform Installer](http://www.microsoft
 
 Find **Orchard CMS** and then click **Add** to include Orchard as an item to install.
 
-![](/Attachments/Installing-Orchard/webpi_install.png)
+![](../Attachments/Installing-Orchard/webpi_install.png)
 
 Click **Install**. Accept the license terms in order to continue.
 
-![](/Attachments/Installing-Orchard/Install_acceptterms.png)
+![](../Attachments/Installing-Orchard/Install_acceptterms.png)
 
 When the installation is complete, the dialog shows the list of installed tools in addition to Orchard.  Click the **Launch** link to open the site in WebMatrix.
 
-![](/Attachments/Installing-Orchard/Install_success.png)
+![](../Attachments/Installing-Orchard/Install_success.png)
 
 # Running Orchard in WebMatrix
 
 After WebMatrix starts, it should inmediately launch Orchard in the default browser. If not, you can launch Orchard by clicking the **Run** drop-down button, and selecting which browser to use.
 In WebMatrix you can click the **Files** workspace to see the contents of the Orchard site.
 
-![](/Attachments/Installing-Orchard/launch_Orchard_WebMatrix.png)
+![](../Attachments/Installing-Orchard/launch_Orchard_WebMatrix.png)
 
 The first time Orchard is launched, you see in your browser the Orchard setup screen. 
 
@@ -68,7 +68,7 @@ For information about recipes and how to make a custom recipe, see [Making a Web
 
 After you've entered the required information on the setup  screen, click **Finish Setup**. When the setup process is complete, your new site's home page is displayed.
 
-![](/Attachments/Installing-Orchard/first_frontend.png)
+![](../Attachments/Installing-Orchard/first_frontend.png)
 
 You can now begin configuring your site.
   

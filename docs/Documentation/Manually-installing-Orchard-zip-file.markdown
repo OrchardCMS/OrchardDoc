@@ -26,15 +26,15 @@ You will find two .zip files.
 
 First let's setup the server. Search for "Add or Remove Programs" in your system. And execute it.
 
-![](/Attachments/Manually-installing-Orchard-zip-file/IISSearchForAddRemovePrograms.png)
+![](../Attachments/Manually-installing-Orchard-zip-file/IISSearchForAddRemovePrograms.png)
 
 Click **Turn Windows features on or off**.
 
-![](/Attachments/Manually-installing-Orchard-zip-file/IISTurnOnWindowsFeatures.png)
+![](../Attachments/Manually-installing-Orchard-zip-file/IISTurnOnWindowsFeatures.png)
 
 Click **Internet Information Services** and then **ASP.NET 4.5**. Click **OK**.
 
-![](/Attachments/Manually-installing-Orchard-zip-file/IISEnableIISAndASP45.png)
+![](../Attachments/Manually-installing-Orchard-zip-file/IISEnableIISAndASP45.png)
 
 At this point we recommend rebooting your system. This way you will be sure that all the required services are started from scratch.
 
@@ -53,7 +53,7 @@ Then repeat the same procedure for the following folders:
 * _Media_. This folder is where Orchard stores media files (images, etc.).
 
 
-![](/Attachments/Manually-installing-Orchard-zip-file/IISSetFolderPermissions.png)
+![](../Attachments/Manually-installing-Orchard-zip-file/IISSetFolderPermissions.png)
 
 > **Tip**: If you want to completely reset an Orchard site configuration to its default settings, you can delete the contents of the App\_Data directory. This removes all your custom settings, users, and configuration, as well as any custom data you have added to the site. 
 If you delete the contents of the App\_Data folder, and if you want to remove custom images that you have added to the site, you can delete the contents of the Media folder as well. The required files will be recreated the next time Orchard is started.
@@ -61,28 +61,28 @@ If you delete the contents of the App\_Data folder, and if you want to remove cu
 
 Now you can create your new website. Search your system for **Internet Information Services (IIS) Manager**, and execute it.
 
-![](/Attachments/Manually-installing-Orchard-zip-file/IISOpenIISManager.png)
+![](../Attachments/Manually-installing-Orchard-zip-file/IISOpenIISManager.png)
 
 Click in **Default Web Site** and **stop**. This will free port 80 for our site.
 
-![](/Attachments/Manually-installing-Orchard-zip-file/IISStopDefaultWebSite.png)
+![](../Attachments/Manually-installing-Orchard-zip-file/IISStopDefaultWebSite.png)
 
 
 Right-click **Sites** and **Add Website**.
 
-![](/Attachments/Manually-installing-Orchard-zip-file/IISAddANewWebsite.png)
+![](../Attachments/Manually-installing-Orchard-zip-file/IISAddANewWebsite.png)
 
 Write your site name and point **Physical path** to your *Orchard* folder. Click **Ok**.
 
-![](/Attachments/Manually-installing-Orchard-zip-file/IISAddWebsiteScreen.png)
+![](../Attachments/Manually-installing-Orchard-zip-file/IISAddWebsiteScreen.png)
 
 Click **Yes** in the warning dialog about two sites using port 80.
 
-![](/Attachments/Manually-installing-Orchard-zip-file/IISPort80Conflict.png)
+![](../Attachments/Manually-installing-Orchard-zip-file/IISPort80Conflict.png)
 
 Your website is running now. Click **browse** to navigate to it.
 
-![](/Attachments/Manually-installing-Orchard-zip-file/IISBrowseToSite.png)
+![](../Attachments/Manually-installing-Orchard-zip-file/IISBrowseToSite.png)
 
 You should see the Orchard setup screen in your browser.
 
@@ -90,15 +90,15 @@ You should see the Orchard setup screen in your browser.
 
 Download the _Orchard.Web.1.x.xx.zip_ file from [here](https://github.com/OrchardCMS/Orchard/releases/latest). Extract the Orchard .zip file to a local folder. Launch WebMatrix, and in the **Quick Start** screen, click **Open** and then **Folder**.
 
-![](/Attachments/Manually-installing-Orchard-zip-file/IISWMOpenFolder.png)
+![](../Attachments/Manually-installing-Orchard-zip-file/IISWMOpenFolder.png)
 
  Navigate to the folder where you extracted the .zip file, select the folder named **Orchard**, and then click **Select Folder** to open the site.
 
-![](/Attachments/Manually-installing-Orchard-zip-file/IISWMSelectFolder.png)
+![](../Attachments/Manually-installing-Orchard-zip-file/IISWMSelectFolder.png)
 
 To run the site, in the WebMatrix **Files** workspace, select the root **Orchard** folder. Click the drop-down list in the **Run** button and then select a browser.
 
-![](/Attachments/Manually-installing-Orchard-zip-file/IISWMRun.png)
+![](../Attachments/Manually-installing-Orchard-zip-file/IISWMRun.png)
 
 You should see the Orchard setup screen in your browser.
 
@@ -108,11 +108,11 @@ You should see the Orchard setup screen in your browser.
 Altough you can run the precompiled version of Orchard in Visual Studio, you will find much easier to work in Visual Studio with the full source code version. 
 Download the full source code from [here](https://github.com/OrchardCMS/Orchard/releases/latest). Extract the .zip file to a local folder.
 
-![](/Attachments/Manually-installing-Orchard-zip-file/contents_of_source_zip_file.png)
+![](../Attachments/Manually-installing-Orchard-zip-file/contents_of_source_zip_file.png)
 
  Launch Visual Studio and select **File** > **Open** > **Project/Solution**. Navigate to the folder where you extracted the .zip and open the folder named **src**. Select the **Orchard.sln** solution file.
 
-![](/Attachments/Manually-installing-Orchard-zip-file/VSOpenSolution.PNG)
+![](../Attachments/Manually-installing-Orchard-zip-file/VSOpenSolution.PNG)
 
 To run the site, press Ctrl+F5. You should see the Orchard setup screen in your browser.
 

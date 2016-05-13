@@ -23,14 +23,14 @@ The right side contains all types of menu items that you can add:
 * Taxonomy Link
 
 Click **Add** next to the **Content Menu Item** to add a new menu item.
-![](/Attachments/Navigation-and-menus/AddNewContentItemLink.png)
+![](../Attachments/Navigation-and-menus/AddNewContentItemLink.png)
 
 On the 'Create Menu Item' page you can fill in the Menu text.
 Select **Browse** and link to any content item (e.g your Home Page). Later, when you have prepared your real target content item you can update the menu link.
 
-![](/Attachments/Navigation-and-menus/CreateMenuItem.png)
+![](../Attachments/Navigation-and-menus/CreateMenuItem.png)
 
-![](/Attachments/Navigation-and-menus/SelectAContentItem.png)
+![](../Attachments/Navigation-and-menus/SelectAContentItem.png)
 
 # Content First, Navigation Later
 
@@ -39,7 +39,7 @@ Select **New Page** on the left menu. Create an *About Us* page. Give it a title
 At the bottom check the **Show on a menu** checkbox to see the menu options
 for that page. The **Menu text** is the name of your menu item. By default the Page link will be added to the **Main Menu**.
 
-![](/Attachments/Navigation-and-menus/CreatePageAndNavigation.png)
+![](../Attachments/Navigation-and-menus/CreatePageAndNavigation.png)
 
 When you now **Save** your page and navigate to the **Navigation** menu item on the left side you will see
 that the new menu item that you created was added to the Main Menu.
@@ -51,8 +51,8 @@ Navigate to the **Navigation** section. If you **hover** over an already added M
 that you can drag and drop the Menu Item.
 Simply drag the Menu Item a bit to the right until it snaps to a sub container.  Remember that changes you made here won't be updated until you click the **Save All** in the bottom-right side of the page.
 
-![](/Attachments/Navigation-and-menus/NotIndentedMenu.png)
-![](/Attachments/Navigation-and-menus/IndentedMenu.png)
+![](../Attachments/Navigation-and-menus/NotIndentedMenu.png)
+![](../Attachments/Navigation-and-menus/IndentedMenu.png)
 
 
 

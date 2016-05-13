@@ -265,4 +265,4 @@ On the front-end of your site, you can see the effect of the Map part rendering 
 
 # Getting the Code
 
-The Map part described in this topic is available from here: [Orchard.Module.Maps.1.0.0.zip](/Attachments/Writing-a-content-part/Orchard.Module.Maps.1.0.0.zip), ready to install and use, with full source code.
+The Map part described in this topic is available from here: [Orchard.Module.Maps.1.0.0.zip](../Attachments/Writing-a-content-part/Orchard.Module.Maps.1.0.0.zip), ready to install and use, with full source code.

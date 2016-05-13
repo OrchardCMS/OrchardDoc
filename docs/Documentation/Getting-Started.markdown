@@ -163,37 +163,37 @@ Once these modules are enabled, you can edit the contents of an individual zone 
 
 **7)** Click **Create Folder**. 
 
-![](/Attachments/Getting-Started/MedLibCreateFolder.png)
+![](../Attachments/Getting-Started/MedLibCreateFolder.png)
 
 **8)** Name the folder *myImages* and click **Save**. 
 
-![](/Attachments/Getting-Started/MedLibSaveFolderName.png)
+![](../Attachments/Getting-Started/MedLibSaveFolderName.png)
 
 **9)** Click the folder *myImages*, and then click **Import** 
 
-![](/Attachments/Getting-Started/MedLibImport.png)
+![](../Attachments/Getting-Started/MedLibImport.png)
 
 **10)** Click *My Computer* and then click in the central zone to browse for an image. If you prefer you can drop your image into the central zone.
 
-![](/Attachments/Getting-Started/MedLibUpload.png)
+![](../Attachments/Getting-Started/MedLibUpload.png)
 
 
 **11)** Close the dialog.
 
-![](/Attachments/Getting-Started/MedLibClose.png)
+![](../Attachments/Getting-Started/MedLibClose.png)
 
 
 **12)** Click the image and click **Select**.
 
-![](/Attachments/Getting-Started/MedLibSelectImage.png)
+![](../Attachments/Getting-Started/MedLibSelectImage.png)
 
 **13)** If needed, resize the image using the handlers so that later it fits nicely into the zone. Then click **Save** to save the changes to the widget. 
 
-![](/Attachments/Getting-Started/MedLibSaveContent.png)
+![](../Attachments/Getting-Started/MedLibSaveContent.png)
 
 The home page is automatically displayed with the updated zone.
 
-![](/Attachments/Getting-Started/FirstLeaderAside.png)
+![](../Attachments/Getting-Started/FirstLeaderAside.png)
 
 **14)** Select the **Edit** link for the **Body** of the page.
 
@@ -208,7 +208,7 @@ The home page is automatically displayed with the updated zone.
 
 **16)** Select **Publish Now** at the bottom of the page to make the updates to the page visible immediately.
 
-![](/Attachments/Getting-Started/PagePublishNow.png)
+![](../Attachments/Getting-Started/PagePublishNow.png)
 
 
 ### Adding a New Page to Your Site
@@ -228,7 +228,7 @@ The home page is automatically displayed with the updated zone.
 
 **6)** Select **Publish Now** to make the updates to the page visible immediately. You can also save the page as a draft (to edit later before publishing), or you can choose to publish the page at a specific date and time.
 
-![](/Attachments/Getting-Started/CreateNewPage.png)
+![](../Attachments/Getting-Started/CreateNewPage.png)
 
 **7)** Select **Your Site** in the upper-left side of the Dashboard to view the modified home page with the new menu. Clik **Downloads** and you will see your new page.
  
@@ -239,7 +239,7 @@ To change the layout of your new page without affecting the rest of the site you
 
 **1)** Go to the Dashboard and select **Widgets**. Then click **add a new layer** to add a new layer for this page which will allow you to customize the layout for the new page at a later point in time.
 
-![](/Attachments/Getting-Started/AddNewLayer.png)
+![](../Attachments/Getting-Started/AddNewLayer.png)
 
 **2)** Write a name for the layer, a description, and a layer rule: url"~/download". This will instruct the Orchard System to show the widgets in this layer only when the url of the browser is pointing to "download". Select **Save**.
 
@@ -250,19 +250,19 @@ To change the layout of your new page without affecting the rest of the site you
 
 **3)** To check that your layer rule is working you can add a widget to it. Ensure that **Current Layer** is **Download**. Click **Add** in *AsideFirst*.
 
-![](/Attachments/Getting-Started/AddNewWidget.png)
+![](../Attachments/Getting-Started/AddNewWidget.png)
 
 **4)** Add a new **Html Widget**.
 
-![](/Attachments/Getting-Started/AddHtmlWidget.png)
+![](../Attachments/Getting-Started/AddHtmlWidget.png)
 
 **5)** Write a title and a body for it. Save it.
 
-![](/Attachments/Getting-Started/EditHtmlWidget.png)
+![](../Attachments/Getting-Started/EditHtmlWidget.png)
 
 **6)** Select **Your Site** in the upper-left side of the Dashboard. Navigate to *Downloads*. You should see the custom layout.
 
-![](/Attachments/Getting-Started/CustomLayoutResult.png)
+![](../Attachments/Getting-Started/CustomLayoutResult.png)
 
 
 

@@ -1235,4 +1235,4 @@ For most relationships these conventions should create and auto-map your data mo
 
 This topic should show the way for the creation of complex content parts involving arbitrary data relations. There is actually not much to it, as the system already knows how to persist and bind such complex objects. Rather, it's a matter of building the model according to the conventions in place.
 
-You may download the code for this topic from this link: [Orchard.Module.RelationSample.0.5.0.zip](/Attachments/Creating-1-n-and-n-n-relations/Orchard.Module.RelationSample.0.5.0.zip)
+You may download the code for this topic from this link: [Orchard.Module.RelationSample.0.5.0.zip](../Attachments/Creating-1-n-and-n-n-relations/Orchard.Module.RelationSample.0.5.0.zip)
