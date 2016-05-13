@@ -109,6 +109,7 @@ pages:
     - Contributing Documentation: Documentation/Contributing-documentation.markdown
     - Documentation Style Guidelines: Documentation/Documentation-Style-Guidelines.markdown
     - Contributing Patches: Documentation/Contributing-patches.markdown
+    - Contributors: Contributors.markdown
 - Release notes:
     - Orchard 1.10.1: Documentation/Orchard-1-10-1.Release-Notes.markdown
     - Orchard 1.10: Documentation/Orchard-1-10.Release-Notes.markdown
