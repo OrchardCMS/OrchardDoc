@@ -1,0 +1,10 @@
+<a href="{{ homepage_url }}">Docs</a> &raquo;</li>
+    {% if current_page %}
+      {% for doc in current_page.ancestors %}
+        {% if doc.link %}
+          <a href="{{ doc.link|e }}">{{ doc.title }}</a> &raquo;
+        {% else %}
+          {{ doc.title }} &raquo;
+        {% endif %}
+      {% endfor %}
+    {% endif %}

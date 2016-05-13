@@ -1,0 +1,22 @@
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="{{ homepage_url }}">Docs</a></li>
+    {% if current_page %}
+      {% for doc in current_page.ancestors %}
+        {% if doc.link %}
+          <li>&raquo; <a href="{{ doc.link|e }}">{{ doc.title }}</a></li>
+        {% else %}
+          <li>&raquo; {{ doc.title }}</li>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    <li class="wy-breadcrumbs-aside">
+      {% if repo_url %}
+			  {% if current_page %}
+		  <a href="{{ repo_url }}/blob/master/docs{% if current_page.is_homepage %}/index{% else %}{{ current_page.abs_url.rstrip('/') }}{% endif %}.markdown" target="_blank" class="fa fa-github"> Edit on GitHub</a>
+			  {% endif %}
+		{% endif %}
+    </li>
+  </ul>
+  <hr/>
+</div>
