@@ -64,11 +64,6 @@ pages:
     - First Steps into Orchard: Documentation/First-steps-into-Orchard.markdown
     - How Orchard Works: Documentation/How-Orchard-works.markdown
     - Command-Line Code Generation: Documentation/Command-line-scaffolding.markdown
-    - Getting Started with Modules Course:
-        - 'Part 1: Build a Static Widget': Documentation/Getting-Started-with-Modules-Part-1.markdown
-        - 'Part 2: Make the Widget Dynamic': Documentation/Getting-Started-with-Modules-Part-2.markdown
-        - 'Part 3: Using the Orchard API': Documentation/Getting-Started-with-Modules-Part-3.markdown
-        - 'Part 4: Applying Best Practices': Documentation/Getting-Started-with-Modules-Part-4.markdown
     - Building a Hello World Module: Documentation/Building-a-hello-world-module.markdown
     - Creating a Module with a Simple Text Editor: Documentation/Creating-a-module-with-a-simple-text-editor.markdown
     - Writing a Content Part: Documentation/Writing-a-content-part.markdown
@@ -80,6 +75,12 @@ pages:
     - Caching: Documentation/Caching.markdown
     - Custom Site Settings: Documentation/Adding-custom-settings.markdown
     - Web Api in Orchard: Documentation/WebApi-In-Orchard.markdown
+- Getting Started with Modules Course: 
+    - Getting Started with Modules: Documentation/Getting-Started-with-Modules.markdown
+    - 'Part 1: Build a Static Widget': Documentation/Getting-Started-with-Modules-Part-1.markdown
+    - 'Part 2: Make the Widget Dynamic': Documentation/Getting-Started-with-Modules-Part-2.markdown
+    - 'Part 3: Using the Orchard API': Documentation/Getting-Started-with-Modules-Part-3.markdown
+    - 'Part 4: Applying Best Practices': Documentation/Getting-Started-with-Modules-Part-4.markdown
 - Working with Data:
     - Understanding Data Access: Documentation/Understanding-data-access.markdown
     - Understanding Content Handlers: Documentation/Understanding-content-handlers.markdown
