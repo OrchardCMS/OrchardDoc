@@ -75,6 +75,7 @@ pages:
     - Caching: Documentation/Caching.markdown
     - Custom Site Settings: Documentation/Adding-custom-settings.markdown
     - Web Api in Orchard: Documentation/WebApi-In-Orchard.markdown
+    - Assets Pipeline: Documentation/Assets-pipeline.markdown
 - Getting Started with Modules Course: 
     - Getting Started with Modules: Documentation/Getting-Started-with-Modules.markdown
     - 'Part 1: Build a Static Widget': Documentation/Getting-Started-with-Modules-Part-1.markdown
@@ -92,6 +93,7 @@ pages:
     - Alternates: Documentation/Alternates.markdown
     - Template File Syntax Guide: Documentation/Template-file-syntax-guide.markdown
     - Packaging and Sharing Themes: Documentation/Packaging-and-sharing-themes.markdown
+    - Assets Pipeline: Documentation/Assets-pipeline.markdown
     - UI Guidelines for Theme Authors: Documentation/UI-guidelines-for-theme-authors.markdown
     - Customizing Orchard Using Designer Helper Tools: Documentation/Customizing-Orchard-using-Designer-Helper-Tools.markdown
 - Developer Tools and Guidelines:
