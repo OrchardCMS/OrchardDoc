@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+{% endblock %}
+
+{% block content %}
+
+  <h1 id="search">Search Results</h1>
+
+  <form id="content_search" action="search.html">
+    <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+    <input name="q" id="search" type="text" class="search_input search-query ui-autocomplete-input" placeholder="Search" autocomplete="off">
+  </form>
+
+  <div id="mkdocs-search-results">
+    No results found.
+  </div>
+
+{% endblock %}

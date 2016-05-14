@@ -1,0 +1,33 @@
+table { border-collapse:collapse; border-spacing:0; }
+
+table {
+    border: 1px solid #CCC;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+table thead th {
+    background-color: #DDD;
+    white-space: nowrap;
+}
+
+table td {
+    vertical-align: top;
+    border: 1px solid #CCC;
+    padding: 3px;
+    margin: 0;
+}
+blockquote {
+    border-left: solid 8px #E66300;
+    background-color: #e6cbb6;
+    margin-left: 16px;
+    padding: .75em 0px .75em 6px;
+    margin: 1em 0;
+}
+blockquote {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 40px;
+    -webkit-margin-end: 40px;
+}
