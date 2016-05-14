@@ -136,11 +136,14 @@ Using the assets pipeline is optional. If you don't put an `Asset.json` manifest
 ### Format
 
 <table>
+<thead>
 <tr>
    <th>Element</th>
    <th>Type</th>
    <th>Usage</th>
 </tr>
+</thead>
+<tbody>
 <tr>
    <td>`inputs`</td>
    <td>Array</td>
@@ -157,6 +160,7 @@ Using the assets pipeline is optional. If you don't put an `Asset.json` manifest
    <td>*optional* defaults to false. Use this if you want a configuration group to opt-out of generating the source maps.
    </td>
 </tr>
+</tbody>
 </table>
 
 ### Globbing
