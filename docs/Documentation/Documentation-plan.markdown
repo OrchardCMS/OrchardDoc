@@ -5,7 +5,7 @@
 
 * **Authoring Web Sites**
     * [Getting around the admin panel](Getting-around-the-dashboard)
-    * [Adding pages to your site](Adding-Pages-to-Your-Sitee)
+    * [Adding pages to your site](Adding-Pages-to-Your-Site)
     * [Adding a blog to your site](Adding-a-Blog-to-Your-Site)
     * [Blogging with LiveWriter](Blogging-with-LiveWriter)
     * [Adding and managing media content](Adding-and-managing-media-content)
