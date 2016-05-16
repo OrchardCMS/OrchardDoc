@@ -8,7 +8,7 @@ and publish the page to your web site.
 In the Admin Panel under **Content**, click **Create Page**.
 The **Create Page** settings are displayed, as shown in the following image.
 
-![](../Upload/screenshots_675/Create_Page.png)
+![](../Upload/screenshots_675/create_page.png)
 
 Using the **New Page** menu entry, you can do the following:
 
