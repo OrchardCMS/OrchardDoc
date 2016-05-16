@@ -13,6 +13,7 @@ pages:
     - Building Your First Orchard Site: Documentation/Getting-Started.markdown
     - Navigation and Menus: Documentation/Navigation-and-menus.markdown
     - Adding a Blog to Your Site: Documentation/Adding-a-Blog-to-Your-Site.markdown
+    - Adding Pages to Your Site: Documentation/Adding-Pages-to-Your-Site.markdown    
     - Adding and Managing Media Content: Documentation/Adding-and-managing-media-content.markdown
     - Managing Widgets: Documentation/Managing-widgets.markdown
     - Organizing Content Using Tags: Documentation/Organizing-content-with-tags.markdown
