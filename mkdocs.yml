@@ -49,6 +49,7 @@ pages:
     - Creating an Image Gallery: Documentation/Creating-an-image-gallery.markdown
     - Workflows: Documentation/Workflows.markdown
     - Projection: Documentation/Projection.markdown
+    - Create Custom Forms: Documentation/Creating-Custom-Forms.markdown
     - Create Dynamic Forms: Documentation/Creating-Dynamic-Forms.markdown
 - Hosting and Deploying Websites:
     - Upgrading a Site to a New Version: Documentation/Upgrading-a-site-to-a-new-version-of-Orchard.markdown
@@ -63,13 +64,16 @@ pages:
 - Extending Orchard:
     - First Steps into Orchard: Documentation/First-steps-into-Orchard.markdown
     - How Orchard Works: Documentation/How-Orchard-works.markdown
+    - Using the Localization Providers: Documentation/Using-the-localization-helpers.markdown
     - Command-Line Code Generation: Documentation/Command-line-scaffolding.markdown
+    - Writing an Orchard Module: Documentation/Walkthrough-Writing-An-Orchard-Module.markdown
     - Building a Hello World Module: Documentation/Building-a-hello-world-module.markdown
     - Creating a Module with a Simple Text Editor: Documentation/Creating-a-module-with-a-simple-text-editor.markdown
     - Writing a Content Part: Documentation/Writing-a-content-part.markdown
     - Writing a Content Field: Documentation/Creating-a-custom-field-type.markdown
     - Packaging and Sharing a Module: Documentation/Packaging-and-sharing-a-module.markdown
     - Writing a Widget: Documentation/Writing-a-widget.markdown
+    - Creating Types from code: Documentation/Creating-types-from-code.markdown
     - Creating _1-N_ and _N-N_ Relations: Documentation/Creating-1-n-and-n-n-relations.markdown
     - Manifest Files for Modules and Themes: Documentation/Manifest-files.markdown
     - Caching: Documentation/Caching.markdown
@@ -78,6 +82,7 @@ pages:
     - Assets Pipeline: Documentation/Assets-pipeline.markdown
 - Getting Started with Modules Course: 
     - Getting Started with Modules: Documentation/Getting-Started-with-Modules.markdown
+    - Setting up for a lesson: Documentation/Setting-up-for-a-lesson.markdown
     - 'Part 1: Build a Static Widget': Documentation/Getting-Started-with-Modules-Part-1.markdown
     - 'Part 2: Make the Widget Dynamic': Documentation/Getting-Started-with-Modules-Part-2.markdown
     - 'Part 3: Using the Orchard API': Documentation/Getting-Started-with-Modules-Part-3.markdown
@@ -97,8 +102,10 @@ pages:
     - UI Guidelines for Theme Authors: Documentation/UI-guidelines-for-theme-authors.markdown
     - Customizing Orchard Using Designer Helper Tools: Documentation/Customizing-Orchard-using-Designer-Helper-Tools.markdown
 - Developer Tools and Guidelines:
+    - Common Issues: Documentation/Common-Issues.markdown
     - Developer FAQ: Documentation/Developer-FAQ.markdown
     - Setting Up a Source Enlistment: Documentation/Setting-up-a-source-enlistment.markdown
+    - Building and deploying Orchard: Documentation/Building-and-deploying-Orchard-from-a-source-code-drop.markdown
     - Source Code Organization: Documentation/Source-code-organization.markdown
     - Dependencies and Libraries: Documentation/Orchard-dependencies-and-libraries.markdown
     - Code Conventions: Documentation/Code-conventions.markdown
@@ -127,11 +134,36 @@ pages:
     - Orchard 1.7: Documentation/Orchard-1-7-Release-Notes.markdown
     - Orchard 1.6: Documentation/Orchard-1-6-Release-Notes.markdown
     - Orchard 1.5: Documentation/Orchard-1-5-Release-Notes.markdown
-    - Orchard 1.4: Documentation/Orchard-1-4-Release-Notes.markdown    
+    - Orchard 1.4: Documentation/Orchard-1-4-Release-Notes.markdown  
+- Todos:
+    - Documentation plan: Documentation/Documentation-plan.markdown
+    - Suggestions for New Topics: Documentation/Suggestions-for-New-Topics.markdown
+    - Deploying Orchard from Development to Production Servers: Documentation/Deploying-to-production.markdown
+    - Configuring Orchard in Shared Hosting Environments: Documentation/Configuring-shared-hosting.markdown
+    - Adding Custom Admin Panel Pages: Documentation/Adding-custom-admin-pages.markdown
+    - UI Guidelines for Module Authors: Documentation/UI-guidelines-for-module-authors.markdown
+    - Exposing and Handling Events: Documentation/Exposing-and-handling-events.markdown
+    - Localizing Modules: Documentation/Localizing-modules.markdown
+    - Using Different View Engines in Themes: Documentation/Using-different-view-engines.markdown
+    - Adding Code to a Theme: Documentation/Adding-code-to-themes.markdown
+    - Troubleshooting Common Issues: Documentation/Troubleshooting.markdown
+    - Filing Bugs: Documentation/Filing-bugs.markdown
+    - Orchard Community Resources: Documentation/Community-resources.markdown
+    - Getting Involved in Forums: Documentation/Getting-involved-in-forums.markdown
+    - Where to put Startup Code for Module: Documentation/module-startup-code.markdown
+    - Template files: Documentation/Template-files-and-their-locations.markdown
+    - Test plan: Documentation/Testplan.markdown
+    - Test: Documentation/test.markdown
+- Patches:
+    - Security Researcher Acknowledgments: Documentation/Security-Researcher-Acknowledgments.markdown
+    - Patch 20150630: Documentation/Patch-20150630.markdown
+    - Patch 20150519: Documentation/Patch-20150519.markdown
+    - Patch 20130430: Documentation/Patch-4-30-2013.markdown  
 - Tutorial Videos: Documentation/Orchard-TV.markdown
-- User Experiences:
+- Archives:
     - Walkthroughs and UI Mockups: Documentation/Walkthroughs.markdown
-- Archived Specs:
+    - Archived Specs: Documentation/Archived-Specs.markdown
+    - Setup: Documentation/Setup.markdown
     - Blogs: Documentation/Blogs.markdown
     - Comments: Documentation/Comments.markdown
     - Content types: Documentation/Content-types.markdown
@@ -153,3 +185,14 @@ pages:
     - Widgets: Documentation/Widgets.markdown
     - XML-RPC and Live Writer: Documentation/Xml-Rpc.markdown
     - Creating lists of content items: Documentation/Creating-lists.markdown
+    - Extensibility points: Documentation/A-few-interesting-extensibility-points.markdown
+    - Add Custom Settings to your Theme: Documentation/Add-Custom-Settings-to-your-Theme.markdown
+    - Add Custom Settings pre 1.8: Documentation/Adding-Custom-Settings-pre-1.8.markdown
+    - Adding admin menu items: Documentation/Adding-admin-menu-items.markdown
+    - Automation test guidance: Documentation/Automation-test-guidance.markdown
+    - Bug bash 1-18-2010: Documentation/Bug-bash-1-18-2010.markdown
+    - Content Picker: Documentation/Content-Picker.markdown
+    - Custom permissions: Documentation/Custom-permissions.markdown
+    - Import Export: Documentation/Import-Export.markdown
+    - Installing Orchard Using Web PI: Documentation/Installing-Orchard-Using-Web-PI.markdown
+    - Orchard Markup Guidelines: Documentation/Orchard-Markup-Guidelines.markdown
