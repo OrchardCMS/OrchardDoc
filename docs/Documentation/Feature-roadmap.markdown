@@ -13,13 +13,13 @@ This release is expected for Q4 2016
 
 * Deployment feature (OneStop will integrate this feature) - On track
 * New admin theme ([Szymon](https://github.com/SzymonSel) owns this contribution) - Almost ready
-  * Customizable dashboard
-  * Accessibility
+    * Customizable dashboard
+    * Accessibility
 * Glimpse ([Chris](https://github.com/paynecrl97) owns this contribution) - Waiting for PR review
 * Improved Workflow module
-  * Error/Exception branches support
-  * Loop activities
-  * Piotr ([pszmyd](https://www.codeplex.com/site/users/view/pszmyd)) owns this contribution
+    * Error/Exception branches support
+    * Loop activities
+    * Piotr ([pszmyd](https://www.codeplex.com/site/users/view/pszmyd)) owns this contribution
 * New base theme ([Daniel](https://github.com/DanielStolt) and [Ryan](https://github.com/ryandrewburnett) own this contribution) - On track
 * Remove Cloud Services as a supported target ([Daniel](https://github.com/DanielStolt) owns this contribution) - Done
 * New front facing website - On track
@@ -27,11 +27,11 @@ This release is expected for Q4 2016
 
 ### Looking for owners
 * Owin identity providers
-  * OAuth, AAD ...
+    * OAuth, AAD ...
 * Javascript integration
-  * Rules engine
-  * Script activity
-  * Jint
+    * Rules engine
+    * Script activity
+    * Jint
 * Content tree
 * Refactor output cache module as an Owin middleware
 
