@@ -11,20 +11,21 @@ This release is expected for Q4 2016
 
 ### On-track
 
-* Deployment feature (OneStop will integrate this feature)
-* New admin theme ([Szymon](https://github.com/SzymonSel) owns this contribution) 
+* Deployment feature (OneStop will integrate this feature) - On track
+* New admin theme ([Szymon](https://github.com/SzymonSel) owns this contribution) - Almost ready
   * Customizable dashboard
   * Accessibility
-* Glimpse ([Chris](https://github.com/paynecrl97) owns this contribution) 
+* Glimpse ([Chris](https://github.com/paynecrl97) owns this contribution) - Waiting for PR review
 * Improved Workflow module
   * Error/Exception branches support
   * Loop activities
   * Piotr ([pszmyd](https://www.codeplex.com/site/users/view/pszmyd)) owns this contribution
-* New base theme ([Daniel](https://github.com/DanielStolt) and [Ryan](https://github.com/ryandrewburnett) own this contribution) 
-* Remove Cloud Services as a supported target ([Daniel](https://github.com/DanielStolt) owns this contribution)
+* New base theme ([Daniel](https://github.com/DanielStolt) and [Ryan](https://github.com/ryandrewburnett) own this contribution) - On track
+* Remove Cloud Services as a supported target ([Daniel](https://github.com/DanielStolt) owns this contribution) - Done
+* New front facing website - On track
+* REST APIs ([design notes](https://orchard.codeplex.com/discussions/560607))
 
 ### Looking for owners
-* New front facing website
 * Owin identity providers
   * OAuth, AAD ...
 * Javascript integration
@@ -32,8 +33,6 @@ This release is expected for Q4 2016
   * Script activity
   * Jint
 * Content tree
-
-* REST APIs ([design notes](https://orchard.codeplex.com/discussions/560607))
 * Refactor output cache module as an Owin middleware
 
 ### Currently Implemented (Partially or in Full)
