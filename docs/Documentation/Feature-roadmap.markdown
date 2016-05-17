@@ -118,7 +118,7 @@ This release is expected for Q4 2016
 * Improved content navigation and filtering
 * SEO - Semantic URLs, metas/keywords, Web standards, sitemap
 * Admin - UI improvements, dashboard, notifications/email
-  * Improved admin theme (Based on Bootstrap)
+    * Improved admin theme (Based on Bootstrap)
 * Profiles - User profiles, avatars, reputation system, using the dynamic forms module
 * Themes - Additional themes improvements (in-browser editing, etc)
 * Performance - Caching, optimization, script combining/minification
