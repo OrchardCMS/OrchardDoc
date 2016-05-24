@@ -110,6 +110,7 @@ pages:
     - Source Code Organization: Documentation/Source-code-organization.markdown
     - Dependencies and Libraries: Documentation/Orchard-dependencies-and-libraries.markdown
     - Code Conventions: Documentation/Code-conventions.markdown
+    - Visual Studio Extensions and Snippets: Documentation/Visual-Studio-extensions-and-snippets.markdown
     - Continuous Integration: Documentation/Continuous-integration.markdown
     - Merging Pull Requests: Documentation/Merging-Pull-Requests.markdown
 - Additional Topics:
