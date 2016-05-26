@@ -75,7 +75,7 @@ pages:
     - Packaging and Sharing a Module: Documentation/Packaging-and-sharing-a-module.markdown
     - Writing a Widget: Documentation/Writing-a-widget.markdown
     - Creating Types from code: Documentation/Creating-types-from-code.markdown
-    - Creating _1-N_ and _N-N_ Relations: Documentation/Creating-1-n-and-n-n-relations.markdown
+    - Creating 1-N and N-N Relations: Documentation/Creating-1-n-and-n-n-relations.markdown
     - Manifest Files for Modules and Themes: Documentation/Manifest-files.markdown
     - Caching: Documentation/Caching.markdown
     - Custom Site Settings: Documentation/Adding-custom-settings.markdown
