@@ -12,4 +12,4 @@ Orchard-related extensions are listed here in alphabetical order:
 
 ### Visual Studio Snippets
 
-A lot of Orchard-related snippets can be found on the Orchard Dojo. For further information visit this page: [https://orcharddojo.net/orchard-resources/Library/Utilities/VisualStudioSnippets/](https://orcharddojo.net/orchard-resources/Library/Utilities/VisualStudioSnippets/).
+A lot of Orchard-related snippets can be found in the Orchard Dojo Library. For further information visit this page: [https://orcharddojo.net/orchard-resources/Library/Utilities/VisualStudioSnippets/](https://orcharddojo.net/orchard-resources/Library/Utilities/VisualStudioSnippets/).
