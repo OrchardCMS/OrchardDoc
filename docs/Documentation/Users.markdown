@@ -101,27 +101,27 @@ Assign users to roles                      | No    | No         | Yes   | Yes   
 
 ## Blog
 
-See [Blog package](blogs).
+See [Blog package](Blogs).
 
 ## CMS Pages
 
-See [CMS scenarios](pages).
+See [CMS scenarios](Pages).
 
 ## Media
 
-See [Media management](media-management).
+See [Media management](Media-management).
 
 ## XML-RPC operations
 
-See [XML-RPC](xml-rpc).
+See [XML-RPC](Xml-Rpc).
 
 ## Tags
 
-See [Tags](tags).
+See [Tags](Tags).
 
 ## Comments
 
-See [Comments](comments).
+See [Comments](Comments).
 
 # Error messages
 
