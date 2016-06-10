@@ -1,5 +1,3 @@
-## Visual Studio Extensions and Snippets
-
 There are already a few Visual Studio extensions and snippets ready to help your everyday Orchard development work.
 
 ### Visual Studio Extensions
