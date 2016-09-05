@@ -90,7 +90,7 @@ If you are running locally and do not have a domain to map, you can edit your
 `\Windows\System32\drivers\etc\hosts` file to create a sample host.
 
 The following advice is for Windows 10, 7 or Windows Vista and was taken from
-[Orchard Issue Tracker on GitHub](https://github.com/OrchardCMS/Orchard/issues/1053)).
+[Orchard Issue Tracker on GitHub](https://github.com/OrchardCMS/Orchard/issues/1053).
 These instructions assume that you're using WebMatrix and IIS Express to work with Orchard.
 
 1. Open the `\Windows\System32\drivers\etc\` folder.  
@@ -124,14 +124,15 @@ you need to follow the steps outlined in the article
 [Handling URL Binding Failures in IIS Express](http://learn.iis.net/page.aspx/1005/handling-url-binding-failures-in-iis-express/) as follows:
 
 1. Open a command window that has administrative privileges.
-(In **All Programs** &gt; **Accessories** &gt; **Command Prompt**, right-click the program shortcut
-and then click **Run as administrator**.)  
+
+   In Windows 10: **Start Menu** &gt; **All Apps** &gt; **Windows System** &gt; **Command Prompt** &gt; Right-click the program shortcut and then click **Run as administrator**.
+   
+   In Windows 7 and Vista: **Start Menu** &gt; **All Programs** &gt; **Accessories** &gt; **Command Prompt** &gt; Right-click the program shortcut and then click **Run as administrator**.
 
 2. Run the following command:  
     `> netsh http add urlacl url=http://mydemo:28923/ user=everyone`  
 This can later be removed with the following command:  
     `> netsh http delete urlacl url=http://mydemo:28923/`
-
 
 Alternatively, you could run WebMatrix using admin privileges as follows:
 
