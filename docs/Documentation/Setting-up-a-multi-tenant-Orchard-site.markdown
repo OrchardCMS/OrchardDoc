@@ -89,7 +89,7 @@ database and the configuration from BLOB storage.
 If you are running locally and do not have a domain to map, you can edit your
 `\Windows\System32\drivers\etc\hosts` file to create a sample host.
 
-The following advice is for Windows 7 or Windows Vista and was taken from
+The following advice is for Windows 10, 7 or Windows Vista and was taken from
 [Orchard Issue Tracker on GitHub](https://github.com/OrchardCMS/Orchard/issues/1053)).
 These instructions assume that you're using WebMatrix and IIS Express to work with Orchard.
 
