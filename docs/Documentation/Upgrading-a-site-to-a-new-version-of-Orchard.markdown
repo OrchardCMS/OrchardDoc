@@ -9,7 +9,7 @@ If you made modifications to permissions on the files and folders inside your si
 
 # Upgrading a Running Instance of Orchard to a New Version
 
-The instructions in this section only apply for a standalone Orchard web site. If you are working with the full source code of Orchard, please refer to [#enlistment](Upgrading-a-site-to-a-new-version-of-Orchard#IfYouHaveaSourceCodeEnlistment).
+The instructions in this section only apply for a standalone Orchard web site. If you are working with the full source code of Orchard, please refer to the "[if you have a source code enlistment](Upgrading-a-site-to-a-new-version-of-Orchard#if-you-have-a-source-code-enlistment)" section of this page.
 
 It is highly recommended that you work on a local copy of your site throughout the update process.
 
@@ -56,6 +56,8 @@ It is possible to upgrade a site in-place, if you can't or don't want to work wi
 You are done.
 
 # Upgrading an Azure Instance of Orchard
+
+> **Note:** This Azure documentation is hugely out of date.
 
 * You should already have the full source code, with your modifications if you had any (additional modules or themes). Upgrade that by copying the source of the new version over it (overwrite whenever asked), or by doing a Git update to the desired version. If you do not already have the full source code, then that means you don't have any changes to the default distribution. In that case just get the source code for the new version. In any case, at this point you should have a local directory on your development machine that has the code for the new version, plus any themes and modules you may have added, and no data (be it media or database, as on Azure you are using blob storage for the former, and Sql Azure for the latter). All that remains to be done is to build the new package and deploy it.
 * Run clickToBuildAzurePackage.cmd. This file should be at the root of your source code folder. If it's not there (it was missing from older release files), get it and other root files from the relevant version in http://orchard.codeplex.com/SourceControl/list/changesets
