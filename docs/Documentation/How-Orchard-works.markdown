@@ -224,7 +224,7 @@ The current culture to use is determined by the culture manager. The default imp
 
 ## Logging
 
-Logging is done through a dependency of type ILogger. Different implementations can send the log entries to various storage types. Orchard comes with an implementation that uses [Castle.Core.Logging](http://docs.castleproject.org/Windsor.Logging-Facility.ashx) for logging.
+Logging is done through a dependency of type ILogger. Different implementations can send the log entries to various storage types. Orchard comes with an implementation that uses [Castle.Core.Logging](https://github.com/castleproject/Windsor/blob/master/docs/logging-facility.md) for logging.
 
 # Orchard Core
 
