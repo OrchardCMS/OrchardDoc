@@ -11,20 +11,17 @@ You can also view the attributions for our library dependencies in the CREDITS.t
 ## Akismet
 This is the default spam protection service in Orchard.
 
-## ANTLR v3
+## ANTLR
 This is a language recognition tool, which provides a framework for constructing recognizers, interpreters, compilers, and translators from grammatical descriptions containing actions in a variety of target languages.
 
 ## ASP.NET MVC 4
 ASP.NET MVC is used as the web programming model.
 
-## Autofac 2 & Autofac contrib
+## Autofac & Autofac contrib
 Dependency Injection is used heavily internally, mainly for publishing and consuming services between the Orchard.Web host and the Orchard packages. 
 
-## Castle Windsor 2.0
-Orchard uses Castle Winder 2.0 for type proxy generation and logging support.
-
-## Clay
-The Clay library offers a flexible implementation of dynamic objects that is used in UI composition.
+## Castle Windsor
+Orchard uses Castle Winder for type proxy generation and logging support.
 
 ## CodeMirror
 Client-side code colorization.
