@@ -1,5 +1,12 @@
-This section enumerates the dependencies used in the Orchard project, with a brief description of what Orchard makes use of. A copy of a dependencies is located in the "lib" directory of the source repository, along with their respective licenses.  You can also view the attributions for our library dependencies in the CREDITS.txt file at the root of the Orchard source tree.
+This section enumerates the dependencies used in the Orchard project, with a brief description of what Orchard makes use of. 
 
+Since Orchard v1.10 the preferred method of including dependencies is via NuGet. All dependencies that have NuGet packages have been migrated to use this system and they can be found in the solution-wide `.\src\packages\` directory. Remaining dependencies can be found in the `.\lib\` directory.
+
+Before v1.10 you will find all copies of the dependencies located in the `.\lib\` directory of the source repository, along with their respective licenses.
+
+You can also view the attributions for our library dependencies in the CREDITS.txt file at the root of the Orchard source tree.
+
+> **Note:** For the most up-to-date list of dependencies you should consult the source repository directly.
 
 ## Akismet
 This is the default spam protection service in Orchard.
