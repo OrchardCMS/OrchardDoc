@@ -33,7 +33,7 @@ Specifying placement using the `placement.info` file is the subject of this arti
 	</placement>
 
 <table>
-<tr><th>Scope<td colspan="2">ContentType="value" | DisplayType="value" | Path="value"
+<tr><th>Scope<td colspan="2">ContentType="value" | ContentPart="value" | DisplayType="value" | Path="value"
 <tr><th rowspan="3">Order<td colspan="2">position | suppress
 <tr><th>Position<td>zone_name[ : { int | after | before } ][ .int ][ ...n ]
 <tr><th>Suppress<td> - 
