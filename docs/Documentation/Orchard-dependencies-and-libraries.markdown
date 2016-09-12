@@ -14,14 +14,14 @@ This is the default spam protection service in Orchard.
 ## ANTLR
 This is a language recognition tool, which provides a framework for constructing recognizers, interpreters, compilers, and translators from grammatical descriptions containing actions in a variety of target languages.
 
-## ASP.NET MVC 4
+## ASP.NET MVC 5
 ASP.NET MVC is used as the web programming model.
 
 ## Autofac & Autofac contrib
 Dependency Injection is used heavily internally, mainly for publishing and consuming services between the Orchard.Web host and the Orchard packages. 
 
 ## Castle Windsor
-Orchard uses Castle Winder for type proxy generation and logging support.
+Orchard uses Castle Windsor for type proxy generation and logging support.
 
 ## CodeMirror
 Client-side code colorization.
