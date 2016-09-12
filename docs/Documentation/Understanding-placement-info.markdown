@@ -213,6 +213,7 @@ For example:
 
   * `DisplayType`
   * `ContentType`
+  * `ContentPart`
   * `Path`
 
 `Match` elements can be nested.
@@ -236,6 +237,22 @@ Scopes the contained `Place` tags to a specific content type or stereotype.
 
   * Content Type - Such as `BlogPost` or `Page`
   * Stereotype - _Added in v1.1_ - Such as `Widget`
+
+### ContentPart
+_The `ContentPart` attribute was added in v1.7.2_
+
+Scopes the contained `Place` tags to a specific content part such as `BodyPart` or `LayoutPart`. An example use of this scoping is to hide the title part in a content item with a `LayoutPart`.
+
+In placement.info :
+
+    <Match ContentPart="LayoutPart">
+        <Place Parts_Title="-" />
+    </Match>
+    <Match DisplayType="Layout">
+        <Place Parts_Title="Header:0" />
+    </Match>
+    
+The first `Match` hides the `TitlePart` for content items that contain a `LayoutPart`. The second `Match` then displays the `TitlePart` when `DisplayType` is `Layout`. The title will only be displayed if the `TitlePart` element has been placed on the canvas.
 
 ### Path
 _The `Path` attribute was added in v1.1_.
