@@ -175,7 +175,7 @@ at _views/EditorTemplates/Parts/Routable.RoutePart.cshtml_.
 
 More generally, the rules to map from a template file name to the corresponding shape name are the following:
 
-* Dot (.) and backslash (\) change to underscore (_).
+* Dot (.) and backslash (\\) change to underscore (\_).
 Note that this does not mean that an _example.cshtml_ file in a _myviews_ subdirectory of _Views_
 is equivalent to a _myviews_example.chtml_ file in _Views_.
 The shape templates must still be in the expected directory (see above).

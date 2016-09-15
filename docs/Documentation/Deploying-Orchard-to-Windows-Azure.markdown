@@ -2,6 +2,8 @@ Orchard can be deployed to both Windows Azure Cloud Services and Windows Azure W
 
 > NOTE: The Windows Azure deployment process in Orchard has undergone a complete overhaul for version 1.7.1. For more information about what's changed see the [What's new for Windows Azure in Orchard 1.7.1](Whats-new-for-Windows-Azure-in-Orchard-1-7-1) topic.
 
+> NOTE: The ``Orchard.Azure`` solution for Orchard is not being supported any more in 1.10.1, and will be removed in 1.11. See [Cloud Service Support 1.10.x #6972](https://github.com/OrchardCMS/Orchard/issues/6972). It is recommended to deploy as an [App Service](https://azure.microsoft.com/en-us/documentation/articles/choose-web-site-cloud-service-vm/) on Azure instead.
+
 # Prerequisites
 
 Before you can deploy Orchard to Windows Azure you need the following:
