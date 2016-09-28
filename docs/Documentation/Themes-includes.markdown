@@ -33,11 +33,11 @@ The override feature can also simplify upgrading the application to a newer vers
 > **Issue**: In cases where the page is output-cached, adding or removing a file in the theme might not have immediate effect as the cached page is still pointing at the previously resolved resource. This could be fixed by "touching" the page or by doing more elaborate management of cache dependencies.
 ## Display template overrides
 
-Display and editor templates are typically defined in a module under `~/Packages/\[PackageName\]/Views/DisplayTemplates/\[items|parts\]/\[PackageName\]\.\[ItemOrPartName\]\.ascx`.
+Display and editor templates are typically defined in a module under `~/Packages/[PackageName]/Views/DisplayTemplates/[items|parts]/[PackageName].[ItemOrPartName].ascx`.
 
 Overriding such a specialized display template is possible and sometimes useful, but it is discouraged, because the theme author can't possibly handle all existing modules. Whenever possible, the markup in the module view should be generic enough to be efficiently styled through CSS.
 
-For those cases where the theme author or the person who customizes the application needs to override one of the display templates from a core or extension module, he should do so in the current theme under `~/Themes/\[ThemeName\]/Views/DisplayTemplates/\[items|parts\]/\[PackageName\]\.\[ItemOrPartName\]\.ascx`. Notice that the only change in the path was to replace `~/Packages/\[PackageName\]` with `~/Themes/\[ThemeName\]`.
+For those cases where the theme author or the person who customizes the application needs to override one of the display templates from a core or extension module, he should do so in the current theme under `~/Themes/[ThemeName]/Views/DisplayTemplates/[items|parts]/[PackageName].[ItemOrPartName].ascx`. Notice that the only change in the path was to replace `~/Packages/[PackageName]` with `~/Themes/[ThemeName]`.
 
 ## Widget Overrides
 
