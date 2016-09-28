@@ -4,9 +4,9 @@ The definition for content types, as well as the content itself, can be exported
 
 The Import/Export module ships with Orchard but it is not enabled by default.  So, the first thing to do is enable the module. Once enabled, a new menu item will appear in the admin section.
 
-![Enable the Import/Export module](../Attachments/Import-Export/Import-Export-enabled.png "Enable the Import/Export Module")
+![Enable the Import/Export module](../Attachments/Import-Export/import-export-enabled.png "Enable the Import/Export Module")
 
-![Import/Export menu](../Attachments/Import-Export/Import-Export-menu.png "Import/Export menu")
+![Import/Export menu](../Attachments/Import-Export/Import-Export-Menu.png "Import/Export menu")
 
 ## Export ##
 
