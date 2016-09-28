@@ -1,3 +1,4 @@
+> **ARCHIVED**
 
 Orchard will provide an easy way for content type authors to expose new feeds and advertise them from a view.
 

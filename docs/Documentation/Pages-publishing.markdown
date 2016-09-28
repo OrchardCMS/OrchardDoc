@@ -1,3 +1,4 @@
+> **ARCHIVED**
 
 ## Published version
 A page can be published (publicly accessible) or not. When a page is first created, for example, it is not yet published.

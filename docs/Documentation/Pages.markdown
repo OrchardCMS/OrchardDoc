@@ -1,3 +1,4 @@
+> **ARCHIVED**
 ####  I can create an empty CMS page and give it a slug from the admin interface. I can then navigate to that page 
 
 The CMS module contributes a "Pages / Add new page" entry to the admin menu. As part of its initialization, each module will register its admin menu entries as a list of paths and associated action names.

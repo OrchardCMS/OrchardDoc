@@ -1,3 +1,4 @@
+> **ARCHIVED**
 When building themes in Orchard, it is often desirable to make certain aspects of the theme available to the administrator to customize. 
 This article describes how to add several simple theme settings to the Site Settings menu in the Orchard dashboard. 
 

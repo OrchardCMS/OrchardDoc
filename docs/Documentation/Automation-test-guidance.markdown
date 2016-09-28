@@ -1,3 +1,4 @@
+> **ARCHIVED**
 We apply selenium for UI automation test; please download selenium IDE and selenium RC from its official website. Please read the selenium document in the web site to learn its usage.
 
 # Export test case to VSTT

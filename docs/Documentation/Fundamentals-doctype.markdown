@@ -1,3 +1,4 @@
+> **ARCHIVED**
 The choice of a doctype is such a choice that we have to make for our own default themes.
 This page presents the main points and results of our debate about the choice of a doctype.
 

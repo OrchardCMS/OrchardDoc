@@ -1,3 +1,4 @@
+> **ARCHIVED**
 
 There are a few ways to install the latest Orchard release:
 
