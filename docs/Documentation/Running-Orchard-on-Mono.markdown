@@ -70,7 +70,7 @@ At this point you must make sure the new <b>orchard</b> user has access rights t
     host    all             all             127.0.0.1/32            md5
 
 
-It is <b>extremely</b> important that the last item in the line above is <b>not</b> <tt>indent</tt> - it should be <tt>md5</tt>, <tt>password</tt> or <tt>trust</tt> (for other authentication methods please refer to the PostgreSQL documentation). After the line is in the file, restart PostgreSQL and you're ready to use the new database from Orchard.
+It is <b>extremely</b> important that the last item in the line above is <b>not</b> <tt>ident</tt> - it should be <tt>md5</tt>, <tt>password</tt> or <tt>trust</tt> (for other authentication methods please refer to the PostgreSQL documentation). After the line is in the file, restart PostgreSQL and you're ready to use the new database from Orchard.
 
 #  Configuring with Apache 2 and mod_mono 
 
