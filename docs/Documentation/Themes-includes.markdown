@@ -1,4 +1,5 @@
 > **ARCHIVED**
+
 This design proposal outlines enhancements to the Themes feature to support the following:
 
 1. The ability for the application to function independently of the Themes feature, by having default Views, Content, Scripts, Packages and Widgets folders
