@@ -1,3 +1,4 @@
+> **ARCHIVED**
 
 Widgets are fragments of UI that surface specific data or features. Examples of widgets include navigation menus, image galleries, ads,  videos, tag clouds.
 
