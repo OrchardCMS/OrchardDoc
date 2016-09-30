@@ -54,7 +54,7 @@ Orchard 1.10 includes all the changes from version 1.9.3 <http://docs.orchardpro
 
 #### Features
 * Default values for content fields
-* Configurable locations for Modules and Themes ([see this documentation page on how to configure them](http://docs.orchardproject.net/Documentation/Orchard-module-loader-and-dynamic-compilation#CustomFolders))
+* Configurable locations for Modules and Themes ([see this documentation page on how to configure them](http://docs.orchardproject.net/en/latest/Documentation/Orchard-module-loader-and-dynamic-compilation/#custom-folders))
 * Parameterized snippets
 * Orchard.Resources now contains common assets to be reused across core modules
 * Layer rules have been moved to Orchard.Conditions for reusability
@@ -90,20 +90,23 @@ Please follow the upgrade instruction from this document: <http://docs.orchardpr
 #### Disabled modules
 
 Some modules are not loaded automatically and need to be enabled manually if you are using them:
-- Orchard.Workflows.Timer
-- Orchard.Email.Workflow
-- Orchard.Users.Workflows
-- Orchard.Roles.Workflows
+
+ - Orchard.Workflows.Timer
+ - Orchard.Email.Workflow
+ - Orchard.Users.Workflows
+ - Orchard.Roles.Workflows
 
 #### Themes & Layouts
 
 If you are using the Orchard.Layouts module you might need to integrate a custom css file to support the grid system.
 Layouts is using some default classes like `span-4`, which was added automatically by the module but could conflict with the ones in other grid frameworks.
+
 It's no more added by default. TheThemeMachine is importing it by itself. Most Bootstrap theme should already override the Layout's tagging to incorporate its custom classes.
+
 If this file is necessary for your theme you will need to add it back to it:
 `https://github.com/OrchardCMS/Orchard/blob/dev/src/Orchard.Web/Modules/Orchard.Layouts/Styles/default-grid.css`
 
-#### Deprected modules
+#### Deprecated modules
 
 If your modules were using files or resources from Orchard.jQuery you will need to point to the ones defined in Orchard.Resources.
 
@@ -149,6 +152,7 @@ There are two new features in the Dynamic Forms module, Dynamic Forms Validation
 #### .NET 4.5.2 breaks module compilation 
 
 Because the Orchard.Framework project now targets .NET 4.5.2, all modules that are downloaded from the gallery during development will need to be retargetd to .NET 4.5.2 too.
+
 Not doing this will prevent the module from compiling and appearing in the modules list.
 
 Contributors
