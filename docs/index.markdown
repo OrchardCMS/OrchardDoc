@@ -1,4 +1,4 @@
-> **Note:** This documentation site, like all of Orchard, is a [community effort](/Contributors). If you would like to contribute, please see [Documentation Style Guidelines](Documentation/Documentation-style-guidelines)
+> **Note:** This documentation site, like all of Orchard, is a [community effort](/Contributors). If you would like to contribute, please see [Documentation Style Guidelines](Documentation/Documentation-Style-Guidelines)
 and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
 
 ## Getting Started ##
