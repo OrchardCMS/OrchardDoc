@@ -235,7 +235,7 @@ Both of these templates will be rendered as parts of a larger, composite page. B
     </Placement>
 
 
-This is saying that the Parts_Map shape (which is rendered by Views/Parts/Maps.cshtml unless overridden in the current theme) should render in the "Content" zone if available, in tenth position. It also positions the editor shape/template in the "Primary" zone in second position.
+This is saying that the Parts_Map shape (which is rendered by Views/Parts/Map.cshtml unless overridden in the current theme) should render in the "Content" zone if available, in tenth position. It also positions the editor shape/template in the "Primary" zone in second position.
 
 To activate the Map part, go to the "Features" section of the Orchard admin panel and enable it.
 
