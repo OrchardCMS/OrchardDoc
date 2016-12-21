@@ -30,8 +30,6 @@ At this point we have all the pieces we need to create out new widget in the rig
 
  Select **Widgets** in the left menu of the admin and find the appropriate *Add* button for the AsideSecond zone and add a Form Widget.
 
-![Add Widget to AsideSecond](../Upload/dynamic-forms/subscribe-form.png "Add new Widget to AsideSecond zone")
-
 The only thing left to do is to adjust the settings on our new *Form Widget*.  In this example, the [layer](Managing-widgets#AddingaLayer) is set to 'Default' and the position is set to '1'.  This will render the widget on the top of the right rail (AsideSecond zone) for all pages.  In the Layout section of the form you need to add your form fields and bind it to your content type.  In the layout section, see highlighted below, edit the form by dragging an *Email Field* field from the **Layout** items on the right side of the screen.
 
 ![Forms Widget Layout](../Upload/dynamic-forms/dynamic-forms-edit-layout.png "Forms Widget Layout")
