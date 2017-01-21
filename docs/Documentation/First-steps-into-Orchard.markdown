@@ -4,7 +4,7 @@ The goal of this article is to ease you into Orchard. There are so many concepts
 
 When you finish reading this, you should have a good enough understanding to start playing with Orchard (as a designer/developer) without getting confused by its high level architecture and its terminology. When introduced, each new term is put in bold so that you make sure to understand it before moving forward.
 
-This article also contains a lot of links to other pages with more specific explanation; so you can use it as a starting point. To answer some general questions about what Orchard is and where it comes from, read the [Frequently Asked Questions](frequently-asked-questions). For a more technical presentation, read [How Orchard works](How-Orchard-works).
+This article also contains a lot of links to other pages with more specific explanation; so you can use it as a starting point. To answer some general questions about what Orchard is and where it comes from, read the [Frequently Asked Questions](Frequently-asked-questions). For a more technical presentation, read [How Orchard works](How-Orchard-works).
 
 
 ## Looking at Orchard as...
@@ -99,7 +99,7 @@ In order to fill your website, Orchard allows you to edit and display content. I
 
 Note that a content type can only have one of each kind of content parts. But it can have many fields of the same kind. The reason is in the semantic meaning of these concepts. For example, a blog post can only have one commenting aspect and it can have many dates (creation date, last update date, etc.).
 
-Since Orchard is an [open source project](frequently-asked-questions), feel free to [contribute](Contributing-patches) any feature/module you would like.
+Since Orchard is an [open source project](Frequently-asked-questions), feel free to [contribute](Contributing-patches) any feature/module you would like.
 
 ## Conclusion
 We are going to stop here. At this point, you should have a good understanding of what is Orchard. The next step is to get into a bit more details about modules, themes and the [low-level architecture of Orchard](How-Orchard-works). This would be useful when you start learning [how to extend Orchard](Getting-Started-with-Modules).
