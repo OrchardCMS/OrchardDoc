@@ -226,7 +226,7 @@ Views/Parts/Map.cshtml :
          &sensor=false" />
 
 
-Both of these templates will be rendered as parts of a larger, composite page. Because the system needs to know the order and location where they will render within the composed page, we need to add a placement.info file into the root of the module's directory:
+Both of these templates will be rendered as parts of a larger, composite page. Because the system needs to know the order and location where they will render within the composed page, we need to add a Placement.info file into the root of the module's directory:
 
     
     <Placement>
