@@ -1,4 +1,6 @@
-Orchard includes a processing pipeline for client-side assets (typically scripts and stylesheets) used to perform tasks such as transpilation, minification and bundling of client-side assets in both built-in and third-party extensions modules and themes). As an extension developer, can enable this pipeline by placing an *asset manifest file* named `Assets.json` in the root of your extension. This asset manifest file declares one or more *asset groups* to be processed by the pipeline. Each asset group specifies a set of input files in your extension (such as `.less`, `.scss`, `.css`, `.ts` or `.js` files) along with an output path and (optionally) one or more options to influence the processing.
+Orchard includes a processing pipeline for client-side assets (typically scripts and stylesheets) used to perform development workflow tasks such as transpilation, minification and bundling of client-side assets in both built-in and third-party extensions (i.e. modules and themes).
+
+As an extension developer, can enable this pipeline by placing an *asset manifest file* named `Assets.json` in the root of your extension. This asset manifest file declares one or more *asset groups* to be processed by the pipeline. Each asset group specifies a set of input files in your extension (such as `.less`, `.scss`, `.css`, `.ts` or `.js` files) along with an output path and (optionally) one or more options to influence the processing.
 
 ## Overview
 
