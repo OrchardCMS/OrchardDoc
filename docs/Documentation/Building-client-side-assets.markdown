@@ -1,41 +1,56 @@
-Orchard includes an assets pipeline which builds the scripts and styles for each module. You can opt-in to it by using a manifest file called `Assets.json` which lives in the root folder of each module. This manifest file lists groups of assets such as `.css`, `.js`, `.less` and `.ts`. Each asset group within the manifest file will output a single compiled file. The assets pipeline can be used with modules and themes.
+Orchard includes a processing pipeline for client-side assets (typically scripts and stylesheets) used to perform tasks such as transpilation, minification and bundling of client-side assets in both built-in and third-party extensions modules and themes). As an extension developer, can enable this pipeline by placing an *asset manifest file* named `Assets.json` in the root of your extension. This asset manifest file declares one or more *asset groups* to be processed by the pipeline. Each asset group specifies a set of input files in your extension (such as `.less`, `.scss`, `.css`, `.ts` or `.js` files) along with an output path and (optionally) one or more options to influence the processing.
 
 ## Overview
 
-The pipeline is powered by [Gulp](http://gulpjs.com/), a popular open source build system. Each module and theme within Orchard supports an asset manifest file. This is a JSON format file which lists the resources that should be compiled.
- 
-When the pipeline is run, gulp reads a solution-wide JavaScript file which then parses all of the asset manifests and compiles the resources listed within them.
+The client-side asset pipeline is powered by [Gulp](http://gulpjs.com), a popular open-source task runner based on [Node.js](https://nodejs.org) that can be used to automate a wide variety of tasks in a development workflow. The pipeline defines a set of *tasks* that can be executed by Gulp using either the command line or using the **Task Runner Explorer** in Visual Studio 2015 or later.
 
-To save build time the assets pipeline is disabled by default. Modules and themes that use the assets pipeline are distributed with assets already compiled and minified. This means you don't need to run the assets pipeline to use modules or themes, unless you want to make changes to their input files.
+Physically, the client-side asset pipeline consists of two files in the Orchard solution folder:
 
-The assets pipeline works the same way with themes as it does with modules. The terms `modules` and `themes` are used interchangeably in this guide.
+- `src/Package.json` contains information about the Node packages required by the pipeline. This file tell the Node package manager (NPM) which packages it needs to download and install for the pipeline to function.
+- `src/Gulpfile.js` contains the JavaScript code that defines a set of Gulp tasks and their implementation logic.
 
-## Pre-processing your assets with Gulp
-
-In the Visual Studio Solution Explorer you will find a folder called Solution Items. Inside there is a folder with two files, `Gulpfile.js` and `Package.json`:
+In Visual Studio you will find these files in **Solution Explorer** in a solution folder named `Solution Items/Gulp`:
 
 ![](../Attachments/assets-pipeline/solution-items.png)
 
+When the pipeline is run, gulp reads a solution-wide JavaScript file which then parses all of the asset manifests and compiles the resources listed within them.
+
+The client-side asset pipeline is not configured to be invoked automatically when opening or building Orchard. To minimize build time and make it as easy as possible to get started with Orchard, all built-in modules and themes in Orchard are kept in version control with their processed output files included. This means you don't have to activate and run the client-side asset pipeline to build or run Orchard; you only need to run the client-side asset pipeline if you make changes to these assets.
+
+## Getting started
+
+The client-side asset pipeline requires Node.js to be installed. If you are using Visual Studio 2015 or later, Node.js is typically already installed as part of Visual Studio. If you are not using Visual Studio or chose to exclude Node.js when installing Visual Studio, you will need to install Node.js manually from [](https://nodejs.org).
+
+Next you will need to use NPM to install all the packages the client-side asset pipeline needs, including Gulp itself. Using the command line, navigate to the Orchard solution folder and execute the command `npm install`, which will install all dependencies referenced in the `Package.json`file. In Visual Studio 2015 or later, you can instead simply open the `Package.json` file and save it without making any changes - this will trigger an automatic `npm install` behind the scenes.
+
+
+
+## Pre-processing your assets with Gulp
+
+
+
 The `Gulpfile.js` is the JavaScript code that is executed during the build. It will scan all the modules folders for `Assets.json` manifests and process them. The assets manifest is a simple JSON format file which groups together files by inputs and outputs. This is what the Orchard.DynamicForms Asset.json looks like:
 
-    [
-        {
-            "inputs": [
-                "Assets/JavaScript/Lib/jquery.validate.js",
-                "Assets/JavaScript/Lib/jquery.validate.unobtrusive.js",
-                "Assets/JavaScript/Lib/jquery.validate.unobtrusive.additional.js"
-            ],
-            "output": "Scripts/Lib.js"
-        },
-        {
-            "inputs": [ "Assets/JavaScript/LayoutEditor/**/*.js" ],
-            "output": "Scripts/LayoutEditor.js"
-        },
-        {
-            "inputs": [ "Assets/CSS/*.css" ],
-            "output": "Styles/@.css"
-        }
-    ]
+```json
+[
+    {
+        "inputs": [
+            "Assets/JavaScript/Lib/jquery.validate.js",
+            "Assets/JavaScript/Lib/jquery.validate.unobtrusive.js",
+            "Assets/JavaScript/Lib/jquery.validate.unobtrusive.additional.js"
+        ],
+        "output": "Scripts/Lib.js"
+    },
+    {
+        "inputs": [ "Assets/JavaScript/LayoutEditor/**/*.js" ],
+        "output": "Scripts/LayoutEditor.js"
+    },
+    {
+        "inputs": [ "Assets/CSS/*.css" ],
+        "output": "Styles/@.css"
+    }
+]
+```
 
 The file format is described in detail in the Assets.json section below.
 
@@ -98,6 +113,7 @@ The tasks and bindings are explained in more detail in the `Task Runner Explorer
 Then each time you build Orchard (for example, by pressing `F5`) the assets pipeline will be executed at the start of the build process. Any input files that have changed since the last build will be rebuilt.
 
 ## Assets.json file format
+
 The `Assets.json` file is simple json manifest file which lists the input assets, what single file they should be combined into for output and other configuration options.
 
 Each output file is grouped into its own configuration section.
@@ -404,7 +420,7 @@ By default it only checks for `Assets.json` files in folders under these locatio
 
 To add your custom locations just follow these steps:
 
-  1. In `Solution Explorer`, expand the `Solution Items` folder, then `Gulp`  and open whatever you called your new copy of `Gulpfile.js`
+  1. In `Solution Explorer`, expand the `Solution Items` folder, then `Gulp` and open whatever you called your new copy of `Gulpfile.js`
    
   2. Find the `getAssetGroups()` function (it should be around line 73)
   
