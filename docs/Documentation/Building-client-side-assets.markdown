@@ -13,15 +13,51 @@ In Visual Studio you will find these files in **Solution Explorer** in a solutio
 
 ![](../Attachments/assets-pipeline/solution-items.png)
 
-When the pipeline is run, gulp reads a solution-wide JavaScript file which then parses all of the asset manifests and compiles the resources listed within them.
-
-The client-side asset pipeline is not configured to be invoked automatically when opening or building Orchard. To minimize build time and make it as easy as possible to get started with Orchard, all built-in modules and themes in Orchard are kept in version control with their processed output files included. This means you don't have to activate and run the client-side asset pipeline to build or run Orchard; you only need to run the client-side asset pipeline if you make changes to these assets.
+The client-side asset pipeline is not configured by default to be invoked automatically when opening or building Orchard. To minimize build time and make it as easy as possible to get started with Orchard, all built-in modules and themes in Orchard are kept in version control with their processed output files included. This means you don't have to activate and run the client-side asset pipeline to build or run Orchard. You only need to run the client-side asset pipeline if you make changes to these assets or wish to process assets in your own extensions.
 
 ## Getting started
 
-The client-side asset pipeline requires Node.js to be installed. If you are using Visual Studio 2015 or later, Node.js is typically already installed as part of Visual Studio. If you are not using Visual Studio or chose to exclude Node.js when installing Visual Studio, you will need to install Node.js manually from [](https://nodejs.org).
+### Installing prerequisites
+
+The client-side asset pipeline requires Node.js to be installed. If you are using Visual Studio 2015 or later, Node.js is typically already installed as part of Visual Studio. If you are not using Visual Studio or chose to exclude Node.js when installing Visual Studio, you will need to install Node.js manually from https://nodejs.org.
 
 Next you will need to use NPM to install all the packages the client-side asset pipeline needs, including Gulp itself. Using the command line, navigate to the Orchard solution folder and execute the command `npm install`, which will install all dependencies referenced in the `Package.json`file. In Visual Studio 2015 or later, you can instead simply open the `Package.json` file and save it without making any changes - this will trigger an automatic `npm install` behind the scenes.
+
+### Executing tasks (command line)
+
+### Executing tasks (Visual Studio)
+
+### Binding tasks to Visual Studio events
+
+## Using the pipeline for your own module or theme
+
+Adding an asset manifest.
+
+### Basic example (single input file)
+
+### Multiple input files
+
+### Globs (wildcards)
+
+### Separate output files for each input file
+
+### Multiple asset groups
+
+### Supported tasks and file formats
+
+### Supported options
+
+## Advanced scenarios
+
+### Excluding output files from source control
+
+### Including custom extension folders
+
+
+
+
+
+
 
 
 
@@ -343,12 +379,6 @@ Don't do this. If you do this then your partials will only be rebuilt when the `
             "output": "Styles/Styles.css"
         }
     ]
-
-## Task Runner Explorer
-The Task Runner Explorer is a new tool included in Visual Studio 2015 which will read various task running formats such as gulp and grunt. The tasks can be bound to run at key stages of the development process such as at project open, build, clean or continuously watching for changes.
-
-### Separate package in Visual Studio 2013
-If you're using Visual Studio 2013 then you can [download the Task Runner Explorer](https://visualstudiogallery.msdn.microsoft.com/8e1b4368-4afb-467a-bc13-9650572db708) as a Visual Studio extension.
 
 ### How to open the pane
 
