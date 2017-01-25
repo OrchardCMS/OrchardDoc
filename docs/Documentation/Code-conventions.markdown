@@ -4,6 +4,10 @@
 * [Camel case](http://en.wikipedia.org/wiki/CamelCase) is a casing convention where the first letter is lower-case, words are not separated by any character but have their first letter capitalized. Example: thisIsCamelCased.
 * [Pascal case](http://c2.com/cgi/wiki?PascalCase) is a casing convention where the first letter of each word is capitalized, and no separating character is included between words. Example: ThisIsPascalCased.
 
+## Solution conventions
+
+* For the extensions to be able to properly load when running the application by hitting `Ctrl+F5` in Visual Studio (without building the full solution), each extension's project needs to be a project dependency of `Orchard.Web` (right-click on `Orchard.Web` -> "Build Dependencies" -> "Project Dependencies"); otherwise NuGet packages for the extension's project won't be restored. Please note that this is not the same as a project reference (but adding a project reference adds a project dependency too) and this information is stored in the solution file, not the project file.
+
 ## C# Coding Conventions
 
 We are using the C# coding conventions described in this document: [C# Coding Guidelines](http://blogs.msdn.com/brada/articles/361363.aspx) with the following exceptions:
