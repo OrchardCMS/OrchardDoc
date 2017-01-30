@@ -96,7 +96,7 @@ To add an asset manifest, add a new JSON file named `Assets.json` to the root fo
 
 The basic structure of the asset manifest looks like this:
 
-```json
+```js
 [
     {
         // First asset group
@@ -121,7 +121,7 @@ Using the asset pipeline is completely optional. If you don't add an `Asset.json
 
 The following example takes the LESS stylesheet `Assets/Styles.less` in your extension and transpiles it into the output file `Styles/Styles.css`:
 
-```json
+```js
 [
     {
         "inputs": [
@@ -154,7 +154,7 @@ Note: The generated output asset files will not be automatically added to your e
 
 You can also specify multiple inputs in the same asset group:
 
-```json
+```js
 [
     {
         "inputs": [
@@ -175,7 +175,7 @@ The client-side asset pipeline also supports using [glob wildcard patterns](http
 
 The following example processes all files with a `.js` extension in the `Assets` folder and all its subfolders, and bundles them into a single `Scripts/Scripts.js` output file:
 
-```json
+```js
 [
     {
         "inputs": [
@@ -192,7 +192,7 @@ In many cases you will want to process many input files in the exact same way bu
 
 The pipeline makes this easier by allowing you to use the `@` characted instead of a file name the output file path of your asset group. The `@` character disables the bundling step and basically translates to "the same filename as whatever input asset file is currently being processed". When combined with glob wildcards this can make it a lot easier to manage your assets:
 
-```json
+```js
 [
     {
         "inputs": [
@@ -209,7 +209,7 @@ In this example, all TypeScript files in the `Assets/Moment/Localizations` are p
 
 You can define multiple asset groups in the same asset manifest, as in the following example:
 
-```json
+```js
 [
     { // First asset group
         "inputs": [
@@ -250,7 +250,7 @@ Let's say you have a main SCSS stylesheet that looks something like this:
 
 In these cases you can use the `watch` property in an asset group to specify an additional set of files to monitor for changes:
 
-```json
+```js
 [
     {
         "inputs": [
@@ -340,7 +340,7 @@ By default, when using a glob to specify input assets and using the `@` characte
 
 Given the following asset group definition:
 
-```json
+```js
 [
     {
         "inputs": [ "Assets/**/*.less" ],
@@ -379,7 +379,7 @@ In some cases, such as when using a runtime module loader, it can be useful to p
 
 Any options you wish to pass through to the TypeScript transpiler (only applicable for script asset groups). The following default values are specified by the asset pipeline unless overridden in this property:
 
-```json
+```js
 {
     allowJs: true,
     noImplicitAny: true,
