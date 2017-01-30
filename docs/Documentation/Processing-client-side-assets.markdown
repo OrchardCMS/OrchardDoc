@@ -344,7 +344,7 @@ Given the following asset group definition:
 [
     {
         "inputs": [ "Assets/**/*.less" ],
-        "output": "Styles/@.css
+        "output": "Styles/@.css"
     }
 ]
 ```
