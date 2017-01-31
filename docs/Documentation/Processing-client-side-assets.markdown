@@ -1,4 +1,4 @@
-Orchard includes a processing pipeline for client-side assets (typically scripts and stylesheets) which is used to perform front-end development workflow tasks such as transpilation, minification and bundling of client-side assets in both in core projects and extensions (i.e. modules and themes). Many of the built-in modules and themes in Orchard use this pipeline to process client-side assets, and you can enable your own extensions to use it as well.
+Orchard includes a processing pipeline for client-side assets (typically scripts and stylesheets) which is used to perform front-end development workflow tasks such as transpilation, minification and bundling of client-side assets in both core projects and extensions (i.e. modules and themes). Many of the built-in modules and themes in Orchard use this pipeline to process client-side assets, and you can enable your own extensions to use it as well.
 
 ## Overview
 
