@@ -77,10 +77,10 @@ pages:
     - Creating Types from code: Documentation/Creating-types-from-code.markdown
     - Creating 1-N and N-N Relations: Documentation/Creating-1-n-and-n-n-relations.markdown
     - Manifest Files for Modules and Themes: Documentation/Manifest-files.markdown
+    - Processing Client-Side Assets: Documentation/Processing-client-side-assets.markdown
     - Caching: Documentation/Caching.markdown
     - Custom Site Settings: Documentation/Adding-custom-settings.markdown
     - Web Api in Orchard: Documentation/WebApi-In-Orchard.markdown
-    - Assets Pipeline: Documentation/Assets-pipeline.markdown
 - Getting Started with Modules Course: 
     - Getting Started with Modules: Documentation/Getting-Started-with-Modules.markdown
     - Setting up for a lesson: Documentation/Setting-up-for-a-lesson.markdown
@@ -98,8 +98,8 @@ pages:
     - Accessing and Rendering Shapes: Documentation/Accessing-and-rendering-shapes.markdown
     - Alternates: Documentation/Alternates.markdown
     - Template File Syntax Guide: Documentation/Template-file-syntax-guide.markdown
+    - Processing Client-Side Assets: Documentation/Processing-client-side-assets.markdown
     - Packaging and Sharing Themes: Documentation/Packaging-and-sharing-themes.markdown
-    - Assets Pipeline: Documentation/Assets-pipeline.markdown
     - UI Guidelines for Theme Authors: Documentation/UI-guidelines-for-theme-authors.markdown
     - Customizing Orchard Using Designer Helper Tools: Documentation/Customizing-Orchard-using-Designer-Helper-Tools.markdown
 - Developer Tools and Guidelines:
