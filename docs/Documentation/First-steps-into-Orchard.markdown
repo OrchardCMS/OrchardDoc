@@ -4,7 +4,7 @@ The goal of this article is to ease you into Orchard. There are so many concepts
 
 When you finish reading this, you should have a good enough understanding to start playing with Orchard (as a designer/developer) without getting confused by its high level architecture and its terminology. When introduced, each new term is put in bold so that you make sure to understand it before moving forward.
 
-This article also contains a lot of links to other pages with more specific explanation; so you can use it as a starting point. To answer some general questions about what Orchard is and where it comes from, read the [Frequently Asked Questions](frequently-asked-questions). For a more technical presentation, read [How Orchard works](How-Orchard-works).
+This article also contains a lot of links to other pages with more specific explanation; so you can use it as a starting point. To answer some general questions about what Orchard is and where it comes from, read the [Frequently Asked Questions](Frequently-asked-questions). For a more technical presentation, read [How Orchard works](How-Orchard-works).
 
 
 ## Looking at Orchard as...
@@ -95,11 +95,10 @@ In order to fill your website, Orchard allows you to edit and display content. I
 
 * **[Content Field](Creating-a-custom-field-type)**: In the same spirit of reusability, we can have smaller types that must behave in a certain way. Eg: Most content types will need Date, phone number, email address, etc. They aren't simple properties since we can attach some behavior (like validation rules) but they aren't content parts either (too "small").
 * **Record**: In order to be able to save a content type/part (in a SQL database), it needs to be "linked" to a record. It is a class with all the properties that should be saved. Eg: A Map part must save its coordinates (Latitude &amp; Longitude), so it will be linked to a record with these two properties; and Orchard will do the rest to load/save it. You will not have to deal with records unless you [develop your own module](Getting-Started-with-Modules). But it is useful to understand this concept in case you encounter it.
-* **Record**: In order to be able to save a content type/part (in a database), it needs to be "linked" to a record. It is a class with all the properties that should be saved. Eg: A Map part must save its coordinates (Latitude &amp; Longitude), so it will be linked to a record with these two properties; and Orchard will do the rest to load/save it. You will not have to deal with records unless you [develop your own module](Building-a-hello-world-module). But it is useful to understand this concept in case you encounter it.
 
 Note that a content type can only have one of each kind of content parts. But it can have many fields of the same kind. The reason is in the semantic meaning of these concepts. For example, a blog post can only have one commenting aspect and it can have many dates (creation date, last update date, etc.).
 
-Since Orchard is an [open source project](frequently-asked-questions), feel free to [contribute](Contributing-patches) any feature/module you would like.
+Since Orchard is an [open source project](Frequently-asked-questions), feel free to [contribute](Contributing-patches) any feature/module you would like.
 
 ## Conclusion
 We are going to stop here. At this point, you should have a good understanding of what is Orchard. The next step is to get into a bit more details about modules, themes and the [low-level architecture of Orchard](How-Orchard-works). This would be useful when you start learning [how to extend Orchard](Getting-Started-with-Modules).

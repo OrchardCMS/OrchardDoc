@@ -1,3 +1,4 @@
+> **ARCHIVED**
 
 ## Supported Browsers
 

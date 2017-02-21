@@ -110,6 +110,14 @@ Once deployment has successfully completed, browse to the newly deployed Orchard
 
 Congratulations! Orchard is now fully configured for a single instance Windows Azure Web Site.
 
+# Deploying Orchard using Kudu
+
+You can optionally configure Windows Azure App Services to use the Kudu service to deploy automatically from your SCM (git, ...).
+
+When doing so you might want to configure the Kudu service to allow longer times for compilation, or your build could go in timeout and get cancelled. Use the `WEBSITE_SCM_IDLE_TIMEOUT_IN_MINUTES = <value>` property as explained on this page:
+https://github.com/projectkudu/kudu/wiki/Investigating-issues#deployment-process-got-terminated-due-to-idle-timeout
+
+
 ## Using multiple instances
 
 As with cloud services, you need to do a little more configuration if you plan to scale out your web site to more than one instance.

@@ -1,3 +1,4 @@
+> **ARCHIVED**
 
 
 * Archive data is not displayed in all themes (e.g. classic theme, green theme)

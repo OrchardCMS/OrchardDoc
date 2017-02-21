@@ -1,4 +1,6 @@
-**Note**: this is an archived design proposal. Its current status is: UNKNOWN
+> **ARCHIVED**
+
+This design proposal outlines enhancements to the Themes feature to support the following:
 
 This design proposal outlines enhancements to the _Themes_ feature to support the following:
 

@@ -4,10 +4,15 @@
 * [Camel case](http://en.wikipedia.org/wiki/CamelCase) is a casing convention where the first letter is lower-case, words are not separated by any character but have their first letter capitalized. Example: thisIsCamelCased.
 * [Pascal case](http://c2.com/cgi/wiki?PascalCase) is a casing convention where the first letter of each word is capitalized, and no separating character is included between words. Example: ThisIsPascalCased.
 
+## Solution conventions
+
+* For the extensions to be able to properly load when running the application by hitting `Ctrl+F5` in Visual Studio (without building the full solution), each extension's project needs to be a project dependency of `Orchard.Web` (right-click on `Orchard.Web` -> "Build Dependencies" -> "Project Dependencies"); otherwise NuGet packages for the extension's project won't be restored. Please note that this is not the same as a project reference (but adding a project reference adds a project dependency too) and this information is stored in the solution file, not the project file.
+
 ## C# Coding Conventions
 
 We are using the C# coding conventions described in this document: [C# Coding Guidelines](http://blogs.msdn.com/brada/articles/361363.aspx) with the following exceptions:
 
+* Orchard supports C# 5, so you cannot use C# 6 (or above) language features (even if you can build it in Visual Studio), since Dynamic Compilation currently uses the pre-Roslyn compiler.
 * Opening braces are on the same line as the statement that begins the block, with a space before the brace (this is consistent with what we do in JavaScript), a.k.a. K&R convention. If you have the [Rebracer Visual Studio extension](https://visualstudiogallery.msdn.microsoft.com/410e9b9f-65f3-4495-b68e-15567e543c58) installed it will automatically configure the editor to use the conventional brace styling.
 * Private fields are prefixed with an underscore and camel-cased.
 * Using directives appear before the namespace, not inside it.
