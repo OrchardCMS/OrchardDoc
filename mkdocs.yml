@@ -122,6 +122,7 @@ pages:
     - Contributing Patches: Documentation/Contributing-patches.markdown
     - Contributors: Contributors.markdown
 - Release Notes:
+    - Orchard 1.10.2: Documentation/Orchard-1-10-2.Release-Notes.markdown
     - Orchard 1.10.1: Documentation/Orchard-1-10-1.Release-Notes.markdown
     - Orchard 1.10: Documentation/Orchard-1-10.Release-Notes.markdown
     - Orchard 1.9.3: Documentation/Orchard-1-9-3.Release-Notes.markdown
