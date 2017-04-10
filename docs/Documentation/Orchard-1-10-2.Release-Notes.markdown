@@ -78,7 +78,7 @@ Orchard 1.10.2 fixes bugs and introduces the following notable changes and featu
 * [Bug] Taxonomy sorting
 * [Bug] User Media folder names collisions
 * [Bug] Blog post permissions
-* [Bug] Configured dAtabase isolation level is not respected
+* [Bug] Configured database isolation level is not respected
 * [Bug] Gallery search is failing
 * [Bug] CacheManager is not thread-safe
 * [Bug] MySql failures on Setup
