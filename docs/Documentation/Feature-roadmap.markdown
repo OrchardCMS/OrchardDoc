@@ -5,17 +5,18 @@ The feature roadmap is subject to change as the project evolves, and we welcome 
 
 #### Priorities for Orchard 1.11:
 
-This release is expected for Q4 2016
+This release is expected for Q2 2017
 
 ## Suggested features
 
 ### On-track
 
+* OpenId - Done
 * Deployment feature (OneStop will integrate this feature) - On track
 * New admin theme ([Szymon](https://github.com/SzymonSel) owns this contribution) - Almost ready
     * Customizable dashboard
     * Accessibility
-* Glimpse ([Chris](https://github.com/paynecrl97) owns this contribution) - Waiting for PR review
+* Glimpse ([Chris](https://github.com/paynecrl97) owns this contribution) - Done
 * Improved Workflow module
     * Error/Exception branches support
     * Loop activities
@@ -24,6 +25,7 @@ This release is expected for Q4 2016
 * Remove Cloud Services as a supported target ([Daniel](https://github.com/DanielStolt) owns this contribution) - Done
 * New front facing website - On track
 * REST APIs ([design notes](https://orchard.codeplex.com/discussions/560607))
+* Azure Media Services improvements - On Track 
 
 ### Looking for owners
 * Owin identity providers
