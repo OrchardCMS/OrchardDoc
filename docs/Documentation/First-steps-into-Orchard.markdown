@@ -20,7 +20,7 @@ The **administrator** has access to a few more aspects of the website:
 
     ![](../Attachments/First-Steps-Into-Orchard/Orchard-Installation.png)
 
-1. Of course, as users, they can see the front-end as well
+1. Of course, as users, they can see the front-end as well.
 
 1. They can open the [dashboard](Getting-around-the-dashboard) (aka control panel/back-end) for two reasons:
     1. [Configure the website](Getting-Started): Edit settings around the behavior and look of the website (or install/disable/upgrade them)
@@ -37,23 +37,23 @@ The **administrator** has access to a few more aspects of the website:
 
 ### Designer
 The **designer** can modify the [look of the website](Previewing-and-applying-a-theme). He can edit the settings of an existing theme (if provided) or create one.
-A **[theme](Anatomy-of-a-theme)** is everything that plays in the visual representation of the website. It is sometimes called skin or template. It transforms the **content** (user-generated data) into HTML that can be displayed in a browser. Eg: When you write a blog post, the theme defines where and how to show the menu, title, body, comments, etc.
+A **[theme](Anatomy-of-a-theme)** is everything that is involved in the visual representation of the website. It is sometimes called _skin_ or _template_. It transforms the **content** (user-generated data) into HTML that can be displayed in a browser. E.g.: When you write a blog post, the theme defines where and how to show the menu, title, body, comments, etc.
 
 Depending on how much customization is required, the designer may [edit some or all elements of the theme](Customizing-the-default-theme). These elements are of the following types:
 
-* Documents defining the **layout** and its zones: This is the overall representation of a page on the website (without any actual content). Eg: It says if the website should have one, two or three columns. So, a **zone** is a container that is part of the layout and ready to receive any content. Note that a flexible theme (like the one provided by Orchard) can adapt to hide empty zones. So, although Figure 6 shows a lot of zones, most of them will not be visible on actual pages because they aren't being used.
+* Templates defining the **layout** and its zones: This is the overall representation of a page on the website (without any actual content). E.g.: it determines if the website should have one, two or three columns. So, a **zone** is a container that is part of the layout and ready to receive any content. Note that a flexible theme (like the one provided by Orchard) can adapt to hide empty zones. So, although Figure 6 shows a lot of zones, most of them will not be visible on actual pages because they aren't being used.
 
     ![](../Attachments/First-Steps-Into-Orchard/ThemeZonePreview.png)
     
-* **Views**: Visual representation of a specific content. A view is typically a file with the extension .CSHTML or .ASPX. It provides the HTML code to use when displaying a specific type of content. So, a page with many contents (menu, blog post, comments, etc) will be created by using the composition of all the relevant individual views.
+* **Views**: Visual representation of specific content. A view is typically a file with the extension `.cshtml` or `.aspx`. It provides the HTML code to use when displaying a specific type of content. So, a page with a lot of contents (menu, blog post, comments, etc) will be created by using the composition of all the relevant individual views.
 
     ![](../Attachments/First-Steps-Into-Orchard/Orchard-ShapesOutlined.png)
 
-* **Stylesheets**, **Javascript** and Media files: They are used to modify the look defined in the views. They are files like "Site.css", jQuery or the images for background, borders and icons
+* **Stylesheets**, **Javascript** and **Media** files: They are used to modify the look defined in the views. They are files like `Site.css`, jQuery or the images for background, borders and icons.
 
-* **[Widget](Managing-widgets)**: A web page typically presents one main content (like a blog post), but it often also has small pieces of information on the sides. Eg: a tag cloud, a list of recent posts, a twitter feed, etc
+* **[Widget](Managing-widgets)**: A web page typically presents one main content (like a blog post), but it often also has small pieces of information on the sides. E.g.: a tag cloud, a list of recent posts, a twitter feed, etc.
 
-* Layers and the binding between content to specific zones: A **layer** is like the description of a group of pages. Once defined, you can tell where to put each content (or widget). Eg: A layer grouping all the blog posts can be defined, then we can make a Tag cloud widget appear on the side.
+* Layers and the binding between content to specific zones: A **layer** is like the description of a group of pages. Once defined, you can tell where to put each content (or widget). E.g.: A layer grouping all the blog posts can be defined, then we can make a Tag cloud widget appear on the side.
 
     ![](../Attachments/First-Steps-Into-Orchard/Orchard-WidgetLayers.png)
 
@@ -64,20 +64,20 @@ The **developer** has a complete insight of the architecture of Orchard and can 
 
 Orchard is organized in modules. Each **module** provides a building block (aka add on/plugin) to the website with a high level distinct goal. For example, you can have:
 
-* Extension module: Adds some (low-level) features that will benefit the website. Eg: Ability to [search your content](Search-and-indexing) or to [use an external editor to write blog posts (like Live Writer)](Blogging-with-LiveWriter)
+* Extension module: Adds some (low-level) features that will benefit the website. E.g.: Ability to [search your content](Search-and-indexing) or to [use an external editor to write blog posts (like Live Writer)](Blogging-with-LiveWriter).
 
-* Content module: Adds everything (code and visual) required to view/edit some type of content (like blog posts)
+* Content module: Adds everything (code and visual) required to view/edit some type of content (like blog posts).
 
-* Widget module: Adds a small visual content that can be displayed on the side of existing content modules (like a Tag cloud next to a blog)
+* Widget module: Adds a small visual element that can be displayed alongside existing content modules (like a Tag cloud next to a blog).
 
-* Element module: Adds a small contained element for use in the Orchard.Layouts module, a core module that lets you design page layouts in the browser.
+* Element module: Adds a small contained element for use in the `Orchard.Layouts` module, a core module that lets you design page layouts in the browser.
 
-* Theme module: Changes the look of existing content modules (This is what the designer would typically create)
+* Theme module: Changes the look of existing content modules (this is what the designer would typically create).
 
-* All the above: A module can have many extensions, content types, widgets and themes all in one package 
+* All the above: A module can have many extensions, content types, widgets and themes all in one package.
 
 Orchard is designed to be highly extensible; this means that almost anything that you interact with can be extended, replaced or disabled.
-Out of the box, Orchard comes with a number of modules to provide a good user/administrator experience; but a designer/developer can change them or [create more](Getting-Started-with-Modules). It is also possible to [share your modules](Packaging-and-sharing-a-module) with the Orchard community and to [install modules](Installing-and-upgrading-modules) developed by others.
+Out of the box, Orchard comes with a number of modules to provide a good user/administrator experience, but a designer/developer can change them or [create more](Getting-Started-with-Modules). It is also possible to [share your modules](Packaging-and-sharing-a-module) with the Orchard community and to [install modules](Installing-and-upgrading-modules) developed by others.
 
 Orchard comes with only one theme (called "[The Theme Machine](Anatomy-of-a-theme)"). However, it has enough zones to allow various arrangements. This is important because a site can only have one theme active at a time. This means the theme must be flexible enough to allow pages to have different layouts. If you are not satisfied, you can copy it and add more zones.
 
@@ -88,13 +88,12 @@ In order to fill your website, Orchard allows you to edit and display content. I
 
 * **Content:** Data that is typically displayed on the front-end website. I use this term as a generic way of calling anything that is user-generated.
 
-
 * **[Content Type &amp; Item](Creating-custom-content-types)**: A **content type** is like a dynamic class; it defines a structure of data for a specific type of content. That structure can be changed, even by the administrator. A **content item** is an instance of content type. So, BlogPost can be a content type, and when you write one, that one is a content item.
 
-* **[Content Part](Writing-a-content-part)**: Because many content types share many aspects; these aspects can be created independently and reused in each content type. That's what a content part is. Eg: A blog post can have comments; a photo can also have comments; so, instead of implementing the "comments" feature twice, we can create it as a content part and reuse it for both content types.
+* **[Content Part](Writing-a-content-part)**: Because many content types share many aspects; these aspects can be created independently and reused in each content type. That's what a content part is. E.g.: A blog post can have comments; a photo can also have comments; so, instead of implementing the "comments" feature twice, we can create it as a content part and reuse it for both content types.
 
-* **[Content Field](Creating-a-custom-field-type)**: In the same spirit of reusability, we can have smaller types that must behave in a certain way. Eg: Most content types will need Date, phone number, email address, etc. They aren't simple properties since we can attach some behavior (like validation rules) but they aren't content parts either (too "small").
-* **Record**: In order to be able to save a content type/part (in a SQL database), it needs to be "linked" to a record. It is a class with all the properties that should be saved. Eg: A Map part must save its coordinates (Latitude &amp; Longitude), so it will be linked to a record with these two properties; and Orchard will do the rest to load/save it. You will not have to deal with records unless you [develop your own module](Getting-Started-with-Modules). But it is useful to understand this concept in case you encounter it.
+* **[Content Field](Creating-a-custom-field-type)**: In the same spirit of reusability, we can have smaller types that must behave in a certain way. E.g.: Most content types will need Date, phone number, email address, etc. They aren't simple properties since we can attach some behavior (like validation rules) but they aren't content parts either (too "small").
+* **Record**: In order to be able to save a content type/part (in a SQL database), it needs to be "linked" to a record. It is a class with all the properties that should be saved. E.g.: A Map part must save its coordinates (Latitude &amp; Longitude), so it will be linked to a record with these two properties; and Orchard will do the rest to load/save it. You will not have to deal with records unless you [develop your own module](Getting-Started-with-Modules). But it is useful to understand this concept in case you encounter it.
 
 Note that a content type can only have one of each kind of content parts. But it can have many fields of the same kind. The reason is in the semantic meaning of these concepts. For example, a blog post can only have one commenting aspect and it can have many dates (creation date, last update date, etc.).
 

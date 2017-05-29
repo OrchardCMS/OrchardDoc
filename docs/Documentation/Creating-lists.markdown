@@ -112,7 +112,7 @@ Copy and paste the following code into the new file:
 
 This template looks at the name of the field, and if the name is "Buy", the template changes the rendering to be a link to the value of the field.
 
-In addition to customizing how fields render in a custom content type, you can change what's displayed and where it's displayed by using a _placement.info_ file. If you already have a _placement.info_ file at the root of your site's current theme folder, edit it and add the **Match** element shown in the following example before the `&lt;/Placement&gt;` closing tag. If you don't already have a _placement.info_ file, create a new file and add the following content:
+In addition to customizing how fields render in a custom content type, you can change what's displayed and where it's displayed by using a `Placement.info` file. If you already have a `Placement.info` file at the root of your site's current theme folder, edit it and add the **Match** element shown in the following example before the `&lt;/Placement&gt;` closing tag. If you don't already have a `Placement.info` file, create a new file and add the following content:
 
     
     <Placement>
@@ -139,7 +139,7 @@ When the details are displayed, the placement file specifies that the body of th
 
 ![](../Upload/screenshots_675/bookreview_details_customrender_675.png)
 
-When the whole list of books is displayed, you want to display a more abbreviated view, such as the title and summary only for each book. To suppress the display of the comment count, the tags, the metadata and the fields, the _placement.info_ file sends those shapes to the "Nowhere" zone. The "Nowhere" zone is not actually a defined Orchard zone, it is simply a standard way in **.info** files of suppressing elements you want to hide by sending them to an undefined zone. The summary is sent to the **Content** zone. Click the **Book Reviews** menu entry to view the updated rendering of your list of reviews. 
+When the whole list of books is displayed, you want to display a more abbreviated view, such as the title and summary only for each book. To suppress the display of the comment count, the tags, the metadata and the fields, the `Placement.info` file sends those shapes to the "Nowhere" zone. The "Nowhere" zone is not actually a defined Orchard zone, it is simply a standard way in `.info` files of suppressing elements you want to hide by sending them to an undefined zone. The summary is sent to the **Content** zone. Click the **Book Reviews** menu entry to view the updated rendering of your list of reviews. 
 
 ![](../Upload/screenshots_675/bookreview_list_placementinfo_675.png)
 

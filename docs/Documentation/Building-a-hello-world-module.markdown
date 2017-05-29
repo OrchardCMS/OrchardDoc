@@ -26,7 +26,7 @@ Once you have code generation enabled, open the Orchard command-line, and create
 
 # Modifying the Manifest
 
-You should now have a new HelloWorld folder under the Modules folder of your Orchard web site. In this folder, you'll find a module.txt file. Open it and customize it as follows:
+You should now have a new `HelloWorld` folder under the `Modules` folder of your Orchard web site. In this folder, you'll find a `Module.txt` file. Open it and customize it as follows:
 
     
     name: HelloWorld

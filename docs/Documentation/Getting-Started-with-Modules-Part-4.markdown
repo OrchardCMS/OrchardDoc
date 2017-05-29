@@ -15,9 +15,9 @@ In fact, the only reason these weren't covered earlier was because they aren't e
 The topics in this article will help you add polish to your module and if you're going to release them to the public it will mean the difference between a beginners module and a professional module.
 
 ## Customize the manifest file
-Starting with an easy one, the `module.txt` is a text file you will find in the root of your module folder. We have already looked at this file briefly in this course each time we have added dependencies. When Orchard is scanning the folders looking for modules to load it will parse this file to get information about it.
+Starting with an easy one, the `Module.txt` is a text file you will find in the root of your module folder. We have already looked at this file briefly in this course each time we have added dependencies. When Orchard is scanning the folders looking for modules to load it will parse this file to get information about it.
 
-The `module.txt` is a manifest file. Technically, the document is in YAML format. If you open it now you will see the following:
+The `Module.txt` is a manifest file. Technically, the document is in YAML format. If you open it now you will see the following:
 
     Name: Orchard.LearnOrchard.FeaturedProduct
     AntiForgery: enabled
@@ -40,7 +40,7 @@ The file format is quite straightforward. The fields mean what you would expect 
 
 `Version` is the version of the module.
 
-`OrchardVersion` is the version of Orchard that this module was written against.
+`OrchardVersion` is the version of Orchard that this module was tested against.
 
 `Features` is the only complicated one. We didn't look at it in this course, but you can include several features within a single module. This means you can enable or disable individual parts of the module. The description field and features section work together and can be displayed in several different formats. 
 
@@ -48,16 +48,16 @@ For a detailed explanation of the `Features` section and the other fields [read 
 
 Time to make some changes:
 
-  1. Open `module.txt`.
+  1. Open `Module.txt`.
   
-  1. Edit the `module.txt` to your liking while staying [within the spec](Manifest-files). Go ahead and put your name and details into it. It feels good to see your name in lights!
+  1. Edit the `Module.txt` to your liking while staying [within the spec](Manifest-files). Go ahead and put your name and details into it. It feels good to see your name in lights!
   
   1. Save the file.
   
-You will probably need to restart the development server before Orchard picks up the changes you've made to your `module.txt`.
+You will probably need to restart the development server before Orchard picks up the changes you've made to your `Module.txt`.
 
 ## Categorize your module
-While we are working with the manifest file, there is one field which is very useful but not included by default in the `module.txt`. The field is called `Category:`.
+While we are working with the manifest file, there is one field which is very useful but not included by default in the `Module.txt`. The field is called `Category:`.
 
 If you omit this field then the module defaults to the `Uncategorized` grouping:
 
@@ -69,7 +69,7 @@ It's better to group your module with other modules where possible so that users
 
 In this case we will make our own category, "Learn Orchard", which is the category used for all demo modules on this site:
 
-  1. Open `module.txt`.
+  1. Open `Module.txt`.
   
   1. Add the following line to the file:
   
@@ -79,7 +79,7 @@ In this case we will make our own category, "Learn Orchard", which is the catego
      
   1. Save the file.
   
-You will probably need to restart the development server before Orchard picks up the changes you've made to your `module.txt`.
+You will probably need to restart the development server before Orchard picks up the changes you've made to your `Module.txt`.
 
 ## Localize all of your text
 Orchard has great support for writing global aware, localized websites. Administrators can add cultures to their site for a wide variety of different languages.
@@ -114,7 +114,7 @@ The correct way to format this would be:
 
 > `<p>@T("You have {0} credits left.", @Model.SmsCredits)</p>`
 
-Let's update the front end view so that it follows the correct localized development best practices:
+Let's update the front-end view so that it follows the correct localized development best practices:
 
   1. Open `.\Views\Parts\FeaturedProduct.cshtml`
   
@@ -164,15 +164,15 @@ However, just putting the styles into an external file is not the whole story wi
 
 The quick fix for this is to move the CSS into a `.css` file and then use `Script.Require("filename.css")` to include it:
 
-  1. In the Solution Explorer, `right click` on the `Styles` folder within the module.
+  1. In the Solution Explorer, _right click_ on the `Styles` folder within the module.
   
-  1. Choose `Add`, `New Item...` from the context menu.
+  1. Choose **Add**, **New Item...** from the context menu.
   
-  1. Select `Visual C#` then `Web` from the categories down the left hand side.
+  1. Select **Visual C#** then **Web** from the categories down the left hand side.
   
-  1. Find `Style Sheet` in the list and give it a `Name:` of `FeaturedProduct.css`.
+  1. Find **Style Sheet** in the list and give it a **Name:** of `FeaturedProduct.css`.
   
-  1. Click `Add`.
+  1. Click **Add**.
   
   1. Open `.\Views\Parts\FeaturedProduct.cshtml`.
   
@@ -194,7 +194,7 @@ I have used the word resources so far when describing this feature. This is beca
 
 Each resource is assigned a plain text name. This can then be used in the view and it can also be used if another resource needs to depend on it.
 
-This class is normally found in the `ResourceManifest.cs` file in the root of your module folder but as long as your class implements the `IResourceManifestProvider` interface then Orchard will pick it up.
+This class is normally found in the `ResourceManifest.cs` file in the root of your module folder but as long as your class implements the `IResourceManifestProvider` interface, Orchard will pick it up.
 
 The example code below is a shortened version of the Orchard.Layouts `ResourceManifest.cs` file:
 
@@ -216,7 +216,7 @@ The example code below is a shortened version of the Orchard.Layouts `ResourceMa
 
 You can see that a few of the features of the resource manifest are being used here. The first script, called `Layouts.Lib` uses `SetUrl()` to set up minified (live) and unminified (debug) filenames for the resource. 
 
-It also sets a dependency on a resource called `jQuery`. This is a common feature that you will see throughout many Orchard modules. The `jQuery` resource comes from the `Orchard.jQuery` module. If you looked in the `Orchard.Layouts` `module.txt` then you would find that it specifies a dependency on the `Orchard.jQuery` module.
+It also sets a dependency on a resource called `jQuery`. This is a common feature that you will see throughout many Orchard modules. The `jQuery` resource comes from the `Orchard.jQuery` module. If you looked in the `Orchard.Layouts` `Module.txt` then you would find that it specifies a dependency on the `Orchard.jQuery` module.
 
 This kind of external dependency shows off some more of the resource manager features:
 
@@ -236,11 +236,11 @@ The second `DefineScript` in the example above is included just to show that you
 
 Now that its clear what service the resource manifest provides, let's upgrade the module to use this feature of Orchard:
 
-  1. In the Solution Explorer, `right click` on the module's project name.
+  1. In the Solution Explorer, _right click_ on the module's project name.
  
-  1. Select `Add`, `New Item...` and add a class called `ResourceManifest.cs`.
+  1. Select **Add**, **New Item...** and add a class called `ResourceManifest.cs`.
  
-  1. Add the `IResourceManifestProvider` interface to the `ResourceManfiest` class:
+  1. Add the `IResourceManifestProvider` interface to the `ResourceManifest` class:
  
         public class ResourceManifest : IResourceManifestProvider {
         }
@@ -251,11 +251,11 @@ Now that its clear what service the resource manifest provides, let's upgrade th
   
       ![](../Attachments/getting-started-with-modules-part-4/resourcemanifest-interface.png)
 
-     Use the `Ctrl-.` technique a second time to implement the interface. Choose the first option, `Implement interface`.
+     Use the `Ctrl-.` technique a second time to implement the interface. Choose the first option, **Implement interface**.
      
   1. Remove the `throw new NotImplementedException();` line of code.
   
-  1. In it's space add in the following code:
+  1. In its place add in the following code:
   
         var manifest = builder.Add();
         manifest.DefineStyle("FeaturedProduct").SetUrl("FeaturedProduct.css");
@@ -274,7 +274,7 @@ Now that its clear what service the resource manifest provides, let's upgrade th
   
     Don't forget that the resource doesn't need the `.css` extension on the end.
     
-If you run the module in Orchard now then it will look the same as it did before. While this is a simplistic application of a best practice, I think that from the explanation of it you will see how valuable it will be in more complex modules.
+If you run the module in Orchard now, it will look the same as it did before. While this is a simplistic application of a best practice, I think that from the explanation of it you will see how valuable it will be in more complex modules.
 
 Orchard also has an assets pipeline feature. This feature can help build your resources into the final files to be included by Orchard in the resource manifest. For example, you might want to combine the scripts into a single file or minify your style sheets. If you look in your project you will see a file called `Assets.json` which drives this feature. 
 
@@ -337,7 +337,7 @@ The modifications we made are also tied directly to that driver class. It's enti
 
 The `Orchard.Layouts` module (which is used to manage the contents of pages within Orchard) has the concept of building `Elements`. They are like widgets that you can place on to the layout `Canvas`. If you wrote a custom element for this module then it would need to duplicate the code we wrote in widget driver class. This code should live in a central location.
 
-We have already used a built-in version of the solution to this problem; the Orchard services, such as `IContentManager`. These services are used throughout Orchard so that they can share their functionality. Each of the services implements `IDependency` to share this access.
+We have already used a built-in version of the solution to this problem: the Orchard services, such as `IContentManager`. These services are used throughout Orchard so that they can share their functionality. Each of the services implements `IDependency` to share this access.
 
 In exactly the same way that we used dependency injection to request access to various Orchard services, we can write our own `IDependency` and let the driver ask for this.
 
@@ -351,13 +351,13 @@ In our case there will be only one concrete class so it will be a simple decisio
 
 Let's upgrade the module to use our own service:
 
-  1. In the Solution Explorer, `right click` on the module's project name.
+  1. In the Solution Explorer, _right click_ on the module's project name.
  
-  1. Select `Add`, `New Folder` and name it `Services`
+  1. Select **Add**, **New Folder** and name it `Services`
   
-  1. `Right click` the `Services` folder, select `Add`, `New Item...`.
+  1. _Right click_ the `Services` folder, select **Add**, **New Item...**.
   
-  1. Select the `Interface` item template, name it `IFeaturedProductService` and click `Add`
+  1. Select the `Interface` item template, name it `IFeaturedProductService` and click **Add**
   
   1. The interface should be public so add that keyword to the start of the interface declaration. It should also implement the `IDependency` interface:
   
@@ -377,7 +377,7 @@ Let's upgrade the module to use our own service:
   
   1. Implement its interface using the `Ctrl-.` technique.
   
-  1. Now its time to start moving the code over. Open up the `FeaturedProductDriver.cs` file that's in the `.\Drivers\` folder. Review the code and start thinking about what could be moved out into the service class.
+  1. Now its time to start moving the code over. Open up the `FeaturedProductDriver.cs` file that's in the `.\Drivers\ ` folder. Review the code and start thinking about what could be moved out into the service class.
   
   1. The `CurrentContent` property is only used for calculating the `IsOnFeaturedProductPage` value. The three private variables which hold references to Orchard services are only used by the `CurrentContent` property. This means everything from the start of the class through to the end of the constructor can be moved over.
   
@@ -649,20 +649,20 @@ Your `Migrations.cs` file should now look like this:
     }
 
 
-If you load the Orchard site up in the web browser then the data migration will automatically run. You can see the updated description in the `Content Definitions` page:
+If you load the Orchard site up in the web browser then the data migration will automatically run. You can see the updated description in the **Content Definitions** page:
 
   1. Within Visual Studio, press `Ctrl-F5` to load up the dev server.
   
-  1. Navigate to the admin dashboard and click the `Content Definition` menu option.
+  1. Navigate to the admin dashboard and click the **Content Definition** menu option.
   
-  1. Click the `Content Parts` tab along the top of the page.
+  1. Click the **Content Parts** tab along the top of the page.
   
-  1. Scroll down to the `Featured Product` entry. It will now have a description:
+  1. Scroll down to the **Featured Product** entry. It will now have a description:
   
      ![](../Attachments/getting-started-with-modules-part-4/contentpart-withdescriptionadded.png)
 
 ## Roll your data migrations up into Create()
-Now our `Migrations` class contains a `Create()` and two `UpdateFromN()` methods. As time goes on it will get more added. 
+Now our `Migrations` class contains a `Create()` and two `UpdateFromN()` methods. As time goes on, more will be added. 
 
 We may have some updates which revert earlier mistakes or remove features that aren't needed. There is no point in making a new user that's installing the module for the first time to go through all of these steps if they are no longer needed for the final product.
 
@@ -797,7 +797,7 @@ You can download a copy of the module so far at this link:
 
   * [Download Orchard.LearnOrchard.FeaturedProduct-Part4-v1.0.zip](../Attachments/getting-started-with-modules-part-4/Orchard.LearnOrchard.FeaturedProduct-Part4-v1.0.zip)
   
-To use it in Orchard simply extract the archive into the modules directory at `.\src\Orchard.Web\Modules\`. If you already have the module installed from a previous part then delete that folder first.
+To use it in Orchard simply extract the archive into the modules directory at `.\src\Orchard.Web\Modules\ `. If you already have the module installed from a previous part then delete that folder first.
 
 > For Orchard to recognize it the folder name should match the name of the module. Make sure that the folder name is `Orchard.LearnOrchard.FeaturedProduct` and then the modules files are located directly under that.
 
@@ -805,17 +805,17 @@ To use it in Orchard simply extract the archive into the modules directory at `.
 In this course we have looked at many of the core components that make up a module. These topics included:
 
   * Command-line scaffolding
-  * Module.txt manifest
-  * ContentPart
-  * ContentPartRecord
-  * Widget
+  * `Module.txt` manifest
+  * `ContentPart`
+  * `ContentPartRecord`
+  * `Widget`
   * Data migration
   * Dependency injection
   * Handler
   * Driver
   * Editor view
   * Front-end view
-  * Placement.info
+  * `Placement.info`
   * Content types via the admin dashboard
   * Fields 
   * Localization
@@ -828,7 +828,7 @@ This should have given you a solid grounding for extending Orchard via code. Wit
 
 > **Bonus Exercise:** Using the skills you have now learned, research implement the following:
 
-> 1. Add a Content Picker Field to the `FeaturedProductWidget` part so that you can  select a `Product` to be featured.
+> 1. Add a Content Picker Field to the `FeaturedProductWidget` part so that you can select a `Product` to be featured.
 
 > 1. Implement the code so that the widget will work with the selected `Product` rather than using the hard-coded information we supplied throughout this course. 
 

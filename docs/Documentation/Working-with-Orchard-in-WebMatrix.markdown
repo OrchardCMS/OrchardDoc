@@ -57,12 +57,12 @@ Although WebMatrix does not provide a build system for compiling code files, Orc
 
 You can change the editor WebMatrix uses by following these [instructions](http://sybak.com/blog/2011/02/changing-the-file-types-that-open-with-webmatrix/). 
  
-As an example, you may find it helpful to use the XML editor (which provides colorization) on the placement.info file.  To do this you must change the setting for *.info* files in the WebMatrix file **filetypes.xml** (which can be found in the following locations):
+As an example, you may find it helpful to use the XML editor (which provides colorization) on the `Placement.info` file.  To do this you must change the setting for `.info` files in the WebMatrix file `filetypes.xml` (which can be found in the following locations):
 
     32-bit machines: C:\Program Files\Microsoft WebMatrix\config\filetypes.xml
     64-bit machines: C:\Program Files (x86)\Microsoft WebMatrix\config\filetypes.xml
 
-1) Add the .info file extension to the list of XML file types:
+1) Add the `.info` file extension to the list of XML file types:
 
 
     <FileType extension=".info;.config;.csproj;.vbproj;.resx;.settings;.sitemap;.user;.wsdl;.browser;.xaml;.xml;.xoml;.xsd;.xsl;.xslt;.mxml;.dbml;.wstemplate">
@@ -73,7 +73,7 @@ As an example, you may find it helpful to use the XML editor (which provides col
         <Description>An XML File</Description>
     </FileType>
 
-2) Remove the .info file extension from the list of Text file types:
+2) Remove the `.info` file extension from the list of Text file types:
 
     <FileType extension=".ashx;.export;.po;.blogtemplate;.yml;.yaml;.manifest;.pl;.json;.csv">
         <OpenAs>Text</OpenAs>

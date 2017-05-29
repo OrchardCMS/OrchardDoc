@@ -5,7 +5,7 @@ To get a template to render an object like this, you could access each of these 
 In Orchard, this isn't necessary, and adding a new part and displaying it can be done without touching the templates. This is possible because Orchard separates layout into two stages:
 
   - Rendering (performed by generating HTML from templates or shape methods) and
-  - Placement (done through the `placement.info` file).
+  - Placement (done through the `Placement.info` file).
 
 This way, parts can not only specify their default rendering, which can be overridden by themes, they can also specify where they prefer to be rendered relative to other parts (which can also be overridden by themes).
 
@@ -13,7 +13,7 @@ This way, parts can not only specify their default rendering, which can be overr
 > 
 > Instead, create templates for Content Parts and Content Fields then change their order with placement.
 
-Specifying placement using the `placement.info` file is the subject of this article.
+Specifying placement using the `Placement.info` file is the subject of this article.
 
 ## Summary
 
@@ -42,11 +42,11 @@ Specifying placement using the `placement.info` file is the subject of this arti
 <tr><th>Shape<td colspan="2">;Shape=new_shape_name
 </table>
 
-## The placement.info File
+## The `Placement.info` File
 
-If you look at the files in your Orchard website, you'll see that most modules and themes have a `placement.info` file at their root. This is an XML file that specifies the placement of each part of a content item.
+If you look at the files in your Orchard website, you'll see that most modules and themes have a `Placement.info` file at their root. This is an XML file that specifies the placement of each part of a content item.
 
-The following example shows an example of a placement file. (It's based on the `placement.info` file that comes with `Orchard.Tags`.)
+The following example shows an example of a placement file. (It's based on the `Placement.info` file that comes with `Orchard.Tags`.)
 
     <Placement>
         <Place Parts_Tags_Edit="Content:7"/>
@@ -67,15 +67,15 @@ The following example shows an example of a placement file. (It's based on the `
 A placement file acts at the Content Item level. This means that you can use it to reorder the display of the parts of anything that is a content item (blog posts, pages, comments, custom items, widgets, elements, etc.), but not necessarily arbitrary shapes. If a shape that is not representing a content part needs placement, it is up to you to provide a placement mechanism for that shape.
 
 ## Comments
-Comments can be included in the `placement.info` using normal `<!-- comment -->` syntax.
+Comments can be included in the `Placement.info` using normal `<!-- comment -->` syntax.
 
 ## The "Placement" Element
 
-The `Placement` element must be present at the root of the `placement.info` document. It is a simple container.
+The `Placement` element must be present at the root of the `Placement.info` document. It is a simple container.
 
 ## "Place" Element
 
-The `Place` element is the main entity in a `placement.info` file. It can have any number of attributes, although it's recommended for readability to have only one shape place defined per `Place` element. For additional shapes, you can add more `Place` tags, one per line.
+The `Place` element is the main entity in a `Placement.info` file. It can have any number of attributes, although it's recommended for readability to have only one shape place defined per `Place` element. For additional shapes, you can add more `Place` tags, one per line.
 
 Single shape per line example:
 
@@ -175,7 +175,7 @@ Similarly, you can provide a wrapper as part of the placement (`Header:after;Wra
 
 Using a wrapper enables wrapping content with a cshtml markup. Here is a 3 step example showing how to add a div around the Html Widget to enable css styling of the widget.
 
-In placement.info : 
+In `Placement.info` : 
 
     <Match ContentType="Widget">
         <Place Parts_Common_Body="Content:5;Wrapper=Wrapper_HtmlContent" />
@@ -183,7 +183,7 @@ In placement.info :
 
 If you just put the wrapper without specifying 'Content:5' the body part will not show up. By adding `Content:5` it specifies which zone to render the part in.
 
-After modifying your placement.info the Shape Tracing module Shape tab will show your wrapper location at the bottom. It will be: `~/Themes/{yourTheme}/Views/Wrapper.HtmlContent.cshtml`. 
+After modifying your `Placement.info` the Shape Tracing module Shape tab will show your wrapper location at the bottom. It will be: `~/Themes/{yourTheme}/Views/Wrapper.HtmlContent.cshtml`. 
 
 Create this file and put the following text in it:
 
@@ -243,7 +243,7 @@ _The `ContentPart` attribute was added in v1.7.2_
 
 Scopes the contained `Place` tags to a specific content part such as `BodyPart` or `LayoutPart`. An example use of this scoping is to hide the title part in a content item with a `LayoutPart`.
 
-In placement.info :
+In `Placement.info` :
 
     <Match ContentPart="LayoutPart">
         <Place Parts_Title="-" />
@@ -264,10 +264,10 @@ Scopes the contained `Place` tags to a specific path or to a path and its childr
 
 ## Overriding Placement
 
-A module should define default placements for the parts and fields it provides by having a `placement.info` file at the root of the module's directory.
+A module should define default placements for the parts and fields it provides by having a `Placement.info` file at the root of the module's directory.
 
 Without a placement your parts and fields will not appear on the page. By supplying a default you take the burden away from theme developers to configure your module and you make it easy for them to copy sections over to customise them. Consider the various DisplayTypes your parts and fields may be viewed and provide sensible defaults.  
 
-That default placement can be overridden by any theme by placing a `placement.info` file in the root of the theme directory.
+That default placement can be overridden by any theme by placing a `Placement.info` file in the root of the theme directory.
 
 The current theme's placement will win over that of any module.

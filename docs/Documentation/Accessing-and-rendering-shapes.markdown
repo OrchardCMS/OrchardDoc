@@ -1,6 +1,6 @@
 A _shape_ is a dynamic data model.
 The purpose of a shape is to replace the static view model of ASP.NET MVC by using a model
-that can be updated at run time&#151;that is, by using a dynamic shape.
+that can be updated at runtime -- that is, by using a dynamic shape.
 You can think of shapes as the blobs of data that get handed to templates for rendering.
 
 This article introduces the concept of shapes and explains how to work with them.
@@ -47,7 +47,7 @@ the `ActionResult` object returned by action methods in ASP.NET MVC.
 The `ContentShape` method helps you create the shape and return it in a `ContentShapeResult` object.
 
 Although the `ContentShape` method is overloaded, the most typical use is to pass it two
-parameters&#151;the shape type and a dynamic function expression that defines the shape.
+parameters -- the shape type and a dynamic function expression that defines the shape.
 The shape type names the shape and binds the shape to the template that will be used to render it.
 The naming conventions for shape types are discussed later in
 [Naming Shapes and Templates](Accessing-and-rendering-shapes#NamingShapesandTemplates).
@@ -119,7 +119,7 @@ This is a special shape that has a `TemplateName` property and a `Model` propert
 The `TemplateName` property takes a partial path to the template.
 In this case, `"Parts/Map"` causes Orchard to look for a template in your module at the following path: 
 
-_Views/EditorTemplates/Parts/Map.cshtml_
+`Views/EditorTemplates/Parts/Map.cshtml`
 
 The `Model` property takes the name of the part's model file, but without the file-name extension.
 
@@ -129,66 +129,66 @@ As noted, the name given to a shape type binds the shape to the template that wi
 For example, suppose you create a part named `Map` that displays a map for the specified longitude and latitude.
 The name of the shape type might be `Parts_Map`. By convention, all part shapes begin with `Parts_` followed by the name of the part (in this case `Map`). Given this name (`Parts_Map`), Orchard looks for a template in your module at the following path: 
 
-_views/parts/Map.cshtml_
+`views/parts/Map.cshtml`
 
 The following table summarizes the conventions that are used to name shape types and templates.
 
-Applied To             | Shape Naming Convention                                           | Shape Type Example                                   | Template Example
----------------------- | ----------------------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------
-Content shapes         | Content\_\_\[ContentType\]                                        | Content\_\_BlogPost                                  | Content-BlogPost
-Content shapes         | Content\_\_\[Id\]                                                 | Content\_\_42                                        | Content-42
-Content shapes         | Content\_\_\[DisplayType\]                                        | Content\_\_Summary                                   | Content.Summary
-Content shapes         | Content\_\[DisplayType\]\_\_\[ContentType\]                       | Content\_Summary\_\_BlogPost                         | Content-BlogPost.Summary
-Content shapes         | Content\_\[DisplayType\]\_\_\[Id\]                                | Content\_Summary\_\_42                               | Content-42.Summary
-Content.Edit shapes    | Content\_Edit\_\_\[DisplayType\]                                  | Content\_Edit\_\_Page                                | Content-Page.Edit
-Content Part templates | \[ShapeType\]\_\_\[Id\]                                           | Parts\_Common\_Metadata\_\_42                        | Parts/Common.Metadata-42
-Content Part templates | \[ShapeType\]\_\_\[ContentType\]                                  | Parts\_Common\_Metadata\_\_BlogPost                  | Parts/Common.Metadata-BlogPost
-Field templates        | \[ShapeType\]\_\_\[FieldName\]                                    | Fields\_Common\_Text\_\_Teaser                       | Fields/Common.Text-Teaser
-Field templates        | \[ShapeType\]\_\_\[PartName\]                                     | Fields\_Common\_Text\_\_TeaserPart                   | Fileds/Common.Text-TeaserPart
-Field templates        | \[ShapeType\]\_\_\[ContentType\]\_\_\[PartName\]                  | Fields\_Common\_Text\_\_Blog\_\_TeaserPart           | Fields/Common.Text-Blog-TeaserPart
-Field templates        | \[ShapeType\]\_\_\[PartName\]\_\_\[FieldName\]                    | Fields\_Common\_Text\_\_TeaserPart\_\_Teaser         | Fields/Common.Text-TeaserPart-Teaser
-Field templates        | \[ShapeType\]\_\_\[ContentType\]\_\_\[FieldName\]                 | Fields\_Common\_Text\_\_Blog\_\_Teaser               | Fields/Common.Text-Blog-Teaser
-Field templates        | \[ShapeType\]\_\_\[ContentType\]\_\_\[PartName\]\_\_\[FieldName\] | Fields\_Common\_Text\_\_Blog\_\_TeaserPart\_\_Teaser | Fields/Common.Text-Blog-TeaserPart-Teaser
-LocalMenu              | LocalMenu\_\_\[MenuName\]                                         | LocalMenu\_\_main                                    | LocalMenu-main
-LocalMenuItem          | LocalMenuItem\_\_\[MenuName\]                                     | LocalMenuItem\_\_main                                | LocalMenuItem-main
-Menu                   | Menu\_\_\[MenuName\]                                              | Menu\_\_main                                         | Menu-main
-MenuItem               | MenuItem\_\_\[MenuName\]                                          | MenuItem\_\_main                                     | MenuItem-main
-Resource               | Resource\_\_\[FileName\]                                          | Resource\_\_flower\.gif                              | Resource-flower.gif
-Style                  | Style\_\_\[FileName\]                                             | Style\_\_site\.css                                   | Style-site.css
-Widget                 | Widget\_\_\[ContentType\]                                         | Widget\_\_HtmlWidget                                 | Widget-HtmlWidget
-Widget                 | Widget\_\_\[ZoneName\]                                            | Widget\_\_AsideSecond                                | Widget-AsideSecond
-Zone                   | Zone\_\_\[ZoneName\]                                              | Zone\_\_AsideSecond                                  | Zone-AsideSecond
+Applied To             | Shape Naming Convention                                | Shape Type Example                             | Template Example
+---------------------- | ------------------------------------------------------ | -----------------------------------------------| --------------------------------------------
+Content shapes         | `Content__[ContentType]`                               | `Content__BlogPost`                            | `Content-BlogPost`
+Content shapes         | `Content__[Id]`                                        | `Content__42`                                  | `Content-42`
+Content shapes         | `Content__[DisplayType]`                               | `Content__Summary`                             | `Content.Summary`
+Content shapes         | `Content_[DisplayType]__[ContentType]`                 | `Content_Summary__BlogPost`                    | `Content-BlogPost.Summary`
+Content shapes         | `Content_[DisplayType]__[Id]`                          | `Content_Summary__42`                          | `Content-42.Summary`
+Content.Edit shapes    | `Content_Edit__[DisplayType]`                          | `Content_Edit__Page`                           | `Content-Page.Edit`
+Content Part templates | `[ShapeType]__[Id]`                                    | `Parts_Common_Metadata__42`                    | `Parts/Common.Metadata-42`
+Content Part templates | `[ShapeType]__[ContentType]`                           | `Parts_Common_Metadata__BlogPost`              | `Parts/Common.Metadata-BlogPost`
+Field templates        | `[ShapeType]__[FieldName]`                             | `Fields_Common_Text__Teaser`                   | `Fields/Common.Text-Teaser`
+Field templates        | `[ShapeType]__[PartName]`                              | `Fields_Common_Text__TeaserPart`               | `Fileds/Common.Text-TeaserPart`
+Field templates        | `[ShapeType]__[ContentType]__[PartName]`               | `Fields_Common_Text__Blog__TeaserPart`         | `Fields/Common.Text-Blog-TeaserPart`
+Field templates        | `[ShapeType]__[PartName]__[FieldName]`                 | `Fields_Common_Text__TeaserPart__Teaser`       | `Fields/Common.Text-TeaserPart-Teaser`
+Field templates        | `[ShapeType]__[ContentType]__[FieldName]`              | `Fields_Common_Text__Blog__Teaser`             | `Fields/Common.Text-Blog-Teaser`
+Field templates        | `[ShapeType]__[ContentType]__[PartName]__[FieldName]`  | `Fields_Common_Text__Blog__TeaserPart__Teaser` | `Fields/Common.Text-Blog-TeaserPart-Teaser`
+LocalMenu              | `LocalMenu__[MenuName]`                                | `LocalMenu__main`                              | `LocalMenu-main`
+LocalMenuItem          | `LocalMenuItem__[MenuName]`                            | `LocalMenuItem__main`                          | `LocalMenuItem-main`
+Menu                   | `Menu__[MenuName]`                                     | `Menu__main`                                   | `Menu-main`
+MenuItem               | `MenuItem__[MenuName]`                                 | `MenuItem__main`                               | `MenuItem-main`
+Resource               | `Resource__[FileName]`                                 | `Resource__flower.gif`                         | `Resource-flower.gif`
+Style                  | `Style__[FileName]`                                    | `Style__site.css`                              | `Style-site.css`
+Widget                 | `Widget__[ContentType]`                                | `Widget__HtmlWidget`                           | `Widget-HtmlWidget`
+Widget                 | `Widget__[ZoneName]`                                   | `Widget__AsideSecond`                          | `Widget-AsideSecond`
+Zone                   | `Zone__[ZoneName]`                                     | `Zone__AsideSecond`                            | `Zone-AsideSecond`
 
 You should put your templates in the project according to the following rules:
 
-* Content item shape templates are in the _views/items_ folder.
-* `Parts_` shape templates are in the _views/parts_ folder.
-* `Fields_` shape templates are in the _views/fields_ folder.
-* The `EditorTemplate` shape templates are in the _views/EditorTemplates/_`template` name folder.  
-For example, an `EditorTemplate` with a template name of _Parts/Routable.RoutePart_ has its template
-at _views/EditorTemplates/Parts/Routable.RoutePart.cshtml_.
-* All other shape templates are in the _views_ folder.
+* Content item shape templates are in the `Views/Items` folder.
+* `Parts_` shape templates are in the `Views/Parts` folder.
+* `Fields_` shape templates are in the `Views/Fields` folder.
+* The `EditorTemplate` shape templates are in the `Views/EditorTemplates/<templatename>` folder.  
+For example, an `EditorTemplate` with a template name of `Parts/Routable.RoutePart` has its template
+at `Views/EditorTemplates/Parts/Routable.RoutePart.cshtml`.
+* All other shape templates are in the `Views` folder.
 
-> **Note**`  `The template extension can be any extension supported by an active view engine, such as _.cshtml_, _.vbhtml_, or _.ascx_.
+> **Note**: The template extension can be any extension supported by an active view engine, such as `.cshtml`, `.vbhtml`, or `.ascx`.
 
 ## From Template File Name to Shape Name
 
 More generally, the rules to map from a template file name to the corresponding shape name are the following:
 
-* Dot (.) and backslash (\\) change to underscore (\_).
-Note that this does not mean that an _example.cshtml_ file in a _myviews_ subdirectory of _Views_
-is equivalent to a _myviews_example.chtml_ file in _Views_.
+* Dot (`.`) and backslash (`\ `) change to underscore (`_`).
+Note that this does not mean that an `example.cshtml` file in a `myviews` subdirectory of `Views`
+is equivalent to a `myviews`example.chtml` file in `Views_.
 The shape templates must still be in the expected directory (see above).
-* Hyphen (-) changes to a double underscore (\_\_).
+* Hyphen (`-`) changes to a double underscore (`__`).
 
-For example, _Views/Hello.World.cshtml_ will be used to render a shape named `Hello_World`,
-and _Views/Hello.World-85.cshtml_ will be used to render a shape named `Hello_World__85`.
+For example, `Views/Hello.World.cshtml` will be used to render a shape named `Hello_World`,
+and `Views/Hello.World-85.cshtml` will be used to render a shape named `Hello_World__85`.
 
 ## Alternate Shape Rendering
 
 As noted, an HTML widget in the `AsideSecond` zone (for example) could be rendered
-by a _widget.cshtml_ template, by a _widget-htmlwidget.cshtml_ template,
-or by a _widget-asidesecond.cshtml_ if they exist in the current theme.
+by a `widget.cshtml` template, by a `widget-htmlwidget.cshtml` template,
+or by a `widget-asidesecond.cshtml` if they exist in the current theme.
 When various possibilities exist to render the same content,
 these are referred to as _alternates_ of the shape,
 and they enable rich template overriding scenarios.
@@ -197,15 +197,15 @@ Alternates form a group that corresponds to the same shape if they differ only b
 For example, `Hello_World`, `Hello_World__85`, and `Hello_World__DarkBlue` are an alternate group
 for a `Hello_World` shape. `Hello_World_Summary`, conversely, does not belong to that group
 and would correspond to a `Hello_World_Shape` shape, not to a `Hello_World` shape.
-(Notice the difference between "\_\_" and "\_".)
+(Notice the difference between "`__`" and "`_`".)
 
 ## Which Alternate Will Be Rendered?
 
 Even if it has alternates, a shape is always created with the base name, such as `Hello_World`.
 Alternates give additional template name options to the theme developer beyond the default
-(such as _hello.world.cshtml_).
+(such as `hello.world.cshtml`).
 The system will choose the most specialized template available among the alternates,
-so _hello.world-orange.cshtml_ will be preferred to _hello.world.cshtml_ if it exists.
+so `hello.world-orange.cshtml` will be preferred to `hello.world.cshtml` if it exists.
 
 ## Built-In Content Item Alternates
 
@@ -272,18 +272,18 @@ The `@Html.ValidationMessageFor` expressions create messages that are displayed 
 ## Wrappers
 
 Wrappers let you customize the rendering of a shape by adding markup around the shape.
-For example, _Document.cshtml_ is a wrapper for the `Layout` shape, because it specifies
+For example, `Document.cshtml` is a wrapper for the `Layout` shape, because it specifies
 the markup code that  surrounds the `Layout` shape.
 For more information about the relationship between `Document` and `Layout`,
 see [Template File Syntax Guide](Template-file-syntax-guide).
 
-Typically, you add a wrapper file to the _Views_ folder of  your theme.
-For example, to add a wrapper for `Widget`, you add a _Widget.Wrapper.cshtml_ file to
-the _Views_ folder of your theme.
+Typically, you add a wrapper file to the `Views` folder of  your theme.
+For example, to add a wrapper for `Widget`, you add a `Widget.Wrapper.cshtml` file to
+the `Views` folder of your theme.
 If you enable the **Shape Tracing** feature, you'll see the available wrapper names for a shape.
-You can also specify a wrapper in the _placement.info_ file.
+You can also specify a wrapper in the `Placement.info` file.
 For more information about how to specify  a wrapper,
-see [Understanding the placement.info File](Understanding-placement-info).
+see [Understanding the Placement.info File](Understanding-placement-info).
 
 # Creating a Shape Method
 

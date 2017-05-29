@@ -16,6 +16,6 @@ It will teach you some of the basic components of module development and also en
   
   - **[Getting Started with Modules - Part 4](Getting-Started-with-Modules-Part-4) - Best Practices**
   
-    The final installment reviews the completed widget and brings to light loose-ends. You take a tour back through the code, applying development best-practices along the way.
+    The final installment reviews the completed widget and brings to light loose ends. You take a tour back through the code, applying development best-practices along the way.
 
 When you have completed this course you will have a solid grounding in extending Orchard via code. With this knowledge you will be able to build your own simple modules. You will also understand the concepts underpinning the documentation found elsewhere in this site and around the web. These skills lay a solid groundwork for you to continue your studies in Orchard module development.

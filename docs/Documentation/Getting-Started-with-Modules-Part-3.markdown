@@ -14,7 +14,7 @@ At the moment the widget is displayed site-wide with a big green "Click here to 
 
 In the previous part we added a configurable item to the widget. The widget read that setting in and updated itself. The same code is run no matter where you embed the widget. 
 
-This time, we will expand the widget so that it is aware of it's surroundings. When the page loads and the widget is asked to display, it will inspect the page as a whole, figure out what type of page it is on and then, if applicable, drill down to see what specific product page it's on. 
+This time, we will expand the widget so that it is aware of its surroundings. When the page loads and the widget is asked to display, it will inspect the page as a whole, figure out what type of page it is on and then, if applicable, drill down to see what specific product page it's on. 
 
 This information will then be passed through to the view so that we can change the display on the fly. 
 
@@ -25,38 +25,38 @@ The admin dashboard is quite powerful. If you have been using Orchard for long y
 
 This section allows you to combine pre-existing content parts together to form a custom content type that can be displayed in your site. 
 
-It also has a section called `Fields`. When there isn't a content part that quite fits your needs you can turn to the `Fields` to add extra pieces of data to the content type on the fly.
+It also has a section called **Fields**. When there isn't a content part that quite fits your needs you can turn to the **Fields** to add extra pieces of data to the content type on the fly.
 
 We are going to quickly build a `Product` content type which has some of the common core content parts; a title, a URL, a menu entry and some body text. We will also add in single text field called `Product Id` to detect which particular product is being viewed:
 
   1. Navigate to the admin dashboard of your site.
   
-  1. Click `Content Definition` in the menu down the side.
+  1. Click **Content Definition** in the menu down the side.
   
-  1. Click `Create new type`.
+  1. Click **Create new type**.
   
   1. Enter `Product` for the `Display Name`. This should automatically fill out the `Content Type Id` field for you. Make sure the `Content Type Id` is also set to `Product`:
   
     ![](../Attachments/getting-started-with-modules-part-3/democontent-newtype.png)
   
-  1. Click `Create`.
+  1. Click **Create**.
   
-  1. In the `Add Parts to "Product"` section tick the following parts:
+  1. In the **Add Parts to "Product"** section tick the following parts:
   
        * Autoroute
        * Body
        * Menu
        * Title
 
-  1. Click `Save`. You will be taken to the `Edit Content Type` page and you should see several messages from the Orchard notifier system:
+  1. Click **Save**. You will be taken to the **Edit Content Type** page and you should see several messages from the Orchard notifier system:
   
     ![](../Attachments/getting-started-with-modules-part-3/democontent-partsadded.png)
   
-  1. Scroll down to the `Fields` section and then click the `Add Field` button:
+  1. Scroll down to the **Fields** section and then click the **Add Field** button:
   
     ![](../Attachments/getting-started-with-modules-part-3/democontent-addfield.png)
     
-  1. On the `Add New Field To "Product"` page fill the form out like this:
+  1. On the **Add New Field To "Product"** page fill the form out like this:
   
       * Display Name: `Product Id`
       * Technical Name: `ProductId`
@@ -64,15 +64,15 @@ We are going to quickly build a `Product` content type which has some of the com
 
   ![](../Attachments/getting-started-with-modules-part-3/democontent-addnewfield.png) 
      
-  1. Click `Save`.
+  1. Click **Save**.
   
-  1. The main `Edit Content Type` page will reopen. Just for completeness lets configure the field so that it is flagged as required. If you scroll to the `Fields` section you will see your new field is now listed. The small `>` will expand out to show configuration properties for that field:
+  1. The main **Edit Content Type** page will reopen. Just for completeness lets configure the field so that it is flagged as required. If you scroll to the **Fields** section you will see your new field is now listed. The small `>` will expand out to show configuration properties for that field:
   
      ![](../Attachments/getting-started-with-modules-part-3/democontent-configurefield.png)
      
      Click the `>` to expand the field configuration pane.
 
-  1. Tick the `Required` check box:
+  1. Tick the **Required** check box:
   
      ![](../Attachments/getting-started-with-modules-part-3/democontent-required.png)
      
@@ -86,7 +86,7 @@ We are going to quickly build a `Product` content type which has some of the com
     
     In the Pattern field enter the pattern `^[A-Z0-9]+$`.
     
-  1. Click `Save`.
+  1. Click **Save**.
 
 In the next section we will create a demo product using this new content type.
 
@@ -104,11 +104,11 @@ For this to work we need to create a dummy product that will act as the featured
 
   1. Navigate to the admin dashboard of your site.
   
-  1. In the `New` section of the menu click `Product`:
+  1. In the **New** section of the menu click **Product**:
   
      ![](../Attachments/getting-started-with-modules-part-3/demoproduct-new.png)
 
-  1. Set the `Title` of the page to `Sprocket 9000`.
+  1. Set the `Title` of the page to "Sprocket 9000".
   
   1. Leave the `Permalink` blank.
   
@@ -129,23 +129,23 @@ For this to work we need to create a dummy product that will act as the featured
   
     Enter `SPROCKET9000` into the `Product Id`.
     
-  1. Tick the `Show on a menu` checkbox.
+  1. Tick the **Show on a menu** checkbox.
   
-  1. Leave the menu selection on `Main Menu`.
+  1. Leave the menu selection on **Main Menu**.
   
-  1. In the `Menu text` enter the product name, `Sprocket 9000`.
+  1. In the **Menu text** enter the product name, "Sprocket 9000".
   
-  1. Click `Publish Now`.
+  1. Click **Publish Now**.
   
 The page will reload after Orchard has created the new content item in the background. You will see a green message saying "Your Page has been created":
 
 ![](../Attachments/getting-started-with-modules-part-3/demoproduct-created.png)
   
-If you navigate back to the front-end of the website you should see a new menu item called `Sprocket 9000`. Clicking it will take you to the demo page you just created:
+If you navigate back to the front-end of the website you should see a new menu item called **Sprocket 9000**. Clicking it will take you to the demo page you just created:
 
 ![](../Attachments/getting-started-with-modules-part-3/demoproduct-page.png)
 
-If the menu option doesn't appear on the page you probably clicked `Save` instead of `Publish`. When we created the content type is defaults to being marked as draftable. This means that you can save a copy in the system before it's made available publically. Until you click the `Publish Now` button it won't show on the website.
+If the menu option doesn't appear on the page you probably clicked **Save** instead of **Publish**. When we created the content type is defaults to being marked as _draftable_. This means that you can save a copy in the system before it's made available publicly. Until you click the **Publish Now** button it won't show on the website.
 
 That's all the preparation we need to do before we can dive back into the code. 
 
@@ -198,7 +198,7 @@ An alternative solution to expanding out this `Display()` method would have been
           () => shapeHelper.Parts_FeaturedProduct());
     }
 
-What's the difference and why is this a bad idea? The `Display()` method gets called  to prepare the shapes each time a visitor requests a page. With the modularity of the Orchard code you might still end up having something else on the page influencing it's display so that the shape doesn't make it to the final output.
+What's the difference and why is this a bad idea? The `Display()` method gets called to prepare the shapes each time a visitor requests a page. With the modularity of the Orchard code you might still end up having something else on the page influencing its display so that the shape doesn't make it to the final output.
 
 When the setup code is passed within the lambda it doesn't get run until it's actually needed. This means that if you need to do some "expensive" setup code you don't want to run it unless you're sure it's going to be used. In this context expensive means heavy resource usage (it could require complicated database calls or data crunching) or time consuming (you might rely on calling a 3rd party web service to get some information).
 
@@ -206,7 +206,7 @@ You don't want to waste your resources and slow down the page being displayed by
 
 Let's implement what we have discussed so far:  
 
-  1. Open up the `FeaturedProductDriver.cs` file located in the `.\Drivers\` folder.
+  1. Open up the `FeaturedProductDriver.cs` file located in the `.\Drivers\ ` folder.
   
   1. Replace the `Display()` method with the following:
   
@@ -243,7 +243,7 @@ We could add a public property to the driver which looked like this:
 But where do all of these supporting classes like `_aliasService` and `_contentManager` come from?
 
 ## Dependency injection in Orchard
-The modular design of Orchard means that each feature of Orchard tries to be as independent as it can. This means that when the Widget is building it's shape it doesn't automatically know about the wider context of the page being requested. It is a specialized unit of code which completes it's task as efficiently and simply as possible.
+The modular design of Orchard means that each feature of Orchard tries to be as independent as it can. This means that when the Widget is building its shape it doesn't automatically know about the wider context of the page being requested. It is a specialized unit of code which completes its task as efficiently and simply as possible.
 
 When it's required, the module can request access to parts of the larger Orchard system through the use of Orchard's service classes.
 
@@ -262,7 +262,7 @@ So if you wanted a copy of the content manager then you would request `IContentM
 
 The standard process for incorporating a new service into the class is as follows (you don't need to do this now):
 
-  1. Create a new private, read only variable to hold the injected class. It should start with an underscore like `_contentManager`.
+  1. Create a new private, read-only variable to hold the injected class. It should start with an underscore like `_contentManager`.
    
   1. Update the default constructor to include the service as a parameter.
   
@@ -275,7 +275,7 @@ Based on the service requirements in our demo implementation above of the `Curre
 
 Taking what we have learned about dependency injection and knowing our service requirements we can now implement the next stage of the `FeaturedProductDriver` class:
 
-  1. Open up the `FeaturedProductDriver.cs` file located in the `.\Drivers\` folder.
+  1. Open up the `FeaturedProductDriver.cs` file located in the `.\Drivers\ ` folder.
   
   1. Add the following properties to the top of the `FeaturedProductDriver` class:
   
@@ -283,21 +283,21 @@ Taking what we have learned about dependency injection and knowing our service r
         private readonly IWorkContextAccessor _workContextAccessor;
         private readonly IAliasService _aliasService;
 
-    `IAliasService` will need it's namespace but when you try to add it via `Ctrl-.` you will see Visual Studio doesn't know where to find it.
+    `IAliasService` will need its namespace but when you try to add it via `Ctrl-.` you will see Visual Studio doesn't know where to find it.
   
      We need to add a reference and update the dependencies of our module.
-     
-  1. `Right click` on the `References` entry in the module's project within the `Solution Explorer` window and choose `Add Reference...`.
+
+  1. _Right click_ on the **References** entry in the module's project within the **Solution Explorer** window and choose **Add Reference...**.
   
-  1. Click the `Projects` tab on the left. `Orchard.Alias` should already be visible. `Hover` your mouse over it and a checkbox will appear. Click the checkbox for `Orchard.Alias`. Click `OK`.
+  1. Click the **Projects** tab on the left. `Orchard.Alias` should already be visible. _Hover_ your mouse over it and a checkbox will appear. Click the checkbox for `Orchard.Alias`. Click **OK**.
   
      ![](../Attachments/getting-started-with-modules-part-3/orchardalias-ref.png)
      
   1. Now we have to update our dependencies straight away so they don't get forgotten. Open up the `Module.txt` file located in the project root.
   
-  1. The last line of the file should contain the `Orchard.Widgets` dependency that we created in part one. This field will take a comma separated list detailing  each dependency a modules has.
+  1. The last line of the file should contain the `Orchard.Widgets` dependency that we created in part one. This field will take a comma separated list detailing each dependency a modules has.
   
-    Update the line to add `Orchard.Alias`, ensuring that the line keeps it's indentation, so that the line now looks like this:
+    Update the line to add `Orchard.Alias`, ensuring that the line keeps its indentation, so that the line now looks like this:
     
                 Dependencies: Orchard.Widgets, Orchard.Alias
 
@@ -417,7 +417,7 @@ We will do this by declaring `bool isOnFeaturedProductPage = false;` at the top 
 
 Modify the first `Display()` method by following these steps:
 
-  1. Open up the `FeaturedProductDriver.cs` file located in the `.\Drivers\` folder.
+  1. Open up the `FeaturedProductDriver.cs` file located in the `.\Drivers\ ` folder.
   
   1. Locate the `Display()` method and replace it with the following:
   
@@ -436,17 +436,17 @@ This has laid the groundwork for us. The next piece of code will detect the cont
 ## Detecting the content type
 The `CurrentContent` property that we implemented doesn't exactly return the current content item, it returns an `IContent`. This contains a property called `ContentItem` which then gives us access to everything related to the current content item.
 
-You can explore the `ContentItem` class by navigating around the IntelliSense, or by navigating to the class itself with `F12`. There are lots of interesting properties to use.
+You can explore the `ContentItem` class by navigating around using IntelliSense, or by navigating to the class itself with `F12`. There are lots of interesting properties to use.
 
 The content type is stored as a string inside a `ContentTypeDefinition` property called `TypeDefinition`. You can get to it using this notation:
 
     var itemTypeName = CurrentContent.ContentItem.TypeDefinition.Name;
     
-The `itemTypeName` variable will then contain a string version of the content type. The `Product` content type was created via the admin dashboard. This means that there isn't a concrete class for us to use in a `typeof(T).Name` call so we will have to work with the string `"Product"` when we're checking the type of the current content item.
+The `itemTypeName` variable will then contain a string version of the content type. The `Product` content type was created via the admin dashboard. This means that there isn't a concrete class for us to use in a `typeof(T).Name` call so we will have to work with the string "Product" when we're checking the type of the current content item.
 
 Putting the code together is just a case of a standard .NET string comparison:
 
-  1. Open up the `FeaturedProductDriver.cs` file located in the `.\Drivers\` folder.
+  1. Open up the `FeaturedProductDriver.cs` file located in the `.\Drivers\ ` folder.
   
   1. Locate the `Display()` method and replace it with the following:
   
@@ -481,19 +481,19 @@ We are going to cover the two important things you need to learn about fields so
 
 The first important thing to understand is: `Fields` are *always* in a `ContentPart`.
 
-To be fair, it looked like you had just created the field loose in the content type:
+To be fair, it looked like you had just created the field outside of the content type:
 
 ![](../Attachments/getting-started-with-modules-part-3/fields-hiddencontentpart.png)
 
-But in truth, Orchard created an invisible ContentPart for you and attached those fields to that. The name of that content part is the name of the content type. So for our `Product` content type, the content part would be `Product`. For a `HtmlWidget` it would be `HtmlWidget`, if you added a field to the `Page` you would access it with `Page`.
+But in truth, Orchard created an invisible `ContentPart` for you and attached those fields to that. The name of that content part is the name of the content type. So for our `Product` content type, the content part would be `Product`. For a `HtmlWidget` it would be `HtmlWidget`, if you added a field to the `Page` you would access it with `Page`.
 
 So the way to access our `ProductId` field which is on the `ContentType` of `Product` we would write:
 
     var productId = CurrentContent.ContentItem.Product.ProductId.Value;
     
-Where did the `.Value` come from? Well, your field is not just a simple string. You defined it as a `"Text Field"` when you filled out the form. This maps to the `Orchard.Fields.Fields.InputField` class and you can access it's data through the `.Value` property.
+Where did the `.Value` come from? Well, your field is not just a simple string. You defined it as a `"Text Field"` when you filled out the form. This maps to the `Orchard.Fields.Fields.InputField` class and you can access its data through the `.Value` property.
 
-> As you build up your skills as an Orchard module developer one of the important ones will be digging through the code to discover this sort of thing for yourself. As I was writing this I didn't know what the class was called. To find it out I put a breakpoint on the line of code, started a debug session and inspected the field to see what class it was and how to get at it's data.
+> As you build up your skills as an Orchard module developer one of the important ones will be digging through the code to discover this sort of thing for yourself. As I was writing this I didn't know what the class was called. To find it out I put a breakpoint on the line of code, started a debug session and inspected the field to see what class it was and how to get at its data.
 
 > This is a useful skill to have in your repertoire when working with Orchard but in this case you also have a useful resource that has been put together by Sebastien Ros. He has created an [Orchard Cheatsheet](http://sebastienros.github.io/CheatSheet/) which covers common properties that you might want to access on each of the built-in Orchard content fields.
 
@@ -506,7 +506,7 @@ This means you don't get IntelliSense for dynamic properties. It also means that
 
 Once you have the product id in a string it's just a case of comparing it against the known value and setting `isOnFeaturedProductPage = true` if it's a match:
 
-  1. Open up the `FeaturedProductDriver.cs` file located in the `.\Drivers\` folder.
+  1. Open up the `FeaturedProductDriver.cs` file located in the `.\Drivers\ ` folder.
   
   1. Locate the `Display()` method and replace it with the following:
   
@@ -664,7 +664,7 @@ This is the part where it all pays off. If you run Orchard in the browser you wi
   
     ![](../Attachments/getting-started-with-modules-part-3/testing-homepage.png)
     
-  1. Click on the `Sprocket 9000` menu item to go to your product page. You should see a purple notification box instead of a link:
+  1. Click on the **Sprocket 9000** menu item to go to your product page. You should see a purple notification box instead of a link:
   
     ![](../Attachments/getting-started-with-modules-part-3/testing-sprocket.png)
     
@@ -679,7 +679,7 @@ You can download a copy of the module so far at this link:
 
   * [Download Orchard.LearnOrchard.FeaturedProduct-Part3-v1.0.zip](../Attachments/getting-started-with-modules-part-3/Orchard.LearnOrchard.FeaturedProduct-Part3-v1.0.zip)
   
-To use it in Orchard simply extract the archive into the modules directory at `.\src\Orchard.Web\Modules\`. If you already have the module installed from a previous part then delete that folder first.
+To use it in Orchard simply extract the archive into the modules directory at `.\src\Orchard.Web\Modules\ `. If you already have the module installed from a previous part then delete that folder first.
 
 > For Orchard to recognize it the folder name should match the name of the module. Make sure that the folder name is `Orchard.LearnOrchard.FeaturedProduct` and then the modules files are located directly under that.
 

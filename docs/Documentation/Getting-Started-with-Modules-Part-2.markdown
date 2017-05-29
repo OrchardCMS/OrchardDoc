@@ -33,9 +33,9 @@ If for some reason you don't have these files you can play catch-up by following
 
   1. Download the [completed module source code from part 1](../Attachments/getting-started-with-modules-part-1/Orchard.LearnOrchard.FeaturedProduct-Part1-v1.0.zip).
   
-  1.  Extract the archive into the modules directory at `.\src\Orchard.Web\Modules\`.
+  1.  Extract the archive into the modules directory at `.\src\Orchard.Web\Modules\ `.
   
-  1.  Run Orchard by pressing `Ctrl-F5`, go to the admin dashboard, select Modules from the navigation menu and enable the module.
+  1.  Run Orchard by pressing `Ctrl-F5`, go to the admin dashboard, select **Modules** from the navigation menu and enable the module.
 
 Now we can begin the lesson by starting to build in database functionality to the Featured Product module.
 
@@ -48,9 +48,9 @@ The `ContentPartRecord` class is used by Orchard to store content part data in a
 
 Let's add the class to the module and then start wiring in the `Boolean` `IsOnSale` property:
 
-  1. Locate your FeaturedProduct module in the `Solution Explorer`, `Right click` on the `Models` folder and choose `Add`, `Class...`
+  1. Locate your FeaturedProduct module in the **Solution Explorer**, _Right click_ on the `Models` folder and choose **Add**, **Class...**
   
-  1. In the `Add New Item` dialog enter `FeaturedProductPartRecord` in to the `Name:` field and press `Add`.
+  1. In the **Add New Item** dialog enter `FeaturedProductPartRecord` in to the **Name:** field and press **Add**.
   
   1. Derive the class from `ContentPartRecord`:
   
@@ -82,14 +82,14 @@ You should now end up with a file called `.\Models\FeaturedProductPartRecord.cs`
       }
     }
 
-## Update the ContentPart
+## Update the `ContentPart`
 You now have a class that will provide the interface between your database and your content part (`FeaturedProductPartRecord`).
 
 The first change to the content part will be to let it know about this record class. Then we will add a public property which mirrors the data class and specifies how it will store its data:
 
   1. Open the `ContentPart` file located in `.\Models\FeaturedProductPart.cs`
   
-  1. Add a generic type parameter to the FeaturedProductPart class by changing this:
+  1. Add a generic type parameter to the `FeaturedProductPart` class by changing this:
   
          public class FeaturedProductPart : ContentPart
      
@@ -126,7 +126,7 @@ You should now end up with a `FeaturedProductPart.cs` file that looks like this:
 
 The `Retrieve()` and `Store()` methods come when you inherit from `ContentPart<T>`. 
 
-Under the hood your data is stored in two places. There is the underlying database and something called the infoset.
+Under the hood your data is stored in two places. There is the underlying _database_ and something called the _infoset_.
 
 ## Understanding data storage in Orchard
 Orchard provides an incredibly modular architecture. The way it achieves this is that it breaks everything up into their own little components called content parts. We are busy building one of these content parts right now. Orchard composes these together at run-time to form content types, such as the widget we are working on.
@@ -144,7 +144,7 @@ To minimize these effects a secondary data cache is kept. All of the different c
         Zone="AsideFirst" Name="" CssClasses="" />
     </Data>
 
-So instead of pulling data from three different tables (IdentityPart, CommonPart and WidgetPart) Orchard just selects the single XML block and checks in there. The `Retrieve()` and `Store()` methods automatically keep this data and the individual database tables in sync for you.
+So instead of pulling data from three different tables (`IdentityPart`, `CommonPart` and `WidgetPart`) Orchard just selects the single XML block and checks in there. The `Retrieve()` and `Store()` methods automatically keep this data and the individual database tables in sync for you.
 
 Why not just use the XML infoset all the time? If you need to sort the data or filter it then its actually quicker to do this all within the SQL database server rather than extracting everything and sorting / filtering it after.
 
@@ -187,7 +187,7 @@ We then add our column with a data type `bool` and a name `IsOnSale` which match
 
 > **Bonus Exercise:** Look around in the `Migrations.cs` files located in the other built-in modules for many examples of the things you can do with this class.
 
->  To do this just select the `Search Solution Explorer` textbox at the top of the `Solution Explorer` or press `Ctrl-;`. When it's selected just type `Migrations.cs` in and it will filter out all of the `migrations.cs` files in the solution.
+>  To do this just select the **Search Solution Explorer** textbox at the top of the **Solution Explorer** or press `Ctrl-;`. When it's selected just type `Migrations.cs` in and it will find all of the `Migrations.cs` files in the solution.
 
 You should now end up with a `Migrations.cs` file that looks like this:
 
@@ -234,11 +234,11 @@ For example, you could build an analytics module that listens to the `Loaded` ev
 
 The handler you need in this module is not going to be very complex, but it will implement some plumbing that is necessary to set up the persistence of the part:
 
-  1. In the `Solution Explorer`, right click on the `Orchard.LearnOrchard.FeaturedProduct` project and choose `Add`, `New Folder` and create a new folder called `Handlers`.
+  1. In the **Solution Explorer**, right click on the `Orchard.LearnOrchard.FeaturedProduct` project and choose **Add**, **New Folder** and create a new folder called `Handlers`.
   
-  1. Now right click on the `Handlers` folder and choose `Add`, `Class...`.
+  1. Now right click on the `Handlers` folder and choose **Add**, **Class...**.
   
-  1. In the `Add New Item` dialog enter `FeaturedProductHandler` in to the `Name:` field and press `Add`.
+  1. In the **Add New Item** dialog enter `FeaturedProductHandler` in to the `Name:` field and press **Add**.
   
   1. Derive the class from `ContentHandler`:
   
@@ -273,13 +273,13 @@ You should now end up with a `FeaturedProductHandler.cs` file that looks like th
     }
 
 ## Update the driver to support an editor view
-This time through with the driver it's going to get it's other two core boilerplate methods.
+This time through with the driver it's going to get its other two core boilerplate methods.
 
 The first is a method called `Editor()` which is used to build the shape which will display the edit interface in the admin dashboard. This is designed to be used with a HTTP `GET` request.
 
 The second is another `Editor()` overload which takes the submitted information from the first and attempts to pass that information back into the database. This is designed to be used with a HTTP `POST` request.
 
-  1. Open the `FeaturedProductDriver.cs` class which is in the `.\Drivers\` folder of the module project.
+  1. Open the `FeaturedProductDriver.cs` class which is in the `.\Drivers\ ` folder of the module project.
   
   1. Below the `Display()` method, paste in this block of code:
   
@@ -300,9 +300,9 @@ The second is another `Editor()` overload which takes the submitted information 
         
   1. Add the namespace for `IUpdateModel` using the `Ctrl-.` keyboard shortcut.
 
-As explained above, the first `Editor()` method is for displaying an edit form in the admin dashboard. You can see that it returns a content shape called `Parts_FeaturedProduct_Edit`. We will use this information later on when updating the `placement.info`. 
+As explained above, the first `Editor()` method is for displaying an edit form in the admin dashboard. You can see that it returns a content shape called `Parts_FeaturedProduct_Edit`. We will use this information later on when updating the `Placement.info`. 
 
-The way it does it is by using the provided `shapeHelper` factory to create a new shape for the current content part (our FeaturedProductPart with the `bool IsOnSale` property). This is the same shape factory we used in our `Display()` method the first time around.
+The way it does it is by using the provided `shapeHelper` factory to create a new shape for the current content part (our `FeaturedProductPart` with the `bool IsOnSale` property). This is the same shape factory we used in our `Display()` method the first time around.
 
 For editor views you use the `.EditorTemplate()` method and pass in the configuration values. By default, Orchard places all of its editor views in the `EditorTemplates` folder. Combining this with the `TemplateName` parameter we know that we will be creating a view called `.\Views\EditorTemplates\Parts\FeaturedProduct.cshtml` in the next section.
 
@@ -442,10 +442,10 @@ You should now have a `FeaturedProduct.cshtml` file that looks like this:
     <p>Todays featured product is the Sprocket 9000.</p>
     <p><a href="/sprocket-9000" class="btn-green">Click here to view it</a></p>
 
-## Update the placement.info
+## Update the `Placement.info` file
 Before we run the module to see our updated widget in action we need to make a change to the `placement.info` file. The module should run without errors at this stage but until we set up a `<place>` for the editor template you won't be able to configure the `IsOnSale` variable.
 
-  1. Open the `placement.info` file located in the root folder of the module.
+  1. Open the `Placement.info` file located in the root folder of the module.
   
   1. Within the `<placements>` tag add the following `<place>` tag:
   
@@ -455,11 +455,11 @@ Before we run the module to see our updated widget in action we need to make a c
 
 The name of the place that we are targeting `Parts_FeaturedProduct_Edit` was defined in the driver class when we configured it in the `EditorTemplate()` shape factory method. The shape will be injected into the local zone named "content" with a weight of 7.5. In this case the weight of 7.5 will move it down to the bottom of the form.
 
-> When developing your modules it is common to forget this last stage. While you might not always be able to remember to update the `placement.info` before you run, you should take a moment to remember the solution.
+> When developing your modules it is common to forget this last stage. While you might not always be able to remember to update the `Placement.info` before you run, you should take a moment to remember the solution.
 
-> Whenever the shape isn't displayed where it was expected, think `placement.info` first.
+> Whenever the shape isn't displayed where it was expected, think of `Placement.info` first.
 
-You should now have a `placement.info` file that looks like this:
+You should now have a `Placement.info` file that looks like this:
 
     <Placement>
       <Place Parts_FeaturedProduct="Content:1"/>
@@ -469,23 +469,23 @@ You should now have a `placement.info` file that looks like this:
 ## Trying the module out in Orchard
 Great! You have completed another stage of the development. Now its time to load the website up in the browser and play with the new feature you just built.
 
-  1. Within Visual Studio, press `Ctrl-F5` on your keyboard to start the website without debugging enabled (its quicker and you can attach the debugger later if you need it).
+  1. Within Visual Studio, press `Ctrl-F5` on your keyboard to start the website without debugging enabled (it's quicker and you can attach the debugger later if you need it).
   
   1. Navigate to the admin dashboard.
   
-  1. Click `Widgets` in the side menu.
+  1. Click **Widgets** in the side menu.
   
-  1. If you follow the guide correctly in part 1, you should see your `Featured Product Widget` in the list under `AsideFirst`. Click on the word `Featured Product` (this may vary depending the title you entered when you set the widget up):
+  1. If you follow the guide correctly in part 1, you should see your **Featured Product Widget** in the list under `AsideFirst`. Click on the word **Featured Product** (this may vary depending the title you entered when you set the widget up):
   
     ![](../Attachments/getting-started-with-modules-part-2/testing1-editwidget.png)
     
-  1. The `Edit Widget` page will be displayed. Scroll down to the bottom to find the setting we added:
+  1. The **Edit Widget** page will be displayed. Scroll down to the bottom to find the setting we added:
   
     ![](../Attachments/getting-started-with-modules-part-2/testing1-configure.png)
   
     Tick the checkbox. 
     
-  1. Click `Save`.
+  1. Click **Save**.
   
   1. Navigate back to the homepage of the website by clicking on the site title in the top corner of the admin dashboard:
   
@@ -502,15 +502,15 @@ You can download a copy of the module so far at this link:
 
   * [Download Orchard.LearnOrchard.FeaturedProduct-Part2-v1.0.zip](../Attachments/getting-started-with-modules-part-2/Orchard.LearnOrchard.FeaturedProduct-Part2-v1.0.zip)
   
-To use it in Orchard simply extract the archive into the modules directory at `.\src\Orchard.Web\Modules\`. If you already have the module installed from a previous part then delete that folder first.
+To use it in Orchard simply extract the archive into the modules directory at `.\src\Orchard.Web\Modules\ `. If you already have the module installed from a previous part then delete that folder first.
 
-> For Orchard to recognize it the folder name should match the name of the module. Make sure that the folder name is `Orchard.LearnOrchard.FeaturedProduct` and then the modules files are located directly under that.
+> For Orchard to recognize it, the folder name should match the name of the module. Make sure that the folder name is `Orchard.LearnOrchard.FeaturedProduct` and then the modules files are located directly under that.
 
 ## Conclusion
 This part of the course has expanded your knowledge to touch on some of the data storage and content management features in Orchard. 
 
 You have added in the common module development classes that we didn't cover in the first part. You've experienced using the data migrations to incrementally update your data. You've also seen the basics of creating an admin interface and using it to update the configuration settings of a widget.
 
-You can now see the core process of adding a variable to your module and then implementing it, working successively up the layers to surface it in the admin dashboard and the front-end view.  
+You can now see the core process of adding a variable to your module and then implementing it, working successively up the layers to surface it in the admin dashboard and the front-end view.
 
 In the next part of the getting started with modules course we will look at [working with content items at the code level](Getting-Started-with-Modules-Part-3).
