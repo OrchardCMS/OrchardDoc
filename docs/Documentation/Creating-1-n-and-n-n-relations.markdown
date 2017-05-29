@@ -833,7 +833,7 @@ Of course, any variation from that naming scheme would make the binding fail.
 
 ## The Placement File
 
-For the parts to appear at all in the UI, we need to update our placement.info file:
+For the parts to appear at all in the UI, we need to update our `Placement.info` file:
 
     
     <Placement>

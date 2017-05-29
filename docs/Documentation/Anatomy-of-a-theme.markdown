@@ -142,7 +142,7 @@ Note that this is just a simple example, and normally adding a frame would be be
 
 ## Placement Files
 
-A theme can modify where shapes are rendered by including a _placement.info_ file at the root of the theme folder. The _placement.info_ file is an XML file. Here is an example:
+A theme can modify where shapes are rendered by including a `Placement.info` file at the root of the theme folder. The `Placement.info` file is an XML file. Here is an example:
 
     
     <Placement>

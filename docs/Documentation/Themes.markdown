@@ -158,12 +158,12 @@ What we should focus on is that a single entity such as a theme is kept entirely
 
 The contents of a theme are images, stylesheets, pages, user controls and code. The files a theme can contain are:
 
-* Theme.txt: the manifest of the theme, where the meta-data for the theme is defined. If the manifest file is missing from a theme or if it can't be read, the admin UI will display the theme disabled (this is debatable) with a warning message explaining the problem: "This theme is missing a valid theme.txt manifest file."
-* Theme.png: the thumbnail that will appear in the theme galleries. This thumbnail should be relatively high resolution to enable JavaScript enhancements in the admin UI to show the higher resolution on hover. The high resolution thumbnail will be resized by the style of the img tag to a standard width when displayed in the list of themes.
-* Site.css: this is where most of the styles for the theme are defined. To enable settings to be inserted dynamically, a theme might have a dynamic style section in the master page or the template pages, in addition to the static link to the stylesheet.
-* Views/Templates/Default.aspx: this is the default layout template. It typically contains a main zone where the application will insert a partial view depending on the nature of the contents being displayed (list of posts or details of a post for the home page of a blog, details of a product, etc.).
-* Images: a directory containing the images used by the theme.
-* Scripts: a directory containing the client scripts used by the theme.
+* `Theme.txt`: the manifest of the theme, where the meta-data for the theme is defined. If the manifest file is missing from a theme or if it can't be read, the admin UI will display the theme disabled (this is debatable) with a warning message explaining the problem: "This theme is missing a valid Theme.txt manifest file."
+* `Theme.png`: the thumbnail that will appear in the theme galleries. This thumbnail should be relatively high resolution to enable JavaScript enhancements in the admin UI to show the higher resolution on hover. The high resolution thumbnail will be resized by the style of the img tag to a standard width when displayed in the list of themes.
+* `Site.css`: this is where most of the styles for the theme are defined. To enable settings to be inserted dynamically, a theme might have a dynamic style section in the master page or the template pages, in addition to the static link to the stylesheet.
+* `Views/Templates/Default.aspx`: this is the default layout template. It typically contains a main zone where the application will insert a partial view depending on the nature of the contents being displayed (list of posts or details of a post for the home page of a blog, details of a product, etc.).
+* `Images`: a directory containing the images used by the theme.
+* `Scripts`: a directory containing the client scripts used by the theme.
 
 Other, more specialized views and partial views may be optionally included into a theme, following a naming convention as described in the next section.
 
@@ -202,11 +202,11 @@ The plug-in has the following signature:
          string viewName, Theme theme, ControllerContext context)
 
 
-A view resolution plug-in should return null if it can't find a relevant view. If no plug-in exists or if all returned null, the framework will use default.aspx or default.ascx (depending on whether a full or partial view is necessary in the calling context). As soon as any enabled plug-in returns something other than null, empty string or "default", the framework stops the call loop and uses that value as the name of the physical view to use. This implies that the order in which plug-ins run may be important. This order can be determined from the plug-in admin UI.
+A view resolution plug-in should return null if it can't find a relevant view. If no plug-in exists or if all returned null, the framework will use `default.aspx` or `default.ascx` (depending on whether a full or partial view is necessary in the calling context). As soon as any enabled plug-in returns something other than null, empty string or "default", the framework stops the call loop and uses that value as the name of the physical view to use. This implies that the order in which plug-ins run may be important. This order can be determined from the plug-in admin UI.
 
 The view name that is getting passed into the plug-in is typically just what the controller action asked for. The plug-in system allows for arbitrary flexibility in selecting a physical view from what the action is asking for, depending on any convention and keeping the end result within what the current theme is able to display.
 
-The default view selection plug-in will try to find a view with \[viewName\]\.aspx as the name within the theme and return this if it is found. If not, it will assume that the view name is built using the following convention: `viewName = [ContentType]-[ItemSlug]`
+The default view selection plug-in will try to find a view with `<viewName>.aspx` as the name within the theme and return this if it is found. If not, it will assume that the view name is built using the following convention: `viewName = [ContentType]-[ItemSlug]`
 
 The default view resolver will split the file name on the first dash character, will remove what comes after and try to find a physical view with that name.
 
@@ -245,9 +245,9 @@ Here's a possible implementation of the default view resolution plug-in:
 
 Of course, implementing any other convention to resolve the controller action-provided view name to a physical view name is just a matter of implementing a plug-in.
  
-In the example of displaying a blog post, one can see that the controller would ask for a view named for example "post-my-first-post". The default view resolver would ask the current theme for a view named "post-my-first-post". If it doesn't find it (which is quite likely), it will look for a view named "post". If the current theme has been built for the blog application, it will most likely have it and that's what will be used, otherwise the engine will ask other plug-ins and ultimately fall back to "default".
+In the example of displaying a blog post, one can see that the controller would ask for a view named for example `post-my-first-post`. The default view resolver would ask the current theme for a view named `post-my-first-post`. If it doesn't find it (which is quite likely), it will look for a view named `post`. If the current theme has been built for the blog application, it will most likely have it and that's what will be used, otherwise the engine will ask other plug-ins and ultimately fall back to `default`.
 
-In the example of a commerce package, the controller could ask for "category-boots". The theme could contain that view but if it doesn't the default implementation will try to find "category" and then revert to default.
+In the example of a commerce package, the controller could ask for `category-boots`. The theme could contain that view but if it doesn't the default implementation will try to find `category` and then revert to default.
 
 But we can also look at other patterns to resolve views.
 For example, here's the code for a plug-in that implements the page branch of a resolution tree:
@@ -333,11 +333,11 @@ The description for each setting can have a description and an editor hint. This
 
 There is no type information associated with a setting because the intended audience for theme authoring shouldn't be required to understand such coding concepts. Instead, seen from the theme views, all theme settings are strings and can be injected easily.
 
-It's the editor that is responsible for translating the value of a setting back and forth between the string representation and any internal representation it may need in order to provide a good editing experience. For example, a color setting would be represented in a "#RRGGBB" format that is immediately usable in HTML, but the editor would transform that representation into an instance of the Color type internally, and would surface color picker UI in the admin view to edit it. When it's done, it would persist the string representation back to the theme engine.
+It's the editor that is responsible for translating the value of a setting back and forth between the string representation and any internal representation it may need in order to provide a good editing experience. For example, a color setting would be represented in a `#RRGGBB` format that is immediately usable in HTML, but the editor would transform that representation into an instance of the Color type internally, and would surface color picker UI in the admin view to edit it. When it's done, it would persist the string representation back to the theme engine.
 
 The editor is also responsible for validation of setting values.
 
-Theme settings can be injected into a view using the Html.Theme helper (see [Theme Includes and Overrides](themes-includes)).
+Theme settings can be injected into a view using the `Html.Theme` helper (see [Theme Includes and Overrides](themes-includes)).
 
 There is a set of setting values per theme so that switching to a new theme switches to a new set of values, and going back to the original theme restores the corresponding values.
 
@@ -353,7 +353,7 @@ The stylesheet overrides will be served by a special action. The views will incl
 
 #### The themes directory
 
-Each theme is found as a subdirectory under the "themes" subdirectory of the root of the application. The name of the theme's directory should be the same as the name of the class in theme.cs if there is one.
+Each theme is found as a subdirectory under the `Themes` subdirectory of the root of the application. The name of the theme's directory should be the same as the name of the class in `theme.cs` if there is one.
 
 #### Stylesheet overrides
 

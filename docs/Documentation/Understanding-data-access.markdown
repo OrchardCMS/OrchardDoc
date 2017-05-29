@@ -21,7 +21,7 @@ A record is a class that represents the database schema for a content part. To c
     }
 
 
-Typically, the record class resides in a folder named Models. The parent class, `ContentPartRecord`, also includes a property named `id` and a reference to the content item object. Therefore, an instance of the `MapRecord` class includes not just `Latitude` and `Longitude` but also the `id` property and the content item object that is used to maintain the relationships between the part and other content.
+Typically, the record class resides in a folder named `Models`. The parent class, `ContentPartRecord`, also includes a property named `id` and a reference to the content item object. Therefore, an instance of the `MapRecord` class includes not just `Latitude` and `Longitude` but also the `id` property and the content item object that is used to maintain the relationships between the part and other content.
 
 When you define a content part, you use the record as shown below:
 
@@ -48,7 +48,7 @@ When you define a content part, you use the record as shown below:
 
 Notice that only data that's relevant to the part is defined in the `MapPart` class. You do not define any properties that are needed to maintain the data relationships between `MapPart` and other content.
 
-For a complete example of the MapPart, see [Writing a Content Part](Writing-a-content-part). You can also read the [Getting Started with Modules course](Getting-Started-with-Modules) to familiarize yourself with the overall concepts of module development.
+For a complete example of the `MapPart`, see [Writing a Content Part](Writing-a-content-part). You can also read the [Getting Started with Modules course](Getting-Started-with-Modules) to familiarize yourself with the overall concepts of module development.
 
 ## Data Migrations
 Creating the record class does not create the database table; it only creates a model of the schema. To create the database table, you must write a data migration class.
@@ -61,7 +61,7 @@ You can create a data migration class by running the following command from the 
     codegen datamigration <feature_name>
 
 
-This command creates a _Migrations.cs_ file in the root of the feature. A `Create` method is automatically created in the migration class.
+This command creates a `Migrations.cs` file in the root of the feature. A `Create` method is automatically created in the migration class.
 
 In the `Create` method, you use the `SchemaBuilder` class to create the database table, as shown below for the `MapPart` feature.
 
@@ -149,6 +149,6 @@ A content handler is similar to a filter in ASP.NET MVC. In the handler, you def
 In more advanced content handlers, you define actions that are performed when an event occurs, such as when the feature is published or activated. For more information about content handlers, see [Understanding Content Handlers](Understanding-content-handlers).
 
 ## Content Drivers
-A content driver is similar to a controller in ASP.NET MVC. It contains code that is specific to a content part type and is usually involved in creating data shapes for different conditions, such as display or edit modes. Typically, you override the **Display** and **Editor** methods to return the **ContentShapeResult** object for your scenario.
+A content driver is similar to a controller in ASP.NET MVC. It contains code that is specific to a content part type and is usually involved in creating data shapes for different conditions, such as display or edit modes. Typically, you override the `Display` and `Editor` methods to return the `ContentShapeResult` object for your scenario.
 
 For an example of using a content driver, see [Accessing and Rendering Shapes](Accessing-and-rendering-shapes).

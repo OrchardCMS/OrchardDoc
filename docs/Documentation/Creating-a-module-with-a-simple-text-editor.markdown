@@ -58,9 +58,9 @@ You will use a code-generation command to create a commerce module. Enter the fo
     codegen module SimpleCommerce
 
 
-Open a Windows Explorer window and browse to the newly created _\inetpub\wwwroot\Orchard\Modules\SimpleCommerce_ folder. Open the _module.txt_ file using a text editor.
+Open a Windows Explorer window and browse to the newly created _\inetpub\wwwroot\Orchard\Modules\SimpleCommerce_ folder. Open the `Module.txt` file using a text editor.
 
-Change the description to "A simple commerce module". Change the description of the feature to be "A simple product part". Save the file and close it. The following example shows the complete _module.txt_ file after the changes.
+Change the description to "A simple commerce module". Change the description of the feature to be "A simple product part". Save the file and close it. The following example shows the complete `Module.txt` file after the changes.
 
     
     Name: SimpleCommerce
@@ -271,7 +271,7 @@ Update the _.csproj_ file to include the following line:
 
 The `Editor` method also creates a shape named `EditorTemplate`. The shape has a `TemplateName` property that instructs Orchard where to look for the rendering template. The code also specifies that the model for that template will be the part, not the shape (which would be the default).
 
-The placement of those parts within the larger front end or dashboard must be specified using a _placement.info_ file that is located at the root of the module. That file, like a view, can be overridden from a theme. Create the _placement.info_ file with the following contents:
+The placement of those parts within the larger front end or dashboard must be specified using a `Placement.info` file that is located at the root of the module. That file, like a view, can be overridden from a theme. Create the `Placement.info` file with the following contents:
 
     
     <Placement>
@@ -280,10 +280,10 @@ The placement of those parts within the larger front end or dashboard must be sp
     </Placement>
 
 
-Add the _placement.info_ file to the _.csproj_ file using the following line:
+Add the `Placement.info` file to the `.csproj` file using the following line:
 
     
-    <Content Include="placement.info" />
+    <Content Include="Placement.info" />
 
 
 # Building the Templates

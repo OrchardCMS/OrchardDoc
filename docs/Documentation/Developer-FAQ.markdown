@@ -22,8 +22,8 @@ The projects in the "Modules" folder are physically located under the "src\Orcha
 
 The Core modules are physically located under the "\src\Orchard.Web\Core" folder. 
 
-## What is a Module.txt file?
-This is the module manifest. It is a YAML-format file. You can learn more about module.txt in the [manifest files guide](manifest-files).
+## What is a `Module.txt` file?
+This is the module manifest. It is a YAML-format file. You can learn more about `Module.txt` in the [manifest files guide](manifest-files).
 
 ## What is the AdminMenu.cs file?
 This file has an implementation of the Orchard interface called `INavigationProvider`. It lets modules hook themselves into the admin menu in the backend. This is typically where you declare what links should your module inject into the Admin menu and what controller actions these links invoke.

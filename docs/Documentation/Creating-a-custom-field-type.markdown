@@ -27,7 +27,7 @@ Once the **Code Generation** feature has been enabled, you can type the followin
     codegen module CustomFields /IncludeInSolution:true
 
 
-This should create a new **CustomFields** folder under Modules, pre-populated with a few folders and files. For example, you may open the **module.txt** manifest file and modify it:
+This should create a new `CustomFields` folder under Modules, pre-populated with a few folders and files. For example, you may open the `Module.txt` manifest file and modify it:
 
     
     Name: CustomFields
@@ -51,7 +51,7 @@ We are defining two features here because this module will eventually contain mo
 
 # Modeling the Field
 
-Let's now create a **Fields** folder inside of our **CustomFields** folder and create the following **DateTimeField.cs** file in there:
+Let's now create a `Fields` folder inside of our `CustomFields` folder and create the following `DateTimeField.cs` file in there:
 
     
     using System;
@@ -92,7 +92,7 @@ The field is defined as a class that derives from `ContentField`, which gives us
 
 # Creating a View Model
 
-It is good practice (although not mandatory) to create one or several view models that will be used as the model in the admin template that we will use to render instances of our field. Let's create the following **DateTimeFieldViewModel.cs** file in a new **ViewModels** folder:
+It is good practice (although not mandatory) to create one or several view models that will be used as the model in the admin template that we will use to render instances of our field. Let's create the following `DateTimeFieldViewModel.cs` file in a new `ViewModels` folder:
 
     
     namespace CustomFields.DateTimeField.ViewModels {
@@ -116,7 +116,7 @@ This not only exposes the date and time as separate properties, it also has some
 
 This flexibility in rendering that we just introduced in the view model can be exposed as settings for the field. This way, administrators can configure fields on the content types they create in order to adapt them to their exact needs.
 
-Create a **Settings** folder and add the following **DateTimeFieldSettings.cs** file to it:
+Create a `Settings` folder and add the following `DateTimeFieldSettings.cs` file to it:
 
     
     namespace CustomFields.DateTimeField.Settings {
@@ -139,7 +139,7 @@ We have defined here an enumeration describing the possible values of our displa
 
 Exactly like a part, a field has a driver that will be responsible for handling display and editing actions on the field when it's been added to a content type.
 
-Create a **Drivers** folder and add the following **DateTimeFieldDriver.cs**:
+Create a `Drivers` folder and add the following `DateTimeFieldDriver.cs`:
 
     
     using System;
@@ -182,7 +182,7 @@ Create a **Drivers** folder and add the following **DateTimeFieldDriver.cs**:
                 var value = field.DateTime;
                 
                 return ContentShape("Fields_Custom_DateTime", // key in Shape Table
-                        field.Name, // used to differentiate shapes in placement.info overrides, e.g. Fields_Common_Text-DIFFERENTIATOR
+                        field.Name, // used to differentiate shapes in Placement.info overrides, e.g. Fields_Common_Text-DIFFERENTIATOR
                         // this is the actual Shape which will be resolved
                         // (Fields/Custom.DateTime.cshtml)
                         s =>
@@ -310,7 +310,7 @@ The second `Editor` method is the one that is called when the admin form is subm
 
 We need to write the views that will determine how our field is represented in admin and front-end UI.
 
-Create a **Fields** and an **EditorTemplates** directory under **Views**. Then create another **Fields** directory under EditorTemplates. In **Views/Fields**, create the following **Custom.DateTime.cshtml**:
+Create a `Fields` and an `EditorTemplates` directory under `Views`. Then create another `Fields` directory under EditorTemplates. In `Views/Fields`, create the following `Custom.DateTime.cshtml`:
 
     
     <p class="text-field"><span class="name">@Model.Name:</span> 
@@ -321,7 +321,7 @@ Create a **Fields** and an **EditorTemplates** directory under **Views**. Then c
 
 This code renders the name of the field, a colon and then the date and time according to the field's configuration.
 
-Now create a file of the same name under **Views/EditorTemplates/Fields** with the following contents:
+Now create a file of the same name under `Views/EditorTemplates/Fields` with the following contents:
 
     
     @model CustomFields.DateTimeField.ViewModels.DateTimeFieldViewModel
@@ -370,7 +370,7 @@ Now create a file of the same name under **Views/EditorTemplates/Fields** with t
 
 This template is registering a few styles and scripts (note that if other parts register the same files, they will still be rendered only once). Then, it defines the editor as a date picker and a time picker according to the field's configuration. The fields are regular text boxes that are unobtrusively enriched by date and time pickers using jQuery UI plug-ins.
 
-To specify the order and location where these templates will be rendered within the composed page, we need to add a placement.info file into the root of the module's directory:
+To specify the order and location where these templates will be rendered within the composed page, we need to add a `Placement.info` file into the root of the module's directory:
     
     <Placement>
         <Place Fields_Custom_DateTime_Edit="Content:2.5"/>
@@ -383,7 +383,7 @@ To specify the order and location where these templates will be rendered within 
 
 We are not quite done yet. We still need to take care of managing and persisting the settings for the field.
 
-Add the following **DateTimeFieldEditorEvents.cs** file to the **Settings** folder:
+Add the following `DateTimeFieldEditorEvents.cs` file to the `Settings` folder:
 
     
     using System.Collections.Generic;
@@ -425,7 +425,7 @@ Add the following **DateTimeFieldEditorEvents.cs** file to the **Settings** fold
 
 This is the equivalent of a driver, but for field settings. The first method gets the settings and determines the template to render, and the second updates the model with the values from the submitted form and then calls the first.
 
-The editor template for the field is defined by the following **DateTimeFieldSettings.cshtml** that you should create in a new **DefinitionTemplates** folder under **Views**:
+The editor template for the field is defined by the following `DateTimeFieldSettings.cshtml` that you should create in a new `DefinitionTemplates` folder under `Views`:
 
     
     @model CustomFields.DateTimeField.Settings.DateTimeFieldSettings
@@ -456,9 +456,9 @@ This template creates a label for the setting and then a drop-down that enables 
 
 # Updating the Project File
 
-If you are using Visual Studio, you should skip this section as your project file has already been updated, provided you saved all (CTRL+SHIFT+S). Otherwise, in order for the Orchard dynamic compilation engine to be able to pick up our new module's cs files, we need to add them to the **CustomFields.csproj** file. 
+If you are using Visual Studio, you should skip this section as your project file has already been updated, provided you saved all (CTRL+SHIFT+S). Otherwise, in order for the Orchard dynamic compilation engine to be able to pick up our new module's cs files, we need to add them to the `CustomFields.csproj` file. 
 
-Find the `<Content Include="Properties\AssemblyInfo.cs"/>` line in **CustomFields.csproj**. If you look at it then you will see that this is inside an `<ItemGroup>` element. After that end `</ItemGroup>` for that section add in this code:
+Find the `<Content Include="Properties\AssemblyInfo.cs"/>` line in `CustomFields.csproj`. If you look at it then you will see that this is inside an `<ItemGroup>` element. After that end `</ItemGroup>` for that section add in this code:
 
     <ItemGroup>
       <Compile Include="Drivers\DateTimeFieldDriver.cs" />
@@ -470,7 +470,7 @@ Find the `<Content Include="Properties\AssemblyInfo.cs"/>` line in **CustomField
 
 # Adding the Style Sheet
 
-Create a **Styles** directory and create the following **datetime.css**:
+Create a `Styles` directory and create the following `datetime.css`:
 
     
     html.dyn label.forpicker {
@@ -491,12 +491,12 @@ Create a **Styles** directory and create the following **datetime.css**:
 
 # Using the Field
 
-In order to be able to use the new field, you must first make sure that the **Orchard.ContentTypes** feature is enabled. Also enable our new **DateTimeField** feature under **Fields**. Once it is, you can click on **Manage content types** in the admin menu. Click **Create new type** and give it the name "Event". Click **Add** next to fields and type in "When" as the name of the field. Select our new **DateTime** field type as the type of the field.
+In order to be able to use the new field, you must first make sure that the `Orchard.ContentTypes` feature is enabled. Also enable our new `DateTimeField` feature under `Fields`. Once it is, you can click on **Manage content types** in the admin menu. Click **Create new type** and give it the name "Event". Click **Add** next to fields and type in "When" as the name of the field. Select our new `DateTime` field type as the type of the field.
 
-Now in the type editor, you should see our new **When** field, and you should be able to deploy its settings section by clicking the "**&gt;**" on its left:
+Now in the type editor, you should see our new `When` field, and you should be able to deploy its settings section by clicking the "**&gt;**" on its left:
 
 ![Configuring the field](../Attachments/Creating-a-custom-field-type/ConfiguringTheField.PNG)
-We chose to keep both date and time displayed. The settings for the field are also the opportunity to determine where the field will appear on the front end if you want to override the defaults. Let's skip that for now. Add the **Route** part so that our events can have a title, then hit Save.
+We chose to keep both date and time displayed. The settings for the field are also the opportunity to determine where the field will appear on the front end if you want to override the defaults. Let's skip that for now. Add the `Route` part so that our events can have a title, then hit Save.
 
 We can now add a new event by clicking **Create Event** in the admin menu. The editor that gets created for us has a when field with nice date and time pickers:
 

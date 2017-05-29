@@ -26,7 +26,7 @@ If you get stuck or need some support at any point in the course there are sever
   1. Open an issue on the [Orchard Doc GitHub repo](https://github.com/OrchardCMS/OrchardDoc/issues).
 
 ## Setting up
-First things first, you need to follow the [setting up for a lesson](Setting-up-for-a-lesson) guide.
+First things first. You need to follow the [setting up for a lesson](Setting-up-for-a-lesson) guide.
 
 This will take you through the initial steps to set up your dev environment and pull a fresh copy of the source code down. When you've completed it please use your back button to come back to this course.
        
@@ -50,13 +50,13 @@ Now that you've completed all of the setup tasks you will have a fresh copy of O
 The rest of this part of the course will walk you through the process required to scaffold an empty module and then build a simple `Widget` inside of it.
 
 ## Command line scaffolding with Orchard.exe
-You should now be looking at Visual Studio. Down the side, in your Solution Explorer window you will see many files and folders. 
+You should now be looking at Visual Studio. Down the side, in your **Solution Explorer** window you will see many files and folders. 
 
 The first step to take is to collapse all of the projects down. Its a long list and we need to be able to see an overview of the solution so we can start working with it. You don't need to collapse these individually by hand however:
 
-  1. If your Solution Explorer window is not visible click `View`, `Solution Explorer`. 
+  1. If your Solution Explorer window is not visible click **View**, **Solution Explorer**. 
   
-  1. Click the `Collapse All` icon in the toolbar along the top of the solution explorer. It looks like this:
+  1. Click the **Collapse All** icon in the toolbar along the top of the solution explorer. It looks like this:
      
     ![](../Attachments/getting-started-with-modules-part-1/collapse-all.png)
 
@@ -68,11 +68,11 @@ There is a utility that is packaged with each copy of Orchard which will let us 
 
 To scaffold a new module:
 
-  1. Press the `Save All` button (or press `Ctrl-Shift-S`). Its a good practice to always save before using the command line utility. Many of its commands will make changes to your solution and if you have unsaved changes you will get merge conflicts.
+  1. Press the **Save All** button (or press `Ctrl-Shift-S`). It's a good practice to always save before using the command line utility. Many of its commands will make changes to your solution and if you have unsaved changes you will get merge conflicts.
   
   1. In the Solution Explorer, scroll down to the `Orchard.Web` project. It should be the very last project in the solution.
   
-  1. Right click on the `Orchard.Web` project and choose `Open Folder in File Explorer`:
+  1. Right click on the `Orchard.Web` project and choose **Open Folder in File Explorer**:
      
      ![](../Attachments/getting-started-with-modules-part-1/open-orchard-web.png)
   
@@ -96,13 +96,13 @@ To scaffold a new module:
      
      This will activate the code generation features of `orchard.exe`. 
      
-     > **Note:** If you get an error saying `No command found matching arguments "feature enable Orchard.CodeGeneration"` then you didn't follow the steps in the [setting up for a lesson](Setting-up-for-a-lesson) guide. You need to run the solution and go through the Orchard Setup screens before this command is available.
+     > **Note:** If you get an error saying '_No command found matching arguments "feature enable Orchard.CodeGeneration"_' then you didn't follow the steps in the [setting up for a lesson](Setting-up-for-a-lesson) guide. You need to run the solution and go through the Orchard Setup screens before this command is available.
      
      The code generation command that we will be using is `codegen module`.
      
   1. Type `help codegen module` and press enter to see the syntax for this command. To see details about all of the commands available type `help commands`. 
   
-    Like the rest of Orchard CMS, the orchard.exe command shell is extendable. The total number of commands available can vary depending on what features / modules you have loaded. In a future tutorial we will look at extending orchard.exe with our own commands.
+    Like the rest of Orchard CMS, the `orchard.exe` command shell is extendable. The total number of commands available can vary depending on what features / modules you have loaded. In a future tutorial we will look at extending `orchard.exe` with our own commands.
     
   1. Scaffold the module by entering the following command: `codegen module Orchard.LearnOrchard.FeaturedProduct`. 
   
@@ -110,13 +110,13 @@ To scaffold a new module:
      
   1. Close the Orchard command-line window.
   
-  1. This has now created a new, empty module in the file system. Switching back to Visual Studio should show you the `File Modification Detected` dialog:
+  1. This has now created a new, empty module in the file system. Switching back to Visual Studio should show you the **File Modification Detected** dialog:
     
     ![](../Attachments/getting-started-with-modules-part-1/reload-solution.png)
     
-    Click `Reload`.
+    Click **Reload**.
     
-    > **Note:** If you had unsaved changes in your Solution file then click the `Dismiss` option and add the project manually. In the Solution Explorer, `Right click` on the `Modules` folder. Choose `Add`, `Existing Project`, then navigate to `.\src\Orchard.Web\Modules\Orchard.LearnOrchard.FeaturedProduct\`, select `Orchard.LearnOrchard.FeaturedProduct.csproj` and press `Open`.
+    > **Note:** If you had unsaved changes in your Solution file then click the **Dismiss** option and add the project manually. In the Solution Explorer, _Right click_ on the `Modules` folder. Choose **Add**, **Existing Project**, then navigate to `.\src\Orchard.Web\Modules\Orchard.LearnOrchard.FeaturedProduct\`, select `Orchard.LearnOrchard.FeaturedProduct.csproj` and press **Open**.
 
 The basic framework for a module now exists inside the modules section of your solution:
 
@@ -129,14 +129,14 @@ If you are at the stage of wanting to build modules for Orchard then you should 
   
   - **Widgets**: You can also make a content type that works as a `Widget`. The `Widget` is a special variation of content type which can be placed into one of the many `Zones` a template defines. It's manageable via the admin dashboard at run-time. Content types can opt-in to this system by configuring their `Stereotype` setting to `Widget`.  
   
-  - **Content Item**: This is an instance of a specific content type. When you create a new `Page` in Orchard and fill it with content that is a `Content Item` with a `Content Type` of `Page`.
+  - **Content Item**: This is an instance of a specific content type. When you create a new `Page` in Orchard and fill it with content, you have created a _Content Item_ with a _Content Type_ of `Page`.
   
-  - **Content Part**: A small module providing some specific functionality. The `Content Type` is made up by attaching various `Content Parts` to it. For example you could have a comments content part. It just manages a block of comments for whatever it is attached to. The same comments content part could be attached to a `Page` content type, a `Blog` content type, or within a `Widget`.
+  - **Content Part**: A small module providing some specific functionality. The _Content Type_ is made up by attaching various _Content Parts_ to it. For example you could have a _comments_ content part. It just manages a block of comments for whatever it is attached to. The same comments content part could be attached to a `Page` content type, a `Blog` content type, or within a `Widget`.
 
 ## What we will be building
 As you might have guessed from the module name, we are going to build a very simple featured product module. This first step into extending Orchard will be a small one. 
 
-The featured product module will be a `Widget` which shows a static message listing the featured product with a link to that page. It's not going to have any configurable settings behind it so we won't need to look at the database side of things yet. It's not going to be powered by an actual product system. A `Widget` is a great starting pointing point because it doesn't need to worry about menu settings, titles, URLs or integration into the admin dashboard.
+The featured product module will be a `Widget` which shows a static message listing the featured product with a link to that page. It's not going to have any configurable settings behind it so we won't need to look at the database side of things yet. It's not going to be powered by an actual product system. A `Widget` is a great starting point because it doesn't need to worry about menu settings, titles, URLs or integration into the admin dashboard.
 
 It will be a simple banner which you can display on your site by adding a widget via the admin dashboard. This will be enough to show the core concepts of a module. We will come back and make improvements in the next three parts of this course.
 
@@ -147,19 +147,19 @@ The content part class is the core data structure. When you scaffolded the modul
 
 ![](../Attachments/getting-started-with-modules-part-1/add-contentpart-class.png)
 
-  1. `Right click` on the `Models` folder.
+  1. **Right click** on the `Models` folder.
   
-  1. Choose `Add`
+  1. Choose **Add**
   
-  1. Choose `Class...`
+  1. Choose **Class...**
 
-  1. In the `Name:` field type `FeaturedProductPart`
+  1. In the **Name:** field type `FeaturedProductPart`
   
-  1. Click `Add`
+  1. Click **Add**
   
 Your new class will be created and opened up in the Visual Studio editor.
 
-> **Important note:** In order for Orchard to recognize Content Part classes they must be in a namespace ending `.Models`. 
+> **Important note:** In order for Orchard to recognize Content Part classes they must be in a namespace ending in `.Models`. 
 
 > Because you already added this class within the `Models` folder the namespace is automatically wrapped around your class. In the future, when you're making your own classes don't forget to ensure that you follow this namespace structure.
 
@@ -187,17 +187,17 @@ That's all you need to do for your first `ContentPart` class. Your `FeaturedProd
     }
 
 ## Data migrations
-When your module is enabled in the admin dashboard Orchard will execute a data migration process. The purpose of the data migration is to register a list of the features contained in the module and any data it uses.
+When your module is enabled in the admin dashboard, Orchard will execute a data migration process. The purpose of the data migration is to register a list of the features contained in the module and any data it uses.
 
 We aren't going to use this yet, but the migration is also used for upgrades. As you work on your modules you will want to add and remove bits. The data migration class can make changes and you can transform your existing data to meet your new requirements.
 
 The data migration class can be created by hand, following a similar process as the last section but we can also scaffold it with the `orchard.exe` command line. Let's dive back in to the command line and add a data migration class to the module.
 
-  1. Press the `Save All` button (or press `Ctrl-Shift-S`). Its a good practice to always save before using the command line utility. Many of its commands will make changes to your solution and if you have unsaved changes you will get merge conflicts.
+  1. Press the **Save All** button (or press `Ctrl-Shift-S`). Its a good practice to always save before using the command line utility. Many of its commands will make changes to your solution and if you have unsaved changes you will get merge conflicts.
   
   1. In the Solution Explorer, scroll down to the `Orchard.Web` project. It should be the very last project in the solution.
   
-  1. Right click on the `Orchard.Web` project and choose `Open Folder in File Explorer`:
+  1. Right click on the `Orchard.Web` project and choose **Open Folder in File Explorer**:
      
      ![](../Attachments/getting-started-with-modules-part-1/open-orchard-web.png)
   
@@ -221,7 +221,7 @@ The data migration class can be created by hand, following a similar process as 
      
   1. Type `help codegen datamigration` and press enter to see the syntax for this command. To see details about all of the commands available type `help commands`. 
   
-    Like the rest of Orchard CMS, the orchard.exe command shell is extendable. The total number of commands available can vary depending on what features / modules you have loaded. In a future tutorial we will look at extending orchard.exe with our own commands.
+    Like the rest of Orchard CMS, the `orchard.exe` command shell is extendable. The total number of commands available can vary depending on what features / modules you have loaded. In a future tutorial we will look at extending `orchard.exe` with our own commands.
     
   1. Scaffold the data migration class by entering the following command: `codegen datamigration Orchard.LearnOrchard.FeaturedProduct`.
   
@@ -229,17 +229,17 @@ The data migration class can be created by hand, following a similar process as 
   
   1. This has now created a new data migration the file system called `Migrations.cs`. It will be in the root folder of your module. 
   
-     Switching back to Visual Studio should show you the `File Modification Detected` dialog:
+     Switching back to Visual Studio should show you the **File Modification Detected** dialog:
     
     ![](../Attachments/getting-started-with-modules-part-1/reload-solution.png)
     
-    Click `Reload`.
+    Click **Reload**.
     
-    > **Note:** If you had unsaved changes in your Solution file then click the `Dismiss` option and add the class manually. In the Solution Explorer, `right click` on the `Orchard.LearnOrchard.FeaturedProduct` folder. Choose `Add`, `Existing Item`, then navigate to `.\src\Orchard.Web\Modules\Orchard.LearnOrchard.FeaturedProduct\`, select `Migrations.cs` and press `Add`.
+    > **Note:** If you had unsaved changes in your Solution file then click the **Dismiss** option and add the class manually. In the Solution Explorer, _right click_ on the `Orchard.LearnOrchard.FeaturedProduct` folder. Choose **Add**, **Existing Item**, then navigate to `.\src\Orchard.Web\Modules\Orchard.LearnOrchard.FeaturedProduct\`, select `Migrations.cs` and press **Add**.
 
 Now you have a `Migrations.cs` file in the root folder of your module's project. By default it has an empty method called `Create()` which returns an `int`. For the moment, returning a value of `1` is fine. It's the version number of your data migration and we will look into it in more detail later in this course.
 
-As discussed earlier the `Widget` is just a `ContentType` with a `Stereotype` of `Widget`. A `ContentType` is basically just a collection of `ContentPart`s. Every `ContentType` should contain the `CommonPart` which gives you the basics like the owner and date created fields. We will also add the `WidgetPart` so it knows how to widget. Finally we also include the content part we are building, `FeaturedProductPart`.
+As discussed earlier, the `Widget` is just a `ContentType` with a `Stereotype` of `Widget`. A `ContentType` is basically just a collection of `ContentPart`s. Every `ContentType` should contain the `CommonPart` which gives you the basics like the owner and date created fields. We will also add the `WidgetPart` so it knows how to widget. Finally we also include the content part we are building, `FeaturedProductPart`.
 
 Let's update the `Create()` method to implement these plans:
 
@@ -265,11 +265,11 @@ Let's update the `Create()` method to implement these plans:
   
     ![](../Attachments/getting-started-with-modules-part-1/datamigrations-unknownnamespace.png)
    
-  1. `Right click` on your `References` and choose `Add Reference...`
+  1. _Right click_ on your **References** and choose **Add Reference...**
    
      ![](../Attachments/getting-started-with-modules-part-1/datamigrations-addreference.png)
      
-  1. Click the `Projects` tab on the left. Scroll down until you can see `Orchard.Widgets` in the list. `Hover` your mouse over it and a checkbox will appear. Click the checkbox for  `Orchard.Widgets`. Click `OK`.
+  1. Click the **Projects** tab on the left. Scroll down until you can see `Orchard.Widgets` in the list. _Hover_ your mouse over it and a checkbox will appear. Click the checkbox for  `Orchard.Widgets`. Click **OK**.
   
      ![](../Attachments/getting-started-with-modules-part-1/datamigrations-orchardwidgets.png)
      
@@ -279,7 +279,7 @@ Let's update the `Create()` method to implement these plans:
      
      You will now have the correct `using Orchard.Widgets.Models` option presented to you. Select it.
 
-  1. Save your progress so far by clicking the `Save all` button (or press `Ctrl-Shift-S`).
+  1. Save your progress so far by clicking the **Save all** button (or press `Ctrl-Shift-S`).
   
 That's all for the data migration, your `Migrations.cs` should now look like this:
 
@@ -313,7 +313,7 @@ In order to let Orchard know that we have this dependency we need to record it i
 
 We will look at the `Module.txt` manifest file again in more detail in part 4 of this course, for now we just need to go in and record the dependency we have created with `Orchard.Widgets`. 
 
-It is important to record this information as soon as we make a dependency on a module. If we don't record the information then your module can cause exceptions for your users at run-time. You really need to get into the habit of doing it straight away because not only are they are easy to forget but if you have the module that you depend on already enabled you won't see any errors but your users will.
+It is important to record this information as soon as we make a dependency on a module. If we don't record the information then your module can cause exceptions for your users at run-time. You really need to get into the habit of doing it straight away, because not only are they are easy to forget but if you have the module that you depend on already enabled you won't see any errors but your users will.
 
 Lets update the manifest now to include the `Orchard.Widgets` dependency:
 
@@ -332,7 +332,7 @@ Lets update the manifest now to include the `Orchard.Widgets` dependency:
                  Description: Description for feature Orchard.LearnOrchard.FeaturedProduct.
                  Dependencies: Orchard.Widgets
                  
-      The indentation is important as creates hierarchy within a YAML document. Indent the line with 8 spaces.
+      The indentation is important as it creates hierarchy within a YAML document. Indent the line with 8 spaces.
       
 ## How is all this magic working?
 So far the `ContentPart` class has been magically detected as long as it uses the `.Model` namespace, now the data migration is automatically detected just for deriving from `DataMigrationImpl`. How is all of this happening?
@@ -346,7 +346,7 @@ Later on we will use Autofac's dependency injection which let us automatically g
 ## Content part driver
 Everything you see in Orchard is composed from `Shapes`. If you don't know about shapes you can learn more about them in the [accessing and rendering shapes](Accessing-and-rendering-shapes) guide. 
 
-A content part driver is a class that composes the shapes that should be used to view and edit content parts. Drivers live in their own folder called `Drivers`. A basic driver class will contain three methods; a display driver for viewing a content part in the front end, an editor driver for presenting an editor form in the admin dashboard and an update method to handle changes submitted from the editor form.
+A content part driver is a class that composes the shapes that should be used to view and edit content parts. Drivers live in their own folder called `Drivers`. A basic driver class will contain three methods: a _display_ driver for viewing a content part in the front end, an _editor_ driver for presenting an editor form in the admin dashboard and an _update_ method to handle changes submitted from the editor form.
 
 As the shapes are created in the driver you can also pass data through to a view. Views are discussed in the next section but first we need to wire in the plumbing.
 
@@ -354,9 +354,9 @@ The widget that we are building has no configuration, so all this driver will ne
 
 There aren't any command line scaffolding commands for setting up new drivers so you will need to create it manually:
 
-  1. Make a new `Drivers` folder (`Right click` on the module project in the solution explorer, click `Add`, `New Folder`)
+  1. Make a new `Drivers` folder (_Right click_ on the module project in the solution explorer, click **Add**, **New Folder**)
   
-  1. Add a new class called `FeaturedProductDriver` by right clicking the `Drivers` folder, clicking `Add`, `Class...` and typing `FeaturedProductDriver` for the name (Visual Studio will automatically add the `.cs` on to the end for you) 
+  1. Add a new class called `FeaturedProductDriver` by right clicking the `Drivers` folder, clicking **Add**, **Class...** and typing `FeaturedProductDriver` for the name (Visual Studio will automatically add the `.cs` on to the end for you) 
   
      ![](../Attachments/getting-started-with-modules-part-1/driver-addclass.png)
      
@@ -374,7 +374,7 @@ In the future we will do a lot with the driver class and the way that it builds 
             shapeHelper.Parts_FeaturedProduct());
         }
 
-This says that when displaying the `FeaturedProductPart` return a shape called `Parts_FeaturedProduct`. By default Orchard will look for this shape in  `Views\Parts\FeaturedProduct.cshtml` which is what we will build next.
+This says that when displaying the `FeaturedProductPart` return a shape called `Parts_FeaturedProduct`. By default Orchard will look for this shape in `Views\Parts\FeaturedProduct.cshtml` which is what we will build next.
 
 Your `FeaturedProductDriver.cs` file should now look like this:
 
@@ -396,7 +396,7 @@ Orchard uses Razor template views to display it's shapes. You can supply strongl
 
 For this first widget our needs are simple and we will only be putting plain HTML markup inside the `.cshtml` file:
 
-  1. Add a new folder inside the `Views` folder called `Parts` (`Right click` on the `View` folder in the solution explorer, click `Add`, `New Folder` and type `Parts`).
+  1. Add a new folder inside the `Views` folder called `Parts` (_Right click_ on the `View` folder in the solution explorer, click **Add**, **New Folder** and type `Parts`).
   
   1. Add a new `.cshtml` Razor view within the `Parts` folder called `FeaturedProduct.cshtml`
   
@@ -418,27 +418,27 @@ For this first widget our needs are simple and we will only be putting plain HTM
 ## Placement
 Almost all of the key elements are in place now except for this last one. The configuration inside a driver class tells Orchard *how* to render that content part. Content parts always exist within a larger composite content item. Placement is used to tell Orchard *where* to render these components.
 
-The `placement.info` file goes in the root folder of the module. It is an XML file with a simple structure. You can learn more about the placement.info in [understanding placement.info](Understanding-placement-info) guide.
+The `Placement.info` file goes in the root folder of the module. It is an XML file with a simple structure. You can learn more about the `Placement.info` file in the [understanding placement.info](Understanding-placement-info) guide.
 
-Add the `placement.info` file to your module:
+Add the `Placement.info` file to your module:
 
-  1. `Right click` on the module project in the solution explorer.
+  1. _Right click_ on the module project in the solution explorer.
   
-  1. Choose `Add`, `New Item` to get to the add item screen:
+  1. Choose **Add**, **New Item** to get to the add item screen:
   
      ![](../Attachments/getting-started-with-modules-part-1/placement-addfile.png)
   
-  1. From the templates categories in the left hand side, choose `General`
+  1. From the templates categories in the left hand side, choose **General**
   
-  1. Find `Text File` in the list
+  1. Find **Text File** in the list
   
-  1. Enter `placement.info` in the **Name:** field.
+  1. Enter `Placement.info` in the **Name:** field.
   
-  1. Click `OK`
+  1. Click **OK**
   
 This module has a single shape so we need to set up a `<Place>` for that shape. 
 
-  1. Add this snippet to the empty placement.info file:
+  1. Add this snippet to the empty `Placement.info` file:
 
         <Placement>
           <Place Parts_FeaturedProduct="Content:1"/>
@@ -446,9 +446,9 @@ This module has a single shape so we need to set up a `<Place>` for that shape.
 
 The `Content:1` is the zone and priority of that shape. A shape will have several zones defined for it. Typically these include the header, content, meta and footer but they can have any combination of zones defined. In this case the `Content` is the main content area.
 
-The priority means that it will be near the top of the content zone. In more complicated modules there could be several shapes. Setting different priorities will let you organize their display order when you want them to be in the same zone. For example, if another shape had a place of `Content:0.5` it would go before it, `Content:15` and it would go after it.
+The priority means that it will be near the top of the content zone. In more complicated modules there could be several shapes. Setting different priorities will let you organize their display order when you want them to be in the same zone. For example, if another shape had a place of `Content:0.5` it would go before it, and `Content:15` would go after it.
 
-Theme developers can customize these layout preferences by providing their own placement.info and overriding your initial configuration. This lets theme authors customize your module without having to make changes to the actual code. This means when the module is upgraded to a new version the theme developers changes will not be overwritten.
+Theme developers can customize these layout preferences by providing their own `Placement.info` and overriding your initial configuration. This lets theme authors customize your module without having to make changes to the actual code. This means when the module is upgraded to a new version the theme developers' changes will not be overwritten.
 
 ## Trying the module out in Orchard
 Congratulations, you've made it to the pay off, using the module in Orchard!
@@ -465,13 +465,13 @@ The last few steps will enable the module in Orchard and assign the widget to a 
   
      ![](../Attachments/getting-started-with-modules-part-1/enable-module.png)
   
-     Click `Enable` to activate the plugin:
+     Click **Enable** to activate the plugin:
      
      ![](../Attachments/getting-started-with-modules-part-1/enabled-module.png)
 
-  1. You can now add the Widget to a layer in the site. Click `Widgets` from the navigation menu.
+  1. You can now add the Widget to a layer in the site. Click **Widgets** from the navigation menu.
    
-  1. In the `AsideFirst` section of the Widgets page click the `Add` button:
+  1. In the `AsideFirst` section of the Widgets page click the **Add** button:
    
      ![](../Attachments/getting-started-with-modules-part-1/activate-addtolayer.png)
      
@@ -483,7 +483,7 @@ The last few steps will enable the module in Orchard and assign the widget to a 
   
      ![](../Attachments/getting-started-with-modules-part-1/activate-widgettitle.png)
 
-  1. Click `Save` at the bottom of the page.
+  1. Click **Save** at the bottom of the page.
   
 If you go back to the main site now you will see the module in the site:
 
@@ -498,7 +498,7 @@ You can download a copy of the module so far at this link:
   
 To use it in Orchard simply extract the archive into the modules directory at `.\src\Orchard.Web\Modules\`.
 
-> For Orchard to recognize it the folder name should match the name of the module. Make sure that the folder name is `Orchard.LearnOrchard.FeaturedProduct` and then the modules files are located directly under that. 
+> For Orchard to recognize it, the folder name should match the name of the module. Make sure that the folder name is `Orchard.LearnOrchard.FeaturedProduct` and then the modules files are located directly under that. 
 
 ## Conclusion
 This first guide in the module introduction course has shown the main components of a module.

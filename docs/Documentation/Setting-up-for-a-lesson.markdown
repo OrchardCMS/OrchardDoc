@@ -4,7 +4,7 @@ If you don't have a it on your system then grab a copy of [Microsoft Visual Stud
 ## Step 2 - Install Git Extensions
 Every developer should have [Git Extensions](https://github.com/gitextensions/gitextensions/releases/latest) installed on their machine.
 
-This is the easiest way to quickly clone the Orchard source code onto your dev machine. Its the easiest way to keep up to date when new code is released. As a bonus, if you haven't got to grips with Git and GitHub this will gently introduce you to the whole process.
+This is the easiest way to quickly clone the Orchard source code onto your dev machine. It's the easiest way to keep up to date when new code is released. As a bonus, if you haven't got to grips with Git and GitHub, this will gently introduce you to the whole process.
 
 > If you need detailed help installing Git Extensions and cloning the repository this process is described in the [setting up a source enlistment](Setting-up-a-source-enlistment) tutorial in step-by-step detail.
 
@@ -18,7 +18,7 @@ You will probably have noticed that Orchard code has the braces on the same line
         }
     }
     
-Instead of what you normally see with .NET code where the opening curly brace is on it's own line, which looks like this:
+Instead of what you normally see with .NET code where the opening curly brace is on its own line, which looks like this:
 
     namespace Orchard.LearnOrchard.Example.Models
     {

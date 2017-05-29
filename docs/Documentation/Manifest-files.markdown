@@ -1,5 +1,5 @@
 
-In the Orchard CMS, modules and themes are important tools for extending and customizing an application. Every module and theme is required to have a manifest, which is a text file named _module.txt_ or _theme.txt_ that resides in the root folder of the associated module or theme. A manifest stores metadata that Orchard uses to describe modules and themes to the system, such as name, version, description, author, and tags.
+In the Orchard CMS, modules and themes are important tools for extending and customizing an application. Every module and theme is required to have a manifest, which is a text file named `Module.txt` or `Theme.txt` that resides in the root folder of the associated module or theme. A manifest stores metadata that Orchard uses to describe modules and themes to the system, such as name, version, description, author, and tags.
 
 This topic is a reference for manifest files. If you create a custom module or theme, or if you write code that accesses modules or themes, you must understand the metadata fields in a manifest. The data in a manifest is structured into name-value pairs in the form `Field Name: Value`. 
 
@@ -7,13 +7,13 @@ The following sections describe the available fields in a manifest for themes an
 
 ## Module manifest fields
 
-The manifest for a module should be called `module.txt` and should be located in the root of the project. 
+The manifest for a module should be called `Module.txt` and should be located in the root of the project. 
 
 A module's manifest is made up of an overall description of the package itself and then an optional repeating section describing each of the individual features. 
 
 The module can be comprised of a default single feature or a group of individually defined features. This allows module developers to specify separate areas of the module and allow users to enable them on a per-feature basis.
 
-### Main module.txt fields
+### Main `Module.txt` fields
 
 Some of the fields may be overridden if a module defines multiple features. These are detailed in the [`Features:` sub-section fields](manifest-files#ModuletxtFeaturessubsectionfields) table below.
 

@@ -16,7 +16,7 @@ without requiring you to modify any code.
 
 ## Naming Convention for Alternates
 
-Alternate shapes are named using the name of the base shape followed by a double underscore \(\_\_\)
+Alternate shapes are named using the name of the base shape followed by a double underscore (`__`)
 and an ending that is specific to the alternate shape.
 For example, a `Parts_Tags_ShowTags` shape can have alternates with names such as
 `Parts_Tags_ShowTags__BlogPost` and `Parts_Tags_ShowTags__Page`.
@@ -29,35 +29,35 @@ see [Accessing and Rendering Shapes](Accessing-and-rendering-shapes).)
 To create a template file that maps to the corresponding shape name,
 you must name the template according to the  following naming convention:
 
-* Convert an underscore (_) in the shape name to either a dot (.) or backslash (\\) in the template name.
-A backslash indicates that the template resides in a subfolder.
-* Convert a double underscore \(\_\_\) in the shape name to a hyphen (-).
-* For any Display type value in the shape name, place the type name after a dot (.)
-at the end of the template name, such as Content-BlogPost.Summary.
+* Convert an underscore (`_`) in the shape name to either a dot (`.`) or backslash (`\ `) in the template name.
+  A backslash indicates that the template resides in a subfolder.
+* Convert a double underscore (`__`) in the shape name to a hyphen (`-`).
+* For any Display type value in the shape name, place the type name after a dot (`.`)
+  at the end of the template name, such as `Content-BlogPost.Summary`.
 
-All templates for alternates must reside in the _Views_ folder.
-The _Views_ folder can be located either in the theme or in the module.
-The following table shows which subfolders of _Views_ to use for different types of templates.
+All templates for alternates must reside in the `Views` folder.
+The `Views` folder can be located either in the theme or in the module.
+The following table shows which subfolders of `Views` to use for different types of templates.
 
 Shape type     | Template Folder
 -------------- | ----------------
-Content item   | _Views\\Items_
-Parts          | _Views\\Parts_
-Fields         | _Views\\Fields_
-EditorTemplate | _Views\\EditorTemplates\\[template type folder\]_ (For example, an **EditorTemplate** for a part is located at _Views\EditorTemplates\Parts_.)
-All other      | _Views_
+Content item   | `Views\Items`
+Parts          | `Views\Parts`
+Fields         | `Views\Fields`
+EditorTemplate | `Views\EditorTemplates\[template type folder]` (For example, an `EditorTemplate` for a part is located at `Views\EditorTemplates\Parts`.)
+All other      | `Views`
 
-For example, to create an alternate template for the **Tags** part, you can add a template
-to the _MyTheme\Views\Parts_ folder.
-However, because the underscore can be converted to either a dot (.) or backslash (\),
-you can also create a template in the _Views_ folder and add _Parts._ to the beginning of the name.
-A template at either _Views\Parts\Tags.ShowTags-BlogPost.cshtml_ or
-_Views\Parts.Tags.ShowTags-BlogPost.cshtml_ will map to a shape named `Parts_Tags_ShowTags__BlogPost`.
+For example, to create an alternate template for the `Tags` part, you can add a template
+to the `MyTheme\Views\Parts` folder.
+However, because the underscore can be converted to either a dot (`.`) or backslash (`\ `),
+you can also create a template in the `Views` folder and add `Parts.` to the beginning of the name.
+A template at either `Views\Parts\Tags.ShowTags-BlogPost.cshtml` or
+`Views\Parts.Tags.ShowTags-BlogPost.cshtml` will map to a shape named `Parts_Tags_ShowTags__BlogPost`.
 
 If the Orchard framework cannot locate an alternate template that has the expected name,
 the default template will be used for those shapes.
 For example, if you do not create an alternate for showing tags, the default template for tags
-(located at _Views\Parts\Tags.ShowTags.cshtml_) is used.
+(located at `Views\Parts\Tags.ShowTags.cshtml`) is used.
 
 The Orchard framework automatically creates many alternates that you can use in your application.
 However, you can create templates for these alternate shapes.
@@ -65,54 +65,54 @@ The patterns for creating alternates are shown below, with examples of matching 
 
 For **Content** shapes:
 
-* _Content\_\_\[DisplayType\]_. (Example template: `Content.Summary`)
-* _Content\_\_\[ContentType\]_. (Example template: `Content-BlogPost`)
-* _Content\_\_\[Id\]_. (Example template: `Content-42`)
-* _Content_\[DisplayType\]\_\_\[ContentType\]_. (Example template: `Content-BlogPost.Summary`)
-* _Content_\[DisplayType\]\_\_\[Id\]_. (Example template: `Content-42.Summary`)
+* `Content__[DisplayType]`. (Example template: `Content.Summary`)
+* `Content__[ContentType]`. (Example template: `Content-BlogPost`)
+* `Content__[Id]`. (Example template: `Content-42`)
+* `Content_[DisplayType]__[ContentType]`. (Example template: `Content-BlogPost.Summary`)
+* `Content_[DisplayType]__[Id]`. (Example template: `Content-42.Summary`)
 
 For **Zone** shapes:
 
-* _Zone\_\_\[ZoneName\]_. (Example template: `Zone-SideBar`)
+* `Zone__[ZoneName]`. (Example template: `Zone-SideBar`)
 
 For **Navigation** shapes (the new menu system since version 1.5):
 
-* _MenuItemLink\_\_\[MenuName\]_. (Example template: `MenuItemLink-main-menu`)
-* _MenuItemLink\_\_\[ContentType\]_. (Examples template: `MenuItemLink-ContentMenuItem`, `MenuItemLink-HtmlMenuItem`, `MenuItemLink-Blog`)
+* `MenuItemLink__[MenuName]`. (Example template: `MenuItemLink-main-menu`)
+* `MenuItemLink__[ContentType]`. (Examples template: `MenuItemLink-ContentMenuItem`, `MenuItemLink-HtmlMenuItem`, `MenuItemLink-Blog`)
 
 For menu and menu item shapes:
 
-* _Menu\_\_\[MenuName\]_. (Example template: `Menu-main`)
-* _MenuItem\_\_\[MenuName\]_. (Example template: `MenuItem-main`)
+* `Menu__[MenuName]`. (Example template: `Menu-main`)
+* `MenuItem__[MenuName]`. (Example template: `MenuItem-main`)
 
 For local menu and local menu item shapes:
 
-* _LocalMenu\_\_\[MenuName\]_. (Example template: `LocalMenu-main`)
-* _LocalMenuItem\_\_\[MenuName\]_. (Example template: `LocalMenuItem-main`)
+* `LocalMenu__[MenuName]`. (Example template: `LocalMenu-main`)
+* `LocalMenuItem__[MenuName]`. (Example template: `LocalMenuItem-main`)
 
 For styles and resources:
 
-* _Style\_\_\[FileName\]_
-* _Resource\_\_\[FileName\]_
+* `Style__[FileName]`
+* `Resource__[FileName]`
 
 For widget shapes:
 
-* _Widget\_\_\[ZoneName\]_. (Example template: `Widget-SideBar`)
-* _Widget\_\_\[ContentType\]_. (Example template: `Widget-BlogArchive`)
+* `Widget__[ZoneName]`. (Example template: `Widget-SideBar`)
+* `Widget__[ContentType]`. (Example template: `Widget-BlogArchive`)
 
 For fields:
 
-* _\[ShapeType\_\_FieldName\]_. (Example template: `Fields\Common.Text-Teaser`)
-* _\[ShapeType\_\_PartName\]_. (Example template: `Fields\Common.Text-TeaserPart`)
-* _\[ShapeType\]\_\_\[ContentType\]\_\_\[PartName\]_. (Example template: `Fields\Common.Text-Blog-TeaserPart`)
-* _\[ShapeType\]\_\_\[PartName\]\_\_\[FieldName\]_. (Example template: `Fields\Common.Text-TeaserPart-Teaser`)
-* _\[ShapeType\]\_\_\[ContentType\]\_\_\[FieldName\]_. (Example template: `Fields\Common.Text-Blog-Teaser`)
-* _\[ShapeType\]\_\_\[ContentType\]\_\_\[PartName\]\_\_\[FieldName\]_. (Example template: `Fields\Common.Text-Blog-TeaserPart-Teaser`)
+* `[ShapeType__FieldName]`. (Example template: `Fields\Common.Text-Teaser`)
+* `[ShapeType__PartName]`. (Example template: `Fields\Common.Text-TeaserPart`)
+* `[ShapeType]__[ContentType]__[PartName]`. (Example template: `Fields\Common.Text-Blog-TeaserPart`)
+* `[ShapeType]__[PartName]__[FieldName]`. (Example template: `Fields\Common.Text-TeaserPart-Teaser`)
+* `[ShapeType]__[ContentType]__[FieldName]`. (Example template: `Fields\Common.Text-Blog-Teaser`)
+* `[ShapeType]__[ContentType]__[PartName]__[FieldName]`. (Example template: `Fields\Common.Text-Blog-TeaserPart-Teaser`)
 
 For content parts:
 
-* _\[ShapeType\]\_\_\[Id\]_. (Example template: `Parts\Common.Metadata-42`)
-* _\[ShapeType\]\_\_\[ContentType\]_. (Example template: `Parts\Common.Metadata-BlogPost`)
+* `[ShapeType]__[Id]`. (Example template: `Parts\Common.Metadata-42`)
+* `[ShapeType]__[ContentType]`. (Example template: `Parts\Common.Metadata-BlogPost`)
 
 You can use the **Shape Tracing** module to generate alternate templates through the **Shape Tracing** user interface. For more information, see [Customizing Orchard using Designer Helper Tools](Customizing-Orchard-using-Designer-Helper-Tools).
 
@@ -124,7 +124,7 @@ You must enable the **URL Alternates** and **Widget Alternates** modules in orde
 When enabled, alternate shapes are created based on the URL or the zone.
 These URL alternates are combined with the alternate patterns defined above.
 
-For example, the URL _/my-blog/post-1_ has alternates available for a `MenuItem` object
+For example, the URL `/my-blog/post-1` has alternates available for a `MenuItem` object
 with the following template names:
 
 `MenuItem-main`  
@@ -138,10 +138,10 @@ For the homepage, the following alternate is available:
 Using this module, you can add URL-specific alternates to the **Layout** shape, such as the following: 
 `Layout-url-homepage`. This adds a specific layout for your About page of your site.
 
-Creating a new layout file in your Themes/ThemeName/Views named `Layout-url-About.cshtml`
-would be picked up and used when viewing the /About page in your site.
+Creating a new layout file in your `Themes/ThemeName/Views` named `Layout-url-About.cshtml`
+would be picked up and used when viewing the `/About` page in your site.
 
-> **Note:** if the changes are only small, perhaps using alternate url naming to the zone would be more appropriate.
+> **Note:** if the changes are only small, perhaps using alternate URL naming to the zone would be more appropriate.
 
 You can enable URL Alternates by downloading the Designer Tools module from the Orchard Team
 in the Orchard Modules Gallery:
@@ -155,15 +155,15 @@ module) is a great way to discover what alternates are available for any shape t
 
 Here are some examples of widget alternate template names:
 
-`Parts.Common.Body-HtmlWidget-TripelSecond`  
-`Parts.Common.Body-TripelSecond`
+- `Parts.Common.Body-HtmlWidget-TripelSecond`  
+- `Parts.Common.Body-TripelSecond`
 
 ## Explicitly Designating an Alternate Template
 
 In addition to using the automatically generated alternates, you can manually specify an alternate.
-In a _placement.info_ file, you can specify which alternates are available for a content type.
+In a `Placement.info` file, you can specify which alternates are available for a content type.
 For example, to specify a different template (identified as `Parts_Tags_ShowTags_BlogPost`)
-for rendering the tags for blog posts, you can revise the _placement.info_ file for the
+for rendering the tags for blog posts, you can revise the `Placement.info` file for the
 **Orchard.Tags** module to include an element that matches `BlogPost` types.
 The following example shows the revised file.
     
@@ -185,26 +185,26 @@ Only the first matched element is used to render the item.
 In the example, placing the element for `BlogPost` below `Detail` and `Summary` means
 that `ShowTags_BlogPost` will not be used, even for `BlogPost` items,
 because the earlier elements match the item.
-For more information about the _placement.info_ file, see
+For more information about the `Placement.info` file, see
 [Understanding placement.info](Understanding-placement-info).
 
 ## Alternates for MVC views
 Some modules in Orchard use regular MVC views to render the results of an action that was invoked on a custom controller. To customize the look of the pages produced by custom MVC controllers in Orchard, you need to add a version of the view file in your theme's `Views` folder.
 
-For example, if you want to customize the search results page of the Orchard Search module (Orchard.Search) you need to add a file in the following folder of your theme:
+For example, if you want to customize the search results page of the Orchard Search module (`Orchard.Search`) you need to add a file in the following folder of your theme:
 
     /Themes/{Your theme}/Views/Orchard.Search/Search/Index.cshtml
 
-This file will override the default view used by the Orchard.Search module. 
-The ViewEngine used by Orchard will look for the following pattern when resolving MVC views.
+This file will override the default view used by the `Orchard.Search` module. 
+The `ViewEngine` used by Orchard will look for the following pattern when resolving MVC views.
 
-- ~/Themes/{Active theme}/Views/{Area}/{Controller}/{View}.cshtml
-- ~/Themes/{Active theme}/Views/{Controller}/{View}.cshtml
-- ~/Themes/{Active theme}/{Partial}.cshtml
-- ~/Themes/{Active theme}/DisplayTemplates/{TemplateName}.cshtml
-- ~/Themes/{Active theme}/EditorTemplates/{TemplateName}.cshtml
+- `~/Themes/[Active theme]/Views/[Area]/[Controller]/[View].cshtml`
+- `~/Themes/[Active theme]/Views/[Controller]/[View].cshtml`
+- `~/Themes/[Active theme]/[Partial].cshtml`
+- `~/Themes/[Active theme]/DisplayTemplates/[TemplateName].cshtml`
+- `~/Themes/[Active theme]/EditorTemplates/[TemplateName].cshtml`
 
-Please be aware, any other convention that is normally supported in MVC is not supported within a theme. Unless specified in the list above. 
+Please be aware, any other convention that is normally supported in MVC is not supported within a theme, unless specified in the list above. 
 
 ## Adding Alternates Through Code
 

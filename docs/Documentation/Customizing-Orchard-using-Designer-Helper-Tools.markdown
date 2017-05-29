@@ -25,7 +25,7 @@ The **Shape Tracing** pane displays the following information:
 
 * **Shape**. Information about the shape and the template to render the shape. Includes the option of creating alternates as described later in this article.
 * **Model**. Information about the model for this shape.
-* **Placement**. The _placement.info_ file.
+* **Placement**. The `Placement.info` file.
 * **Template**. The code in the template file
 * **HTML**. The HTML for rendering this shape.
 
