@@ -124,8 +124,9 @@ Note: The document file is almost never overridden by the theme.
         %></div>
     </div>
 
-> **Note**: in this example, some contents are inlined but in a real template those would really be in partial views.
-In this example, the calls to `Html.Zone` declare zones on the page where components will be able to inject contents and widgets.
+!!! note
+    in this example, some contents are inlined but in a real template those would really be in partial views.
+    In this example, the calls to `Html.Zone` declare zones on the page where components will be able to inject contents and widgets.
 
 For the header and footer zones, calls to `AddRenderPartial` will try to find a partial view with the same name (without its extension) as the zone (first in the theme, then in the top views) and will include it if it's found.
 

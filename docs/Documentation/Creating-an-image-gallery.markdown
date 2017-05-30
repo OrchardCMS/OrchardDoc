@@ -47,7 +47,7 @@ In this screen shot, we have already imported some images and created some folde
  ![Finished content type](../Attachments/Creating-an-image-gallery/modal-popup.jpg)
 
 - Select the images that you want to display.
-	- Tip: Use ctrl + click to select multiple images at once.
+    - Tip: Use ctrl + click to select multiple images at once.
 - Then click the **Select** button in the lower left of the modal (it's a bit hidden.)
 - The Add Widget page will again display. Click **Save**.
 - Visit the front end of your site to see the scaffolding of an image gallery.
@@ -65,17 +65,17 @@ Fields.MediaLibraryPicker.cshtml
     @using Orchard.MediaLibrary.Fields
     @using Orchard.Utility.Extensions;    
     @{
-    	var field = (MediaLibraryPickerField) Model.ContentField;
-    	string name = field.DisplayName;
-    	var contents = field.MediaParts;
+        var field = (MediaLibraryPickerField) Model.ContentField;
+        string name = field.DisplayName;
+        var contents = field.MediaParts;
     }
     <section class="media-library-picker-field media-library-picker-field @name.HtmlClassify()">
     @foreach(var content in contents) 
-	{
-   	 	<div>
-    		@Display(BuildDisplay(content, "Summary"))
-    	</div>
-	}
+    {
+        <div>
+            @Display(BuildDisplay(content, "Summary"))
+        </div>
+    }
     </section>
 
 Media.Summary.cshtml
@@ -83,10 +83,10 @@ Media.Summary.cshtml
     @using Orchard.MediaLibrary.Models
     @using Orchard.Utility.Extensions;
     @{
-    	MediaPart mediaPart = Model.ContentItem.MediaPart;
+        MediaPart mediaPart = Model.ContentItem.MediaPart;
     }
     <a href="@mediaPart.MediaUrl">
     <img 
-		src="@Display.ResizeMediaUrl(Width: 200, Height: 200, Mode: "crop", 	Alignment: "middlecenter", Path: mediaPart.MediaUrl)" 	
-		alt="@mediaPart.Caption" class="thumbnail"/>
+        src="@Display.ResizeMediaUrl(Width: 200, Height: 200, Mode: "crop", Alignment: "middlecenter", Path: mediaPart.MediaUrl)"   
+        alt="@mediaPart.Caption" class="thumbnail"/>
     </a>

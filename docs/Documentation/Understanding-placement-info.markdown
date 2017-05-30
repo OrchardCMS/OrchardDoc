@@ -26,11 +26,11 @@ Specifying placement using the `Placement.info` file is the subject of this arti
 
 ## Syntax Overview
 
-	<placement>
-		[ <match scope> ]
-			<place Shape_Name="order[;alternate][;wrapper][;shape]" />
-		[ </match> ]
-	</placement>
+    <placement>
+        [ <match scope> ]
+            <place Shape_Name="order[;alternate][;wrapper][;shape]" />
+        [ </match> ]
+    </placement>
 
 <table>
 <tr><th>Scope<td colspan="2">ContentType="value" | ContentPart="value" | DisplayType="value" | Path="value"

@@ -83,15 +83,15 @@ The Orchard.Alias module itself (defined as `Name: Alias`) is its own default fe
     Category: Content
     Features:
         Orchard.Alias.UI:
-		    Name: Alias UI
+            Name: Alias UI
             Description: Admin user interface for Orchard.Alias.
-		    Dependencies: Orchard.Alias, Orchard.ExampleModule
-		    Category: Content
+            Dependencies: Orchard.Alias, Orchard.ExampleModule
+            Category: Content
         Orchard.Alias.Updater:
-		    Name: Alias Updater
+            Name: Alias Updater
             Description: Synchronizes aliases when created from different servers.
-		    Dependencies: Orchard.Alias
-		    Category: Content
+            Dependencies: Orchard.Alias
+            Category: Content
 
 #### Multiple features all defined in the features sub-section of the manifest
 
@@ -104,20 +104,20 @@ The Orchard.Alias module itself (defined as `Name: Alias`) is its own default fe
     Description: Provides anti-spam services to protect your content from malicious submissions.
     Features:
         Orchard.AntiSpam:
-		    Name: Anti-Spam
+            Name: Anti-Spam
             Description: Provides anti-spam services to protect your content from malicious submissions.
-		    Category: Security
-		    Dependencies: Orchard.Tokens, Orchard.jQuery
-	    Akismet.Filter:
-		    Name: Akismet Anti-Spam Filter
+            Category: Security
+            Dependencies: Orchard.Tokens, Orchard.jQuery
+        Akismet.Filter:
+            Name: Akismet Anti-Spam Filter
             Description: Provides an anti-spam filter based on Akismet.
-		    Category: Security
-		    Dependencies: Orchard.AntiSpam
-	    TypePad.Filter: 
+            Category: Security
+            Dependencies: Orchard.AntiSpam
+        TypePad.Filter: 
             Name: TypePad Anti-Spam Filter
             Description: Provides an anti-spam filter based on TypePad.
-		    Category: Security
-		    Dependencies: Orchard.AntiSpam
+            Category: Security
+            Dependencies: Orchard.AntiSpam
 
 Notice the structure that is used for each feature described in the `Features` field. The `FeatureId` of the feature is listed followed by a colon `:`. Then on a new line for each field, you can specify the other relevant fields including `Name`, `Description`, `Category` and `Dependencies`. 
 
@@ -146,11 +146,11 @@ BaseTheme   | The ID of another theme that this theme inherits from. This is an 
 The following example shows the manifest for **The Theme Machine** theme, which is the default Orchard theme.  
 
     Name: The Theme Machine
-	Author: jowall, mibach, loudej, heskew
-	Description: Orchard Theme Machine is a flexible multi-zone theme that provides a solid foundation to build your site. It features 20 collapsible widget zones and is flexible enough to cover a wide range of layouts.
-	Version: 1.9.1
-	Tags: Awesome
-	Website: http://orchardproject.net
-	Zones: Header, Navigation, Featured, BeforeMain, AsideFirst, Messages, BeforeContent, Content, AfterContent, AsideSecond, AfterMain, TripelFirst, TripelSecond, TripelThird, FooterQuadFirst, FooterQuadSecond, FooterQuadThird, FooterQuadFourth, Footer
+    Author: jowall, mibach, loudej, heskew
+    Description: Orchard Theme Machine is a flexible multi-zone theme that provides a solid foundation to build your site. It features 20 collapsible widget zones and is flexible enough to cover a wide range of layouts.
+    Version: 1.9.1
+    Tags: Awesome
+    Website: http://orchardproject.net
+    Zones: Header, Navigation, Featured, BeforeMain, AsideFirst, Messages, BeforeContent, Content, AfterContent, AsideSecond, AfterMain, TripelFirst, TripelSecond, TripelThird, FooterQuadFirst, FooterQuadSecond, FooterQuadThird, FooterQuadFourth, Footer
 
 For more information about how to write a theme, including how to generate and modify a manifest, see [Writing a New Theme](Writing-a-new-theme). For information about how to customize an existing theme and then generate a manifest for it, see [Customizing Themes](Customizing-the-default-theme).

@@ -58,7 +58,10 @@ Content fields are pieces of information that can be added to a content type. Co
 
 For example, a Product content type can have a text field representing its SKU, a numeric field representing its price, and another numeric field representing its weight. Each of these fields probably only makes sense on a product.
 
-> Note: it would be possible to create a product part with three properties that would be roughly equivalent to this set of fields. This would have the advantage of making it possible to transform any content type into a product. Each approach is a valid choice and Orchard allows for both.
+!!! note
+    It would be possible to create a product part with three properties that would be roughly equivalent to this set of fields.
+    This would have the advantage of making it possible to transform any content type into a product.
+    Each approach is a valid choice and Orchard allows for both.
 
 ## Module
 
@@ -84,23 +87,23 @@ Here is an example of a manifest:
 
     
     Name: Comments
-	AntiForgery: enabled
-	Author: The Orchard Team
-	Website: http://orchardproject.net
-	Version: 1.10.2
-	OrchardVersion: 1.9
-	Description: The comments system implemented by this module can be applied to arbitrary Orchard content types, such as blogs and pages. It includes comment validation and spam protection through the Akismet service.
-	Features:
+    AntiForgery: enabled
+    Author: The Orchard Team
+    Website: http://orchardproject.net
+    Version: 1.10.2
+    OrchardVersion: 1.9
+    Description: The comments system implemented by this module can be applied to arbitrary Orchard content types, such as blogs and pages. It includes comment validation and spam protection through the Akismet service.
+    Features:
     Orchard.Comments:
         Name: Comments
         Description: Standard content item comments.
         Dependencies: Settings, Orchard.Tokens
         Category: Social
-	Orchard.Comments.Workflows:
-		Name: Comments Workflows Activities
+    Orchard.Comments.Workflows:
+        Name: Comments Workflows Activities
         Description: Provides workflow activities for comments management.
-		Category: Workflows
-		Dependencies: Orchard.Workflows
+        Category: Workflows
+        Dependencies: Orchard.Workflows
 
 
 # UI composition

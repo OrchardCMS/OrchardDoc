@@ -4,15 +4,15 @@ Windows Azure Caching is a distributed memory-based cache service that is part o
 
 Support for Windows Azure Caching comes in the form of two features in the `Orchard.Azure` module:
 
-	Orchard.Azure.OutputCache:
-		Name: Windows Azure Output Cache
-		Description: Activates an Orchard output cache provider that targets Windows Azure Cache.
-		Dependencies: Orchard.OutputCache
-		Category: Performance
-	Orchard.Azure.DatabaseCache:
-		Name: Windows Azure Database Cache
-		Description: Activates an NHibernate second-level cache provider that targets Windows Azure Cache.
-		Category: Performance
+    Orchard.Azure.OutputCache:
+        Name: Windows Azure Output Cache
+        Description: Activates an Orchard output cache provider that targets Windows Azure Cache.
+        Dependencies: Orchard.OutputCache
+        Category: Performance
+    Orchard.Azure.DatabaseCache:
+        Name: Windows Azure Database Cache
+        Description: Activates an NHibernate second-level cache provider that targets Windows Azure Cache.
+        Category: Performance
 
 These two features can be enabled separately or in combination.
 
@@ -69,27 +69,27 @@ Before the caching features can be enabled you must configure the URL and creden
 1. Open `Orchard.sln`.
 2. Navigate to `Orchard.Web` and open the `Web.config` file.
 3. For output caching, in the `<appSettings>` element add the following settings:
-	* `Orchard.Azure.OutputCache.HostIdentifier`
-	* `Orchard.Azure.OutputCache.CacheName`
-	* `Orchard.Azure.OutputCache.AuthorizationToken`
+    * `Orchard.Azure.OutputCache.HostIdentifier`
+    * `Orchard.Azure.OutputCache.CacheName`
+    * `Orchard.Azure.OutputCache.AuthorizationToken`
 3. For database caching, in the `<appSettings>` element add the following settings:
-	* `Orchard.Azure.DatabaseCache.HostIdentifier`
-	* `Orchard.Azure.DatabaseCache.CacheName`
-	* `Orchard.Azure.DatabaseCache.AuthorizationToken`
+    * `Orchard.Azure.DatabaseCache.HostIdentifier`
+    * `Orchard.Azure.DatabaseCache.CacheName`
+    * `Orchard.Azure.DatabaseCache.AuthorizationToken`
 4. Deploy the web site.
 
 Here's an example configuration:
 
-	<appSettings>
-		<!-- Output caching -->
-		<add key="Orchard.Azure.OutputCache.HostIdentifier" value="mycache.cache.windows.net" />
-		<add key="Orchard.Azure.OutputCache.CacheName" value="MyOutputCache" />
-		<add key="Orchard.Azure.OutputCache.AuthorizationToken" value="YWNzO...ZXNzY29u" />
-		<!-- Database caching -->
-		<add key="Orchard.Azure.DatabaseCache.HostIdentifier" value="mycache.cache.windows.net" />
-		<add key="Orchard.Azure.DatabaseCache.CacheName" value="MyDatabaseCache" />
-		<add key="Orchard.Azure.DatabaseCache.AuthorizationToken" value="YWNzO...ZXNzY29u" />
-	</appSettings>
+    <appSettings>
+        <!-- Output caching -->
+        <add key="Orchard.Azure.OutputCache.HostIdentifier" value="mycache.cache.windows.net" />
+        <add key="Orchard.Azure.OutputCache.CacheName" value="MyOutputCache" />
+        <add key="Orchard.Azure.OutputCache.AuthorizationToken" value="YWNzO...ZXNzY29u" />
+        <!-- Database caching -->
+        <add key="Orchard.Azure.DatabaseCache.HostIdentifier" value="mycache.cache.windows.net" />
+        <add key="Orchard.Azure.DatabaseCache.CacheName" value="MyDatabaseCache" />
+        <add key="Orchard.Azure.DatabaseCache.AuthorizationToken" value="YWNzO...ZXNzY29u" />
+    </appSettings>
 
 In the above example, the same cache service is used for both types of caching, but different named caches (`MyOutputCache` and `MyDatabaseCache`, respectively). Of course you are also free to use completely different cache services if you like. Note that if you want to use the `default` cache instead of a custom named cache, the setting for `CacheName` is optional and can be omitted.
 
@@ -102,13 +102,13 @@ You can now enable the features *Windows Azure Output Cache* and/or *Windows Azu
 1. Deploy the web site.
 2. In the management portal, navigate to your web site and select the *Configure* tab.
 3. For output caching, under *App settings* add the following settings:
-	* `Orchard.Azure.OutputCache.HostIdentifier`
-	* `Orchard.Azure.OutputCache.CacheName`
-	* `Orchard.Azure.OutputCache.AuthorizationToken`
+    * `Orchard.Azure.OutputCache.HostIdentifier`
+    * `Orchard.Azure.OutputCache.CacheName`
+    * `Orchard.Azure.OutputCache.AuthorizationToken`
 3. For database caching, under *App settings* element add the following settings:
-	* `Orchard.Azure.DatabaseCache.HostIdentifier`
-	* `Orchard.Azure.DatabaseCache.CacheName`
-	* `Orchard.Azure.DatabaseCache.AuthorizationToken`
+    * `Orchard.Azure.DatabaseCache.HostIdentifier`
+    * `Orchard.Azure.DatabaseCache.CacheName`
+    * `Orchard.Azure.DatabaseCache.AuthorizationToken`
 4. Click *Save*.
 
 Here's an example configuration:
@@ -133,33 +133,33 @@ These settings are read from platform configuration using the [CloudConfiguratio
 <table>
 <thead>
 <tr>
-	<th>Setting</th>
-	<th>Description</th>
+    <th>Setting</th>
+    <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-	<td><code>HostIdentifier</code></td>
-	<td>When using role-based caching, set this to the name of the cloud service role hosting the cache cluster.  Auto discover will be used to resolve the cache cluster hostname at runtime. When using Windows Azure Cache Service, set this to the endpoint hostname of your cache service, e.g. <code>fabrikam.cache.windows.net</code>.</td>
+    <td><code>HostIdentifier</code></td>
+    <td>When using role-based caching, set this to the name of the cloud service role hosting the cache cluster.  Auto discover will be used to resolve the cache cluster hostname at runtime. When using Windows Azure Cache Service, set this to the endpoint hostname of your cache service, e.g. <code>fabrikam.cache.windows.net</code>.</td>
 </tr>
 <tr>
-	<td><code>CacheName</code></td>
-	<td>Set this to the name of a named cache, or leave blank to use the <code>default</code> cache.</td>
+    <td><code>CacheName</code></td>
+    <td>Set this to the name of a named cache, or leave blank to use the <code>default</code> cache.</td>
 </tr>
 <tr>
-	<td><code>AuthorizationToken</code></td>
-	<td>When using Windows Azure Cache Service, set this to the authorization token used to connect to the cache service endpoint.</td>
+    <td><code>AuthorizationToken</code></td>
+    <td>When using Windows Azure Cache Service, set this to the authorization token used to connect to the cache service endpoint.</td>
 </tr>
 </tbody>
 </table>
 
 Here's an example configuration using `Web.config`. This configures Windows Azure Output Cache to use the `default` cache on a Windows Azure Cache Service endpoint:
 
-	<appSettings>
-		<add key="Orchard.Azure.OutputCache.HostIdentifier" value="mycache.cache.windows.net" />
-		<add key="Orchard.Azure.OutputCache.CacheName" value="" />
-		<add key="Orchard.Azure.OutputCache.AuthorizationToken" value="YWNzO...ZXNzY29u" />
-	</appSettings>
+    <appSettings>
+        <add key="Orchard.Azure.OutputCache.HostIdentifier" value="mycache.cache.windows.net" />
+        <add key="Orchard.Azure.OutputCache.CacheName" value="" />
+        <add key="Orchard.Azure.OutputCache.AuthorizationToken" value="YWNzO...ZXNzY29u" />
+    </appSettings>
 
 Here's the default role configuration when deploying to a cloud service:
 
@@ -171,16 +171,16 @@ For multi-tenancy scenarios each setting can optionally be prefixed with a tenan
 
 Here's an example Azure Web Site configuration with two tenants, both using output caching with a named cache `OutputCache` on the Windows Azure Cache Service, but each using its own cache service instance:
 
-	<appSettings>
-		<!-- Settings for Tenant1 -->
-		<add key="Tenant1:Orchard.Azure.OutputCache.HostIdentifier" value="mycache1.cache.windows.net" />
-		<add key="Tenant1:Orchard.Azure.OutputCache.AuthorizationToken" value="YWNzO...ZXNzY29u" />
-		<!-- Settings for Tenant2 -->
-		<add key="Tenant2:Orchard.Azure.OutputCache.HostIdentifier" value="mycache2.cache.windows.net" />
-		<add key="Tenant2:Orchard.Azure.OutputCache.AuthorizationToken" value="FQdOS...ImNXFtSJ" />
-		<!-- Common settings -->
-		<add key="Orchard.Azure.OutputCache.CacheName" value="OutputCache" />
-	</appSettings>
+    <appSettings>
+        <!-- Settings for Tenant1 -->
+        <add key="Tenant1:Orchard.Azure.OutputCache.HostIdentifier" value="mycache1.cache.windows.net" />
+        <add key="Tenant1:Orchard.Azure.OutputCache.AuthorizationToken" value="YWNzO...ZXNzY29u" />
+        <!-- Settings for Tenant2 -->
+        <add key="Tenant2:Orchard.Azure.OutputCache.HostIdentifier" value="mycache2.cache.windows.net" />
+        <add key="Tenant2:Orchard.Azure.OutputCache.AuthorizationToken" value="FQdOS...ImNXFtSJ" />
+        <!-- Common settings -->
+        <add key="Orchard.Azure.OutputCache.CacheName" value="OutputCache" />
+    </appSettings>
 
 # Session state caching
 
@@ -194,26 +194,26 @@ The preconfigured settings in `Web.config` when deploying to a cloud service is 
 
 First, a configuration section is added:
 
-	<configSections>
-		...
-		<section name="dataCacheClients" type="Microsoft.ApplicationServer.Caching.DataCacheClientsSection, Microsoft.ApplicationServer.Caching.Core" allowLocation="true" allowDefinition="Everywhere" />
-	</configSections>
+    <configSections>
+        ...
+        <section name="dataCacheClients" type="Microsoft.ApplicationServer.Caching.DataCacheClientsSection, Microsoft.ApplicationServer.Caching.Core" allowLocation="true" allowDefinition="Everywhere" />
+    </configSections>
 
 Next, a cache client is configured:
 
-	<dataCacheClients>
-		<dataCacheClient name="DefaultCacheClient" useLegacyProtocol="false" connectionPool="true" maxConnectionsToServer="20">
-			<autoDiscover isEnabled="true" identifier="Orchard.Azure.Web" />
-		</dataCacheClient>
-	</dataCacheClients>
+    <dataCacheClients>
+        <dataCacheClient name="DefaultCacheClient" useLegacyProtocol="false" connectionPool="true" maxConnectionsToServer="20">
+            <autoDiscover isEnabled="true" identifier="Orchard.Azure.Web" />
+        </dataCacheClient>
+    </dataCacheClients>
 
 Finally, session state is configured to use the Azure Cache provider and the cache client defined above:
 
-	<sessionState mode="Custom" timeout="60" customProvider="CacheSessionStateProvider">
-		<providers>
-			<!-- Set the cacheName attribute to be the name of the configured logical cache to use for session state storage. -->
-			<add name="CacheSessionStateProvider" type="Microsoft.Web.DistributedCache.DistributedCacheSessionStateStoreProvider, Microsoft.Web.DistributedCache" cacheName="SessionStateCache" dataCacheClientName="DefaultCacheClient" applicationName="Orchard" />
-		</providers>
-	</sessionState>
+    <sessionState mode="Custom" timeout="60" customProvider="CacheSessionStateProvider">
+        <providers>
+            <!-- Set the cacheName attribute to be the name of the configured logical cache to use for session state storage. -->
+            <add name="CacheSessionStateProvider" type="Microsoft.Web.DistributedCache.DistributedCacheSessionStateStoreProvider, Microsoft.Web.DistributedCache" cacheName="SessionStateCache" dataCacheClientName="DefaultCacheClient" applicationName="Orchard" />
+        </providers>
+    </sessionState>
 
 The configuration of the session state provider can be customized by editing `Web.config` before deploying the cloud service. To disable the session state provider, simply comment out the above sections from `Web.config` before deploying the cloud service.

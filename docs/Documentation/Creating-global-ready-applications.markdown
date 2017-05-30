@@ -61,7 +61,8 @@ In the **Default Site Culture** list, select the culture to set as the default. 
 
 Assuming that you have the appropriate set of _.po_ files installed, applying a new culture has the effect of translating the text in the dashboard menu and UI text. The following illustration shows the effect of changing the culture to **fr-FR**.  
 
-> Note: The translation files might not be complete.
+!!! note
+    The translation files might not be complete.
 
 ![](../Upload/screenshots_675/default_site_culture_fr_675.png)
 

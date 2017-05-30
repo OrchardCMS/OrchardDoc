@@ -10,7 +10,9 @@ When the gallery feature is enabled, as it is by default in Orchard, a **Gallery
 
 ![](../Upload/screenshots/Themes_gallery_enabled.png)
 
-> Note:  If the gallery feature has been disabled, there will be no **Gallery** tab visible in the **Themes** or **Modules** dashboard screens. To enable a disabled gallery, click **Modules** in the dashboard, and click **Enable** on the Gallery feature. 
+!!! note
+    If the gallery feature has been disabled, there will be no **Gallery** tab visible in the **Themes** or **Modules** dashboard screens.
+    To enable a disabled gallery, click **Modules** in the dashboard, and click **Enable** on the Gallery feature. 
 
 In the **Themes** screen of the dashboard, click the **Gallery** tab. A set of themes appears with a pair of **Install** and **Download** links next to each theme. 
 

@@ -1,14 +1,22 @@
 
-It is very common for contents to consist in part of lists or choices in lists. For example, an address can have a state or region property where the value is one in a predefined list of choices. That is a 1-n relationship. A n-n relationship could be for example a list of commercial rewards that a customer can benefit from. Orchard does of course provide support for those scenarios. This topic is going to walk you through the creation of such contents.
+It is very common for contents to consist in part of lists or choices in lists.
+For example, an _address_ can have a _state_ or _region_ property where the value is one in a predefined list of choices.
+That is a _1-n_ relationship. A _n-n_ relationship could be for example a list of commercial rewards that a customer can benefit from.
+Orchard does of course provide support for those scenarios. This topic is going to walk you through the creation of such contents.
 
 
 # Building a _1-N_ Relationship
 
-The model that we're going to build here consists of an Address part that can be attached for example to a Customer content type. The address part has a street address, a zip code, a city name and a state. The state is what we are going to model as a 1-n relationship to a table of states.
+The model that we're going to build here consists of an `Address` part that can be attached for example to a `Customer` content type.
+The address part has a street address, a zip code, a city name and a state.
+The state is what we are going to model as a `1-n` relationship to a table of states.
 
-> Note: this is clearly over-normalized, as a state in an address would usually be sufficiently well represented by a simple two-letter state code. The UI can then take care of representing the choice of that code as a constrained choice in a list of states. We are not claiming what we are building here is the correct way to represent a state in an address, but that the process exposed here is representative of what you'd follow to build a real-world 1-n association in Orchard.
+!!! note
+    This is clearly over-normalized, as a state in an address would usually be sufficiently well represented by a simple two-letter state code.
+    The UI can then take care of representing the choice of that code as a constrained choice in a list of states.
+    We are not claiming what we are building here is the correct way to represent a state in an address, but that the process exposed here is representative of what you'd follow to build a real-world 1-n association in Orchard.
 
-## Modeling the Address Part
+## Modeling the `Address` Part
 
 Here is the code for the `Address` part:
 
@@ -45,7 +53,8 @@ Here is the code for the `Address` part:
         }
     }
 
-This uses stores the data in the infoset and in a database record. However you can only store simple datatypes in the infoset so you can see that `State` field runs some extra code to encode the class into a string. 
+This stores the data in both the infoset and in a database record.
+However you can only store simple datatypes in the infoset so you can see that `State` field runs some extra code to encode the class into a string. 
 
 All properties in the `AddressPart` are proxies to the record properties:
 
@@ -62,7 +71,8 @@ All properties in the `AddressPart` are proxies to the record properties:
     }
 
 
-The state record class itself has a two-letter code and a name. It also has methods to serialize and deserialize its data into a string so that the `AddressPart` above can store its data in the infoset.
+The state record class itself has a two-letter code and a name.
+It also has methods to serialize and deserialize its data into a string so that the `AddressPart` above can store its data in the infoset.
 
     
     namespace RelationSample.Models {
@@ -128,19 +138,28 @@ The database structure for the model we just built can be created from a migrati
     }
 
 
-This migration creates an AddressPartRecord table that is a content part record (this gets us the default fields that a content part needs). It adds columns for address, city and zip that are going to be auto-mapped to our record's properties.
+This migration creates an `AddressPartRecord` table that is a content part record (this gets us the default fields that a content part needs).
+It adds columns for address, city and zip that are going to be auto-mapped to our record's properties.
 
-The interesting column here is StateRecord_Id. As you can see, its type is the same as the type of the Id column of the StateRecord class, because the system will be able to recognize this as a foreign key and to map that integer value to a StateRecord property by just following the relation. It is important here that the name of the column that will represent the relation is the name of the column on the "1" end of the relation, followed by an underscore and the name of the column of the "n" end of the relation.
+The interesting column here is `StateRecord_Id`.
+As you can see, its type is the same as the type of the `Id` column of the `StateRecord` class, because the system will be able to recognize this as a foreign key and to map that integer value to a `StateRecord` property by just following the relation.
+It is important here that the name of the column that will represent the relation is the name of the column on the "1" end of the relation, followed by an underscore and the name of the column of the "n" end of the relation.
 
-There is nothing remarkable on the StateRecord table: it's just mapping Id to be the primary key and constraining the Code column to be 2 characters long.
+There is nothing remarkable on the `StateRecord` table: it's just mapping `Id` to be the primary key and constraining the `Code` column to be 2 characters long.
 
-The last statement before the return in the migration is declaring the AddressPart and making it attachable. That will enable us to attach it to any content type.
+The last statement before the return in the migration is declaring the `AddressPart` and making it attachable. That will enable us to attach it to any content type.
 
 ## Populating the State Table
 
-> Note: this section is included for completeness of the sample code but is far from essential to understanding how to implement relationships in Orchard. Please consider it as sample data generation. If you're following along and want to import this data you can find code in the `migrations.cs` file. This is included in the downloadable source code example link at the end of this guide.
+!!! note
+    This section is included for completeness of the sample code but is far from essential to understanding how to implement relationships in Orchard.
+    Please consider it as sample data generation.
+    If you're following along and want to import this data you can find code in the `migrations.cs` file.
+    This is included in the downloadable source code example link at the end of this guide.
 
-Because the list of states is going to be relatively stable, I did not make them content items (although that would be entirely possible with just a little more work). Instead, I'm populating the table with a list of states right in the migration code. The migration class has a reference to the state repository:
+Because the list of states is going to be relatively stable, I did not make them content items (although that would be entirely possible with just a little more work).
+Instead, I'm populating the table with a list of states right in the migration code.
+The migration class has a reference to the state repository:
 
     
     private readonly IRepository<StateRecord> _stateRepository;
@@ -195,7 +214,7 @@ The handler for the address part is rather uninteresting and just wires up the r
 
 ## The Address Part Driver
 
-The driver is more interesting as it prepares the shapes for rendering and handles posted back admin forms.
+The driver is more interesting as it prepares the shapes for rendering and handles posted-back admin forms.
 
     
     using JetBrains.Annotations;
@@ -281,9 +300,10 @@ The driver is more interesting as it prepares the shapes for rendering and handl
     }
 
 
-When displaying on the front-end, we prepare a Parts_Address shape that has a reference to the original part (although that is not necessary), all the part properties flattened out and the state is available as both a code and a name.
+When displaying on the front-end, we prepare a `Parts_Address` shape that has a reference to the original part (although that is not necessary), all the part properties flattened out and the state is available as both a code and a name.
 
-When in the admin UI, we build shapes with a statically-typed view model because these are still easier to use when using form fields and MVC model binding. That view model, like the shape used on the front-end, has a flattened view of the data that we need to display, but it also has a full list of all the available states, that the view will use to render the state drop-down list:
+When in the admin UI, we build shapes with a statically-typed view model because these are still easier to use when using form fields and MVC model binding.
+That view model, like the shape used on the front-end, has a flattened view of the data that we need to display, but it also has a full list of all the available states, that the view will use to render the state drop-down list:
 
     
     using System.Collections.Generic;
@@ -301,11 +321,13 @@ When in the admin UI, we build shapes with a statically-typed view model because
     }
 
 
-The last thing to notice in the driver is that the Editor override that handles postbacks is just using `updater.TryUpdateModel()`, which is enough to incorporate the submitted form values onto the view model. This is followed by a call into the address service class which will update the actual content part data with the updated model.
+The last thing to notice in the driver is that the `Editor` override that handles postbacks is just using `updater.TryUpdateModel()`, which is enough to incorporate the submitted form values onto the view model.
+This is followed by a call into the address service class which will update the actual content part data with the updated model.
 
 ## The Address Service Class
 
-The address service class takes a dependency on the state repository in order to be able to query for the full list of states. Its other method, `UpdateAddressForContentItem`, copies an EditAddressViewModel onto the address content part of a content item. It does so by looking up a state record from the state repository using the state code from the model.
+The address service class takes a dependency on the state repository in order to be able to query for the full list of states. Its other method, `UpdateAddressForContentItem`, copies an `EditAddressViewModel` onto the address content part of a content item.
+It does so by looking up a state record from the state repository using the state code from the model.
 
     
     using System.Collections.Generic;
@@ -364,7 +386,7 @@ The front-end view for the part is straightforward as it's just displaying the p
     </p>
 
 
-We are using the vcard microformat in this template so the address can get picked-up by consumers that understand this format.
+We are using the [vCard microformat](http://microformats.org/wiki/vCard) in this template so the address can get picked up by consumers that understand this format.
 
 ### The Editor View
 
@@ -415,7 +437,7 @@ The editor view is also relatively straightforward, with just the editor for the
     </fieldset>
 
 
-The DropDownListFor method takes an expression for the property to represent, and a list of SelectListItems that we build on the fly from the complete list of states and what we know of the current state for that address (notice the expression for Selected).
+The `DropDownListFor` method takes an expression for the property to represent, and a list of `SelectListItems` that we build on the fly from the complete list of states and what we know of the current state for that address (notice the expression for `Selected`).
 
 ## The Placement File
 
@@ -430,11 +452,11 @@ Finally, we need a placement file to determine the default position of our part 
 
 ## Using the Address Part
 
-We can now go into the "Features" admin page and enable the RelationSample feature under the Sample category. Once this is done we can go to "Content Types" and create a new "Customer" content type. Add the Common and Address parts, as well as a text field named "Name".
+We can now go into the **Features** admin page and enable the **RelationSample** feature under the **Sample** category. Once this is done we can go to **Content Types** and create a new **Customer** content type. Add the **Common** and **Address** parts, as well as a text field named **Name**.
 
 ![](../Attachments/Creating-1-n-and-n-n-relations/CustomerTypeAddress.PNG)
 
-We now have a new "Customer" menu entry under "New", enabling us to create a new customer:
+We now have a new **Customer** menu entry under **New**, enabling us to create a new customer:
 
 ![](../Attachments/Creating-1-n-and-n-n-relations/CreateCustomer.PNG)
 
@@ -444,7 +466,9 @@ The customer can be displayed on the front-end as well.
 
 # Building an _N-N_ Relationship
 
-Building a n-n relationship in Orchard relies on the same principles as what we did for the 1-n relationship. The main difference is that instead of having one foreign key on the part record, we have an intermediary object for the relationship that has two foreign keys to the records. This is of course close to the way this is done in relational databases.
+Building a n-n relationship in Orchard relies on the same principles as what we did for the 1-n relationship.
+The main difference is that, instead of having one foreign key on the part record, we have an intermediary object for the relationship that has two foreign keys to the records.
+This is of course close to the way this is done in relational databases.
 
 In this section, we are going to build a part that can record an arbitrary number of associations with reward programs for our customers.
 
@@ -474,7 +498,7 @@ The part record has just one property, the collection of rewards:
 
 ### The Rewards Part
 
-The rewards part itself proxies the Rewards property to the record:
+The rewards part itself proxies the `Rewards` property to the record:
 
     
     using System.Collections.Generic;
@@ -553,13 +577,16 @@ Here is the migration:
     }
 
 
-This code creates the three tables we need to persist the three records that we just modeled. It also declares the RewardsPart and makes it attachable.
+This code creates the three tables we need to persist the three records that we just modeled.
+It also declares the `RewardsPart` and makes it attachable.
 
 As with addresses and states, you can see the convention for relations in action here: the columns for the association record table are of type integer (the type of the id of each of the associated tables) and bears the name of the linked table, an underscore and the name of the key column of the associated table.
 
 ## Populating the Reward Program Table
 
-Like we did with states, we pre-populate the reward program table from the migration class. In a real world scenario, the rewards could be content items and you could have a specific management screen for them. There would be nothing specific about that coming from the fact that these items happen to be at one end of a n-n relation.
+Like we did with states, we pre-populate the reward program table from the migration class.
+In a real-world scenario, the rewards could be content items and you could have a specific management screen for them.
+There would be nothing specific about that coming from the fact that these items happen to be at one end of a n-n relation.
 
     
     private readonly IRepository<RewardProgramRecord> _rewardProgramRepository;
@@ -680,7 +707,8 @@ The driver is also surprisingly unsurprising given the requirement to persist th
     }
 
 
-Like with the address part, we are fetching all the reward programs and putting them on the editor view model for the template to display as checkboxes. In BuildEditorViewModel, you can see that we build the current rewards as a lookup and then use that to determine the checked state of each reward program.
+Like with the address part, we are fetching all the reward programs and putting them on the editor view model for the template to display as checkboxes.
+In `BuildEditorViewModel`, you can see that we build the current rewards as a lookup and then use that to determine the checked state of each reward program.
 
 Here is the editor view model:
 
@@ -700,7 +728,11 @@ Here is the editor view model:
     }
 
 
-> Note: we are making the assumption here that there are only a few reward programs. If you are modeling a relationship with a large number of records on both sides of the relationship, the basic principles and models exposed here still stand but you'll have to adapt and optimize the code. In particular, using checkboxes to select the associated records is the best UI solution for small numbers of records but it won't scale well to more than a few dozens of records. Instead, you'd probably need to use a search UI of sorts and an Add/Remove pattern.
+!!! note
+    We are making the assumption here that there are only a few reward programs.
+    If you are modeling a relationship with a large number of records on both sides of the relationship, the basic principles and models exposed here still stand but you'll have to adapt and optimize the code.
+    In particular, using checkboxes to select the associated records is the best UI solution for small numbers of records but it won't scale well to more than a few dozens of records.
+    Instead, you'd probably need to use a search UI of sorts and an Add/Remove pattern.
 
 ## The Rewards Service
 
@@ -778,7 +810,9 @@ The rewards service is responsible for driving the relatively complex task of up
     }
 
 
-> Note: again, this is designed for small numbers of reward programs. If you have larger models and have adopted an Add/Remove pattern talked about in the previous note, the code for the service actually becomes simpler as it executes lower-level operations that affect one program at a time rather than try to synchronize the whole collection at once.
+!!! note
+    Again, this is designed for small numbers of reward programs.
+    If you have larger models and have adopted an Add/Remove pattern talked about in the previous note, the code for the service actually becomes simpler as it executes lower-level operations that affect one program at a time rather than try to synchronize the whole collection at once.
 
 ## Building the Views
 
@@ -825,9 +859,11 @@ The editor view is a little more remarkable:
     </fieldset>
 
 
-Notice how the check-boxes use Html.FieldNameFor. This will ensure that they will have a name that the model binder will be able to understand and correctly bind when it is posted back.
+Notice how the check-boxes use `Html.FieldNameFor`.
+This will ensure that they will have a name that the model binder will be able to understand and correctly bind when it is posted back.
 
-Also noticeable is the hidden input, which is a standard workaround for the peculiar way in which HTML check-boxes don't post anything when not checked. The model binder knows how to use the information for both the hidden input and the check-box to determine the Boolean values to set.
+Also noticeable is the hidden input, which is a standard workaround for the peculiar way in which HTML check-boxes don't post anything when not checked.
+The model binder knows how to use the information for both the hidden input and the check-box to determine the Boolean values to set.
 
 Of course, any variation from that naming scheme would make the binding fail.
 
@@ -846,9 +882,11 @@ For the parts to appear at all in the UI, we need to update our `Placement.info`
 
 ## Using the Rewards Part
 
-If you haven't used the application's admin UI since you wrote the migration, it should now warn you that a feature needs to be upgraded. That is our sample feature, as the system noticed the latest executed migration does not match the highest available. Go to the features screen, locate the RelationSample and click "Update".
+If you haven't used the application's admin UI since you wrote the migration, it should now warn you that a feature needs to be upgraded.
+That is our sample feature, as the system noticed the latest executed migration does not match the highest available.
+Go to the features screen, locate the **RelationSample** and click **Update**.
 
-In order to use the new part on our customer content items, we need to add it to the type. Go to the "Content Types" screen and click "Edit" next to "Customer". Click "Add" next to "Parts", check the Rewards part and save.
+In order to use the new part on our customer content items, we need to add it to the type. Go to the **Content Types** screen and click **Edit** next to **Customer**. Click **Add** next to **Parts**, check the **Rewards** part and save.
 
 ![The customer type with the address and rewards parts.](../Attachments/Creating-1-n-and-n-n-relations/CustomerType.PNG)
 
@@ -862,13 +900,15 @@ On the front-end, the customer now looks like this:
 
 # Building a Relation Between Content Items
 
-Our third example will establish a relation between content items, which is a step up from our previous examples which were establishing relations between records. Doing the same thing with items is not fundamentally very different, but there are a couple of caveats that justify a specific example.
+Our third example will establish a relation between content items, which is a step up from our previous examples which were establishing relations between records.
+Doing the same thing with items is not fundamentally very different, but there are a couple of caveats that justify a specific example.
 
-The example that we will build is a Sponsor part that records that a specific customer was sponsored by another.
+The example that we will build is a `Sponsor` part that records that a specific customer was sponsored by another.
 
-## Modeling the Sponsor Part
+## Modeling the `Sponsor` Part
 
-The Sponsor part will consist of a single Sponsor property. This time, we will use a lazy field so that its content only gets fetched when it is needed.
+The `Sponsor` part will consist of a single `Sponsor` property.
+This time, we will use a lazy field so that its content only gets fetched when it is needed.
 
     
     using Orchard.ContentManagement;
@@ -925,7 +965,7 @@ The migration for this part is as follows:
 
 We are in known territory here: the table uses the convention that we have already applied twice in the previous examples, where the name of the column establishing the relation is the concatenation of the column names in both records.
 
-We also make the new SponsorPart attachable, as usual.
+We also make the new `SponsorPart` attachable, as usual.
 
 ## The Sponsor Handler
 
@@ -977,11 +1017,11 @@ The handler is going to be a little more elaborate than usual, because of the us
     }
 
 
-The storage filter is as usual setting up the repository of sponsor part records, but we also have OnInitializing and OnLoaded event handlers that will respectively set-up the setter for the lazy field and the loader of the value that will be executed the first time the field is accessed.
+The storage filter is as usual setting up the repository of sponsor part records, but we also have `OnInitializing` and `OnLoaded` event handlers that will respectively set-up the setter for the lazy field and the loader of the value that will be executed the first time the field is accessed.
 
 At loading time, we look at the record, and if there is a sponsor we get the full content item from the content manager using the record's id.
 
-The lazy field setter just sets the underlying record's Sponsor property.
+The lazy field setter just sets the underlying record's `Sponsor` property.
 
 ## The Driver
 
@@ -1138,7 +1178,9 @@ The driver is also using the following helper service:
     }
 
 
-The only notable thing here is the way we are assuming the content type has a "Name" field that we'll use to build the list of customers that will be used to build the UI to select the sponsor. The GetCustomerName is implementing this assumption. Of course, you could also have a Customer part that has a Name property, or you could use Routable and its Title.
+The only notable thing here is the way we are assuming the content type has a `Name` field that we'll use to build the list of customers that will be used to build the UI to select the sponsor.
+The `GetCustomerName` method is implementing this assumption.
+Of course, you could also have a `Customer` part that has a `Name` property, or you could use `Routable` and its `Title`.
 
 ## Building the Views
 
@@ -1151,19 +1193,20 @@ The editor and front-end views should by now look fairly familiar:
       <div class="editor-field">
         @Html.DropDownListFor(model => model.SponsorId,
             Model.Customers
-    			.Where(c => c.Id != Model.CustomerId)
-    			.Select(c => new SelectListItem {
-    				Selected = c.Id == Model.SponsorId,
-    				Text = c.Name,
-    				Value = c.Id.ToString()
-    			}),
+                .Where(c => c.Id != Model.CustomerId)
+                .Select(c => new SelectListItem {
+                    Selected = c.Id == Model.SponsorId,
+                    Text = c.Name,
+                    Value = c.Id.ToString()
+                }),
             "Choose a customer...")
         @Html.ValidationMessageFor(model => model.SponsorId)
       </div>
     </fieldset>
 
 
-> **Note:** Again, we are assuming a small number of customers. In a real scenario where there are too many customers to be handled in a drop-down-list, it would be possible to adapt the code in this sample by changing among other things the kind of UI that is used to select the sponsor customer.
+> **Note:** Again, we are assuming a small number of customers.
+In a real scenario where there are too many customers to be handled in a drop-down-list, it would be possible to adapt the code in this sample by changing among other things the kind of UI that is used to select the sponsor customer.
 
 The front-end view is as follows:
 
@@ -1186,9 +1229,10 @@ Of course, the placement file also needs to be updated:
     </Placement>
 
 
-## Using the Sponsor Part
+## Using the `Sponsor` Part
 
-We can now go back to the Customer type definition and add our new part. Now when we create a new customer, we can choose his sponsor:
+We can now go back to the `Customer` type definition and add our new part.
+Now when we create a new customer, we can choose his sponsor:
 
 ![](../Attachments/Creating-1-n-and-n-n-relations/EditCustomerWithSponsor.PNG)
 
@@ -1198,41 +1242,38 @@ On the front-end, the sponsor now also appears:
 
 # Accessing NHibernate Configuration directly
 
-For most relationships these conventions should create and auto-map your data model appropriately. However, for more complex data models you may find that it's necessary to access the NHibernate configuration directly in order to appropriately map classes. You can do this by implementing the ISessionConfigurationEvents interface like so:
+For most relationships these conventions should create and auto-map your data model appropriately.
+However, for more complex data models you may find that it's necessary to access the NHibernate configuration directly in order to appropriately map classes.
+You can do this by implementing the `ISessionConfigurationEvents` interface like so:
 
+    
     using FluentNHibernate.Automapping;
     using FluentNHibernate.Cfg;
     using NHibernate.Cfg;
     using Orchard.Data;
     using Orchard.Utility;
-
-	namespace DataMapping.Example
-	{
-		public class Mappings : ISessionConfigurationEvents
-		{
-			public void Created(FluentConfiguration cfg, AutoPersistenceModel defaultModel)
-			{
-				//Many-to-many mapping example
-				defaultModel.Override<ClassA>(x => x.HasManyToMany(y => y.ClassB).Cascade.All()
-					.Table("DataMapping_Example_ClassAClassBCrossReferenceTable"));
-					
-				//One-to-One example
-				defaultModel.Override<ClassA>(x => x.HasOne(y => y.ClassB));
-					
-			}
-
-			public void Prepared(FluentConfiguration cfg) {}
-
-			public void Building(Configuration cfg) {}
-
-			public void Finished(Configuration cfg) {}
-
-			public void ComputingHash(Hash hash) {}
-		}
-	}
+    
+    namespace DataMapping.Example {
+        public class Mappings : ISessionConfigurationEvents {
+            public void Created(FluentConfiguration cfg, AutoPersistenceModel defaultModel) {
+                //Many-to-many mapping example
+                defaultModel.Override<ClassA>(x => x.HasManyToMany(y => y.ClassB).Cascade.All()
+                    .Table("DataMapping_Example_ClassAClassBCrossReferenceTable"));
+                    
+                //One-to-One example
+                defaultModel.Override<ClassA>(x => x.HasOne(y => y.ClassB));
+            }
+            public void Prepared(FluentConfiguration cfg) {}
+            public void Building(Configuration cfg) {}
+            public void Finished(Configuration cfg) {}
+            public void ComputingHash(Hash hash) {}
+        }
+    }
 
 # Conclusion
 
-This topic should show the way for the creation of complex content parts involving arbitrary data relations. There is actually not much to it, as the system already knows how to persist and bind such complex objects. Rather, it's a matter of building the model according to the conventions in place.
+This topic should show the way for the creation of complex content parts involving arbitrary data relations.
+There is actually not much to it, as the system already knows how to persist and bind such complex objects.
+Rather, it's a matter of building the model according to the conventions in place.
 
 You may download the code for this topic from this link: [Orchard.Module.RelationSample.0.5.0.zip](../Attachments/Creating-1-n-and-n-n-relations/Orchard.Module.RelationSample.0.5.0.zip)

@@ -169,7 +169,8 @@ For example, an `EditorTemplate` with a template name of `Parts/Routable.RoutePa
 at `Views/EditorTemplates/Parts/Routable.RoutePart.cshtml`.
 * All other shape templates are in the `Views` folder.
 
-> **Note**: The template extension can be any extension supported by an active view engine, such as `.cshtml`, `.vbhtml`, or `.ascx`.
+!!! note
+    The template extension can be any extension supported by an active view engine, such as `.cshtml`, `.vbhtml`, or `.ascx`.
 
 ## From Template File Name to Shape Name
 

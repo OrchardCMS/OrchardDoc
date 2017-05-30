@@ -132,4 +132,4 @@ More information about using WebMatrix to publish websites can be found [here](h
 
 # Change History
 * Updates for Orchard 1.6
-	* 11-14-12:  Updated screens and workflow.
+    * 11-14-12:  Updated screens and workflow.

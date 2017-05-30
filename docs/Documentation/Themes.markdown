@@ -192,7 +192,8 @@ The theme directory by default is called "themes" and is at the root of the appl
 
 #### View selection
 
-> **Note**:This section is speculative and depends on future decisions on the extensibility model of the application.
+!!! note
+    This section is speculative and depends on future decisions on the extensibility model of the application.
 
 The selection of the most specialized view is done dynamically and is delegated to a plug-in. A default plug-in is provided by the Orchard framework but that can be overridden or completed by plug-ins.
 

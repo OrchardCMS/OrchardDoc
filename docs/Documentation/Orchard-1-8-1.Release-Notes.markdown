@@ -60,7 +60,7 @@ Orchard 1.8.1 fixes bugs and introduces the following changes and features:
 * Upgraded JSON.NET
 * Razor Template Processor is now a separate feature
 * Missing Microsoft.Data.Edm dependency
-* PublishOwnBlogPost and PublishBlogPost permissions are ignored	
+* PublishOwnBlogPost and PublishBlogPost permissions are ignored
 * Output cache improvements
 * Changing Site owner doesn't work
 

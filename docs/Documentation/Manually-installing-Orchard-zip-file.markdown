@@ -8,7 +8,8 @@ We will use three different approaches:
   * WebMatrix and IIS Express
   * Visual Studio and the Visual Studio Development Server.
 
-> **Note**: If you prefer using the Web Platform Installer, or if you plan to use WebMatrix to develop your site, you may want to see the topic [Installing Orchard](Installing-Orchard), which installs Orchard from the Web Platform Installer and includes WebMatrix in the installation.
+!!! note
+    If you prefer using the Web Platform Installer, or if you plan to use WebMatrix to develop your site, you may want to see the topic [Installing Orchard](Installing-Orchard), which installs Orchard from the Web Platform Installer and includes WebMatrix in the installation.
 
 
 # Downloading the .zip File

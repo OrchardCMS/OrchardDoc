@@ -44,11 +44,13 @@ You should now have a new `HelloWorld` folder under the `Modules` folder of your
 
 This text file is describing your module to the system. The information contained in this file will be used for example in the features administration screen.
 
-> Note: While both spaces and tabs are supported to indent the manifest file, we recommend that you use spaces instead of tabs. As with your main coding, using spaces gives a more consistent editing experience when working in teams.
+!!! note
+    While both spaces and tabs are supported to indent the manifest file, we recommend that you use spaces instead of tabs.
+    As with your main coding, using spaces gives a more consistent editing experience when working in teams.
 
 # Adding the Route
 
-Your module will have to handle the /HelloWorld relative URL under your Orchard web site. In order to declare what to do when that URL gets hit, create the following Routes.cs file in the HelloWorld folder:
+Your module will have to handle the `/HelloWorld` relative URL under your Orchard web site. In order to declare what to do when that URL gets hit, create the following `Routes.cs` file in the `HelloWorld` folder:
 
     
     using System.Collections.Generic;
