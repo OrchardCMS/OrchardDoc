@@ -20,7 +20,9 @@ Choose **Other blog service** from the available options and click **Next**.
 
 Type the URL to your Orchard blog, along with the admin user name and password that you defined when you set-up Orchard for the first time.
 
-> Note: it is possible to publish using other XML-RPC aware client applications, but you might have to provide the URL of the xmlrpc endpoint rather than the blog URL. For example, http://myimaginaryorchardsite.com/xmlrpc.
+!!! note
+    It is possible to publish using other XML-RPC aware client applications, but you might have to provide the URL of the XML-RPC endpoint rather than the blog URL.
+    For example, http://myimaginaryorchardsite.com/xmlrpc.
 
 ![](../Upload/screenshots_675/livewriter4.png)
 

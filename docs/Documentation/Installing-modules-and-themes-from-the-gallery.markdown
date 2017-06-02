@@ -1,7 +1,9 @@
 
 Orchard makes it easy to browse available modules and themes from an online gallery and install them using the Orchard dashboard.  This topic shows how to install both modules and themes from the gallery.
 
-> **Note:** If your site is running under IIS, make sure you have granted read/write permissions to the ~/Themes folder under the root of your site for the service account that is being used as the IIS application pool identity. However, you should remove the write permissions on a production server.
+!!! note
+    If your site is running under IIS, make sure you have granted read/write permissions to the `~/Themes` folder under the root of your site for the service account that is being used as the IIS application pool identity.
+    However, you should remove the write permissions on a production server.
 
 
 # Accessing and Enabling the Gallery
@@ -10,13 +12,13 @@ The gallery feature is enabled by default in Orchard. When the gallery is enable
 
 ![](../Upload/screenshots/gallery_default_enabled.png)
 
-> Note:  If the gallery feature has been disabled, there will be no **Gallery** tab visible in the **Themes** or **Modules** dashboard screens. To enable the gallery, click **Modules** in the dashboard, find the gallery feature, and then click **Enable** on the feature. 
+!!! note
+    If the gallery feature has been disabled, there will be no **Gallery** tab visible in the **Themes** or **Modules** dashboard screens.
+    To enable the gallery, click **Modules** in the dashboard, find the gallery feature, and then click **Enable** on the feature. 
 
 # Installing a Theme from the Gallery
 
-To access the gallery for themes, click **Themes** in the dashboard. On the **Themes** screen click the **Gallery** tab. A set of themes appears with a pair of **Install** and **Download** links next to each theme. 
-
-![](../Upload/screenshots_675/themes_themeGallery_675.png)
+See [Installing a Theme from the Gallery](Installing-themes#installing-a-theme-from-the-gallery)
 
 If you install a theme, it becomes available to apply to your site. If you download a theme, you save the theme package file to your local computer. You can then use the **Themes** screen in the Orchard dashboard to install the downloaded theme package. For more information, see [Installing Themes](Installing-themes).
 

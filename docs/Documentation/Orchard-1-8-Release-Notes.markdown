@@ -81,10 +81,10 @@ Orchard 1.8 fixes bugs and introduces the following changes and features:
 * Azure Media Services has been contributed by Microsoft Open Technologies and provides a seamless integration with the Media module
   * Orchard.Azure.MediaServices
 * Orchard.Azure:
-	* `PlatformConfiguration` (static class to read settings from `CloudConfigurationManager`) is gone. Its place is taken by an injectable dependency called `IPlatformConfigurationAccessor` and the old implementation's logic is moved to the `DefaultPlatformConfigurationAccessor` class, which was then extended to look for settings among the `ConnectionStrings` too.
-	* These changes are reflected throughout the `Orchard.Azure` module, though the Azure database cache's behavior (`AzureCache*` classes) is not affected by `IPlatformConfigurationAccessor` implementations other than `DefaultPlatformConfigurationAccessor` due to certain NHibernate limitations.
-	* Added a new setting called `Orchard.Azure.Media.StoragePublicHostName` which makes it possible to override the public host name when using Azure storage.
-	* `Orchard.Azure.Media` and `Orchard.Azure.DatabaseCache` now depend on `Orchard.Azure`.
+    * `PlatformConfiguration` (static class to read settings from `CloudConfigurationManager`) is gone. Its place is taken by an injectable dependency called `IPlatformConfigurationAccessor` and the old implementation's logic is moved to the `DefaultPlatformConfigurationAccessor` class, which was then extended to look for settings among the `ConnectionStrings` too.
+    * These changes are reflected throughout the `Orchard.Azure` module, though the Azure database cache's behavior (`AzureCache*` classes) is not affected by `IPlatformConfigurationAccessor` implementations other than `DefaultPlatformConfigurationAccessor` due to certain NHibernate limitations.
+    * Added a new setting called `Orchard.Azure.Media.StoragePublicHostName` which makes it possible to override the public host name when using Azure storage.
+    * `Orchard.Azure.Media` and `Orchard.Azure.DatabaseCache` now depend on `Orchard.Azure`.
 
 The full list of fixed bugs for this release can be found here:
 

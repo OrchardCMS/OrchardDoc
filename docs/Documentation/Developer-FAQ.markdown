@@ -79,7 +79,8 @@ Orchard comes with a solution folder called Tests. This hosts 2 types of tests:
 
 Running the unit tests is a matter of right clicking the solution or appropriate project and choose Run Unit Tests.
 
-> Note: this applies to writing tests for the modules that come with the standard source code distribution of Orchard. 
+!!! note
+    this applies to writing tests for the modules that come with the standard source code distribution of Orchard. 
 
 > To write code for your own modules you should work in your own separate project. You can use the [orchard scaffolding command](Command-line-scaffolding) `codegen moduletests <module-name>` to set up test projects for your own modules.
 

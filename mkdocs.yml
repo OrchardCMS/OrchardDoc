@@ -3,6 +3,8 @@ theme_dir: rtd
 repo_url: https://github.com/OrchardCMS/OrchardDoc
 copyright: Copyright <a href="http://orchardproject.net">Orchard Project</a>. 
 google_analytics: ['UA-20757794-1', 'orchardproject.net']
+markdown_extensions:
+    - admonition
 pages:
 - Home: index.markdown
 - Getting Started:

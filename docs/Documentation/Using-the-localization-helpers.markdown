@@ -1,7 +1,7 @@
 
 Orchard uses a simple API to allow for localization that takes the default language string (en-us) as its input (that string will be used as the key into the localization data) and returns the most accurate localized version available for the current culture.
 
-## Using T() with the Razor View Engine (.cshtml)
+## Using `T()` with the Razor View Engine (`.cshtml`)
 
 ### Simple usage - translated string is returned and output
 
@@ -24,13 +24,13 @@ Instead, use a parameterized format string:
     @T("You have {0} credits left", Model.SmsCredits)
 
 ### Encoding data
-Please note that the arguments will be encoded before being added. For example, if `noteText` in the following example contains `<b>huge</b>` success":
+Please note that the arguments will be encoded before being added. For example, if `noteText` in the following example contains `<b>huge</b> success`:
     
     @T("I'm writing a note here: {0}.", noteText)
 
-Then the output in the default culture will be with the markup visible to the end user:
+Then the output in the default culture will be with the markup visible to the end user: 
 
-    I'm writing a note here: <b>huge</b> success. 
+> I'm writing a note here: &lt;b&gt;huge&lt;/b&gt; success.
 
 This is *what you want* in 99% of cases. This automatic encoding is protecting you from hackers using injection attacks.
 
@@ -38,11 +38,13 @@ In the rare cases where you absolutely know what you're doing and you want the u
     
     @T("I'm writing a note here: {0}.", new HtmlString(noteText))
 
-This will result in 
+This will result in:
 
-"I'm writing a note here: <b>huge</b> success."
+> I'm writing a note here: <b>huge</b> success.
 
-> Note: any object of a type implementing IHtmlString will be injected unencoded as we assume it to already be properly encoded. This is the trick you are using when writing `new HtmlString(noteText)`.
+!!! note
+    any object of a type implementing `IHtmlString` will be injected unencoded as we assume it to already be properly encoded.
+    This is the trick you are using when writing `new HtmlString(noteText)`.
 
 For example, if you do the following:
     
@@ -164,7 +166,8 @@ Instead, use a parameterized format string:
     <%: T("You have {0} credits left.", Model.SmsCredits) %>
 
 ### Encoding data
-Please note that the arguments will be encoded before being added. For example, if noteText in the following example contains "&lt;b&gt;huge&lt;/b&gt; success":
+Please note that the arguments will be encoded before being added.
+For example, if `noteText` in the following example contains `&lt;b&gt;huge&lt;/b&gt; success`:
 
     
     <%: T("I'm writing a note here: {0}.", noteText) %>
@@ -182,7 +185,8 @@ In the rare cases where you absolutely know what you're doing and you want the u
 
 This will result in "I'm writing a note here: <b>huge</b> success."
 
-> Note: any object of a type implementing IHtmlString will be injected unencoded as we assume it to already be properly encoded. This is the trick you are using when writing `new HtmlString(noteText)`.
+!!! note
+    Any object of a type implementing `IHtmlString` will be injected unencoded as we assume it to already be properly encoded. This is the trick you are using when writing `new HtmlString(noteText)`.
 
 For example, if you do the following:
     
@@ -193,19 +197,19 @@ For example, if you do the following:
 
 Then the action link will not be encoded and will work as expected, while the justification string will be encoded.
 
-
 It should also be noted that the format string itself is considered safe as it is provided by the module author, so the following will work as expected:
 
     
     <%: T("It's <em>hard</em> to overstate my <strong>{0}</strong>",
         emotion) %>
 
+If emotion contains "&lt;satisfaction&gt;", the resulting string will be:
 
-If emotion contains "&lt;satisfaction&gt;", the resulting string will be "It's <b>hard</b> to overstate my <b>&lt;satisfaction&gt;</b>".
+> It's <b>hard</b> to overstate my <b>&lt;satisfaction&gt;</b>
 
 ### Injecting non-string values
 
-Basic value types are not html encoded before formatting, and the current culture will be used to format them:
+Basic value types are not HTML-encoded before formatting, and the current culture will be used to format them:
 
     
     <%: T("when {0} qty {1:#,##0.00} unit price {2:C}", _clock.UtcNow, 5.782, 87 ) %>
@@ -213,7 +217,8 @@ Basic value types are not html encoded before formatting, and the current cultur
 
 ### Pluralization
 
-Pluralization of resource strings (such as `{0} comment` or `{0} comments`) can be tricky as the rules for pluralization or even how many strings you need for all cases wildly varies across languages. While Orchard does not yet implement all possible cases, the API is ready to support them in the future.
+Pluralization of resource strings (such as `{0} comment` or `{0} comments`) can be tricky as the rules for pluralization or even how many strings you need for all cases varies widely across languages.
+While Orchard does not yet implement all possible cases, the API is ready to support them in the future.
 
 If a string needs to be pluralized, provide two strings for the default language and put the pluralization parameter first:
 
@@ -222,13 +227,12 @@ If a string needs to be pluralized, provide two strings for the default language
     <%: T.Plural("Deleted 1 item of type {1}", "Deleted {0} items of type {1}",
         deleteCount, contentType) %>
 
-
-Use 1 literally in the singular string to provide better context to translators (like in the example above).
+Use `1` literally in the singular string to provide better context to translators (like in the example above).
 
 The pluralization parameter must be an integer.
 
-Do not use custom logic in the views to decide between strings, as that would put in the view logic that may vary by culture.
+Do not use custom logic in the views to decide between strings, as that would put logic that may vary by culture in the view.
 
 ### &lt;%= %&gt; vs. &lt;%: %&gt;
 
-&lt;%: %&gt; is to be used in all cases because it handles encoding automatically. Never use &lt;%= %&gt;. If you are sure you need unencoded strings injected, still use &lt;%: %&gt; with an HtmlString.
+&lt;%: %&gt; is to be used in all cases because it handles encoding automatically. Never use &lt;%= %&gt;. If you are sure you need unencoded strings injected, still use &lt;%: %&gt; with an `HtmlString`.

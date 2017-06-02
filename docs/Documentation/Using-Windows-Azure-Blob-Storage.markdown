@@ -22,22 +22,22 @@ It is also possible to use this feature is any other hosting environment where y
 
 Here's an example `Config\Host.config` configuration:
 
-	<autofac defaultAssembly="Orchard.Framework">
-		<components>
-			<!-- Configure Orchard to store shell settings in Microsoft Azure Blob Storage. -->
-			<component instance-scope="single-instance" type="Orchard.FileSystems.Media.ConfigurationMimeTypeProvider, Orchard.Framework" service="Orchard.FileSystems.Media.IMimeTypeProvider"></component>
-			<component instance-scope="single-instance" type="Orchard.Azure.Services.Environment.Configuration.AzureBlobShellSettingsManager, Orchard.Azure" service="Orchard.Environment.Configuration.IShellSettingsManager"></component>
-		</components>
-	</autofac>
+    <autofac defaultAssembly="Orchard.Framework">
+        <components>
+            <!-- Configure Orchard to store shell settings in Microsoft Azure Blob Storage. -->
+            <component instance-scope="single-instance" type="Orchard.FileSystems.Media.ConfigurationMimeTypeProvider, Orchard.Framework" service="Orchard.FileSystems.Media.IMimeTypeProvider"></component>
+            <component instance-scope="single-instance" type="Orchard.Azure.Services.Environment.Configuration.AzureBlobShellSettingsManager, Orchard.Azure" service="Orchard.Environment.Configuration.IShellSettingsManager"></component>
+        </components>
+    </autofac>
 
 # Using Microsoft Azure Media Storage
 
 The *Microsoft Azure Media Storage* feature in the `Orchard.Azure` module configures Orchard to use Microsoft Azure Blob Storage is the underlying file system implementation for storing media:
 
-	Orchard.Azure:
-		Name: Microsoft Azure Media Storage
-		Description: Activates an Orchard media storage provider that targets Microsoft Azure Blob Storage.
-		Category: Hosting
+    Orchard.Azure:
+        Name: Microsoft Azure Media Storage
+        Description: Activates an Orchard media storage provider that targets Microsoft Azure Blob Storage.
+        Category: Hosting
 
 There are two main reasons to use this feature:
 
@@ -80,14 +80,14 @@ To configure the connection string *before* deploying:
 
 Here's an example configuration:
 
-	<appSettings>
-		...
-		<add key="Orchard.Azure.Media.StorageConnectionString" value="[storageConnectionString]"/>
-	</appSettings>
+    <appSettings>
+        ...
+        <add key="Orchard.Azure.Media.StorageConnectionString" value="[storageConnectionString]"/>
+    </appSettings>
 
 The storage connections string will look something like the following:
 
-	DefaultEndpointsProtocol=http;AccountName=myAccount;AccountKey=myKey;
+    DefaultEndpointsProtocol=http;AccountName=myAccount;AccountKey=myKey;
 
     *You can get the account name and key from the Microsoft Azure management portal 
      that you used to create your storage or ask you dev ops admin to provide them for you.
@@ -118,7 +118,7 @@ To ensure the public URLs for your media files contain your custom domain name, 
 
 Here's an example connection string using a custom domain name:
 
-	BlobEndpoint=http://blobs.mycustomdomain.com;AccountName=mystorageaccount;AccountKey=KauG3A5f...An3QlW5dA==
+    BlobEndpoint=http://blobs.mycustomdomain.com;AccountName=mystorageaccount;AccountKey=KauG3A5f...An3QlW5dA==
 
 ### Multi-tenancy configuration
 
@@ -126,9 +126,9 @@ For multi-tenancy scenarios each setting can optionally be prefixed with a tenan
 
 Here's an example Azure Web Site configuration with two tenants, both using Microsoft Azure Blob Storage is the underlying file system implementation for storing media, but each using its own separate storage account:
 
-	<appSettings>
-		<!-- Setting for Tenant1 -->
-		<add key="Tenant1:Orchard.Azure.Media.StorageConnectionString" value="[storageConnectionString1]" />
-		<!-- Setting for Tenant2 -->
-		<add key="Tenant2:Orchard.Azure.Media.StorageConnectionString" value="[storageConnectionString2]" />
-	</appSettings>
+    <appSettings>
+        <!-- Setting for Tenant1 -->
+        <add key="Tenant1:Orchard.Azure.Media.StorageConnectionString" value="[storageConnectionString1]" />
+        <!-- Setting for Tenant2 -->
+        <add key="Tenant2:Orchard.Azure.Media.StorageConnectionString" value="[storageConnectionString2]" />
+    </appSettings>

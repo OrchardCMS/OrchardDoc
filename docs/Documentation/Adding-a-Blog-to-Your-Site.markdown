@@ -11,7 +11,9 @@ In the *New Blog* screen add a title, description, and menu text for the blog an
 ![](../Attachments/Adding-A-Blog-To-Your-Site/NewBlog.png)
 
  A page for managing the blog is displayed.
-> Note: You can have several blogs in the same Orchard site.
+
+!!! note
+    You can have several blogs in the same Orchard site.
 
 ![](../Attachments/Adding-A-Blog-To-Your-Site/ManageBlog.png)
 
@@ -46,7 +48,9 @@ Because comments were enabled for the post, a new comment can be entered.  The c
 ![](../Attachments/Adding-A-Blog-To-Your-Site/PostComment.png)
 
 Return to the Orchard dashboard and under **Settings**, click **Comments**. There are two options which effect how comments are handled. One to require administrator approval before a comment is published, and another option for enabling automatic closing of comments for old posts. For more details about these features, see the [Moderating Comments](Moderating-comments) topic.
-> Note: There are several good modules in the [Orchard Gallery](http://gallery.orchardproject.net/) to enable spam protection in your blog.
+
+!!! note
+    There are several good modules in the [Orchard Gallery](http://gallery.orchardproject.net/) to enable spam protection in your blog.
 
 ![](../Attachments/Adding-A-Blog-To-Your-Site/CommentsSettings.png)
 
@@ -66,8 +70,8 @@ If the URL is shortened to just the _/Tags/_ portion, the list of tags used in y
 
 ### Change History
 * Updates for Orchard 1.8
-	* 4-25-14:  New Screenshots. Comment settings are different. You can add many blogs.
+    * 4-25-14:  New Screenshots. Comment settings are different. You can add many blogs.
 * Updates for Orchard 1.6
-	* 11-25-12:  Broke into multiple sections.
+    * 11-25-12:  Broke into multiple sections.
 
 

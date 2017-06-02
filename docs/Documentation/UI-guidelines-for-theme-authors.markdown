@@ -204,7 +204,7 @@ Example:
     p {
        padding: 0 10px;
        line-height: 150%;  
-    }	
+    }
 
 
 ## Typography

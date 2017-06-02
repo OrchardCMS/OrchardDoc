@@ -27,7 +27,7 @@ Once the **Code Generation** feature has been enabled, you can type the followin
     codegen module CustomFields /IncludeInSolution:true
 
 
-This should create a new `CustomFields` folder under Modules, pre-populated with a few folders and files. For example, you may open the `Module.txt` manifest file and modify it:
+This should create a new `CustomFields` folder under `Modules`, pre-populated with a few folders and files. For example, you may open the `Module.txt` manifest file and modify it:
 
     
     Name: CustomFields
@@ -300,7 +300,9 @@ The static `GetPrefix` method is a conventionally defined method that is used to
 
 We then have two actions, `Display` and `Editor`, which start by fetching the `settings` and `value` for the field and build shapes out of them.
 
-> Note: The `UsedImplicitly` attribute is only here to suppress a warning from Resharper. It could be removed without much harm.
+!!! note
+    The `UsedImplicitly` attribute is only here to suppress a warning from Resharper.
+    It could be removed without much harm.
 
 The `shapeHelper` object provides some helper methods to create shapes, two of which can be seen in action here.
 

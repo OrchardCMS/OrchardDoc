@@ -20,14 +20,14 @@ These will be the two settings added to our theme:
 - Add a custom class to the main layout <div>
 - Load a custom style sheet based on the users selection
 
-	
+
 We are going to attach a new part to the Site content type to store these custom theme settings. So let's create a **Models** folder and add a file called *CleanBlogSettingsPart.cs*.
 
     using Orchard.ContentManagement;
     
     namespace CleanBlog.Models
     {
-    	public class CleanBlogSettingsPart : ContentPart
+        public class CleanBlogSettingsPart : ContentPart
         {
             public string CustomClass {
                 get { return this.Retrieve(x => x.CustomClass); }
@@ -75,14 +75,14 @@ Now we will need an editor to select these options. Create a file in **~/Views/E
     
     <fieldset>
         <legend>Clean Blog Settings</legend>
-    	<div>
-    		@Html.LabelFor(m => m.CustomClass, T("Custom Class"))
-    		@Html.EditorFor(m => m.CustomClass)
-    	</div>
-    	<div>
-    		@Html.LabelFor(m => m.HoverColor, T("Hover Color"))
-    		@Html.DropDownListFor(m => m.HoverColor, colourScheme.AsEnumerable())
-    	</div>
+        <div>
+            @Html.LabelFor(m => m.CustomClass, T("Custom Class"))
+            @Html.EditorFor(m => m.CustomClass)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.HoverColor, T("Hover Color"))
+            @Html.DropDownListFor(m => m.HoverColor, colourScheme.AsEnumerable())
+        </div>
     </fieldset>
 
 To handle the display of this view and attach the settings to the Site content type, we will use a ContentHandler. So create a folder called **Handlers** in the root of your theme with a file called *CleanBlogSettingsPartHandler.cs*.
@@ -94,17 +94,17 @@ using CleanBlog.Models;
 
     namespace CleanBlog.Handlers
     {
-    	public class CleanBlogSettingsPartHandler : ContentHandler
+        public class CleanBlogSettingsPartHandler : ContentHandler
         {
             public CleanBlogSettingsPartHandler() {
-    			Filters.Add(new ActivatingFilter<CleanBlogSettingsPart>("Site"));
+                Filters.Add(new ActivatingFilter<CleanBlogSettingsPart>("Site"));
                 Filters.Add(new TemplateFilterForPart<CleanBlogSettingsPart>("CleanBlogSettingsPart", "Parts/CleanBlogSettingsPart", "Theme"));
                 T = NullLocalizer.Instance;
             }
     
-    		public Localizer T { get; set; }
+            public Localizer T { get; set; }
     
-    		protected override void GetItemMetadata(GetContentItemMetadataContext context) {
+            protected override void GetItemMetadata(GetContentItemMetadataContext context) {
                 if (context.ContentItem.ContentType != "Site")
                     return;
                 base.GetItemMetadata(context);

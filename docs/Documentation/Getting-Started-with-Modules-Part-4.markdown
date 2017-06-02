@@ -428,7 +428,7 @@ This means the code from the `bool isOnFeaturedProductPage` to the start of the 
               StringComparison.InvariantCulture)) {
                 isOnFeaturedProductPage = true;
             }
-        }	
+        }
   
   1. Delete the `throw new NotImplementedException();` line if its still in there.
   
@@ -486,7 +486,7 @@ The service class is now complete. Your completed service class `FeaturedProduct
                 StringComparison.InvariantCulture)) {
                   isOnFeaturedProductPage = true;
               }
-          }	
+          }
     
           return isOnFeaturedProductPage;
         }
