@@ -1,3 +1,19 @@
+!!! warning "Deprecation note"
+    Bertrand LeRoy writes [in his blog on Wednesday, June 10, 2015](https://weblogs.asp.net/bleroy/many-ways-to-relate-orchard-things-part-1-database-relations):
+    > A long time ago, I wrote [this chapter] on how to implement 1-n and n-n
+    > relationships in Orchard using database relations. It was much needed at
+    > the time, as this was still a difficult topic. Between spotty mapping
+    > mechanisms for relationships, and specific Orchard conventions, it wasn’t
+    > something you could expect just anybody to figure out on their own. It is
+    > still the way to go under some conditions, but those conditions are
+    > arguably very uncommon, and there are now much better solutions for more
+    > common cases.
+    > 
+    > [...]
+    > 
+    > I’m tempted to limit my recommendation to use this technique to cases
+    > where no other technique is applicable. As you’ll see by reading the other
+    > posts in this series, that leaves very few situations.
 
 It is very common for contents to consist in part of lists or choices in lists.
 For example, an _address_ can have a _state_ or _region_ property where the value is one in a predefined list of choices.
