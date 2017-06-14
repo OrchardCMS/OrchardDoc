@@ -1,4 +1,5 @@
-> **ARCHIVED**
+!!! attention "ARCHIVED"
+    This chapter has not been updated for the current version of Orchard, and has been ARCHIVED.
 
 Navigation and search are an essential part of CMS applications. This specification aims at defining the default navigation menu generation experience.
 

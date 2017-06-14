@@ -1,4 +1,5 @@
-> **ARCHIVED**
+!!! attention "ARCHIVED"
+    This chapter has not been updated for the current version of Orchard, and has been ARCHIVED.
 
 Custom permissions are implemented in a permissions.cs file.
 In this file we'll implement the *IPermissionProvider* interface.

@@ -1,4 +1,5 @@
-> **ARCHIVED**
+!!! attention "ARCHIVED"
+    This chapter has not been updated for the current version of Orchard, and has been ARCHIVED.
 
 Orchard will provide an easy way for content type authors to expose new feeds and advertise them from a view.
 

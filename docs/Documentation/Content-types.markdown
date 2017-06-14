@@ -1,4 +1,5 @@
-> **ARCHIVED**
+!!! attention "ARCHIVED"
+    This chapter has not been updated for the current version of Orchard, and has been ARCHIVED.
 
 At the core of the idea of CMS is the ability to extend the system to new content types instead of restricting it
 to pre-defined ones such as blog posts.

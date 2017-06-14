@@ -1,4 +1,5 @@
-> **ARCHIVED**
+!!! attention "ARCHIVED"
+    This chapter has not been updated for the current version of Orchard, and has been ARCHIVED.
 
 We apply selenium for UI automation test; please download selenium IDE and selenium RC from its official website. Please read the selenium document in the web site to learn its usage.
 
