@@ -1,4 +1,5 @@
-> **ARCHIVED**
+!!! attention "ARCHIVED"
+    This chapter has not been updated for the current version of Orchard, and has been ARCHIVED.
 
 An Admin menu is a menu which only appears in the admin website. There are 2 levels of admin menus available on the side menu and the second level is by default collapsed. Adding a third level is possible, but this will only be displayed as a tabbed navigation on top of the pages.
 

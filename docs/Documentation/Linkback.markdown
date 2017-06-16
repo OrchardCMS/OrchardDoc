@@ -1,4 +1,5 @@
-> **ARCHIVED**
+!!! attention "ARCHIVED"
+    This chapter has not been updated for the current version of Orchard, and has been ARCHIVED.
 
 Orchard should send linkbacks when contents gets created, and should receive refbacks, trackbacks and pingbacks. It should put all three through spam filters and should provide admin UI to manage the linkbacks and configure their moderation (moderation required or not, etc.).
 

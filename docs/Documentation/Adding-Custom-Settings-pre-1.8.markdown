@@ -1,4 +1,5 @@
-> **ARCHIVED**
+!!! attention "ARCHIVED"
+    This chapter has not been updated for the current version of Orchard, and has been ARCHIVED.
 
 ##Adding Custom Settings pre Orchard 1.8
 This document traces the process of defining and implementing and individual site setting for a live orchard module that can be added to your site to enable the webservice known as 'AddThis' [Content Sharing](http://orchardsharing.codeplex.com/)

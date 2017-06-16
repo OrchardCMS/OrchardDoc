@@ -1,4 +1,5 @@
-> **ARCHIVED**
+!!! attention "ARCHIVED"
+    This chapter has not been updated for the current version of Orchard, and has been ARCHIVED.
 
 The system can also be queried to provide all tags currently in use or to provide all content items that have been tagged with a given tag.
 

@@ -1,4 +1,5 @@
-> **ARCHIVED**
+!!! attention "ARCHIVED"
+    This chapter has not been updated for the current version of Orchard, and has been ARCHIVED.
 
 ####  I can create an empty CMS page and give it a slug from the admin interface. I can then navigate to that page 
 

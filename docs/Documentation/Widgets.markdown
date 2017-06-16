@@ -1,4 +1,5 @@
-> **ARCHIVED**
+!!! attention "ARCHIVED"
+    This chapter has not been updated for the current version of Orchard, and has been ARCHIVED.
 
 Widgets are fragments of UI that surface specific data or features. Examples of widgets include navigation menus, image galleries, ads,  videos, tag clouds.
 
