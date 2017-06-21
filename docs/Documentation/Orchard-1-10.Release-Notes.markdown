@@ -85,7 +85,7 @@ No matter what migration path you take, please take the precaution of making a b
 
 ### Upgrading from Orchard 1.9 and earlier
 
-Please follow the upgrade instruction from this document: <http://docs.orchardproject.net/Documentation/orchard-1-9.Release-Notes>
+Please follow the upgrade instruction from this document: <http://docs.orchardproject.net/en/latest/Documentation/Orchard-1-9.Release-Notes/>
 
 #### Disabled modules
 
