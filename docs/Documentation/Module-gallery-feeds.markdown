@@ -9,7 +9,7 @@ The **Gallery Feeds** screen displays currently registered feeds.
 
 ![](../Upload/screenshots_675/galleryfeedupdated.png)
 
-As the illustration shows, by default an Orchard site provides a single registered gallery feed from [http://packages.orchardproject.net/FeedService.svc](http://packages.orchardproject.net/FeedService.svc). You can add feeds or delete existing feeds.
+As the illustration shows, by default an Orchard site provides a single registered gallery feed from [https://gallery.orchardproject.net/api/FeedService](https://gallery.orchardproject.net/api/FeedService). You can add feeds or delete existing feeds.
 
 To register an additional feed, click the **Add Feed** button.
 

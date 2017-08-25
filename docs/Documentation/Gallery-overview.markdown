@@ -13,7 +13,7 @@ You can also access the Gallery from within your Orchard site in order to downlo
 If you are a developer who writes modules or themes for Orchard, you are probably interested in sharing your module with others in the gallery. For information about how to do this, see [Contributing a Module or Theme to the Gallery](Contributing-a-module-or-theme-to-the-gallery).
 
 ## Registering Additional Gallery Feeds
-The Orchard Gallery is just one gallery that you can browse. By default, a single feed is exposed from [http://packages.orchardproject.net/FeedService.svc](http://packages.orchardproject.net/FeedService.svc). Orchard allows you to register additional feeds for other galleries. To register a feed, expand the dashboard **Settings** section and then click **Gallery**.  On the **Gallery Feeds** page you can add new feeds or delete existing ones. For more information, see [Registering Additional Gallery Feeds](Module gallery feeds).
+The Orchard Gallery is just one gallery that you can browse. By default, a single feed is exposed from [https://gallery.orchardproject.net/api/FeedService](https://gallery.orchardproject.net/api/FeedService). Orchard allows you to register additional feeds for other galleries. To register a feed, expand the dashboard **Settings** section and then click **Gallery**.  On the **Gallery Feeds** page you can add new feeds or delete existing ones. For more information, see [Registering Additional Gallery Feeds](Module gallery feeds).
 
 If you want to set up your own gallery, a reference implementation for exposing a gallery feed and website is available on [OrchardGallery.CodePlex.com](http://orchardgallery.codeplex.com) and [GalleryServer.CodePlex.com](http://galleryserver.codeplex.com).  
   
