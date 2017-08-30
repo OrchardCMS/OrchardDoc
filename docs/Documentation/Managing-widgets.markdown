@@ -53,31 +53,7 @@ To add a layer, in the dashboard, click **Widgets**. On the **Widgets** screen, 
 
 To define the new layer, enter the name of the layer, a description, and the rule that defines the layer. When you're finished, click **Save**.
 
-The **Layer Rule** value is an expression that resolves to either **true** or **false**. If it resolves to **true**, the widget is displayed; otherwise the widget is not displayed. 
-
-The following table summarizes the syntax for building layer rules.
-
-Rule Syntax                  | Description
----------------------------- | ------------------------------
-url("&lt;url&nbsp;path&gt;") | True if the current URL matches the specified path. If you add an asterisk (*) to the end of the path, all pages found in subfolders under that path will evaluate to true (for example, `url("~/home*")`).
-authenticated                | True if the user is logged in.
-ContentType("&lt;Type&gt;")  | True if the content type being view matches the content type specified e.g. ContentType("Page")
-not                          | Logical NOT.
-and                          | Logical AND.
-or                           | Logical OR.
-
-Your expression can use parentheses.
-
-For example, the following expression defines a rule that displays a widget on the **About** page if the user is not authenticated, or on any page if the user is authenticated. 
-
-    
-    (not authenticated and url("~/about")) or authenticated
-
-
-To allow multiple URL values, you can use the following syntax:
-
-    
-    url("~/foo") or url("~/bar")
+The **Layer Rule** value is an expression that resolves to either **true** or **false**. If it resolves to **true**, the widget is displayed; otherwise the widget is not displayed. For all the available rules, and their syntax see [Using Rules to conditionally display content](Using-Rules-to-conditionally-display-content)
 
 
 # Assigning a Widget to a Zone

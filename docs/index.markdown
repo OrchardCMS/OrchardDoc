@@ -60,6 +60,7 @@ and [Suggestions for New Topics](Documentation/Suggestions-for-New-Topics).
     * [Workflows](Documentation/Workflows)
     * [Projection](Documentation/Projection)
     * [Create Dynamic Forms](Documentation/Creating-Dynamic-Forms "Use Dynamic Forms to create subscribe and contact us pages in Orchard")
+    * [Using Rules to conditionally display content](Documentation/Using-Rules-to-conditionally-display-content)
 
 
 * **Hosting and Deploying Websites**

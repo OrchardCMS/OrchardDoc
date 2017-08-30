@@ -54,6 +54,7 @@ pages:
     - Projection: Documentation/Projection.markdown
     - Create Custom Forms: Documentation/Creating-Custom-Forms.markdown
     - Create Dynamic Forms: Documentation/Creating-Dynamic-Forms.markdown
+    - Using Rules to conditionally display content: Documentation/Using-Rules-to-conditionally-display-content.markdown
 - Hosting and Deploying Websites:
     - Upgrading a Site to a New Version: Documentation/Upgrading-a-site-to-a-new-version-of-Orchard.markdown
     - Optimizing Server Performance: Documentation/Optimizing-Performance-of-Orchard-with-Shared-Hosting.markdown
