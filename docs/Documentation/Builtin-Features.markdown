@@ -374,9 +374,9 @@ This module is deprecated as of Orchard v1.10, you should use Orchard.Resources 
 
 ## Orchard.Layouts
 
-Orchard.Layouts module in Orchard provides tools to create layouts. In Orchard v.1.9 by default the Page content type has a LayoutPart instead of the BodyPart. 
+The Orchard.Layouts module in Orchard provides tools to create layouts. In Orchard v.1.9 by default the Page content type has a LayoutPart instead of the BodyPart. 
 
-A LayoutPart is a layout canvas which is empty by default. The Layouts module consists of Elements like Grids, Rows, Columns and Content Item elements, Media elements and Part elements like Title, Common and Tags part.
+A LayoutPart is a layout canvas which is empty by default. The Layouts module consists of Elements like Grids, Rows, Columns and Content Item elements, Media elements and Part elements like Title, Common and Tags part. The visibility of elements within a layout can be controlled using by [using a rule](Using-Rules-to-conditionally-display-content).
 
 Layout elements can be dragged-n-dropped on the Layout canvas to form a layout for a Page or a master layout for other pages.
 
