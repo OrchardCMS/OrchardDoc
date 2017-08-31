@@ -44,7 +44,7 @@ not                                    | n/a                  | Logical NOT.
 and                                    | n/a                  | Logical AND.
 or                                     | n/a                  | Logical OR.
 
-The presence of `[]` in the condition syntax denotes the fact tha this condition accepts multiple parameters. Examples of using these conditions with multiple parameters are given below.
+The presence of `[]` in the condition syntax denotes the fact that this condition accepts multiple parameters. Examples of using these conditions with multiple parameters are given below.
 
 You can find modules that implement additional conditions by [searching the gallery for the term 'rules'](http://gallery.orchardproject.net/Packages/Modules?q=rules).
 
