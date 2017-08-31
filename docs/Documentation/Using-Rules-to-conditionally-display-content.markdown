@@ -1,3 +1,5 @@
+> This topic targets, and was tested with, the Orchard 1.10.2 release.
+
 In Orchard, you can use rules to determine the visibility of both layers (see [Managing widgets](Managing-widgets)) and elements within a Layout.
 
 A rule is composed of one or more conditions which are combined using one or more logical operators such as AND, OR and NOT. This article describes how to compose a rule using conditions and lists the conditions that are available within a standard Orchard installation.
