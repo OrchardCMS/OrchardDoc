@@ -38,7 +38,7 @@ culturecode("&lt;Culture-Code&gt;"[])  | Orchard.Localization | Check to see if 
 culturelcid(&lt;LocaleId&gt;[])        | Orchard.Localization | Check to see if the Locale ID of the content being rendered matches, for example `culturelcid(1033)` will match the 'English - United States' locale
 cultureisrtl(true\|false)              | Orchard.Localization | Check to see if content is being rendered Right To Left, or not, for example `cultureisrtl(true)` will return false for non-RTL content
 culturelang("&lt;Language&gt;"[])      | Orchard.Localization | Check the language that content is being rendered for, for example `culturelang('en')` will return true for English content
-url("&lt;url&nbsp;path&gt;")           | Orchard.Conditions   | True if the current URL matches the specified path. If you add an asterisk (*) to the end of the path, all pages found in subfolders under that path will evaluate to true (for example, `url("~/home*")`).
+url("&lt;url&nbsp;path&gt;")           | Orchard.Conditions   | True if the current URL matches any of the specified paths. If you add an asterisk (*) at the end of the path, all pages found in subfolders under that path will evaluate to true (for example, `url("~/home*")`), multiple urls can be specified by separating them with ',' (for example, `url("~/home*", "~/about")`).
 role("&lt;role&gt;"[])                 | Orchard.Roles        | Allows you to test the current user to see if they're a member of a specific role, for example, `role("Moderator")` (Note: These are case-sensitive, 'Moderator' will be matched, 'moderator' won't)
 not                                    | n/a                  | Logical NOT.
 and                                    | n/a                  | Logical AND.
