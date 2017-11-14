@@ -113,7 +113,7 @@ The basic structure of the asset manifest looks like this:
 ]
 ```
 
-All input and output paths are relative to the extension root folder. However they do not have to reside within the extension folder; using `../` to resolve paths outside of the extension folder is fully supported. It is a common convention in Orchard to use a folder named `Assets` to contain input asset filess and to keep those separate from the output asset files, but this is not required.
+All input and output paths are relative to the extension root folder. However they do not have to reside within the extension folder; using `../` to resolve paths outside of the extension folder is fully supported. It is a common convention in Orchard to use a folder named `Assets` to contain input asset files and to keep those separate from the output asset files, but this is not required.
 
 Using the asset pipeline is completely optional. If you don't add an `Asset.json` manifest file in the root folder of your extension, the client-side asset pipeline will simply ignore your extension.
 
@@ -238,7 +238,7 @@ You can define multiple asset groups in the same asset manifest, as in the follo
 
 As described above, the **watch** task can be used to continuously monitor input asset files for changes and rebuild affected asset groups automatically for a smooth and efficient local dev/test workflow.
 
-In some cases you may want the **watch** task to monitor additional files besides those specified as input assets. In particular, this is commonly when using LESS/SASS imports or the TypeScript `<reference>` or `import` keywords to indirectly include files into the pipeline which were not part of the initial input specification.
+In some cases you may want the **watch** task to monitor additional files besides those specified as input assets. In particular, this is commonly needed when using LESS/SASS imports or the TypeScript `<reference>` or `import` keywords to indirectly include files into the pipeline which were not part of the initial input specification.
 
 Let's say you have a main SCSS stylesheet that looks something like this:
 
