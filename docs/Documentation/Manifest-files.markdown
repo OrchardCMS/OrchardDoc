@@ -15,7 +15,7 @@ The module can be comprised of a default single feature or a group of individual
 
 ### Main `Module.txt` fields
 
-Some of the fields may be overridden if a module defines multiple features. These are detailed in the [`Features:` sub-section fields](manifest-files#ModuletxtFeaturessubsectionfields) table below.
+Some of the fields may be overridden if a module defines multiple features. These are detailed in the [`Features:` sub-section fields](#moduletxt-features-sub-section-fields) table below.
 
 Field Name         | Description
 ------------------ | ---------------------------------------------------
@@ -70,7 +70,7 @@ Listed below are the three different ways you can use the module manifest.
 
 #### Multiple features with a default module in the main manifest
 
-The Orchard.Alias module itself (defined as `Name: Alias`) is its own default feature. There are two extra optional features defined in the `Features` which can be separately enabled. In this case they both have dependencies on their parent feature `Orchard.Alias` but module developers can define independent features as well.
+The `Orchard.Alias` module itself (defined as `Name: Alias`) is its own default feature. There are two extra optional features defined in the `Features` which can be separately enabled. In this case they both have dependencies on their parent feature `Orchard.Alias` but module developers can define independent features as well.
 
     Name: Alias
     AntiForgery: enabled
@@ -134,7 +134,7 @@ A theme manifest can have the following fields:
 
 Field Name  | Description
 ----------- | ----------------------------------------------------
-Name        | Provides a human-readable name for a theme that is an alternative to using the theme's ID. The ID of a theme is the name of the theme's folder in the virtual base path (the default virtual base path is _~/Themes_), and is used for programmatic references. For example, for a theme whose ID is `Orchard.Theme.Contoso`, you might provide a name in the manifest such as `Contoso Theme`. If you do not provide a name in the manifest, the ID is used instead. If you do provide a name, it will be used as the theme's display name in the [Orchard Gallery](http://gallery.orchardproject.net/) and in the Orchard UI.
+Name        | Provides a human-readable name for a theme that is an alternative to using the theme's ID. The ID of a theme is the name of the theme's folder in the virtual base path (the default virtual base path is `~/Themes`), and is used for programmatic references. For example, for a theme whose ID is `Orchard.Theme.Contoso`, you might provide a name in the manifest such as `Contoso Theme`. If you do not provide a name in the manifest, the ID is used instead. If you do provide a name, it will be used as the theme's display name in the [Orchard Gallery](http://gallery.orchardproject.net/) and in the Orchard UI.
 Description | A brief summary of a theme's appearance and layout details. The description is used in the [Orchard Gallery](http://gallery.orchardproject.net/) and in the Orchard UI.
 Version     | The version number of a theme. The version information is displayed in the [Orchard Gallery](http://gallery.orchardproject.net/) and the Orchard UI, and is also used to determine whether an update is needed.
 Author      | The developer of a theme. This can be an organization, individual, or a list of individuals.
@@ -143,7 +143,7 @@ Tags        | A comma-separated lists of tags for the theme. The tags can be use
 Zones       | A comma-separated list of the Orchard zones that are used by a theme. These zones are displayed in the Orchard dashboard and can be used to customize the layout of a site by adding, removing, or arranging widgets.
 BaseTheme   | The ID of another theme that this theme inherits from. This is an optional field. It is useful in cases where you want to customize an existing theme by copying it and then making some changes in style and appearance. When you use this approach, add the `BaseTheme` field to the manifest for the customized theme, and specify the `Id` of the base theme. For example, if you customized the Contoso theme, you could add the line `BaseTheme: Orchard.Theme.Contoso` to the manifest of your theme.
 
-The following example shows the manifest for **The Theme Machine** theme, which is the default Orchard theme.  
+The following example shows the manifest for **The Theme Machine** theme, which is the default Orchard theme.
 
     Name: The Theme Machine
     Author: jowall, mibach, loudej, heskew
