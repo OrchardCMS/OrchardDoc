@@ -4,7 +4,7 @@ To manage the users in your site, click the **Users** link in admin panel.
 
 ![](../Upload/screenshots/Users_select.png)
 
-By default, there is ony one user, which is the admin user that is configured in the Orchard setup screen on first install. To add an additional user, click **Add a new user**. You can also edit, remove, and disable user accounts from this screen.
+By default, there is only one user, which is the admin user that is configured in the Orchard setup screen on first install. To add an additional user, click **Add a new user**. You can also edit, remove, and disable user accounts from this screen.
 
 ![](../Upload/screenshots_675/Users_manage.png)
 
