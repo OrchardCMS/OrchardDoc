@@ -6,199 +6,199 @@ google_analytics: ['UA-20757794-1', 'orchardproject.net']
 markdown_extensions:
     - admonition
 pages:
-- Home: index.markdown
-- Getting Started:
-    - Installing Orchard: Documentation/Installing-Orchard.markdown
-    - Manually Installing Orchard: Documentation/Manually-installing-Orchard-zip-file.markdown
-    - Working with Orchard in WebMatrix: Documentation/Working-with-Orchard-in-WebMatrix.markdown
-    - Getting Around the Dashboard: Documentation/Getting-around-the-dashboard.markdown
-    - Building Your First Orchard Site: Documentation/Getting-Started.markdown
-    - Navigation and Menus: Documentation/Navigation-and-menus.markdown
-    - Adding a Blog to Your Site: Documentation/Adding-a-Blog-to-Your-Site.markdown
-    - Adding Pages to Your Site: Documentation/Adding-Pages-to-Your-Site.markdown    
-    - Adding and Managing Media Content: Documentation/Adding-and-managing-media-content.markdown
-    - Managing Widgets: Documentation/Managing-widgets.markdown
-    - Organizing Content Using Tags: Documentation/Organizing-content-with-tags.markdown
-- About the Project:
-    - Orchard Concept Definitions: Documentation/Basic-Orchard-Concepts.markdown
-    - 'Built-in modules and features': 'Documentation/Builtin-Features.markdown'
-    - Feature roadmap: Documentation/Feature-roadmap.markdown
-    - Frequently Asked Questions: Documentation/Frequently-asked-questions.markdown
-- Authoring Websites:
-    - Blogging with LiveWriter: Documentation/Blogging-with-LiveWriter.markdown
-    - Creating Global-Ready Applications: Documentation/Creating-global-ready-applications.markdown
-    - Search and Indexing: Documentation/Search-and-indexing.markdown
-    - Publishing Drafts: Documentation/Saving-scheduling-and-publishing-drafts.markdown
-    - Creating Custom Content Types: Documentation/Creating-custom-content-types.markdown
-- Customizing Websites:
-    - Previewing and Applying a Theme: Documentation/Previewing-and-applying-a-theme.markdown
-    - Installing Themes: Documentation/Installing-themes.markdown
-    - Customizing Themes: Documentation/Customizing-the-default-theme.markdown
-- Using the Orchard Gallery:
-    - Gallery Overview: Documentation/Gallery-overview.markdown
-    - Installing Modules and Themes: Documentation/Installing-modules-and-themes-from-the-gallery.markdown
-    - Browsing the Gallery Web Site: Documentation/Browsing-the-gallery-web-site.markdown
-    - Contributing to the Gallery: Documentation/Contributing-a-module-or-theme-to-the-gallery.markdown
-    - Registering Additional Gallery Feeds: Documentation/Module-gallery-feeds.markdown
-- Managing Websites:
-    - Enabling and Disabling Features: Documentation/Enabling-and-disabling-features.markdown
-    - Using the Command-Line Interface: Documentation/Using-the-command-line-interface.markdown
-    - Installing and Upgrading Modules: Documentation/Installing-and-upgrading-modules.markdown
-    - Modifying Site Settings: Documentation/Modifying-site-settings.markdown
-    - Moderating Comments: Documentation/Moderating-comments.markdown
-    - Managing Users and Roles: Documentation/Managing-users-and-roles.markdown
-    - Understanding Permissions: Documentation/Understanding-permissions.markdown
-    - Making a Website Recipe: Documentation/Making-a-Web-Site-Recipe.markdown
-    - Creating an Image Gallery: Documentation/Creating-an-image-gallery.markdown
-    - Workflows: Documentation/Workflows.markdown
-    - Projection: Documentation/Projection.markdown
-    - Create Custom Forms: Documentation/Creating-Custom-Forms.markdown
-    - Create Dynamic Forms: Documentation/Creating-Dynamic-Forms.markdown
-    - Using Rules to conditionally display content: Documentation/Using-Rules-to-conditionally-display-content.markdown
-- Hosting and Deploying Websites:
-    - Upgrading a Site to a New Version: Documentation/Upgrading-a-site-to-a-new-version-of-Orchard.markdown
-    - Optimizing Server Performance: Documentation/Optimizing-Performance-of-Orchard-with-Shared-Hosting.markdown
-    - What's New for Windows Azure in Orchard 1.7.1: Documentation/Whats-new-for-Windows-Azure-in-Orchard-1-7-1.markdown
-    - Deploying Orchard to Windows Azure: Documentation/Deploying-Orchard-to-Windows-Azure.markdown
-    - Using Windows Azure Blob Storage: Documentation/Using-Windows-Azure-Blob-Storage.markdown
-    - Using Windows Azure Cache: Documentation/Using-Windows-Azure-Cache.markdown
-    - Running Orchard on Mono: Documentation/Running-Orchard-on-Mono.markdown
-    - Setting Up a Multi-Tenant Orchard Site: Documentation/Setting-up-a-multi-tenant-Orchard-site.markdown
-    - Setting Up a Machine Key: Documentation/Setting-up-a-machine-key.markdown
-- Extending Orchard:
-    - First Steps into Orchard: Documentation/First-steps-into-Orchard.markdown
-    - How Orchard Works: Documentation/How-Orchard-works.markdown
-    - Using the Localization Providers: Documentation/Using-the-localization-helpers.markdown
-    - Command-Line Code Generation: Documentation/Command-line-scaffolding.markdown
-    - Writing an Orchard Module: Documentation/Walkthrough-Writing-An-Orchard-Module.markdown
-    - Building a Hello World Module: Documentation/Building-a-hello-world-module.markdown
-    - Creating a Module with a Simple Text Editor: Documentation/Creating-a-module-with-a-simple-text-editor.markdown
-    - Writing a Content Part: Documentation/Writing-a-content-part.markdown
-    - Writing a Content Field: Documentation/Creating-a-custom-field-type.markdown
-    - Packaging and Sharing a Module: Documentation/Packaging-and-sharing-a-module.markdown
-    - Writing a Widget: Documentation/Writing-a-widget.markdown
-    - Creating Types from code: Documentation/Creating-types-from-code.markdown
-    - Creating 1-N and N-N Relations: Documentation/Creating-1-n-and-n-n-relations.markdown
-    - Manifest Files for Modules and Themes: Documentation/Manifest-files.markdown
-    - Processing Client-Side Assets: Documentation/Processing-client-side-assets.markdown
-    - Caching: Documentation/Caching.markdown
-    - Custom Site Settings: Documentation/Adding-custom-settings.markdown
-    - Web Api in Orchard: Documentation/WebApi-In-Orchard.markdown
-- Getting Started with Modules Course: 
-    - Getting Started with Modules: Documentation/Getting-Started-with-Modules.markdown
-    - Setting up for a lesson: Documentation/Setting-up-for-a-lesson.markdown
-    - 'Part 1: Build a Static Widget': Documentation/Getting-Started-with-Modules-Part-1.markdown
-    - 'Part 2: Make the Widget Dynamic': Documentation/Getting-Started-with-Modules-Part-2.markdown
-    - 'Part 3: Using the Orchard API': Documentation/Getting-Started-with-Modules-Part-3.markdown
-    - 'Part 4: Applying Best Practices': Documentation/Getting-Started-with-Modules-Part-4.markdown
-- Working with Data:
-    - Understanding Data Access: Documentation/Understanding-data-access.markdown
-    - Understanding Content Handlers: Documentation/Understanding-content-handlers.markdown
-- Creating Themes:
-    - Writing a New Theme: Documentation/Writing-a-new-theme.markdown
-    - The Anatomy of a Theme: Documentation/Anatomy-of-a-theme.markdown
-    - Understanding the placement.info File: Documentation/Understanding-placement-info.markdown
-    - Accessing and Rendering Shapes: Documentation/Accessing-and-rendering-shapes.markdown
-    - Alternates: Documentation/Alternates.markdown
-    - Template File Syntax Guide: Documentation/Template-file-syntax-guide.markdown
-    - Processing Client-Side Assets: Documentation/Processing-client-side-assets.markdown
-    - Packaging and Sharing Themes: Documentation/Packaging-and-sharing-themes.markdown
-    - UI Guidelines for Theme Authors: Documentation/UI-guidelines-for-theme-authors.markdown
-    - Customizing Orchard Using Designer Helper Tools: Documentation/Customizing-Orchard-using-Designer-Helper-Tools.markdown
-- Developer Tools and Guidelines:
-    - Common Issues: Documentation/Common-Issues.markdown
-    - Developer FAQ: Documentation/Developer-FAQ.markdown
-    - Setting Up a Source Enlistment: Documentation/Setting-up-a-source-enlistment.markdown
-    - Building and deploying Orchard: Documentation/Building-and-deploying-Orchard-from-a-source-code-drop.markdown
-    - Source Code Organization: Documentation/Source-code-organization.markdown
-    - Dependencies and Libraries: Documentation/Orchard-dependencies-and-libraries.markdown
-    - Code Conventions: Documentation/Code-conventions.markdown
-    - Visual Studio Extensions and Snippets: Documentation/Visual-Studio-extensions-and-snippets.markdown
-    - Continuous Integration: Documentation/Continuous-integration.markdown
-    - Merging Pull Requests: Documentation/Merging-Pull-Requests.markdown
-- Additional Topics:
-    - Orchard Dynamic Compilation: Documentation/Orchard-module-loader-and-dynamic-compilation.markdown
-    - Configuring Email: Documentation/Configuring-email.markdown
-- Getting Involved:
-    - Contributing Documentation: Documentation/Contributing-documentation.markdown
-    - Documentation Style Guidelines: Documentation/Documentation-Style-Guidelines.markdown
-    - Contributing Patches: Documentation/Contributing-patches.markdown
-    - Contributors: Contributors.markdown
-- Release Notes:
-    - Orchard 1.10.2: Documentation/Orchard-1-10-2.Release-Notes.markdown
-    - Orchard 1.10.1: Documentation/Orchard-1-10-1.Release-Notes.markdown
-    - Orchard 1.10: Documentation/Orchard-1-10.Release-Notes.markdown
-    - Orchard 1.9.3: Documentation/Orchard-1-9-3.Release-Notes.markdown
-    - Orchard 1.9.2: Documentation/Orchard-1-9-2.Release-Notes.markdown
-    - Orchard 1.9.1: Documentation/Orchard-1-9-1.Release-Notes.markdown
-    - Orchard 1.9: Documentation/Orchard-1-9.Release-Notes.markdown
-    - Orchard 1.8.2: Documentation/Orchard-1-8-2.release-notes.markdown
-    - Orchard 1.8.1: Documentation/Orchard-1-8-1.Release-Notes.markdown
-    - Orchard 1.8: Documentation/Orchard-1-8-Release-Notes.markdown
-    - Orchard 1.7.2: Documentation/Orchard-1-7-2-Release-Notes.markdown
-    - Orchard 1.7.1: Documentation/Orchard-1-7-1-Release-Notes.markdown
-    - Orchard 1.7: Documentation/Orchard-1-7-Release-Notes.markdown
-    - Orchard 1.6: Documentation/Orchard-1-6-Release-Notes.markdown
-    - Orchard 1.5: Documentation/Orchard-1-5-Release-Notes.markdown
-    - Orchard 1.4: Documentation/Orchard-1-4-Release-Notes.markdown  
-- Todos:
-    - Documentation plan: Documentation/Documentation-plan.markdown
-    - Suggestions for New Topics: Documentation/Suggestions-for-New-Topics.markdown
-    - Deploying Orchard from Development to Production Servers: Documentation/Deploying-to-production.markdown
-    - Configuring Orchard in Shared Hosting Environments: Documentation/Configuring-shared-hosting.markdown
-    - Adding Custom Admin Panel Pages: Documentation/Adding-custom-admin-pages.markdown
-    - UI Guidelines for Module Authors: Documentation/UI-guidelines-for-module-authors.markdown
-    - Exposing and Handling Events: Documentation/Exposing-and-handling-events.markdown
-    - Localizing Modules: Documentation/Localizing-modules.markdown
-    - Using Different View Engines in Themes: Documentation/Using-different-view-engines.markdown
-    - Adding Code to a Theme: Documentation/Adding-code-to-themes.markdown
-    - Troubleshooting Common Issues: Documentation/Troubleshooting.markdown
-    - Filing Bugs: Documentation/Filing-bugs.markdown
-    - Orchard Community Resources: Documentation/Community-resources.markdown
-    - Getting Involved in Forums: Documentation/Getting-involved-in-forums.markdown
-    - Where to put Startup Code for Module: Documentation/module-startup-code.markdown
-    - Template files: Documentation/Template-files-and-their-locations.markdown
-    - Test plan: Documentation/Testplan.markdown
-    - Test: Documentation/test.markdown
-- Patches:
-    - Security Researcher Acknowledgments: Documentation/Security-Researcher-Acknowledgments.markdown
-    - Patch 20150630: Documentation/Patch-20150630.markdown
-    - Patch 20150519: Documentation/Patch-20150519.markdown
-    - Patch 20130430: Documentation/Patch-4-30-2013.markdown  
-- Tutorial Videos: Documentation/Orchard-TV.markdown
-- Archives:
-    - Walkthroughs and UI Mockups: Documentation/Walkthroughs.markdown
-    - Archived Specs: Documentation/Archived-specs.markdown
-    - Setup: Documentation/Setup.markdown
-    - Blogs: Documentation/Blogs.markdown
-    - Comments: Documentation/Comments.markdown
-    - Content types: Documentation/Content-types.markdown
-    - Definitions: Documentation/Definitions.markdown
-    - HTML doctype: Documentation/Fundamentals-doctype.markdown
-    - 'Linkbacks: Pingbacks, Refbacks and Trackbacks': 'Documentation/Linkback.markdown'
-    - Media management: Documentation/Media-management.markdown
-    - Navigation: Documentation/Navigation.markdown
-    - Page editing: Documentation/Pages-editing.markdown
-    - Page management and publishing: Documentation/Pages.markdown
-    - Page publishing workflow: Documentation/Pages-publishing.markdown
-    - RSS and Atom feeds: Documentation/Rss-atom.markdown
-    - Slugs: Documentation/Slugs.markdown
-    - Page templates and syntax: Documentation/Templates.markdown
-    - Tags: Documentation/Tags.markdown
-    - Themes: Documentation/Themes.markdown
-    - Theme includes: Documentation/Themes-includes.markdown
-    - 'Users, roles and permissions': 'Documentation/Users.markdown'
-    - Widgets: Documentation/Widgets.markdown
-    - XML-RPC and Live Writer: Documentation/Xml-Rpc.markdown
-    - Creating lists of content items: Documentation/Creating-lists.markdown
-    - Extensibility points: Documentation/A-few-interesting-extensibility-points.markdown
-    - Add Custom Settings to your Theme: Documentation/Add-Custom-Settings-to-your-Theme.markdown
-    - Add Custom Settings pre 1.8: Documentation/Adding-Custom-Settings-pre-1.8.markdown
-    - Adding admin menu items: Documentation/Adding-admin-menu-items.markdown
-    - Automation test guidance: Documentation/Automation-test-guidance.markdown
-    - Bug bash 1-18-2010: Documentation/Bug-bash-1-18-2010.markdown
-    - Content Picker: Documentation/Content-Picker.markdown
-    - Custom permissions: Documentation/Custom-permissions.markdown
-    - Import Export: Documentation/Import-Export.markdown
-    - Installing Orchard Using Web PI: Documentation/Installing-Orchard-Using-Web-PI.markdown
-    - Orchard Markup Guidelines: Documentation/Orchard-Markup-Guidelines.markdown
+    - Home: index.markdown
+    - Getting Started:
+        - Installing Orchard: Documentation/Installing-Orchard.markdown
+        - Manually Installing Orchard: Documentation/Manually-installing-Orchard-zip-file.markdown
+        - Working with Orchard in WebMatrix: Documentation/Working-with-Orchard-in-WebMatrix.markdown
+        - Getting Around the Dashboard: Documentation/Getting-around-the-dashboard.markdown
+        - Building Your First Orchard Site: Documentation/Getting-Started.markdown
+        - Navigation and Menus: Documentation/Navigation-and-menus.markdown
+        - Adding a Blog to Your Site: Documentation/Adding-a-Blog-to-Your-Site.markdown
+        - Adding Pages to Your Site: Documentation/Adding-Pages-to-Your-Site.markdown    
+        - Adding and Managing Media Content: Documentation/Adding-and-managing-media-content.markdown
+        - Managing Widgets: Documentation/Managing-widgets.markdown
+        - Organizing Content Using Tags: Documentation/Organizing-content-with-tags.markdown
+    - About the Project:
+        - Orchard Concept Definitions: Documentation/Basic-Orchard-Concepts.markdown
+        - 'Built-in modules and features': 'Documentation/Builtin-Features.markdown'
+        - Feature roadmap: Documentation/Feature-roadmap.markdown
+        - Frequently Asked Questions: Documentation/Frequently-asked-questions.markdown
+    - Authoring Websites:
+        - Blogging with LiveWriter: Documentation/Blogging-with-LiveWriter.markdown
+        - Creating Global-Ready Applications: Documentation/Creating-global-ready-applications.markdown
+        - Search and Indexing: Documentation/Search-and-indexing.markdown
+        - Publishing Drafts: Documentation/Saving-scheduling-and-publishing-drafts.markdown
+        - Creating Custom Content Types: Documentation/Creating-custom-content-types.markdown
+    - Customizing Websites:
+        - Previewing and Applying a Theme: Documentation/Previewing-and-applying-a-theme.markdown
+        - Installing Themes: Documentation/Installing-themes.markdown
+        - Customizing Themes: Documentation/Customizing-the-default-theme.markdown
+    - Using the Orchard Gallery:
+        - Gallery Overview: Documentation/Gallery-overview.markdown
+        - Installing Modules and Themes: Documentation/Installing-modules-and-themes-from-the-gallery.markdown
+        - Browsing the Gallery Web Site: Documentation/Browsing-the-gallery-web-site.markdown
+        - Contributing to the Gallery: Documentation/Contributing-a-module-or-theme-to-the-gallery.markdown
+        - Registering Additional Gallery Feeds: Documentation/Module-gallery-feeds.markdown
+    - Managing Websites:
+        - Enabling and Disabling Features: Documentation/Enabling-and-disabling-features.markdown
+        - Using the Command-Line Interface: Documentation/Using-the-command-line-interface.markdown
+        - Installing and Upgrading Modules: Documentation/Installing-and-upgrading-modules.markdown
+        - Modifying Site Settings: Documentation/Modifying-site-settings.markdown
+        - Moderating Comments: Documentation/Moderating-comments.markdown
+        - Managing Users and Roles: Documentation/Managing-users-and-roles.markdown
+        - Understanding Permissions: Documentation/Understanding-permissions.markdown
+        - Making a Website Recipe: Documentation/Making-a-Web-Site-Recipe.markdown
+        - Creating an Image Gallery: Documentation/Creating-an-image-gallery.markdown
+        - Workflows: Documentation/Workflows.markdown
+        - Projection: Documentation/Projection.markdown
+        - Create Custom Forms: Documentation/Creating-Custom-Forms.markdown
+        - Create Dynamic Forms: Documentation/Creating-Dynamic-Forms.markdown
+        - Using Rules to conditionally display content: Documentation/Using-Rules-to-conditionally-display-content.markdown
+    - Hosting and Deploying Websites:
+        - Upgrading a Site to a New Version: Documentation/Upgrading-a-site-to-a-new-version-of-Orchard.markdown
+        - Optimizing Server Performance: Documentation/Optimizing-Performance-of-Orchard-with-Shared-Hosting.markdown
+        - What's New for Windows Azure in Orchard 1.7.1: Documentation/Whats-new-for-Windows-Azure-in-Orchard-1-7-1.markdown
+        - Deploying Orchard to Windows Azure: Documentation/Deploying-Orchard-to-Windows-Azure.markdown
+        - Using Windows Azure Blob Storage: Documentation/Using-Windows-Azure-Blob-Storage.markdown
+        - Using Windows Azure Cache: Documentation/Using-Windows-Azure-Cache.markdown
+        - Running Orchard on Mono: Documentation/Running-Orchard-on-Mono.markdown
+        - Setting Up a Multi-Tenant Orchard Site: Documentation/Setting-up-a-multi-tenant-Orchard-site.markdown
+        - Setting Up a Machine Key: Documentation/Setting-up-a-machine-key.markdown
+    - Extending Orchard:
+        - First Steps into Orchard: Documentation/First-steps-into-Orchard.markdown
+        - How Orchard Works: Documentation/How-Orchard-works.markdown
+        - Using the Localization Providers: Documentation/Using-the-localization-helpers.markdown
+        - Command-Line Code Generation: Documentation/Command-line-scaffolding.markdown
+        - Writing an Orchard Module: Documentation/Walkthrough-Writing-An-Orchard-Module.markdown
+        - Building a Hello World Module: Documentation/Building-a-hello-world-module.markdown
+        - Creating a Module with a Simple Text Editor: Documentation/Creating-a-module-with-a-simple-text-editor.markdown
+        - Writing a Content Part: Documentation/Writing-a-content-part.markdown
+        - Writing a Content Field: Documentation/Creating-a-custom-field-type.markdown
+        - Packaging and Sharing a Module: Documentation/Packaging-and-sharing-a-module.markdown
+        - Writing a Widget: Documentation/Writing-a-widget.markdown
+        - Creating Types from code: Documentation/Creating-types-from-code.markdown
+        - Creating 1-N and N-N Relations: Documentation/Creating-1-n-and-n-n-relations.markdown
+        - Manifest Files for Modules and Themes: Documentation/Manifest-files.markdown
+        - Processing Client-Side Assets: Documentation/Processing-client-side-assets.markdown
+        - Caching: Documentation/Caching.markdown
+        - Custom Site Settings: Documentation/Adding-custom-settings.markdown
+        - Web Api in Orchard: Documentation/WebApi-In-Orchard.markdown
+    - Getting Started with Modules Course: 
+        - Getting Started with Modules: Documentation/Getting-Started-with-Modules.markdown
+        - Setting up for a lesson: Documentation/Setting-up-for-a-lesson.markdown
+        - 'Part 1: Build a Static Widget': Documentation/Getting-Started-with-Modules-Part-1.markdown
+        - 'Part 2: Make the Widget Dynamic': Documentation/Getting-Started-with-Modules-Part-2.markdown
+        - 'Part 3: Using the Orchard API': Documentation/Getting-Started-with-Modules-Part-3.markdown
+        - 'Part 4: Applying Best Practices': Documentation/Getting-Started-with-Modules-Part-4.markdown
+    - Working with Data:
+        - Understanding Data Access: Documentation/Understanding-data-access.markdown
+        - Understanding Content Handlers: Documentation/Understanding-content-handlers.markdown
+    - Creating Themes:
+        - Writing a New Theme: Documentation/Writing-a-new-theme.markdown
+        - The Anatomy of a Theme: Documentation/Anatomy-of-a-theme.markdown
+        - Understanding the placement.info File: Documentation/Understanding-placement-info.markdown
+        - Accessing and Rendering Shapes: Documentation/Accessing-and-rendering-shapes.markdown
+        - Alternates: Documentation/Alternates.markdown
+        - Template File Syntax Guide: Documentation/Template-file-syntax-guide.markdown
+        - Processing Client-Side Assets: Documentation/Processing-client-side-assets.markdown
+        - Packaging and Sharing Themes: Documentation/Packaging-and-sharing-themes.markdown
+        - UI Guidelines for Theme Authors: Documentation/UI-guidelines-for-theme-authors.markdown
+        - Customizing Orchard Using Designer Helper Tools: Documentation/Customizing-Orchard-using-Designer-Helper-Tools.markdown
+    - Developer Tools and Guidelines:
+        - Common Issues: Documentation/Common-Issues.markdown
+        - Developer FAQ: Documentation/Developer-FAQ.markdown
+        - Setting Up a Source Enlistment: Documentation/Setting-up-a-source-enlistment.markdown
+        - Building and deploying Orchard: Documentation/Building-and-deploying-Orchard-from-a-source-code-drop.markdown
+        - Source Code Organization: Documentation/Source-code-organization.markdown
+        - Dependencies and Libraries: Documentation/Orchard-dependencies-and-libraries.markdown
+        - Code Conventions: Documentation/Code-conventions.markdown
+        - Visual Studio Extensions and Snippets: Documentation/Visual-Studio-extensions-and-snippets.markdown
+        - Continuous Integration: Documentation/Continuous-integration.markdown
+        - Merging Pull Requests: Documentation/Merging-Pull-Requests.markdown
+    - Additional Topics:
+        - Orchard Dynamic Compilation: Documentation/Orchard-module-loader-and-dynamic-compilation.markdown
+        - Configuring Email: Documentation/Configuring-email.markdown
+    - Getting Involved:
+       - Contributing Documentation: Documentation/Contributing-documentation.markdown
+       - Documentation Style Guidelines: Documentation/Documentation-Style-Guidelines.markdown
+       - Contributing Patches: Documentation/Contributing-patches.markdown
+       - Contributors: Contributors.markdown
+    - Release Notes:
+       - Orchard 1.10.2: Documentation/Orchard-1-10-2.Release-Notes.markdown
+       - Orchard 1.10.1: Documentation/Orchard-1-10-1.Release-Notes.markdown
+       - Orchard 1.10: Documentation/Orchard-1-10.Release-Notes.markdown
+       - Orchard 1.9.3: Documentation/Orchard-1-9-3.Release-Notes.markdown
+       - Orchard 1.9.2: Documentation/Orchard-1-9-2.Release-Notes.markdown
+       - Orchard 1.9.1: Documentation/Orchard-1-9-1.Release-Notes.markdown
+       - Orchard 1.9: Documentation/Orchard-1-9.Release-Notes.markdown
+       - Orchard 1.8.2: Documentation/Orchard-1-8-2.release-notes.markdown
+       - Orchard 1.8.1: Documentation/Orchard-1-8-1.Release-Notes.markdown
+       - Orchard 1.8: Documentation/Orchard-1-8-Release-Notes.markdown
+       - Orchard 1.7.2: Documentation/Orchard-1-7-2-Release-Notes.markdown
+       - Orchard 1.7.1: Documentation/Orchard-1-7-1-Release-Notes.markdown
+       - Orchard 1.7: Documentation/Orchard-1-7-Release-Notes.markdown
+       - Orchard 1.6: Documentation/Orchard-1-6-Release-Notes.markdown
+       - Orchard 1.5: Documentation/Orchard-1-5-Release-Notes.markdown
+       - Orchard 1.4: Documentation/Orchard-1-4-Release-Notes.markdown  
+    - Todos:
+        - Documentation plan: Documentation/Documentation-plan.markdown
+        - Suggestions for New Topics: Documentation/Suggestions-for-New-Topics.markdown
+        - Deploying Orchard from Development to Production Servers: Documentation/Deploying-to-production.markdown
+        - Configuring Orchard in Shared Hosting Environments: Documentation/Configuring-shared-hosting.markdown
+        - Adding Custom Admin Panel Pages: Documentation/Adding-custom-admin-pages.markdown
+        - UI Guidelines for Module Authors: Documentation/UI-guidelines-for-module-authors.markdown
+        - Exposing and Handling Events: Documentation/Exposing-and-handling-events.markdown
+        - Localizing Modules: Documentation/Localizing-modules.markdown
+        - Using Different View Engines in Themes: Documentation/Using-different-view-engines.markdown
+        - Adding Code to a Theme: Documentation/Adding-code-to-themes.markdown
+        - Troubleshooting Common Issues: Documentation/Troubleshooting.markdown
+        - Filing Bugs: Documentation/Filing-bugs.markdown
+        - Orchard Community Resources: Documentation/Community-resources.markdown
+        - Getting Involved in Forums: Documentation/Getting-involved-in-forums.markdown
+        - Where to put Startup Code for Module: Documentation/module-startup-code.markdown
+        - Template files: Documentation/Template-files-and-their-locations.markdown
+        - Test plan: Documentation/Testplan.markdown
+        - Test: Documentation/test.markdown
+    - Patches:
+        - Security Researcher Acknowledgments: Documentation/Security-Researcher-Acknowledgments.markdown
+        - Patch 20150630: Documentation/Patch-20150630.markdown
+        - Patch 20150519: Documentation/Patch-20150519.markdown
+        - Patch 20130430: Documentation/Patch-4-30-2013.markdown  
+    - Tutorial Videos: Documentation/Orchard-TV.markdown
+    - Archives:
+       - Walkthroughs and UI Mockups: Documentation/Walkthroughs.markdown
+       - Archived Specs: Documentation/Archived-specs.markdown
+       - Setup: Documentation/Setup.markdown
+       - Blogs: Documentation/Blogs.markdown
+       - Comments: Documentation/Comments.markdown
+       - Content types: Documentation/Content-types.markdown
+       - Definitions: Documentation/Definitions.markdown
+       - HTML doctype: Documentation/Fundamentals-doctype.markdown
+       - 'Linkbacks: Pingbacks, Refbacks and Trackbacks': 'Documentation/Linkback.markdown'
+       - Media management: Documentation/Media-management.markdown
+       - Navigation: Documentation/Navigation.markdown
+       - Page editing: Documentation/Pages-editing.markdown
+       - Page management and publishing: Documentation/Pages.markdown
+       - Page publishing workflow: Documentation/Pages-publishing.markdown
+       - RSS and Atom feeds: Documentation/Rss-atom.markdown
+       - Slugs: Documentation/Slugs.markdown
+       - Page templates and syntax: Documentation/Templates.markdown
+       - Tags: Documentation/Tags.markdown
+       - Themes: Documentation/Themes.markdown
+       - Theme includes: Documentation/Themes-includes.markdown
+       - 'Users, roles and permissions': 'Documentation/Users.markdown'
+       - Widgets: Documentation/Widgets.markdown
+       - XML-RPC and Live Writer: Documentation/Xml-Rpc.markdown
+       - Creating lists of content items: Documentation/Creating-lists.markdown
+       - Extensibility points: Documentation/A-few-interesting-extensibility-points.markdown
+       - Add Custom Settings to your Theme: Documentation/Add-Custom-Settings-to-your-Theme.markdown
+       - Add Custom Settings pre 1.8: Documentation/Adding-Custom-Settings-pre-1.8.markdown
+       - Adding admin menu items: Documentation/Adding-admin-menu-items.markdown
+       - Automation test guidance: Documentation/Automation-test-guidance.markdown
+       - Bug bash 1-18-2010: Documentation/Bug-bash-1-18-2010.markdown
+       - Content Picker: Documentation/Content-Picker.markdown
+       - Custom permissions: Documentation/Custom-permissions.markdown
+       - Import Export: Documentation/Import-Export.markdown
+       - Installing Orchard Using Web PI: Documentation/Installing-Orchard-Using-Web-PI.markdown
+       - Orchard Markup Guidelines: Documentation/Orchard-Markup-Guidelines.markdown
