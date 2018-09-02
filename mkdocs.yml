@@ -1,11 +1,11 @@
 site_name: Orchard Documentation
-theme: material
+theme: readthedocs
 repo_url: https://github.com/OrchardCMS/OrchardDoc
 copyright: Copyright <a href="http://orchardproject.net">Orchard Project</a>. 
 google_analytics: ['UA-20757794-1', 'orchardproject.net']
 markdown_extensions:
     - admonition
-pages:
+nav:
     - Home: index.markdown
     - Getting Started:
         - Installing Orchard: Documentation/Installing-Orchard.markdown
