@@ -1,5 +1,5 @@
 site_name: Orchard Documentation
-theme_dir: rtd
+theme: readthedocs
 repo_url: https://github.com/OrchardCMS/OrchardDoc
 copyright: Copyright <a href="http://orchardproject.net">Orchard Project</a>. 
 google_analytics: ['UA-20757794-1', 'orchardproject.net']
