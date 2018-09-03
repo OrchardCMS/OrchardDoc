@@ -1,7 +1,17 @@
 site_name: Orchard Documentation
 theme:
     name: null
-    custom_dir: 'rtd/'
+    custom_dir: 'material/'
+    language: 'en'
+    palette:
+        primary: 'indigo'
+        accent: 'indigo'
+    font:
+        text: 'Ubuntu'
+        code: 'Ubuntu Mono'
+    logo: 'images/logo.svg'
+    feature:
+        tabs: false
 repo_url: https://github.com/OrchardCMS/OrchardDoc
 copyright: Copyright <a href="http://orchardproject.net">Orchard Project</a>. 
 google_analytics: ['UA-20757794-1', 'orchardproject.net']
