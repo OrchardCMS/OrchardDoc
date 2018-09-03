@@ -17,7 +17,7 @@ copyright: Copyright <a href="http://orchardproject.net">Orchard Project</a>.
 google_analytics: ['UA-20757794-1', 'orchardproject.net']
 markdown_extensions:
     - admonition
-nav:
+pages:
     - Home: index.markdown
     - Getting Started:
         - Installing Orchard: Documentation/Installing-Orchard.markdown
