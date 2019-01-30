@@ -69,8 +69,8 @@ A rule to display content for either of the 1033 and 2057 (en-us and en-gb) loca
 
 A rule to display content for users who are members of the Moderator or Administrator roles:
 
-    roles("Moderator") or roles("Administrator")
-    roles("Moderator", "Administrator")
+    role("Moderator") or role("Administrator")
+    role("Moderator", "Administrator")
 
 ## Places you can use rules
 You can use rules to determine the visibility of things in at least these places:
