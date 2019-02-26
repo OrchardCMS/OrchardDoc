@@ -129,7 +129,7 @@ This release is made possible by the following contributors
 * [Hengzhe Li](https://github.com/HengzheLi)
 * [Hermes Sbicego](https://github.com/HermesSbicego-Laser) (Laser)
 * [Jay Harris](https://github.com/jayharris) (Arana Software)
-* [Jean-Thierry Kéchichian](https://github.com/jtkech)
+* [Jean-Thierry Kechichian](https://github.com/jtkech)
 * [Kegan Maher](https://github.com/thekaveman)
 * [Lorenzo Frediani](https://github.com/LorenzoFrediani-Laser) (Laser)
 * [Marco Viglione](https://github.com/MarcoViglione-Laser) (Laser)
@@ -139,12 +139,12 @@ This release is made possible by the following contributors
 * [Sergio Navarro](https://github.com/jersiovic) (XK Project)
 * [Sipke Schoorstra](https://github.com/sfmskywalker) (IDeliverable)
 * [Surawout Thepchalerm](https://github.com/LegendORC) (Salween Solutions)
-* [Sébastien Ros](https://github.com/sebastienros) (Microsoft)
+* [Sebastien Ros](https://github.com/sebastienros) (Microsoft)
 * [Thierry Fleury](https://github.com/TFleury) (Codinlab)
 * [ub3rman123](https://github.com/ub3rman123)
 * [ViRuSTriNiTy](https://github.com/ViRuSTriNiTy)
 * [Xceno](https://github.com/Xceno)
-* [Zoltán Lehóczky](https://github.com/Piedone) (Lombiq Technologies)
+* [Zoltan Lehoczky](https://github.com/Piedone) (Lombiq Technologies)
 
 How to upgrade from a previous version
 --------------------------------------
