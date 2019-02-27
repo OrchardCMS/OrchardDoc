@@ -7,7 +7,7 @@ The details below apply to every extension in Orchard 1.10.3 and above, as well 
 
 ## 1. Visual Studio IntelliSense
 
-### 1.1. C#
+### 1.1. C\#
 
 The language features supported by IntelliSense is determined by the VS version you're using, which, of course also determines what language features VS is able to compile. Checkout the [Roslyn GitHub Wiki](https://github.com/dotnet/roslyn/wiki/NuGet-packages#versioning) to see which C# language version is supported by each VS version.
 
@@ -22,7 +22,7 @@ While VS of course has IntelliSense support for Razor code too out of the box, i
 
 This is a great feature for Orchard developers as changing just a single line of code doesn't require rebuilding the affected project (or the whole solution) manually: Instead, the next time you try to load a page, Orchard will take care of detecting what changed (i.e. which extensions need to be re-compiled - including those that depend on them) and recompile them seamlessly (although reloading after dynamic compilation will be a bit slower, since compilation takes some time and then those extensions need to be reloaded).
 
-### 2.1. C#
+### 2.1. C\#
 
 In previous versions, Orchard was configured to use the compiler service built into the .NET Framework for Dynamic Compilation, but that only supports C# language features up until version 5. To be able to use more recent language features, we've added Roslyn as a compiler service and configured the following way:
 
@@ -59,7 +59,7 @@ This requires the same configuration as Static Razor compilation, see below.
 
 ## 3. Static Code Compilation
 
-### 3.1. C#
+### 3.1. C\#
 
 The same details apply here as with IntelliSense.
 
