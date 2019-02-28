@@ -65,8 +65,8 @@ Orchard 1.10.3 fixes bugs and introduces the following notable changes and featu
 ### Features
 
 * Shape placement parsing strategy is now extendable with providers.
-* Added support for static Razor compilation, which also allows the usage for C# 7.3 language features.
-* Added support for Dynamic C# and Razor Compilation to be able to handle C# 7.3 language features.
+* [Added support for static Razor compilation, which also allows the usage for C# 7.3 language features.](Compilation-Configuration-and-Language-Support)
+* [Added support for Dynamic C# and Razor Compilation to be able to handle C# 7.3 language features.](Compilation-Configuration-and-Language-Support)
 * Added support for PostreSQL.
 
 ### Improvements
