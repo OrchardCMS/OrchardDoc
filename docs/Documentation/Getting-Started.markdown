@@ -6,12 +6,11 @@ This walkthrough provides a glimpse of the features that Orchard has to offer, p
 
 Being new to Orchard, you should know the right place where you can find the resources and latest information about Orchard.
 
-1. [Orchard Beginner][6]
-2. [Orchard in GitHub - Orchard Code Repository][1]
-3. [Orchard questions on Stack Overflow - Orchard Q&A][3]
-4. [Orchard Documentation - Documentation area for Orchard][2]
-5. [Orchard Community Websites - Community sites on Orchard from all over the world][4]
-6. [Orchard CMS Weekly Meeting][5]
+1. [Orchard in GitHub - Orchard Code Repository][1]
+2. [Orchard questions on Stack Overflow - Orchard Q&A][3]
+3. [Orchard Documentation - Documentation area for Orchard][2]
+4. [Orchard Community Websites - Community sites on Orchard from all over the world][4]
+5. [Orchard CMS Weekly Meeting][5]
 
 
 
@@ -20,7 +19,7 @@ Being new to Orchard, you should know the right place where you can find the res
   [3]: https://stackoverflow.com/questions/tagged/orchardcms
   [4]: http://orchardproject.net/
   [5]: http://orchardproject.net/meeting
-  [6]: http://orchardbeginner.com
+
 
 
 
