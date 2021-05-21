@@ -186,3 +186,13 @@ Commands run in the full Orchard environment and can query the database, inject 
 ## Throwing Exceptions From Commands
 
 Throwing from a command handler is not recommended. Instead, whenever possible, write to the context output and return. If you do want to throw a generic exception, you should throw an OrchardException.
+
+## Run the command to specify target instances for MultiTenancy
+
+Depend on DataConnectionString in the Settings.txt of Default folder.
+
+
+    DataConnectionString: Server=127.0.0.1;Port=5432;Database=Orchard;User Id=xxx;Password=xxx
+	
+	
+Change the database name and run Orchard.exe
