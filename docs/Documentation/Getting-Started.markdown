@@ -15,10 +15,10 @@ Being new to Orchard, you should know the right place where you can find the res
 
 
   [1]: https://github.com/OrchardCMS/Orchard
-  [2]: http://docs.orchardproject.net/
+  [2]: https://docs.orchardcore.net/projects/O1
   [3]: https://stackoverflow.com/questions/tagged/orchardcms
-  [4]: http://orchardproject.net/
-  [5]: http://orchardproject.net/meeting
+  [4]: https://orchardcore.net/
+  [5]: https://orchardcore.net/meeting
 
 
 
