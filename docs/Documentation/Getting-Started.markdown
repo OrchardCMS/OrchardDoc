@@ -28,44 +28,15 @@ This topic assumes that you have already installed Orchard and set up your websi
 
 There are plenty of options to get up and running with Orchard without installing Orchard on your local machine or local IIS Server.
 
-### Try Orchard
+### DotNest - Orchard Core SaaS provider
 
-[Try Orchard!](http://tryorchard.net/) is a showcase for the Orchard content management framework: you can try how Orchard feels by checking out an already running demo site where you can play with Orchard as you wish.
+[DotNest](https://dotnest.com) is the Orchard Core SaaS provider: This means that you can simply register and create Orchard Core websites that run in the cloud without any hassle. Your website will just work: You don't have to deploy and later upgrade it, just use it.
 
-No registration, no setup, nothing required, you can just go to [Try Orchard!](http://tryorchard.net/), open one of the continuously re-installed demo sites and play with it. This is the simplest way of taking the first steps with Orchard.
-
-Be aware though that Try Orchard! is really just for testing: since the demo sites are wiped out hourly you don't try to publish your blog there!
-
-![Try Orchard](../Upload/getting-started/1.png)
-
-![Try Orchard](../Upload/getting-started/2.png)
-
-### DotNest : Orchard SaaS provider
-
-[DotNest](http://dotnest.com/) is the Orchard SaaS provider: this means that you can simply register and create Orchard websites that run in the cloud without any hassle. Your website will just work: you don't have to deploy and later upgrade it, you can just use it.
-
-With DotNest you can try out Orchard very simply, very quickly and since your website is already hosted for you you can also show it to everybody. Apart from getting used to the user interface and features of Orchard you can also get into the [basics of Orchard theme development](http://dotnest.com/knowledge-base/topics/theming) with it and style and customize your Orchard website in a lot of ways.
-
-Convenience does come with disadvantages: due to the architecture of DotNest you can't install custom modules, so you have to use what is already available (that however should be enough for a big part of websites).
-
-
-**1)** What is **DotNest** 
-![](../Upload/getting-started/3.png)
-
-**2)** Click **New Tenant** to create a new tenant on DotNest
-
-![](../Upload/getting-started/4.png)
-
-**3)** Fill in the required details to create a **New Tenant**
-
-![](../Upload/getting-started/5.png)
-
-**3)** **New Tenant** successfully created
-![](../Upload/getting-started/6.png)
+Note that DotNest now mainly operates based on Orchard Core and creating Orchard 1 sites is no longer available (but existing ones keep running).
 
 ### Orchard on Azure Websites
 
-After a [free registration](http://azure.microsoft.com/en-us/services/websites/) you can create websites from the Azure Gallery where you can select Orchard to deploy in one click too.
+After a [free registration](https://azure.microsoft.com/en-us/services/websites/) you can create websites from the Azure Gallery where you can select Orchard to deploy in one click too.
 
 Your Orchard site on Azure Websites will be completely under your control: you can install any module and theme you want too. However this also comes with responsibilities: you have to maintain your website yourself, upgrade and fix it as necessary.
 
