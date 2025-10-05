@@ -1,7 +1,7 @@
 site_name: Orchard Documentation
 theme: readthedocs
 repo_url: https://github.com/OrchardCMS/OrchardDoc
-copyright: Copyright <a href="http://orchardproject.net">Orchard Project</a>. 
+copyright: Copyright <a href="https://orchardcore.net">Orchard Project</a>. 
 google_analytics: ['UA-20757794-1', 'orchardproject.net']
 markdown_extensions:
     - admonition
@@ -126,6 +126,7 @@ nav:
        - Contributing Patches: Documentation/Contributing-patches.markdown
        - Contributors: Contributors.markdown
     - Release Notes:
+       - Orchard 1.10.4: Documentation/Orchard-1-10-4-Release-Notes.markdown
        - Orchard 1.10.3: Documentation/Orchard-1-10-3-Release-Notes.markdown
        - Orchard 1.10.2: Documentation/Orchard-1-10-2-Release-Notes.markdown
        - Orchard 1.10.1: Documentation/Orchard-1-10-1-Release-Notes.markdown
