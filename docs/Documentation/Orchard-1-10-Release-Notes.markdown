@@ -50,7 +50,7 @@ This includes commercial derivative work.
 What's new?
 -----------
 
-Orchard 1.10 includes all the changes from version 1.9.3 <http://docs.orchardproject.net/Documentation/Orchard-1-9-3.Release-Notes> and introduces the following changes and features:
+Orchard 1.10 includes all the changes from version 1.9.3 <http://docs.orchardproject.net/Documentation/Orchard-1-9-3-Release-Notes> and introduces the following changes and features:
 
 #### Features
 * Default values for content fields
@@ -71,7 +71,7 @@ Orchard 1.10 includes all the changes from version 1.9.3 <http://docs.orchardpro
 
 #### Bugs
 
-Bug fixes are listed in the [1.9.3 release notes](http://docs.orchardproject.net/Documentation/Orchard-1-9-3.Release-Notes).
+Bug fixes are listed in the [1.9.3 release notes](http://docs.orchardproject.net/Documentation/Orchard-1-9-3-Release-Notes).
 The full list of fixed bugs for this release can be found here:
 
 * [Bugs fixed in 1.10](https://github.com/OrchardCMS/Orchard/issues?q=is%3Aissue+milestone%3A%22Orchard+1.10%22+is%3Aclosed).
@@ -85,7 +85,7 @@ No matter what migration path you take, please take the precaution of making a b
 
 ### Upgrading from Orchard 1.9 and earlier
 
-Please follow the upgrade instruction from this document: <http://docs.orchardproject.net/en/latest/Documentation/Orchard-1-9.Release-Notes/>
+Please follow the upgrade instruction from this document: <http://docs.orchardproject.net/en/latest/Documentation/Orchard-1-9-Release-Notes/>
 
 #### Disabled modules
 
