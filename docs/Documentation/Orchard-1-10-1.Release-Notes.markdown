@@ -55,7 +55,7 @@ This includes commercial derivative work.
 Breaking Changes
 -----------
 
-There are no known breaking changes as part of this release [compared to 1.10](Orchard-1-10-Release-Notes).
+There are no known breaking changes as part of this release [compared to 1.10](Orchard-1-10.Release-Notes).
 
 What's new?
 -----------
